@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350" style="background:#0B0F19; font-family: 'Courier New', Courier, monospace;">
+  <rect width="1080" height="1350" fill="#0B0F19"/>
+  <text x="80" y="85" fill="#06B6D4" font-size="28" font-weight="bold" letter-spacing="2">RAG PIPELINE DOCUMENT STRUCTURING</text>
+  <text x="80" y="125" fill="#F8FAFC" font-size="38" font-weight="bold">Standard OCR Noise vs MarkItDown</text>
+
+  <!-- Panel A -->
+  <rect x="80" y="180" width="440" height="980" rx="12" fill="#0F172A" stroke="#EF4444" stroke-width="2"/>
+  <text x="110" y="234" fill="#FCA5A5" font-size="16" font-weight="bold">UNSTRUCTURED PARSER (NOISE)</text>
+  <rect x="110" y="280" width="380" height="200" rx="8" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+  <text x="130" y="320" fill="#94A3B8" font-size="14">RAW OCR / UNSTRUCTURED</text>
+  <text x="130" y="360" fill="#FCA5A5" font-size="16">Broken PDF Tables</text>
+  <text x="130" y="390" fill="#FCA5A5" font-size="16">Lost Column Boundaries</text>
+  <text x="130" y="420" fill="#FCA5A5" font-size="16">Garbage Text Chunks</text>
+  <rect x="110" y="540" width="380" height="160" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="130" y="580" fill="#FCA5A5" font-size="16" font-weight="bold">RAG RETRIEVAL IMPACT</text>
+  <text x="130" y="620" fill="#94A3B8" font-size="15">⚠️ Vector Chunk Pollution</text>
+  <text x="130" y="650" fill="#94A3B8" font-size="15">⚠️ LLM Hallucinated Answers</text>
+
+  <!-- Panel B -->
+  <rect x="560" y="180" width="440" height="980" rx="12" fill="#0F172A" stroke="#06B6D4" stroke-width="2"/>
+  <text x="590" y="234" fill="#67E8F9" font-size="16" font-weight="bold">MICROSOFT MARKITDOWN (MIT)</text>
+  <rect x="590" y="280" width="380" height="200" rx="8" fill="#1E293B" stroke="#06B6D4" stroke-width="2"/>
+  <text x="610" y="320" fill="#67E8F9" font-size="14">MARKDOWN CONVERSION</text>
+  <text x="610" y="360" fill="#38BDF8" font-size="16">Clean GitHub Markdown</text>
+  <text x="610" y="390" fill="#38BDF8" font-size="16">Preserved Table Structures</text>
+  <text x="610" y="420" fill="#38BDF8" font-size="16">Structured Image Descriptions</text>
+  <rect x="590" y="540" width="380" height="160" rx="8" fill="#1E293B" stroke="#06B6D4" stroke-width="1.5"/>
+  <text x="610" y="580" fill="#67E8F9" font-size="16" font-weight="bold">RAG RETRIEVAL IMPACT</text>
+  <text x="610" y="620" fill="#94A3B8" font-size="15">✓ Precise Chunk Boundaries</text>
+  <text x="610" y="650" fill="#94A3B8" font-size="15">✓ High Accurate LLM Context</text>
+
+  <text x="80" y="1250" fill="#64748B" font-size="14">Purnachandra Madhukar | Research-First Technical Content System</text>
+  <text x="700" y="1250" fill="#06B6D4" font-size="14" font-weight="bold">github.com/microsoft/markitdown</text>
+</svg>

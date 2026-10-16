@@ -1,0 +1,44 @@
+{
+  "forbidden_words": [
+    "delve", "leverage", "game-changer", "revolutionary", "unlock", "landscape",
+    "groundbreaking", "transformative", "paradigm shift", "unprecedented", "seamless",
+    "cutting-edge", "robust", "crucial", "testament to", "beacon", "pivotal",
+    "tapestry", "demystify", "spearhead", "foster", "synergy", "holistic",
+    "empower", "disruptive", "game changer", "cutting edge", "state-of-the-art",
+    "supercharge", "elevate", "unravel", "navigate", "realm", "beacon of",
+    "reshaping", "reinventing", "spearheading", "harnessing", "reimagining"
+  ],
+  "forbidden_phrases": [
+    "in today's fast-paced world",
+    "let that sink in",
+    "here's the thing",
+    "thrilled to announce",
+    "excited to share",
+    "the future is here",
+    "ai is transforming",
+    "in this rapidly evolving",
+    "it goes without saying",
+    "at the end of the day"
+  ],
+  "forbidden_endings": [
+    "thoughts?",
+    "agree?",
+    "what do you think?",
+    "what are your thoughts?",
+    "let me know in the comments",
+    "do you agree?"
+  ],
+  "dry_replacements": {
+    "delve": "investigate",
+    "leverage": "use",
+    "robust": "solid",
+    "seamless": "smooth",
+    "crucial": "important",
+    "game-changer": "major update",
+    "cutting-edge": "modern",
+    "unprecedented": "rare",
+    "landscape": "field",
+    "supercharge": "speed up",
+    "foster": "support"
+  }
+}

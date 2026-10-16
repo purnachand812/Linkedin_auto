@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antigravity LinkedIn Editorial Hub | Purnachandra Madhukar</title>
+  <meta name="description" content="Research-first technical LinkedIn content creation system, 100-point AI editorial scout, approval queue state machine, and humanizer panel.">
+  
+  <!-- Modern Typography: Inter and JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css?v=4">
+</head>
+<body>
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- App Header -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="header-left">
+        <div class="logo-mark">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#06B6D4"/>
+          </svg>
+        </div>
+        <div>
+          <div class="header-title-row">
+            <h1 class="header-title">Editorial Hub</h1>
+            <span class="badge badge-cyan">AGENTIC PIPELINE</span>
+            <span id="api-status-badge" class="badge badge-emerald">● ONLINE</span>
+          </div>
+          <p class="header-subtitle">
+            <strong>Purnachandra Madhukar</strong> &middot; MSc Data Science &amp; Autonomous Agent Architecture, Berlin
+          </p>
+        </div>
+      </div>
+
+      <div class="header-center">
+        <!-- Voice Guardrails Pills -->
+        <div class="guardrail-pills">
+          <span class="pill pill-success" title="Rule 1: Never use em dashes">0 Em-Dashes</span>
+          <span class="pill pill-success" title="Rule 2: Zero slop words like delve, leverage">0 Slop Words</span>
+          <span class="pill pill-warning" title="Rule 4: Sandboxing warning for code/terminal tools">Strict Sandboxing</span>
+          <span class="pill pill-info" title="Rule 5: Text-only high dwell time">Dwell-Optimized</span>
+        </div>
+      </div>
+
+      <div class="header-right">
+        <div class="queue-stat-card">
+          <span class="stat-label">QUEUE STATUS</span>
+          <div class="stat-values">
+            <span class="stat-pill approved"><strong id="stat-approved">6</strong> Approved</span>
+            <span class="stat-pill waiting"><strong id="stat-waiting">1</strong> Pending</span>
+            <span class="stat-pill published"><strong id="stat-published">2</strong> Published</span>
+          </div>
+        </div>
+        <button id="btn-linkedin-auth" class="btn btn-secondary" onclick="openLinkedInModal()" title="Configure Official LinkedIn API" style="cursor: pointer;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+          <span id="linkedin-status-text">LinkedIn: Setup API</span>
+        </button>
+        <button id="btn-sync-queue" class="btn btn-secondary" title="Sync local queue files">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.3"/>
+          </svg>
+          Sync
+        </button>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <nav class="nav-tabs" id="main-nav">
+      <div class="nav-container">
+        <button class="nav-tab active" data-tab="queue">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          Approval Queue <span class="tab-counter" id="tab-queue-count">9</span>
+        </button>
+        <button class="nav-tab" data-tab="trends">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          AI Trend Radar <span class="tab-badge">5 Today</span>
+        </button>
+        <button class="nav-tab" data-tab="studio">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          Post Studio &amp; Humanizer
+        </button>
+        <button class="nav-tab" data-tab="visuals">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          Visual Asset Studio <span class="tab-counter" id="tab-visuals-count">9</span>
+        </button>
+        <button class="nav-tab" data-tab="calendar">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          7-Day Content Plan
+        </button>
+        <button class="nav-tab" data-tab="history">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+          Editorial Memory <span class="tab-counter" id="tab-history-count">21</span>
+        </button>
+        <button class="nav-tab" data-tab="guardrails">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Publishing Guardrails
+        </button>
+        <button class="nav-tab" data-tab="automation" style="border-left: 1px solid rgba(16, 185, 129, 0.3);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="4.93" y1="4.93" x2="9.17" y2="9.17"/><line x1="14.83" y1="14.83" x2="19.07" y2="19.07"/><line x1="14.83" y1="9.17" x2="19.07" y2="4.93"/><line x1="4.93" y1="19.07" x2="9.17" y2="14.83"/></svg>
+          EU Reach &amp; 24/7 Engine <span class="tab-badge" id="tab-daemon-badge" style="background: rgba(16, 185, 129, 0.2); color: #10B981;">24/7 LIVE</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Application Content -->
+  <main class="app-main">
+    
+    <!-- ==================== TAB 1: APPROVAL QUEUE ==================== -->
+    <section id="tab-queue" class="tab-content active">
+      <div class="content-header">
+        <div>
+          <h2>Candidate Approval Queue (State Machine)</h2>
+          <p class="section-desc">
+            Manage candidates across <code>DRAFT &rarr; WAITING_FOR_APPROVAL &rarr; APPROVED &rarr; PUBLISHED</code>. Explicit approval is strictly required before publication.
+          </p>
+        </div>
+        <div class="queue-filters">
+          <div class="filter-group">
+            <button class="filter-btn active" data-filter="ALL">All (<span id="count-all">0</span>)</button>
+            <button class="filter-btn" data-filter="APPROVED">Approved (<span id="count-approved">0</span>)</button>
+            <button class="filter-btn" data-filter="WAITING_FOR_APPROVAL">Waiting Approval (<span id="count-waiting">0</span>)</button>
+            <button class="filter-btn" data-filter="PUBLISHED">Published (<span id="count-published">0</span>)</button>
+          </div>
+          <button id="btn-create-post-modal" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Draft New Post
+          </button>
+        </div>
+      </div>
+
+      <!-- Candidate Cards Grid -->
+      <div id="candidates-container" class="candidates-container">
+        <!-- Rendered dynamically by app.js -->
+        <div class="loading-state">
+          <div class="spinner"></div>
+          <p>Loading candidate queue from filesystem...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 2: AI TREND RADAR ==================== -->
+    <section id="tab-trends" class="tab-content">
+      <div class="content-header">
+        <div>
+          <h2>AI Trend Radar &amp; 100-Point Editorial Scout</h2>
+          <p class="section-desc">
+            Scouted developments evaluated across Timeliness (20), Value (25), Practicality (20), Evidence (15), Visuals (10), and Distinctiveness (10).
+          </p>
+        </div>
+        <div class="radar-actions">
+          <span class="badge badge-cyan">TODAY'S SHORTLIST</span>
+        </div>
+      </div>
+
+      <div class="trends-grid" id="trends-container">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+    <!-- ==================== TAB 3: POST STUDIO & HUMANIZER ==================== -->
+    <section id="tab-studio" class="tab-content">
+      <div class="studio-layout">
+        <!-- Left: Drafting Canvas -->
+        <div class="studio-editor-panel card">
+          <div class="panel-header">
+            <div class="panel-title-group">
+              <h3>Drafting Studio</h3>
+              <span class="badge badge-purple">LIVE EDITOR</span>
+            </div>
+            <div class="editor-actions">
+              <button id="btn-clean-humanize" class="btn btn-secondary btn-sm" title="Convert em dashes, clean slop words">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                Auto-Humanize
+              </button>
+              <button id="btn-save-as-candidate" class="btn btn-secondary btn-sm">
+                Save to Queue
+              </button>
+              <button id="btn-studio-publish" class="btn btn-primary btn-sm" style="background: linear-gradient(135deg, #0A66C2, #004182); border-color: #0A66C2; font-weight: 700; display: inline-flex; align-items: center; gap: 0.35rem;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                Publish to LinkedIn
+              </button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="studio-title">Topic Title &amp; Core Tool</label>
+            <input type="text" id="studio-title" class="form-input" placeholder="e.g. Langfuse: Self-Hosted Agent Tracing vs Closed SaaS">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group flex-1">
+              <label for="studio-beat">Content Beat</label>
+              <select id="studio-beat" class="form-input">
+                <option value="Free & Open-Source AI Agent">Free &amp; Open-Source AI Agent</option>
+                <option value="AI Models & Inference Architecture">AI Models &amp; Inference Architecture</option>
+                <option value="Everyday AI Automation">Everyday AI Automation</option>
+                <option value="AI Hardware & Local Inference">AI Hardware &amp; Local Inference</option>
+                <option value="Research & Technical Discoveries">Research &amp; Technical Discoveries</option>
+              </select>
+            </div>
+            <div class="form-group flex-1">
+              <label for="studio-replaces">What It Replaces</label>
+              <input type="text" id="studio-replaces" class="form-input" placeholder="e.g. LangSmith ($39/seat/mo)">
+            </div>
+            <div class="form-group flex-1">
+              <label for="studio-testing">Testing Status</label>
+              <select id="studio-testing" class="form-input">
+                <option value="Not tested (Based on documentation)">Not tested (Based on documentation)</option>
+                <option value="Tested by me">Tested by me</option>
+                <option value="Independently tested by source">Independently tested by source</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="label-with-counter">
+              <label for="studio-post">LinkedIn Post Body (Text-Only Format)</label>
+              <span id="post-metrics" class="text-counter">0 words | 0 chars | ~0s read</span>
+            </div>
+            <textarea id="studio-post" class="form-textarea" rows="14" placeholder="First line should be dry, slightly sarcastic, and punch up at hype...&#10;&#10;Explain the technical mechanism in short paragraphs.&#10;&#10;Remember: No em dashes, no slop words. Append sandboxing warning for code/terminal tools."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="studio-comment">First Comment (Primary Sources &amp; Links)</label>
+            <textarea id="studio-comment" class="form-textarea" rows="4" placeholder="Primary sources:&#10;1. Official Repository: https://github.com/...&#10;2. Documentation: https://..."></textarea>
+          </div>
+        </div>
+
+        <!-- Right: Humanizer Detection Panel (detect.py) -->
+        <div class="studio-audit-panel card">
+          <div class="panel-header">
+            <div class="panel-title-group">
+              <h3>5-Check Detection Panel</h3>
+              <span class="badge badge-cyan">detect.py AUDIT</span>
+            </div>
+            <button id="btn-run-detect" class="btn btn-secondary btn-sm">Re-Score</button>
+          </div>
+
+          <!-- Overall Score Gauge -->
+          <div class="overall-score-box">
+            <div class="score-circle" id="overall-score-circle">
+              <span class="score-number" id="overall-score-val">--</span>
+              <span class="score-denom">/100</span>
+            </div>
+            <div class="score-verdict-box">
+              <span class="verdict-tag" id="overall-verdict-tag">WAITING</span>
+              <p class="verdict-desc" id="overall-verdict-desc">Score draft to run humanizer audit.</p>
+            </div>
+          </div>
+
+          <!-- 5 Specific Check Gauges -->
+          <div class="checks-list">
+            <!-- 1. Burstiness -->
+            <div class="check-item">
+              <div class="check-header">
+                <span class="check-name">1. Burstiness (Sentence Variance)</span>
+                <span class="check-val" id="score-burstiness">--</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="bar-burstiness" style="width: 0%;"></div>
+              </div>
+              <span class="check-desc">Avoid uniform paragraph lengths. Mix punchy 3-word fragments with technical sentences.</span>
+            </div>
+
+            <!-- 2. Specificity -->
+            <div class="check-item">
+              <div class="check-header">
+                <span class="check-name">2. Specificity &amp; Metrics</span>
+                <span class="check-val" id="score-specificity">--</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="bar-specificity" style="width: 0%;"></div>
+              </div>
+              <span class="check-desc">Counts numbers, technical tokens, prices ($0, $20), repos, and file extensions.</span>
+            </div>
+
+            <!-- 3. Slop Density -->
+            <div class="check-item">
+              <div class="check-header">
+                <span class="check-name">3. Slop Word Density</span>
+                <span class="check-val" id="score-slop">--</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="bar-slop" style="width: 0%;"></div>
+              </div>
+              <span class="check-desc">Zero tolerance for: <em>delve, leverage, game-changer, revolutionary, seamless, robust</em>.</span>
+              <div id="slop-detected-box" class="detected-flags"></div>
+            </div>
+
+            <!-- 4. Fingerprint & Invisible Chars -->
+            <div class="check-item">
+              <div class="check-header">
+                <span class="check-name">4. AI Fingerprint (Em-Dashes)</span>
+                <span class="check-val" id="score-fingerprint">--</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="bar-fingerprint" style="width: 0%;"></div>
+              </div>
+              <span class="check-desc">Penalizes em-dashes (&mdash;), zero-width unicode spaces, and curly quotes.</span>
+              <div id="fingerprint-issues-box" class="detected-flags"></div>
+            </div>
+
+            <!-- 5. Voice & Tells -->
+            <div class="check-item">
+              <div class="check-header">
+                <span class="check-name">5. Voice &amp; Security Tells</span>
+                <span class="check-val" id="score-voice">--</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="bar-voice" style="width: 0%;"></div>
+              </div>
+              <span class="check-desc">Enforces sandboxing warnings on agent tools, declares testing status, blocks engagement bait.</span>
+              <div id="voice-issues-box" class="detected-flags"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 4: VISUAL ASSET STUDIO ==================== -->
+    <section id="tab-visuals" class="tab-content">
+      <div class="content-header">
+        <div>
+          <h2>Visual Asset Studio &amp; SVG Gallery</h2>
+          <p class="section-desc">
+            Visual vector graphics &amp; diagrams saved in <code>linkedin/visuals/</code>. Dark mode palette (<code>#0B0F19</code>, cyan <code>#06B6D4</code>).
+          </p>
+        </div>
+        <div class="gallery-controls">
+          <span class="badge badge-emerald">HIGH DWELL TIME ASSETS</span>
+        </div>
+      </div>
+
+      <div class="visuals-grid" id="visuals-container">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+    <!-- ==================== TAB 5: 7-DAY CONTENT PLAN ==================== -->
+    <section id="tab-calendar" class="tab-content">
+      <div class="content-header">
+        <div>
+          <h2>7-Day Editorial Content Calendar</h2>
+          <p class="section-desc">
+            Balanced weekly distribution across Purna's core pillars: Agent Architecture, Open-Source Tools, Local Inference, and Practical Data Pipelines.
+          </p>
+        </div>
+        <div>
+          <span class="badge badge-purple">OPTIMIZED ROTATION</span>
+        </div>
+      </div>
+
+      <div class="calendar-grid" id="calendar-container">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+    <!-- ==================== TAB 6: EDITORIAL MEMORY ==================== -->
+    <section id="tab-history" class="tab-content">
+      <div class="content-header">
+        <div>
+          <h2>Editorial History &amp; Topic Memory</h2>
+          <p class="section-desc">
+            Persisted history from <code>linkedin/editorial-history.json</code> preventing topic duplication and tracking tested claims over time.
+          </p>
+        </div>
+        <div class="history-search-row">
+          <input type="text" id="history-search" class="form-input search-input" placeholder="Search topics, repos, angles...">
+        </div>
+      </div>
+
+      <div class="history-table-wrapper card">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Topic &amp; Repository</th>
+              <th>Content Beat</th>
+              <th>Core Angle</th>
+              <th>Score</th>
+              <th>Status</th>
+              <th>Primary Source</th>
+            </tr>
+          </thead>
+          <tbody id="history-tbody">
+            <!-- Rendered dynamically -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 7: PUBLISHING GUARDRAILS ==================== -->
+    <section id="tab-guardrails" class="tab-content">
+      <div class="content-header">
+        <div>
+          <h2>Publishing Safety Guardrails &amp; Status</h2>
+          <p class="section-desc">
+            Enforces strict account safety protocols and compliance with Section 9 of system instructions.
+          </p>
+        </div>
+      </div>
+
+      <div class="guardrails-layout">
+        <div class="card guardrail-banner">
+          <div class="guardrail-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <div class="guardrail-text">
+            <h3>Strict Safety Guardrail: Unofficial Browser Automation Disabled</h3>
+            <p>
+              Unofficial browser automation (Puppeteer, Playwright, Selenium, cookie extraction, session hijacking, or CAPTCHA bypass) is strictly forbidden for publishing to LinkedIn to ensure 100% account safety and API compliance.
+            </p>
+            <div class="status-callout">
+              <strong>Current Environment Status:</strong> Official LinkedIn API integration is not configured. Execution safely stops after marking status as <code>APPROVED</code>. Approved posts are ready for 1-click manual copy-paste.
+            </div>
+          </div>
+        </div>
+
+        <div class="card publishing-checklist-card">
+          <h3>One-Minute Posting Checklist (For Purna)</h3>
+          <ul class="checklist-items">
+            <li>
+              <span class="step-num">1</span>
+              <div>
+                <strong>Verify Approval State</strong>
+                <p>Ensure the topic is in <code>APPROVED</code> state and scored &gt;80 on the 5-check humanizer panel.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">2</span>
+              <div>
+                <strong>Copy Post Copy</strong>
+                <p>Click "Copy Post" from the Approval Queue to place clean, em-dash-free text on your clipboard.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">3</span>
+              <div>
+                <strong>Attach Visual (Optional / Carousel)</strong>
+                <p>Attach the corresponding SVG or JPG diagram from <code>linkedin/visuals/</code> if posting with media.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">4</span>
+              <div>
+                <strong>Post &amp; Add First Comment</strong>
+                <p>Publish the post, then immediately paste the First Comment containing primary source documentation links.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">5</span>
+              <div>
+                <strong>Mark as Published</strong>
+                <p>Click "Mark Published" in the Approval Queue to log the post in publishing history.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    <!-- ==================== TAB 8: EU REACH & 24/7 AUTOMATION ==================== -->
+    <section id="tab-automation" class="tab-content">
+      <div class="content-header">
+        <div>
+          <h2>European Union Reach &amp; 24/7 Autonomous Engine</h2>
+          <p class="section-desc">Continuous 24/7 background scheduler, CET/CEST prime-time publishing, algorithmic audience optimization, and technical discussion replies.</p>
+        </div>
+        <div style="display: flex; gap: 0.5rem; align-items: center;">
+          <button id="btn-daemon-run-now" class="btn btn-primary btn-sm" style="background: linear-gradient(135deg, #10B981, #059669); border-color: #10B981;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Run Immediate Cycle
+          </button>
+          <button id="btn-daemon-force-publish" class="btn btn-secondary btn-sm" title="Force publish the next approved post immediately without waiting for prime window">
+            Force Publish Next
+          </button>
+        </div>
+      </div>
+
+      <!-- Live Daemon Status Bar -->
+      <div class="card" style="margin-bottom: 1.5rem; background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(6, 182, 212, 0.04)); border: 1px solid rgba(16, 185, 129, 0.3);">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <span class="live-dot" style="width: 12px; height: 12px; background: #10B981; border-radius: 50%; box-shadow: 0 0 10px #10B981; display: inline-block;"></span>
+            <div>
+              <div style="font-size: 0.75rem; text-transform: uppercase; color: #10B981; font-weight: 700; letter-spacing: 0.05em;">24/7 AUTONOMOUS SERVICE</div>
+              <div style="font-weight: 600; font-size: 1.1rem; color: #F8FAFC;" id="daemon-status-text">RUNNING &bull; CET/CEST TIMEZONE</div>
+            </div>
+          </div>
+          
+          <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+            <div>
+              <div style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase;">Current Time (CET)</div>
+              <div style="font-family: var(--font-mono); font-size: 0.95rem; font-weight: 600; color: #38BDF8;" id="daemon-time-cet">--:--:--</div>
+            </div>
+            <div>
+              <div style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase;">Next EU Scheduled Drop</div>
+              <div style="font-family: var(--font-mono); font-size: 0.95rem; font-weight: 600; color: #F59E0B;" id="daemon-next-drop">Tomorrow 08:30 CET</div>
+            </div>
+            <div>
+              <div style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase;">Approved Waiting</div>
+              <div style="font-family: var(--font-mono); font-size: 0.95rem; font-weight: 600; color: #10B981;" id="daemon-approved-count">3 Posts</div>
+            </div>
+            <div>
+              <div style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase;">Target Geo</div>
+              <div style="font-size: 0.95rem; font-weight: 600; color: #A855F7;">European Union</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="two-col-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+        
+        <!-- Left: EU Audience Analytics & Feedback Loops -->
+        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+          
+          <div class="card">
+            <h3 style="margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+              EU Tech Ecosystem Reach Distribution
+            </h3>
+            <p style="font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 1rem;">
+              Optimized for European tech hubs with high dwell times during CET working hours.
+            </p>
+            
+            <div style="display: flex; flex-direction: column; gap: 0.75rem;" id="eu-hubs-container">
+              <!-- Rendered dynamically -->
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0.75rem; background: #0F172A; border-radius: 6px;">
+                <span>🇩🇪 Germany (Berlin, Munich, Hamburg)</span>
+                <span class="badge badge-cyan" style="font-weight: 700;">42% Share</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0.75rem; background: #0F172A; border-radius: 6px;">
+                <span>🇳🇱 Netherlands (Amsterdam, Delft)</span>
+                <span class="badge badge-purple" style="font-weight: 700;">21% Share</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0.75rem; background: #0F172A; border-radius: 6px;">
+                <span>🇫🇷 France (Paris AI / Station F)</span>
+                <span class="badge badge-blue" style="font-weight: 700;">15% Share</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0.75rem; background: #0F172A; border-radius: 6px;">
+                <span>🇨🇭 Switzerland &amp; Austria (Zurich, Vienna)</span>
+                <span class="badge badge-emerald" style="font-weight: 700;">12% Share</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0.75rem; background: #0F172A; border-radius: 6px;">
+                <span>🇸🇪 🇬🇧 Nordics &amp; UK (Stockholm, London)</span>
+                <span class="badge badge-amber" style="font-weight: 700;">10% Share</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Algorithmic Learnings -->
+          <div class="card">
+            <h3 style="margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              Autonomous Learnings &amp; Next-Post Adaptations
+            </h3>
+            <p style="font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+              Rules updated automatically based on historical post data to increase engagement:
+            </p>
+            <ul id="eu-learnings-list" style="padding-left: 1.25rem; font-size: 0.85rem; line-height: 1.6; color: #CBD5E1;">
+              <li><strong>Sovereign &amp; Local Focus:</strong> European developers favor self-hosted tools (Ollama, Hetzner, vLLM) over proprietary US cloud lock-in.</li>
+              <li><strong>Zero Em-Dashes &amp; Hype:</strong> Continental engineering culture values concise, dry technical teardowns over marketing adjectives.</li>
+              <li><strong>GitHub Link Placement:</strong> Links positioned at the very end of text posts deliver maximum organic reach without first-comment friction.</li>
+            </ul>
+          </div>
+
+          <!-- Live Post Lifecycle Tracker -->
+          <div class="card">
+            <h3 style="margin-bottom: 0.75rem;">Active Monitored LinkedIn Posts</h3>
+            <div id="monitored-posts-container" style="display: flex; flex-direction: column; gap: 0.5rem;">
+              <!-- Populated dynamically -->
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Smart Community Reply Assistant & 24/7 Hosting Guide -->
+        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+          
+          <!-- Smart Community Reply Engine -->
+          <div class="card">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <h3 style="display: flex; align-items: center; gap: 0.5rem;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                Community Discussion &amp; Reply Assistant
+              </h3>
+              <span class="badge badge-cyan">Algorithmic Dwell Booster</span>
+            </div>
+            <p style="font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 1rem;">
+              The LinkedIn algorithm heavily rewards the author replying within 60 minutes. Use these pre-computed, deeply technical responses in Purna's voice:
+            </p>
+
+            <div id="pending-replies-container" style="display: flex; flex-direction: column; gap: 0.75rem;">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+
+          <!-- 24/7 Deployment Options: Laptop vs Free Cloud Sandbox -->
+          <div class="card" style="border: 1px solid rgba(56, 189, 248, 0.3); background: rgba(15, 23, 42, 0.7);">
+            <h3 style="margin-bottom: 0.75rem; color: #38BDF8; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+              24/7 Hosting Options (All Free)
+            </h3>
+            
+            <div style="display: flex; flex-direction: column; gap: 1rem; font-size: 0.85rem;">
+              <div style="padding: 0.75rem; background: #0B0F19; border-radius: 6px; border: 1px solid #1E293B;">
+                <div style="font-weight: 700; color: #10B981; margin-bottom: 0.25rem;">OPTION 1: Run On Laptop (Active Now)</div>
+                <p style="color: var(--text-muted); margin-bottom: 0.5rem;">Double-click <code>run_daemon_background.bat</code> on your desktop. It runs continuously in the background, publishing at exact CET prime windows.</p>
+                <div style="font-family: var(--font-mono); font-size: 0.75rem; background: #020617; padding: 0.4rem; border-radius: 4px; color: #94A3B8;">
+                  c:\Users\purna\Desktop\New folder (2)\run_daemon_background.bat
+                </div>
+              </div>
+
+              <div style="padding: 0.75rem; background: #0B0F19; border-radius: 6px; border: 1px solid #1E293B;">
+                <div style="font-weight: 700; color: #38BDF8; margin-bottom: 0.25rem;">OPTION 2: Free Cloud Sandbox (GitHub Actions)</div>
+                <p style="color: var(--text-muted); margin-bottom: 0.5rem;">The workflow file <code>.github/workflows/linkedin_automation.yml</code> is configured. If you push this repository to GitHub, it will execute automatically every 30 minutes in GitHub's free cloud runners even when your laptop is turned off!</p>
+                <div style="font-family: var(--font-mono); font-size: 0.75rem; background: #020617; padding: 0.4rem; border-radius: 4px; color: #94A3B8;">
+                  Cron: */30 * * * * &bull; Unlimited free public minutes
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== MODALS ==================== -->
+  
+  <!-- Visual Asset Viewer Modal -->
+  <div id="visual-modal" class="modal-backdrop">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-header">
+        <h3 id="modal-visual-title">Visual Asset Preview</h3>
+        <button class="modal-close" id="btn-close-visual-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div id="modal-visual-preview" class="visual-modal-preview"></div>
+        <div class="modal-actions-row">
+          <a id="modal-visual-download" class="btn btn-secondary" download>Download Asset</a>
+          <button id="modal-copy-svg-code" class="btn btn-primary">Copy SVG Code</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LinkedIn API Configuration Modal -->
+  <div id="linkedin-modal" class="modal-backdrop">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3>Official LinkedIn API Configuration</h3>
+        <button class="modal-close" id="btn-close-linkedin-modal" onclick="closeLinkedInModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="section-desc" style="margin-bottom: 1rem;">
+          Connect your free LinkedIn Developer App to enable 100% compliant, 1-click publishing.
+        </p>
+
+        <div id="linkedin-modal-connected-view" style="display: none; padding: 1rem; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 8px; margin-bottom: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; color: #10B981; font-weight: 600;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Connected to LinkedIn
+          </div>
+          <p style="margin: 0.5rem 0 0; font-size: 0.85rem; color: var(--text-dim);" id="linkedin-member-info">
+            Member: Loading...
+          </p>
+        </div>
+
+        <form id="form-linkedin-creds">
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label style="display: block; font-size: 0.8rem; font-weight: 600; margin-bottom: 0.35rem; color: var(--text-dim);">
+              CLIENT ID
+            </label>
+            <input type="text" id="input-linkedin-client-id" class="input-field" placeholder="Paste your Client ID (e.g. 78xxxxxxxxxxxx)" style="width: 100%; padding: 0.6rem; border-radius: 6px; background: #0F172A; border: 1px solid #334155; color: #fff;" required>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label style="display: block; font-size: 0.8rem; font-weight: 600; margin-bottom: 0.35rem; color: var(--text-dim);">
+              CLIENT SECRET
+            </label>
+            <input type="password" id="input-linkedin-client-secret" class="input-field" placeholder="Paste your Client Secret" style="width: 100%; padding: 0.6rem; border-radius: 6px; background: #0F172A; border: 1px solid #334155; color: #fff;" required>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label style="display: block; font-size: 0.8rem; font-weight: 600; margin-bottom: 0.35rem; color: var(--text-dim);">
+              AUTHORIZED REDIRECT URL (Paste this in LinkedIn App &gt; Auth &gt; Redirect URLs)
+            </label>
+            <div style="display: flex; gap: 0.5rem;">
+              <input type="text" id="input-linkedin-redirect" class="input-field" value="http://localhost:3000/auth/callback" readonly style="flex: 1; padding: 0.6rem; border-radius: 6px; background: #0B0F19; border: 1px solid #334155; color: var(--text-muted); font-family: monospace; font-size: 0.8rem;">
+              <button type="button" class="btn btn-secondary btn-sm" id="btn-copy-redirect">Copy</button>
+            </div>
+          </div>
+
+          <div class="modal-actions-row" style="margin-top: 1.5rem; display: flex; gap: 0.75rem;">
+            <button type="submit" class="btn btn-secondary" style="flex: 1;">Save Credentials</button>
+            <a href="/auth/linkedin" id="btn-authorize-linkedin" class="btn btn-primary" style="flex: 1; text-align: center; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;">
+              Authorize Account &rarr;
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Application Entry -->
+  <script src="app.js?v=6"></script>
+</body>
+</html>

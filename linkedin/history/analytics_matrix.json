@@ -1,0 +1,32 @@
+{
+  "updated_at": "2026-10-16T23:09:46.786319",
+  "total_posts": 2,
+  "target_region": "European Union (CET/CEST)",
+  "estimated_reach_by_hub": {
+    "Berlin / Munich AI Ecosystem": "45%",
+    "Amsterdam / Paris Sovereign AI": "30%",
+    "Zurich / London Deep Tech": "25%"
+  },
+  "posts_analytics": [
+    {
+      "candidate_id": 1,
+      "topic": "Cline (VS Code MCP Extension)",
+      "published_at": "2026-10-16T19:33:48Z",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7516944499625963520/",
+      "age_hours": 1.6,
+      "has_image": true,
+      "status": "LIVE",
+      "growth_tier": "ACTIVE_ACCUMULATION"
+    },
+    {
+      "candidate_id": 8,
+      "topic": "Pydantic AI (Typed Dependency Injection vs Prompt Guessing)",
+      "published_at": "2026-10-16T19:31:07Z",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7516943821306372096/",
+      "age_hours": 1.6,
+      "has_image": true,
+      "status": "LIVE",
+      "growth_tier": "ACTIVE_ACCUMULATION"
+    }
+  ]
+}

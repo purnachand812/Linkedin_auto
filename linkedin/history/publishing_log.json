@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": 1,
+    "topic": "Cline (VS Code MCP Extension)",
+    "post_text": "Your coding editor doesn't need a $20/month paywall. Cline hooks open MCP tools directly into VS Code, but your token budget still needs watching.\n\nThe open-source extension cline/cline operates directly inside VS Code. Instead of relying on a proprietary backend, it uses the Model Context Protocol (MCP) to let LLMs read local files, execute terminal commands, and inspect browser DOMs autonomously.\n\nOn paper, it replaces paid subscriptions like Cursor ($20/mo) or GitHub Copilot. In practice, substituting a monthly SaaS bill for raw API usage shifts cost management to your prompt design.\n\nRefactoring multi-file pull requests using Anthropic Claude 3.5 Sonnet or OpenAI GPT-4o through OpenRouter can easily cost $0.80 to $2.50 per complex task. If you run local models via Ollama instead, your code stays 100% private, but complex reasoning speed depends on your local VRAM.\n\nThere is also a practical security consideration. Giving an extension permissions to run shell commands or edit files requires strict human approval on every step.\n\nRepo: https://github.com/cline/cline",
+    "post_id": "urn:li:share:7516944499625963520",
+    "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7516944499625963520/",
+    "published_at": "2026-10-16T19:33:48Z",
+    "has_image": true,
+    "comment_needed": true,
+    "sources": "- GitHub Repository: https://github.com/cline/cline (Apache 2.0 License)\n- Documentation: https://github.com/cline/cline#readme",
+    "status": "PUBLISHED"
+  },
+  {
+    "candidate_id": 8,
+    "topic": "Pydantic AI (Typed Dependency Injection vs Prompt Guessing)",
+    "post_text": "Most AI agent frameworks solve tool calling by writing 20 prompt guidelines and praying the LLM respects your dictionary keys.\n\nPydantic AI does what backend engineers should have done on day one: treat agent tools like typed FastAPI endpoints.\n\nThe core frustration with building agents in Python isn't the model. It's the framework middleware. When you prompt an LLM to generate arguments for a database query or an API call, JSON strings break constantly. You get missing fields, wrong data types, and hallucinated schema keys.\n\nThe team behind Pydantic built pydantic/pydantic-ai to solve this with standard Python typing:\n\n1. Static Type Validation: If a tool expects an integer customer_id and a float threshold, Pydantic validates the arguments before the function ever runs.\n2. Dependency Injection: Just like FastAPI, your agent tools can inject database connections, API clients, and authenticated sessions directly into the execution context.\n3. Model Agnostic: It works with Anthropic, OpenAI, Gemini, or local models via Ollama without wrapping your code in 40 arbitrary abstraction classes.\n\nThe catch? Type validation is not hallucination prevention.\n\nPydantic guarantees that arguments match your function signature. It does not stop an LLM from passing a syntactically valid ID that belongs to the wrong customer. Business logic checks still belong in your Python code.\n\nFree MIT code means $0 software licensing costs. Your only expense is the standard API token bill from your model provider.\n\nI haven't deployed this in a production multi-agent swarm yet, but for Python developers tired of fighting bloated agent frameworks, it feels like actual software engineering.\n\nRepo: https://github.com/pydantic/pydantic-ai",
+    "post_id": "urn:li:share:7516943821306372096",
+    "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7516943821306372096/",
+    "published_at": "2026-10-16T19:31:07Z",
+    "has_image": true,
+    "comment_needed": true,
+    "sources": "> [!NOTE]\n> If posting without an image, the GitHub link is included in the post above. No separate first comment is needed.\n\nPrimary evidence and documentation:\n1. pydantic/pydantic-ai GitHub repository: https://github.com/pydantic/pydantic-ai\n2. Pydantic AI Official Documentation: https://ai.pydantic.dev/",
+    "status": "PUBLISHED"
+  }
+]

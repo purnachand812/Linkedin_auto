@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350" style="background:#0B0F19; font-family: 'Courier New', Courier, monospace;">
+  <rect width="1080" height="1350" fill="#0B0F19"/>
+  <g stroke="#1E293B" stroke-width="1" opacity="0.4">
+    <line x1="0" y1="150" x2="1080" y2="150"/>
+    <line x1="0" y1="1200" x2="1080" y2="1200"/>
+    <line x1="540" y1="150" x2="540" y2="1200"/>
+  </g>
+  <text x="80" y="85" fill="#06B6D4" font-size="28" font-weight="bold" letter-spacing="2">OPEN MCP CODING ARCHITECTURE</text>
+  <text x="80" y="125" fill="#F8FAFC" font-size="38" font-weight="bold">Paid Closed Editors vs Cline Open MCP</text>
+
+  <!-- Panel A -->
+  <rect x="80" y="180" width="440" height="980" rx="12" fill="#0F172A" stroke="#334155" stroke-width="2"/>
+  <text x="110" y="234" fill="#FCA5A5" font-size="16" font-weight="bold">CLOSED PAID EDITOR ($20/MO)</text>
+  <rect x="110" y="280" width="380" height="100" rx="8" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+  <text x="130" y="320" fill="#94A3B8" font-size="14">PROPRIETARY BACKEND</text>
+  <text x="130" y="350" fill="#F8FAFC" font-size="18" font-weight="bold">Hardcoded Cloud Paywall</text>
+  <rect x="110" y="440" width="380" height="140" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="130" y="480" fill="#FCA5A5" font-size="14">TOOL CONNECTORS</text>
+  <text x="130" y="510" fill="#F8FAFC" font-size="18" font-weight="bold">Vendor Locked Plugins</text>
+  <text x="130" y="540" fill="#94A3B8" font-size="14">🔒 Closed API Ecosystem</text>
+
+  <!-- Panel B -->
+  <rect x="560" y="180" width="440" height="980" rx="12" fill="#0F172A" stroke="#06B6D4" stroke-width="2"/>
+  <text x="590" y="234" fill="#67E8F9" font-size="16" font-weight="bold">CLINE + OPEN MCP (APACHE 2.0)</text>
+  <rect x="590" y="280" width="380" height="100" rx="8" fill="#1E293B" stroke="#06B6D4" stroke-width="1.5"/>
+  <text x="610" y="320" fill="#67E8F9" font-size="14">MODEL CONTEXT PROTOCOL</text>
+  <text x="610" y="350" fill="#F8FAFC" font-size="18" font-weight="bold">Open MCP Standard</text>
+  <rect x="590" y="440" width="380" height="140" rx="8" fill="#1E293B" stroke="#06B6D4" stroke-width="2"/>
+  <text x="610" y="480" fill="#67E8F9" font-size="14">MODEL AGNOSTIC RUNTIME</text>
+  <text x="610" y="510" fill="#F8FAFC" font-size="18" font-weight="bold">Ollama / OpenRouter / Claude</text>
+  <text x="610" y="540" fill="#38BDF8" font-size="14">🌐 Open Tool Ecosystem</text>
+
+  <text x="80" y="1250" fill="#64748B" font-size="14">Purnachandra Madhukar | Research-First Technical Content System</text>
+  <text x="780" y="1250" fill="#06B6D4" font-size="14" font-weight="bold">github.com/cline/cline</text>
+</svg>

@@ -1,0 +1,38 @@
+name: 24/7 LinkedIn Autonomous Growth & Publishing Engine
+
+on:
+  schedule:
+    # Runs every 30 minutes, 24/7 in GitHub's free cloud sandbox
+    - cron: '*/30 * * * *'
+  workflow_dispatch: # Allows manual trigger from GitHub UI anytime
+
+permissions:
+  contents: write
+
+jobs:
+  run-editorial-cycle:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Execute Autonomous Editorial & Publishing Cycle
+        run: |
+          python linkedin/tools/daemon.py --once
+
+      - name: Commit & push updated logs, queue state, and analytics
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Antigravity LinkedIn Editorial Agent"
+          git add linkedin/queue/ linkedin/history/
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto: scheduled EU publishing and analytics update [skip ci]" && git push)

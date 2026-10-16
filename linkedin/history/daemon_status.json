@@ -1,0 +1,17 @@
+{
+  "status": "RUNNING",
+  "started_at": "2026-10-16T22:29:44.632122",
+  "log": [
+    "[22:36:45] Daemon initialized. 24/7 autonomous monitoring & scheduling active."
+  ],
+  "current_time_cet": "2026-10-16 23:09:46 CET",
+  "is_eu_prime_time": false,
+  "current_window": "Off-Peak / Monitoring",
+  "next_scheduled_drop": "Tomorrow Morning Standup (Prime) at 08:30 CET",
+  "approved_queue_count": 3,
+  "published_today": 2,
+  "target_audience": "European Union (Berlin, Munich, Amsterdam, Paris, Zurich)",
+  "auto_publish_enabled": true,
+  "last_heartbeat": "2026-10-16T23:09:46.789322",
+  "last_activity": "[22:36:45] Daemon initialized. 24/7 autonomous monitoring & scheduling active."
+}

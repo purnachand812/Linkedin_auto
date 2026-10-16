@@ -1,0 +1,241 @@
+{
+  "topics": [
+    {
+      "id": "browser-use-001",
+      "date": "2026-10-09",
+      "title": "browser-use GitHub repository evaluation",
+      "category": "Open-Source AI Agent",
+      "primary_source": "https://github.com/browser-use/browser-use",
+      "angle": "The hidden vision token cost of browser automation DOM steps",
+      "tested_status": false,
+      "draft_path": "linkedin/drafts/draft_browser_use.md",
+      "published": false,
+      "quality_score": 80.1
+    },
+    {
+      "id": "openclaw-001",
+      "date": "2026-10-09",
+      "title": "OpenClaw local personal AI agent framework",
+      "category": "Free & Open-Source AI Agent",
+      "primary_source": "https://github.com/openclaw/openclaw",
+      "angle": "Local always-on agent privacy vs idle GPU & hardware energy costs",
+      "tested_status": false,
+      "draft_path": "linkedin/drafts/draft_openclaw.md",
+      "visual_path": "linkedin/visuals/visual_openclaw_architecture.svg",
+      "score": 92,
+      "published": false,
+      "quality_score": 86.2
+    },
+    {
+      "id": "cline-mcp-001",
+      "date": "2026-10-09",
+      "title": "Cline open-source VS Code extension with MCP connectors",
+      "category": "Free & Open-Source AI Agent",
+      "primary_source": "https://github.com/cline/cline",
+      "angle": "Open MCP tool connectors vs closed-source $20/mo subscription code editors",
+      "tested_status": false,
+      "score": 94,
+      "published": false
+    },
+    {
+      "id": "agent-s3-001",
+      "date": "2026-10-09",
+      "title": "Simular Agent S3 desktop computer-use agent",
+      "category": "Free & Open-Source AI Agent",
+      "primary_source": "https://github.com/simular-ai/agent-s3",
+      "angle": "Raw screen pixel ACI control vs legacy enterprise desktop APIs",
+      "tested_status": false,
+      "score": 89,
+      "published": false
+    },
+    {
+      "id": "markitdown-001",
+      "date": "2026-10-09",
+      "title": "Microsoft MarkItDown LLM document converter",
+      "category": "Practical AI Workflows",
+      "primary_source": "https://github.com/microsoft/markitdown",
+      "angle": "Why simple 1-line Python document structuring beats complex vector DB indexing for RAG accuracy",
+      "tested_status": false,
+      "score": 86,
+      "published": false
+    },
+    {
+      "id": "aider-cli-001",
+      "date": "2026-10-09",
+      "title": "Aider git-aware terminal pair programmer",
+      "category": "Free & Open-Source AI Agent",
+      "primary_source": "https://github.com/aider-ai/aider",
+      "angle": "Git commit logs as agent memory vs external vector databases",
+      "tested_status": false,
+      "score": 84,
+      "published": false
+    },
+    {
+      "id": "smolagents-code-001",
+      "date": "2026-10-10",
+      "title": "Hugging Face smolagents (CodeAgent vs JSON tool calling)",
+      "category": "Free & Open-Source AI Agent",
+      "primary_source": "https://github.com/huggingface/smolagents",
+      "angle": "Why writing executable Python code beats JSON tool calling for multi-step agent actions",
+      "tested_status": true,
+      "test_notes": "Live A/B test: Text-only format (higher reach & impressions)",
+      "score": 95,
+      "published": true
+    },
+    {
+      "id": "docling-rag-001",
+      "date": "2026-10-10",
+      "title": "IBM Docling open-source document layout parser for RAG",
+      "category": "Practical AI Workflows",
+      "primary_source": "https://github.com/docling-project/docling",
+      "angle": "Why document layout and bounding box extraction fixes RAG errors that LLMs cannot recover from",
+      "tested_status": true,
+      "test_notes": "Live A/B test: Image-attached format (lower reach & impressions)",
+      "score": 93,
+      "published": true
+    },
+    {
+      "id": "deepseek-r1-pricing-001",
+      "date": "2026-10-10",
+      "title": "DeepSeek-R1 reasoning architecture and inference cost reality",
+      "category": "AI Models & Benchmarks",
+      "primary_source": "https://github.com/deepseek-ai/DeepSeek-R1",
+      "angle": "Open-weight reasoning models vs OpenAI o1: the 27x price gap and local hardware requirements",
+      "tested_status": false,
+      "score": 94,
+      "published": false
+    },
+    {
+      "id": "hallucination-probes-001",
+      "date": "2026-10-10",
+      "title": "Internal hidden state probing for hallucination detection in agent trajectories",
+      "category": "Research & Technical Discoveries",
+      "primary_source": "https://arxiv.org/abs/2304.13734",
+      "angle": "Why inspecting intermediate activation layers catches trajectory drift before the agent wastes tokens",
+      "tested_status": false,
+      "score": 91,
+      "published": false
+    },
+    {
+      "id": "openhands-docker-001",
+      "date": "2026-10-10",
+      "title": "OpenHands autonomous software engineer inside Docker sandbox",
+      "category": "Free & Open-Source AI Agent",
+      "primary_source": "https://github.com/All-Hands-AI/OpenHands",
+      "angle": "Self-hosted Docker sandboxing vs $500/month proprietary coding agents",
+      "tested_status": false,
+      "score": 92,
+      "published": false
+    },
+    {
+      "id": "crawl4ai-scraper-001",
+      "date": "2026-10-11",
+      "title": "Crawl4AI open-source LLM web scraper",
+      "category": "Free & Open-Source AI Agent",
+      "primary_source": "https://github.com/unclecode/crawl4ai",
+      "angle": "Self-hosted Playwright web extraction vs $16-$99/month Firecrawl API billing",
+      "tested_status": false,
+      "score": 94,
+      "published": false
+    },
+    {
+      "id": "sglang-radix-001",
+      "date": "2026-10-11",
+      "title": "SGLang RadixAttention and multi-turn agent KV cache reuse",
+      "category": "AI Models & Local Inference",
+      "primary_source": "https://github.com/sgl-project/sglang",
+      "angle": "Why multi-turn agents waste 70 percent of compute re-evaluating system prompts without prefix caching",
+      "tested_status": false,
+      "score": 93,
+      "published": false
+    },
+    {
+      "id": "pydantic-ai-001",
+      "date": "2026-10-11",
+      "title": "Pydantic AI typed dependency injection vs prompt guessing",
+      "category": "Free & Open-Source AI Agent",
+      "primary_source": "https://github.com/pydantic/pydantic-ai",
+      "angle": "FastAPI-style type validation and dependency injection for agent tools",
+      "tested_status": false,
+      "score": 95,
+      "published": false
+    },
+    {
+      "id": "faster-whisper-local-001",
+      "date": "2026-10-11",
+      "title": "faster-whisper local audio transcription vs cloud SaaS",
+      "category": "Everyday AI Automation",
+      "primary_source": "https://github.com/SYSTRAN/faster-whisper",
+      "angle": "Local CTranslate2 GPU audio transcription in 45 seconds vs $17/mo Otter.ai subscriptions",
+      "tested_status": false,
+      "score": 91,
+      "published": false
+    },
+    {
+      "id": "swe-bench-theatre-001",
+      "date": "2026-10-11",
+      "title": "SWE-bench Verified metrics vs production coding reality",
+      "category": "Research & Technical Discoveries",
+      "primary_source": "https://www.swebench.com/",
+      "angle": "Pass at 5 retry costs and pre-written unit test bias in agent benchmarking",
+      "tested_status": false,
+      "score": 92,
+      "published": false
+    },
+    {
+      "id": "langfuse-otel-001",
+      "date": "2026-10-13",
+      "title": "Langfuse open-source LLM observability & agent tracing vs closed SaaS",
+      "category": "Free & Open-Source AI Agent",
+      "primary_source": "https://github.com/langfuse/langfuse",
+      "angle": "Self-hosted Docker trace logging vs $39/seat cloud SaaS and raw token data leakage",
+      "tested_status": false,
+      "score": 95,
+      "published": false
+    },
+    {
+      "id": "fastmcp-prefect-001",
+      "date": "2026-10-13",
+      "title": "FastMCP 3-line typed Model Context Protocol servers",
+      "category": "Free & Open-Source AI Agent",
+      "primary_source": "https://github.com/PrefectHQ/fastmcp",
+      "angle": "Why typed Python decorators beat hand-crafted JSON-RPC boilerplate for LLM tools",
+      "tested_status": false,
+      "score": 94,
+      "published": false
+    },
+    {
+      "id": "deepseek-mla-kvcache-001",
+      "date": "2026-10-13",
+      "title": "DeepSeek Multi-Head Latent Attention (MLA) and KV cache compression",
+      "category": "AI Models & Inference Architecture",
+      "primary_source": "https://arxiv.org/abs/2412.19437",
+      "angle": "Low-rank latent vector compression vs GQA: cutting VRAM by 5x-10x without losing model quality",
+      "tested_status": false,
+      "score": 93,
+      "published": false
+    },
+    {
+      "id": "vllm-v1-architecture-001",
+      "date": "2026-10-13",
+      "title": "vLLM V1 decoupled ZeroMQ engine rewrite",
+      "category": "AI Hardware & Local Inference",
+      "primary_source": "https://github.com/vllm-project/vllm",
+      "angle": "Why removing Python GIL bottlenecks via ZeroMQ matters more for local agent swarms than GPU FLOPs",
+      "tested_status": false,
+      "score": 92,
+      "published": false
+    },
+    {
+      "id": "autogen-v04-actors-001",
+      "date": "2026-10-13",
+      "title": "Microsoft AutoGen v0.4 asynchronous event-driven actor architecture",
+      "category": "Autonomous AI Agent Architecture",
+      "primary_source": "https://github.com/microsoft/autogen",
+      "angle": "Why synchronous while-loops kill production agents and why distributed event actors fix runaway loops",
+      "tested_status": false,
+      "score": 91,
+      "published": false
+    }
+  ]
+}
