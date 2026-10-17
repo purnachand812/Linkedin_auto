@@ -77,6 +77,7 @@ function initApp() {
   initStudioEvents();
   initModalEvents();
   initAutomationEvents();
+  initJobEvents();
   loadAllData();
   checkLinkedInStatus();
 
@@ -145,7 +146,7 @@ async function loadDaemonOnly() {
 // --- Data Fetching ---
 async function loadAllData() {
   try {
-    const [queueRes, trendsRes, historyRes, visualsRes, calendarRes, statusRes, daemonRes, analyticsRes, repliesRes] = await Promise.all([
+    const [queueRes, trendsRes, historyRes, visualsRes, calendarRes, statusRes, daemonRes, analyticsRes, repliesRes, jobsRadarRes, jobsAppliedRes] = await Promise.all([
       fetch('/api/queue').then(r => r.json()).catch(() => null),
       fetch('/api/trends').then(r => r.json()).catch(() => null),
       fetch('/api/history').then(r => r.json()).catch(() => null),
@@ -154,7 +155,9 @@ async function loadAllData() {
       fetch('/api/status').then(r => r.json()).catch(() => null),
       fetch('/api/daemon/status').then(r => r.json()).catch(() => null),
       fetch('/api/analytics').then(r => r.json()).catch(() => null),
-      fetch('/api/replies').then(r => r.json()).catch(() => null)
+      fetch('/api/replies').then(r => r.json()).catch(() => null),
+      fetch('/api/jobs/radar').then(r => r.json()).catch(() => null),
+      fetch('/api/jobs/applied').then(r => r.json()).catch(() => null)
     ]);
 
     if (queueRes) {
@@ -195,6 +198,10 @@ async function loadAllData() {
 
     if (repliesRes) {
       renderReplies(repliesRes);
+    }
+
+    if (jobsRadarRes) {
+      renderJobsData(jobsRadarRes, jobsAppliedRes || []);
     }
 
     if (statusRes && statusRes.counts) {
@@ -1266,3 +1273,317 @@ function initAutomationEvents() {
     }
   });
 }
+
+// ==========================================================================
+// Job Opportunity Radar & ATS Application Studio Logic
+// ==========================================================================
+let jobsData = { jobs: [] };
+let appliedJobsData = [];
+
+function renderJobsData(radarRes, appliedRes) {
+  jobsData = radarRes || { jobs: [] };
+  appliedJobsData = appliedRes || [];
+  
+  const jobs = jobsData.jobs || [];
+  const badge = document.getElementById('tab-jobs-badge');
+  if (badge) badge.textContent = `${jobs.length} Opps`;
+  const statCount = document.getElementById('radar-count-stat');
+  if (statCount) statCount.textContent = jobs.length;
+
+  renderJobsRadar(jobs, appliedJobsData);
+  renderAppliedHistory(appliedJobsData);
+}
+
+function renderJobsRadar(jobs, appliedList) {
+  const container = document.getElementById('jobs-container');
+  if (!container) return;
+  if (!jobs || jobs.length === 0) {
+    container.innerHTML = '<div style="padding: 2rem; text-align: center; color: var(--text-dim);">No active opportunities found matching current filters.</div>';
+    return;
+  }
+
+  const appliedIds = new Set(appliedList.map(a => a.job_id));
+
+  container.innerHTML = '';
+  jobs.forEach(job => {
+    const isApplied = appliedIds.has(job.id) || job.status === 'APPLIED';
+    const card = document.createElement('div');
+    card.className = `job-card ${isApplied ? 'applied' : ''}`;
+    
+    const score = job.match_score || 85;
+    const scoreClass = score >= 90 ? 'match-high' : 'match-mid';
+
+    const techTags = (job.tech_stack || []).map(t => `<span class="job-tag primary">${escapeHtml(t)}</span>`).join('');
+    const resumeUrl = job.resume_url || `/resumes/resume_${job.id}.html`;
+
+    card.innerHTML = `
+      <div class="job-header-row">
+        <div>
+          <div class="job-role-title">${escapeHtml(job.title)}</div>
+          <div class="job-company-row">
+            <strong style="color: #F8FAFC;">${escapeHtml(job.company)}</strong>
+            <span>&bull;</span>
+            <span>${escapeHtml(job.location)}</span>
+            <span>&bull;</span>
+            <span style="color: #10B981; font-weight: 600;">${escapeHtml(job.salary_range || 'Competitive')}</span>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.35rem;">
+          <div class="job-match-badge ${scoreClass}">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            ${score}/100 Match
+          </div>
+          <span style="font-size: 0.7rem; color: var(--text-dim);">${escapeHtml(job.posted_time || 'Recent')} &bull; ${job.applicants_count || 12} applicants</span>
+        </div>
+      </div>
+
+      <div class="job-tags-row">
+        ${techTags}
+        ${job.easy_apply ? '<span class="job-tag" style="background: rgba(16, 185, 129, 0.1); color: #10B981; border-color: rgba(16, 185, 129, 0.3);">Easy Apply Supported</span>' : ''}
+      </div>
+
+      <p class="job-desc-snippet">${escapeHtml(job.description)}</p>
+
+      ${job.tailored_cover_letter ? `
+        <div style="margin: 0.75rem 0;">
+          <div style="font-size: 0.75rem; font-weight: 700; color: #38BDF8; margin-bottom: 0.25rem;">Tailored Grounded Pitch:</div>
+          <p style="font-size: 0.8rem; color: #94A3B8; font-style: italic; background: #0B0F19; padding: 0.6rem; border-radius: 4px; border: 1px solid #1E293B;">
+            "${escapeHtml(job.tailored_cover_letter)}"
+          </p>
+        </div>
+      ` : ''}
+
+      <div class="job-actions-row">
+        ${isApplied ? `
+          <span class="applied-badge-tag">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Application Tracked
+          </span>
+        ` : `
+          <button class="btn btn-primary" onclick="applyToJob('${job.id}')" style="font-size: 0.85rem; padding: 0.5rem 1rem;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            1-Click Apply &amp; Track
+          </button>
+        `}
+
+        <button class="btn btn-secondary" onclick="openResumeModal('${resumeUrl}', '${escapeHtml(job.company)} - ${escapeHtml(job.title)}')" style="font-size: 0.85rem; padding: 0.5rem 0.85rem;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          View Tailored Resume
+        </button>
+
+        <button class="btn btn-secondary" onclick="copyRecruiterNote('${job.id}')" style="font-size: 0.85rem; padding: 0.5rem 0.85rem;" title="Copy non-slop recruiter message to clipboard">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          Copy Recruiter Note
+        </button>
+
+        <a href="${escapeHtml(job.job_url || '#')}" target="_blank" class="btn btn-secondary" style="font-size: 0.85rem; padding: 0.5rem 0.85rem; margin-left: auto;" title="Open job posting">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+          LinkedIn JD &rarr;
+        </a>
+      </div>
+    `;
+    container.appendChild(card);
+  });
+}
+
+function renderAppliedHistory(historyList) {
+  const container = document.getElementById('applied-history-list');
+  if (!container) return;
+
+  if (!historyList || historyList.length === 0) {
+    container.innerHTML = '<div style="font-size: 0.8rem; color: var(--text-dim); text-align: center; padding: 1rem;">No applications submitted yet.</div>';
+    return;
+  }
+
+  container.innerHTML = '';
+  historyList.forEach(entry => {
+    const item = document.createElement('div');
+    item.style.cssText = 'padding: 0.6rem; background: #0B0F19; border-radius: 6px; border: 1px solid #1E293B; display: flex; flex-direction: column; gap: 0.35rem;';
+    
+    const timeStr = entry.applied_at ? new Date(entry.applied_at).toLocaleString('en-GB', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' }) : 'Recently';
+
+    item.innerHTML = `
+      <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+        <div>
+          <div style="font-weight: 700; color: #F8FAFC; font-size: 0.85rem;">${escapeHtml(entry.title)}</div>
+          <div style="font-size: 0.75rem; color: var(--text-muted);">${escapeHtml(entry.company)} &bull; ${escapeHtml(entry.location)}</div>
+        </div>
+        <span style="font-size: 0.75rem; font-weight: 700; color: #10B981; font-family: var(--font-mono);">${entry.match_score || 90}/100</span>
+      </div>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.25rem;">
+        <span style="font-size: 0.7rem; color: var(--text-dim);">${timeStr}</span>
+        <div style="display: flex; gap: 0.4rem;">
+          ${entry.resume_url ? `<button class="btn btn-secondary btn-sm" onclick="openResumeModal('${escapeHtml(entry.resume_url)}', '${escapeHtml(entry.company)} - ${escapeHtml(entry.title)}')" style="font-size: 0.65rem; padding: 0.15rem 0.4rem; color: #38BDF8;">Resume</button>` : ''}
+          <button class="btn btn-secondary btn-sm" onclick="copyRecruiterNote('${entry.job_id}')" style="font-size: 0.65rem; padding: 0.15rem 0.4rem;">Note</button>
+        </div>
+      </div>
+    `;
+    container.appendChild(item);
+  });
+}
+
+async function applyToJob(jobId) {
+  showToast('Submitting application & tailoring ATS resume...', 'info');
+  try {
+    const res = await fetch('/api/jobs/apply', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ job_id: jobId })
+    }).then(r => r.json());
+
+    if (res.success) {
+      showToast('🎉 Application recorded! ATS resume generated and recruiter outreach ready.', 'success');
+      loadAllData();
+    } else {
+      showToast(res.error || 'Failed to submit application', 'error');
+    }
+  } catch (e) {
+    showToast(`Application error: ${e.message}`, 'error');
+  }
+}
+
+function copyRecruiterNote(jobId) {
+  const job = (jobsData.jobs || []).find(j => j.id === jobId);
+  const title = job ? job.title : 'AI Engineer';
+  const company = job ? job.company : 'the team';
+  const loc = job ? job.location : 'Berlin';
+
+  const note = `Hi Hiring Team, I saw ${company}'s opening for ${title} in ${loc}. I am an MSc Data Science student based in Berlin researching hallucination attribution in multi-step LLM agent trajectories. I've also built typed dependency injection middlewares using Pydantic AI and FastAPI. I submitted an application and wanted to share my technical portfolio directly. Happy to connect.`;
+
+  navigator.clipboard.writeText(note).then(() => {
+    showToast('High-signal recruiter outreach note copied to clipboard!', 'success');
+  });
+}
+
+function openResumeModal(resumeUrl, title) {
+  const modal = document.getElementById('resume-modal');
+  const iframe = document.getElementById('resume-iframe');
+  const titleElem = document.getElementById('modal-resume-title');
+  const newTabBtn = document.getElementById('modal-resume-newtab');
+
+  if (modal && iframe) {
+    iframe.src = resumeUrl;
+    if (titleElem) titleElem.textContent = `ATS Resume Preview: ${title || 'Purnachandra Madhukar'}`;
+    if (newTabBtn) newTabBtn.href = resumeUrl;
+    modal.classList.add('active');
+  }
+}
+
+function closeResumeModal() {
+  const modal = document.getElementById('resume-modal');
+  if (modal) modal.classList.remove('active');
+}
+
+function printResumeIframe() {
+  const iframe = document.getElementById('resume-iframe');
+  if (iframe && iframe.contentWindow) {
+    iframe.contentWindow.focus();
+    iframe.contentWindow.print();
+  }
+}
+
+function focusJDScorer() {
+  const tabBtn = document.querySelector('.nav-tab[data-tab="jobs"]');
+  if (tabBtn) tabBtn.click();
+  const textarea = document.getElementById('scorer-jd-text');
+  if (textarea) {
+    textarea.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    textarea.focus();
+  }
+}
+
+async function handleScoreJD(e) {
+  e.preventDefault();
+  const roleTitle = document.getElementById('scorer-role-title')?.value.trim();
+  const company = document.getElementById('scorer-company')?.value.trim();
+  const location = document.getElementById('scorer-location')?.value.trim();
+  const jdText = document.getElementById('scorer-jd-text')?.value.trim();
+
+  if (!jdText) return;
+
+  const btn = document.getElementById('btn-submit-score');
+  if (btn) {
+    btn.disabled = true;
+    btn.textContent = 'Evaluating 100-Point Match...';
+  }
+
+  try {
+    const res = await fetch('/api/jobs/score', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        role_title: roleTitle,
+        company: company,
+        location: location,
+        jd_text: jdText
+      })
+    }).then(r => r.json());
+
+    const resultBox = document.getElementById('scorer-result-container');
+    if (resultBox && res.total_score !== undefined) {
+      resultBox.style.display = 'block';
+      const scoreClass = res.total_score >= 85 ? '#10B981' : '#06B6D4';
+      const techPills = (res.matched_tech || []).map(t => `<span class="job-tag primary">${escapeHtml(t)}</span>`).join(' ');
+
+      resultBox.innerHTML = `
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+          <div>
+            <span style="font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase;">Match Score</span>
+            <div style="font-size: 1.5rem; font-weight: 800; color: ${scoreClass}; font-family: var(--font-mono);">${res.total_score}/100</div>
+          </div>
+          <span class="badge ${res.total_score >= 85 ? 'badge-emerald' : 'badge-cyan'}">${escapeHtml(res.recommendation)}</span>
+        </div>
+
+        <div class="ats-metric-grid">
+          <div class="ats-metric-cell">
+            <div class="label">Tech Stack Fit</div>
+            <div class="value">${res.breakdown ? res.breakdown.tech_stack_fit : 0}/35</div>
+          </div>
+          <div class="ats-metric-cell">
+            <div class="label">Seniority / Thesis</div>
+            <div class="value">${res.breakdown ? res.breakdown.role_seniority_fit : 0}/25</div>
+          </div>
+          <div class="ats-metric-cell">
+            <div class="label">EU Work Rights</div>
+            <div class="value">${res.breakdown ? res.breakdown.location_work_rights : 0}/20</div>
+          </div>
+          <div class="ats-metric-cell">
+            <div class="label">Urgency / Freshness</div>
+            <div class="value">${res.breakdown ? res.breakdown.freshness_urgency : 0}/20</div>
+          </div>
+        </div>
+
+        <div style="margin-top: 0.75rem;">
+          <div style="font-size: 0.75rem; color: var(--text-dim); margin-bottom: 0.25rem;">Matched Technical Skills:</div>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.35rem;">
+            ${techPills || '<span style="color: var(--text-muted); font-size: 0.75rem;">General ML/Python</span>'}
+          </div>
+        </div>
+      `;
+      showToast(`Scoring Complete: ${res.total_score}/100 (${res.recommendation})`, 'success');
+    }
+  } catch (err) {
+    showToast(`Scoring failed: ${err.message}`, 'error');
+  } finally {
+    if (btn) {
+      btn.disabled = false;
+      btn.textContent = 'Analyze & Calculate Match Score';
+    }
+  }
+}
+
+function initJobEvents() {
+  document.getElementById('btn-refresh-jobs')?.addEventListener('click', () => {
+    loadAllData();
+    showToast('Job opportunity radar refreshed', 'success');
+  });
+}
+
+// Window exports
+window.openResumeModal = openResumeModal;
+window.closeResumeModal = closeResumeModal;
+window.printResumeIframe = printResumeIframe;
+window.applyToJob = applyToJob;
+window.copyRecruiterNote = copyRecruiterNote;
+window.focusJDScorer = focusJDScorer;
+window.handleScoreJD = handleScoreJD;

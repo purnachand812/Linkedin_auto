@@ -1,0 +1,16 @@
+[
+  {
+    "job_id": "job-berlin-001",
+    "title": "AI Agent & LLM Engineer",
+    "company": "DeepAgent AI Labs GmbH",
+    "location": "Berlin, Germany (Hybrid - Mitte)",
+    "salary_range": "€60,000 - €70,000",
+    "match_score": 96,
+    "applied_at": "2026-10-17T09:15:00Z",
+    "job_url": "https://www.linkedin.com/jobs/view/sample-berlin-ai-agent-001/",
+    "resume_url": "/resumes/resume_job-berlin-001.html",
+    "mode": "AUTONOMOUS_DAEMON",
+    "recruiter_outreach_note": "Hi Hiring Team, I saw DeepAgent AI Labs GmbH's opening for AI Agent & LLM Engineer in Berlin. I am an MSc Data Science student based in Berlin researching hallucination attribution in multi-step LLM agent trajectories. I've also built typed dependency injection middlewares using Pydantic AI and FastAPI. I submitted an application and wanted to share my technical portfolio directly. Happy to connect.",
+    "status": "APPLIED_CONFIRMED"
+  }
+]

@@ -1,5 +1,5 @@
 # CANDIDATE 5: Aider (Git-Aware Terminal AI Pair Programmer)
-- Status: APPROVED
+- Status: WAITING_FOR_APPROVAL
 - Beat: Free & Open-Source AI Agent / Terminal Tools
 - Editorial Score: 84/100 (Timeliness: 16/20, Value: 22/25, Practicality: 18/20, Evidence: 14/15, Visual: 7/10, Distinctiveness: 7/10)
 

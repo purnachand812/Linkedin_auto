@@ -25,9 +25,15 @@ LINKEDIN_DIR = WORKSPACE_DIR / "linkedin"
 QUEUE_DIR = LINKEDIN_DIR / "queue"
 VISUALS_DIR = LINKEDIN_DIR / "visuals"
 TOOLS_DIR = LINKEDIN_DIR / "tools"
+JOBS_DIR = LINKEDIN_DIR / "jobs"
+RESUMES_DIR = JOBS_DIR / "resumes"
 HISTORY_FILE = LINKEDIN_DIR / "editorial-history.json"
 QUEUE_SUMMARY_FILE = QUEUE_DIR / "queue_summary.json"
 SLOP_FILE = TOOLS_DIR / "slop.json"
+JOBS_RADAR_FILE = JOBS_DIR / "jobs_radar.json"
+APPLIED_HISTORY_FILE = JOBS_DIR / "applied_history.json"
+PROFILE_MASTER_FILE = JOBS_DIR / "profile_master.json"
+SCREENER_BANK_FILE = JOBS_DIR / "screener_bank.json"
 
 sys.path.insert(0, str(WORKSPACE_DIR))
 try:
@@ -38,6 +44,15 @@ except ImportError:
     publisher = None
     daemon = None
     eu_growth_engine = None
+
+try:
+    from linkedin.jobs import job_matcher
+    from linkedin.jobs import resume_tailor
+    from linkedin.jobs import job_dispatcher
+except ImportError:
+    job_matcher = None
+    resume_tailor = None
+    job_dispatcher = None
 
 def load_slop_config():
     if SLOP_FILE.exists():
@@ -286,6 +301,25 @@ class EditorialHandler(SimpleHTTPRequestHandler):
                 self.send_error(404, "Visual asset not found")
                 return
 
+        # Static Tailored Resumes routing
+        if path.startswith("/resumes/"):
+            filename = path.replace("/resumes/", "")
+            file_path = RESUMES_DIR / filename
+            if file_path.exists():
+                self.send_response(200)
+                if filename.endswith(".html"):
+                    self.send_header("Content-Type", "text/html; charset=utf-8")
+                elif filename.endswith(".pdf"):
+                    self.send_header("Content-Type", "application/pdf")
+                else:
+                    self.send_header("Content-Type", "text/plain; charset=utf-8")
+                self.end_headers()
+                self.wfile.write(file_path.read_bytes())
+                return
+            else:
+                self.send_error(404, "Resume file not found")
+                return
+
         # OAuth routes
         if path == "/auth/linkedin":
             if not publisher:
@@ -350,6 +384,12 @@ class EditorialHandler(SimpleHTTPRequestHandler):
             self.handle_get_analytics()
         elif path == "/api/replies":
             self.handle_get_replies()
+        elif path == "/api/jobs/radar":
+            self.handle_get_jobs_radar()
+        elif path == "/api/jobs/applied":
+            self.handle_get_jobs_applied()
+        elif path == "/api/jobs/profile":
+            self.handle_get_jobs_profile()
         elif path == "/api/linkedin/status":
             if publisher:
                 self.send_json(publisher.get_connection_status())
@@ -382,6 +422,10 @@ class EditorialHandler(SimpleHTTPRequestHandler):
             self.handle_post_daemon_cycle(data)
         elif path == "/api/linkedin/credentials":
             self.handle_post_linkedin_credentials(data)
+        elif path == "/api/jobs/score":
+            self.handle_post_jobs_score(data)
+        elif path == "/api/jobs/apply":
+            self.handle_post_jobs_apply(data)
         else:
             self.send_error(404, "Unknown API route")
 
@@ -828,6 +872,85 @@ class EditorialHandler(SimpleHTTPRequestHandler):
                 self.send_json({"success": False, "error": str(e)}, 500)
         else:
             self.send_json({"error": "Daemon module not loaded"}, 500)
+
+    def handle_get_jobs_radar(self):
+        if JOBS_RADAR_FILE.exists():
+            try:
+                with open(JOBS_RADAR_FILE, "r", encoding="utf-8") as f:
+                    self.send_json(json.load(f))
+                    return
+            except Exception as e:
+                self.send_json({"error": str(e)}, 500)
+                return
+        self.send_json({"jobs": []})
+
+    def handle_get_jobs_applied(self):
+        if APPLIED_HISTORY_FILE.exists():
+            try:
+                with open(APPLIED_HISTORY_FILE, "r", encoding="utf-8") as f:
+                    self.send_json(json.load(f))
+                    return
+            except Exception as e:
+                self.send_json({"error": str(e)}, 500)
+                return
+        self.send_json([])
+
+    def handle_get_jobs_profile(self):
+        prof = {}
+        screen = {}
+        if PROFILE_MASTER_FILE.exists():
+            try:
+                with open(PROFILE_MASTER_FILE, "r", encoding="utf-8") as f:
+                    prof = json.load(f)
+            except Exception:
+                pass
+        if SCREENER_BANK_FILE.exists():
+            try:
+                with open(SCREENER_BANK_FILE, "r", encoding="utf-8") as f:
+                    screen = json.load(f)
+            except Exception:
+                pass
+        self.send_json({
+            "profile": prof,
+            "screener_bank": screen
+        })
+
+    def handle_post_jobs_score(self, data):
+        if not job_matcher:
+            self.send_json({"error": "Job matcher module not loaded"}, 500)
+            return
+        jd_text = data.get("jd_text", "").strip()
+        role_title = data.get("role_title", "AI Engineer")
+        company = data.get("company", "Tech Company")
+        location = data.get("location", "Berlin, Germany")
+        if not jd_text:
+            self.send_json({"error": "Job description text is required"}, 400)
+            return
+        
+        try:
+            score_result = job_matcher.evaluate_job_match({
+                "title": role_title,
+                "company": company,
+                "location": location,
+                "description": jd_text
+            })
+            self.send_json(score_result)
+        except Exception as e:
+            self.send_json({"error": str(e)}, 500)
+
+    def handle_post_jobs_apply(self, data):
+        if not job_dispatcher:
+            self.send_json({"error": "Job dispatcher module not loaded"}, 500)
+            return
+        job_id = data.get("job_id")
+        if not job_id:
+            self.send_json({"error": "job_id is required"}, 400)
+            return
+        try:
+            res = job_dispatcher.apply_to_job(job_id)
+            self.send_json({"success": True, "application": res})
+        except Exception as e:
+            self.send_json({"success": False, "error": str(e)}, 500)
 
 def run():
     server_address = ('', PORT)

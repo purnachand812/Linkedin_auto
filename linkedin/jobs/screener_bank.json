@@ -1,0 +1,59 @@
+{
+  "screener_answers": {
+    "work_authorization": {
+      "keywords": ["authorized to work", "legally authorized", "work permit", "right to work in germany", "work eligibility"],
+      "answer": "Yes",
+      "detail": "Legally authorized to work in Germany (Resident / Student Work Authorization)."
+    },
+    "visa_sponsorship": {
+      "keywords": ["require sponsorship", "need visa sponsorship", "require visa", "immigration sponsorship"],
+      "answer": "No",
+      "detail": "Currently authorized to work in Germany without immediate visa sponsorship."
+    },
+    "experience_python": {
+      "keywords": ["years of experience with python", "years with python", "experience in python"],
+      "answer": "3",
+      "detail": "3+ years of Python software development and ML application engineering."
+    },
+    "experience_machine_learning": {
+      "keywords": ["years of machine learning", "experience in machine learning", "ml experience"],
+      "answer": "2",
+      "detail": "2+ years of applied machine learning, neural networks, and LLM agent architecture."
+    },
+    "experience_pytorch": {
+      "keywords": ["years with pytorch", "experience in pytorch"],
+      "answer": "2",
+      "detail": "2 years developing and fine-tuning models with PyTorch and Hugging Face."
+    },
+    "experience_sql": {
+      "keywords": ["years of sql", "experience in sql", "relational databases"],
+      "answer": "3",
+      "detail": "3 years designing relational schemas and querying with PostgreSQL and SQLite."
+    },
+    "location_berlin": {
+      "keywords": ["located in berlin", "comfortable commuting", "willing to relocate to berlin", "based in berlin"],
+      "answer": "Yes",
+      "detail": "Currently living in Berlin, Germany and fully available for on-site or hybrid work."
+    },
+    "german_proficiency": {
+      "keywords": ["german language", "proficiency in german", "german level"],
+      "answer": "Basic / Working proficiency (B1 learning)",
+      "detail": "Fluent professional English; currently learning German for workplace integration."
+    },
+    "english_proficiency": {
+      "keywords": ["english language", "proficiency in english", "english level"],
+      "answer": "Fluent / Full professional proficiency",
+      "detail": "C1/C2 Fluent written and spoken English for technical documentation and collaboration."
+    },
+    "notice_period": {
+      "keywords": ["notice period", "how soon can you start", "start date", "availability"],
+      "answer": "Immediate / 2 weeks",
+      "detail": "Available to start immediately or within standard 2-week onboarding."
+    },
+    "salary_expectation": {
+      "keywords": ["salary expectation", "compensation", "desired salary", "expected salary"],
+      "answer": "€60,000 / year (or €20/hr for working student)",
+      "detail": "Competitive market rate based on Berlin tech scaleup benchmarks."
+    }
+  }
+}

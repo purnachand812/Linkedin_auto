@@ -1,0 +1,129 @@
+{
+  "updated_at": "2026-10-17T11:00:00Z",
+  "active_search_filters": {
+    "roles": [
+      "AI Engineer",
+      "LLM Engineer",
+      "Machine Learning Engineer",
+      "Autonomous Agent Architect",
+      "Python AI Developer"
+    ],
+    "locations": [
+      "Berlin, Germany",
+      "Munich, Germany",
+      "Amsterdam, Netherlands",
+      "Remote European Union"
+    ],
+    "experience_levels": [
+      "Junior",
+      "Working Student",
+      "Mid-Level",
+      "Associate"
+    ]
+  },
+  "jobs": [
+    {
+      "id": "job-berlin-001",
+      "title": "AI Agent & LLM Engineer",
+      "company": "DeepAgent AI Labs GmbH",
+      "location": "Berlin, Germany (Hybrid - Mitte)",
+      "work_type": "Hybrid",
+      "posted_time": "3 hours ago",
+      "applicants_count": 14,
+      "match_score": 96,
+      "easy_apply": true,
+      "salary_range": "\u20ac60,000 - \u20ac70,000",
+      "job_url": "https://www.linkedin.com/jobs/view/sample-berlin-ai-agent-001/",
+      "tech_stack": [
+        "Python",
+        "FastAPI",
+        "Pydantic",
+        "PyTorch",
+        "LLM Agents",
+        "Docker"
+      ],
+      "description": "We are seeking an AI Agent Engineer in Berlin to design tool-calling workflows, deterministic schema validation, and multi-step agent trajectories. You will work on our core enterprise agent middleware replacing prompt heuristics with typed FastAPI endpoints. Strong background in Python, Pydantic, and vector databases required. MSc or research focus on LLM reliability is a strong plus.",
+      "status": "APPROVED",
+      "tailored_resume": "linkedin/jobs/resumes/resume_purna_deepagent.html",
+      "tailored_cover_letter": "I read your technical posting regarding typed tool-calling workflows at DeepAgent AI Labs. My MSc thesis in Berlin focuses specifically on hallucination attribution in multi-step agent trajectories, and I recently contributed to Pydantic AI's typed dependency injection middleware. I would welcome the opportunity to discuss how this directly applies to your Berlin infrastructure.",
+      "resume_url": "/resumes/resume_job-berlin-001.html"
+    },
+    {
+      "id": "job-berlin-002",
+      "title": "Working Student / Junior Machine Learning Engineer",
+      "company": "Sovereign AI Infrastructure Europe",
+      "location": "Berlin, Germany (On-site / Hybrid)",
+      "work_type": "Hybrid",
+      "posted_time": "7 hours ago",
+      "applicants_count": 22,
+      "match_score": 92,
+      "easy_apply": true,
+      "salary_range": "\u20ac20 - \u20ac24 / hour",
+      "job_url": "https://www.linkedin.com/jobs/view/sample-berlin-ml-student-002/",
+      "tech_stack": [
+        "Python",
+        "PyTorch",
+        "Ollama",
+        "vLLM",
+        "Hugging Face",
+        "Linux"
+      ],
+      "description": "Join our sovereign AI team in Berlin optimizing open-weight models (Mistral, LLaMA) on local hardware. You will evaluate inference latency, benchmark quantization layers (GGUF, AWQ), and implement data extraction pipelines. Requires proficiency in Python, PyTorch, and hands-on familiarity with Linux/Docker environments. Enrollment in an MSc Data Science or Computer Science program in Berlin required.",
+      "status": "APPROVED",
+      "tailored_resume": "linkedin/jobs/resumes/resume_purna_sovereign.html",
+      "tailored_cover_letter": "Your focus on open-weight inference on European sovereign hardware matches my daily workflow. As an MSc Data Science student here in Berlin, I benchmark local models (vLLM, Ollama) and build reproducible Python data pipelines. I am looking for a working student role where I can contribute to production-grade model serving.",
+      "resume_url": "/resumes/resume_job-berlin-002.html"
+    },
+    {
+      "id": "job-amsterdam-003",
+      "title": "Python Backend & AI Workflow Developer",
+      "company": "Kinetik Cloud AI B.V.",
+      "location": "Amsterdam, Netherlands / Remote EU",
+      "work_type": "Remote EU",
+      "posted_time": "12 hours ago",
+      "applicants_count": 31,
+      "match_score": 88,
+      "easy_apply": true,
+      "salary_range": "\u20ac55,000 - \u20ac65,000",
+      "job_url": "https://www.linkedin.com/jobs/view/sample-amsterdam-python-ai-003/",
+      "tech_stack": [
+        "Python",
+        "FastAPI",
+        "PostgreSQL",
+        "Docker",
+        "REST APIs",
+        "Playwright"
+      ],
+      "description": "Looking for a Python Backend Developer to build scalable automated data extraction and LLM parsing microservices. Experience with modern web scraping (Playwright/Crawl4AI), relational database design, and asynchronous Python is essential. European Union residency required.",
+      "status": "APPROVED",
+      "tailored_resume": "linkedin/jobs/resumes/resume_purna_kinetik.html",
+      "tailored_cover_letter": "I saw your opening for a Python Backend & AI Workflow Developer. In my recent open-source work, I designed an automated extraction pipeline pairing Crawl4AI with Playwright and FastAPI for structured markdown generation. Based in Berlin with full EU work eligibility, I am excited by your remote workflow.",
+      "resume_url": "/resumes/resume_job-amsterdam-003.html"
+    },
+    {
+      "id": "job-munich-004",
+      "title": "Autonomous Systems & Agent Data Scientist",
+      "company": "Bavaria Robotics & AI GmbH",
+      "location": "Munich, Germany (Hybrid)",
+      "work_type": "Hybrid",
+      "posted_time": "1 day ago",
+      "applicants_count": 38,
+      "match_score": 85,
+      "easy_apply": true,
+      "salary_range": "\u20ac62,000 - \u20ac72,000",
+      "job_url": "https://www.linkedin.com/jobs/view/sample-munich-agent-004/",
+      "tech_stack": [
+        "Python",
+        "PyTorch",
+        "Computer Vision",
+        "Agent Architecture",
+        "ROS"
+      ],
+      "description": "Developing multimodal agent architectures for desktop computer-use and autonomous robotics control. Requires strong mathematical foundations in machine learning, state space models, and clean Python software engineering.",
+      "status": "WAITING_FOR_REVIEW",
+      "tailored_resume": "linkedin/jobs/resumes/resume_purna_munich.html",
+      "tailored_cover_letter": "My research into agent trajectory probers aligns directly with your mission in autonomous decision-making. I have hands-on experience structuring multi-step agent actions and isolating failure points before execution. I would love to contribute to your Munich engineering team.",
+      "resume_url": "/resumes/resume_job-munich-004.html"
+    }
+  ]
+}

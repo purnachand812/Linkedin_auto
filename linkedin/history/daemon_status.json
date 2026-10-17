@@ -10,14 +10,14 @@
     "[08:31:02] \ud83d\udcac Generated 2 contextual community reply templates for Candidate #5",
     "[10:55:06] Daemon initialized. 24/7 autonomous monitoring & scheduling active."
   ],
-  "current_time_cet": "2026-10-17 10:55:06 CET",
+  "current_time_cet": "2026-10-17 11:43:08 CET",
   "is_eu_prime_time": false,
   "current_window": "Off-Peak / Monitoring",
-  "next_scheduled_drop": "Midday Tech Catchup at 12:15 CET (~79m from now)",
+  "next_scheduled_drop": "Midday Tech Catchup at 12:15 CET (~31m from now)",
   "approved_queue_count": 0,
   "published_today": 1,
   "target_audience": "European Union (Berlin, Munich, Amsterdam, Paris, Zurich)",
   "auto_publish_enabled": true,
-  "last_heartbeat": "2026-10-17T10:55:06.599311",
+  "last_heartbeat": "2026-10-17T11:43:08.527570",
   "last_activity": "[10:55:06] Daemon initialized. 24/7 autonomous monitoring & scheduling active."
 }
