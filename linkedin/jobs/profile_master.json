@@ -1,76 +1,141 @@
 {
-  "full_name": "Purnachandra Madhukar",
-  "title": "AI Engineer & Autonomous Agent Architect",
+  "full_name": "Dandu Purnachandra Madhukar",
+  "preferred_name": "Purnachandra Madhukar",
+  "title": "Data Scientist & ML Engineer",
   "location": "Berlin, Germany",
-  "email": "purnachandra.madhukar@example.com",
-  "phone": "+49 176 00000000",
-  "linkedin_url": "https://www.linkedin.com/in/purnachandra-madhukar/",
-  "github_url": "https://github.com/purnachandra-madhukar",
-  "education": [
+  "email": "purnachand0812@gmail.com",
+  "phone": "+91 7288073766",
+  "linkedin_url": "https://linkedin.com/in/purnachanddandu",
+  "github_url": "https://github.com/purnachand812",
+  "profile_summary": "Results-driven Software Engineer transitioning into Data Science, with 1+ year of production engineering experience delivering measurable business impact. Skilled in Python, Machine Learning, SQL, and full-stack development. Incoming MSc Data Science student at GISMA University Berlin. Seeking a Werkstudent role in Data Science or Machine Learning in Berlin.",
+  "target_roles": [
+    "Werkstudent Data Science",
+    "Werkstudent Machine Learning",
+    "Junior Data Scientist",
+    "Junior Machine Learning Engineer",
+    "Data Scientist & ML Engineer",
+    "Python AI Developer"
+  ],
+  "work_experience": [
     {
-      "degree": "Master of Science in Data Science",
-      "institution": "Berlin University of Applied Sciences / Tech Institute",
-      "location": "Berlin, Germany",
-      "year": "2024 - Present (Expected 2026)",
-      "thesis": "Autonomous LLM Agent Architecture: Trajectory Hallucination Detection & Attribution Using Internal Model Activations"
+      "company": "Crack-ED",
+      "locality": "Gurgaon, India",
+      "position": "Software Engineer",
+      "period": "Sep 2024 – Aug 2025",
+      "sector": "Educational Technology & Software",
+      "responsibilities": [
+        "Architected and deployed an LMS platform serving 1,000+ concurrent users, reducing system downtime by 35% and supporting 10,000+ student enrollments.",
+        "Optimised 15+ critical SQL queries and implemented Redis caching, cutting average API response time from ~800ms to under 320ms — a 60% backend performance improvement.",
+        "Built 3 real-time analytics dashboards tracking progress of 10,000+ students, enabling instructors to identify at-risk learners 40% faster.",
+        "Implemented JWT + RBAC authentication securing a multi-role platform across students, instructors, and admins with zero reported security incidents.",
+        "Automated end-to-end CI/CD pipelines using GitHub Actions, reducing deployment time from ~50 minutes to under 30 minutes — saving ~8 engineering hours per week."
+      ]
     },
     {
-      "degree": "Bachelor of Technology in Computer Science & Engineering",
-      "institution": "Engineering University",
-      "year": "2019 - 2023"
+      "company": "Innomatics Research Labs",
+      "locality": "Hyderabad, India",
+      "position": "Data Science Intern",
+      "period": "Mar 2023 – Jun 2023",
+      "sector": "AI & Data Science Research & Training",
+      "responsibilities": [
+        "Built an NLP healthcare chatbot handling 500+ query types, achieving 87% intent classification accuracy using Python and NLTK.",
+        "Automated text preprocessing pipeline across 3 datasets totalling 50,000+ records, reducing manual preprocessing time by 20% (saving ~4 hours per sprint).",
+        "Delivered tokenization, stemming, and intent classification pipeline reducing end-to-end chatbot response generation time by 30%."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc Data Science",
+      "eqf_level": "EQF Level 7",
+      "institution": "GISMA University of Applied Sciences",
+      "location": "Berlin, Germany",
+      "year": "2026 – 2028 (Expected)",
+      "curriculum": "Advanced Data Science, Machine Learning, Statistical Inference, Predictive Analytics, Big Data Architectures"
+    },
+    {
+      "degree": "B.Tech in Computer Science (AI & Machine Learning)",
+      "eqf_level": "EQF Level 6",
+      "institution": "Sai Spurthi Institute of Technology",
+      "location": "Telangana, India",
+      "year": "2021 – 2024",
+      "coursework": "Machine Learning, Deep Learning, Neural Networks, Data Structures & Algorithms, Probability & Statistics, Database Systems"
+    }
+  ],
+  "verified_projects": [
+    {
+      "name": "Student Performance Prediction",
+      "role": "Machine Learning Engineer",
+      "technologies": ["Python", "Scikit-learn", "Pandas", "Random Forest", "Logistic Regression"],
+      "description": "Predicted student academic outcomes with 82% accuracy across 5 classification models, with Random Forest outperforming baseline by 18 percentage points.",
+      "impact": "Performed full EDA, feature engineering, and cross-validation on a dataset of 480+ student records with 30+ features."
+    },
+    {
+      "name": "Healthcare Chatbot using NLP",
+      "role": "NLP & Data Science Intern",
+      "technologies": ["Python", "NLTK", "Intent Classification"],
+      "description": "Built end-to-end NLP chatbot with preprocessing pipeline achieving 87% intent recognition accuracy across 500+ healthcare query types.",
+      "impact": "Reduced chatbot onboarding time for new query categories by 50% through modular pipeline design."
+    },
+    {
+      "name": "Learning Management System (LMS)",
+      "role": "Lead Software Engineer",
+      "technologies": ["Django", "React.js", "PostgreSQL", "Redis", "AWS EC2/S3"],
+      "description": "Delivered full-stack LMS platform serving 1,000+ concurrent users with 99.9% uptime across production environment.",
+      "impact": "Reduced average page load time from 4.2s to under 2.1s (50% improvement) via API optimisation and Redis caching; implemented RBAC for 3 user types with zero reported access vulnerabilities."
     }
   ],
   "technical_skills": {
-    "languages": ["Python (Advanced)", "SQL", "Bash", "JavaScript", "TypeScript"],
-    "ai_frameworks": ["PyTorch", "Hugging Face Transformers", "Pydantic AI", "LangChain", "LlamaIndex", "smolagents", "Ollama", "vLLM"],
-    "backend_cloud": ["FastAPI", "Pydantic", "Docker", "REST APIs", "PostgreSQL", "SQLite", "Git", "Linux"],
-    "specializations": ["Autonomous Agent Architecture", "Tool-Calling & Dependency Injection", "Hallucination Attribution", "Local Sovereign AI Inference", "Web Scraping & Data Pipelines"]
+    "ml_ai": ["Scikit-learn", "TensorFlow (Basic)", "NLTK", "Random Forest", "Logistic Regression", "NLP"],
+    "data": ["Python", "Pandas", "NumPy", "SQL", "PostgreSQL", "EDA", "Data Cleaning", "Data Visualisation"],
+    "backend": ["Django", "REST APIs", "Redis", "JWT Authentication"],
+    "tools_cloud": ["Git", "GitHub", "AWS EC2/S3", "CI/CD (GitHub Actions)", "Docker (Basic)"],
+    "languages": ["Python", "JavaScript", "TypeScript", "SQL"]
   },
-  "verified_projects": [
+  "certifications": [
     {
-      "name": "Autonomous Agent Trajectory Prober",
-      "role": "Lead Researcher & Architect",
-      "description": "Developed an internal probing layer for multi-step LLM agent trajectories to detect and attribute hallucinations before external tool execution.",
-      "technologies": ["Python", "PyTorch", "Hugging Face", "Ollama", "Internal Activation Probing"],
-      "impact": "Reduced unverified tool calling errors by 38% in synthetic multi-agent benchmark trials."
+      "name": "Machine Learning Specialization",
+      "issuer": "Andrew Ng, Coursera"
     },
     {
-      "name": "Antigravity LinkedIn Editorial Hub & 24/7 Agent",
-      "role": "Creator & Engineer",
-      "description": "Built an autonomous research-first LinkedIn editorial scout with 100-point quality auditing, Canva-style visual generation, and 24/7 CET scheduled publishing.",
-      "technologies": ["Python", "LinkedIn REST API v202610", "OAuth 2.0", "FastAPI/HTTPServer", "Vanilla CSS"],
-      "impact": "Automated daily European tech distribution with 100% compliant REST publishing."
+      "name": "Python for Data Science",
+      "issuer": "Coursera"
     },
     {
-      "name": "Pydantic AI Typed Tool Calling Middleware",
-      "role": "Open-Source Contributor / Architect",
-      "description": "Designed typed dependency injection patterns for production agent tool calls, replacing prompt-based dictionary guessing with static type validation.",
-      "technologies": ["Python", "Pydantic AI", "FastAPI", "Type Annotations"],
-      "impact": "Guarantees runtime argument validity before database and API execution."
-    },
-    {
-      "name": "Self-Hosted LLM Web Scraping Pipeline",
-      "role": "Backend Engineer",
-      "description": "Implemented automated web extraction and markdown structuring pipeline using Crawl4AI and Playwright for privacy-preserving RAG embeddings.",
-      "technologies": ["Python", "Crawl4AI", "Playwright", "Docker"],
-      "impact": "Eliminated third-party scraping API fees ($0 license) while keeping data processing 100% local."
+      "name": "SQL for Data Analysis",
+      "issuer": "Coursera"
     }
   ],
+  "languages": {
+    "mother_tongue": "Telugu (Native)",
+    "other_languages": [
+      {
+        "language": "English",
+        "level": "B2",
+        "description": "Upper Intermediate (Professional working proficiency)",
+        "cefr": {"listening": "B2", "reading": "B2", "spoken_interaction": "B2", "spoken_production": "B2", "writing": "B2"}
+      },
+      {
+        "language": "Hindi",
+        "level": "B2",
+        "description": "Upper Intermediate",
+        "cefr": {"listening": "B2", "reading": "B2", "spoken_interaction": "B2", "spoken_production": "B2", "writing": "B2"}
+      },
+      {
+        "language": "German",
+        "level": "A1",
+        "description": "Beginner (Currently learning)",
+        "cefr": {"listening": "A1", "reading": "A1", "spoken_interaction": "A1", "spoken_production": "A1", "writing": "A1"}
+      }
+    ]
+  },
   "work_authorization": {
-    "germany": "Legal right to work in Germany (Student / Resident Work Authorization)",
-    "european_union": "Eligible for employment in Germany and remote European Union roles",
+    "germany": "Legal right to work in Germany (Student / Werkstudent Status)",
+    "european_union": "Eligible for student & Werkstudent employment in Germany / EU",
     "visa_sponsorship_required": false
   },
-  "target_roles": [
-    "AI Engineer",
-    "LLM Engineer",
-    "Machine Learning Engineer",
-    "Autonomous Agent Architect",
-    "Python Backend & AI Developer",
-    "Data Scientist (Applied ML)"
-  ],
   "salary_expectation": {
-    "full_time_annual_eur": "€55,000 - €65,000",
-    "working_student_hourly_eur": "€18 - €24 / hr"
+    "werkstudent_hourly_eur": "€16 - €22 / hr",
+    "full_time_annual_eur": "€48,000 - €58,000"
   }
 }
