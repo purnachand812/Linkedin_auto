@@ -1,0 +1,51 @@
+name: Autonomous Job Radar & Application Pipeline
+
+on:
+  schedule:
+    # Runs every 20 hours automatically in GitHub's free cloud runner
+    - cron: '0 */20 * * *'
+  workflow_dispatch: # Allows 1-click manual execution from GitHub Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  run-job-apply-cycle:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Run Autonomous Job Scout, Matcher, Tailor & Auto-Apply Cycle
+        env:
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+        run: |
+          python -u linkedin/jobs/autonomous_job_agent.py
+
+      - name: Generate and Dispatch Daily Email Tracking Report
+        env:
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+        run: |
+          python -u linkedin/jobs/daily_reporter.py --force
+
+      - name: Commit & push updated applications, tracking logs, and tailored resumes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Antigravity Autonomous Job Bot"
+          git add linkedin/jobs/
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto: refresh jobs, submit applications & dispatch report [skip ci]" && git push origin HEAD:${{ github.ref_name }})

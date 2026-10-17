@@ -1418,6 +1418,8 @@ function renderJobsData(radarRes, appliedRes) {
   if (badge) badge.textContent = `${jobs.length} Opps`;
   const statCount = document.getElementById('radar-count-stat');
   if (statCount) statCount.textContent = jobs.length;
+  const filterStatus = document.getElementById('jobs-filter-status');
+  if (filterStatus) filterStatus.textContent = `Showing ${jobs.length} live Berlin opportunities (Easy Apply)`;
 
   renderJobsRadar(jobs, appliedJobsData);
   renderAppliedHistory(appliedJobsData);
@@ -1495,19 +1497,24 @@ function renderJobsRadar(jobs, appliedList) {
           </button>
         `}
 
-        <button class="btn btn-secondary" onclick="openResumeModal('${resumeUrl}', '${escapeHtml(job.company)} - ${escapeHtml(job.title)}')" style="font-size: 0.85rem; padding: 0.5rem 0.85rem;">
+        <button class="btn btn-secondary" onclick="openResumeModal('${resumeUrl}', '${escapeHtml(job.company)} - Tailored CV')" style="font-size: 0.85rem; padding: 0.5rem 0.85rem;">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-          View Tailored Resume
+          Tailored Resume
+        </button>
+
+        <button class="btn btn-secondary" onclick="openResumeModal('/resumes/cover_letter_${job.id}.html', '${escapeHtml(job.company)} - Tailored Cover Letter')" style="font-size: 0.85rem; padding: 0.5rem 0.85rem; border-color: rgba(16, 185, 129, 0.4);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Cover Letter
         </button>
 
         <button class="btn btn-secondary" onclick="copyRecruiterNote('${job.id}')" style="font-size: 0.85rem; padding: 0.5rem 0.85rem;" title="Copy non-slop recruiter message to clipboard">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-          Copy Recruiter Note
+          Outreach Note
         </button>
 
-        <a href="${escapeHtml(job.job_url || '#')}" target="_blank" class="btn btn-secondary" style="font-size: 0.85rem; padding: 0.5rem 0.85rem; margin-left: auto;" title="Open job posting">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
-          LinkedIn JD &rarr;
+        <a href="${escapeHtml(job.job_url || '#')}" target="_blank" class="btn btn-primary" style="font-size: 0.82rem; padding: 0.45rem 0.85rem; margin-left: auto; background: #0077B5; border-color: #0A66C2; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem;" title="Open real-time LinkedIn job posting with Easy Apply">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          LinkedIn Easy Apply &rarr;
         </a>
       </div>
     `;
@@ -1542,7 +1549,8 @@ function renderAppliedHistory(historyList) {
       <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.25rem;">
         <span style="font-size: 0.7rem; color: var(--text-dim);">${timeStr}</span>
         <div style="display: flex; gap: 0.4rem;">
-          ${entry.resume_url ? `<button class="btn btn-secondary btn-sm" onclick="openResumeModal('${escapeHtml(entry.resume_url)}', '${escapeHtml(entry.company)} - ${escapeHtml(entry.title)}')" style="font-size: 0.65rem; padding: 0.15rem 0.4rem; color: #38BDF8;">Resume</button>` : ''}
+          ${entry.resume_url ? `<button class="btn btn-secondary btn-sm" onclick="openResumeModal('${escapeHtml(entry.resume_url)}', '${escapeHtml(entry.company)} - Resume')" style="font-size: 0.65rem; padding: 0.15rem 0.4rem; color: #38BDF8;">Resume</button>` : ''}
+          <button class="btn btn-secondary btn-sm" onclick="openResumeModal('/resumes/cover_letter_${entry.job_id}.html', '${escapeHtml(entry.company)} - Cover Letter')" style="font-size: 0.65rem; padding: 0.15rem 0.4rem; color: #10B981;">Cover Letter</button>
           <button class="btn btn-secondary btn-sm" onclick="copyRecruiterNote('${entry.job_id}')" style="font-size: 0.65rem; padding: 0.15rem 0.4rem;">Note</button>
         </div>
       </div>
@@ -1702,9 +1710,30 @@ async function handleScoreJD(e) {
 }
 
 function initJobEvents() {
-  document.getElementById('btn-refresh-jobs')?.addEventListener('click', () => {
-    loadAllData();
-    showToast('Job opportunity radar refreshed', 'success');
+  document.getElementById('btn-refresh-jobs')?.addEventListener('click', async () => {
+    const btn = document.getElementById('btn-refresh-jobs');
+    const origHtml = btn ? btn.innerHTML : '';
+    if (btn) {
+      btn.disabled = true;
+      btn.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation: spin 1s linear infinite; margin-right: 6px;"><circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle><path d="M12 2a10 10 0 0 1 10 10"></path></svg>Scraping Live LinkedIn...`;
+    }
+    showToast('Scraping fresh real-time LinkedIn jobs in Berlin (<= 4-7 days)...', 'info');
+    try {
+      const res = await fetch('/api/jobs/radar/refresh', { method: 'POST' }).then(r => r.json());
+      if (res.success) {
+        showToast(`🎉 Refreshed with ${res.count} live LinkedIn jobs!`, 'success');
+        loadAllData();
+      } else {
+        showToast(res.error || 'Refresh failed', 'error');
+      }
+    } catch (e) {
+      showToast(`Refresh error: ${e.message}`, 'error');
+    } finally {
+      if (btn) {
+        btn.disabled = false;
+        btn.innerHTML = origHtml;
+      }
+    }
   });
 }
 

@@ -2,9 +2,9 @@ name: 24/7 LinkedIn Autonomous Growth & Publishing Engine
 
 on:
   schedule:
-    # Runs every 30 minutes, 24/7 in GitHub's free cloud sandbox
+    # Runs every 30 minutes, 24/7 in GitHub's free cloud runner
     - cron: '*/30 * * * *'
-  workflow_dispatch: # Allows manual trigger from GitHub UI anytime
+  workflow_dispatch: # Allows 1-click manual trigger anytime from GitHub Actions tab
 
 permissions:
   contents: write
@@ -15,24 +15,39 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: 'pip'
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Restore LinkedIn OAuth Credentials (from GitHub Secret if configured)
+        if: env.LINKEDIN_CREDENTIALS != ''
+        env:
+          LINKEDIN_CREDENTIALS: ${{ secrets.LINKEDIN_CREDENTIALS }}
+        run: |
+          mkdir -p linkedin
+          echo "$LINKEDIN_CREDENTIALS" > linkedin/credentials.json
+          chmod 600 linkedin/credentials.json
 
       - name: Execute Autonomous Editorial & Publishing Cycle
+        env:
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
         run: |
           python linkedin/tools/daemon.py --once
 
       - name: Commit & push updated logs, queue state, and analytics
         run: |
           git config --local user.email "action@github.com"
-          git config --local user.name "Antigravity LinkedIn Editorial Agent"
-          git add linkedin/queue/ linkedin/history/
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto: scheduled EU publishing and analytics update [skip ci]" && git push)
+          git config --local user.name "Antigravity Cloud Runner"
+          git add linkedin/queue/ linkedin/history/ linkedin/jobs/
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto: scheduled EU publishing & telemetry update [skip ci]" && git push origin HEAD:${{ github.ref_name }})

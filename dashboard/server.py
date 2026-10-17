@@ -12,7 +12,7 @@ import json
 import re
 import math
 from pathlib import Path
-from http.server import HTTPServer, SimpleHTTPRequestHandler
+from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from urllib.parse import urlparse, parse_qs
 
 if hasattr(sys.stdout, 'reconfigure'):
@@ -34,6 +34,8 @@ JOBS_RADAR_FILE = JOBS_DIR / "jobs_radar.json"
 APPLIED_HISTORY_FILE = JOBS_DIR / "applied_history.json"
 PROFILE_MASTER_FILE = JOBS_DIR / "profile_master.json"
 SCREENER_BANK_FILE = JOBS_DIR / "screener_bank.json"
+REPORTS_DIR = JOBS_DIR / "reports"
+EMAIL_CONFIG_FILE = JOBS_DIR / "email_config.json"
 
 sys.path.insert(0, str(WORKSPACE_DIR))
 try:
@@ -50,11 +52,13 @@ try:
     from linkedin.jobs import resume_tailor
     from linkedin.jobs import job_dispatcher
     from linkedin.jobs import autonomous_job_agent
+    from linkedin.jobs import daily_reporter
 except ImportError:
     job_matcher = None
     resume_tailor = None
     job_dispatcher = None
     autonomous_job_agent = None
+    daily_reporter = None
 
 def load_slop_config():
     if SLOP_FILE.exists():
@@ -326,6 +330,20 @@ class EditorialHandler(SimpleHTTPRequestHandler):
                 self.send_error(404, "Resume file not found")
                 return
 
+        # Static Reports routing
+        if path.startswith("/reports/"):
+            filename = path.replace("/reports/", "")
+            file_path = REPORTS_DIR / filename
+            if file_path.exists():
+                self.send_response(200)
+                self.send_header("Content-Type", "text/html; charset=utf-8")
+                self.end_headers()
+                self.wfile.write(file_path.read_bytes())
+                return
+            else:
+                self.send_error(404, "Report file not found")
+                return
+
         # OAuth routes
         if path == "/auth/linkedin":
             if not publisher:
@@ -392,12 +410,18 @@ class EditorialHandler(SimpleHTTPRequestHandler):
             self.handle_get_replies()
         elif path == "/api/jobs/radar":
             self.handle_get_jobs_radar()
+        elif path == "/api/jobs/radar/refresh":
+            self.handle_refresh_jobs_radar()
         elif path == "/api/jobs/applied":
             self.handle_get_jobs_applied()
         elif path == "/api/jobs/profile":
             self.handle_get_jobs_profile()
         elif path == "/api/jobs/auto-apply/status":
             self.handle_get_auto_apply_status()
+        elif path == "/api/jobs/reports/latest":
+            self.handle_get_latest_report()
+        elif path == "/api/jobs/email-config":
+            self.handle_get_email_config()
         elif path == "/api/linkedin/status":
             if publisher:
                 self.send_json(publisher.get_connection_status())
@@ -434,12 +458,18 @@ class EditorialHandler(SimpleHTTPRequestHandler):
             self.handle_post_jobs_score(data)
         elif path == "/api/jobs/apply":
             self.handle_post_jobs_apply(data)
+        elif path == "/api/jobs/radar/refresh":
+            self.handle_refresh_jobs_radar()
         elif path == "/api/jobs/auto-apply/toggle":
             self.handle_post_auto_apply_toggle(data)
         elif path == "/api/jobs/auto-apply/run-now":
             self.handle_post_auto_apply_run_now(data)
         elif path == "/api/jobs/auto-apply/config":
             self.handle_post_auto_apply_config(data)
+        elif path == "/api/jobs/reports/send-now":
+            self.handle_post_report_send_now(data)
+        elif path == "/api/jobs/email-config":
+            self.handle_post_email_config(data)
         else:
             self.send_error(404, "Unknown API route")
 
@@ -898,6 +928,25 @@ class EditorialHandler(SimpleHTTPRequestHandler):
                 return
         self.send_json({"jobs": []})
 
+    def handle_refresh_jobs_radar(self):
+        try:
+            from linkedin.jobs import linkedin_scraper, resume_tailor, cover_letter_generator
+            success = linkedin_scraper.refresh_jobs_radar()
+            if JOBS_RADAR_FILE.exists():
+                with open(JOBS_RADAR_FILE, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                for job in data.get("jobs", []):
+                    try:
+                        resume_tailor.generate_tailored_resume(job)
+                        cover_letter_generator.generate_tailored_cover_letter(job)
+                    except Exception:
+                        pass
+                self.send_json({"success": True, "count": len(data.get("jobs", [])), "radar": data})
+                return
+            self.send_json({"success": success, "count": 0})
+        except Exception as e:
+            self.send_json({"success": False, "error": str(e)}, 500)
+
     def handle_get_jobs_applied(self):
         if APPLIED_HISTORY_FILE.exists():
             try:
@@ -1012,9 +1061,62 @@ class EditorialHandler(SimpleHTTPRequestHandler):
         updated = autonomous_job_agent.update_config(updates)
         self.send_json({"success": True, "config": updated})
 
+    def handle_get_latest_report(self):
+        latest_file = REPORTS_DIR / "latest_daily_report.html"
+        email_cfg = {}
+        if EMAIL_CONFIG_FILE.exists():
+            try:
+                with open(EMAIL_CONFIG_FILE, "r", encoding="utf-8") as f:
+                    email_cfg = json.load(f)
+            except Exception:
+                pass
+        self.send_json({
+            "exists": latest_file.exists(),
+            "report_url": "/reports/latest_daily_report.html" if latest_file.exists() else None,
+            "email_config": email_cfg
+        })
+
+    def handle_get_email_config(self):
+        if not daily_reporter:
+            self.send_json({"error": "Daily reporter not loaded"}, 500)
+            return
+        cfg = daily_reporter.get_email_config()
+        # redact password in GET
+        safe_cfg = dict(cfg)
+        safe_cfg["has_password"] = bool(safe_cfg.get("smtp_password"))
+        safe_cfg["smtp_password"] = "••••••••" if safe_cfg.get("smtp_password") else ""
+        self.send_json(safe_cfg)
+
+    def handle_post_report_send_now(self, data):
+        if not daily_reporter:
+            self.send_json({"error": "Daily reporter not loaded"}, 500)
+            return
+        try:
+            res = daily_reporter.send_daily_summary_report(force=True)
+            self.send_json({"success": True, "result": res})
+        except Exception as e:
+            self.send_json({"success": False, "error": str(e)}, 500)
+
+    def handle_post_email_config(self, data):
+        if not daily_reporter:
+            self.send_json({"error": "Daily reporter not loaded"}, 500)
+            return
+        updates = {}
+        if "recipient_email" in data:
+            updates["recipient_email"] = str(data["recipient_email"]).strip()
+        if "smtp_password" in data and data["smtp_password"] != "••••••••":
+            updates["smtp_password"] = str(data["smtp_password"]).strip()
+        if "send_hour_cet" in data:
+            updates["send_hour_cet"] = int(data["send_hour_cet"])
+        updated = daily_reporter.update_email_config(updates)
+        safe_cfg = dict(updated)
+        safe_cfg["has_password"] = bool(safe_cfg.get("smtp_password"))
+        safe_cfg["smtp_password"] = "••••••••" if safe_cfg.get("smtp_password") else ""
+        self.send_json({"success": True, "config": safe_cfg})
+
 def run():
     server_address = ('', PORT)
-    httpd = HTTPServer(server_address, EditorialHandler)
+    httpd = ThreadingHTTPServer(server_address, EditorialHandler)
     print(f"[OK] Antigravity LinkedIn Hub running at http://localhost:{PORT}")
     try:
         httpd.serve_forever()

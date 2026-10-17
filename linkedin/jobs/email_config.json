@@ -1,0 +1,14 @@
+{
+  "recipient_email": "purnachand0812@gmail.com",
+  "sender_email": "purnachand0812@gmail.com",
+  "smtp_host": "smtp.gmail.com",
+  "smtp_port": 587,
+  "use_tls": true,
+  "smtp_user": "purnachand0812@gmail.com",
+  "smtp_password": "",
+  "send_hour_cet": 19,
+  "refresh_interval_hours": 20,
+  "last_sent_date": "2026-10-17",
+  "last_status": "AWAITING_SMTP_CONFIG",
+  "last_report_file": "/reports/daily_report_2026-10-17.html"
+}

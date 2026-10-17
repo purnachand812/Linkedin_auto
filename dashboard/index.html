@@ -724,29 +724,33 @@
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
               Run Auto-Apply Batch Now
             </button>
+            <button id="btn-view-daily-report" class="btn btn-secondary" onclick="openResumeModal('/reports/latest_daily_report.html', 'Daily Application Tracking Report (purnachand0812@gmail.com)')" style="border-color: #10B981; color: #10B981;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Daily Email Report &rarr;
+            </button>
           </div>
         </div>
 
         <div class="auto-apply-metrics-row">
           <div class="auto-metric">
             <span class="label">APPLIED TODAY</span>
-            <div class="val" id="metric-applied-today" style="color: #10B981;">3 / 5</div>
+            <div class="val" id="metric-applied-today" style="color: #10B981;">5 / 5</div>
             <span class="sub">Automated &bull; Anti-ban throttled</span>
           </div>
           <div class="auto-metric">
-            <span class="label">MIN MATCH SCORE</span>
-            <div class="val" id="metric-min-score" style="color: #38BDF8;">85%</div>
-            <span class="sub">Quality filter threshold</span>
+            <span class="label">FRESHNESS FILTER</span>
+            <div class="val" style="color: #38BDF8;">&le; 4 to 7 Days</div>
+            <span class="sub">Fresh postings only</span>
           </div>
           <div class="auto-metric">
-            <span class="label">TARGET ROLES</span>
-            <div class="val" style="color: #F8FAFC; font-size: 0.95rem;">Werkstudent &bull; Intern</div>
-            <span class="sub">Part-Time / Student contracts</span>
+            <span class="label">RADAR REFRESH</span>
+            <div class="val" style="color: #A78BFA;">Every 20 Hours</div>
+            <span class="sub">Autonomous schedule</span>
           </div>
           <div class="auto-metric">
-            <span class="label">VERIFIED PROFILE</span>
-            <div class="val" style="color: #F8FAFC; font-size: 0.9rem;">+49 15511064761</div>
-            <span class="sub">Berlin &bull; German A2 &bull; No Lic</span>
+            <span class="label">EOD EMAIL DISPATCH</span>
+            <div class="val" style="color: #F8FAFC; font-size: 0.82rem; word-break: break-all;">purnachand0812@gmail.com</div>
+            <span class="sub">Daily summary at 19:00 CET</span>
           </div>
         </div>
 

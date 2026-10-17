@@ -2,20 +2,22 @@
 """
 autonomous_job_agent.py - 24/7 Autonomous Job Application Engine for Purnachandra Madhukar.
 Handles:
-1. Radar scanning & filtering (Werkstudent, Internship, Part-Time in Berlin/Germany)
-2. Automated 100-point ATS fit evaluation
+1. 20-Hour Cadence Radar scanning & freshness filtering (posted <= 4 to 7 days in Berlin / Germany)
+2. Automated 100-point ATS fit evaluation against GISMA M.Sc. Data Science & verified profile
 3. Dynamic generation of tailored Europass CVs matching the employer's tech stack
-4. Deterministic screener answering from screener_bank.json (phone, visa, resident, German A2, no driving licence)
-5. Grounded recruiter outreach note drafting
-6. Safe execution throttling with anti-ban pacing (daily limits)
-7. Full integration with the 24/7 background daemon and dashboard
+4. Dynamic generation of individualized European Cover Letters tailored to company & role
+5. Deterministic screener answering from screener_bank.json (phone, visa, resident, German A2, no driving licence)
+6. Grounded recruiter outreach note formulation
+7. Safe anti-ban throttling (daily limits)
+8. End-of-day automatic tracking report compilation & email dispatch to purnachand0812@gmail.com
 """
 
 import os
 import sys
+import re
 import json
 import time
-from datetime import datetime, date
+from datetime import datetime, date, timedelta
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
@@ -30,22 +32,33 @@ SCREENER_FILE = JOBS_DIR / "screener_bank.json"
 sys.path.insert(0, str(BASE_DIR))
 try:
     from linkedin.jobs import resume_tailor
+    from linkedin.jobs import cover_letter_generator
     from linkedin.jobs import job_dispatcher
     from linkedin.jobs import job_matcher
+    from linkedin.jobs import daily_reporter
+    from linkedin.jobs import linkedin_scraper
 except ImportError:
     resume_tailor = None
+    cover_letter_generator = None
     job_dispatcher = None
     job_matcher = None
+    daily_reporter = None
+    linkedin_scraper = None
 
 DEFAULT_CONFIG = {
     "enabled": True,
     "daily_limit": 5,
     "min_match_score": 85,
+    "max_posted_days": 7,
+    "priority_freshness_days": 4,
+    "refresh_interval_hours": 20,
     "target_roles": ["Werkstudent", "Internship", "Part-Time", "Praktikum", "Student"],
     "target_locations": ["Berlin", "Berlin, Germany", "Remote Germany", "Hybrid Berlin"],
     "today_date": str(date.today()),
     "applied_today": 0,
     "last_run": None,
+    "last_refresh_timestamp": datetime.now().isoformat(),
+    "recipient_email": "purnachand0812@gmail.com",
     "status": "RUNNING",
     "anti_ban_delay_seconds": 2
 }
@@ -104,10 +117,35 @@ def get_logs(limit=30):
     log_data = load_json(LOG_FILE, {"entries": []})
     return log_data.get("entries", [])[-limit:]
 
+def parse_posted_age_days(posted_str):
+    """Parses relative or ISO posted times into integer age in days."""
+    if not posted_str:
+        return 1
+    s = str(posted_str).lower().strip()
+    if any(k in s for k in ["hour", "minute", "just now", "today", "sec"]):
+        return 0
+    if "yesterday" in s:
+        return 1
+    m_day = re.search(r'(\d+)\s*day', s)
+    if m_day:
+        return int(m_day.group(1))
+    m_week = re.search(r'(\d+)\s*week', s)
+    if m_week:
+        return int(m_week.group(1)) * 7
+    return 2
+
 def is_job_eligible(job, config):
+    """Validates job eligibility based on status, fit score, location, and freshness."""
     if job.get("status") == "APPLIED":
         return False, "Already applied"
     
+    # Freshness check: must be <= max_posted_days (7 days max)
+    posted_raw = job.get("posted_time", "1 day ago")
+    age_days = parse_posted_age_days(posted_raw)
+    max_days = config.get("max_posted_days", 7)
+    if age_days > max_days:
+        return False, f"Job posted {age_days} days ago (exceeds {max_days}-day limit)"
+
     match_score = job.get("match_score", 0)
     min_score = config.get("min_match_score", 85)
     if match_score < min_score:
@@ -122,20 +160,32 @@ def is_job_eligible(job, config):
     return True, "Eligible"
 
 def execute_autonomous_application(job):
+    """Executes the full automated application lifecycle: Tailored CV + Cover Letter + Screener + Dispatch."""
     job_id = job.get("id")
     title = job.get("title", "Software Engineer")
     company = job.get("company", "Company")
 
     append_log(f"Initiating autonomous application: '{title}' at {company} (ID: {job_id})")
 
+    # Step 1: Tailor Europass Resume
     resume_path = None
     if resume_tailor:
         try:
             resume_path = resume_tailor.generate_tailored_resume(job)
-            append_log(f"Generated tailored Europass CV: {Path(resume_path).name}", "SUCCESS")
+            append_log(f"Tailored Europass CV generated: {Path(resume_path).name}", "SUCCESS")
         except Exception as e:
             append_log(f"Error tailoring CV: {e}", "WARNING")
 
+    # Step 2: Tailor Europass Cover Letter
+    cover_letter_path = None
+    if cover_letter_generator:
+        try:
+            cover_letter_path = cover_letter_generator.generate_tailored_cover_letter(job)
+            append_log(f"Tailored Cover Letter generated: {Path(cover_letter_path).name}", "SUCCESS")
+        except Exception as e:
+            append_log(f"Error tailoring Cover Letter: {e}", "WARNING")
+
+    # Step 3: Resolve deterministic screener answers
     screener_answers = []
     if job_dispatcher:
         standard_questions = [
@@ -152,17 +202,30 @@ def execute_autonomous_application(job):
                 "answer": res.get("answer"),
                 "detail": res.get("detail")
             })
-    append_log(f"Resolved {len(screener_answers)} screener questions from deterministic bank.", "SUCCESS")
+    append_log(f"Resolved {len(screener_answers)} screener questions (German phone +49 15511064761, Berlin resident, no driving licence).", "SUCCESS")
 
     outreach_note = ""
     if job_dispatcher:
         outreach_note = job_dispatcher.generate_recruiter_note(job)
 
+    # Step 4: Dispatch application record
     result = None
     if job_dispatcher:
         result = job_dispatcher.apply_to_job(job_id, auto_mode=True)
     
-    append_log(f"Application confirmed! Logged to applied_history.json for {company}.", "SUCCESS")
+    # Enrich applied job with cover letter url
+    if cover_letter_path:
+        cl_url = f"/resumes/{Path(cover_letter_path).name}"
+        job["cover_letter_url"] = cl_url
+        # Update in applied_history.json
+        applied_list = load_json(APPLIED_FILE, [])
+        for a in applied_list:
+            if a.get("job_id") == job_id:
+                a["cover_letter_url"] = cl_url
+                break
+        save_json(APPLIED_FILE, applied_list)
+
+    append_log(f"Application confirmed & tracked! Logged to applied_history.json for {company}.", "SUCCESS")
 
     return {
         "job_id": job_id,
@@ -170,21 +233,75 @@ def execute_autonomous_application(job):
         "company": company,
         "match_score": job.get("match_score"),
         "resume_url": f"/resumes/{Path(resume_path).name}" if resume_path else None,
+        "cover_letter_url": f"/resumes/{Path(cover_letter_path).name}" if cover_letter_path else None,
         "outreach_note": outreach_note,
         "screener_answers": screener_answers,
         "status": "APPLIED_CONFIRMED"
     }
 
+def check_20hr_refresh(config):
+    """Verifies whether 20 hours have elapsed since the last radar refresh."""
+    last_refresh_str = config.get("last_refresh_timestamp")
+    refresh_hours = config.get("refresh_interval_hours", 20)
+    
+    now = datetime.now()
+    needs_refresh = False
+    if not last_refresh_str:
+        needs_refresh = True
+    else:
+        try:
+            last_dt = datetime.fromisoformat(last_refresh_str)
+            if (now - last_dt).total_seconds() >= (refresh_hours * 3600):
+                needs_refresh = True
+        except Exception:
+            needs_refresh = True
+
+    if needs_refresh:
+        append_log(f"20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days).", "INFO")
+        config["last_refresh_timestamp"] = now.isoformat()
+        save_json(CONFIG_FILE, config)
+        if linkedin_scraper:
+            try:
+                linkedin_scraper.refresh_jobs_radar()
+                append_log("Real-time LinkedIn job radar refreshed with live Berlin postings.", "SUCCESS")
+            except Exception as e:
+                append_log(f"Error scraping LinkedIn jobs: {e}", "WARNING")
+        return True
+    return False
+
+def check_eod_report_dispatch():
+    """Checks if current time is within the end-of-day reporting window (19:00 CET)."""
+    now = datetime.now()
+    if now.hour >= 19 and daily_reporter:
+        try:
+            res = daily_reporter.send_daily_summary_report(force=False)
+            if res.get("status") not in ["ALREADY_SENT"]:
+                append_log(f"End-of-day summary report dispatched to purnachand0812@gmail.com ({res.get('status')}).", "SUCCESS")
+        except Exception as e:
+            append_log(f"Failed to dispatch daily report: {e}", "WARNING")
+
 def run_autonomous_cycle(force=False):
+    """
+    Main autonomous cycle:
+    1. Checks 20-hour refresh trigger.
+    2. Filters jobs posted <= 4 to 7 days.
+    3. Customizes both tailored Europass CV and Cover Letter.
+    4. Submits applications up to daily limit.
+    5. Checks end-of-day report dispatch.
+    """
     config = get_config()
     if not config.get("enabled") and not force:
         return {"status": "PAUSED", "applied_count": 0, "message": "Autonomous application agent is currently paused."}
+
+    # Check 20-hour refresh cadence
+    check_20hr_refresh(config)
 
     daily_limit = config.get("daily_limit", 5)
     applied_today = config.get("applied_today", 0)
 
     if applied_today >= daily_limit and not force:
         append_log(f"Daily quota reached ({applied_today}/{daily_limit}). Standing by until tomorrow.", "INFO")
+        check_eod_report_dispatch()
         return {"status": "QUOTA_REACHED", "applied_today": applied_today, "daily_limit": daily_limit}
 
     radar = load_json(RADAR_FILE, {"jobs": []})
@@ -194,14 +311,18 @@ def run_autonomous_cycle(force=False):
     for j in jobs:
         ok, reason = is_job_eligible(j, config)
         if ok:
+            # Annotate parsed age
+            j["_age_days"] = parse_posted_age_days(j.get("posted_time"))
             eligible_jobs.append(j)
 
-    append_log(f"Radar scan: {len(jobs)} active jobs, {len(eligible_jobs)} eligible for auto-apply.")
+    append_log(f"Radar scan: {len(jobs)} active jobs, {len(eligible_jobs)} meeting freshness (<=7d) & criteria.")
 
     if not eligible_jobs:
+        check_eod_report_dispatch()
         return {"status": "IDLE", "message": "No unapplied eligible jobs found in radar.", "applied_count": 0}
 
-    eligible_jobs.sort(key=lambda x: x.get("match_score", 0), reverse=True)
+    # Sort prioritizing fresh jobs (<= 4 days first), then by match score
+    eligible_jobs.sort(key=lambda x: (0 if x.get("_age_days", 5) <= 4 else 1, -x.get("match_score", 0)))
 
     applied_results = []
     slots_available = daily_limit - applied_today
@@ -225,6 +346,9 @@ def run_autonomous_cycle(force=False):
         except Exception as e:
             append_log(f"Failed to auto-apply to {job.get('title')}: {e}", "ERROR")
 
+    # Check EOD report
+    check_eod_report_dispatch()
+
     return {
         "status": "COMPLETED",
         "applied_count": len(applied_results),
@@ -234,6 +358,6 @@ def run_autonomous_cycle(force=False):
     }
 
 if __name__ == "__main__":
-    print("Testing autonomous job agent run cycle...")
+    print("Testing autonomous job agent run cycle with Cover Letter & 20h refresh...")
     res = run_autonomous_cycle(force=False)
     print(json.dumps(res, indent=2))
