@@ -1,22 +1,41 @@
 {
   "full_name": "Dandu Purnachandra Madhukar",
   "preferred_name": "Purnachandra Madhukar",
-  "title": "Data Scientist & ML Engineer",
+  "title": "Data Scientist & ML Engineer (Werkstudent / Intern)",
   "location": "Berlin, Germany",
   "email": "purnachand0812@gmail.com",
   "phone": "+91 7288073766",
   "linkedin_url": "https://linkedin.com/in/purnachanddandu",
   "github_url": "https://github.com/purnachand812",
-  "profile_summary": "Results-driven Software Engineer transitioning into Data Science, with 1+ year of production engineering experience delivering measurable business impact. Skilled in Python, Machine Learning, SQL, and full-stack development. Incoming MSc Data Science student at GISMA University Berlin. Seeking a Werkstudent role in Data Science or Machine Learning in Berlin.",
+  "profile_summary": "Results-driven Software Engineer transitioning into Data Science, with 1+ year of production engineering experience and product building. Skilled in Python, Machine Learning, SQL, LLM integrations, and full-stack delivery. Incoming MSc Data Science student at GISMA University Berlin. Currently seeking Part-Time, Internship, or Werkstudent roles in Data Science, Machine Learning, or Product Analytics in Berlin.",
+  "employment_preference": {
+    "types": ["Working Student (Werkstudent)", "Internship (Praktikum)", "Part-Time (Teilzeit)"],
+    "hours_per_week": "Up to 20 hrs/week (Semester) / 40 hrs/week (Semester breaks)",
+    "locations": ["Berlin, Germany", "Remote Germany", "Hybrid Berlin"]
+  },
   "target_roles": [
     "Werkstudent Data Science",
     "Werkstudent Machine Learning",
-    "Junior Data Scientist",
-    "Junior Machine Learning Engineer",
-    "Data Scientist & ML Engineer",
-    "Python AI Developer"
+    "Werkstudent AI / LLM Engineer",
+    "Data Science Intern (Praktikant)",
+    "Machine Learning Intern",
+    "Working Student Product Analytics / BI",
+    "Part-Time Python AI Developer"
   ],
   "work_experience": [
+    {
+      "company": "Self-employed / Independent Developer",
+      "locality": "Berlin / Remote",
+      "position": "Independent Developer · Product Builder",
+      "period": "2024 – Present",
+      "sector": "Software Products, AI Applications & Consulting Platforms",
+      "responsibilities": [
+        "Built Auslandly Consultancy CRM using React, Supabase, and PostgreSQL with real-time synchronization and client lifecycle tracking.",
+        "Developed an AI Germany Navigation App in React Native with LLM integration to help newcomers navigate German bureaucratic procedures.",
+        "Architected and deployed Antigravity Autonomous LinkedIn AI Editorial Engine: a 24/7 research-first LinkedIn automation agent with 100-point AI scout, Canva-quality visual generator, deterministic screener bank, and official REST API v202610 publishing.",
+        "Owned full stack delivery end-to-end, from architecture and database modeling to cloud deployment and monitoring."
+      ]
+    },
     {
       "company": "Crack-ED",
       "locality": "Gurgaon, India",
@@ -51,7 +70,32 @@
       "institution": "GISMA University of Applied Sciences",
       "location": "Berlin, Germany",
       "year": "2026 – 2028 (Expected)",
-      "curriculum": "Advanced Data Science, Machine Learning, Statistical Inference, Predictive Analytics, Big Data Architectures"
+      "module_pillars": {
+        "data_science_and_ai": [
+          "Intro to AI and Machine Learning",
+          "Methods of Prediction",
+          "AI and Applications",
+          "Big Data Analytics",
+          "Data Visualisation and Communication",
+          "Business Project in Big Data & AI"
+        ],
+        "general_business_competencies": [
+          "Project Management",
+          "Innovation Management and Digital Transformation",
+          "Digital Marketing & Analytics",
+          "CSR, Diversity and Ethics"
+        ],
+        "leadership_and_intercultural": [
+          "Behavioural Competencies in Virtual Teams",
+          "Ethical Issues for AI",
+          "CEO Decision Making & Case Studies",
+          "Study Abroad or Internship or Business Project Option"
+        ],
+        "scientific_and_methods": [
+          "Research Methods and Scientific Work",
+          "Master Thesis"
+        ]
+      }
     },
     {
       "degree": "B.Tech in Computer Science (AI & Machine Learning)",
@@ -63,6 +107,27 @@
     }
   ],
   "verified_projects": [
+    {
+      "name": "Auslandly Consultancy CRM",
+      "role": "Full-Stack Architect & Product Builder",
+      "technologies": ["React", "Supabase", "PostgreSQL", "Realtime Sync"],
+      "description": "Built full-featured CRM platform for relocation and study consultancy with real-time data sync, multi-step document intake, and status dashboards.",
+      "impact": "End-to-end delivery from database architecture to production deployment."
+    },
+    {
+      "name": "AI Germany Navigation App",
+      "role": "Mobile & AI Developer",
+      "technologies": ["React Native", "LLM APIs", "Python", "Mobile UX"],
+      "description": "Developed an AI navigation assistant to help international newcomers navigate complex German bureaucratic and registration processes.",
+      "impact": "Streamlined administrative workflows with deterministic multilingual guidance."
+    },
+    {
+      "name": "Antigravity Autonomous LinkedIn AI Engine",
+      "role": "Autonomous Systems Engineer",
+      "technologies": ["Python", "LinkedIn REST API v202610", "OAuth 2.0", "FastAPI/HTTPServer", "Analytics Automation"],
+      "description": "Built 24/7 research-first LinkedIn automation engine with 100-point AI scout, Canva-quality visual generation, deterministic screener bank, and continuous CET scheduler.",
+      "impact": "Continuous autonomous reach across Germany and European Union tech ecosystems."
+    },
     {
       "name": "Student Performance Prediction",
       "role": "Machine Learning Engineer",
@@ -86,10 +151,10 @@
     }
   ],
   "technical_skills": {
-    "ml_ai": ["Scikit-learn", "TensorFlow (Basic)", "NLTK", "Random Forest", "Logistic Regression", "NLP"],
-    "data": ["Python", "Pandas", "NumPy", "SQL", "PostgreSQL", "EDA", "Data Cleaning", "Data Visualisation"],
-    "backend": ["Django", "REST APIs", "Redis", "JWT Authentication"],
-    "tools_cloud": ["Git", "GitHub", "AWS EC2/S3", "CI/CD (GitHub Actions)", "Docker (Basic)"],
+    "ml_ai": ["Scikit-learn", "TensorFlow (Basic)", "NLTK", "Random Forest", "Logistic Regression", "NLP", "LLM Integration", "Predictive Modeling"],
+    "data_analytics": ["Python", "Pandas", "NumPy", "SQL", "PostgreSQL", "Supabase", "Big Data Analytics", "EDA", "Data Visualisation"],
+    "backend_fullstack": ["React", "React Native", "Django", "FastAPI", "REST APIs", "Redis", "JWT Authentication"],
+    "tools_cloud": ["Git", "GitHub", "AWS EC2/S3", "CI/CD (GitHub Actions)", "Docker (Basic)", "Supabase"],
     "languages": ["Python", "JavaScript", "TypeScript", "SQL"]
   },
   "certifications": [
@@ -123,9 +188,9 @@
       },
       {
         "language": "German",
-        "level": "A1",
-        "description": "Beginner (Currently learning)",
-        "cefr": {"listening": "A1", "reading": "A1", "spoken_interaction": "A1", "spoken_production": "A1", "writing": "A1"}
+        "level": "A2",
+        "description": "Elementary (A2 level - actively advancing)",
+        "cefr": {"listening": "A2", "reading": "A2", "spoken_interaction": "A2", "spoken_production": "A2", "writing": "A2"}
       }
     ]
   },
@@ -136,6 +201,6 @@
   },
   "salary_expectation": {
     "werkstudent_hourly_eur": "€16 - €22 / hr",
-    "full_time_annual_eur": "€48,000 - €58,000"
+    "internship_monthly_eur": "€1,200 - €1,800 / mo"
   }
 }

@@ -10,7 +10,7 @@
   <style>
     @page {
       size: A4 portrait;
-      margin: 10mm 14mm 12mm 14mm;
+      margin: 8mm 12mm 10mm 12mm;
     }
     * {
       box-sizing: border-box;
@@ -19,19 +19,19 @@
     }
     body {
       font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-      font-size: 8.5pt;
+      font-size: 8.2pt;
       color: #222222;
-      line-height: 1.35;
+      line-height: 1.32;
       background-color: #f1f5f9;
-      padding: 20px 0;
+      padding: 16px 0;
       -webkit-font-smoothing: antialiased;
     }
     .cv-page {
       width: 210mm;
       min-height: 297mm;
-      margin: 0 auto 20px auto;
+      margin: 0 auto 16px auto;
       background: #ffffff;
-      padding: 14mm 16mm 14mm 16mm;
+      padding: 12mm 15mm 12mm 15mm;
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       position: relative;
       display: flex;
@@ -45,7 +45,7 @@
       }
       .cv-page {
         margin: 0 !important;
-        padding: 8mm 12mm !important;
+        padding: 6mm 10mm !important;
         box-shadow: none !important;
         width: 100% !important;
         min-height: auto !important;
@@ -61,13 +61,13 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       padding-bottom: 2px;
     }
     .header-left {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
     }
     .europass-logo {
       display: flex;
@@ -75,47 +75,47 @@
       gap: 4px;
     }
     .logo-stars {
-      width: 26px;
-      height: 26px;
+      width: 25px;
+      height: 25px;
     }
     .logo-text-euro {
-      font-size: 16pt;
+      font-size: 15pt;
       font-weight: 300;
       color: #0e3f8a;
       letter-spacing: -0.5px;
     }
     .logo-text-pass {
-      font-size: 16pt;
+      font-size: 15pt;
       font-weight: 800;
       color: #0e3f8a;
       letter-spacing: -0.5px;
     }
     .doc-title {
-      font-size: 9pt;
+      font-size: 8.5pt;
       color: #0e3f8a;
-      margin-left: 20px;
+      margin-left: 18px;
       font-weight: 400;
     }
     .header-right {
       text-align: right;
-      font-size: 7.5pt;
+      font-size: 7.2pt;
       color: #333333;
     }
     .header-right .ref-code {
       color: #555555;
-      margin-bottom: 2px;
+      margin-bottom: 1px;
     }
     .header-right .name-header {
       color: #0e3f8a;
       font-weight: 600;
-      font-size: 8.5pt;
+      font-size: 8.2pt;
     }
 
     /* Section Divider with Blue Accent Box */
     .eu-section-divider {
       display: flex;
       align-items: center;
-      margin: 10px 0 6px 0;
+      margin: 8px 0 5px 0;
     }
     .eu-divider-line {
       flex: 1;
@@ -123,8 +123,8 @@
       background-color: #93c5fd;
     }
     .eu-divider-box {
-      width: 8px;
-      height: 8px;
+      width: 7px;
+      height: 7px;
       background-color: #0e3f8a;
       margin-left: 2px;
     }
@@ -132,50 +132,50 @@
     /* Two-column Layout */
     .eu-row {
       display: flex;
-      margin-bottom: 6px;
+      margin-bottom: 5px;
     }
     .eu-left {
-      width: 29%;
-      padding-right: 16px;
+      width: 28%;
+      padding-right: 14px;
       text-align: right;
-      font-size: 8pt;
+      font-size: 7.8pt;
       font-weight: 700;
       color: #0e3f8a;
-      line-height: 1.3;
-      letter-spacing: 0.2px;
+      line-height: 1.28;
+      letter-spacing: 0.15px;
     }
     .eu-left.regular-label {
       font-weight: 400;
       color: #333333;
-      font-size: 7.8pt;
+      font-size: 7.6pt;
     }
     .eu-left.dates {
       font-weight: 400;
       color: #333333;
-      font-size: 7.8pt;
+      font-size: 7.6pt;
     }
     .eu-right {
-      width: 71%;
-      font-size: 8.2pt;
+      width: 72%;
+      font-size: 8pt;
       color: #222222;
-      line-height: 1.35;
+      line-height: 1.32;
     }
 
     /* Personal Info Box */
     .personal-info-container {
       display: flex;
-      gap: 14px;
+      gap: 12px;
     }
     .photo-placeholder {
-      width: 80px;
-      height: 100px;
+      width: 72px;
+      height: 92px;
       background-color: #e2e8f0;
       border: 1px solid #94a3b8;
       display: flex;
       align-items: center;
       justify-content: center;
       color: #64748b;
-      font-size: 7.5pt;
+      font-size: 7pt;
       text-align: center;
       flex-shrink: 0;
       border-radius: 2px;
@@ -184,22 +184,22 @@
       flex: 1;
     }
     .name-title {
-      font-size: 12pt;
+      font-size: 11.5pt;
       font-weight: 700;
       color: #0e3f8a;
-      margin-bottom: 3px;
+      margin-bottom: 2px;
     }
     .contact-item {
       display: flex;
       align-items: center;
       gap: 5px;
-      margin-bottom: 2px;
-      font-size: 7.8pt;
+      margin-bottom: 1.5px;
+      font-size: 7.6pt;
       color: #333333;
     }
     .contact-item svg {
-      width: 12px;
-      height: 12px;
+      width: 11px;
+      height: 11px;
       color: #0284c7;
       flex-shrink: 0;
     }
@@ -211,11 +211,11 @@
       text-decoration: underline;
     }
     .demographics-line {
-      margin-top: 4px;
-      font-size: 7.5pt;
+      margin-top: 3px;
+      font-size: 7.2pt;
       color: #333333;
       padding-top: 2px;
-      line-height: 1.3;
+      line-height: 1.25;
     }
     .demographics-line span.label {
       color: #0284c7;
@@ -224,55 +224,55 @@
 
     /* Job Applied For / Objective */
     .job-applied-title {
-      font-size: 8.8pt;
+      font-size: 8.5pt;
       font-weight: 700;
       color: #0e3f8a;
-      line-height: 1.3;
+      line-height: 1.25;
     }
     .personal-statement-text {
-      font-size: 8pt;
+      font-size: 7.8pt;
       color: #333333;
-      margin-top: 3px;
-      line-height: 1.35;
+      margin-top: 2px;
+      line-height: 1.3;
       text-align: justify;
     }
 
     /* Experience / Education items */
     .position-title {
-      font-size: 8.8pt;
+      font-size: 8.4pt;
       font-weight: 700;
       color: #0e3f8a;
     }
     .institution-name {
-      font-size: 8.2pt;
+      font-size: 7.9pt;
       color: #444444;
-      margin-bottom: 3px;
+      margin-bottom: 2px;
     }
     .eu-bullet-list {
       list-style-type: none;
       padding-left: 0;
-      margin-top: 2px;
-      margin-bottom: 3px;
+      margin-top: 1.5px;
+      margin-bottom: 2px;
     }
     .eu-bullet-list li {
       position: relative;
-      padding-left: 14px;
-      margin-bottom: 2px;
-      font-size: 8pt;
-      line-height: 1.32;
+      padding-left: 13px;
+      margin-bottom: 1.5px;
+      font-size: 7.8pt;
+      line-height: 1.28;
     }
     .eu-bullet-list li::before {
       content: "▪";
       position: absolute;
       left: 2px;
       color: #0e3f8a;
-      font-size: 8pt;
+      font-size: 7.5pt;
       top: -0.5px;
     }
     .sector-line {
-      font-size: 7.5pt;
+      font-size: 7.2pt;
       color: #555555;
-      margin-top: 2px;
+      margin-top: 1.5px;
     }
     .sector-line span.label {
       color: #0284c7;
@@ -282,7 +282,7 @@
     /* EQF Badge */
     .eqf-badge {
       float: right;
-      font-size: 7.2pt;
+      font-size: 7pt;
       color: #0284c7;
       font-weight: 600;
       text-align: right;
@@ -292,57 +292,57 @@
     .cefr-table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 3px;
-      margin-bottom: 3px;
-      font-size: 7.2pt;
+      margin-top: 2px;
+      margin-bottom: 2px;
+      font-size: 7pt;
     }
     .cefr-table th, .cefr-table td {
       border: 1px solid #cbd5e1;
-      padding: 3px 5px;
+      padding: 2.5px 4px;
       text-align: center;
     }
     .cefr-table th {
       background-color: #f8fafc;
       color: #475569;
       font-weight: 600;
-      font-size: 6.8pt;
+      font-size: 6.6pt;
     }
     .cefr-table td.level-val {
       font-weight: 700;
       color: #0e3f8a;
     }
     .cefr-table td.cert-row {
-      font-size: 6.8pt;
+      font-size: 6.6pt;
       color: #64748b;
       font-style: italic;
       background-color: #fafafa;
       text-align: left;
-      padding-left: 8px;
+      padding-left: 6px;
     }
     .cefr-legend {
-      font-size: 6.5pt;
+      font-size: 6.3pt;
       color: #64748b;
-      margin-top: 2px;
-      line-height: 1.25;
+      margin-top: 1.5px;
+      line-height: 1.2;
     }
 
     /* Digital Competence Matrix */
     .digital-table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 3px;
-      margin-bottom: 3px;
-      font-size: 7.2pt;
+      margin-top: 2px;
+      margin-bottom: 2px;
+      font-size: 7pt;
     }
     .digital-table th, .digital-table td {
       border: 1px solid #cbd5e1;
-      padding: 3px 5px;
+      padding: 2.5px 4px;
       text-align: center;
     }
     .digital-table th {
       background-color: #f8fafc;
       color: #475569;
-      font-size: 6.8pt;
+      font-size: 6.6pt;
     }
     .digital-table th.main-header {
       background-color: #f1f5f9;
@@ -365,9 +365,9 @@
       justify-content: space-between;
       align-items: center;
       border-top: 1px solid #e2e8f0;
-      padding-top: 4px;
-      margin-top: 10px;
-      font-size: 6.8pt;
+      padding-top: 3px;
+      margin-top: 8px;
+      font-size: 6.6pt;
       color: #64748b;
     }
     .europass-footer a {
@@ -378,17 +378,17 @@
     /* Action bar */
     .action-toolbar {
       width: 210mm;
-      margin: 0 auto 12px auto;
+      margin: 0 auto 10px auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
       background: #0e1726;
       border: 1px solid #334155;
-      padding: 10px 16px;
-      border-radius: 8px;
+      padding: 8px 14px;
+      border-radius: 6px;
     }
     .action-toolbar .title {
-      font-size: 9.5pt;
+      font-size: 9pt;
       font-weight: 700;
       color: #ffffff;
       display: flex;
@@ -399,14 +399,14 @@
       background: #0284c7;
       color: #ffffff;
       border: none;
-      padding: 6px 14px;
+      padding: 5px 12px;
       border-radius: 4px;
-      font-size: 8.5pt;
+      font-size: 8pt;
       font-weight: 600;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
       text-decoration: none;
       transition: background 0.15s ease;
     }
@@ -431,7 +431,7 @@
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2">
         <circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/>
       </svg>
-      Europass Curriculum Vitae &bull; Dandu Purnachandra Madhukar (Germany / EU Standard)
+      Europass CV &bull; Dandu Purnachandra Madhukar (Part-Time / Werkstudent / Internship)
     </div>
     <div style="display: flex; gap: 8px;">
       <a class="btn-action btn-secondary" href="javascript:history.back()">
@@ -470,7 +470,7 @@
                 <polygon points="68,19 70,25 76,25 71,29 73,35 68,31 63,35 65,29 60,25 66,25" transform="rotate(330 50 50)" />
               </g>
             </svg>
-            <span class="logo-text-euro" style="margin-left: 6px;">euro</span><span class="logo-text-pass">pass</span>
+            <span class="logo-text-euro" style="margin-left: 5px;">euro</span><span class="logo-text-pass">pass</span>
           </div>
           <span class="doc-title">Curriculum Vitae</span>
         </div>
@@ -481,7 +481,7 @@
       </div>
 
       <!-- PERSONAL INFORMATION -->
-      <div class="eu-row" style="margin-top: 6px;">
+      <div class="eu-row" style="margin-top: 4px;">
         <div class="eu-left">
           PERSONAL INFORMATION
         </div>
@@ -523,7 +523,7 @@
       </div>
 
       <!-- JOB APPLIED FOR / PERSONAL STATEMENT -->
-      <div class="eu-row" style="margin-top: 8px;">
+      <div class="eu-row" style="margin-top: 6px;">
         <div class="eu-left">
           JOB APPLIED FOR<br>
           POSITION<br>
@@ -531,10 +531,10 @@
         </div>
         <div class="eu-right">
           <div class="job-applied-title">
-            Werkstudent &bull; Data Science &bull; Machine Learning Engineer (Berlin, Germany)
+            Werkstudent / Intern &bull; Data Science, Machine Learning &amp; AI Engineering (Berlin, Germany)
           </div>
           <p class="personal-statement-text">
-            Results-driven Software Engineer transitioning into Data Science, with 1+ year of production engineering experience delivering measurable business impact. Skilled in Python, Machine Learning, SQL, and full-stack development. Incoming MSc Data Science student at GISMA University Berlin. Seeking a Werkstudent role in Data Science or Machine Learning in Berlin.
+            Results-driven Software Engineer transitioning into Data Science, with 1+ year of production engineering experience and product building. Skilled in Python, Machine Learning, SQL, LLM integrations, and full-stack delivery. Incoming MSc Data Science student at GISMA University Berlin. Currently seeking Part-Time, Internship, or Werkstudent roles in Data Science, Machine Learning, or Product Analytics in Berlin.
           </p>
         </div>
       </div>
@@ -552,8 +552,26 @@
         <div class="eu-right"></div>
       </div>
 
-      <!-- Work Experience Entry 1 -->
+      <!-- Work Experience Entry 1: Independent Developer -->
       <div class="eu-row">
+        <div class="eu-left dates">
+          2024 – Present
+        </div>
+        <div class="eu-right">
+          <div class="position-title">Independent Developer &middot; Product Builder</div>
+          <div class="institution-name">Self-employed &bull; Berlin / Remote</div>
+          <ul class="eu-bullet-list">
+            <li>Built <strong>Auslandly Consultancy CRM</strong> using React, Supabase, and PostgreSQL with real-time data sync and client lifecycle management.</li>
+            <li>Developed an <strong>AI Germany Navigation App</strong> in React Native with LLM integration to help international newcomers navigate complex German bureaucratic procedures.</li>
+            <li>Architected and deployed the <strong>Antigravity Autonomous LinkedIn AI Engine</strong>: a 24/7 research-first LinkedIn automation agent featuring a 100-point AI scout, Canva-quality visual generation, deterministic screener banking, and official REST API v202610 publishing.</li>
+            <li>Owned full stack delivery end-to-end, from architecture and database modeling to cloud deployment and monitoring.</li>
+          </ul>
+          <div class="sector-line"><span class="label">Business or sector</span> Software Products, AI Applications &amp; Autonomous Agent Systems</div>
+        </div>
+      </div>
+
+      <!-- Work Experience Entry 2: Crack-ED -->
+      <div class="eu-row" style="margin-top: 5px;">
         <div class="eu-left dates">
           Sep 2024 – Aug 2025
         </div>
@@ -571,8 +589,8 @@
         </div>
       </div>
 
-      <!-- Work Experience Entry 2 -->
-      <div class="eu-row" style="margin-top: 6px;">
+      <!-- Work Experience Entry 3: Innomatics -->
+      <div class="eu-row" style="margin-top: 5px;">
         <div class="eu-left dates">
           Mar 2023 – Jun 2023
         </div>
@@ -601,7 +619,7 @@
         <div class="eu-right"></div>
       </div>
 
-      <!-- Education Entry 1 -->
+      <!-- Education Entry 1: GISMA -->
       <div class="eu-row">
         <div class="eu-left dates">
           2026 – 2028 (Expected)
@@ -611,12 +629,14 @@
           <div class="position-title">Master of Science (M.Sc.) in Data Science</div>
           <div class="institution-name">GISMA University of Applied Sciences &bull; Berlin, Germany</div>
           <ul class="eu-bullet-list">
-            <li><strong>Core Focus:</strong> Advanced Data Science, Machine Learning, Statistical Inference, Predictive Analytics, Big Data Architectures.</li>
+            <li><strong>Data Science &amp; AI Modules:</strong> Methods of Prediction, Intro to AI &amp; Machine Learning, AI and Applications, Big Data Analytics, Data Visualisation and Communication, Business Project in Big Data &amp; AI.</li>
+            <li><strong>Management &amp; Leadership Modules:</strong> Project Management, Innovation Management &amp; Digital Transformation, Digital Marketing &amp; Analytics, Ethical Issues for AI, Behavioural Competencies in Virtual Teams, CEO Decision Making.</li>
+            <li><strong>Scientific Competencies:</strong> Research Methods and Scientific Work, Master Thesis.</li>
           </ul>
         </div>
       </div>
 
-      <!-- Education Entry 2 -->
+      <!-- Education Entry 2: B.Tech -->
       <div class="eu-row" style="margin-top: 4px;">
         <div class="eu-left dates">
           2021 – 2024
@@ -626,7 +646,7 @@
           <div class="position-title">Bachelor of Technology (B.Tech.) in Computer Science (AI &amp; Machine Learning)</div>
           <div class="institution-name">Sai Spurthi Institute of Technology &bull; Telangana, India</div>
           <ul class="eu-bullet-list">
-            <li><strong>Relevant Coursework:</strong> Machine Learning, Deep Learning, Neural Networks, Data Structures &amp; Algorithms, Probability &amp; Statistics, Database Systems.</li>
+            <li><strong>Core Curriculum:</strong> Machine Learning, Deep Learning, Neural Networks, Data Structures &amp; Algorithms, Probability &amp; Statistics, Database Systems.</li>
           </ul>
         </div>
       </div>
@@ -664,7 +684,7 @@
                 <polygon points="68,19 70,25 76,25 71,29 73,35 68,31 63,35 65,29 60,25 66,25" transform="rotate(330 50 50)" />
               </g>
             </svg>
-            <span class="logo-text-euro" style="margin-left: 6px;">euro</span><span class="logo-text-pass">pass</span>
+            <span class="logo-text-euro" style="margin-left: 5px;">euro</span><span class="logo-text-pass">pass</span>
           </div>
           <span class="doc-title">Curriculum Vitae</span>
         </div>
@@ -697,7 +717,7 @@
       </div>
 
       <!-- Other Languages (Official CEFR Framework Table) -->
-      <div class="eu-row" style="margin-top: 3px;">
+      <div class="eu-row" style="margin-top: 2px;">
         <div class="eu-left regular-label">
           Other language(s)
         </div>
@@ -746,19 +766,19 @@
               <tr>
                 <td colspan="5" class="cert-row">B2 &ndash; Upper Intermediate</td>
               </tr>
-              <!-- German -->
+              <!-- German (Updated to A2) -->
               <tr>
                 <td colspan="5" style="text-align: left; font-weight: 700; background: #f8fafc; color: #0e3f8a;">German</td>
               </tr>
               <tr>
-                <td class="level-val">A1</td>
-                <td class="level-val">A1</td>
-                <td class="level-val">A1</td>
-                <td class="level-val">A1</td>
-                <td class="level-val">A1</td>
+                <td class="level-val">A2</td>
+                <td class="level-val">A2</td>
+                <td class="level-val">A2</td>
+                <td class="level-val">A2</td>
+                <td class="level-val">A2</td>
               </tr>
               <tr>
-                <td colspan="5" class="cert-row">A1 &ndash; Beginner &bull; Currently learning</td>
+                <td colspan="5" class="cert-row">A2 &ndash; Elementary user &bull; Actively advancing in Berlin</td>
               </tr>
             </tbody>
           </table>
@@ -770,14 +790,14 @@
       </div>
 
       <!-- Communication Skills -->
-      <div class="eu-row" style="margin-top: 5px;">
+      <div class="eu-row" style="margin-top: 4px;">
         <div class="eu-left regular-label">
           Communication skills
         </div>
         <div class="eu-right">
           <ul class="eu-bullet-list">
-            <li>Strong technical and cross-functional communication developed by coordinating multi-role LMS platforms across students, instructors, and administrators at Crack-ED.</li>
-            <li>Collaborative engineering within agile sprints across distributed data science teams at Innomatics Research Labs.</li>
+            <li>Stakeholder &amp; client communication developed through building consultancy CRMs and delivering multi-user platforms across instructors, students, and administrators.</li>
+            <li>Collaborative engineering in international agile teams across distributed remote software and data projects.</li>
           </ul>
         </div>
       </div>
@@ -789,8 +809,8 @@
         </div>
         <div class="eu-right">
           <ul class="eu-bullet-list">
-            <li>CI/CD sprint release management: automated GitHub Actions pipelines saving ~8 engineering hours weekly.</li>
-            <li>Data preprocessing coordination: managed data cleaning workflows across 3 datasets and 50,000+ records.</li>
+            <li>End-to-end product delivery: managed full lifecycles from architectural design to deployment for independent apps and enterprise systems.</li>
+            <li>CI/CD release management: automated GitHub Actions pipelines saving ~8 engineering hours weekly.</li>
           </ul>
         </div>
       </div>
@@ -802,9 +822,9 @@
         </div>
         <div class="eu-right">
           <ul class="eu-bullet-list">
-            <li><strong>Machine Learning &amp; AI:</strong> Scikit-learn, Random Forest, Logistic Regression, basic TensorFlow, Exploratory Data Analysis (EDA), feature engineering, cross-validation.</li>
-            <li><strong>Natural Language Processing:</strong> NLTK, tokenization, stemming, text preprocessing, and intent classification pipelines (87% accuracy).</li>
-            <li><strong>Backend &amp; Database Optimization:</strong> SQL query optimization (60% latency reduction), Redis caching, Django REST APIs, JWT + RBAC security.</li>
+            <li><strong>Machine Learning &amp; AI:</strong> Predictive modeling (Methods of Prediction), Scikit-learn, Random Forest, Logistic Regression, basic TensorFlow, feature engineering, cross-validation.</li>
+            <li><strong>NLP &amp; LLM Systems:</strong> LLM integration in React Native apps, NLTK text tokenization, stemming, intent classification (87% accuracy), automated multi-agent workflows.</li>
+            <li><strong>Full-Stack &amp; Data Engineering:</strong> React, React Native, Supabase, PostgreSQL, SQL query optimization (60% latency reduction), Redis caching, Django REST APIs, JWT security.</li>
           </ul>
         </div>
       </div>
@@ -842,10 +862,10 @@
             Levels: Basic user - Independent user - Proficient user &bull; <a href="https://europass.cedefop.europa.eu" target="_blank" style="color: #0e3f8a;">Digital competences - Self-assessment grid</a>
           </div>
 
-          <ul class="eu-bullet-list" style="margin-top: 4px;">
-            <li><strong>ML / AI Stack:</strong> Scikit-learn, TensorFlow (Basic), NLTK, Random Forest, Logistic Regression, NLP</li>
-            <li><strong>Data &amp; Analytics:</strong> Python, Pandas, NumPy, SQL, PostgreSQL, EDA, Data Cleaning, Data Visualisation</li>
-            <li><strong>Backend &amp; Cloud:</strong> Django, REST APIs, Redis, JWT Authentication, AWS EC2/S3, CI/CD (GitHub Actions), Docker (Basic)</li>
+          <ul class="eu-bullet-list" style="margin-top: 3px;">
+            <li><strong>ML / AI Stack:</strong> Scikit-learn, TensorFlow (Basic), NLTK, Random Forest, Logistic Regression, NLP, LLM Integration</li>
+            <li><strong>Data &amp; Analytics:</strong> Python, Pandas, NumPy, SQL, PostgreSQL, Supabase, Big Data Analytics, EDA, Data Visualisation</li>
+            <li><strong>Full-Stack &amp; Cloud:</strong> React, React Native, Django, FastAPI, REST APIs, Redis, JWT Authentication, AWS EC2/S3, CI/CD (GitHub Actions), Docker (Basic)</li>
             <li><strong>Programming Languages:</strong> Python, JavaScript, TypeScript, SQL</li>
           </ul>
         </div>
@@ -870,22 +890,24 @@
       <div class="eu-row">
         <div class="eu-left">
           ADDITIONAL INFORMATION<br><br>
-          <span style="font-weight: 400; color: #444; font-size: 7.2pt; text-transform: none;">
+          <span style="font-weight: 400; color: #444; font-size: 7pt; text-transform: none;">
             Projects<br>
             Certifications<br>
             References
           </span>
         </div>
         <div class="eu-right">
-          <div style="margin-bottom: 5px;">
-            <strong style="color: #0e3f8a;">Key Engineering &amp; Data Science Projects:</strong>
+          <div style="margin-bottom: 4px;">
+            <strong style="color: #0e3f8a;">Key Engineering &amp; AI Projects:</strong>
             <ul class="eu-bullet-list">
-              <li><strong>Student Performance Prediction:</strong> Predicted student academic outcomes with 82% accuracy across 5 classification models, with Random Forest outperforming baseline by 18 percentage points; performed full EDA, feature engineering, and cross-validation on 480+ student records with 30+ features (Python, Scikit-learn, Pandas).</li>
-              <li><strong>Healthcare Chatbot using NLP:</strong> Built end-to-end NLP chatbot with preprocessing pipeline achieving 87% intent recognition accuracy across 500+ healthcare query types; reduced chatbot onboarding time for new query categories by 50% through modular pipeline design (Python, NLTK).</li>
-              <li><strong>Learning Management System (LMS):</strong> Delivered full-stack LMS platform serving 1,000+ concurrent users with 99.9% uptime across production; reduced average page load time from 4.2s to under 2.1s (50% improvement) through API optimization and Redis caching; implemented RBAC for 3 user types with zero reported access vulnerabilities (Django, React.js, PostgreSQL, Redis, AWS EC2/S3).</li>
+              <li><strong>Auslandly Consultancy CRM:</strong> Full-stack client lifecycle platform built with React, Supabase, and PostgreSQL featuring real-time synchronization.</li>
+              <li><strong>AI Germany Navigation App:</strong> Mobile assistant built in React Native with LLM integration to guide newcomers through German bureaucratic procedures.</li>
+              <li><strong>Antigravity LinkedIn AI Engine:</strong> 24/7 research-first autonomous system with 100-point quality auditing, automated visual synthesis, and official LinkedIn REST publishing.</li>
+              <li><strong>Student Performance Prediction:</strong> Predicted student academic outcomes with 82% accuracy across 5 classification models (Random Forest +18% over baseline); full EDA &amp; cross-validation on 480+ student records (Python, Scikit-learn, Pandas).</li>
+              <li><strong>Healthcare Chatbot using NLP:</strong> Built end-to-end NLP chatbot with 87% intent classification accuracy across 500+ query types (Python, NLTK).</li>
             </ul>
           </div>
-          <div style="margin-bottom: 4px;">
+          <div style="margin-bottom: 3px;">
             <strong style="color: #0e3f8a;">Certifications:</strong>
             <ul class="eu-bullet-list">
               <li><strong>Machine Learning Specialization:</strong> Andrew Ng, Coursera</li>
