@@ -563,11 +563,11 @@ def generate_tailored_resume(job_info):
               
               <div class="contact-item">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                <span>Berlin, Germany (Arriving 2025)</span>
+                <span>Berlin, Germany (Living in Berlin since several months)</span>
               </div>
               <div class="contact-item">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-                <span>{phone}</span>
+                <span><strong>{phone}</strong></span>
                 <span style="margin: 0 4px; color: #94a3b8;">|</span>
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
                 <a href="mailto:{email}">{email}</a>
@@ -582,7 +582,7 @@ def generate_tailored_resume(job_info):
               </div>
 
               <div class="demographics-line">
-                <span class="label">Status</span> Incoming MSc Data Science Student at GISMA University Berlin &bull; Resident in Berlin<br>
+                <span class="label">Status</span> MSc Data Science Student at GISMA University Berlin &bull; Resident in Berlin<br>
                 <span class="label">Work Authorization</span> Legal right to work in Germany (Werkstudent status &bull; No visa sponsorship required)
               </div>
             </div>
@@ -591,7 +591,7 @@ def generate_tailored_resume(job_info):
       </div>
 
       <!-- JOB APPLIED FOR / PERSONAL STATEMENT -->
-      <div class="eu-row" style="margin-top: 8px;">
+      <div class="eu-row" style="margin-top: 5px;">
         <div class="eu-left">
           JOB APPLIED FOR<br>
           POSITION<br>
@@ -620,8 +620,43 @@ def generate_tailored_resume(job_info):
         <div class="eu-right"></div>
       </div>
 
-      <!-- Work Experience Entry 1: Crack-ED -->
+      <!-- Work Experience Entry 1: Formel D (Tesla Project) -->
       <div class="eu-row">
+        <div class="eu-left dates">
+          2025 – Present
+        </div>
+        <div class="eu-right">
+          <div class="position-title">Quality Control Inspector (Part-Time &middot; Tesla Project)</div>
+          <div class="institution-name">Formel D Group &bull; Berlin / Brandenburg, Germany</div>
+          <ul class="eu-bullet-list">
+            <li>Conduct technical quality control, precision verification, and defect inspection on Tesla vehicle components adhering to strict German automotive standards.</li>
+            <li>Perform standardized visual and optical quality audits, logging deviations and ensuring zero-defect manufacturing compliance.</li>
+            <li>Collaborate in cross-functional German manufacturing and quality operations at Gigafactory Berlin-Brandenburg.</li>
+          </ul>
+          <div class="sector-line"><span class="label">Business or sector</span> Automotive Engineering, Quality Assurance &amp; Manufacturing</div>
+        </div>
+      </div>
+
+      <!-- Work Experience Entry 2: Independent Developer -->
+      <div class="eu-row" style="margin-top: 4px;">
+        <div class="eu-left dates">
+          2024 – Present
+        </div>
+        <div class="eu-right">
+          <div class="position-title">Independent Developer &middot; Product Builder</div>
+          <div class="institution-name">Self-employed &bull; Berlin / Remote</div>
+          <ul class="eu-bullet-list">
+            <li>Built <strong>Auslandly Consultancy CRM</strong> using React, Supabase, and PostgreSQL with real-time data sync and client lifecycle management.</li>
+            <li>Developed an <strong>AI Germany Navigation App</strong> in React Native with LLM integration to help international newcomers navigate complex German bureaucratic procedures.</li>
+            <li>Architected and deployed the <strong>Antigravity Autonomous LinkedIn AI Engine</strong>: a 24/7 research-first LinkedIn automation agent featuring a 100-point AI scout, Canva-quality visual generation, deterministic screener banking, and official REST API v202610 publishing.</li>
+            <li>Owned full stack delivery end-to-end, from architecture and database modeling to cloud deployment and monitoring.</li>
+          </ul>
+          <div class="sector-line"><span class="label">Business or sector</span> Software Products, AI Applications &amp; Autonomous Agent Systems</div>
+        </div>
+      </div>
+
+      <!-- Work Experience Entry 3: Crack-ED -->
+      <div class="eu-row" style="margin-top: 4px;">
         <div class="eu-left dates">
           Sep 2024 – Aug 2025
         </div>
@@ -639,8 +674,8 @@ def generate_tailored_resume(job_info):
         </div>
       </div>
 
-      <!-- Work Experience Entry 2: Innomatics -->
-      <div class="eu-row" style="margin-top: 6px;">
+      <!-- Work Experience Entry 4: Innomatics -->
+      <div class="eu-row" style="margin-top: 4px;">
         <div class="eu-left dates">
           Mar 2023 – Jun 2023
         </div>

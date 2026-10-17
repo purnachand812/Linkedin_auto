@@ -3,11 +3,12 @@
   "preferred_name": "Purnachandra Madhukar",
   "title": "Data Scientist & ML Engineer (Werkstudent / Intern)",
   "location": "Berlin, Germany",
+  "residency_status": "Resident in Germany (living in Berlin since several months)",
   "email": "purnachand0812@gmail.com",
-  "phone": "+91 7288073766",
+  "phone": "+49 15511064761",
   "linkedin_url": "https://linkedin.com/in/purnachanddandu",
   "github_url": "https://github.com/purnachand812",
-  "profile_summary": "Results-driven Software Engineer transitioning into Data Science, with 1+ year of production engineering experience and product building. Skilled in Python, Machine Learning, SQL, LLM integrations, and full-stack delivery. Incoming MSc Data Science student at GISMA University Berlin. Currently seeking Part-Time, Internship, or Werkstudent roles in Data Science, Machine Learning, or Product Analytics in Berlin.",
+  "profile_summary": "Results-driven Software Engineer and current MSc Data Science student at GISMA University Berlin, currently residing in Germany. Gaining German industrial experience working part-time at Formel D on the Tesla Gigafactory project, while independently architecting and deploying AI, CRM, and full-stack systems. Seeking a Werkstudent, Internship, or Part-Time role in Data Science, Machine Learning, or Product Analytics in Berlin.",
   "employment_preference": {
     "types": ["Working Student (Werkstudent)", "Internship (Praktikum)", "Part-Time (Teilzeit)"],
     "hours_per_week": "Up to 20 hrs/week (Semester) / 40 hrs/week (Semester breaks)",
@@ -23,6 +24,18 @@
     "Part-Time Python AI Developer"
   ],
   "work_experience": [
+    {
+      "company": "Formel D Group",
+      "locality": "Berlin / Brandenburg, Germany",
+      "position": "Quality Control Inspector (Part-Time · Tesla Project)",
+      "period": "2025 – Present",
+      "sector": "Automotive Engineering, Quality Assurance & Manufacturing",
+      "responsibilities": [
+        "Conduct technical quality control, precision verification, and defect inspection on Tesla vehicle components adhering to strict German automotive standards.",
+        "Perform standardized visual and optical quality audits, logging deviations and ensuring zero-defect manufacturing compliance.",
+        "Collaborate in cross-functional German manufacturing and quality operations at Gigafactory Berlin-Brandenburg."
+      ]
+    },
     {
       "company": "Self-employed / Independent Developer",
       "locality": "Berlin / Remote",
@@ -69,7 +82,8 @@
       "eqf_level": "EQF Level 7",
       "institution": "GISMA University of Applied Sciences",
       "location": "Berlin, Germany",
-      "year": "2026 – 2028 (Expected)",
+      "year": "2025 – Present (Expected 2027/2028)",
+      "status": "Currently Enrolled Master's Student (Resident in Berlin)",
       "module_pillars": {
         "data_science_and_ai": [
           "Intro to AI and Machine Learning",
@@ -189,13 +203,13 @@
       {
         "language": "German",
         "level": "A2",
-        "description": "Elementary (A2 level - actively advancing)",
+        "description": "Elementary (A2 level - actively advancing in Berlin)",
         "cefr": {"listening": "A2", "reading": "A2", "spoken_interaction": "A2", "spoken_production": "A2", "writing": "A2"}
       }
     ]
   },
   "work_authorization": {
-    "germany": "Legal right to work in Germany (Student / Werkstudent Status)",
+    "germany": "Legal right to work in Germany (Resident in Berlin / Werkstudent & Student Work Rights)",
     "european_union": "Eligible for student & Werkstudent employment in Germany / EU",
     "visa_sponsorship_required": false
   },
