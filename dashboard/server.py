@@ -311,6 +311,10 @@ class EditorialHandler(SimpleHTTPRequestHandler):
                     self.send_header("Content-Type", "text/html; charset=utf-8")
                 elif filename.endswith(".pdf"):
                     self.send_header("Content-Type", "application/pdf")
+                elif filename.endswith(".jpg") or filename.endswith(".jpeg"):
+                    self.send_header("Content-Type", "image/jpeg")
+                elif filename.endswith(".png"):
+                    self.send_header("Content-Type", "image/png")
                 else:
                     self.send_header("Content-Type", "text/plain; charset=utf-8")
                 self.end_headers()
