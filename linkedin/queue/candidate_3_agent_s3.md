@@ -1,5 +1,5 @@
 # CANDIDATE 3: Agent S3 (Desktop GUI Computer-Use Agent)
-- Status: APPROVED
+- Status: WAITING_FOR_APPROVAL
 - Beat: AI Hardware & Computer-Use Systems
 - Editorial Score: 89/100 (Timeliness: 18/20, Value: 23/25, Practicality: 18/20, Evidence: 14/15, Visual: 8/10, Distinctiveness: 8/10)
 

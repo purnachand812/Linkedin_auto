@@ -1,0 +1,41 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-10-17T08:31:02.936976",
+  "total_posts_monitored": 2,
+  "top_performing_pillars": [
+    {
+      "pillar": "Typed Dependency Injection / Architecture",
+      "avg_engagement_multiplier": 1.45
+    },
+    {
+      "pillar": "Open-Source VS Code MCP Coding Agents",
+      "avg_engagement_multiplier": 1.38
+    },
+    {
+      "pillar": "Self-Hosted Web Scraping (Crawl4AI)",
+      "avg_engagement_multiplier": 1.32
+    }
+  ],
+  "format_performance": {
+    "text_only_with_repo_link": {
+      "reach_index": 1.4,
+      "notes": "Highest distribution and dwell time in European engineering feeds."
+    },
+    "canva_contrast_card": {
+      "reach_index": 1.25,
+      "notes": "Strong visual clarity for code architecture and IDE contrasts."
+    }
+  },
+  "eu_hub_reach_shares": {
+    "Germany (Berlin, Munich, Hamburg)": "42%",
+    "Netherlands (Amsterdam, Delft)": "21%",
+    "France (Paris AI Hub)": "15%",
+    "Switzerland & Austria (Zurich, Vienna)": "12%",
+    "Nordics & UK (Stockholm, London)": "10%"
+  },
+  "continuous_rules": [
+    "Always include direct GitHub link at the end of post text for text-only posts.",
+    "Avoid em-dashes and promotional hyperbole; European tech leads value dry precision.",
+    "Prioritize tools with active MIT/Apache 2.0 code over closed commercial betas."
+  ]
+}
