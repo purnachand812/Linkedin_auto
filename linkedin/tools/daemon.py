@@ -18,6 +18,11 @@ import signal
 from datetime import datetime, timedelta
 from pathlib import Path
 
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+if hasattr(sys.stderr, 'reconfigure'):
+    sys.stderr.reconfigure(encoding='utf-8', errors='replace')
+
 # Base directories
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 LINKEDIN_DIR = BASE_DIR / "linkedin"
@@ -86,7 +91,10 @@ def append_daemon_log(message):
     current["log"] = log_list[-30:]
     current["last_activity"] = entry
     save_json_file(STATUS_FILE, current)
-    print(f"[DAEMON] {message}")
+    try:
+        print(f"[DAEMON] {message}")
+    except Exception:
+        pass
 
 def count_posts_published_today():
     """Counts how many posts were published today (CET)."""
