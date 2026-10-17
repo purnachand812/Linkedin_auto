@@ -2,204 +2,849 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Purnachandra Madhukar - Resume (Bavaria Robotics & AI GmbH - Autonomous Systems & Agent Data Scientist)</title>
+  <title>Europass CV - Purnachandra Madhukar (Bavaria Robotics & AI GmbH - Autonomous Systems & Agent Data Scientist)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <style>
-    @page { size: A4; margin: 12mm 15mm; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    @page {
+      size: A4 portrait;
+      margin: 12mm 15mm 15mm 15mm;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      color: #1e293b;
-      line-height: 1.45;
-      font-size: 9.5pt;
+      font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+      font-size: 9pt;
+      color: #222222;
+      line-height: 1.4;
+      background-color: #f1f5f9;
+      padding: 20px 0;
+      -webkit-font-smoothing: antialiased;
+    }
+    .cv-page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto 20px auto;
       background: #ffffff;
-      padding: 15mm;
+      padding: 16mm 18mm 16mm 18mm;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
-    .header {
-      border-bottom: 2px solid #0f172a;
-      padding-bottom: 8px;
+    @media print {
+      body {
+        background: transparent !important;
+        padding: 0 !important;
+      }
+      .cv-page {
+        margin: 0 !important;
+        padding: 10mm 12mm !important;
+        box-shadow: none !important;
+        width: 100% !important;
+        min-height: auto !important;
+        page-break-after: always;
+      }
+      .no-print {
+        display: none !important;
+      }
+    }
+    .europass-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
       margin-bottom: 12px;
+      padding-bottom: 4px;
     }
-    .name {
-      font-size: 18pt;
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .europass-logo {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .logo-stars {
+      width: 28px;
+      height: 28px;
+    }
+    .logo-text-euro {
+      font-size: 17pt;
+      font-weight: 300;
+      color: #0e3f8a;
+      letter-spacing: -0.5px;
+    }
+    .logo-text-pass {
+      font-size: 17pt;
       font-weight: 800;
-      color: #0f172a;
-      letter-spacing: -0.02em;
+      color: #0e3f8a;
+      letter-spacing: -0.5px;
     }
-    .sub-title {
-      font-size: 10.5pt;
+    .doc-title {
+      font-size: 9pt;
+      color: #0e3f8a;
+      margin-left: 25px;
+      font-weight: 400;
+    }
+    .header-right {
+      text-align: right;
+      font-size: 7.5pt;
+      color: #333333;
+    }
+    .header-right .ref-code {
+      color: #555555;
+      margin-bottom: 2px;
+    }
+    .header-right .name-header {
+      color: #0e3f8a;
+      font-weight: 600;
+      font-size: 8.5pt;
+    }
+    .eu-section-divider {
+      display: flex;
+      align-items: center;
+      margin: 14px 0 8px 0;
+    }
+    .eu-divider-line {
+      flex: 1;
+      height: 1px;
+      background-color: #93c5fd;
+    }
+    .eu-divider-box {
+      width: 8px;
+      height: 8px;
+      background-color: #0e3f8a;
+      margin-left: 2px;
+    }
+    .eu-row {
+      display: flex;
+      margin-bottom: 8px;
+    }
+    .eu-left {
+      width: 29%;
+      padding-right: 18px;
+      text-align: right;
+      font-size: 8pt;
+      font-weight: 700;
+      color: #0e3f8a;
+      line-height: 1.35;
+      letter-spacing: 0.2px;
+    }
+    .eu-left.regular-label {
+      font-weight: 400;
+      color: #333333;
+      font-size: 8pt;
+    }
+    .eu-left.dates {
+      font-weight: 400;
+      color: #333333;
+      font-size: 8pt;
+    }
+    .eu-right {
+      width: 71%;
+      font-size: 8.5pt;
+      color: #222222;
+      line-height: 1.4;
+    }
+    .personal-info-container {
+      display: flex;
+      gap: 16px;
+    }
+    .photo-placeholder {
+      width: 85px;
+      height: 110px;
+      background-color: #e2e8f0;
+      border: 1px solid #94a3b8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #64748b;
+      font-size: 7.5pt;
+      text-align: center;
+      flex-shrink: 0;
+      border-radius: 2px;
+    }
+    .personal-details {
+      flex: 1;
+    }
+    .name-title {
+      font-size: 13pt;
+      font-weight: 700;
+      color: #0e3f8a;
+      margin-bottom: 4px;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 2px;
+      font-size: 8pt;
+      color: #333333;
+    }
+    .contact-item svg {
+      width: 12px;
+      height: 12px;
+      color: #0284c7;
+      flex-shrink: 0;
+    }
+    .contact-item a {
+      color: #0e3f8a;
+      text-decoration: none;
+    }
+    .demographics-line {
+      margin-top: 5px;
+      font-size: 7.8pt;
+      color: #333333;
+      padding-top: 3px;
+    }
+    .demographics-line span.label {
       color: #0284c7;
       font-weight: 600;
-      margin-top: 2px;
     }
-    .contact-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      font-size: 8.5pt;
-      color: #475569;
-      margin-top: 6px;
-    }
-    .contact-row a { color: #0284c7; text-decoration: none; }
-    
-    .section {
-      margin-bottom: 11px;
-    }
-    .section-title {
-      font-size: 10pt;
-      font-weight: 700;
-      color: #0f172a;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      border-bottom: 1px solid #cbd5e1;
-      padding-bottom: 2px;
-      margin-bottom: 6px;
-    }
-    
-    .item {
-      margin-bottom: 6px;
-    }
-    .item-header {
-      display: flex;
-      justify-content: space-between;
-      font-weight: 700;
-      color: #0f172a;
-    }
-    .item-sub {
-      display: flex;
-      justify-content: space-between;
-      color: #475569;
-      font-size: 8.5pt;
-      font-style: italic;
-      margin-bottom: 2px;
-    }
-    .bullet-list {
-      padding-left: 14px;
-      list-style-type: square;
-    }
-    .bullet-list li {
-      margin-bottom: 2px;
+    .job-applied-title {
       font-size: 9pt;
-      color: #334155;
-    }
-    
-    .skills-grid {
-      display: grid;
-      grid-template-columns: 120px 1fr;
-      row-gap: 3px;
-      font-size: 8.5pt;
-    }
-    .skill-cat { font-weight: 700; color: #0f172a; }
-    .skill-val { color: #334155; }
-    
-    .target-badge {
-      display: inline-block;
-      background: #e0f2fe;
-      color: #0369a1;
-      padding: 1px 6px;
-      border-radius: 4px;
-      font-size: 8pt;
       font-weight: 600;
+      color: #222222;
+      line-height: 1.35;
+    }
+    .position-title {
+      font-size: 9pt;
+      font-weight: 700;
+      color: #0e3f8a;
+    }
+    .institution-name {
+      font-size: 8.5pt;
+      color: #444444;
+      margin-bottom: 4px;
+    }
+    .eu-bullet-list {
+      list-style-type: none;
+      padding-left: 0;
+      margin-top: 4px;
+      margin-bottom: 4px;
+    }
+    .eu-bullet-list li {
+      position: relative;
+      padding-left: 14px;
+      margin-bottom: 3px;
+      font-size: 8.2pt;
+      line-height: 1.35;
+    }
+    .eu-bullet-list li::before {
+      content: "▪";
+      position: absolute;
+      left: 2px;
+      top: -1px;
+      font-size: 9pt;
+      color: #0e3f8a;
+    }
+    .sector-line {
+      font-size: 7.8pt;
+      color: #555555;
+      margin-top: 4px;
+    }
+    .sector-line span.label {
+      color: #0284c7;
+      font-weight: 600;
+    }
+    .eqf-badge {
+      float: right;
+      font-size: 7.5pt;
+      color: #0284c7;
+      font-weight: 600;
+    }
+    .cefr-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 4px;
+      margin-bottom: 4px;
+      font-size: 7.5pt;
+    }
+    .cefr-table th, .cefr-table td {
+      border: 1px solid #cbd5e1;
+      padding: 3px 5px;
+      text-align: center;
+    }
+    .cefr-table th {
+      background-color: #f8fafc;
+      color: #475569;
+      font-weight: 600;
+      font-size: 7pt;
+      text-transform: uppercase;
+    }
+    .cefr-table td.level-val {
+      font-weight: 600;
+      color: #0e3f8a;
+    }
+    .cefr-table td.cert-row {
+      font-size: 7pt;
+      color: #64748b;
+      font-style: italic;
+      background-color: #fafafa;
+    }
+    .cefr-legend {
+      font-size: 6.8pt;
+      color: #64748b;
+      margin-top: 2px;
+      line-height: 1.3;
+    }
+    .digital-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 4px;
+      margin-bottom: 4px;
+      font-size: 7.5pt;
+    }
+    .digital-table th, .digital-table td {
+      border: 1px solid #cbd5e1;
+      padding: 4px 6px;
+      text-align: center;
+    }
+    .digital-table th {
+      background-color: #f8fafc;
+      color: #475569;
+      font-size: 7pt;
+    }
+    .digital-table th.main-header {
+      background-color: #f1f5f9;
+      font-weight: 700;
+      color: #0e3f8a;
+      letter-spacing: 0.5px;
+    }
+    .digital-table td.proficient {
+      color: #0e3f8a;
+      font-weight: 600;
+    }
+    .europass-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 5px;
+      margin-top: 15px;
+      font-size: 7pt;
+      color: #64748b;
+    }
+    .europass-footer a {
+      color: #0e3f8a;
+      text-decoration: none;
+    }
+    .action-toolbar {
+      width: 210mm;
+      margin: 0 auto 12px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #0e1726;
+      border: 1px solid #334155;
+      padding: 10px 16px;
+      border-radius: 8px;
+    }
+    .action-toolbar .title {
+      font-size: 9.5pt;
+      font-weight: 700;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-action {
+      background: #0284c7;
+      color: #ffffff;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 4px;
+      font-size: 8.5pt;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: background 0.15s ease;
+    }
+    .btn-action:hover {
+      background: #0369a1;
     }
   </style>
 </head>
 <body>
 
-  <div class="header">
-    <div class="name">Purnachandra Madhukar</div>
-    <div class="sub-title">AI Engineer & Autonomous Agent Architect &bull; Berlin, Germany</div>
-    <div class="contact-row">
-      <span>📍 Berlin, Germany</span>
-      <span>✉️ purnachandra.madhukar@example.com</span>
-      <span>🔗 <a href="https://www.linkedin.com/in/purnachandra-madhukar/">LinkedIn</a></span>
-      <span>💻 <a href="https://github.com/purnachandra-madhukar">GitHub</a></span>
-      <span class="target-badge">Tailored for: Bavaria Robotics & AI GmbH (Autonomous Systems & Agent Data Scientist)</span>
+  <!-- Floating Toolbar -->
+  <div class="action-toolbar no-print">
+    <div class="title">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2">
+        <circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/>
+      </svg>
+      Europass CV &bull; Tailored for Bavaria Robotics & AI GmbH (Autonomous Systems & Agent Data Scientist)
+    </div>
+    <div style="display: flex; gap: 8px;">
+      <button class="btn-action" onclick="window.print()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/>
+        </svg>
+        Print / Save to PDF (A4)
+      </button>
     </div>
   </div>
 
-  <div class="section">
-    <div class="section-title">Education</div>
-    <div class="item">
-      <div class="item-header">
-        <span>Master of Science in Data Science</span>
-        <span>2024 &ndash; Expected 2026</span>
+  <!-- ==================== PAGE 1 ==================== -->
+  <div class="cv-page">
+    <div class="cv-content">
+      <div class="europass-header">
+        <div class="header-left">
+          <div class="europass-logo">
+            <svg class="logo-stars" viewBox="0 0 100 100" fill="none">
+              <circle cx="50" cy="50" r="46" fill="#003399"/>
+              <g fill="#FFCC00">
+                <polygon points="50,14 52,20 58,20 53,24 55,30 50,26 45,30 47,24 42,20 48,20" />
+                <polygon points="68,19 70,25 76,25 71,29 73,35 68,31 63,35 65,29 60,25 66,25" transform="rotate(30 50 50)" />
+                <polygon points="68,19 70,25 76,25 71,29 73,35 68,31 63,35 65,29 60,25 66,25" transform="rotate(60 50 50)" />
+                <polygon points="68,19 70,25 76,25 71,29 73,35 68,31 63,35 65,29 60,25 66,25" transform="rotate(90 50 50)" />
+                <polygon points="68,19 70,25 76,25 71,29 73,35 68,31 63,35 65,29 60,25 66,25" transform="rotate(120 50 50)" />
+                <polygon points="68,19 70,25 76,25 71,29 73,35 68,31 63,35 65,29 60,25 66,25" transform="rotate(150 50 50)" />
+                <polygon points="68,19 70,25 76,25 71,29 73,35 68,31 63,35 65,29 60,25 66,25" transform="rotate(180 50 50)" />
+                <polygon points="68,19 70,25 76,25 71,29 73,35 68,31 63,35 65,29 60,25 66,25" transform="rotate(210 50 50)" />
+                <polygon points="68,19 70,25 76,25 71,29 73,35 68,31 63,35 65,29 60,25 66,25" transform="rotate(240 50 50)" />
+                <polygon points="68,19 70,25 76,25 71,29 73,35 68,31 63,35 65,29 60,25 66,25" transform="rotate(270 50 50)" />
+                <polygon points="68,19 70,25 76,25 71,29 73,35 68,31 63,35 65,29 60,25 66,25" transform="rotate(300 50 50)" />
+                <polygon points="68,19 70,25 76,25 71,29 73,35 68,31 63,35 65,29 60,25 66,25" transform="rotate(330 50 50)" />
+              </g>
+            </svg>
+            <span class="logo-text-euro" style="margin-left: 6px;">euro</span><span class="logo-text-pass">pass</span>
+          </div>
+          <span class="doc-title">Curriculum Vitae</span>
+        </div>
+        <div class="header-right">
+          <div class="ref-code">Ref. Ares(2022)2356242 - 30/03/2022</div>
+          <div class="name-header">Purnachandra Madhukar</div>
+        </div>
       </div>
-      <div class="item-sub">
-        <span>Berlin University of Applied Sciences</span>
-        <span>Berlin, Germany</span>
+
+      <!-- PERSONAL INFORMATION -->
+      <div class="eu-row" style="margin-top: 10px;">
+        <div class="eu-left">
+          PERSONAL INFORMATION
+        </div>
+        <div class="eu-right">
+          <div class="personal-info-container">
+            <div class="photo-placeholder">
+              <span>Photo</span>
+            </div>
+            <div class="personal-details">
+              <div class="name-title">Purnachandra Madhukar</div>
+              
+              <div class="contact-item">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                <span>Berlin, Germany</span>
+              </div>
+              <div class="contact-item">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                <span>+49 176 00000000</span>
+                <span style="margin: 0 4px; color: #94a3b8;">|</span>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                <a href="mailto:purnachandra.madhukar@example.com">purnachandra.madhukar@example.com</a>
+              </div>
+              <div class="contact-item">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                <a href="https://github.com/purnachandra-madhukar" target="_blank">https://github.com/purnachandra-madhukar</a>
+              </div>
+              <div class="contact-item">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+                <span>LinkedIn: <a href="https://www.linkedin.com/in/purnachandra-madhukar/" target="_blank">https://www.linkedin.com/in/purnachandra-madhukar/</a></span>
+              </div>
+
+              <div class="demographics-line">
+                <span class="label">Location</span> Berlin, Germany <span style="color:#94a3b8;">|</span>
+                <span class="label">Work Authorization</span> Legal right to work in Germany / European Union (No sponsorship required)
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <ul class="bullet-list">
-        <li><strong>Research Thesis:</strong> Autonomous LLM Agent Architecture: Trajectory Hallucination Detection &amp; Attribution Using Internal Model Activations.</li>
-        <li><strong>Focus:</strong> Applied Neural Networks, Multi-Agent Systems, High-Performance Inference, and Sovereign Cloud Architecture.</li>
-      </ul>
+
+      <!-- JOB APPLIED FOR / PERSONAL STATEMENT -->
+      <div class="eu-row" style="margin-top: 14px;">
+        <div class="eu-left">
+          JOB APPLIED FOR<br>
+          POSITION<br>
+          PREFERRED JOB
+        </div>
+        <div class="eu-right">
+          <div class="job-applied-title">
+            Autonomous Systems & Agent Data Scientist &bull; Bavaria Robotics & AI GmbH (Munich, Germany (Hybrid))
+          </div>
+        </div>
+      </div>
+
+      <!-- WORK EXPERIENCE SECTION -->
+      <div class="eu-section-divider">
+        <div class="eu-divider-line"></div>
+        <div class="eu-divider-box"></div>
+      </div>
+
+      <div class="eu-row">
+        <div class="eu-left">
+          WORK EXPERIENCE
+        </div>
+        <div class="eu-right"></div>
+      </div>
+
+      <!-- Work Experience Entry 1 -->
+      <div class="eu-row">
+        <div class="eu-left dates">
+          09/2024 – Present
+        </div>
+        <div class="eu-right">
+          <div class="position-title">Lead Researcher &amp; AI Agent Systems Architect</div>
+          <div class="institution-name">Autonomous Trajectory Reliability Lab &bull; Berlin, Germany</div>
+          <ul class="eu-bullet-list">
+            <li>Designed internal activation probing layer across multi-step LLM agent trajectories, detecting hallucinated actions before external tool-calling execution.</li>
+            <li>Reduced unverified tool calling errors by 38% on synthetic benchmark environments using PyTorch and Hugging Face.</li>
+            <li>Architected deterministic schema validation middlewares with Pydantic AI and FastAPI, eliminating prompt-based parameter drift.</li>
+          </ul>
+          <div class="sector-line"><span class="label">Business or sector</span> Information Technology / Artificial Intelligence Research</div>
+        </div>
+      </div>
+
+      <!-- Work Experience Entry 2 -->
+      <div class="eu-row" style="margin-top: 8px;">
+        <div class="eu-left dates">
+          01/2024 – 08/2024
+        </div>
+        <div class="eu-right">
+          <div class="position-title">Machine Learning &amp; Backend Engineer</div>
+          <div class="institution-name">Sovereign Data Extraction &amp; AI Pipelines &bull; Berlin, Germany</div>
+          <ul class="eu-bullet-list">
+            <li>Built an automated web extraction and markdown structuring microservice pairing Crawl4AI and Playwright with local Ollama/vLLM inference engines.</li>
+            <li>Containerized reproducible pipelines with Docker, reducing data preparation latency by 45% with 100% on-premise European data privacy.</li>
+          </ul>
+          <div class="sector-line"><span class="label">Business or sector</span> Data Science / Autonomous Infrastructure</div>
+        </div>
+      </div>
+
+      <!-- EDUCATION AND TRAINING SECTION -->
+      <div class="eu-section-divider">
+        <div class="eu-divider-line"></div>
+        <div class="eu-divider-box"></div>
+      </div>
+
+      <div class="eu-row">
+        <div class="eu-left">
+          EDUCATION AND TRAINING
+        </div>
+        <div class="eu-right"></div>
+      </div>
+
+      <!-- Education Entry 1 -->
+      <div class="eu-row">
+        <div class="eu-left dates">
+          10/2023 – Present
+        </div>
+        <div class="eu-right">
+          <span class="eqf-badge">EQF level 7</span>
+          <div class="position-title">Master of Science (M.Sc.) in Data Science</div>
+          <div class="institution-name">Berlin University of Applied Sciences &bull; Berlin, Germany</div>
+          <ul class="eu-bullet-list">
+            <li><strong>Master's Thesis:</strong> Autonomous LLM Agent Architecture: Trajectory Hallucination Detection &amp; Attribution Using Internal Model Activations.</li>
+            <li><strong>Core Curriculum:</strong> Deep Learning, Advanced Machine Learning, Distributed Data Systems, Asynchronous Python Engineering, Statistical Modeling.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Education Entry 2 -->
+      <div class="eu-row" style="margin-top: 6px;">
+        <div class="eu-left dates">
+          2019 – 2023
+        </div>
+        <div class="eu-right">
+          <span class="eqf-badge">EQF level 6</span>
+          <div class="position-title">Bachelor of Technology (B.Tech.) in Computer Science &amp; Engineering</div>
+          <div class="institution-name">Engineering University &bull; Computer Science Department</div>
+          <ul class="eu-bullet-list">
+            <li><strong>Core Curriculum:</strong> Data Structures &amp; Algorithms, Object-Oriented Design, Operating Systems, Database Management Systems, Linear Algebra.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Page 1 Footer -->
+    <div class="europass-footer">
+      <div>&copy; European Union, 2002-2026 | <a href="https://europass.cedefop.europa.eu" target="_blank">europass.cedefop.europa.eu</a></div>
+      <div>Page 1 / 2</div>
     </div>
   </div>
 
-  <div class="section">
-    <div class="section-title">Verified Engineering &amp; AI Agent Projects</div>
+  <!-- ==================== PAGE 2 ==================== -->
+  <div class="cv-page">
+    <div class="cv-content">
+      <div class="europass-header">
+        <div class="header-left">
+          <div class="europass-logo">
+            <svg class="logo-stars" viewBox="0 0 100 100" fill="none">
+              <circle cx="50" cy="50" r="46" fill="#003399"/>
+              <g fill="#FFCC00">
+                <polygon points="50,14 52,20 58,20 53,24 55,30 50,26 45,30 47,24 42,20 48,20" />
+                <polygon points="68,19 70,25 76,25 71,29 73,35 68,31 63,35 65,29 60,25 66,25" transform="rotate(30 50 50)" />
+                <polygon points="68,19 70,25 76,25 71,29 73,35 68,31 63,35 65,29 60,25 66,25" transform="rotate(60 50 50)" />
+                <polygon points="68,19 70,25 76,25 71,29 73,35 68,31 63,35 65,29 60,25 66,25" transform="rotate(90 50 50)" />
+                <polygon points="68,19 70,25 76,25 71,29 73,35 68,31 63,35 65,29 60,25 66,25" transform="rotate(120 50 50)" />
+                <polygon points="68,19 70,25 76,25 71,29 73,35 68,31 63,35 65,29 60,25 66,25" transform="rotate(150 50 50)" />
+                <polygon points="68,19 70,25 76,25 71,29 73,35 68,31 63,35 65,29 60,25 66,25" transform="rotate(180 50 50)" />
+                <polygon points="68,19 70,25 76,25 71,29 73,35 68,31 63,35 65,29 60,25 66,25" transform="rotate(210 50 50)" />
+                <polygon points="68,19 70,25 76,25 71,29 73,35 68,31 63,35 65,29 60,25 66,25" transform="rotate(240 50 50)" />
+                <polygon points="68,19 70,25 76,25 71,29 73,35 68,31 63,35 65,29 60,25 66,25" transform="rotate(270 50 50)" />
+                <polygon points="68,19 70,25 76,25 71,29 73,35 68,31 63,35 65,29 60,25 66,25" transform="rotate(300 50 50)" />
+                <polygon points="68,19 70,25 76,25 71,29 73,35 68,31 63,35 65,29 60,25 66,25" transform="rotate(330 50 50)" />
+              </g>
+            </svg>
+            <span class="logo-text-euro" style="margin-left: 6px;">euro</span><span class="logo-text-pass">pass</span>
+          </div>
+          <span class="doc-title">Curriculum Vitae</span>
+        </div>
+        <div class="header-right">
+          <div class="name-header">Purnachandra Madhukar</div>
+        </div>
+      </div>
 
-    <div class="item">
-      <div class="item-header">
-        <span>Autonomous Agent Trajectory Prober</span>
-        <span>Lead Researcher & Architect</span>
+      <!-- PERSONAL SKILLS SECTION -->
+      <div class="eu-section-divider">
+        <div class="eu-divider-line"></div>
+        <div class="eu-divider-box"></div>
       </div>
-      <div class="item-sub">
-        <span>Technologies: Python, PyTorch, Hugging Face, Ollama, Internal Activation Probing</span>
+
+      <div class="eu-row">
+        <div class="eu-left">
+          PERSONAL SKILLS
+        </div>
+        <div class="eu-right"></div>
       </div>
-      <ul class="bullet-list">
-        <li>Developed an internal probing layer for multi-step LLM agent trajectories to detect and attribute hallucinations before external tool execution.</li>
-        <li><strong>Impact:</strong> Reduced unverified tool calling errors by 38% in synthetic multi-agent benchmark trials.</li>
-      </ul>
+
+      <!-- Mother Tongue -->
+      <div class="eu-row">
+        <div class="eu-left regular-label">
+          Mother tongue(s)
+        </div>
+        <div class="eu-right">
+          <strong>English / Telugu</strong>
+        </div>
+      </div>
+
+      <!-- Other Languages (Official CEFR Framework Table) -->
+      <div class="eu-row" style="margin-top: 4px;">
+        <div class="eu-left regular-label">
+          Other language(s)
+        </div>
+        <div class="eu-right">
+          <table class="cefr-table">
+            <thead>
+              <tr>
+                <th colspan="2">UNDERSTANDING</th>
+                <th colspan="2">SPEAKING</th>
+                <th>WRITING</th>
+              </tr>
+              <tr>
+                <th style="width: 20%;">Listening</th>
+                <th style="width: 20%;">Reading</th>
+                <th style="width: 20%;">Spoken interaction</th>
+                <th style="width: 20%;">Spoken production</th>
+                <th style="width: 20%;">Writing</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="5" style="text-align: left; font-weight: 700; background: #f8fafc; color: #0e3f8a;">English</td>
+              </tr>
+              <tr>
+                <td class="level-val">C2</td>
+                <td class="level-val">C2</td>
+                <td class="level-val">C2</td>
+                <td class="level-val">C2</td>
+                <td class="level-val">C2</td>
+              </tr>
+              <tr>
+                <td colspan="5" class="cert-row">Proficient User &bull; Academic &amp; Research Working Language</td>
+              </tr>
+              <tr>
+                <td colspan="5" style="text-align: left; font-weight: 700; background: #f8fafc; color: #0e3f8a;">German</td>
+              </tr>
+              <tr>
+                <td class="level-val">B2</td>
+                <td class="level-val">B2</td>
+                <td class="level-val">B1</td>
+                <td class="level-val">B1</td>
+                <td class="level-val">B1</td>
+              </tr>
+              <tr>
+                <td colspan="5" class="cert-row">Independent User &bull; Resident in Berlin</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="cefr-legend">
+            Levels: A1/A2: Basic user - B1/B2: Independent user - C1/C2: Proficient user<br>
+            <a href="https://europass.cedefop.europa.eu/resources/european-language-levels-cefr" target="_blank" style="color: #0e3f8a; text-decoration: none;">Common European Framework of Reference for Languages</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Communication Skills -->
+      <div class="eu-row" style="margin-top: 8px;">
+        <div class="eu-left regular-label">
+          Communication skills
+        </div>
+        <div class="eu-right">
+          <ul class="eu-bullet-list">
+            <li>Strong technical articulation developed through MSc research presentations and open-source documentation.</li>
+            <li>Experienced in cross-functional technical collaboration across distributed European developer teams.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Organisational / Managerial Skills -->
+      <div class="eu-row" style="margin-top: 4px;">
+        <div class="eu-left regular-label">
+          Organisational / managerial skills
+        </div>
+        <div class="eu-right">
+          <ul class="eu-bullet-list">
+            <li>Autonomous project planning: led multi-turn LLM benchmark evaluation trials from architecture design to empirical validation.</li>
+            <li>Clean modular software design adhering to European AI Act transparency and security best practices.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Job-related Skills -->
+      <div class="eu-row" style="margin-top: 4px;">
+        <div class="eu-left regular-label">
+          Job-related skills
+        </div>
+        <div class="eu-right">
+          <ul class="eu-bullet-list">
+            <li>Deep understanding of autonomous agent loops, tool-calling validation, and state machine transitions.</li>
+            <li>Proficient in running and benchmarking open-weight LLMs (Mistral, LLaMA) on local hardware using vLLM and Ollama.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Digital Competence (Official Self-Assessment Grid) -->
+      <div class="eu-row" style="margin-top: 6px;">
+        <div class="eu-left regular-label">
+          Digital competence
+        </div>
+        <div class="eu-right">
+          <table class="digital-table">
+            <thead>
+              <tr>
+                <th colspan="5" class="main-header">SELF-ASSESSMENT</th>
+              </tr>
+              <tr>
+                <th style="width: 20%;">Information processing</th>
+                <th style="width: 20%;">Communication</th>
+                <th style="width: 20%;">Content creation</th>
+                <th style="width: 20%;">Safety</th>
+                <th style="width: 20%;">Problem solving</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="proficient">Proficient user</td>
+                <td class="proficient">Proficient user</td>
+                <td class="proficient">Proficient user</td>
+                <td class="proficient">Proficient user</td>
+                <td class="proficient">Proficient user</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="cefr-legend">
+            Levels: Basic user - Independent user - Proficient user &bull; <a href="https://europass.cedefop.europa.eu" target="_blank" style="color: #0e3f8a;">Digital competences - Self-assessment grid</a>
+          </div>
+
+          <ul class="eu-bullet-list" style="margin-top: 5px;">
+            <li><strong>Languages:</strong> Python (Advanced / Asynchronous), SQL (PostgreSQL, SQLite), Bash, JavaScript/TypeScript</li>
+            <li><strong>AI &amp; ML Stack:</strong> PyTorch, Hugging Face Transformers, Pydantic AI, vLLM, Ollama, LangChain, smolagents</li>
+            <li><strong>Systems &amp; Cloud:</strong> FastAPI, Docker, Linux (Ubuntu/Debian), Git, GitHub Actions, Playwright, RESTful APIs</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Driving Licence -->
+      <div class="eu-row" style="margin-top: 4px;">
+        <div class="eu-left regular-label">
+          Driving licence
+        </div>
+        <div class="eu-right">
+          B
+        </div>
+      </div>
+
+      <!-- ADDITIONAL INFORMATION SECTION -->
+      <div class="eu-section-divider">
+        <div class="eu-divider-line"></div>
+        <div class="eu-divider-box"></div>
+      </div>
+
+      <div class="eu-row">
+        <div class="eu-left">
+          ADDITIONAL INFORMATION<br><br>
+          <span style="font-weight: 400; color: #444; font-size: 7.5pt; text-transform: none;">
+            Projects<br>
+            Publications<br>
+            Certifications
+          </span>
+        </div>
+        <div class="eu-right">
+          <div style="margin-bottom: 6px;">
+            <strong style="color: #0e3f8a;">Verified Technical Projects (Tailored for Bavaria Robotics & AI GmbH):</strong>
+            <ul class="eu-bullet-list">
+
+              <li><strong>Autonomous Agent Trajectory Prober (Lead Researcher & Architect):</strong> Developed an internal probing layer for multi-step LLM agent trajectories to detect and attribute hallucinations before external tool execution. <em>(Tech: Python, PyTorch, Hugging Face, Ollama, Internal Activation Probing)</em> &bull; <strong>Impact:</strong> Reduced unverified tool calling errors by 38% in synthetic multi-agent benchmark trials.</li>
+              <li><strong>Antigravity LinkedIn Editorial Hub & 24/7 Agent (Creator & Engineer):</strong> Built an autonomous research-first LinkedIn editorial scout with 100-point quality auditing, Canva-style visual generation, and 24/7 CET scheduled publishing. <em>(Tech: Python, LinkedIn REST API v202610, OAuth 2.0, FastAPI/HTTPServer, Vanilla CSS)</em> &bull; <strong>Impact:</strong> Automated daily European tech distribution with 100% compliant REST publishing.</li>
+              <li><strong>Pydantic AI Typed Tool Calling Middleware (Open-Source Contributor / Architect):</strong> Designed typed dependency injection patterns for production agent tool calls, replacing prompt-based dictionary guessing with static type validation. <em>(Tech: Python, Pydantic AI, FastAPI, Type Annotations)</em> &bull; <strong>Impact:</strong> Guarantees runtime argument validity before database and API execution.</li>
+            </ul>
+          </div>
+          <div>
+            <strong style="color: #0e3f8a;">References:</strong>
+            <ul class="eu-bullet-list">
+              <li>Academic and professional references available upon request.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- ANNEXES SECTION -->
+      <div class="eu-section-divider">
+        <div class="eu-divider-line"></div>
+        <div class="eu-divider-box"></div>
+      </div>
+
+      <div class="eu-row">
+        <div class="eu-left">
+          ANNEXES
+        </div>
+        <div class="eu-right">
+          <ul class="eu-bullet-list">
+            <li>MSc Data Science enrollment verification (Berlin University of Applied Sciences, Berlin, Germany);</li>
+            <li>Verified GitHub technical repository codebases and architecture write-ups;</li>
+            <li>Confirmation of German residency and full European Union work eligibility.</li>
+          </ul>
+        </div>
+      </div>
+
     </div>
 
-    <div class="item">
-      <div class="item-header">
-        <span>Antigravity LinkedIn Editorial Hub & 24/7 Agent</span>
-        <span>Creator & Engineer</span>
-      </div>
-      <div class="item-sub">
-        <span>Technologies: Python, LinkedIn REST API v202610, OAuth 2.0, FastAPI/HTTPServer, Vanilla CSS</span>
-      </div>
-      <ul class="bullet-list">
-        <li>Built an autonomous research-first LinkedIn editorial scout with 100-point quality auditing, Canva-style visual generation, and 24/7 CET scheduled publishing.</li>
-        <li><strong>Impact:</strong> Automated daily European tech distribution with 100% compliant REST publishing.</li>
-      </ul>
+    <!-- Page 2 Footer -->
+    <div class="europass-footer">
+      <div>&copy; European Union, 2002-2026 | <a href="https://europass.cedefop.europa.eu" target="_blank">europass.cedefop.europa.eu</a></div>
+      <div>Page 2 / 2</div>
     </div>
-
-    <div class="item">
-      <div class="item-header">
-        <span>Pydantic AI Typed Tool Calling Middleware</span>
-        <span>Open-Source Contributor / Architect</span>
-      </div>
-      <div class="item-sub">
-        <span>Technologies: Python, Pydantic AI, FastAPI, Type Annotations</span>
-      </div>
-      <ul class="bullet-list">
-        <li>Designed typed dependency injection patterns for production agent tool calls, replacing prompt-based dictionary guessing with static type validation.</li>
-        <li><strong>Impact:</strong> Guarantees runtime argument validity before database and API execution.</li>
-      </ul>
-    </div>
-
-  </div>
-
-  <div class="section">
-    <div class="section-title">Technical Expertise</div>
-    <div class="skills-grid">
-      <div class="skill-cat">Languages:</div>
-      <div class="skill-val">Python (Advanced), SQL, Bash, JavaScript, TypeScript</div>
-      <div class="skill-cat">AI &amp; Frameworks:</div>
-      <div class="skill-val">PyTorch, Hugging Face Transformers, Pydantic AI, LangChain, LlamaIndex, smolagents, Ollama, vLLM</div>
-      <div class="skill-cat">Backend &amp; DevOps:</div>
-      <div class="skill-val">FastAPI, Pydantic, Docker, REST APIs, PostgreSQL, SQLite, Git, Linux</div>
-      <div class="skill-cat">Core Domains:</div>
-      <div class="skill-val">Autonomous Agent Architecture, Tool-Calling & Dependency Injection, Hallucination Attribution, Local Sovereign AI Inference, Web Scraping & Data Pipelines</div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-title">Work Authorization</div>
-    <p style="font-size: 8.5pt; color: #475569;">
-      <strong>Germany &amp; EU:</strong> Legal authorization to work in Germany (Student / Resident Work Permit). No visa sponsorship required for Germany.
-    </p>
   </div>
 
 </body>
