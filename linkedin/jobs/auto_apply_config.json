@@ -1,0 +1,23 @@
+{
+  "enabled": true,
+  "daily_limit": 5,
+  "min_match_score": 85,
+  "target_roles": [
+    "Werkstudent",
+    "Internship",
+    "Part-Time",
+    "Praktikum",
+    "Student"
+  ],
+  "target_locations": [
+    "Berlin",
+    "Berlin, Germany",
+    "Remote Germany",
+    "Hybrid Berlin"
+  ],
+  "today_date": "2026-10-17",
+  "applied_today": 3,
+  "last_run": "2026-10-17T14:18:58.546893",
+  "status": "RUNNING",
+  "anti_ban_delay_seconds": 2
+}

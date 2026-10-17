@@ -81,8 +81,16 @@ function initApp() {
   loadAllData();
   checkLinkedInStatus();
 
+  // Restore saved hub mode or default to postings
+  const savedMode = localStorage.getItem('active_hub_mode') || 'postings';
+  switchHubMode(savedMode);
+  fetchAutoApplyStatus();
+
   // Polling for live daemon heartbeat & telemetry every 15s
-  setInterval(loadDaemonOnly, 15000);
+  setInterval(() => {
+    loadDaemonOnly();
+    fetchAutoApplyStatus();
+  }, 15000);
 
   if (window.location.search.includes('linkedin_connected=true')) {
     showToast('🎉 Official LinkedIn Account connected successfully! Ready for 1-click publishing.', 'success');
@@ -100,6 +108,127 @@ if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initApp);
 } else {
   initApp();
+}
+
+// --- Hub Mode Switcher (Postings vs Autonomous Jobs) ---
+let currentHubMode = 'postings';
+
+function switchHubMode(mode) {
+  currentHubMode = mode;
+  try { localStorage.setItem('active_hub_mode', mode); } catch(e){}
+
+  const btnPostings = document.getElementById('hub-mode-postings');
+  const btnJobs = document.getElementById('hub-mode-jobs');
+  const navPostings = document.getElementById('nav-postings-group');
+
+  if (mode === 'jobs') {
+    btnPostings?.classList.remove('active');
+    btnJobs?.classList.add('active', 'jobs-active');
+    if (navPostings) navPostings.style.display = 'none';
+
+    // Show Jobs tab content
+    document.querySelectorAll('.tab-content').forEach(c => {
+      c.classList.toggle('active', c.id === 'tab-jobs');
+    });
+
+    // Refresh auto-apply status immediately
+    fetchAutoApplyStatus();
+  } else {
+    btnJobs?.classList.remove('active', 'jobs-active');
+    btnPostings?.classList.add('active');
+    if (navPostings) navPostings.style.display = '';
+
+    // Switch to active postings sub-tab (or queue by default)
+    const activeTab = document.querySelector('#nav-postings-group .nav-tab.active')?.getAttribute('data-tab') || 'queue';
+    switchTab(activeTab);
+  }
+}
+
+// --- Autonomous Auto-Apply Handlers ---
+async function fetchAutoApplyStatus() {
+  try {
+    const res = await fetch('/api/jobs/auto-apply/status').then(r => r.json());
+    if (!res || !res.config) return;
+    const cfg = res.config;
+    const logs = res.logs || [];
+
+    // Metrics
+    const metricApplied = document.getElementById('metric-applied-today');
+    if (metricApplied) metricApplied.textContent = `${cfg.applied_today || 0} / ${cfg.daily_limit || 5}`;
+
+    const metricScore = document.getElementById('metric-min-score');
+    if (metricScore) metricScore.textContent = `${cfg.min_match_score || 85}%`;
+
+    // Indicators
+    const statusText = document.getElementById('auto-apply-status-text');
+    const badgeInd = document.getElementById('auto-apply-badge-indicator');
+    const dotInd = document.getElementById('auto-apply-dot');
+    const toggleBtnText = document.getElementById('btn-toggle-auto-apply-text');
+    const hubBadgeText = document.getElementById('badge-jobs-text');
+
+    if (cfg.enabled) {
+      if (statusText) statusText.textContent = 'AUTONOMOUS 24/7 ACTIVE';
+      if (badgeInd) badgeInd.className = 'auto-apply-pulse-badge';
+      if (dotInd) dotInd.className = 'pulse-dot green';
+      if (toggleBtnText) toggleBtnText.textContent = 'Pause Auto-Apply';
+      if (hubBadgeText) hubBadgeText.textContent = `Auto-Apply 24/7 (${cfg.applied_today || 0} Applied)`;
+    } else {
+      if (statusText) statusText.textContent = 'AUTO-APPLY PAUSED';
+      if (badgeInd) badgeInd.className = 'auto-apply-pulse-badge paused';
+      if (dotInd) dotInd.className = 'pulse-dot amber';
+      if (toggleBtnText) toggleBtnText.textContent = 'Resume Auto-Apply';
+      if (hubBadgeText) hubBadgeText.textContent = 'Auto-Apply PAUSED';
+    }
+
+    // Render Logs Stream
+    const consoleBody = document.getElementById('auto-apply-console-logs');
+    if (consoleBody && logs.length > 0) {
+      consoleBody.innerHTML = logs.map(l => `
+        <div class="console-line ${l.level || 'INFO'}">
+          <span class="ts">[${escapeHtml(l.timestamp)}]</span>
+          <span class="msg">${escapeHtml(l.message)}</span>
+        </div>
+      `).join('');
+      consoleBody.scrollTop = consoleBody.scrollHeight;
+    }
+  } catch (e) {
+    console.error('Failed to fetch auto-apply status:', e);
+  }
+}
+
+async function toggleAutoApply() {
+  try {
+    const res = await fetch('/api/jobs/auto-apply/toggle', { method: 'POST', body: '{}' }).then(r => r.json());
+    if (res.success) {
+      const state = res.config.enabled ? 'Enabled (Running 24/7)' : 'Paused';
+      showToast(`Autonomous Job Agent ${state}`, res.config.enabled ? 'success' : 'info');
+      fetchAutoApplyStatus();
+    }
+  } catch (e) {
+    showToast(`Failed to toggle auto-apply: ${e.message}`, 'error');
+  }
+}
+
+async function runAutoApplyNow() {
+  const btn = document.getElementById('btn-run-auto-apply-now');
+  if (btn) btn.disabled = true;
+  showToast('⚡ Running autonomous job application batch...', 'info');
+
+  try {
+    const res = await fetch('/api/jobs/auto-apply/run-now', { method: 'POST', body: '{}' }).then(r => r.json());
+    if (res.success) {
+      const count = res.result ? res.result.applied_count : 0;
+      showToast(`🎉 Autonomous batch completed! ${count} application(s) processed.`, 'success');
+      loadAllData();
+      fetchAutoApplyStatus();
+    } else {
+      showToast(res.error || 'Failed to run auto-apply batch', 'error');
+    }
+  } catch (e) {
+    showToast(`Error running auto-apply: ${e.message}`, 'error');
+  } finally {
+    if (btn) btn.disabled = false;
+  }
 }
 
 // --- Tab Navigation ---
@@ -1587,3 +1716,7 @@ window.applyToJob = applyToJob;
 window.copyRecruiterNote = copyRecruiterNote;
 window.focusJDScorer = focusJDScorer;
 window.handleScoreJD = handleScoreJD;
+window.switchHubMode = switchHubMode;
+window.toggleAutoApply = toggleAutoApply;
+window.runAutoApplyNow = runAutoApplyNow;
+window.fetchAutoApplyStatus = fetchAutoApplyStatus;

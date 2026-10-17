@@ -38,6 +38,10 @@ REPLIES_FILE = HISTORY_DIR / "pending_replies.json"
 sys.path.insert(0, str(BASE_DIR))
 from linkedin.tools import publisher
 from linkedin.tools import eu_growth_engine
+try:
+    from linkedin.jobs import autonomous_job_agent
+except ImportError:
+    autonomous_job_agent = None
 
 # Configuration
 CHECK_INTERVAL_SECONDS = 60 # Check cycle every minute
@@ -290,7 +294,22 @@ def run_single_cycle(force_publish=False):
     if approved_count > 0:
         published = check_and_publish_next_candidate(force=force_publish)
 
-    # 3. Update heartbeat
+    # 3. Autonomous Job Application Engine check
+    auto_apply_telemetry = {"enabled": False, "applied_today": 0}
+    if autonomous_job_agent:
+        try:
+            auto_apply_res = autonomous_job_agent.run_autonomous_cycle()
+            cfg = autonomous_job_agent.get_config()
+            auto_apply_telemetry = {
+                "enabled": cfg.get("enabled", True),
+                "applied_today": cfg.get("applied_today", 0),
+                "daily_limit": cfg.get("daily_limit", 5),
+                "status": cfg.get("status", "RUNNING")
+            }
+        except Exception as e:
+            append_daemon_log(f"⚠️ Auto-apply cycle exception: {e}")
+
+    # 4. Update heartbeat
     update_daemon_status({
         "status": "RUNNING",
         "current_time_cet": now_dt.strftime("%Y-%m-%d %H:%M:%S CET"),
@@ -299,6 +318,7 @@ def run_single_cycle(force_publish=False):
         "next_scheduled_drop": next_slot["formatted"],
         "approved_queue_count": approved_count,
         "published_today": published_today,
+        "auto_apply_telemetry": auto_apply_telemetry,
         "target_audience": "European Union (Berlin, Munich, Amsterdam, Paris, Zurich)",
         "auto_publish_enabled": True
     })

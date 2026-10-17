@@ -1,0 +1,130 @@
+{
+  "entries": [
+    {
+      "timestamp": "14:18:54",
+      "datetime": "2026-10-17T14:18:54.212796",
+      "level": "INFO",
+      "message": "Radar scan: 4 active jobs, 3 eligible for auto-apply."
+    },
+    {
+      "timestamp": "14:18:54",
+      "datetime": "2026-10-17T14:18:54.214802",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Werkstudent / Working Student - Data Science & Predictive Analytics' at Sovereign AI Infrastructure Europe (ID: job-berlin-ws-002)"
+    },
+    {
+      "timestamp": "14:18:54",
+      "datetime": "2026-10-17T14:18:54.240803",
+      "level": "SUCCESS",
+      "message": "Generated tailored Europass CV: resume_job-berlin-ws-002.html"
+    },
+    {
+      "timestamp": "14:18:54",
+      "datetime": "2026-10-17T14:18:54.257343",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions from deterministic bank."
+    },
+    {
+      "timestamp": "14:18:54",
+      "datetime": "2026-10-17T14:18:54.282505",
+      "level": "SUCCESS",
+      "message": "Application confirmed! Logged to applied_history.json for Sovereign AI Infrastructure Europe."
+    },
+    {
+      "timestamp": "14:18:56",
+      "datetime": "2026-10-17T14:18:56.298635",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Data Science & NLP Intern (Praktikant)' at HealthTech Innovations Berlin (ID: job-berlin-intern-003)"
+    },
+    {
+      "timestamp": "14:18:56",
+      "datetime": "2026-10-17T14:18:56.306649",
+      "level": "SUCCESS",
+      "message": "Generated tailored Europass CV: resume_job-berlin-intern-003.html"
+    },
+    {
+      "timestamp": "14:18:56",
+      "datetime": "2026-10-17T14:18:56.326647",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions from deterministic bank."
+    },
+    {
+      "timestamp": "14:18:56",
+      "datetime": "2026-10-17T14:18:56.383172",
+      "level": "SUCCESS",
+      "message": "Application confirmed! Logged to applied_history.json for HealthTech Innovations Berlin."
+    },
+    {
+      "timestamp": "14:18:58",
+      "datetime": "2026-10-17T14:18:58.399572",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Working Student - Product Analytics & Business Intelligence' at FinTech ScaleUp Europe (ID: job-berlin-ws-004)"
+    },
+    {
+      "timestamp": "14:18:58",
+      "datetime": "2026-10-17T14:18:58.428721",
+      "level": "SUCCESS",
+      "message": "Generated tailored Europass CV: resume_job-berlin-ws-004.html"
+    },
+    {
+      "timestamp": "14:18:58",
+      "datetime": "2026-10-17T14:18:58.455659",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions from deterministic bank."
+    },
+    {
+      "timestamp": "14:18:58",
+      "datetime": "2026-10-17T14:18:58.527288",
+      "level": "SUCCESS",
+      "message": "Application confirmed! Logged to applied_history.json for FinTech ScaleUp Europe."
+    },
+    {
+      "timestamp": "14:20:38",
+      "datetime": "2026-10-17T14:20:38.267152",
+      "level": "INFO",
+      "message": "Radar scan: 4 active jobs, 0 eligible for auto-apply."
+    },
+    {
+      "timestamp": "14:21:38",
+      "datetime": "2026-10-17T14:21:38.331714",
+      "level": "INFO",
+      "message": "Radar scan: 4 active jobs, 0 eligible for auto-apply."
+    },
+    {
+      "timestamp": "14:22:38",
+      "datetime": "2026-10-17T14:22:38.378676",
+      "level": "INFO",
+      "message": "Radar scan: 4 active jobs, 0 eligible for auto-apply."
+    },
+    {
+      "timestamp": "14:23:38",
+      "datetime": "2026-10-17T14:23:38.429142",
+      "level": "INFO",
+      "message": "Radar scan: 4 active jobs, 0 eligible for auto-apply."
+    },
+    {
+      "timestamp": "14:24:38",
+      "datetime": "2026-10-17T14:24:38.479889",
+      "level": "INFO",
+      "message": "Radar scan: 4 active jobs, 0 eligible for auto-apply."
+    },
+    {
+      "timestamp": "14:25:38",
+      "datetime": "2026-10-17T14:25:38.525082",
+      "level": "INFO",
+      "message": "Radar scan: 4 active jobs, 0 eligible for auto-apply."
+    },
+    {
+      "timestamp": "14:25:51",
+      "datetime": "2026-10-17T14:25:51.508959",
+      "level": "INFO",
+      "message": "Auto-Apply toggled: PAUSED"
+    },
+    {
+      "timestamp": "14:27:19",
+      "datetime": "2026-10-17T14:27:19.854379",
+      "level": "INFO",
+      "message": "Auto-Apply toggled: ENABLED (Running 24/7)"
+    }
+  ]
+}

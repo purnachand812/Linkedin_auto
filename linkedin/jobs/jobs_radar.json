@@ -32,7 +32,7 @@
       "applicants_count": 11,
       "match_score": 98,
       "easy_apply": true,
-      "salary_range": "€18 - €22 / hr",
+      "salary_range": "\u20ac18 - \u20ac22 / hr",
       "job_url": "https://www.linkedin.com/jobs/view/sample-berlin-ws-ml-001/",
       "tech_stack": [
         "Python",
@@ -43,10 +43,11 @@
         "Docker"
       ],
       "description": "We are seeking a motivated Working Student (Werkstudent) in Berlin to join our applied AI team. You will support LLM agent integrations, prompt evaluation, and Python microservice architecture. Experience in building independent apps (React Native/Python), working with AI APIs, or pursuing an MSc in Data Science / Computer Science in Berlin is highly appreciated.",
-      "status": "APPROVED",
+      "status": "APPLIED",
       "tailored_resume": "linkedin/jobs/resumes/europass_cv_ml_ai.html",
       "tailored_cover_letter": "I read your posting for the Werkstudent Machine Learning role at DeepAgent AI Labs. As an incoming MSc Data Science student at GISMA University Berlin, I recently developed a React Native navigation assistant with LLM integration and an autonomous 24/7 LinkedIn research agent. I have legal work authorization for student employment in Berlin and would love to contribute 16-20 hours weekly.",
-      "resume_url": "/resumes/europass_cv_ml_ai.html"
+      "resume_url": "/resumes/resume_job-berlin-ws-001.html",
+      "applied_at": "2026-10-17T14:10:01.162161"
     },
     {
       "id": "job-berlin-ws-002",
@@ -58,7 +59,7 @@
       "applicants_count": 18,
       "match_score": 95,
       "easy_apply": true,
-      "salary_range": "€17 - €21 / hr",
+      "salary_range": "\u20ac17 - \u20ac21 / hr",
       "job_url": "https://www.linkedin.com/jobs/view/sample-berlin-ws-ds-002/",
       "tech_stack": [
         "Python",
@@ -70,10 +71,11 @@
         "Big Data Analytics"
       ],
       "description": "Seeking an energetic Data Science Working Student to assist with predictive analytics, data cleaning, feature engineering, and automated reporting. You will collaborate on statistical inference, time-series analysis, and model validation using Python and SQL. Ideal for Master's students in Data Science or Applied ML based in Berlin.",
-      "status": "APPROVED",
+      "status": "APPLIED",
       "tailored_resume": "linkedin/jobs/resumes/europass_cv_datascience.html",
       "tailored_cover_letter": "My Master's coursework at GISMA University Berlin focuses directly on Methods of Prediction and Big Data Analytics. In my previous software engineering role at Crack-ED, I optimised 15+ SQL queries and built analytics dashboards tracking 10,000+ users. I am available for a 16-20 hour Werkstudent position immediately.",
-      "resume_url": "/resumes/europass_cv_datascience.html"
+      "resume_url": "/resumes/resume_job-berlin-ws-002.html",
+      "applied_at": "2026-10-17T14:18:54.277856"
     },
     {
       "id": "job-berlin-intern-003",
@@ -85,7 +87,7 @@
       "applicants_count": 24,
       "match_score": 94,
       "easy_apply": true,
-      "salary_range": "€1,400 - €1,700 / mo",
+      "salary_range": "\u20ac1,400 - \u20ac1,700 / mo",
       "job_url": "https://www.linkedin.com/jobs/view/sample-berlin-intern-nlp-003/",
       "tech_stack": [
         "Python",
@@ -96,10 +98,11 @@
         "EDA"
       ],
       "description": "Join our health AI team for an intensive 3-6 month internship in Berlin. You will work on domain-specific NLP pipelines, text classification, and conversational assistants to improve patient intake workflows. Strong background in Python, NLTK/Transformers, and healthcare text preprocessing required.",
-      "status": "APPROVED",
+      "status": "APPLIED",
       "tailored_resume": "linkedin/jobs/resumes/europass_cv_ml_ai.html",
       "tailored_cover_letter": "At Innomatics Research Labs, I developed an NLP healthcare chatbot handling 500+ query types with 87% intent classification accuracy. I am currently studying MSc Data Science in Berlin and am eager to apply my experience in modular NLP pipelines to HealthTech Innovations.",
-      "resume_url": "/resumes/europass_cv_ml_ai.html"
+      "resume_url": "/resumes/resume_job-berlin-intern-003.html",
+      "applied_at": "2026-10-17T14:18:56.364170"
     },
     {
       "id": "job-berlin-ws-004",
@@ -111,7 +114,7 @@
       "applicants_count": 15,
       "match_score": 93,
       "easy_apply": true,
-      "salary_range": "€18 - €23 / hr",
+      "salary_range": "\u20ac18 - \u20ac23 / hr",
       "job_url": "https://www.linkedin.com/jobs/view/sample-berlin-ws-bi-004/",
       "tech_stack": [
         "SQL",
@@ -123,10 +126,11 @@
         "Project Management"
       ],
       "description": "FinTech ScaleUp Europe is seeking a technical Working Student for our Product Analytics and BI team. You will build KPI monitoring dashboards, manage data schemas in PostgreSQL/Supabase, and coordinate sprint deliverables across product and engineering. Ideal for students with full-stack or CRM development experience.",
-      "status": "APPROVED",
+      "status": "APPLIED",
       "tailored_resume": "linkedin/jobs/resumes/europass_cv_bi_product.html",
       "tailored_cover_letter": "As an independent product builder, I recently developed the Auslandly Consultancy CRM using React, Supabase, and PostgreSQL with real-time sync. At Crack-ED, I architected analytics dashboards that cut student drop-off identification time by 40%. My GISMA Master's modules in Project Management and Digital Marketing Analytics align directly with this role.",
-      "resume_url": "/resumes/europass_cv_bi_product.html"
+      "resume_url": "/resumes/resume_job-berlin-ws-004.html",
+      "applied_at": "2026-10-17T14:18:58.502664"
     }
   ]
 }

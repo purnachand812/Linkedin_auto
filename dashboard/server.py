@@ -49,10 +49,12 @@ try:
     from linkedin.jobs import job_matcher
     from linkedin.jobs import resume_tailor
     from linkedin.jobs import job_dispatcher
+    from linkedin.jobs import autonomous_job_agent
 except ImportError:
     job_matcher = None
     resume_tailor = None
     job_dispatcher = None
+    autonomous_job_agent = None
 
 def load_slop_config():
     if SLOP_FILE.exists():
@@ -394,6 +396,8 @@ class EditorialHandler(SimpleHTTPRequestHandler):
             self.handle_get_jobs_applied()
         elif path == "/api/jobs/profile":
             self.handle_get_jobs_profile()
+        elif path == "/api/jobs/auto-apply/status":
+            self.handle_get_auto_apply_status()
         elif path == "/api/linkedin/status":
             if publisher:
                 self.send_json(publisher.get_connection_status())
@@ -430,6 +434,12 @@ class EditorialHandler(SimpleHTTPRequestHandler):
             self.handle_post_jobs_score(data)
         elif path == "/api/jobs/apply":
             self.handle_post_jobs_apply(data)
+        elif path == "/api/jobs/auto-apply/toggle":
+            self.handle_post_auto_apply_toggle(data)
+        elif path == "/api/jobs/auto-apply/run-now":
+            self.handle_post_auto_apply_run_now(data)
+        elif path == "/api/jobs/auto-apply/config":
+            self.handle_post_auto_apply_config(data)
         else:
             self.send_error(404, "Unknown API route")
 
@@ -955,6 +965,52 @@ class EditorialHandler(SimpleHTTPRequestHandler):
             self.send_json({"success": True, "application": res})
         except Exception as e:
             self.send_json({"success": False, "error": str(e)}, 500)
+
+    def handle_get_auto_apply_status(self):
+        if not autonomous_job_agent:
+            self.send_json({"error": "Autonomous job agent module not loaded"}, 500)
+            return
+        cfg = autonomous_job_agent.get_config()
+        logs = autonomous_job_agent.get_logs(limit=40)
+        self.send_json({
+            "config": cfg,
+            "logs": logs
+        })
+
+    def handle_post_auto_apply_toggle(self, data):
+        if not autonomous_job_agent:
+            self.send_json({"error": "Autonomous job agent module not loaded"}, 500)
+            return
+        enabled = data.get("enabled")
+        if enabled is None:
+            cfg = autonomous_job_agent.get_config()
+            enabled = not cfg.get("enabled", True)
+        updated = autonomous_job_agent.update_config({"enabled": bool(enabled)})
+        autonomous_job_agent.append_log(f"Auto-Apply toggled: {'ENABLED (Running 24/7)' if updated.get('enabled') else 'PAUSED'}")
+        self.send_json({"success": True, "config": updated})
+
+    def handle_post_auto_apply_run_now(self, data):
+        if not autonomous_job_agent:
+            self.send_json({"error": "Autonomous job agent module not loaded"}, 500)
+            return
+        try:
+            autonomous_job_agent.append_log("Dashboard operator triggered instant Auto-Apply batch run.")
+            res = autonomous_job_agent.run_autonomous_cycle(force=True)
+            self.send_json({"success": True, "result": res})
+        except Exception as e:
+            self.send_json({"success": False, "error": str(e)}, 500)
+
+    def handle_post_auto_apply_config(self, data):
+        if not autonomous_job_agent:
+            self.send_json({"error": "Autonomous job agent module not loaded"}, 500)
+            return
+        updates = {}
+        if "daily_limit" in data:
+            updates["daily_limit"] = int(data["daily_limit"])
+        if "min_match_score" in data:
+            updates["min_match_score"] = int(data["min_match_score"])
+        updated = autonomous_job_agent.update_config(updates)
+        self.send_json({"success": True, "config": updated})
 
 def run():
     server_address = ('', PORT)
