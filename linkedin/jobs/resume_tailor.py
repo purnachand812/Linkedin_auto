@@ -952,15 +952,6 @@ def generate_tailored_resume(job_info):
         </div>
       </div>
 
-      <!-- Driving Licence -->
-      <div class="eu-row" style="margin-top: 2px;">
-        <div class="eu-left regular-label">
-          Driving licence
-        </div>
-        <div class="eu-right">
-          B
-        </div>
-      </div>
 
       <!-- ADDITIONAL INFORMATION SECTION -->
       <div class="eu-section-divider">

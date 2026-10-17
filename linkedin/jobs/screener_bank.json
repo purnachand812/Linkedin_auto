@@ -54,6 +54,11 @@
       "keywords": ["salary expectation", "compensation", "desired salary", "expected salary"],
       "answer": "€60,000 / year (or €20/hr for working student)",
       "detail": "Competitive market rate based on Berlin tech scaleup benchmarks."
+    },
+    "driving_license": {
+      "keywords": ["driving license", "valid driver's license", "driving licence", "drivers license", "führerschein", "driver's licence"],
+      "answer": "No",
+      "detail": "Do not possess a driving licence; rely on Berlin public transit (BVG) and fully mobile across Berlin-Brandenburg."
     }
   }
 }

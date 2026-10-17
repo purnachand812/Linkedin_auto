@@ -216,5 +216,9 @@
   "salary_expectation": {
     "werkstudent_hourly_eur": "€16 - €22 / hr",
     "internship_monthly_eur": "€1,200 - €1,800 / mo"
+  },
+  "driving_license": {
+    "has_license": false,
+    "transport": "Berlin public transit (BVG: U-Bahn, S-Bahn, Tram) & cycling / fully mobile across Berlin-Brandenburg"
   }
 }
