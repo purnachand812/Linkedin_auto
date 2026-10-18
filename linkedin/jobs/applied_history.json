@@ -1,5 +1,35 @@
 [
   {
+    "job_id": "job-linkedin-4478206766",
+    "title": "Data Scientist (Freelance, Berlin)",
+    "company": "Zero to One Search | Recruitment Agency",
+    "location": "Berlin, Germany",
+    "salary_range": "\u20ac1,200 - \u20ac1,800 / mo",
+    "match_score": 87,
+    "applied_at": "2026-10-18T13:46:23.290746",
+    "job_url": "https://www.linkedin.com/jobs/view/4478206766/",
+    "resume_url": "/resumes/resume_job-linkedin-4478206766.html",
+    "mode": "AUTONOMOUS_DAEMON",
+    "recruiter_outreach_note": "Hi Hiring Team, I saw Zero to One Search | Recruitment Agency's opening for Data Scientist (Freelance, Berlin) in Berlin, Germany. I am an MSc Data Science student based in Berlin researching hallucination attribution in multi-step LLM agent trajectories. I've also built typed dependency injection middlewares using Pydantic AI and FastAPI. I submitted an application and wanted to share my technical portfolio directly. Happy to connect.",
+    "status": "APPLIED_CONFIRMED",
+    "cover_letter_url": "/resumes/cover_letter_job-linkedin-4478206766.html"
+  },
+  {
+    "job_id": "job-linkedin-4466063082",
+    "title": "Intern Venture Building (m/w/d)",
+    "company": "suhm ventures GmbH",
+    "location": "Berlin, Berlin, Germany",
+    "salary_range": "\u20ac1,200 - \u20ac1,800 / mo",
+    "match_score": 91,
+    "applied_at": "2026-10-18T13:46:21.284008",
+    "job_url": "https://www.linkedin.com/jobs/view/4466063082/",
+    "resume_url": "/resumes/resume_job-linkedin-4466063082.html",
+    "mode": "AUTONOMOUS_DAEMON",
+    "recruiter_outreach_note": "Hi Hiring Team, I saw suhm ventures GmbH's opening for Intern Venture Building (m/w/d) in Berlin, Berlin, Germany. I am an MSc Data Science student based in Berlin researching hallucination attribution in multi-step LLM agent trajectories. I've also built typed dependency injection middlewares using Pydantic AI and FastAPI. I submitted an application and wanted to share my technical portfolio directly. Happy to connect.",
+    "status": "APPLIED_CONFIRMED",
+    "cover_letter_url": "/resumes/cover_letter_job-linkedin-4466063082.html"
+  },
+  {
     "job_id": "job-linkedin-4452397585",
     "title": "Werkstudent Corporate Reporting (all genders)",
     "company": "P\u0178UR | Tele Columbus",

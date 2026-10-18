@@ -1,84 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "20:46:42",
-      "datetime": "2026-10-17T20:46:42.165181",
-      "level": "INFO",
-      "message": "Daily quota reached (6/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "20:47:42",
-      "datetime": "2026-10-17T20:47:42.246419",
-      "level": "INFO",
-      "message": "Daily quota reached (6/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "20:48:42",
-      "datetime": "2026-10-17T20:48:42.324273",
-      "level": "INFO",
-      "message": "Daily quota reached (6/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "20:49:42",
-      "datetime": "2026-10-17T20:49:42.401520",
-      "level": "INFO",
-      "message": "Daily quota reached (6/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "20:50:42",
-      "datetime": "2026-10-17T20:50:42.476951",
-      "level": "INFO",
-      "message": "Daily quota reached (6/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "20:51:42",
-      "datetime": "2026-10-17T20:51:42.549853",
-      "level": "INFO",
-      "message": "Daily quota reached (6/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "20:52:42",
-      "datetime": "2026-10-17T20:52:42.624464",
-      "level": "INFO",
-      "message": "Daily quota reached (6/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "20:53:42",
-      "datetime": "2026-10-17T20:53:42.702108",
-      "level": "INFO",
-      "message": "Daily quota reached (6/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "20:54:42",
-      "datetime": "2026-10-17T20:54:42.774491",
-      "level": "INFO",
-      "message": "Daily quota reached (6/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "20:55:42",
-      "datetime": "2026-10-17T20:55:42.850058",
-      "level": "INFO",
-      "message": "Daily quota reached (6/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "20:56:42",
-      "datetime": "2026-10-17T20:56:42.925817",
-      "level": "INFO",
-      "message": "Daily quota reached (6/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "20:57:43",
-      "datetime": "2026-10-17T20:57:43.002352",
-      "level": "INFO",
-      "message": "Daily quota reached (6/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "20:58:43",
-      "datetime": "2026-10-17T20:58:43.079556",
-      "level": "INFO",
-      "message": "Daily quota reached (6/5). Standing by until tomorrow."
-    },
-    {
       "timestamp": "20:59:43",
       "datetime": "2026-10-17T20:59:43.162862",
       "level": "INFO",
@@ -359,6 +281,84 @@
       "datetime": "2026-10-18T09:47:09.518942",
       "level": "INFO",
       "message": "Radar scan: 10 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "13:46:13",
+      "datetime": "2026-10-18T13:46:13.424419",
+      "level": "INFO",
+      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
+    },
+    {
+      "timestamp": "13:46:21",
+      "datetime": "2026-10-18T13:46:21.277257",
+      "level": "SUCCESS",
+      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
+    },
+    {
+      "timestamp": "13:46:21",
+      "datetime": "2026-10-18T13:46:21.277952",
+      "level": "INFO",
+      "message": "Radar scan: 10 active jobs, 2 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "13:46:21",
+      "datetime": "2026-10-18T13:46:21.278420",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Intern Venture Building (m/w/d)' at suhm ventures GmbH (ID: job-linkedin-4466063082)"
+    },
+    {
+      "timestamp": "13:46:21",
+      "datetime": "2026-10-18T13:46:21.281039",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV generated: resume_job-linkedin-4466063082.html"
+    },
+    {
+      "timestamp": "13:46:21",
+      "datetime": "2026-10-18T13:46:21.281586",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter generated: cover_letter_job-linkedin-4466063082.html"
+    },
+    {
+      "timestamp": "13:46:21",
+      "datetime": "2026-10-18T13:46:21.282186",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "13:46:21",
+      "datetime": "2026-10-18T13:46:21.285046",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked! Logged to applied_history.json for suhm ventures GmbH."
+    },
+    {
+      "timestamp": "13:46:23",
+      "datetime": "2026-10-18T13:46:23.285776",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Data Scientist (Freelance, Berlin)' at Zero to One Search | Recruitment Agency (ID: job-linkedin-4478206766)"
+    },
+    {
+      "timestamp": "13:46:23",
+      "datetime": "2026-10-18T13:46:23.287817",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV generated: resume_job-linkedin-4478206766.html"
+    },
+    {
+      "timestamp": "13:46:23",
+      "datetime": "2026-10-18T13:46:23.288372",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter generated: cover_letter_job-linkedin-4478206766.html"
+    },
+    {
+      "timestamp": "13:46:23",
+      "datetime": "2026-10-18T13:46:23.288967",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "13:46:23",
+      "datetime": "2026-10-18T13:46:23.291880",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked! Logged to applied_history.json for Zero to One Search | Recruitment Agency."
     }
   ]
 }
