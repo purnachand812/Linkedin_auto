@@ -1,5 +1,35 @@
 [
   {
+    "job_id": "job-linkedin-4478266029",
+    "title": "Data Scientist (Freelance, Berlin)",
+    "company": "Zero to One Search | Recruitment Agency",
+    "location": "Berlin, Germany",
+    "salary_range": "\u20ac1,200 - \u20ac1,800 / mo",
+    "match_score": 87,
+    "applied_at": "2026-10-19T11:03:55.532003",
+    "job_url": "https://www.linkedin.com/jobs/view/4478266029/",
+    "resume_url": "/resumes/resume_job-linkedin-4478266029.html",
+    "mode": "AUTONOMOUS_DAEMON",
+    "recruiter_outreach_note": "Hi Hiring Team, I saw Zero to One Search | Recruitment Agency's opening for Data Scientist (Freelance, Berlin) in Berlin, Germany. I am an MSc Data Science student based in Berlin researching hallucination attribution in multi-step LLM agent trajectories. I've also built typed dependency injection middlewares using Pydantic AI and FastAPI. I submitted an application and wanted to share my technical portfolio directly. Happy to connect.",
+    "status": "APPLIED_CONFIRMED",
+    "cover_letter_url": "/resumes/cover_letter_job-linkedin-4478266029.html"
+  },
+  {
+    "job_id": "job-linkedin-4478278368",
+    "title": "Werkstudent:in Founders Associate - Projects & AI (m/d/w)",
+    "company": "Lucid Labs",
+    "location": "Berlin, Berlin, Germany",
+    "salary_range": "\u20ac16 - \u20ac22 / hr",
+    "match_score": 92,
+    "applied_at": "2026-10-19T11:03:53.522625",
+    "job_url": "https://www.linkedin.com/jobs/view/4478278368/",
+    "resume_url": "/resumes/resume_job-linkedin-4478278368.html",
+    "mode": "AUTONOMOUS_DAEMON",
+    "recruiter_outreach_note": "Hi Hiring Team, I saw Lucid Labs's opening for Werkstudent:in Founders Associate - Projects & AI (m/d/w) in Berlin, Berlin, Germany. I am an MSc Data Science student based in Berlin researching hallucination attribution in multi-step LLM agent trajectories. I've also built typed dependency injection middlewares using Pydantic AI and FastAPI. I submitted an application and wanted to share my technical portfolio directly. Happy to connect.",
+    "status": "APPLIED_CONFIRMED",
+    "cover_letter_url": "/resumes/cover_letter_job-linkedin-4478278368.html"
+  },
+  {
     "job_id": "job-linkedin-4478206766",
     "title": "Data Scientist (Freelance, Berlin)",
     "company": "Zero to One Search | Recruitment Agency",
