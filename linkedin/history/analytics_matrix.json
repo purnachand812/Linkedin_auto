@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-19T17:39:02.133521",
+  "updated_at": "2026-10-19T21:59:13.647554",
   "total_posts": 3,
   "target_region": "European Union (CET/CEST)",
   "estimated_reach_by_hub": {
@@ -13,7 +13,7 @@
       "topic": "Aider (Git-Aware Terminal AI Pair Programmer)",
       "published_at": "2026-10-17T06:31:02Z",
       "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7517109902172102657/",
-      "age_hours": 59.1,
+      "age_hours": 63.5,
       "has_image": true,
       "status": "LIVE",
       "growth_tier": "ESTABLISHED"
@@ -23,7 +23,7 @@
       "topic": "Cline (VS Code MCP Extension)",
       "published_at": "2026-10-16T19:33:48Z",
       "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7516944499625963520/",
-      "age_hours": 70.1,
+      "age_hours": 74.4,
       "has_image": true,
       "status": "LIVE",
       "growth_tier": "ESTABLISHED"
@@ -33,7 +33,7 @@
       "topic": "Pydantic AI (Typed Dependency Injection vs Prompt Guessing)",
       "published_at": "2026-10-16T19:31:07Z",
       "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7516943821306372096/",
-      "age_hours": 70.1,
+      "age_hours": 74.5,
       "has_image": true,
       "status": "LIVE",
       "growth_tier": "ESTABLISHED"
