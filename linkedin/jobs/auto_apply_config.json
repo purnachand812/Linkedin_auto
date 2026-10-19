@@ -15,8 +15,8 @@
     "Remote Germany",
     "Hybrid Berlin"
   ],
-  "today_date": "2026-10-18",
-  "applied_today": 2,
+  "today_date": "2026-10-19",
+  "applied_today": 0,
   "last_run": "2026-10-18T13:46:23.292276",
   "status": "RUNNING",
   "anti_ban_delay_seconds": 2,
