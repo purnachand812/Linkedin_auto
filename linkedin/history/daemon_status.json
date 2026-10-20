@@ -13,7 +13,7 @@
     "[14:41:44] Daemon initialized. 24/7 autonomous monitoring & scheduling active.",
     "[15:02:16] Daemon initialized. 24/7 autonomous monitoring & scheduling active."
   ],
-  "current_time_cet": "2026-10-20 20:17:29 CET",
+  "current_time_cet": "2026-10-20 23:17:25 CET",
   "is_eu_prime_time": false,
   "current_window": "Off-Peak / Monitoring",
   "next_scheduled_drop": "Tomorrow Morning Standup (Prime) at 08:30 CET",
@@ -21,7 +21,7 @@
   "published_today": 0,
   "target_audience": "European Union (Berlin, Munich, Amsterdam, Paris, Zurich)",
   "auto_publish_enabled": true,
-  "last_heartbeat": "2026-10-20T20:17:29.222397",
+  "last_heartbeat": "2026-10-20T23:17:25.721061",
   "last_activity": "[15:02:16] Daemon initialized. 24/7 autonomous monitoring & scheduling active.",
   "auto_apply_telemetry": {
     "enabled": true,
