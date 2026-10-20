@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "13:46:23",
-      "datetime": "2026-10-18T13:46:23.285776",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Data Scientist (Freelance, Berlin)' at Zero to One Search | Recruitment Agency (ID: job-linkedin-4478206766)"
-    },
-    {
-      "timestamp": "13:46:23",
       "datetime": "2026-10-18T13:46:23.287817",
       "level": "SUCCESS",
       "message": "Tailored Europass CV generated: resume_job-linkedin-4478206766.html"
@@ -357,6 +351,12 @@
     {
       "timestamp": "16:31:03",
       "datetime": "2026-10-20T16:31:03.257437",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "20:17:29",
+      "datetime": "2026-10-20T20:17:29.221038",
       "level": "INFO",
       "message": "Daily quota reached (5/5). Standing by until tomorrow."
     }
