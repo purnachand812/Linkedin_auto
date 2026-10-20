@@ -1,12 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "21:24:44",
-      "datetime": "2026-10-17T21:24:44.660716",
-      "level": "INFO",
-      "message": "Daily quota reached (6/5). Standing by until tomorrow."
-    },
-    {
       "timestamp": "21:25:44",
       "datetime": "2026-10-17T21:25:44.712952",
       "level": "INFO",
@@ -357,6 +351,12 @@
     {
       "timestamp": "02:38:47",
       "datetime": "2026-10-20T02:38:47.546605",
+      "level": "INFO",
+      "message": "Radar scan: 10 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "06:18:55",
+      "datetime": "2026-10-20T06:18:55.319936",
       "level": "INFO",
       "message": "Radar scan: 10 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
