@@ -1,12 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "13:46:21",
-      "datetime": "2026-10-18T13:46:21.285046",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked! Logged to applied_history.json for suhm ventures GmbH."
-    },
-    {
       "timestamp": "13:46:23",
       "datetime": "2026-10-18T13:46:23.285776",
       "level": "INFO",
@@ -359,6 +353,12 @@
       "datetime": "2026-10-20T11:56:57.862320",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked! Logged to applied_history.json for Berlin Economics."
+    },
+    {
+      "timestamp": "16:31:03",
+      "datetime": "2026-10-20T16:31:03.257437",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
     }
   ]
 }
