@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#080C14">
+  <title>Antigravity Cloud Hub | Mobile Portal</title>
+  <meta name="description" content="24/7 Mobile Control Center for Autonomous LinkedIn Postings & Job Application Radar for Purnachandra Madhukar.">
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #080C14;
+      --card-bg: rgba(15, 23, 42, 0.75);
+      --card-border: rgba(51, 65, 85, 0.6);
+      --card-hover: rgba(30, 41, 59, 0.85);
+      --cyan: #06B6D4;
+      --cyan-glow: rgba(6, 182, 212, 0.25);
+      --emerald: #10B981;
+      --emerald-glow: rgba(16, 185, 129, 0.25);
+      --amber: #F59E0B;
+      --rose: #F43F5E;
+      --purple: #8B5CF6;
+      --text-main: #F1F5F9;
+      --text-muted: #94A3B8;
+      --text-dim: #64748B;
+      --radius: 14px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: var(--bg);
+      background-image: 
+        radial-gradient(circle at 15% 10%, rgba(6, 182, 212, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 85% 85%, rgba(139, 92, 246, 0.08) 0%, transparent 45%);
+      background-attachment: fixed;
+      color: var(--text-main);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      min-height: 100vh;
+      padding-bottom: 84px; /* Space for bottom mobile nav */
+    }
+
+    /* Top App Header */
+    .app-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(8, 12, 20, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--card-border);
+      padding: 0.75rem 1rem;
+    }
+
+    .header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .user-profile {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .avatar-wrap {
+      position: relative;
+      width: 42px;
+      height: 42px;
+      flex-shrink: 0;
+    }
+
+    .avatar-img {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      object-fit: cover;
+      border: 2px solid var(--cyan);
+      box-shadow: 0 0 12px var(--cyan-glow);
+    }
+
+    .status-dot {
+      position: absolute;
+      bottom: -2px;
+      right: -2px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--emerald);
+      border: 2px solid var(--bg);
+      box-shadow: 0 0 8px var(--emerald);
+    }
+
+    .user-meta h1 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .user-meta p {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    .badge-cloud {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.15rem 0.45rem;
+      border-radius: 6px;
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--emerald);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .pulse-glow {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--emerald);
+      animation: pulse 1.8s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(0.9); opacity: 0.7; }
+      50% { transform: scale(1.3); opacity: 1; }
+      100% { transform: scale(0.9); opacity: 0.7; }
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-icon {
+      background: rgba(30, 41, 59, 0.7);
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-icon:hover, .btn-icon:active {
+      background: var(--cyan-glow);
+      border-color: var(--cyan);
+      color: var(--cyan);
+    }
+
+    .btn-icon.spinning svg {
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0.85rem 1rem;
+    }
+
+    /* Quick Metrics Ribbon */
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.6rem;
+      margin-bottom: 1rem;
+    }
+
+    .metric-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      backdrop-filter: blur(10px);
+      padding: 0.75rem 0.6rem;
+      border-radius: var(--radius);
+      text-align: center;
+    }
+
+    .metric-val {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text-main);
+      font-family: 'JetBrains Mono', monospace;
+      line-height: 1.2;
+    }
+
+    .metric-val.emerald { color: var(--emerald); }
+    .metric-val.cyan { color: var(--cyan); }
+    .metric-val.purple { color: var(--purple); }
+
+    .metric-label {
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-top: 0.2rem;
+    }
+
+    /* Banner: Next Publishing Drop */
+    .drop-banner {
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.12) 0%, rgba(139, 92, 246, 0.12) 100%);
+      border: 1px solid rgba(6, 182, 212, 0.3);
+      padding: 0.85rem 1rem;
+      border-radius: var(--radius);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    .drop-info {
+      flex: 1;
+    }
+
+    .drop-badge {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 0.2rem;
+      letter-spacing: 0.5px;
+    }
+
+    .drop-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .drop-time {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-top: 0.15rem;
+    }
+
+    .drop-action-btn {
+      background: var(--cyan);
+      color: #04101A;
+      font-weight: 700;
+      font-size: 0.75rem;
+      padding: 0.45rem 0.75rem;
+      border-radius: 8px;
+      text-decoration: none;
+      white-space: nowrap;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Search & Filter Bar */
+    .filter-bar {
+      margin-bottom: 1rem;
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .search-input {
+      flex: 1;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 0.6rem 0.85rem;
+      color: var(--text-main);
+      font-size: 0.82rem;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .search-input:focus {
+      border-color: var(--cyan);
+    }
+
+    /* Tabs Content Panes */
+    .tab-pane {
+      display: none;
+    }
+
+    .tab-pane.active {
+      display: block;
+      animation: fadeIn 0.25s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Section Headers */
+    .section-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Job Card */
+    .job-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 1rem;
+      margin-bottom: 0.75rem;
+      transition: all 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .job-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 4px;
+      background: var(--cyan);
+      opacity: 0.7;
+    }
+
+    .job-card.radar::before {
+      background: var(--purple);
+    }
+
+    .job-top-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .job-company {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--cyan);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .match-pill {
+      font-size: 0.7rem;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      padding: 0.15rem 0.45rem;
+      border-radius: 6px;
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--emerald);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      white-space: nowrap;
+    }
+
+    .job-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.3;
+      margin-bottom: 0.35rem;
+    }
+
+    .job-meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.72rem;
+      color: var(--text-dim);
+      margin-bottom: 0.75rem;
+    }
+
+    .job-meta-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .job-actions-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding-top: 0.65rem;
+      border-top: 1px solid rgba(51, 65, 85, 0.4);
+    }
+
+    .action-link {
+      flex: 1;
+      min-width: 120px;
+      text-align: center;
+      padding: 0.45rem 0.6rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.15s ease;
+    }
+
+    .action-link.primary {
+      background: rgba(6, 182, 212, 0.15);
+      border-color: rgba(6, 182, 212, 0.35);
+      color: var(--cyan);
+    }
+
+    .action-link.secondary {
+      background: rgba(51, 65, 85, 0.3);
+      border-color: rgba(51, 65, 85, 0.6);
+      color: var(--text-main);
+    }
+
+    .action-link.linkedin {
+      background: rgba(10, 102, 194, 0.18);
+      border-color: rgba(10, 102, 194, 0.4);
+      color: #38BDF8;
+    }
+
+    .action-link:hover, .action-link:active {
+      transform: translateY(-1px);
+      filter: brightness(1.2);
+    }
+
+    /* Recruiter Note Drawer */
+    .note-drawer {
+      margin-top: 0.6rem;
+      background: rgba(11, 15, 25, 0.7);
+      border: 1px dashed rgba(51, 65, 85, 0.7);
+      border-radius: 8px;
+      padding: 0.6rem 0.75rem;
+      font-size: 0.73rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+      display: none;
+    }
+
+    .note-drawer.open {
+      display: block;
+    }
+
+    .note-copy-btn {
+      float: right;
+      font-size: 0.65rem;
+      background: var(--card-border);
+      color: var(--text-main);
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      margin-left: 0.5rem;
+      margin-bottom: 0.25rem;
+    }
+
+    /* LinkedIn Post Card */
+    .post-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 1rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .post-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.6rem;
+    }
+
+    .post-badge {
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 0.15rem 0.5rem;
+      border-radius: 6px;
+      text-transform: uppercase;
+    }
+
+    .post-badge.approved {
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--emerald);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .post-badge.published {
+      background: rgba(139, 92, 246, 0.15);
+      color: var(--purple);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+    }
+
+    .post-visual-wrap {
+      margin: 0.75rem 0;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--card-border);
+      max-height: 260px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .post-visual-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .post-text-box {
+      background: rgba(11, 15, 25, 0.6);
+      border: 1px solid rgba(51, 65, 85, 0.5);
+      border-radius: 8px;
+      padding: 0.75rem;
+      font-size: 0.78rem;
+      line-height: 1.45;
+      color: var(--text-main);
+      white-space: pre-line;
+      max-height: 160px;
+      overflow-y: auto;
+      margin: 0.6rem 0;
+    }
+
+    /* Modal Viewer for Resumes & Images */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(4, 8, 16, 0.85);
+      backdrop-filter: blur(12px);
+      z-index: 100;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .modal-overlay.open {
+      display: flex;
+    }
+
+    .modal-sheet {
+      background: #0B0F19;
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      width: 100%;
+      max-width: 720px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    .modal-header {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--card-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .modal-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .modal-close-btn {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 1.25rem;
+      padding: 0.2rem;
+    }
+
+    .modal-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1rem;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .resume-iframe {
+      width: 100%;
+      height: 70vh;
+      border: none;
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    /* Sticky Bottom Mobile Navigation Bar */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      background: rgba(8, 12, 20, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-top: 1px solid var(--card-border);
+      padding: 0.35rem 0.5rem;
+      display: flex;
+      justify-content: space-around;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .nav-btn {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      border: none;
+      color: var(--text-dim);
+      padding: 0.35rem 0.2rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-size: 0.65rem;
+      font-weight: 600;
+      gap: 0.25rem;
+    }
+
+    .nav-btn svg {
+      width: 20px;
+      height: 20px;
+      stroke: currentColor;
+    }
+
+    .nav-btn.active {
+      color: var(--cyan);
+      background: rgba(6, 182, 212, 0.1);
+    }
+
+    .nav-badge {
+      position: absolute;
+      top: 2px;
+      right: 20%;
+      background: var(--cyan);
+      color: #04101A;
+      font-size: 0.6rem;
+      font-weight: 800;
+      padding: 0.1rem 0.35rem;
+      border-radius: 10px;
+      line-height: 1;
+    }
+
+    /* Empty state */
+    .empty-state {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--text-dim);
+    }
+
+    .empty-state svg {
+      margin-bottom: 0.75rem;
+      color: var(--text-dim);
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 95px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid var(--cyan);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      color: var(--text-main);
+      padding: 0.6rem 1.2rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      z-index: 120;
+      display: none;
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Fixed App Header -->
+  <header class="app-header">
+    <div class="header-row">
+      <div class="user-profile">
+        <div class="avatar-wrap">
+          <img src="purna_photo.jpg" alt="Purnachandra Madhukar" class="avatar-img" onerror="this.src='https://ui-avatars.com/api/?name=Purna+Dandu&background=06B6D4&color=fff'">
+          <div class="status-dot" title="Cloud Bot 24/7 Active"></div>
+        </div>
+        <div class="user-meta">
+          <h1>
+            Purnachandra Madhukar
+            <span class="badge-cloud"><span class="pulse-glow"></span> 24/7 CLOUD</span>
+          </h1>
+          <p id="header-sync-status">MSc Data Science &bull; Berlin, Germany (CET)</p>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button id="btn-refresh" class="btn-icon" onclick="refreshAllData()" title="Pull latest updates from GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.3"/>
+          </svg>
+        </button>
+        <a href="https://github.com/purnachand812/Linkedin_auto/actions" target="_blank" class="btn-icon" title="View GitHub Actions Cloud Logs">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="container">
+
+    <!-- Metrics Ribbon -->
+    <section class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-val emerald" id="stat-applied-today">5/5</div>
+        <div class="metric-label">Today Applied</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-val cyan" id="stat-total-applied">24</div>
+        <div class="metric-label">Total Applied</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-val purple" id="stat-radar-count">10</div>
+        <div class="metric-label">In Radar</div>
+      </div>
+    </section>
+
+    <!-- Next Scheduled Drop Banner -->
+    <div class="drop-banner" id="banner-drop">
+      <div class="drop-info">
+        <span class="drop-badge">NEXT CLOUD DROP &bull; EU PRIME WINDOW</span>
+        <div class="drop-title" id="drop-topic">Candidate #9: Crawl4AI (Web Scraper vs Firecrawl)</div>
+        <div class="drop-time" id="drop-timing">Evening Engineering Wrap at 17:30 CET &bull; Auto-Publish Enabled</div>
+      </div>
+      <button class="drop-action-btn" onclick="switchTab('posts')">Inspect &rarr;</button>
+    </div>
+
+    <!-- Search / Filter Input -->
+    <div class="filter-bar">
+      <input type="text" id="filter-input" class="search-input" placeholder="Search companies, jobs, tech stack..." oninput="handleFilter(this.value)">
+    </div>
+
+    <!-- TAB 1: APPLIED JOBS FEED -->
+    <div id="pane-applied" class="tab-pane active">
+      <div class="section-title">
+        <span>Applied Jobs History (<span id="count-applied-rendered">0</span>)</span>
+        <span style="font-size: 0.7rem; color: var(--emerald);">● Tailored Resumes Attached</span>
+      </div>
+      <div id="applied-jobs-list">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+
+    <!-- TAB 2: RADAR MATCHED JOBS -->
+    <div id="pane-radar" class="tab-pane">
+      <div class="section-title">
+        <span>Scouted LinkedIn Jobs (<span id="count-radar-rendered">0</span>)</span>
+        <span style="font-size: 0.7rem; color: var(--purple);">Easy Apply Active</span>
+      </div>
+      <div id="radar-jobs-list">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+
+    <!-- TAB 3: LINKEDIN POSTS QUEUE & HISTORY -->
+    <div id="pane-posts" class="tab-pane">
+      <div class="section-title">
+        <span>Content Pipeline &amp; Queue (<span id="count-posts-rendered">0</span>)</span>
+        <span style="font-size: 0.7rem; color: var(--cyan);">Canva Visuals Generated</span>
+      </div>
+      <div id="posts-list">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+
+    <!-- TAB 4: DAILY REPORT -->
+    <div id="pane-report" class="tab-pane">
+      <div class="section-title">
+        <span>Daily Email &amp; Telegram Report</span>
+        <a href="https://github.com/purnachand812/Linkedin_auto/blob/main/linkedin/jobs/reports/latest_daily_report.html" target="_blank" style="color: var(--cyan); text-decoration: none; font-size: 0.72rem;">View on GitHub &rarr;</a>
+      </div>
+      <div id="report-container" style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: var(--radius); padding: 1rem; min-height: 400px;">
+        <iframe id="report-iframe" style="width: 100%; height: 500px; border: none; border-radius: 8px; background: #fff;"></iframe>
+      </div>
+    </div>
+
+    <!-- TAB 5: BOT LOGS & TELEMETRY -->
+    <div id="pane-logs" class="tab-pane">
+      <div class="section-title">
+        <span>Autonomous Cloud Bot Telemetry</span>
+        <span style="font-size: 0.7rem; color: var(--emerald);">● GitHub Runner Sync</span>
+      </div>
+      <div id="bot-logs-box" style="background: #050811; border: 1px solid var(--card-border); border-radius: var(--radius); padding: 0.85rem; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: #38BDF8; line-height: 1.5; max-height: 450px; overflow-y: auto;">
+        <!-- Logs dynamically rendered -->
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Bottom Mobile Navigation Bar -->
+  <nav class="bottom-nav">
+    <button class="nav-btn active" onclick="switchTab('applied')" id="nav-applied">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      <span>Applied</span>
+    </button>
+    <button class="nav-btn" onclick="switchTab('radar')" id="nav-radar">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+      <span>Radar</span>
+    </button>
+    <button class="nav-btn" onclick="switchTab('posts')" id="nav-posts">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+      <span>Posts</span>
+    </button>
+    <button class="nav-btn" onclick="switchTab('report')" id="nav-report">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+      <span>Report</span>
+    </button>
+    <button class="nav-btn" onclick="switchTab('logs')" id="nav-logs">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+      <span>Logs</span>
+    </button>
+  </nav>
+
+  <!-- Modal Viewer for Resumes & Cover Letters -->
+  <div class="modal-overlay" id="modal-viewer" onclick="closeModal(event)">
+    <div class="modal-sheet" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <div class="modal-title" id="modal-title">Tailored Europass CV</div>
+        <button class="modal-close-btn" onclick="closeModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <iframe id="modal-iframe" class="resume-iframe"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Element -->
+  <div id="toast" class="toast">Note copied to clipboard!</div>
+
+  <!-- Mobile Portal Application Logic -->
+  <script>
+    const GITHUB_REPO = "purnachand812/Linkedin_auto";
+    const BRANCH = "main";
+    const BASE_RAW = `https://raw.githubusercontent.com/${GITHUB_REPO}/${BRANCH}/`;
+
+    let STATE = {
+      applied: [],
+      radar: [],
+      queue: [],
+      daemon: {},
+      logs: [],
+      activeFilter: ""
+    };
+
+    // Generic fetcher with relative local fallback and cache-busting
+    async function fetchResource(relPath) {
+      const cacheBust = '?_t=' + Date.now();
+      try {
+        const res = await fetch(relPath + cacheBust);
+        if (res.ok) {
+          if (relPath.endsWith('.json')) return await res.json();
+          return await res.text();
+        }
+      } catch (err) {
+        // Fall through to raw github
+      }
+      const rawRes = await fetch(BASE_RAW + relPath + cacheBust);
+      if (!rawRes.ok) throw new Error(`HTTP ${rawRes.status} for ${relPath}`);
+      if (relPath.endsWith('.json')) return await rawRes.json();
+      return await rawRes.text();
+    }
+
+    // Tab Switcher
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-pane').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.nav-btn').forEach(el => el.classList.remove('active'));
+      
+      const pane = document.getElementById(`pane-${tabId}`);
+      const btn = document.getElementById(`nav-${tabId}`);
+      if (pane) pane.classList.add('active');
+      if (btn) btn.classList.add('active');
+
+      if (tabId === 'report') {
+        loadDailyReport();
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Toast Alert
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.innerText = msg;
+      t.style.display = 'block';
+      setTimeout(() => { t.style.display = 'none'; }, 2200);
+    }
+
+    // Modal Control
+    function openModal(title, url) {
+      document.getElementById('modal-title').innerText = title;
+      // Convert relative resume path to raw GitHub or local
+      let fullUrl = url;
+      if (!url.startsWith('http')) {
+        fullUrl = BASE_RAW + (url.startsWith('/') ? url.slice(1) : url);
+      }
+      document.getElementById('modal-iframe').src = fullUrl;
+      document.getElementById('modal-viewer').classList.add('open');
+    }
+
+    function closeModal() {
+      document.getElementById('modal-viewer').classList.remove('open');
+      document.getElementById('modal-iframe').src = 'about:blank';
+    }
+
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast('✓ Outreach note copied to clipboard!');
+      }).catch(() => {
+        showToast('Please copy manually');
+      });
+    }
+
+    function toggleDrawer(id) {
+      const el = document.getElementById(`drawer-${id}`);
+      if (el) el.classList.toggle('open');
+    }
+
+    // Load and Render Daily Report
+    async function loadDailyReport() {
+      const frame = document.getElementById('report-iframe');
+      if (frame.src && !frame.src.includes('about:blank')) return;
+      try {
+        const reportHtml = await fetchResource('linkedin/jobs/reports/latest_daily_report.html');
+        frame.srcdoc = reportHtml;
+      } catch (err) {
+        frame.src = BASE_RAW + 'linkedin/jobs/reports/latest_daily_report.html';
+      }
+    }
+
+    // Filter Handler
+    function handleFilter(query) {
+      STATE.activeFilter = (query || '').toLowerCase().trim();
+      renderAppliedJobs();
+      renderRadarJobs();
+    }
+
+    // Render Applied Jobs Feed
+    function renderAppliedJobs() {
+      const listEl = document.getElementById('applied-jobs-list');
+      const q = STATE.activeFilter;
+      const filtered = STATE.applied.filter(j => {
+        if (!q) return true;
+        return (j.title || '').toLowerCase().includes(q) ||
+               (j.company || '').toLowerCase().includes(q) ||
+               (j.location || '').toLowerCase().includes(q);
+      });
+
+      document.getElementById('count-applied-rendered').innerText = filtered.length;
+
+      if (!filtered.length) {
+        listEl.innerHTML = `
+          <div class="empty-state">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            <p>No applied jobs found matching "${q}".</p>
+          </div>`;
+        return;
+      }
+
+      listEl.innerHTML = filtered.map((job, idx) => {
+        const appliedDate = job.applied_at ? new Date(job.applied_at).toLocaleString('en-GB', { 
+          day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Berlin' 
+        }) + ' CET' : 'Today';
+
+        const resumeUrl = job.resume_url ? (job.resume_url.startsWith('/') ? 'linkedin/jobs' + job.resume_url : job.resume_url) : '';
+        const coverUrl = job.cover_letter_url ? (job.cover_letter_url.startsWith('/') ? 'linkedin/jobs' + job.cover_letter_url : job.cover_letter_url) : '';
+
+        return `
+          <div class="job-card">
+            <div class="job-top-row">
+              <span class="job-company">${escapeHtml(job.company || 'Direct Employer')}</span>
+              <span class="match-pill">${job.match_score || 85}% Match</span>
+            </div>
+            <h2 class="job-title">${escapeHtml(job.title)}</h2>
+            <div class="job-meta-row">
+              <span class="job-meta-item">📍 ${escapeHtml(job.location || 'Germany (EU)')}</span>
+              <span class="job-meta-item">💶 ${escapeHtml(job.salary_range || 'Competitive / Werkstudent')}</span>
+              <span class="job-meta-item">🕒 Applied ${appliedDate}</span>
+            </div>
+            <div class="job-actions-row">
+              <a href="${job.job_url || '#'}" target="_blank" class="action-link linkedin">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                LinkedIn Job
+              </a>
+              ${resumeUrl ? `
+                <button class="action-link primary" onclick="openModal('Tailored CV - ${escapeHtml(job.company)}', '${resumeUrl}')">
+                  📄 Europass CV
+                </button>` : ''}
+              ${coverUrl ? `
+                <button class="action-link secondary" onclick="openModal('Cover Letter - ${escapeHtml(job.company)}', '${coverUrl}')">
+                  ✉️ Cover Letter
+                </button>` : ''}
+              ${job.recruiter_outreach_note ? `
+                <button class="action-link secondary" onclick="toggleDrawer(${idx})">
+                  💬 DM Note
+                </button>` : ''}
+            </div>
+            ${job.recruiter_outreach_note ? `
+              <div id="drawer-${idx}" class="note-drawer">
+                <button class="note-copy-btn" onclick="copyText(${JSON.stringify(job.recruiter_outreach_note)})">Copy</button>
+                <strong>Recruiter DM Note:</strong><br>
+                ${escapeHtml(job.recruiter_outreach_note)}
+              </div>` : ''}
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Render Radar Scouted Jobs
+    function renderRadarJobs() {
+      const listEl = document.getElementById('radar-jobs-list');
+      const q = STATE.activeFilter;
+      const filtered = STATE.radar.filter(j => {
+        if (!q) return true;
+        return (j.title || '').toLowerCase().includes(q) ||
+               (j.company || '').toLowerCase().includes(q);
+      });
+
+      document.getElementById('count-radar-rendered').innerText = filtered.length;
+
+      if (!filtered.length) {
+        listEl.innerHTML = `<div class="empty-state"><p>No scouted jobs match filter.</p></div>`;
+        return;
+      }
+
+      listEl.innerHTML = filtered.map(job => `
+        <div class="job-card radar">
+          <div class="job-top-row">
+            <span class="job-company" style="color: var(--purple);">${escapeHtml(job.company)}</span>
+            <span class="match-pill" style="color: var(--purple); border-color: rgba(139, 92, 246, 0.3); background: rgba(139, 92, 246, 0.15);">${job.match_score || 85}% Match</span>
+          </div>
+          <h2 class="job-title">${escapeHtml(job.title)}</h2>
+          <div class="job-meta-row">
+            <span class="job-meta-item">📍 ${escapeHtml(job.location || 'Berlin / Remote')}</span>
+            <span class="job-meta-item">⚡ Easy Apply</span>
+            <span class="job-meta-item">🕒 ${escapeHtml(job.posted_time || 'Recent')}</span>
+          </div>
+          <div class="job-actions-row">
+            <a href="${job.job_url || '#'}" target="_blank" class="action-link linkedin">
+              Open in LinkedIn App &rarr;
+            </a>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Render LinkedIn Posts
+    function renderPosts() {
+      const listEl = document.getElementById('posts-list');
+      const candidates = STATE.queue;
+      document.getElementById('count-posts-rendered').innerText = candidates.length;
+
+      listEl.innerHTML = candidates.map(post => {
+        const isApproved = post.status === 'APPROVED';
+        const isPublished = post.status === 'PUBLISHED';
+        const badgeClass = isApproved ? 'approved' : 'published';
+        const visualUrl = post.visual ? (post.visual.startsWith('/') ? post.visual.slice(1) : post.visual) : '';
+
+        return `
+          <div class="post-card">
+            <div class="post-card-header">
+              <div>
+                <span class="post-badge ${badgeClass}">${post.status}</span>
+                <span style="font-size: 0.72rem; color: var(--text-dim); margin-left: 0.4rem;">Score: ${post.score}/100</span>
+              </div>
+              <span style="font-size: 0.7rem; color: var(--text-dim); font-family: monospace;">Candidate #${post.id}</span>
+            </div>
+            <h3 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.35rem;">${escapeHtml(post.topic)}</h3>
+            <p style="font-size: 0.72rem; color: var(--text-muted);">${escapeHtml(post.beat || 'Technical AI Architecture')}</p>
+            
+            ${visualUrl ? `
+              <div class="post-visual-wrap" onclick="openModal('Visual Asset: ${escapeHtml(post.topic)}', '${visualUrl}')">
+                <img src="${BASE_RAW + visualUrl}" class="post-visual-img" alt="${escapeHtml(post.topic)}" onerror="this.style.display='none'">
+              </div>` : ''}
+
+            <div class="job-actions-row" style="margin-top: 0.5rem;">
+              ${post.linkedin_post_url ? `
+                <a href="${post.linkedin_post_url}" target="_blank" class="action-link linkedin">
+                  View Live Post on LinkedIn &rarr;
+                </a>` : `
+                <span class="action-link primary" style="cursor: default;">
+                  ⏳ Queued for Autonomous Drop
+                </span>`}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Render Bot Logs
+    function renderBotLogs() {
+      const box = document.getElementById('bot-logs-box');
+      const entries = STATE.logs.slice(-25).reverse();
+      if (!entries.length) {
+        box.innerHTML = `<div>[${new Date().toLocaleTimeString()}] Cloud Runner active. Listening for scheduled cycle...</div>`;
+        return;
+      }
+      box.innerHTML = entries.map(e => `
+        <div style="margin-bottom: 0.35rem;">
+          <span style="color: var(--text-dim);">${escapeHtml(e.timestamp || '')}</span>
+          <span style="color: ${e.level === 'WARN' ? 'var(--amber)' : (e.level === 'ERROR' ? 'var(--rose)' : 'var(--emerald)')}">[${e.level || 'INFO'}]</span>
+          <span>${escapeHtml(e.message || '')}</span>
+        </div>
+      `).join('');
+    }
+
+    // Escape HTML to prevent XSS
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    // Main Data Refresh Orchestrator
+    async function refreshAllData() {
+      const btn = document.getElementById('btn-refresh');
+      btn.classList.add('spinning');
+      document.getElementById('header-sync-status').innerText = 'Fetching latest cloud commits...';
+
+      try {
+        const [applied, radar, queue, daemon, logs] = await Promise.allSettled([
+          fetchResource('linkedin/jobs/applied_history.json'),
+          fetchResource('linkedin/jobs/jobs_radar.json'),
+          fetchResource('linkedin/queue/queue_summary.json'),
+          fetchResource('linkedin/history/daemon_status.json'),
+          fetchResource('linkedin/jobs/auto_apply_log.json')
+        ]);
+
+        if (applied.status === 'fulfilled' && Array.isArray(applied.value)) {
+          STATE.applied = applied.value;
+          document.getElementById('stat-total-applied').innerText = STATE.applied.length;
+          // Count applied today
+          const todayPrefix = new Date().toISOString().slice(0, 10);
+          const todayCount = STATE.applied.filter(j => (j.applied_at || '').startsWith(todayPrefix)).length;
+          document.getElementById('stat-applied-today').innerText = `${todayCount}/5`;
+        }
+
+        if (radar.status === 'fulfilled' && radar.value && radar.value.jobs) {
+          STATE.radar = radar.value.jobs;
+          document.getElementById('stat-radar-count').innerText = STATE.radar.length;
+        }
+
+        if (queue.status === 'fulfilled' && queue.value && queue.value.candidates) {
+          STATE.queue = queue.value.candidates;
+        }
+
+        if (daemon.status === 'fulfilled' && daemon.value) {
+          STATE.daemon = daemon.value;
+          if (daemon.value.next_scheduled_drop) {
+            document.getElementById('drop-timing').innerText = daemon.value.next_scheduled_drop;
+          }
+        }
+
+        if (logs.status === 'fulfilled' && logs.value && logs.value.entries) {
+          STATE.logs = logs.value.entries;
+        }
+
+        renderAppliedJobs();
+        renderRadarJobs();
+        renderPosts();
+        renderBotLogs();
+
+        const timeStr = new Date().toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Berlin' });
+        document.getElementById('header-sync-status').innerText = `Updated at ${timeStr} CET &bull; Cloud 24/7 Active`;
+        showToast('✓ Updated with latest GitHub data');
+      } catch (err) {
+        console.error('Refresh error:', err);
+        document.getElementById('header-sync-status').innerText = 'Sync error &bull; Will retry';
+      } finally {
+        btn.classList.remove('spinning');
+      }
+    }
+
+    // Auto-refresh every 60 seconds
+    setInterval(refreshAllData, 60000);
+
+    // Initial Load
+    document.addEventListener('DOMContentLoaded', () => {
+      refreshAllData();
+    });
+  </script>
+</body>
+</html>
