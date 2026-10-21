@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "11:56:49",
-      "datetime": "2026-10-20T11:56:49.810456",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "11:56:49",
       "datetime": "2026-10-20T11:56:49.829968",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked! Logged to applied_history.json for myAutoAbo."
@@ -357,6 +351,12 @@
     {
       "timestamp": "16:45:52",
       "datetime": "2026-10-21T16:45:52.350580",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "14:55:51",
+      "datetime": "2026-10-21T14:55:51.263151",
       "level": "INFO",
       "message": "Daily quota reached (5/5). Standing by until tomorrow."
     }
