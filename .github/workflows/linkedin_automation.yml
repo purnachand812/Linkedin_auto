@@ -59,7 +59,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "Antigravity Cloud Runner"
-          git add linkedin/queue/ linkedin/history/ linkedin/jobs/
+          git add linkedin/queue/ linkedin/history/ linkedin/jobs/ linkedin/visuals/ linkedin/published/ index.html
           if ! git diff --quiet || ! git diff --staged --quiet; then
             git commit -m "Auto: scheduled EU publishing & telemetry update [skip ci]"
             for i in 1 2 3 4 5; do

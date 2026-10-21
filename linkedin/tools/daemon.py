@@ -332,7 +332,22 @@ def run_single_cycle(force_publish=False):
         except Exception as e:
             append_daemon_log(f"⚠️ Auto-apply cycle exception: {e}")
 
-    # 4. Update heartbeat
+    # 4. Run 7-day profile & writing adaptation audit
+    audit_telemetry = {}
+    try:
+        from linkedin.tools import weekly_growth_analyst
+        audit_res = weekly_growth_analyst.run_7day_profile_analysis()
+        audit_telemetry = {
+            "rolling_7d_impressions": audit_res.get("total_impressions", 0),
+            "rolling_7d_interactions": audit_res.get("total_interactions", 0),
+            "rolling_7d_engagement_rate": audit_res.get("overall_engagement_rate", "0%"),
+            "top_performing_post": audit_res.get("top_performing_post", ""),
+            "winning_formula": "Canva Contrast Infographic + Clean Body + Comment Link + Weekday CET"
+        }
+    except Exception as e:
+        pass
+
+    # 5. Update heartbeat
     update_daemon_status({
         "status": "RUNNING",
         "current_time_cet": now_dt.strftime("%Y-%m-%d %H:%M:%S CET"),
@@ -342,6 +357,7 @@ def run_single_cycle(force_publish=False):
         "approved_queue_count": approved_count,
         "published_today": published_today,
         "auto_apply_telemetry": auto_apply_telemetry,
+        "weekly_audit_telemetry": audit_telemetry,
         "target_audience": "European Union (Berlin, Munich, Amsterdam, Paris, Zurich)",
         "auto_publish_enabled": True
     })

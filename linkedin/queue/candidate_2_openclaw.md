@@ -41,7 +41,8 @@ There is also a practical security consideration. Giving an agent access to your
 
 I haven't run this on a production setup yet, but for privacy-conscious developers wanting self-hosted workspace automation under an MIT license, it is worth inspecting in a sandboxed Docker container.
 
-Repo: https://github.com/openclaw/openclaw
+Full open-source repository: github.com/openclaw/openclaw
+(Direct link pinned in first comment)
 
 ---
 
@@ -58,7 +59,7 @@ Could replace paid Zapier / Make Slack automation tiers ($20/mo) and third-party
 ### COST BREAKDOWN
 - Software Cost: $0 (MIT Open Source)
 - API Cost: $0 with Ollama / local models, or standard API fees if using cloud providers
-- Hosting / Power: 30W–60W idle electricity on home desktop/server
+- Hosting / Power: 30W-60W idle electricity on home desktop/server
 - Setup Time: 15 minutes (Docker / Python setup)
 
 ---

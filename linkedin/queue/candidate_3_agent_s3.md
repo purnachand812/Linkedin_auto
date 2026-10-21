@@ -11,7 +11,7 @@ Simular open-sourced Agent S3 (simular-ai/agent-s3), a visual computer-use agent
 ---
 
 ### INTERESTING ANGLE
-"Pixels vs APIs" — Why OS-level vision agents can operate legacy enterprise desktop apps without custom APIs, and the 4-second latency reality of processing 4K screen frames.
+"Pixels vs APIs" ,  Why OS-level vision agents can operate legacy enterprise desktop apps without custom APIs, and the 4-second latency reality of processing 4K screen frames.
 
 ---
 
@@ -41,7 +41,8 @@ There is also an important security consideration. Giving a visual agent unrestr
 
 I haven't tested this on a production enterprise workflow yet, but for researchers evaluating Agent-Computer Interfaces (ACI), the open-source codebase offers valuable benchmark insights.
 
-Repo: https://github.com/simular-ai/agent-s3
+Full open-source repository: github.com/simular-ai/agent-s3
+(Direct link pinned in first comment)
 
 ---
 
