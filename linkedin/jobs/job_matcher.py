@@ -43,6 +43,40 @@ def evaluate_job_match(title_or_dict, company="Company", location="Berlin, Germa
         title = title_or_dict
 
     text = f"{title} {description}".lower()
+    title_low = title.lower()
+
+    # STRICT FILTER 1: Disqualify any Senior, Lead, Principal, Director, or Experienced roles
+    senior_disqualifiers = [
+        "senior", "sr.", "sr ", "lead", "principal", "staff", "head of", "director",
+        "manager", "vp", "architect", "experienced", "expert", "5+ years", "8+ years", "10+ years"
+    ]
+    if any(sd in title_low for sd in senior_disqualifiers):
+        return {
+            "score": 0,
+            "passed": False,
+            "disqualified": True,
+            "reason": f"Disqualified: Senior or experienced role ('{title}')",
+            "breakdown": {"tech": 0, "fit": 0, "location": 0, "freshness": 0},
+            "matched_skills": [],
+            "missing_skills": []
+        }
+
+    # STRICT FILTER 2: Require Student, Werkstudent, Internship, or Part-Time status
+    student_qualifiers = [
+        "werkstudent", "working student", "student", "intern", "internship", 
+        "praktikant", "praktikum", "part-time", "part time", "teilzeit", 
+        "trainee", "thesis", "masterarbeit", "bachelorarbeit"
+    ]
+    if not any(sq in title_low for sq in student_qualifiers) and not any(sq in text for sq in student_qualifiers):
+        return {
+            "score": 0,
+            "passed": False,
+            "disqualified": True,
+            "reason": f"Disqualified: Not a student/werkstudent/intern role ('{title}')",
+            "breakdown": {"tech": 0, "fit": 0, "location": 0, "freshness": 0},
+            "matched_skills": [],
+            "missing_skills": []
+        }
     
     # 1. Tech Stack Match (Max 35 pts)
     tech_score = 0

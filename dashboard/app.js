@@ -124,15 +124,11 @@ function switchHubMode(mode) {
   if (mode === 'jobs') {
     btnPostings?.classList.remove('active');
     btnJobs?.classList.add('active', 'jobs-active');
-    if (navPostings) navPostings.style.display = 'none';
-
-    // Show Jobs tab content
-    document.querySelectorAll('.tab-content').forEach(c => {
-      c.classList.toggle('active', c.id === 'tab-jobs');
-    });
-
-    // Refresh auto-apply status immediately
-    fetchAutoApplyStatus();
+    
+    // Seamlessly navigate to the unified Student Jobs Hub
+    const targetUrl = window.location.protocol === 'file:' ? '../index.html' : '/mobile';
+    window.location.href = targetUrl;
+    return;
   } else {
     btnJobs?.classList.remove('active', 'jobs-active');
     btnPostings?.classList.add('active');

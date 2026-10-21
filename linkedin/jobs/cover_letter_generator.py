@@ -257,6 +257,15 @@ def generate_tailored_cover_letter(job_info):
     output_filename = f"cover_letter_{job_id}.html"
     output_file = RESUMES_DIR / output_filename
     output_file.write_text(html_content, encoding="utf-8")
+
+    # Automatically generate companion PDF
+    pdf_path = RESUMES_DIR / f"cover_letter_{job_id}.pdf"
+    try:
+        from linkedin.jobs import pdf_converter
+        pdf_converter.convert_html_to_pdf(output_file, pdf_path)
+    except Exception as e:
+        print(f"[Warning] Could not generate PDF cover letter: {e}")
+
     return output_file
 
 if __name__ == "__main__":

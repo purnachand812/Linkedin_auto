@@ -146,6 +146,27 @@ def is_job_eligible(job, config):
     if age_days > max_days:
         return False, f"Job posted {age_days} days ago (exceeds {max_days}-day limit)"
 
+    # STRICT FILTER: Disqualify any senior/experienced roles
+    title_low = job.get("title", "").lower()
+    senior_disqualifiers = [
+        "senior", "sr.", "sr ", "lead", "principal", "staff", "head of", "director",
+        "manager", "vp", "architect", "experienced", "expert", "5+ years", "8+ years", "10+ years"
+    ]
+    if any(sd in title_low for sd in senior_disqualifiers):
+        return False, f"Disqualified: Title contains senior/experienced keyword ('{job.get('title')}')"
+
+    # STRICT FILTER: Require student, werkstudent, internship, or part-time status
+    student_qualifiers = [
+        "werkstudent", "working student", "student", "intern", "internship", 
+        "praktikant", "praktikum", "part-time", "part time", "teilzeit", 
+        "trainee", "thesis", "masterarbeit", "bachelorarbeit"
+    ]
+    work_type_low = str(job.get("work_type", "")).lower()
+    desc_low = str(job.get("description", "")).lower()
+    is_student_fit = any(sq in title_low for sq in student_qualifiers) or any(sq in work_type_low for sq in student_qualifiers) or any(sq in desc_low for sq in student_qualifiers)
+    if not is_student_fit:
+        return False, f"Disqualified: Not a student/werkstudent/internship role ('{job.get('title')}')"
+
     match_score = job.get("match_score", 0)
     min_score = config.get("min_match_score", 85)
     if match_score < min_score:
@@ -167,21 +188,25 @@ def execute_autonomous_application(job):
 
     append_log(f"Initiating autonomous application: '{title}' at {company} (ID: {job_id})")
 
-    # Step 1: Tailor Europass Resume
+    # Step 1: Tailor Europass Resume & generate PDF
     resume_path = None
+    resume_pdf_path = None
     if resume_tailor:
         try:
             resume_path = resume_tailor.generate_tailored_resume(job)
-            append_log(f"Tailored Europass CV generated: {Path(resume_path).name}", "SUCCESS")
+            resume_pdf_path = JOBS_DIR / "resumes" / f"resume_{job_id}.pdf"
+            append_log(f"Tailored Europass CV & PDF generated: resume_{job_id}.pdf", "SUCCESS")
         except Exception as e:
             append_log(f"Error tailoring CV: {e}", "WARNING")
 
-    # Step 2: Tailor Europass Cover Letter
+    # Step 2: Tailor Europass Cover Letter & generate PDF
     cover_letter_path = None
+    cover_letter_pdf_path = None
     if cover_letter_generator:
         try:
             cover_letter_path = cover_letter_generator.generate_tailored_cover_letter(job)
-            append_log(f"Tailored Cover Letter generated: {Path(cover_letter_path).name}", "SUCCESS")
+            cover_letter_pdf_path = JOBS_DIR / "resumes" / f"cover_letter_{job_id}.pdf"
+            append_log(f"Tailored Cover Letter & PDF generated: cover_letter_{job_id}.pdf", "SUCCESS")
         except Exception as e:
             append_log(f"Error tailoring Cover Letter: {e}", "WARNING")
 
@@ -213,27 +238,43 @@ def execute_autonomous_application(job):
     if job_dispatcher:
         result = job_dispatcher.apply_to_job(job_id, auto_mode=True)
     
-    # Enrich applied job with cover letter url
-    if cover_letter_path:
-        cl_url = f"/resumes/{Path(cover_letter_path).name}"
-        job["cover_letter_url"] = cl_url
-        # Update in applied_history.json
-        applied_list = load_json(APPLIED_FILE, [])
-        for a in applied_list:
-            if a.get("job_id") == job_id:
-                a["cover_letter_url"] = cl_url
-                break
-        save_json(APPLIED_FILE, applied_list)
+    # Enrich applied job with both PDF and HTML urls
+    pdf_resume_url = f"/resumes/resume_{job_id}.pdf"
+    pdf_cover_url = f"/resumes/cover_letter_{job_id}.pdf"
+    html_resume_url = f"/resumes/resume_{job_id}.html"
+    html_cover_url = f"/resumes/cover_letter_{job_id}.html"
 
-    append_log(f"Application confirmed & tracked! Logged to applied_history.json for {company}.", "SUCCESS")
+    job["resume_url"] = pdf_resume_url
+    job["cover_letter_url"] = pdf_cover_url
+    job["resume_pdf_url"] = pdf_resume_url
+    job["cover_letter_pdf_url"] = pdf_cover_url
+    job["resume_html_url"] = html_resume_url
+    job["cover_letter_html_url"] = html_cover_url
+
+    # Update in applied_history.json
+    applied_list = load_json(APPLIED_FILE, [])
+    for a in applied_list:
+        if a.get("job_id") == job_id:
+            a["resume_url"] = pdf_resume_url
+            a["cover_letter_url"] = pdf_cover_url
+            a["resume_pdf_url"] = pdf_resume_url
+            a["cover_letter_pdf_url"] = pdf_cover_url
+            a["resume_html_url"] = html_resume_url
+            a["cover_letter_html_url"] = html_cover_url
+            break
+    save_json(APPLIED_FILE, applied_list)
+
+    append_log(f"Application confirmed & tracked with downloadable PDFs for {company}.", "SUCCESS")
 
     return {
         "job_id": job_id,
         "title": title,
         "company": company,
         "match_score": job.get("match_score"),
-        "resume_url": f"/resumes/{Path(resume_path).name}" if resume_path else None,
-        "cover_letter_url": f"/resumes/{Path(cover_letter_path).name}" if cover_letter_path else None,
+        "resume_url": pdf_resume_url,
+        "cover_letter_url": pdf_cover_url,
+        "resume_pdf_url": pdf_resume_url,
+        "cover_letter_pdf_url": pdf_cover_url,
         "outreach_note": outreach_note,
         "screener_answers": screener_answers,
         "status": "APPLIED_CONFIRMED"

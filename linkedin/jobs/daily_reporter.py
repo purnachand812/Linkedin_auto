@@ -11,11 +11,13 @@ import json
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+from email.mime.application import MIMEApplication
 from datetime import datetime, date
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 JOBS_DIR = BASE_DIR / "linkedin" / "jobs"
+RESUMES_DIR = JOBS_DIR / "resumes"
 APPLIED_FILE = JOBS_DIR / "applied_history.json"
 CONFIG_FILE = JOBS_DIR / "auto_apply_config.json"
 EMAIL_CONFIG_FILE = JOBS_DIR / "email_config.json"
@@ -103,6 +105,10 @@ def build_daily_report_html(applications, summary_metrics):
         job_url = app.get("job_url", "#")
         note = app.get("recruiter_outreach_note", "")
 
+        raw_base = "https://raw.githubusercontent.com/purnachand812/Linkedin_auto/main/linkedin/jobs/resumes"
+        pdf_cv_link = f"{raw_base}/resume_{job_id}.pdf"
+        pdf_letter_link = f"{raw_base}/cover_letter_{job_id}.pdf"
+
         table_rows += f"""
         <tr style="border-bottom: 1px solid #1E293B;">
           <td style="padding: 12px 10px; vertical-align: top;">
@@ -118,8 +124,8 @@ def build_daily_report_html(applications, summary_metrics):
             {time_display} CET
           </td>
           <td style="padding: 12px 10px; vertical-align: top; font-size: 11px;">
-            <a href="http://localhost:3000{resume_url}" style="color: #38BDF8; text-decoration: none; font-weight: 600;">Tailored CV &rarr;</a><br>
-            <a href="http://localhost:3000{cover_letter_url}" style="color: #10B981; text-decoration: none; font-weight: 600;">Cover Letter &rarr;</a>
+            <a href="{pdf_cv_link}" target="_blank" style="color: #38BDF8; text-decoration: none; font-weight: 700; display: inline-block; margin-bottom: 4px;">📄 View &amp; Download CV (PDF) &rarr;</a><br>
+            <a href="{pdf_letter_link}" target="_blank" style="color: #10B981; text-decoration: none; font-weight: 700; display: inline-block;">✉️ View &amp; Download Letter (PDF) &rarr;</a>
           </td>
           <td style="padding: 12px 10px; vertical-align: top; font-size: 11px;">
             <span style="background: rgba(14, 63, 138, 0.3); color: #38BDF8; padding: 2px 6px; border-radius: 3px; font-size: 10px; border: 1px solid #38BDF8;">CONFIRMED</span><br>
@@ -239,8 +245,8 @@ def send_daily_summary_report(force=False):
     
     today_str = str(date.today())
     
-    # Check if already sent today (unless force=True)
-    if not force and email_cfg.get("last_sent_date") == today_str:
+    # Check if already sent today via SMTP (unless force=True)
+    if not force and email_cfg.get("last_sent_date") == today_str and email_cfg.get("last_status") == "SENT_VIA_SMTP":
         return {"status": "ALREADY_SENT", "message": f"Daily report already sent for {today_str}"}
 
     applications = get_todays_applications()
@@ -270,13 +276,28 @@ def send_daily_summary_report(force=False):
 
     if smtp_pass:
         try:
-            msg = MIMEMultipart("alternative")
+            msg = MIMEMultipart("mixed")
             msg["Subject"] = f"📊 Daily Application Tracking Report: {len(applications)} Applied ({datetime.now().strftime('%d %b %Y')})"
             msg["From"] = sender
             msg["To"] = recipient
 
             part = MIMEText(report_html, "html", "utf-8")
             msg.attach(part)
+
+            # Attach latest PDF resume
+            attach_job_id = applications[0].get("job_id", "") if applications else ""
+            pdf_path = (RESUMES_DIR / f"resume_{attach_job_id}.pdf") if attach_job_id else None
+            if not pdf_path or not pdf_path.exists():
+                pdf_path = RESUMES_DIR / "resume_job-generic.pdf"
+            if pdf_path and pdf_path.exists():
+                try:
+                    with open(pdf_path, "rb") as f_pdf:
+                        att = MIMEApplication(f_pdf.read(), _subtype="pdf")
+                        att.add_header('Content-Disposition', 'attachment', filename=f"Europass_CV_Purna_Dandu.pdf")
+                        msg.attach(att)
+                        print(f"[REPORTER] Attached PDF resume: {pdf_path.name}")
+                except Exception as e_pdf:
+                    print(f"[REPORTER] Warning attaching PDF: {e_pdf}")
 
             server = smtplib.SMTP(smtp_host, smtp_port, timeout=15)
             if email_cfg.get("use_tls", True):
@@ -285,6 +306,7 @@ def send_daily_summary_report(force=False):
             server.sendmail(sender, [recipient], msg.as_string())
             server.quit()
             delivery_status = "SENT_VIA_SMTP"
+            email_cfg["last_sent_date"] = today_str
             print(f"[REPORTER] Successfully delivered daily report email to {recipient}")
         except Exception as e:
             delivery_status = "SMTP_FAILED"
@@ -294,7 +316,6 @@ def send_daily_summary_report(force=False):
         delivery_status = "AWAITING_SMTP_CONFIG"
         print(f"[REPORTER] SMTP password not set. HTML report generated and ready at: {report_file.name}")
 
-    email_cfg["last_sent_date"] = today_str
     email_cfg["last_status"] = delivery_status
     email_cfg["last_report_file"] = f"/reports/{report_file.name}"
     save_json(EMAIL_CONFIG_FILE, email_cfg)

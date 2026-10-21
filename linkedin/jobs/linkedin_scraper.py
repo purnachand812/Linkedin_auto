@@ -186,12 +186,31 @@ def scrape_real_linkedin_jobs(max_results=12, max_days=7):
             loc_m = re.search(r'<span[^>]*class="job-search-card__location"[^>]*>\s*([^<]+)\s*</span>', card)
             time_m = re.search(r'<time[^>]*datetime="([^"]+)"[^>]*>\s*([^<]+)\s*</time>', card)
             
-            title = clean_text(title_m.group(1)) if title_m else "Data Science / AI Specialist"
+            title = clean_text(title_m.group(1)) if title_m else "Werkstudent Data Science"
             comp = clean_text(comp_m.group(1)) if comp_m else "Berlin Tech Team"
             loc = clean_text(loc_m.group(1)) if loc_m else "Berlin, Germany"
             posted_str = clean_text(time_m.group(2)) if time_m else "1 day ago"
             age_days = parse_posted_age_days(posted_str)
             
+            # STRICT FILTER 1: Immediately exclude all Senior, Lead, Principal, and Experienced roles
+            title_lower = title.lower()
+            senior_disqualifiers = [
+                "senior", "sr.", "sr ", "lead", "principal", "staff", "head of", "head ", 
+                "director", "manager", "vp", "architect", "experienced", "expert", 
+                "specialist iii", "specialist ii", "freelance", "contractor", "5+ years", "8+ years", "10+ years"
+            ]
+            if any(sd in title_lower for sd in senior_disqualifiers):
+                continue
+
+            # STRICT FILTER 2: Exclusively accept Student, Werkstudent, Internship, or Part-Time roles
+            student_qualifiers = [
+                "werkstudent", "working student", "student", "intern", "internship", 
+                "praktikant", "praktikum", "part-time", "part time", "teilzeit", 
+                "trainee", "thesis", "masterarbeit", "bachelorarbeit"
+            ]
+            if not any(sq in title_lower for sq in student_qualifiers):
+                continue
+
             if age_days > max_days:
                 continue
                 
@@ -201,8 +220,13 @@ def scrape_real_linkedin_jobs(max_results=12, max_days=7):
             # Fetch real JD
             desc = fetch_job_details(job_numeric_id)
             if not desc or len(desc) < 40:
-                desc = f"Opportunity for {title} at {comp} in {loc}. Seeking motivated candidate with Python, data modeling, and machine learning skills."
+                desc = f"Werkstudent / Internship opportunity for {title} at {comp} in {loc}. Seeking motivated candidate with Python, data modeling, and machine learning skills."
             
+            # Check description for accidental senior trap
+            desc_lower = desc.lower()
+            if any(sd in desc_lower for sd in ["5+ years of experience", "8+ years of experience", "lead a team of 10"]):
+                continue
+
             tech_stack = extract_tech_stack(title + " " + desc)
             match_score = score_job_match(title, desc, loc, age_days)
             
@@ -233,8 +257,10 @@ def scrape_real_linkedin_jobs(max_results=12, max_days=7):
                 "full_description": desc,
                 "status": "APPLIED" if is_applied else "OPEN",
                 "tailored_cover_letter": pitch,
-                "resume_url": f"/resumes/resume_{job_id}.html",
-                "cover_letter_url": f"/resumes/cover_letter_{job_id}.html"
+                "resume_url": f"/resumes/resume_{job_id}.pdf",
+                "cover_letter_url": f"/resumes/cover_letter_{job_id}.pdf",
+                "resume_html_url": f"/resumes/resume_{job_id}.html",
+                "cover_letter_html_url": f"/resumes/cover_letter_{job_id}.html"
             })
             
             time.sleep(0.5)

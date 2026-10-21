@@ -45,7 +45,7 @@ def generate_tailored_resume(job_info):
     profile = load_profile()
     photo_uri = get_photo_data_uri()
     
-    job_id = job_info.get("id", "job-generic")
+    job_id = job_info.get("id") or job_info.get("job_id", "job-generic")
     title = job_info.get("title", "Data Scientist & ML Engineer")
     company = job_info.get("company", "Company")
     location = job_info.get("location", "Berlin, Germany")
@@ -1066,6 +1066,15 @@ def generate_tailored_resume(job_info):
 """
     file_path = RESUMES_DIR / f"resume_{job_id}.html"
     file_path.write_text(html, encoding="utf-8")
+
+    # Automatically generate companion PDF
+    pdf_path = RESUMES_DIR / f"resume_{job_id}.pdf"
+    try:
+        from linkedin.jobs import pdf_converter
+        pdf_converter.convert_html_to_pdf(file_path, pdf_path)
+    except Exception as e:
+        print(f"[Warning] Could not generate PDF: {e}")
+
     return file_path
 
 if __name__ == "__main__":

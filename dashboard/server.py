@@ -307,9 +307,19 @@ class EditorialHandler(SimpleHTTPRequestHandler):
                 self.send_error(404, "Visual asset not found")
                 return
 
-        # Static Tailored Resumes routing
-        if path.startswith("/resumes/"):
-            filename = path.replace("/resumes/", "")
+        # Mobile Portal / Student Jobs Hub routing
+        if path in ["/mobile", "/jobs", "/hub"]:
+            portal_file = WORKSPACE_DIR / "index.html"
+            if portal_file.exists():
+                self.send_response(200)
+                self.send_header("Content-Type", "text/html; charset=utf-8")
+                self.end_headers()
+                self.wfile.write(portal_file.read_bytes())
+                return
+
+        # Static Tailored Resumes routing (supports both /resumes/ and /linkedin/jobs/resumes/)
+        if path.startswith("/resumes/") or path.startswith("/linkedin/jobs/resumes/"):
+            filename = path.replace("/linkedin/jobs/resumes/", "").replace("/resumes/", "")
             file_path = RESUMES_DIR / filename
             if file_path.exists():
                 self.send_response(200)
@@ -317,6 +327,7 @@ class EditorialHandler(SimpleHTTPRequestHandler):
                     self.send_header("Content-Type", "text/html; charset=utf-8")
                 elif filename.endswith(".pdf"):
                     self.send_header("Content-Type", "application/pdf")
+                    self.send_header("Content-Disposition", f'inline; filename="{filename}"')
                 elif filename.endswith(".jpg") or filename.endswith(".jpeg"):
                     self.send_header("Content-Type", "image/jpeg")
                 elif filename.endswith(".png"):
@@ -330,9 +341,9 @@ class EditorialHandler(SimpleHTTPRequestHandler):
                 self.send_error(404, "Resume file not found")
                 return
 
-        # Static Reports routing
-        if path.startswith("/reports/"):
-            filename = path.replace("/reports/", "")
+        # Static Reports routing (supports both /reports/ and /linkedin/jobs/reports/)
+        if path.startswith("/reports/") or path.startswith("/linkedin/jobs/reports/"):
+            filename = path.replace("/linkedin/jobs/reports/", "").replace("/reports/", "")
             file_path = REPORTS_DIR / filename
             if file_path.exists():
                 self.send_response(200)
