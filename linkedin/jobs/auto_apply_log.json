@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "11:56:57",
-      "datetime": "2026-10-20T11:56:57.857967",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter generated: cover_letter_job-linkedin-4476662614.html"
-    },
-    {
-      "timestamp": "11:56:57",
       "datetime": "2026-10-20T11:56:57.858781",
       "level": "SUCCESS",
       "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
@@ -359,6 +353,12 @@
       "datetime": "2026-10-21T20:42:45.313169",
       "level": "SUCCESS",
       "message": "End-of-day summary report dispatched to purnachand0812@gmail.com (SENT_VIA_SMTP)."
+    },
+    {
+      "timestamp": "21:53:09",
+      "datetime": "2026-10-21T21:53:09.591207",
+      "level": "INFO",
+      "message": "Daily quota reached (12/5). Standing by until tomorrow."
     }
   ]
 }
