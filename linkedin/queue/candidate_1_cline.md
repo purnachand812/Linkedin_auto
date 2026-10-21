@@ -1,5 +1,5 @@
 # CANDIDATE 1: Cline (VS Code MCP Extension)
-- Status: WAITING_FOR_APPROVAL
+- Status: PUBLISHED
 - Beat: Open-Source AI Agent / Developer Tool
 - Editorial Score: 94/100 (Timeliness: 20/20, Value: 24/25, Practicality: 20/20, Evidence: 14/15, Visual: 8/10, Distinctiveness: 8/10)
 

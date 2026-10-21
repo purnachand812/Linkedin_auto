@@ -119,8 +119,20 @@ def check_and_publish_next_candidate(force=False):
     queue_summary = load_json_file(QUEUE_SUMMARY_FILE, {"candidates": []})
     candidates = queue_summary.get("candidates", [])
 
-    # Find first candidate with APPROVED status
-    approved = [c for c in candidates if c.get("status") == "APPROVED"]
+    # 0. Auto-approve candidates with score >= 80 if auto-approval is enabled
+    auto_approve = queue_summary.get("auto_approve_enabled", True)
+    if auto_approve:
+        modified = False
+        for c in candidates:
+            if c.get("status") in ("WAITING_FOR_APPROVAL", "DRAFT") and c.get("score", 0) >= 80:
+                c["status"] = "APPROVED"
+                modified = True
+                append_daemon_log(f"✅ Auto-approved Candidate #{c.get('id')}: '{c.get('topic')}' (Editorial Score: {c.get('score')}/100)")
+        if modified:
+            save_json_file(QUEUE_SUMMARY_FILE, queue_summary)
+
+    # 1. Find first candidate with APPROVED status that has NOT been published yet
+    approved = [c for c in candidates if c.get("status") == "APPROVED" and not c.get("published_at") and not c.get("linkedin_post_id")]
     if not approved:
         return False
 
@@ -283,7 +295,7 @@ def run_single_cycle(force_publish=False):
     next_slot = eu_growth_engine.get_next_eu_prime_window(now_dt)
 
     queue_summary = load_json_file(QUEUE_SUMMARY_FILE, {"candidates": []})
-    approved_count = sum(1 for c in queue_summary.get("candidates", []) if c.get("status") == "APPROVED")
+    approved_count = sum(1 for c in queue_summary.get("candidates", []) if c.get("status") == "APPROVED" and not c.get("published_at") and not c.get("linkedin_post_id"))
     published_today = count_posts_published_today()
 
     # 1. Update analytics & telemetry

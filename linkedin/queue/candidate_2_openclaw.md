@@ -1,5 +1,5 @@
 # CANDIDATE 2: OpenClaw (Self-Hosted Personal AI Agent)
-- Status: WAITING_FOR_APPROVAL
+- Status: APPROVED
 - Beat: Free & Open-Source AI Agent / Local AI
 - Editorial Score: 92/100 (Timeliness: 19/20, Value: 24/25, Practicality: 19/20, Evidence: 14/15, Visual: 8/10, Distinctiveness: 8/10)
 
