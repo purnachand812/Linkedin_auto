@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "11:56:55",
-      "datetime": "2026-10-20T11:56:55.846946",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Senior Data Scientist \u2014 Berlin \u2013 Health Technology' at Discover International (ID: job-linkedin-4476450972)"
-    },
-    {
-      "timestamp": "11:56:55",
       "datetime": "2026-10-20T11:56:55.849122",
       "level": "SUCCESS",
       "message": "Tailored Europass CV generated: resume_job-linkedin-4476450972.html"
@@ -357,6 +351,12 @@
     {
       "timestamp": "16:28:25",
       "datetime": "2026-10-21T16:28:25.669692",
+      "level": "INFO",
+      "message": "Daily quota reached (6/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "18:10:16",
+      "datetime": "2026-10-21T18:10:16.366748",
       "level": "INFO",
       "message": "Daily quota reached (6/5). Standing by until tomorrow."
     }
