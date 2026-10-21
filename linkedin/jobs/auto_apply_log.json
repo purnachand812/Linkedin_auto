@@ -1,12 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "13:46:23",
-      "datetime": "2026-10-18T13:46:23.291880",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked! Logged to applied_history.json for Zero to One Search | Recruitment Agency."
-    },
-    {
       "timestamp": "17:04:15",
       "datetime": "2026-10-18T17:04:15.485081",
       "level": "INFO",
@@ -357,6 +351,12 @@
     {
       "timestamp": "01:50:16",
       "datetime": "2026-10-21T01:50:16.921584",
+      "level": "INFO",
+      "message": "Radar scan: 10 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "02:32:32",
+      "datetime": "2026-10-21T02:32:32.141814",
       "level": "INFO",
       "message": "Radar scan: 10 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
