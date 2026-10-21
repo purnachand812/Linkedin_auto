@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-21T18:18:28.497099",
-  "total_posts": 3,
+  "updated_at": "2026-10-21T16:28:25.665803",
+  "total_posts": 4,
   "target_region": "European Union (CET/CEST)",
   "estimated_reach_by_hub": {
     "Berlin / Munich AI Ecosystem": "45%",
@@ -9,11 +9,21 @@
   },
   "posts_analytics": [
     {
+      "candidate_id": 9,
+      "topic": "Crawl4AI (Self-Hosted LLM Web Scraper vs Firecrawl)",
+      "published_at": "2026-10-21T16:18:33Z",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7518707303857090562/",
+      "age_hours": 0.2,
+      "has_image": true,
+      "status": "LIVE",
+      "growth_tier": "ACTIVE_ACCUMULATION"
+    },
+    {
       "candidate_id": 5,
       "topic": "Aider (Git-Aware Terminal AI Pair Programmer)",
       "published_at": "2026-10-17T06:31:02Z",
       "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7517109902172102657/",
-      "age_hours": 105.8,
+      "age_hours": 106.0,
       "has_image": true,
       "status": "LIVE",
       "growth_tier": "ESTABLISHED"
@@ -23,7 +33,7 @@
       "topic": "Cline (VS Code MCP Extension)",
       "published_at": "2026-10-16T19:33:48Z",
       "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7516944499625963520/",
-      "age_hours": 116.7,
+      "age_hours": 116.9,
       "has_image": true,
       "status": "LIVE",
       "growth_tier": "ESTABLISHED"
@@ -33,7 +43,7 @@
       "topic": "Pydantic AI (Typed Dependency Injection vs Prompt Guessing)",
       "published_at": "2026-10-16T19:31:07Z",
       "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7516943821306372096/",
-      "age_hours": 116.8,
+      "age_hours": 117.0,
       "has_image": true,
       "status": "LIVE",
       "growth_tier": "ESTABLISHED"

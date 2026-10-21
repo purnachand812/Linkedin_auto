@@ -16,20 +16,27 @@
     "[18:18:33] \ud83c\udf89 Successfully published Candidate #9! Live URL: https://www.linkedin.com/feed/update/urn:li:share:7518707303857090562/",
     "[18:18:33] \ud83d\udcac Generated 2 contextual community reply templates for Candidate #9"
   ],
-  "current_time_cet": "2026-10-21 18:18:28 CET",
-  "is_eu_prime_time": true,
-  "current_window": "Evening Engineering Wrap",
-  "next_scheduled_drop": "Tomorrow Morning Standup (Prime) at 08:30 CET",
-  "approved_queue_count": 7,
-  "published_today": 0,
+  "current_time_cet": "2026-10-21 16:28:25 CET",
+  "is_eu_prime_time": false,
+  "current_window": "Off-Peak / Monitoring",
+  "next_scheduled_drop": "Evening Engineering Wrap at 17:30 CET (~61m from now)",
+  "approved_queue_count": 6,
+  "published_today": 1,
   "target_audience": "European Union (Berlin, Munich, Amsterdam, Paris, Zurich)",
   "auto_publish_enabled": true,
-  "last_heartbeat": "2026-10-21T18:18:33.333333",
+  "last_heartbeat": "2026-10-21T16:28:25.673569",
   "last_activity": "[18:18:33] \ud83d\udcac Generated 2 contextual community reply templates for Candidate #9",
   "auto_apply_telemetry": {
     "enabled": true,
     "applied_today": 6,
     "daily_limit": 5,
     "status": "RUNNING"
+  },
+  "weekly_audit_telemetry": {
+    "rolling_7d_impressions": 1737,
+    "rolling_7d_interactions": 98,
+    "rolling_7d_engagement_rate": "5.64%",
+    "top_performing_post": "Crawl4AI (Self-Hosted LLM Web Scraper vs Firecrawl)",
+    "winning_formula": "Canva Contrast Infographic + Clean Body + Comment Link + Weekday CET"
   }
 }

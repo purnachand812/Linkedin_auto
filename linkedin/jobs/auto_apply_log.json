@@ -1,12 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "11:56:53",
-      "datetime": "2026-10-20T11:56:53.846004",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked! Logged to applied_history.json for Zero to One Search | Recruitment Agency."
-    },
-    {
       "timestamp": "11:56:55",
       "datetime": "2026-10-20T11:56:55.846946",
       "level": "INFO",
@@ -357,6 +351,12 @@
     {
       "timestamp": "16:20:49",
       "datetime": "2026-10-21T16:20:49.011143",
+      "level": "INFO",
+      "message": "Daily quota reached (6/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "16:28:25",
+      "datetime": "2026-10-21T16:28:25.669692",
       "level": "INFO",
       "message": "Daily quota reached (6/5). Standing by until tomorrow."
     }
