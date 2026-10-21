@@ -2,18 +2,6 @@
   "entries": [
     {
       "timestamp": "11:56:57",
-      "datetime": "2026-10-20T11:56:57.855105",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Working student (m/f/d) for energy and climate policy (20h/week)' at Berlin Economics (ID: job-linkedin-4476662614)"
-    },
-    {
-      "timestamp": "11:56:57",
-      "datetime": "2026-10-20T11:56:57.857302",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV generated: resume_job-linkedin-4476662614.html"
-    },
-    {
-      "timestamp": "11:56:57",
       "datetime": "2026-10-20T11:56:57.857967",
       "level": "SUCCESS",
       "message": "Tailored Cover Letter generated: cover_letter_job-linkedin-4476662614.html"
@@ -359,6 +347,18 @@
       "datetime": "2026-10-21T20:38:30.554959",
       "level": "SUCCESS",
       "message": "End-of-day summary report dispatched to purnachand0812@gmail.com (AWAITING_SMTP_CONFIG)."
+    },
+    {
+      "timestamp": "20:42:42",
+      "datetime": "2026-10-21T20:42:42.578333",
+      "level": "INFO",
+      "message": "Daily quota reached (12/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "20:42:45",
+      "datetime": "2026-10-21T20:42:45.313169",
+      "level": "SUCCESS",
+      "message": "End-of-day summary report dispatched to purnachand0812@gmail.com (SENT_VIA_SMTP)."
     }
   ]
 }
