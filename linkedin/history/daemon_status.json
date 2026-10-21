@@ -11,21 +11,24 @@
     "[10:55:06] Daemon initialized. 24/7 autonomous monitoring & scheduling active.",
     "[14:20:38] Daemon initialized. 24/7 autonomous monitoring & scheduling active.",
     "[14:41:44] Daemon initialized. 24/7 autonomous monitoring & scheduling active.",
-    "[15:02:16] Daemon initialized. 24/7 autonomous monitoring & scheduling active."
+    "[15:02:16] Daemon initialized. 24/7 autonomous monitoring & scheduling active.",
+    "[18:18:28] \ud83d\ude80 Triggering automated publishing for Candidate #9: 'Crawl4AI (Self-Hosted LLM Web Scraper vs Firecrawl)' (EU Window: Evening Engineering Wrap)",
+    "[18:18:33] \ud83c\udf89 Successfully published Candidate #9! Live URL: https://www.linkedin.com/feed/update/urn:li:share:7518707303857090562/",
+    "[18:18:33] \ud83d\udcac Generated 2 contextual community reply templates for Candidate #9"
   ],
-  "current_time_cet": "2026-10-21 15:22:36 CET",
-  "is_eu_prime_time": false,
-  "current_window": "Off-Peak / Monitoring",
-  "next_scheduled_drop": "Evening Engineering Wrap at 17:30 CET (~127m from now)",
-  "approved_queue_count": 4,
+  "current_time_cet": "2026-10-21 18:18:28 CET",
+  "is_eu_prime_time": true,
+  "current_window": "Evening Engineering Wrap",
+  "next_scheduled_drop": "Tomorrow Morning Standup (Prime) at 08:30 CET",
+  "approved_queue_count": 7,
   "published_today": 0,
   "target_audience": "European Union (Berlin, Munich, Amsterdam, Paris, Zurich)",
   "auto_publish_enabled": true,
-  "last_heartbeat": "2026-10-21T15:22:36.060700",
-  "last_activity": "[15:02:16] Daemon initialized. 24/7 autonomous monitoring & scheduling active.",
+  "last_heartbeat": "2026-10-21T18:18:33.333333",
+  "last_activity": "[18:18:33] \ud83d\udcac Generated 2 contextual community reply templates for Candidate #9",
   "auto_apply_telemetry": {
     "enabled": true,
-    "applied_today": 5,
+    "applied_today": 6,
     "daily_limit": 5,
     "status": "RUNNING"
   }

@@ -301,6 +301,17 @@ def run_single_cycle(force_publish=False):
     # 1. Update analytics & telemetry
     update_analytics_monitoring()
 
+    # Auto-replenish editorial radar if approved unpublished candidates drop below 4
+    try:
+        from linkedin.tools import trend_radar
+        if approved_count < 4:
+            new_added = trend_radar.replenish_queue()
+            if new_added > 0:
+                queue_summary = load_json_file(QUEUE_SUMMARY_FILE, {"candidates": []})
+                approved_count = sum(1 for c in queue_summary.get("candidates", []) if c.get("status") == "APPROVED" and not c.get("published_at") and not c.get("linkedin_post_id"))
+    except Exception as e:
+        pass
+
     # 2. Check for publishing action
     published = False
     if approved_count > 0:

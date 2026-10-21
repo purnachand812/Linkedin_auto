@@ -1,6 +1,6 @@
 {
   "queue_id": "queue-2026-10-10-001",
-  "updated_at": "2026-10-21T16:45:00Z",
+  "updated_at": "2026-10-21T18:17:03.050127",
   "auto_approve_enabled": true,
   "auto_publish_enabled": true,
   "candidates": [
@@ -9,13 +9,16 @@
       "topic": "Crawl4AI (Self-Hosted LLM Web Scraper vs Firecrawl)",
       "beat": "Free & Open-Source AI Agent / Data Pipelines",
       "score": 94,
-      "status": "APPROVED",
+      "status": "PUBLISHED",
       "format": "image-attached",
       "replaces": "Firecrawl ($16-$99/mo), ScrapingBee",
       "cost": "Free Apache 2.0 code; $0 API cost (local Playwright)",
       "test_status": "Approved for Autonomous Publishing",
       "file": "linkedin/queue/candidate_9_crawl4ai.md",
-      "visual": "linkedin/visuals/visual_crawl4ai.png"
+      "visual": "linkedin/visuals/visual_crawl4ai.png",
+      "published_at": "2026-10-21T16:18:33Z",
+      "linkedin_post_id": "urn:li:share:7518707303857090562",
+      "linkedin_post_url": "https://www.linkedin.com/feed/update/urn:li:share:7518707303857090562/"
     },
     {
       "id": 2,
@@ -129,6 +132,45 @@
       "published_at": "2026-10-16T19:31:07Z",
       "linkedin_post_id": "urn:li:share:7516943821306372096",
       "linkedin_post_url": "https://www.linkedin.com/feed/update/urn:li:share:7516943821306372096/"
+    },
+    {
+      "id": 10,
+      "topic": "FastMCP (3-Line Typed Model Context Protocol Servers)",
+      "beat": "Free & Open-Source AI Agent / Architecture",
+      "score": 95,
+      "status": "APPROVED",
+      "format": "image-attached",
+      "replaces": "Hand-crafted JSON-RPC boilerplate & brittle custom tool wrappers",
+      "cost": "Free Apache 2.0 code; $0 SaaS overhead",
+      "test_status": "Approved for Autonomous Publishing",
+      "file": "linkedin/queue/candidate_10_fastmcp.md",
+      "visual": "linkedin/visuals/visual_fastmcp.png"
+    },
+    {
+      "id": 11,
+      "topic": "Langfuse (Self-Hosted LLM Observability & Tracing in Docker)",
+      "beat": "Free & Open-Source AI Agent / Infrastructure",
+      "score": 94,
+      "status": "APPROVED",
+      "format": "image-attached",
+      "replaces": "Helicone / LangSmith ($39-$99/mo cloud SaaS)",
+      "cost": "Free MIT code; runs in local Docker container with $0 SaaS fees",
+      "test_status": "Approved for Autonomous Publishing",
+      "file": "linkedin/queue/candidate_11_langfuse.md",
+      "visual": "linkedin/visuals/visual_langfuse.png"
+    },
+    {
+      "id": 12,
+      "topic": "OpenHands (Autonomous Software Engineer inside Docker Sandboxes)",
+      "beat": "Free & Open-Source AI Agent / Code Automation",
+      "score": 93,
+      "status": "APPROVED",
+      "format": "image-attached",
+      "replaces": "Devin ($500/mo) / Cognition AI closed betas",
+      "cost": "Free MIT code; standard model token cost",
+      "test_status": "Approved for Autonomous Publishing",
+      "file": "linkedin/queue/candidate_12_openhands.md",
+      "visual": "linkedin/visuals/visual_openhands.png"
     }
   ]
 }

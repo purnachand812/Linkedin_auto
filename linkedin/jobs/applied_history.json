@@ -1,5 +1,20 @@
 [
   {
+    "job_id": "job-linkedin-4477350780",
+    "title": "Praktikant Founders Associate (m/w/d)",
+    "company": "meinphysio+",
+    "location": "Berlin, Berlin, Germany",
+    "salary_range": "\u20ac1,200 - \u20ac1,800 / mo",
+    "match_score": 89,
+    "applied_at": "2026-10-21T17:33:31.711751",
+    "job_url": "https://www.linkedin.com/jobs/view/4477350780/",
+    "resume_url": "/resumes/resume_job-linkedin-4477350780.html",
+    "mode": "AUTONOMOUS_DAEMON",
+    "recruiter_outreach_note": "Hi Hiring Team, I saw meinphysio+'s opening for Praktikant Founders Associate (m/w/d) in Berlin, Berlin, Germany. I am an MSc Data Science student based in Berlin researching hallucination attribution in multi-step LLM agent trajectories. I've also built typed dependency injection middlewares using Pydantic AI and FastAPI. I submitted an application and wanted to share my technical portfolio directly. Happy to connect.",
+    "status": "APPLIED_CONFIRMED",
+    "cover_letter_url": "/resumes/cover_letter_job-linkedin-4477350780.html"
+  },
+  {
     "job_id": "job-linkedin-4463514158",
     "title": "Senior Data Scientist \u2014 Data Cloud Acceleration",
     "company": "Zeta Global",

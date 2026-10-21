@@ -1,48 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "11:56:51",
-      "datetime": "2026-10-20T11:56:51.833413",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV generated: resume_job-linkedin-4478681346.html"
-    },
-    {
-      "timestamp": "11:56:51",
-      "datetime": "2026-10-20T11:56:51.834055",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter generated: cover_letter_job-linkedin-4478681346.html"
-    },
-    {
-      "timestamp": "11:56:51",
-      "datetime": "2026-10-20T11:56:51.834809",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "11:56:51",
-      "datetime": "2026-10-20T11:56:51.838344",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked! Logged to applied_history.json for Synthires."
-    },
-    {
-      "timestamp": "11:56:53",
-      "datetime": "2026-10-20T11:56:53.839222",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Data Scientist (Freelance, Berlin)' at Zero to One Search | Recruitment Agency (ID: job-linkedin-4478671223)"
-    },
-    {
-      "timestamp": "11:56:53",
-      "datetime": "2026-10-20T11:56:53.841337",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV generated: resume_job-linkedin-4478671223.html"
-    },
-    {
-      "timestamp": "11:56:53",
-      "datetime": "2026-10-20T11:56:53.841983",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter generated: cover_letter_job-linkedin-4478671223.html"
-    },
-    {
       "timestamp": "11:56:53",
       "datetime": "2026-10-20T11:56:53.842716",
       "level": "SUCCESS",
@@ -355,10 +313,52 @@
       "message": "Daily quota reached (5/5). Standing by until tomorrow."
     },
     {
-      "timestamp": "15:22:36",
-      "datetime": "2026-10-21T15:22:36.059566",
+      "timestamp": "17:33:31",
+      "datetime": "2026-10-21T17:33:31.510950",
       "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+      "message": "Dashboard operator triggered instant Auto-Apply batch run."
+    },
+    {
+      "timestamp": "17:33:31",
+      "datetime": "2026-10-21T17:33:31.534481",
+      "level": "INFO",
+      "message": "Radar scan: 10 active jobs, 1 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "17:33:31",
+      "datetime": "2026-10-21T17:33:31.568205",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Praktikant Founders Associate (m/w/d)' at meinphysio+ (ID: job-linkedin-4477350780)"
+    },
+    {
+      "timestamp": "17:33:31",
+      "datetime": "2026-10-21T17:33:31.618215",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV generated: resume_job-linkedin-4477350780.html"
+    },
+    {
+      "timestamp": "17:33:31",
+      "datetime": "2026-10-21T17:33:31.645740",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter generated: cover_letter_job-linkedin-4477350780.html"
+    },
+    {
+      "timestamp": "17:33:31",
+      "datetime": "2026-10-21T17:33:31.673740",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "17:33:31",
+      "datetime": "2026-10-21T17:33:31.760418",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked! Logged to applied_history.json for meinphysio+."
+    },
+    {
+      "timestamp": "18:18:33",
+      "datetime": "2026-10-21T18:18:33.315333",
+      "level": "INFO",
+      "message": "Daily quota reached (6/5). Standing by until tomorrow."
     }
   ]
 }
