@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "11:56:57",
-      "datetime": "2026-10-20T11:56:57.858781",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "11:56:57",
       "datetime": "2026-10-20T11:56:57.862320",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked! Logged to applied_history.json for Berlin Economics."
@@ -357,6 +351,12 @@
     {
       "timestamp": "21:53:09",
       "datetime": "2026-10-21T21:53:09.591207",
+      "level": "INFO",
+      "message": "Daily quota reached (12/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "22:54:00",
+      "datetime": "2026-10-21T22:54:00.677234",
       "level": "INFO",
       "message": "Daily quota reached (12/5). Standing by until tomorrow."
     }
