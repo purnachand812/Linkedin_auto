@@ -1,12 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "11:56:49",
-      "datetime": "2026-10-20T11:56:49.829968",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked! Logged to applied_history.json for myAutoAbo."
-    },
-    {
       "timestamp": "11:56:51",
       "datetime": "2026-10-20T11:56:51.831114",
       "level": "INFO",
@@ -357,6 +351,12 @@
     {
       "timestamp": "14:55:51",
       "datetime": "2026-10-21T14:55:51.263151",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "15:12:18",
+      "datetime": "2026-10-21T15:12:18.239516",
       "level": "INFO",
       "message": "Daily quota reached (5/5). Standing by until tomorrow."
     }
