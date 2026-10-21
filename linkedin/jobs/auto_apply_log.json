@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "13:46:23",
-      "datetime": "2026-10-18T13:46:23.288967",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "13:46:23",
       "datetime": "2026-10-18T13:46:23.291880",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked! Logged to applied_history.json for Zero to One Search | Recruitment Agency."
@@ -359,6 +353,12 @@
       "datetime": "2026-10-20T23:17:25.719670",
       "level": "INFO",
       "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "01:50:16",
+      "datetime": "2026-10-21T01:50:16.921584",
+      "level": "INFO",
+      "message": "Radar scan: 10 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
   ]
 }
