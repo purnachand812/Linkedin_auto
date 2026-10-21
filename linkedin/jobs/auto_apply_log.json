@@ -1,174 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "19:32:07",
-      "datetime": "2026-10-18T19:32:07.629811",
-      "level": "INFO",
-      "message": "Radar scan: 10 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "22:03:27",
-      "datetime": "2026-10-18T22:03:27.801439",
-      "level": "INFO",
-      "message": "Radar scan: 10 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "22:12:47",
-      "datetime": "2026-10-18T22:12:47.448802",
-      "level": "INFO",
-      "message": "Radar scan: 10 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "00:20:58",
-      "datetime": "2026-10-19T00:20:58.183823",
-      "level": "INFO",
-      "message": "Radar scan: 10 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "02:25:22",
-      "datetime": "2026-10-19T02:25:22.654297",
-      "level": "INFO",
-      "message": "Radar scan: 10 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "05:03:59",
-      "datetime": "2026-10-19T05:03:59.015734",
-      "level": "INFO",
-      "message": "Radar scan: 10 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "11:03:46",
-      "datetime": "2026-10-19T11:03:46.243570",
-      "level": "INFO",
-      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
-    },
-    {
-      "timestamp": "11:03:53",
-      "datetime": "2026-10-19T11:03:53.513127",
-      "level": "SUCCESS",
-      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
-    },
-    {
-      "timestamp": "11:03:53",
-      "datetime": "2026-10-19T11:03:53.513981",
-      "level": "INFO",
-      "message": "Radar scan: 10 active jobs, 2 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "11:03:53",
-      "datetime": "2026-10-19T11:03:53.514558",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Werkstudent:in Founders Associate - Projects & AI (m/d/w)' at Lucid Labs (ID: job-linkedin-4478278368)"
-    },
-    {
-      "timestamp": "11:03:53",
-      "datetime": "2026-10-19T11:03:53.518250",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV generated: resume_job-linkedin-4478278368.html"
-    },
-    {
-      "timestamp": "11:03:53",
-      "datetime": "2026-10-19T11:03:53.518962",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter generated: cover_letter_job-linkedin-4478278368.html"
-    },
-    {
-      "timestamp": "11:03:53",
-      "datetime": "2026-10-19T11:03:53.519891",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "11:03:53",
-      "datetime": "2026-10-19T11:03:53.524193",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked! Logged to applied_history.json for Lucid Labs."
-    },
-    {
-      "timestamp": "11:03:55",
-      "datetime": "2026-10-19T11:03:55.525237",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Data Scientist (Freelance, Berlin)' at Zero to One Search | Recruitment Agency (ID: job-linkedin-4478266029)"
-    },
-    {
-      "timestamp": "11:03:55",
-      "datetime": "2026-10-19T11:03:55.527974",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV generated: resume_job-linkedin-4478266029.html"
-    },
-    {
-      "timestamp": "11:03:55",
-      "datetime": "2026-10-19T11:03:55.528749",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter generated: cover_letter_job-linkedin-4478266029.html"
-    },
-    {
-      "timestamp": "11:03:55",
-      "datetime": "2026-10-19T11:03:55.529601",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "11:03:55",
-      "datetime": "2026-10-19T11:03:55.533549",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked! Logged to applied_history.json for Zero to One Search | Recruitment Agency."
-    },
-    {
-      "timestamp": "17:39:02",
-      "datetime": "2026-10-19T17:39:02.134147",
-      "level": "INFO",
-      "message": "Radar scan: 10 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "21:59:13",
-      "datetime": "2026-10-19T21:59:13.647779",
-      "level": "INFO",
-      "message": "Radar scan: 10 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "23:12:47",
-      "datetime": "2026-10-19T23:12:47.126234",
-      "level": "INFO",
-      "message": "Radar scan: 10 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "01:01:22",
-      "datetime": "2026-10-20T01:01:22.623904",
-      "level": "INFO",
-      "message": "Radar scan: 10 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "02:38:47",
-      "datetime": "2026-10-20T02:38:47.546605",
-      "level": "INFO",
-      "message": "Radar scan: 10 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "06:18:55",
-      "datetime": "2026-10-20T06:18:55.319936",
-      "level": "INFO",
-      "message": "Radar scan: 10 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "11:56:42",
-      "datetime": "2026-10-20T11:56:42.569919",
-      "level": "INFO",
-      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
-    },
-    {
-      "timestamp": "11:56:49",
-      "datetime": "2026-10-20T11:56:49.790297",
-      "level": "SUCCESS",
-      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
-    },
-    {
-      "timestamp": "11:56:49",
-      "datetime": "2026-10-20T11:56:49.791424",
-      "level": "INFO",
-      "message": "Radar scan: 10 active jobs, 5 meeting freshness (<=7d) & criteria."
-    },
-    {
       "timestamp": "11:56:49",
       "datetime": "2026-10-20T11:56:49.792157",
       "level": "INFO",
@@ -359,6 +191,174 @@
       "datetime": "2026-10-21T07:02:45.389330",
       "level": "INFO",
       "message": "Radar scan: 10 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "13:04:17",
+      "datetime": "2026-10-21T13:04:17.591950",
+      "level": "INFO",
+      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
+    },
+    {
+      "timestamp": "13:04:25",
+      "datetime": "2026-10-21T13:04:25.444845",
+      "level": "SUCCESS",
+      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
+    },
+    {
+      "timestamp": "13:04:25",
+      "datetime": "2026-10-21T13:04:25.445663",
+      "level": "INFO",
+      "message": "Radar scan: 10 active jobs, 6 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "13:04:25",
+      "datetime": "2026-10-21T13:04:25.446220",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Intern, Product GTM & Impact Analytics - Marketplace, Quick Commerce' at Delivery Hero (ID: job-linkedin-4480773802)"
+    },
+    {
+      "timestamp": "13:04:25",
+      "datetime": "2026-10-21T13:04:25.449487",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV generated: resume_job-linkedin-4480773802.html"
+    },
+    {
+      "timestamp": "13:04:25",
+      "datetime": "2026-10-21T13:04:25.450159",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter generated: cover_letter_job-linkedin-4480773802.html"
+    },
+    {
+      "timestamp": "13:04:25",
+      "datetime": "2026-10-21T13:04:25.450959",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "13:04:25",
+      "datetime": "2026-10-21T13:04:25.454628",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked! Logged to applied_history.json for Delivery Hero."
+    },
+    {
+      "timestamp": "13:04:27",
+      "datetime": "2026-10-21T13:04:27.455536",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Network Planning Intern - Mandatory Internship (m/f/d) (m/f/d)' at J&T Express Germany GmbH (ID: job-linkedin-4480395003)"
+    },
+    {
+      "timestamp": "13:04:27",
+      "datetime": "2026-10-21T13:04:27.457822",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV generated: resume_job-linkedin-4480395003.html"
+    },
+    {
+      "timestamp": "13:04:27",
+      "datetime": "2026-10-21T13:04:27.458454",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter generated: cover_letter_job-linkedin-4480395003.html"
+    },
+    {
+      "timestamp": "13:04:27",
+      "datetime": "2026-10-21T13:04:27.459206",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "13:04:27",
+      "datetime": "2026-10-21T13:04:27.462619",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked! Logged to applied_history.json for J&T Express Germany GmbH."
+    },
+    {
+      "timestamp": "13:04:29",
+      "datetime": "2026-10-21T13:04:29.463509",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Data Scientist (Freelance, Berlin)' at Zero to One Search | Recruitment Agency (ID: job-linkedin-4478985465)"
+    },
+    {
+      "timestamp": "13:04:29",
+      "datetime": "2026-10-21T13:04:29.465719",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV generated: resume_job-linkedin-4478985465.html"
+    },
+    {
+      "timestamp": "13:04:29",
+      "datetime": "2026-10-21T13:04:29.466338",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter generated: cover_letter_job-linkedin-4478985465.html"
+    },
+    {
+      "timestamp": "13:04:29",
+      "datetime": "2026-10-21T13:04:29.467085",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "13:04:29",
+      "datetime": "2026-10-21T13:04:29.470591",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked! Logged to applied_history.json for Zero to One Search | Recruitment Agency."
+    },
+    {
+      "timestamp": "13:04:31",
+      "datetime": "2026-10-21T13:04:31.471521",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Data Engineer / ETL-Developer / Business Analyst m/w/d - remote - deutschlandweit' at 23DATA (ID: job-linkedin-4478693566)"
+    },
+    {
+      "timestamp": "13:04:31",
+      "datetime": "2026-10-21T13:04:31.473708",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV generated: resume_job-linkedin-4478693566.html"
+    },
+    {
+      "timestamp": "13:04:31",
+      "datetime": "2026-10-21T13:04:31.474326",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter generated: cover_letter_job-linkedin-4478693566.html"
+    },
+    {
+      "timestamp": "13:04:31",
+      "datetime": "2026-10-21T13:04:31.475057",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "13:04:31",
+      "datetime": "2026-10-21T13:04:31.478525",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked! Logged to applied_history.json for 23DATA."
+    },
+    {
+      "timestamp": "13:04:33",
+      "datetime": "2026-10-21T13:04:33.479427",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Senior Data Scientist \u2014 Data Cloud Acceleration' at Zeta Global (ID: job-linkedin-4463514158)"
+    },
+    {
+      "timestamp": "13:04:33",
+      "datetime": "2026-10-21T13:04:33.485596",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV generated: resume_job-linkedin-4463514158.html"
+    },
+    {
+      "timestamp": "13:04:33",
+      "datetime": "2026-10-21T13:04:33.486452",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter generated: cover_letter_job-linkedin-4463514158.html"
+    },
+    {
+      "timestamp": "13:04:33",
+      "datetime": "2026-10-21T13:04:33.574340",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "13:04:33",
+      "datetime": "2026-10-21T13:04:33.903484",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked! Logged to applied_history.json for Zeta Global."
     }
   ]
 }
