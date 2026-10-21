@@ -60,4 +60,9 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "Antigravity Cloud Runner"
           git add linkedin/queue/ linkedin/history/ linkedin/jobs/
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto: scheduled EU publishing & telemetry update [skip ci]" && git push origin HEAD:${{ github.ref_name }})
+          if ! git diff --quiet || ! git diff --staged --quiet; then
+            git commit -m "Auto: scheduled EU publishing & telemetry update [skip ci]"
+            for i in 1 2 3 4 5; do
+              git pull --rebase origin ${{ github.ref_name }} && git push origin HEAD:${{ github.ref_name }} && break || sleep 5
+            done
+          fi
