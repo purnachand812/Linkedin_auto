@@ -13,15 +13,15 @@
     "[14:41:44] Daemon initialized. 24/7 autonomous monitoring & scheduling active.",
     "[15:02:16] Daemon initialized. 24/7 autonomous monitoring & scheduling active."
   ],
-  "current_time_cet": "2026-10-21 01:50:16 CET",
+  "current_time_cet": "2026-10-21 07:02:45 CET",
   "is_eu_prime_time": false,
   "current_window": "Off-Peak / Monitoring",
-  "next_scheduled_drop": "Morning Standup (Prime) at 08:30 CET (~399m from now)",
+  "next_scheduled_drop": "Morning Standup (Prime) at 08:30 CET (~87m from now)",
   "approved_queue_count": 0,
   "published_today": 0,
   "target_audience": "European Union (Berlin, Munich, Amsterdam, Paris, Zurich)",
   "auto_publish_enabled": true,
-  "last_heartbeat": "2026-10-21T01:50:16.922390",
+  "last_heartbeat": "2026-10-21T07:02:45.390835",
   "last_activity": "[15:02:16] Daemon initialized. 24/7 autonomous monitoring & scheduling active.",
   "auto_apply_telemetry": {
     "enabled": true,
