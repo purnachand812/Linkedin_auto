@@ -1,6 +1,12 @@
 name: 24/7 LinkedIn Autonomous Growth & Publishing Engine
 
 on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'README.md'
+      - '.gitignore'
   schedule:
     # Runs every 30 minutes, 24/7 in GitHub's free cloud runner
     - cron: '*/30 * * * *'
@@ -30,13 +36,17 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
       - name: Restore LinkedIn OAuth Credentials (from GitHub Secret if configured)
-        if: env.LINKEDIN_CREDENTIALS != ''
         env:
           LINKEDIN_CREDENTIALS: ${{ secrets.LINKEDIN_CREDENTIALS }}
         run: |
-          mkdir -p linkedin
-          echo "$LINKEDIN_CREDENTIALS" > linkedin/credentials.json
-          chmod 600 linkedin/credentials.json
+          if [ -n "$LINKEDIN_CREDENTIALS" ]; then
+            mkdir -p linkedin
+            echo "$LINKEDIN_CREDENTIALS" > linkedin/credentials.json
+            chmod 600 linkedin/credentials.json
+            echo "LinkedIn credentials successfully configured from secret."
+          else
+            echo "LINKEDIN_CREDENTIALS secret not set; using local/mock publishing mode."
+          fi
 
       - name: Execute Autonomous Editorial & Publishing Cycle
         env:

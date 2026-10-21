@@ -1,6 +1,12 @@
 name: Autonomous Job Radar & Application Pipeline
 
 on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'README.md'
+      - '.gitignore'
   schedule:
     # Runs every 20 hours automatically in GitHub's free cloud runner
     - cron: '0 */20 * * *'
