@@ -1,174 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "22:49:47",
-      "datetime": "2026-10-20T22:49:47.279181",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "23:17:25",
-      "datetime": "2026-10-20T23:17:25.719670",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "01:50:16",
-      "datetime": "2026-10-21T01:50:16.921584",
-      "level": "INFO",
-      "message": "Radar scan: 10 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "02:32:32",
-      "datetime": "2026-10-21T02:32:32.141814",
-      "level": "INFO",
-      "message": "Radar scan: 10 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "07:02:45",
-      "datetime": "2026-10-21T07:02:45.389330",
-      "level": "INFO",
-      "message": "Radar scan: 10 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "13:04:17",
-      "datetime": "2026-10-21T13:04:17.591950",
-      "level": "INFO",
-      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
-    },
-    {
-      "timestamp": "13:04:25",
-      "datetime": "2026-10-21T13:04:25.444845",
-      "level": "SUCCESS",
-      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
-    },
-    {
-      "timestamp": "13:04:25",
-      "datetime": "2026-10-21T13:04:25.445663",
-      "level": "INFO",
-      "message": "Radar scan: 10 active jobs, 6 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "13:04:25",
-      "datetime": "2026-10-21T13:04:25.446220",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Intern, Product GTM & Impact Analytics - Marketplace, Quick Commerce' at Delivery Hero (ID: job-linkedin-4480773802)"
-    },
-    {
-      "timestamp": "13:04:25",
-      "datetime": "2026-10-21T13:04:25.449487",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV generated: resume_job-linkedin-4480773802.html"
-    },
-    {
-      "timestamp": "13:04:25",
-      "datetime": "2026-10-21T13:04:25.450159",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter generated: cover_letter_job-linkedin-4480773802.html"
-    },
-    {
-      "timestamp": "13:04:25",
-      "datetime": "2026-10-21T13:04:25.450959",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "13:04:25",
-      "datetime": "2026-10-21T13:04:25.454628",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked! Logged to applied_history.json for Delivery Hero."
-    },
-    {
-      "timestamp": "13:04:27",
-      "datetime": "2026-10-21T13:04:27.455536",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Network Planning Intern - Mandatory Internship (m/f/d) (m/f/d)' at J&T Express Germany GmbH (ID: job-linkedin-4480395003)"
-    },
-    {
-      "timestamp": "13:04:27",
-      "datetime": "2026-10-21T13:04:27.457822",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV generated: resume_job-linkedin-4480395003.html"
-    },
-    {
-      "timestamp": "13:04:27",
-      "datetime": "2026-10-21T13:04:27.458454",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter generated: cover_letter_job-linkedin-4480395003.html"
-    },
-    {
-      "timestamp": "13:04:27",
-      "datetime": "2026-10-21T13:04:27.459206",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "13:04:27",
-      "datetime": "2026-10-21T13:04:27.462619",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked! Logged to applied_history.json for J&T Express Germany GmbH."
-    },
-    {
-      "timestamp": "13:04:29",
-      "datetime": "2026-10-21T13:04:29.463509",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Data Scientist (Freelance, Berlin)' at Zero to One Search | Recruitment Agency (ID: job-linkedin-4478985465)"
-    },
-    {
-      "timestamp": "13:04:29",
-      "datetime": "2026-10-21T13:04:29.465719",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV generated: resume_job-linkedin-4478985465.html"
-    },
-    {
-      "timestamp": "13:04:29",
-      "datetime": "2026-10-21T13:04:29.466338",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter generated: cover_letter_job-linkedin-4478985465.html"
-    },
-    {
-      "timestamp": "13:04:29",
-      "datetime": "2026-10-21T13:04:29.467085",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "13:04:29",
-      "datetime": "2026-10-21T13:04:29.470591",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked! Logged to applied_history.json for Zero to One Search | Recruitment Agency."
-    },
-    {
-      "timestamp": "13:04:31",
-      "datetime": "2026-10-21T13:04:31.471521",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Data Engineer / ETL-Developer / Business Analyst m/w/d - remote - deutschlandweit' at 23DATA (ID: job-linkedin-4478693566)"
-    },
-    {
-      "timestamp": "13:04:31",
-      "datetime": "2026-10-21T13:04:31.473708",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV generated: resume_job-linkedin-4478693566.html"
-    },
-    {
-      "timestamp": "13:04:31",
-      "datetime": "2026-10-21T13:04:31.474326",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter generated: cover_letter_job-linkedin-4478693566.html"
-    },
-    {
-      "timestamp": "13:04:31",
-      "datetime": "2026-10-21T13:04:31.475057",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "13:04:31",
-      "datetime": "2026-10-21T13:04:31.478525",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked! Logged to applied_history.json for 23DATA."
-    },
-    {
       "timestamp": "13:04:33",
       "datetime": "2026-10-21T13:04:33.479427",
       "level": "INFO",
@@ -359,6 +191,174 @@
       "datetime": "2026-10-22T05:11:53.452064",
       "level": "INFO",
       "message": "Radar scan: 8 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "10:25:34",
+      "datetime": "2026-10-22T10:25:34.721501",
+      "level": "INFO",
+      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
+    },
+    {
+      "timestamp": "10:25:43",
+      "datetime": "2026-10-22T10:25:43.506306",
+      "level": "SUCCESS",
+      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
+    },
+    {
+      "timestamp": "10:25:43",
+      "datetime": "2026-10-22T10:25:43.507336",
+      "level": "INFO",
+      "message": "Radar scan: 10 active jobs, 6 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "10:25:43",
+      "datetime": "2026-10-22T10:25:43.507981",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Workingstudent B2C SEO & AI Search (x/f/m)' at Doctolib (ID: job-linkedin-4482460054)"
+    },
+    {
+      "timestamp": "10:25:51",
+      "datetime": "2026-10-22T10:25:51.424520",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4482460054.pdf"
+    },
+    {
+      "timestamp": "10:25:52",
+      "datetime": "2026-10-22T10:25:52.218648",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4482460054.pdf"
+    },
+    {
+      "timestamp": "10:25:52",
+      "datetime": "2026-10-22T10:25:52.219753",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "10:25:53",
+      "datetime": "2026-10-22T10:25:53.311513",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Doctolib."
+    },
+    {
+      "timestamp": "10:25:55",
+      "datetime": "2026-10-22T10:25:55.312534",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Werkstudent (m/w/d) Einkauf \u2013 Humanoide Robotik' at RoboService (ID: job-linkedin-4479423240)"
+    },
+    {
+      "timestamp": "10:25:56",
+      "datetime": "2026-10-22T10:25:56.540662",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4479423240.pdf"
+    },
+    {
+      "timestamp": "10:25:57",
+      "datetime": "2026-10-22T10:25:57.292001",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4479423240.pdf"
+    },
+    {
+      "timestamp": "10:25:57",
+      "datetime": "2026-10-22T10:25:57.293187",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "10:25:58",
+      "datetime": "2026-10-22T10:25:58.464536",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for RoboService."
+    },
+    {
+      "timestamp": "10:26:00",
+      "datetime": "2026-10-22T10:26:00.465559",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Praktikant Business Building & AI Automation (m/w/d) \u2013 Digital Education mit Impact' at Talentspring Academy (ID: job-linkedin-4470499368)"
+    },
+    {
+      "timestamp": "10:26:01",
+      "datetime": "2026-10-22T10:26:01.649993",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4470499368.pdf"
+    },
+    {
+      "timestamp": "10:26:02",
+      "datetime": "2026-10-22T10:26:02.457439",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4470499368.pdf"
+    },
+    {
+      "timestamp": "10:26:02",
+      "datetime": "2026-10-22T10:26:02.458591",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "10:26:03",
+      "datetime": "2026-10-22T10:26:03.633343",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Talentspring Academy."
+    },
+    {
+      "timestamp": "10:26:05",
+      "datetime": "2026-10-22T10:26:05.634297",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Working Student \u2013 Brand Activation | Marketing (m/f/d)' at FENYX (ID: job-linkedin-4479968504)"
+    },
+    {
+      "timestamp": "10:26:06",
+      "datetime": "2026-10-22T10:26:06.752015",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4479968504.pdf"
+    },
+    {
+      "timestamp": "10:26:07",
+      "datetime": "2026-10-22T10:26:07.544659",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4479968504.pdf"
+    },
+    {
+      "timestamp": "10:26:07",
+      "datetime": "2026-10-22T10:26:07.545868",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "10:26:08",
+      "datetime": "2026-10-22T10:26:08.684865",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for FENYX."
+    },
+    {
+      "timestamp": "10:26:10",
+      "datetime": "2026-10-22T10:26:10.685931",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Werkstudent Growth Marketing (m/w/d) - Schwerpunkt Social Media Management' at McMakler (ID: job-linkedin-4479871440)"
+    },
+    {
+      "timestamp": "10:26:11",
+      "datetime": "2026-10-22T10:26:11.831725",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4479871440.pdf"
+    },
+    {
+      "timestamp": "10:26:12",
+      "datetime": "2026-10-22T10:26:12.607863",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4479871440.pdf"
+    },
+    {
+      "timestamp": "10:26:12",
+      "datetime": "2026-10-22T10:26:12.609007",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "10:26:13",
+      "datetime": "2026-10-22T10:26:13.763835",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for McMakler."
     }
   ]
 }
