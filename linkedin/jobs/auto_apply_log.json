@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "13:04:33",
-      "datetime": "2026-10-21T13:04:33.479427",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Senior Data Scientist \u2014 Data Cloud Acceleration' at Zeta Global (ID: job-linkedin-4463514158)"
-    },
-    {
-      "timestamp": "13:04:33",
       "datetime": "2026-10-21T13:04:33.485596",
       "level": "SUCCESS",
       "message": "Tailored Europass CV generated: resume_job-linkedin-4463514158.html"
@@ -359,6 +353,12 @@
       "datetime": "2026-10-22T10:26:13.763835",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for McMakler."
+    },
+    {
+      "timestamp": "15:29:14",
+      "datetime": "2026-10-22T15:29:14.775899",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
     }
   ]
 }
