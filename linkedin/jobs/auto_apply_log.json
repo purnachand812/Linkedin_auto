@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "13:04:33",
-      "datetime": "2026-10-21T13:04:33.574340",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "13:04:33",
       "datetime": "2026-10-21T13:04:33.903484",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked! Logged to applied_history.json for Zeta Global."
@@ -357,6 +351,12 @@
     {
       "timestamp": "22:36:36",
       "datetime": "2026-10-22T22:36:36.141537",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "22:52:26",
+      "datetime": "2026-10-22T22:52:26.379160",
       "level": "INFO",
       "message": "Daily quota reached (5/5). Standing by until tomorrow."
     }
