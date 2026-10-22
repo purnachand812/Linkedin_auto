@@ -1,12 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "11:56:57",
-      "datetime": "2026-10-20T11:56:57.862320",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked! Logged to applied_history.json for Berlin Economics."
-    },
-    {
       "timestamp": "16:31:03",
       "datetime": "2026-10-20T16:31:03.257437",
       "level": "INFO",
@@ -359,6 +353,12 @@
       "datetime": "2026-10-21T22:54:00.677234",
       "level": "INFO",
       "message": "Daily quota reached (12/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "00:25:55",
+      "datetime": "2026-10-22T00:25:55.458359",
+      "level": "INFO",
+      "message": "Radar scan: 8 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
   ]
 }
