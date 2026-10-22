@@ -18,15 +18,15 @@
     "[18:10:16] \ud83d\ude80 Triggering automated publishing for Candidate #2: 'OpenClaw (Self-Hosted Personal AI Agent)' (EU Window: Evening Engineering Wrap)",
     "[18:10:16] \u274c Publishing failed for Candidate #2: LinkedIn account is not authorized. Please connect your LinkedIn account first."
   ],
-  "current_time_cet": "2026-10-22 15:29:14 CET",
+  "current_time_cet": "2026-10-22 19:23:28 CET",
   "is_eu_prime_time": false,
   "current_window": "Off-Peak / Monitoring",
-  "next_scheduled_drop": "Evening Engineering Wrap at 17:30 CET (~120m from now)",
+  "next_scheduled_drop": "Tomorrow Morning Standup (Prime) at 08:30 CET",
   "approved_queue_count": 6,
   "published_today": 0,
   "target_audience": "European Union (Berlin, Munich, Amsterdam, Paris, Zurich)",
   "auto_publish_enabled": true,
-  "last_heartbeat": "2026-10-22T15:29:14.780859",
+  "last_heartbeat": "2026-10-22T19:23:28.544097",
   "last_activity": "[18:10:16] \u274c Publishing failed for Candidate #2: LinkedIn account is not authorized. Please connect your LinkedIn account first.",
   "auto_apply_telemetry": {
     "enabled": true,

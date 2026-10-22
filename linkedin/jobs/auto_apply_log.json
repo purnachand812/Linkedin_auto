@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "13:04:33",
-      "datetime": "2026-10-21T13:04:33.485596",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV generated: resume_job-linkedin-4463514158.html"
-    },
-    {
-      "timestamp": "13:04:33",
       "datetime": "2026-10-21T13:04:33.486452",
       "level": "SUCCESS",
       "message": "Tailored Cover Letter generated: cover_letter_job-linkedin-4463514158.html"
@@ -357,6 +351,12 @@
     {
       "timestamp": "15:29:14",
       "datetime": "2026-10-22T15:29:14.775899",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "19:23:28",
+      "datetime": "2026-10-22T19:23:28.539151",
       "level": "INFO",
       "message": "Daily quota reached (5/5). Standing by until tomorrow."
     }
