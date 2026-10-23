@@ -41,13 +41,16 @@
       "topic": "Agent S3 (Desktop GUI Computer-Use Agent)",
       "beat": "AI Hardware & Computer-Use Systems",
       "score": 89,
-      "status": "APPROVED",
+      "status": "PUBLISHED",
       "format": "image-attached",
       "replaces": "Legacy Enterprise RPA software (UiPath / Automation Anywhere)",
       "cost": "Free code; $0.20-$1.00 per workflow in multimodal vision tokens",
       "test_status": "Approved for Autonomous Publishing",
       "file": "linkedin/queue/candidate_3_agent_s3.md",
-      "visual": "linkedin/visuals/visual_agent_s3.png"
+      "visual": "linkedin/visuals/visual_agent_s3.png",
+      "published_at": "2026-10-23T08:59:15Z",
+      "linkedin_post_id": "urn:li:share:7519321529579511808",
+      "linkedin_post_url": "https://www.linkedin.com/feed/update/urn:li:share:7519321529579511808/"
     },
     {
       "id": 4,
