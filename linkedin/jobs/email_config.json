@@ -8,7 +8,7 @@
   "smtp_password": "btmt xaft qptp dlii",
   "send_hour_cet": 19,
   "refresh_interval_hours": 20,
-  "last_sent_date": "2026-10-22",
+  "last_sent_date": "2026-10-23",
   "last_status": "SENT_VIA_SMTP",
-  "last_report_file": "/reports/daily_report_2026-10-22.html"
+  "last_report_file": "/reports/daily_report_2026-10-23.html"
 }

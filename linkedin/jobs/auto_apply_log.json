@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "17:33:31",
-      "datetime": "2026-10-21T17:33:31.510950",
-      "level": "INFO",
-      "message": "Dashboard operator triggered instant Auto-Apply batch run."
-    },
-    {
-      "timestamp": "17:33:31",
       "datetime": "2026-10-21T17:33:31.534481",
       "level": "INFO",
       "message": "Radar scan: 10 active jobs, 1 meeting freshness (<=7d) & criteria."
@@ -359,6 +353,12 @@
       "datetime": "2026-10-23T01:12:06.728891",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for Lucid Labs."
+    },
+    {
+      "timestamp": "02:33:55",
+      "datetime": "2026-10-23T02:33:55.847848",
+      "level": "INFO",
+      "message": "Radar scan: 10 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
   ]
 }
