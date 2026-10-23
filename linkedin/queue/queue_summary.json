@@ -25,13 +25,16 @@
       "topic": "OpenClaw (Self-Hosted Personal AI Agent)",
       "beat": "Free & Open-Source AI Agent / Local AI",
       "score": 92,
-      "status": "APPROVED",
+      "status": "PUBLISHED",
       "format": "image-attached",
       "replaces": "Zapier ($20/mo) / Make Pro & Cloud Assistant SaaS",
       "cost": "Free MIT code; 30W-60W idle electricity on home hardware",
       "test_status": "Approved for Autonomous Publishing",
       "file": "linkedin/queue/candidate_2_openclaw.md",
-      "visual": "linkedin/visuals/visual_openclaw.png"
+      "visual": "linkedin/visuals/visual_openclaw.png",
+      "published_at": "2026-10-23T08:30:58Z",
+      "linkedin_post_id": "urn:li:share:7519314405692428289",
+      "linkedin_post_url": "https://www.linkedin.com/feed/update/urn:li:share:7519314405692428289/"
     },
     {
       "id": 3,

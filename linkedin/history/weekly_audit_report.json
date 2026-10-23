@@ -1,6 +1,6 @@
 {
-  "audit_period": "2026-10-14 to 2026-10-21",
-  "generated_at": "2026-10-21 19:57:53 CET",
+  "audit_period": "2026-10-16 to 2026-10-23",
+  "generated_at": "2026-10-23 10:31:48 CET",
   "data_integrity": "100% Verified Telemetry - Zero Synthetic Estimates",
   "profile_snapshot": {
     "name": "Purnachandra Madhukar Dandu",
@@ -11,7 +11,7 @@
     "connections": "500+",
     "open_to_work": "Recruiters only (Germany +3 more | On-site, Hybrid, Remote)"
   },
-  "total_posts_analyzed": 4,
+  "total_posts_analyzed": 5,
   "total_impressions": 273,
   "total_interactions": 5,
   "overall_engagement_rate": "1.83%",
@@ -70,10 +70,30 @@
   "drafts_auto_optimized": 0,
   "posts": [
     {
+      "candidate_id": 2,
+      "topic": "OpenClaw (Self-Hosted Personal AI Agent)",
+      "published_at": "2026-10-23T08:30:58Z",
+      "age_hours": 2.0,
+      "day_of_week": "Friday",
+      "is_weekend": false,
+      "has_image": true,
+      "has_link_in_body": false,
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7519314405692428289/",
+      "status": "ACCUMULATING",
+      "notes": "Fresh drop; awaiting first 24h indexing cycle.",
+      "metrics": {
+        "impressions": 0,
+        "reactions": 0,
+        "comments": 0,
+        "reposts": 0,
+        "engagement_rate": 0.0
+      }
+    },
+    {
       "candidate_id": 9,
       "topic": "Crawl4AI (Self-Hosted LLM Web Scraper vs Firecrawl)",
       "published_at": "2026-10-21T16:18:33Z",
-      "age_hours": 3.7,
+      "age_hours": 42.2,
       "day_of_week": "Wednesday",
       "is_weekend": false,
       "has_image": true,
@@ -93,7 +113,7 @@
       "candidate_id": 5,
       "topic": "Aider (Git-Aware Terminal AI Pair Programmer)",
       "published_at": "2026-10-17T06:31:02Z",
-      "age_hours": 109.4,
+      "age_hours": 148.0,
       "day_of_week": "Saturday",
       "is_weekend": true,
       "has_image": true,
@@ -113,7 +133,7 @@
       "candidate_id": 1,
       "topic": "Cline (VS Code MCP Extension)",
       "published_at": "2026-10-16T19:33:48Z",
-      "age_hours": 120.4,
+      "age_hours": 159.0,
       "day_of_week": "Friday",
       "is_weekend": false,
       "has_image": true,
@@ -133,7 +153,7 @@
       "candidate_id": 8,
       "topic": "Pydantic AI (Typed Dependency Injection vs Prompt Guessing)",
       "published_at": "2026-10-16T19:31:07Z",
-      "age_hours": 120.4,
+      "age_hours": 159.0,
       "day_of_week": "Friday",
       "is_weekend": false,
       "has_image": true,

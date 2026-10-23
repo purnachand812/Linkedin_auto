@@ -25,9 +25,9 @@ ANALYTICS_FILE = HISTORY_DIR / "analytics_matrix.json"
 # 2. Tech Lunch & Coffee Catchup: 12:15 - 13:15 CET
 # 3. End of Day Tech Wrapup: 17:30 - 18:30 CET
 EU_PUBLISHING_WINDOWS = [
-    {"name": "Morning Standup (Prime)", "start_hour": 8, "start_min": 30, "end_hour": 9, "end_min": 30, "target": "Daily flagship technical breakdown"},
-    {"name": "Midday Tech Catchup", "start_hour": 12, "start_min": 15, "end_hour": 13, "end_min": 15, "target": "Practical tool comparison or architecture review"},
-    {"name": "Evening Engineering Wrap", "start_hour": 17, "start_min": 30, "end_hour": 18, "end_min": 30, "target": "Research thesis, hallucination probing, deep dive"}
+    {"name": "Morning Standup (Prime)", "start_hour": 8, "start_min": 0, "end_hour": 11, "end_min": 30, "target": "Daily flagship technical breakdown"},
+    {"name": "Midday Tech Catchup", "start_hour": 12, "start_min": 0, "end_hour": 15, "end_min": 0, "target": "Practical tool comparison or architecture review"},
+    {"name": "Evening Engineering Wrap", "start_hour": 16, "start_min": 30, "end_hour": 19, "end_min": 30, "target": "Research thesis, hallucination probing, deep dive"}
 ]
 
 # --- EU Audience Resonance Keywords ---
@@ -56,10 +56,15 @@ EU_RESONANCE_PILLARS = {
 }
 
 def get_berlin_now():
-    """Returns the current datetime in Europe/Berlin (CET/CEST, UTC+2 during DST, UTC+1 standard)."""
-    # System local time in Berlin or compute from UTC
-    # Since the machine runs in CET (+02:00 / +01:00), use local time
-    return datetime.now()
+    """Returns the current datetime in Europe/Berlin (CET/CEST), timezone-aware converted to naive CET."""
+    try:
+        from zoneinfo import ZoneInfo
+        return datetime.now(ZoneInfo("Europe/Berlin")).replace(tzinfo=None)
+    except Exception:
+        utc_now = datetime.now(timezone.utc)
+        is_dst = 3 <= utc_now.month <= 10
+        offset_hours = 2 if is_dst else 1
+        return (utc_now + timedelta(hours=offset_hours)).replace(tzinfo=None)
 
 def is_eu_prime_time(dt=None):
     """

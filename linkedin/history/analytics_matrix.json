@@ -1,9 +1,21 @@
 {
-  "updated_at": "2026-10-21T19:57:53.180323",
-  "total_posts": 4,
+  "updated_at": "2026-10-23T10:31:48.748926",
+  "total_posts": 5,
   "target_region": "European Union (CET/CEST)",
   "data_integrity": "Verified Ground Truth",
   "posts_analytics": [
+    {
+      "candidate_id": 2,
+      "topic": "OpenClaw (Self-Hosted Personal AI Agent)",
+      "published_at": "2026-10-23T08:30:58Z",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7519314405692428289/",
+      "impressions": 0,
+      "reactions": 0,
+      "comments": 0,
+      "reposts": 0,
+      "status": "ACCUMULATING",
+      "notes": "Fresh drop; awaiting first 24h indexing cycle."
+    },
     {
       "candidate_id": 9,
       "topic": "Crawl4AI (Self-Hosted LLM Web Scraper vs Firecrawl)",
