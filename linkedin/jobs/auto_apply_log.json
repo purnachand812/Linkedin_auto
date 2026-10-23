@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "10:24:10",
-      "datetime": "2026-10-23T10:24:10.897158",
-      "level": "SUCCESS",
-      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
-    },
-    {
-      "timestamp": "10:24:10",
       "datetime": "2026-10-23T10:24:10.936557",
       "level": "INFO",
       "message": "Radar scan: 10 active jobs, 8 meeting freshness (<=7d) & criteria."
@@ -357,6 +351,12 @@
     {
       "timestamp": "11:55:07",
       "datetime": "2026-10-23T11:55:07.246113",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "16:27:43",
+      "datetime": "2026-10-23T16:27:43.496931",
       "level": "INFO",
       "message": "Daily quota reached (5/5). Standing by until tomorrow."
     }
