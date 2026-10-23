@@ -1,5 +1,24 @@
 [
   {
+    "job_id": "job-linkedin-4477098007",
+    "title": "Werkstudent:in Unternehmenskommunikation (m/w/d)",
+    "company": "Lucid Labs",
+    "location": "Berlin, Berlin, Germany",
+    "salary_range": "\u20ac16 - \u20ac22 / hr",
+    "match_score": 89,
+    "applied_at": "2026-10-23T01:12:06.727151",
+    "job_url": "https://www.linkedin.com/jobs/view/4477098007/",
+    "resume_url": "/resumes/resume_job-linkedin-4477098007.pdf",
+    "mode": "AUTONOMOUS_DAEMON",
+    "recruiter_outreach_note": "Hi Hiring Team, I saw Lucid Labs's opening for Werkstudent:in Unternehmenskommunikation (m/w/d) in Berlin, Berlin, Germany. I am an MSc Data Science student based in Berlin researching hallucination attribution in multi-step LLM agent trajectories. I've also built typed dependency injection middlewares using Pydantic AI and FastAPI. I submitted an application and wanted to share my technical portfolio directly. Happy to connect.",
+    "status": "APPLIED_CONFIRMED",
+    "cover_letter_url": "/resumes/cover_letter_job-linkedin-4477098007.pdf",
+    "resume_pdf_url": "/resumes/resume_job-linkedin-4477098007.pdf",
+    "cover_letter_pdf_url": "/resumes/cover_letter_job-linkedin-4477098007.pdf",
+    "resume_html_url": "/resumes/resume_job-linkedin-4477098007.html",
+    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4477098007.html"
+  },
+  {
     "job_id": "job-linkedin-4479871440",
     "title": "Werkstudent Growth Marketing (m/w/d) - Schwerpunkt Social Media Management",
     "company": "McMakler",

@@ -1,42 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "13:04:33",
-      "datetime": "2026-10-21T13:04:33.903484",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked! Logged to applied_history.json for Zeta Global."
-    },
-    {
-      "timestamp": "14:16:07",
-      "datetime": "2026-10-21T14:16:07.494209",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "14:18:52",
-      "datetime": "2026-10-21T14:18:52.775949",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "16:45:52",
-      "datetime": "2026-10-21T16:45:52.350580",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "14:55:51",
-      "datetime": "2026-10-21T14:55:51.263151",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "15:12:18",
-      "datetime": "2026-10-21T15:12:18.239516",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
       "timestamp": "17:33:31",
       "datetime": "2026-10-21T17:33:31.510950",
       "level": "INFO",
@@ -359,6 +323,42 @@
       "datetime": "2026-10-22T22:52:26.379160",
       "level": "INFO",
       "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "01:11:57",
+      "datetime": "2026-10-23T01:11:57.124217",
+      "level": "INFO",
+      "message": "Radar scan: 10 active jobs, 1 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "01:11:57",
+      "datetime": "2026-10-23T01:11:57.124707",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Werkstudent:in Unternehmenskommunikation (m/w/d)' at Lucid Labs (ID: job-linkedin-4477098007)"
+    },
+    {
+      "timestamp": "01:12:05",
+      "datetime": "2026-10-23T01:12:05.163551",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4477098007.pdf"
+    },
+    {
+      "timestamp": "01:12:05",
+      "datetime": "2026-10-23T01:12:05.791921",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4477098007.pdf"
+    },
+    {
+      "timestamp": "01:12:05",
+      "datetime": "2026-10-23T01:12:05.792821",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "01:12:06",
+      "datetime": "2026-10-23T01:12:06.728891",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Lucid Labs."
     }
   ]
 }
