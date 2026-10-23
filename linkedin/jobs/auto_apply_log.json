@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "17:33:31",
-      "datetime": "2026-10-21T17:33:31.534481",
-      "level": "INFO",
-      "message": "Radar scan: 10 active jobs, 1 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "17:33:31",
       "datetime": "2026-10-21T17:33:31.568205",
       "level": "INFO",
       "message": "Initiating autonomous application: 'Praktikant Founders Associate (m/w/d)' at meinphysio+ (ID: job-linkedin-4477350780)"
@@ -357,6 +351,12 @@
     {
       "timestamp": "02:33:55",
       "datetime": "2026-10-23T02:33:55.847848",
+      "level": "INFO",
+      "message": "Radar scan: 10 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "06:16:31",
+      "datetime": "2026-10-23T06:16:31.100156",
       "level": "INFO",
       "message": "Radar scan: 10 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
