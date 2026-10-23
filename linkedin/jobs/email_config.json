@@ -5,10 +5,10 @@
   "smtp_port": 587,
   "use_tls": true,
   "smtp_user": "purnachand0812@gmail.com",
-  "smtp_password": "",
+  "smtp_password": "btmt xaft qptp dlii",
   "send_hour_cet": 19,
   "refresh_interval_hours": 20,
-  "last_sent_date": "2026-10-21",
-  "last_status": "AWAITING_SMTP_CONFIG",
-  "last_report_file": "/reports/daily_report_2026-10-21.html"
+  "last_sent_date": "2026-10-23",
+  "last_status": "SENT_VIA_SMTP",
+  "last_report_file": "/reports/daily_report_2026-10-23.html"
 }
