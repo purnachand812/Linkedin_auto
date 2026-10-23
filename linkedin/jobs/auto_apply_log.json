@@ -1,156 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "13:04:31",
-      "datetime": "2026-10-21T13:04:31.474326",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter generated: cover_letter_job-linkedin-4478693566.html"
-    },
-    {
-      "timestamp": "13:04:31",
-      "datetime": "2026-10-21T13:04:31.475057",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "13:04:31",
-      "datetime": "2026-10-21T13:04:31.478525",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked! Logged to applied_history.json for 23DATA."
-    },
-    {
-      "timestamp": "13:04:33",
-      "datetime": "2026-10-21T13:04:33.479427",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Senior Data Scientist \u2014 Data Cloud Acceleration' at Zeta Global (ID: job-linkedin-4463514158)"
-    },
-    {
-      "timestamp": "13:04:33",
-      "datetime": "2026-10-21T13:04:33.485596",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV generated: resume_job-linkedin-4463514158.html"
-    },
-    {
-      "timestamp": "13:04:33",
-      "datetime": "2026-10-21T13:04:33.486452",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter generated: cover_letter_job-linkedin-4463514158.html"
-    },
-    {
-      "timestamp": "13:04:33",
-      "datetime": "2026-10-21T13:04:33.574340",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "13:04:33",
-      "datetime": "2026-10-21T13:04:33.903484",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked! Logged to applied_history.json for Zeta Global."
-    },
-    {
-      "timestamp": "14:16:07",
-      "datetime": "2026-10-21T14:16:07.494209",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "14:18:52",
-      "datetime": "2026-10-21T14:18:52.775949",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "16:45:52",
-      "datetime": "2026-10-21T16:45:52.350580",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "14:55:51",
-      "datetime": "2026-10-21T14:55:51.263151",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "15:12:18",
-      "datetime": "2026-10-21T15:12:18.239516",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "17:33:31",
-      "datetime": "2026-10-21T17:33:31.510950",
-      "level": "INFO",
-      "message": "Dashboard operator triggered instant Auto-Apply batch run."
-    },
-    {
-      "timestamp": "17:33:31",
-      "datetime": "2026-10-21T17:33:31.534481",
-      "level": "INFO",
-      "message": "Radar scan: 10 active jobs, 1 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "17:33:31",
-      "datetime": "2026-10-21T17:33:31.568205",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Praktikant Founders Associate (m/w/d)' at meinphysio+ (ID: job-linkedin-4477350780)"
-    },
-    {
-      "timestamp": "17:33:31",
-      "datetime": "2026-10-21T17:33:31.618215",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV generated: resume_job-linkedin-4477350780.html"
-    },
-    {
-      "timestamp": "17:33:31",
-      "datetime": "2026-10-21T17:33:31.645740",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter generated: cover_letter_job-linkedin-4477350780.html"
-    },
-    {
-      "timestamp": "17:33:31",
-      "datetime": "2026-10-21T17:33:31.673740",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "17:33:31",
-      "datetime": "2026-10-21T17:33:31.760418",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked! Logged to applied_history.json for meinphysio+."
-    },
-    {
-      "timestamp": "18:18:33",
-      "datetime": "2026-10-21T18:18:33.315333",
-      "level": "INFO",
-      "message": "Daily quota reached (6/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "16:20:49",
-      "datetime": "2026-10-21T16:20:49.011143",
-      "level": "INFO",
-      "message": "Daily quota reached (6/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "16:28:25",
-      "datetime": "2026-10-21T16:28:25.669692",
-      "level": "INFO",
-      "message": "Daily quota reached (6/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "18:10:16",
-      "datetime": "2026-10-21T18:10:16.366748",
-      "level": "INFO",
-      "message": "Daily quota reached (6/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "19:52:16",
-      "datetime": "2026-10-21T19:52:16.526377",
-      "level": "INFO",
-      "message": "Daily quota reached (6/5). Standing by until tomorrow."
-    },
-    {
       "timestamp": "19:57:53",
       "datetime": "2026-10-21T19:57:53.178447",
       "level": "INFO",
@@ -357,6 +207,156 @@
     {
       "timestamp": "10:31:48",
       "datetime": "2026-10-23T10:31:48.723813",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "10:32:48",
+      "datetime": "2026-10-23T10:32:48.958346",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "10:33:49",
+      "datetime": "2026-10-23T10:33:49.129759",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "10:34:49",
+      "datetime": "2026-10-23T10:34:49.260580",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "10:35:49",
+      "datetime": "2026-10-23T10:35:49.328647",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "10:36:49",
+      "datetime": "2026-10-23T10:36:49.394829",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "10:37:49",
+      "datetime": "2026-10-23T10:37:49.591203",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "10:38:49",
+      "datetime": "2026-10-23T10:38:49.750151",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "10:39:49",
+      "datetime": "2026-10-23T10:39:49.914842",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "10:40:49",
+      "datetime": "2026-10-23T10:40:49.979930",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "10:41:50",
+      "datetime": "2026-10-23T10:41:50.148657",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "10:42:50",
+      "datetime": "2026-10-23T10:42:50.214807",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "10:43:50",
+      "datetime": "2026-10-23T10:43:50.327214",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "10:44:50",
+      "datetime": "2026-10-23T10:44:50.440797",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "10:45:50",
+      "datetime": "2026-10-23T10:45:50.511035",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "10:46:50",
+      "datetime": "2026-10-23T10:46:50.600663",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "10:47:50",
+      "datetime": "2026-10-23T10:47:50.699971",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "10:48:50",
+      "datetime": "2026-10-23T10:48:50.877983",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "10:49:51",
+      "datetime": "2026-10-23T10:49:51.009510",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "10:50:51",
+      "datetime": "2026-10-23T10:50:51.137941",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "10:51:51",
+      "datetime": "2026-10-23T10:51:51.261736",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "10:52:51",
+      "datetime": "2026-10-23T10:52:51.438212",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "10:53:51",
+      "datetime": "2026-10-23T10:53:51.575860",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "10:54:51",
+      "datetime": "2026-10-23T10:54:51.710979",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "10:55:51",
+      "datetime": "2026-10-23T10:55:51.820436",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "10:56:51",
+      "datetime": "2026-10-23T10:56:51.950458",
       "level": "INFO",
       "message": "Daily quota reached (5/5). Standing by until tomorrow."
     }
