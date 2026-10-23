@@ -25,15 +25,15 @@
     "[08:59:15] \ud83c\udf89 Successfully published Candidate #3! Live URL: https://www.linkedin.com/feed/update/urn:li:share:7519321529579511808/",
     "[08:59:15] \ud83d\udcac Generated 2 contextual community reply templates for Candidate #3"
   ],
-  "current_time_cet": "2026-10-23 18:27:43 CET",
-  "is_eu_prime_time": true,
-  "current_window": "Evening Engineering Wrap",
+  "current_time_cet": "2026-10-23 22:02:08 CET",
+  "is_eu_prime_time": false,
+  "current_window": "Off-Peak / Monitoring",
   "next_scheduled_drop": "Tomorrow Morning Standup (Prime) at 08:00 CET",
   "approved_queue_count": 4,
   "published_today": 2,
   "target_audience": "European Union (Berlin, Munich, Amsterdam, Paris, Zurich)",
   "auto_publish_enabled": true,
-  "last_heartbeat": "2026-10-23T16:27:43.500036",
+  "last_heartbeat": "2026-10-23T20:02:08.962983",
   "last_activity": "[08:59:15] \ud83d\udcac Generated 2 contextual community reply templates for Candidate #3",
   "auto_apply_telemetry": {
     "enabled": true,
@@ -42,10 +42,10 @@
     "status": "RUNNING"
   },
   "weekly_audit_telemetry": {
-    "rolling_7d_impressions": 273,
-    "rolling_7d_interactions": 5,
-    "rolling_7d_engagement_rate": "1.83%",
-    "top_performing_post": "Cline (VS Code MCP Extension)",
+    "rolling_7d_impressions": 85,
+    "rolling_7d_interactions": 1,
+    "rolling_7d_engagement_rate": "1.18%",
+    "top_performing_post": "Aider (Git-Aware Terminal AI Pair Programmer)",
     "winning_formula": "Canva Contrast Infographic + Clean Body + Comment Link + Weekday CET"
   }
 }

@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-23T16:27:43.498736",
-  "total_posts": 6,
+  "updated_at": "2026-10-23T20:02:08.960866",
+  "total_posts": 4,
   "target_region": "European Union (CET/CEST)",
   "data_integrity": "Verified Ground Truth",
   "posts_analytics": [
@@ -51,30 +51,6 @@
       "reposts": 0,
       "status": "VERIFIED",
       "notes": "Saturday European morning drop (08:31 CEST). Weekend B2B lower dwell window; raw link in body."
-    },
-    {
-      "candidate_id": 1,
-      "topic": "Cline (VS Code MCP Extension)",
-      "published_at": "2026-10-16T19:33:48Z",
-      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7516944499625963520/",
-      "impressions": 188,
-      "reactions": 4,
-      "comments": 0,
-      "reposts": 0,
-      "status": "VERIFIED",
-      "notes": "Friday evening European drop (21:33 CEST). Top performer of the rolling 7-day period."
-    },
-    {
-      "candidate_id": 8,
-      "topic": "Pydantic AI (Typed Dependency Injection vs Prompt Guessing)",
-      "published_at": "2026-10-16T19:31:07Z",
-      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7516943821306372096/",
-      "impressions": 0,
-      "reactions": 0,
-      "comments": 0,
-      "reposts": 0,
-      "status": "ACCUMULATING",
-      "notes": "Fresh drop; awaiting first 24h indexing cycle."
     }
   ]
 }

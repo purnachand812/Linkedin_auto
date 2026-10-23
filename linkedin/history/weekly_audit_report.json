@@ -1,6 +1,6 @@
 {
   "audit_period": "2026-10-16 to 2026-10-23",
-  "generated_at": "2026-10-23 16:27:43 CET",
+  "generated_at": "2026-10-23 20:02:08 CET",
   "data_integrity": "100% Verified Telemetry - Zero Synthetic Estimates",
   "profile_snapshot": {
     "name": "Purnachandra Madhukar Dandu",
@@ -11,11 +11,11 @@
     "connections": "500+",
     "open_to_work": "Recruiters only (Germany +3 more | On-site, Hybrid, Remote)"
   },
-  "total_posts_analyzed": 6,
-  "total_impressions": 273,
-  "total_interactions": 5,
-  "overall_engagement_rate": "1.83%",
-  "top_performing_post": "Cline (VS Code MCP Extension)",
+  "total_posts_analyzed": 4,
+  "total_impressions": 85,
+  "total_interactions": 1,
+  "overall_engagement_rate": "1.18%",
+  "top_performing_post": "Aider (Git-Aware Terminal AI Pair Programmer)",
   "winning_factors": [
     {
       "factor": "Contrarian Financial Hooks (Tool Replacement vs SaaS)",
@@ -73,7 +73,7 @@
       "candidate_id": 3,
       "topic": "Agent S3 (Desktop GUI Computer-Use Agent)",
       "published_at": "2026-10-23T08:59:15Z",
-      "age_hours": 7.5,
+      "age_hours": 11.0,
       "day_of_week": "Friday",
       "is_weekend": false,
       "has_image": true,
@@ -93,7 +93,7 @@
       "candidate_id": 2,
       "topic": "OpenClaw (Self-Hosted Personal AI Agent)",
       "published_at": "2026-10-23T08:30:58Z",
-      "age_hours": 7.9,
+      "age_hours": 11.5,
       "day_of_week": "Friday",
       "is_weekend": false,
       "has_image": true,
@@ -113,7 +113,7 @@
       "candidate_id": 9,
       "topic": "Crawl4AI (Self-Hosted LLM Web Scraper vs Firecrawl)",
       "published_at": "2026-10-21T16:18:33Z",
-      "age_hours": 48.2,
+      "age_hours": 51.7,
       "day_of_week": "Wednesday",
       "is_weekend": false,
       "has_image": true,
@@ -133,7 +133,7 @@
       "candidate_id": 5,
       "topic": "Aider (Git-Aware Terminal AI Pair Programmer)",
       "published_at": "2026-10-17T06:31:02Z",
-      "age_hours": 153.9,
+      "age_hours": 157.5,
       "day_of_week": "Saturday",
       "is_weekend": true,
       "has_image": true,
@@ -147,46 +147,6 @@
         "comments": 0,
         "reposts": 0,
         "engagement_rate": 1.2
-      }
-    },
-    {
-      "candidate_id": 1,
-      "topic": "Cline (VS Code MCP Extension)",
-      "published_at": "2026-10-16T19:33:48Z",
-      "age_hours": 164.9,
-      "day_of_week": "Friday",
-      "is_weekend": false,
-      "has_image": true,
-      "has_link_in_body": true,
-      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7516944499625963520/",
-      "status": "VERIFIED",
-      "notes": "Friday evening European drop (21:33 CEST). Top performer of the rolling 7-day period.",
-      "metrics": {
-        "impressions": 188,
-        "reactions": 4,
-        "comments": 0,
-        "reposts": 0,
-        "engagement_rate": 2.13
-      }
-    },
-    {
-      "candidate_id": 8,
-      "topic": "Pydantic AI (Typed Dependency Injection vs Prompt Guessing)",
-      "published_at": "2026-10-16T19:31:07Z",
-      "age_hours": 164.9,
-      "day_of_week": "Friday",
-      "is_weekend": false,
-      "has_image": true,
-      "has_link_in_body": true,
-      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7516943821306372096/",
-      "status": "ACCUMULATING",
-      "notes": "Fresh drop; awaiting first 24h indexing cycle.",
-      "metrics": {
-        "impressions": 0,
-        "reactions": 0,
-        "comments": 0,
-        "reposts": 0,
-        "engagement_rate": 0.0
       }
     }
   ]
