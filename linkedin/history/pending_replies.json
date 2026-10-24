@@ -1,6 +1,20 @@
 {
   "pending": [
     {
+      "candidate_id": 10,
+      "topic": "FastMCP (3-Line Typed Model Context Protocol Servers)",
+      "scenario": "Technical inquiry about production reliability / benchmarks",
+      "suggested_reply": "Good callout. In practice, the primary constraint isn't the framework wrapper, but token latency and context drift over multi-step runs. For production, sandboxing tool execution and enforcing strict schema validation upfront prevents 80% of edge case failures.",
+      "created_at": "2026-10-24T11:50:49.875781"
+    },
+    {
+      "candidate_id": 10,
+      "topic": "FastMCP (3-Line Typed Model Context Protocol Servers)",
+      "scenario": "Comparison with closed commercial alternatives",
+      "suggested_reply": "The biggest delta is privacy and infrastructure lock-in. Self-hosting this on European bare-metal (like Hetzner or local Ollama) costs $0 in SaaS license overhead and guarantees your internal code doesn't leave your network perimeter.",
+      "created_at": "2026-10-24T11:50:49.875787"
+    },
+    {
       "candidate_id": 4,
       "topic": "MarkItDown (Document to LLM Markdown Converter)",
       "scenario": "Technical inquiry about production reliability / benchmarks",

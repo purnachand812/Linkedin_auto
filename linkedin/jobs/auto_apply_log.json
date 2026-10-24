@@ -1,12 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "10:33:49",
-      "datetime": "2026-10-23T10:33:49.129759",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
       "timestamp": "10:34:49",
       "datetime": "2026-10-23T10:34:49.260580",
       "level": "INFO",
@@ -359,6 +353,12 @@
       "datetime": "2026-10-24T06:52:32.581213",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for Axolabs."
+    },
+    {
+      "timestamp": "11:50:49",
+      "datetime": "2026-10-24T11:50:49.876707",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
     }
   ]
 }
