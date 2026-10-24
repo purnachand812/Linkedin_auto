@@ -42,7 +42,6 @@ The library runs locally with zero API dependencies for standard text documents,
 I haven't tested this on complex multi-page financial tables yet, but for Python developers building local RAG pipelines under an MIT license, it is worth adding to your preprocessing stack.
 
 Full open-source repository: github.com/microsoft/markitdown
-(Direct link pinned in first comment)
 
 ---
 

@@ -52,7 +52,7 @@ Free MIT code means $0 software licensing costs. Your only expense is the standa
 
 I haven't deployed this in a production multi-agent swarm yet, but for Python developers tired of fighting bloated agent frameworks, it feels like actual software engineering.
 
-Repo: https://github.com/pydantic/pydantic-ai
+Full open-source repository: github.com/pydantic/pydantic-ai
 
 ---
 

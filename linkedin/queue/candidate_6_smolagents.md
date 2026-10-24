@@ -48,7 +48,7 @@ I haven't tested this on a production multi-agent deployment yet, but for develo
 
 Don't give an experimental agent your production credentials. Sandbox it first.
 
-Repo: https://github.com/huggingface/smolagents
+Full open-source repository: github.com/huggingface/smolagents
 
 ---
 

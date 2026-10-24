@@ -51,7 +51,6 @@ Free MIT code means $0 SaaS subscription bills, but you must provision your own 
 Don't deploy experimental telemetry to production without data retention policies. Sandbox it first.
 
 Full open-source repository: github.com/langfuse/langfuse
-(Docker Compose configuration and documentation in first comment)
 
 #Python #AI #DevOps #Docker #OpenSource #DataEngineering
 

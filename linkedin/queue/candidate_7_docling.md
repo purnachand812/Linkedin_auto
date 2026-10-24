@@ -45,7 +45,7 @@ Free MIT code means $0 software licensing costs, but if you process 10,000 pages
 
 I haven't benchmarked this on an enterprise document corpus yet, but for anyone building local RAG pipelines on messy real-world PDFs, the repo is worth testing.
 
-Repo: https://github.com/DS4SD/docling
+Full open-source repository: github.com/DS4SD/docling
 
 ---
 

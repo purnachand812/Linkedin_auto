@@ -25,15 +25,15 @@
     "[08:59:15] \ud83c\udf89 Successfully published Candidate #3! Live URL: https://www.linkedin.com/feed/update/urn:li:share:7519321529579511808/",
     "[08:59:15] \ud83d\udcac Generated 2 contextual community reply templates for Candidate #3"
   ],
-  "current_time_cet": "2026-10-23 10:59:14 CET",
-  "is_eu_prime_time": true,
-  "current_window": "Morning Standup (Prime)",
-  "next_scheduled_drop": "Midday Tech Catchup at 12:00 CET (~60m from now)",
-  "approved_queue_count": 5,
-  "published_today": 1,
+  "current_time_cet": "2026-10-24 19:54:36 CET",
+  "is_eu_prime_time": false,
+  "current_window": "Off-Peak / Monitoring",
+  "next_scheduled_drop": "Tomorrow Morning Standup (Prime) at 08:30 CET",
+  "approved_queue_count": 4,
+  "published_today": 0,
   "target_audience": "European Union (Berlin, Munich, Amsterdam, Paris, Zurich)",
   "auto_publish_enabled": true,
-  "last_heartbeat": "2026-10-23T08:59:15.550249",
+  "last_heartbeat": "2026-10-24T19:54:36.870090",
   "last_activity": "[08:59:15] \ud83d\udcac Generated 2 contextual community reply templates for Candidate #3",
   "auto_apply_telemetry": {
     "enabled": true,
@@ -42,10 +42,10 @@
     "status": "RUNNING"
   },
   "weekly_audit_telemetry": {
-    "rolling_7d_impressions": 273,
-    "rolling_7d_interactions": 5,
-    "rolling_7d_engagement_rate": "1.83%",
-    "top_performing_post": "Cline (VS Code MCP Extension)",
+    "rolling_7d_impressions": 2,
+    "rolling_7d_interactions": 0,
+    "rolling_7d_engagement_rate": "0.0%",
+    "top_performing_post": "Crawl4AI (Self-Hosted LLM Web Scraper vs Firecrawl)",
     "winning_formula": "Canva Contrast Infographic + Clean Body + Comment Link + Weekday CET"
   }
 }

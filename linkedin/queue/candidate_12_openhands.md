@@ -51,7 +51,6 @@ Free MIT code means $0 subscription cost, but managing token budgets requires st
 Don't give an experimental agent unrestricted system tools. Sandbox it first.
 
 Full open-source repository: github.com/All-Hands-AI/OpenHands
-(Architecture details and Docker setup in first comment)
 
 #Python #SoftwareEngineering #AI #Docker #OpenSource #DevOps
 

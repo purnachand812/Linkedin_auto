@@ -208,10 +208,10 @@ def run_7day_profile_analysis():
                 text = c_file.read_text(encoding="utf-8")
                 orig_text = text
                 
-                # Convert raw 'Repo: https://github.com' to clean reference
+                # Convert raw 'Repo: https://github.com' to clean text reference without https penalty
                 text = re.sub(
                     r'Repo:\s*https?://github\.com/([a-zA-Z0-9_.-]+)/([a-zA-Z0-9_.-]+)',
-                    r'Full open-source repository: github.com/\1/\2\n(Direct link pinned in first comment)',
+                    r'Full open-source repository: github.com/\1/\2',
                     text
                 )
                 

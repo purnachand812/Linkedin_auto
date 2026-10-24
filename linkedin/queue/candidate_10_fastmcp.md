@@ -49,7 +49,6 @@ Automatic type conversion is convenient, but LLMs frequently hallucinate edge-ca
 Don't give an experimental agent unrestricted system tools. Sandbox it first.
 
 Full open-source repository: github.com/PrefectHQ/fastmcp
-(Documentation and installation guide in the first comment)
 
 #Python #AI #ModelContextProtocol #FastAPI #OpenSource
 
