@@ -23,29 +23,32 @@
     "[10:30:58] \ud83d\udcac Generated 2 contextual community reply templates for Candidate #2",
     "[08:59:14] \ud83d\ude80 Triggering automated publishing for Candidate #3: 'Agent S3 (Desktop GUI Computer-Use Agent)' (EU Window: Morning Standup (Prime))",
     "[08:59:15] \ud83c\udf89 Successfully published Candidate #3! Live URL: https://www.linkedin.com/feed/update/urn:li:share:7519321529579511808/",
-    "[08:59:15] \ud83d\udcac Generated 2 contextual community reply templates for Candidate #3"
+    "[08:59:15] \ud83d\udcac Generated 2 contextual community reply templates for Candidate #3",
+    "[06:52:15] \ud83d\ude80 Triggering automated publishing for Candidate #4: 'MarkItDown (Document to LLM Markdown Converter)' (EU Window: Morning Standup (Prime))",
+    "[06:52:17] \ud83c\udf89 Successfully published Candidate #4! Live URL: https://www.linkedin.com/feed/update/urn:li:share:7519651965921026049/",
+    "[06:52:17] \ud83d\udcac Generated 2 contextual community reply templates for Candidate #4"
   ],
-  "current_time_cet": "2026-10-24 03:47:53 CET",
-  "is_eu_prime_time": false,
-  "current_window": "Off-Peak / Monitoring",
-  "next_scheduled_drop": "Morning Standup (Prime) at 08:00 CET (~252m from now)",
+  "current_time_cet": "2026-10-24 08:52:15 CET",
+  "is_eu_prime_time": true,
+  "current_window": "Morning Standup (Prime)",
+  "next_scheduled_drop": "Midday Tech Catchup at 12:00 CET (~187m from now)",
   "approved_queue_count": 4,
   "published_today": 0,
   "target_audience": "European Union (Berlin, Munich, Amsterdam, Paris, Zurich)",
   "auto_publish_enabled": true,
-  "last_heartbeat": "2026-10-24T01:48:08.988932",
-  "last_activity": "[08:59:15] \ud83d\udcac Generated 2 contextual community reply templates for Candidate #3",
+  "last_heartbeat": "2026-10-24T06:52:34.587448",
+  "last_activity": "[06:52:17] \ud83d\udcac Generated 2 contextual community reply templates for Candidate #4",
   "auto_apply_telemetry": {
     "enabled": true,
-    "applied_today": 3,
+    "applied_today": 5,
     "daily_limit": 5,
     "status": "RUNNING"
   },
   "weekly_audit_telemetry": {
-    "rolling_7d_impressions": 85,
-    "rolling_7d_interactions": 1,
-    "rolling_7d_engagement_rate": "1.18%",
-    "top_performing_post": "Aider (Git-Aware Terminal AI Pair Programmer)",
+    "rolling_7d_impressions": 2,
+    "rolling_7d_interactions": 0,
+    "rolling_7d_engagement_rate": "0.0%",
+    "top_performing_post": "Crawl4AI (Self-Hosted LLM Web Scraper vs Firecrawl)",
     "winning_formula": "Canva Contrast Infographic + Clean Body + Comment Link + Weekday CET"
   }
 }

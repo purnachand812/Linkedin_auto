@@ -1,9 +1,21 @@
 {
-  "updated_at": "2026-10-24T01:48:08.986742",
+  "updated_at": "2026-10-24T06:52:34.585552",
   "total_posts": 4,
   "target_region": "European Union (CET/CEST)",
   "data_integrity": "Verified Ground Truth",
   "posts_analytics": [
+    {
+      "candidate_id": 4,
+      "topic": "MarkItDown (Document to LLM Markdown Converter)",
+      "published_at": "2026-10-24T06:52:17Z",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7519651965921026049/",
+      "impressions": 0,
+      "reactions": 0,
+      "comments": 0,
+      "reposts": 0,
+      "status": "ACCUMULATING",
+      "notes": "Fresh drop; awaiting first 24h indexing cycle."
+    },
     {
       "candidate_id": 3,
       "topic": "Agent S3 (Desktop GUI Computer-Use Agent)",
@@ -39,18 +51,6 @@
       "reposts": 0,
       "status": "ACCUMULATING",
       "notes": "Published ~25m ago. Initial golden-hour indexing; 2 members reached (100% out-of-network)."
-    },
-    {
-      "candidate_id": 5,
-      "topic": "Aider (Git-Aware Terminal AI Pair Programmer)",
-      "published_at": "2026-10-17T06:31:02Z",
-      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7517109902172102657/",
-      "impressions": 83,
-      "reactions": 1,
-      "comments": 0,
-      "reposts": 0,
-      "status": "VERIFIED",
-      "notes": "Saturday European morning drop (08:31 CEST). Weekend B2B lower dwell window; raw link in body."
     }
   ]
 }

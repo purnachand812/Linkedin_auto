@@ -1,6 +1,6 @@
 {
   "audit_period": "2026-10-17 to 2026-10-24",
-  "generated_at": "2026-10-24 01:48:08 CET",
+  "generated_at": "2026-10-24 06:52:34 CET",
   "data_integrity": "100% Verified Telemetry - Zero Synthetic Estimates",
   "profile_snapshot": {
     "name": "Purnachandra Madhukar Dandu",
@@ -12,10 +12,10 @@
     "open_to_work": "Recruiters only (Germany +3 more | On-site, Hybrid, Remote)"
   },
   "total_posts_analyzed": 4,
-  "total_impressions": 85,
-  "total_interactions": 1,
-  "overall_engagement_rate": "1.18%",
-  "top_performing_post": "Aider (Git-Aware Terminal AI Pair Programmer)",
+  "total_impressions": 2,
+  "total_interactions": 0,
+  "overall_engagement_rate": "0.0%",
+  "top_performing_post": "Crawl4AI (Self-Hosted LLM Web Scraper vs Firecrawl)",
   "winning_factors": [
     {
       "factor": "Contrarian Financial Hooks (Tool Replacement vs SaaS)",
@@ -70,10 +70,30 @@
   "drafts_auto_optimized": 0,
   "posts": [
     {
+      "candidate_id": 4,
+      "topic": "MarkItDown (Document to LLM Markdown Converter)",
+      "published_at": "2026-10-24T06:52:17Z",
+      "age_hours": 0.0,
+      "day_of_week": "Saturday",
+      "is_weekend": true,
+      "has_image": true,
+      "has_link_in_body": false,
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7519651965921026049/",
+      "status": "ACCUMULATING",
+      "notes": "Fresh drop; awaiting first 24h indexing cycle.",
+      "metrics": {
+        "impressions": 0,
+        "reactions": 0,
+        "comments": 0,
+        "reposts": 0,
+        "engagement_rate": 0.0
+      }
+    },
+    {
       "candidate_id": 3,
       "topic": "Agent S3 (Desktop GUI Computer-Use Agent)",
       "published_at": "2026-10-23T08:59:15Z",
-      "age_hours": 16.8,
+      "age_hours": 21.9,
       "day_of_week": "Friday",
       "is_weekend": false,
       "has_image": true,
@@ -93,7 +113,7 @@
       "candidate_id": 2,
       "topic": "OpenClaw (Self-Hosted Personal AI Agent)",
       "published_at": "2026-10-23T08:30:58Z",
-      "age_hours": 17.3,
+      "age_hours": 22.4,
       "day_of_week": "Friday",
       "is_weekend": false,
       "has_image": true,
@@ -113,7 +133,7 @@
       "candidate_id": 9,
       "topic": "Crawl4AI (Self-Hosted LLM Web Scraper vs Firecrawl)",
       "published_at": "2026-10-21T16:18:33Z",
-      "age_hours": 57.5,
+      "age_hours": 62.6,
       "day_of_week": "Wednesday",
       "is_weekend": false,
       "has_image": true,
@@ -127,26 +147,6 @@
         "comments": 0,
         "reposts": 0,
         "engagement_rate": 0.0
-      }
-    },
-    {
-      "candidate_id": 5,
-      "topic": "Aider (Git-Aware Terminal AI Pair Programmer)",
-      "published_at": "2026-10-17T06:31:02Z",
-      "age_hours": 163.3,
-      "day_of_week": "Saturday",
-      "is_weekend": true,
-      "has_image": true,
-      "has_link_in_body": true,
-      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7517109902172102657/",
-      "status": "VERIFIED",
-      "notes": "Saturday European morning drop (08:31 CEST). Weekend B2B lower dwell window; raw link in body.",
-      "metrics": {
-        "impressions": 83,
-        "reactions": 1,
-        "comments": 0,
-        "reposts": 0,
-        "engagement_rate": 1.2
       }
     }
   ]

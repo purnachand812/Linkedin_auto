@@ -1,84 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "10:25:25",
-      "datetime": "2026-10-23T10:25:25.480237",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for Heidi Systems."
-    },
-    {
-      "timestamp": "10:25:27",
-      "datetime": "2026-10-23T10:25:27.488536",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Praktikant Business Building & AI Automation (m/w/d) \u2013 Digital Education mit Impact' at Talentspring Academy (ID: job-linkedin-4470499368)"
-    },
-    {
-      "timestamp": "10:25:35",
-      "datetime": "2026-10-23T10:25:35.553407",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4470499368.pdf"
-    },
-    {
-      "timestamp": "10:25:38",
-      "datetime": "2026-10-23T10:25:38.439860",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4470499368.pdf"
-    },
-    {
-      "timestamp": "10:25:38",
-      "datetime": "2026-10-23T10:25:38.449431",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "10:25:45",
-      "datetime": "2026-10-23T10:25:45.388086",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for Talentspring Academy."
-    },
-    {
-      "timestamp": "10:26:47",
-      "datetime": "2026-10-23T10:26:47.659199",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "10:27:47",
-      "datetime": "2026-10-23T10:27:47.764602",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "10:28:47",
-      "datetime": "2026-10-23T10:28:47.940635",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "10:29:48",
-      "datetime": "2026-10-23T10:29:48.053952",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "10:30:48",
-      "datetime": "2026-10-23T10:30:48.151714",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "10:31:48",
-      "datetime": "2026-10-23T10:31:48.723813",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "10:32:48",
-      "datetime": "2026-10-23T10:32:48.958346",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
       "timestamp": "10:33:49",
       "datetime": "2026-10-23T10:33:49.129759",
       "level": "INFO",
@@ -359,6 +281,84 @@
       "datetime": "2026-10-24T02:32:33.152402",
       "level": "INFO",
       "message": "Radar scan: 10 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "06:52:17",
+      "datetime": "2026-10-24T06:52:17.353774",
+      "level": "INFO",
+      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
+    },
+    {
+      "timestamp": "06:52:23",
+      "datetime": "2026-10-24T06:52:23.872228",
+      "level": "SUCCESS",
+      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
+    },
+    {
+      "timestamp": "06:52:23",
+      "datetime": "2026-10-24T06:52:23.873217",
+      "level": "INFO",
+      "message": "Radar scan: 8 active jobs, 3 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "06:52:23",
+      "datetime": "2026-10-24T06:52:23.873824",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Werkstudent:in Operations & Data Management' at Linstad (ID: job-linkedin-4480654879)"
+    },
+    {
+      "timestamp": "06:52:25",
+      "datetime": "2026-10-24T06:52:25.667805",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4480654879.pdf"
+    },
+    {
+      "timestamp": "06:52:26",
+      "datetime": "2026-10-24T06:52:26.436719",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4480654879.pdf"
+    },
+    {
+      "timestamp": "06:52:26",
+      "datetime": "2026-10-24T06:52:26.437888",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "06:52:27",
+      "datetime": "2026-10-24T06:52:27.563943",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Linstad."
+    },
+    {
+      "timestamp": "06:52:29",
+      "datetime": "2026-10-24T06:52:29.565008",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Werkstudent*in Compliance / Dokumentationsmanagement (m/w/d)' at Axolabs (ID: job-linkedin-4480008047)"
+    },
+    {
+      "timestamp": "06:52:30",
+      "datetime": "2026-10-24T06:52:30.693278",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4480008047.pdf"
+    },
+    {
+      "timestamp": "06:52:31",
+      "datetime": "2026-10-24T06:52:31.431211",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4480008047.pdf"
+    },
+    {
+      "timestamp": "06:52:31",
+      "datetime": "2026-10-24T06:52:31.432274",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "06:52:32",
+      "datetime": "2026-10-24T06:52:32.581213",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Axolabs."
     }
   ]
 }
