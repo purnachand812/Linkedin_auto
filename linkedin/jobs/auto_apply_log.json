@@ -1,12 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "19:50:47",
-      "datetime": "2026-10-24T19:50:47.215796",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for Linstad."
-    },
-    {
       "timestamp": "19:50:49",
       "datetime": "2026-10-24T19:50:49.221591",
       "level": "INFO",
@@ -357,6 +351,12 @@
     {
       "timestamp": "21:03:08",
       "datetime": "2026-10-24T21:03:08.752622",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "22:07:14",
+      "datetime": "2026-10-24T22:07:14.241215",
       "level": "INFO",
       "message": "Daily quota reached (5/5). Standing by until tomorrow."
     }
