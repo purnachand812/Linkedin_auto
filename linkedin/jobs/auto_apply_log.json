@@ -1,12 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "10:25:18",
-      "datetime": "2026-10-23T10:25:18.557832",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
       "timestamp": "10:25:25",
       "datetime": "2026-10-23T10:25:25.480237",
       "level": "SUCCESS",
@@ -359,6 +353,12 @@
       "datetime": "2026-10-24T01:48:06.982823",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for Manta."
+    },
+    {
+      "timestamp": "02:32:33",
+      "datetime": "2026-10-24T02:32:33.152402",
+      "level": "INFO",
+      "message": "Radar scan: 10 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
   ]
 }
