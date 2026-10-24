@@ -57,13 +57,16 @@
       "topic": "MarkItDown (Document to LLM Markdown Converter)",
       "beat": "Practical AI Automation / Document Workflows",
       "score": 86,
-      "status": "APPROVED",
+      "status": "PUBLISHED",
       "format": "image-attached",
       "replaces": "Unstructured.io / LlamaParse paid API parsing tiers",
       "cost": "Free MIT code; $0 API cost for standard text files",
       "test_status": "Approved for Autonomous Publishing",
       "file": "linkedin/queue/candidate_4_markitdown.md",
-      "visual": "linkedin/visuals/visual_markitdown.png"
+      "visual": "linkedin/visuals/visual_markitdown.png",
+      "published_at": "2026-10-24T06:52:17Z",
+      "linkedin_post_id": "urn:li:share:7519651965921026049",
+      "linkedin_post_url": "https://www.linkedin.com/feed/update/urn:li:share:7519651965921026049/"
     },
     {
       "id": 1,
@@ -144,13 +147,16 @@
       "topic": "FastMCP (3-Line Typed Model Context Protocol Servers)",
       "beat": "Free & Open-Source AI Agent / Architecture",
       "score": 95,
-      "status": "APPROVED",
+      "status": "PUBLISHED",
       "format": "image-attached",
       "replaces": "Hand-crafted JSON-RPC boilerplate & brittle custom tool wrappers",
       "cost": "Free Apache 2.0 code; $0 SaaS overhead",
       "test_status": "Approved for Autonomous Publishing",
       "file": "linkedin/queue/candidate_10_fastmcp.md",
-      "visual": "linkedin/visuals/visual_fastmcp.png"
+      "visual": "linkedin/visuals/visual_fastmcp.png",
+      "published_at": "2026-10-24T11:50:49Z",
+      "linkedin_post_id": "urn:li:share:7519727095149645824",
+      "linkedin_post_url": "https://www.linkedin.com/feed/update/urn:li:share:7519727095149645824/"
     },
     {
       "id": 11,

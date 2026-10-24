@@ -1,5 +1,29 @@
 [
   {
+    "candidate_id": 10,
+    "topic": "FastMCP (3-Line Typed Model Context Protocol Servers)",
+    "post_text": "Writing 200 lines of JSON-RPC protocol boilerplate just to give Claude access to your local SQLite database is where agent development goes to die.\n\nAnthropic's Model Context Protocol (MCP) is quickly becoming the standard for connecting LLMs to local databases, terminal tools, and internal APIs. But building a native MCP server from scratch usually means writing endless JSON-RPC request-response handlers, schema validations, and async socket routing.\n\nThe open-source library PrefectHQ/fastmcp solves this the same way FastAPI solved REST APIs:\n\n1. Decorator-Driven: Add @mcp.tool() above any standard Python function. FastMCP automatically parses type hints, docstrings, and parameter schemas.\n2. FastMCP Context: Inject real-time execution context, logging, and progress reporting directly into tool functions without rewriting signatures.\n3. Multi-Transport Support: Runs locally over stdio for VS Code and Claude Desktop, or over SSE (Server-Sent Events) for remote Docker containers.\n\nOn paper, it replaces brittle hand-written tool wrappers.\nIn practice, there is a real engineering catch:\n\nAutomatic type conversion is convenient, but LLMs frequently hallucinate edge-case types. If your tool expects an ISO timestamp and the model supplies 'yesterday afternoon', the tool crashes unless you validate the inputs with Pydantic first.\n\nDon't give an experimental agent unrestricted system tools. Sandbox it first.\n\nFull open-source repository: github.com/PrefectHQ/fastmcp\n(Documentation and installation guide in the first comment)\n\n#Python #AI #ModelContextProtocol #FastAPI #OpenSource",
+    "post_id": "urn:li:share:7519727095149645824",
+    "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7519727095149645824/",
+    "published_at": "2026-10-24T11:50:49Z",
+    "has_image": true,
+    "comment_needed": true,
+    "sources": "See visual asset for architecture.",
+    "status": "PUBLISHED"
+  },
+  {
+    "candidate_id": 4,
+    "topic": "MarkItDown (Document to LLM Markdown Converter)",
+    "post_text": "Your RAG pipeline isn't failing because of your vector database. It's failing because your PDF parser returns garbage.\n\nThe open-source Python library microsoft/markitdown converts messy enterprise files, PDFs, Word documents, PowerPoint slides, and Excel sheets, into structured Markdown. It extracts text, preserves table structures, and converts embedded images using local or cloud vision models.\n\nOn paper, it replaces expensive document processing API subscriptions like Unstructured.io or LlamaParse. In practice, clean document parsing fixes the most common failure mode in Retrieval-Augmented Generation (RAG).\n\nSending raw OCR noise or broken table layouts to an LLM produces hallucinated answers regardless of how advanced your vector database is. Structuring document layouts into Markdown upfront improves chunking boundary precision and LLM context comprehension.\n\nThe library runs locally with zero API dependencies for standard text documents, though scanned image PDFs still require pairing with a vision LLM.\n\nI haven't tested this on complex multi-page financial tables yet, but for Python developers building local RAG pipelines under an MIT license, it is worth adding to your preprocessing stack.\n\nFull open-source repository: github.com/microsoft/markitdown\n(Direct link pinned in first comment)",
+    "post_id": "urn:li:share:7519651965921026049",
+    "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7519651965921026049/",
+    "published_at": "2026-10-24T06:52:17Z",
+    "has_image": true,
+    "comment_needed": true,
+    "sources": "See visual asset for architecture.",
+    "status": "PUBLISHED"
+  },
+  {
     "candidate_id": 3,
     "topic": "Agent S3 (Desktop GUI Computer-Use Agent)",
     "post_text": "An AI agent that clicks desktop buttons by reading screen pixels is impressive. Waiting 4 seconds for every 4K frame to process is the catch.\n\nThe open-source framework simular-ai/agent-s3 operates directly on desktop GUIs across macOS, Windows, and Linux. Instead of relying on web DOMs or internal software APIs, it captures screen frames and uses multimodal vision models to issue mouse clicks, scrolls, and keypresses.\n\nOn paper, it replaces expensive legacy RPA software like UiPath or Automation Anywhere. In practice, substituting structured API calls for raw visual frame processing introduces a performance trade-off.\n\nA 15-step desktop task requires sending 15 high-resolution screen frames to Anthropic Claude 3.5 Sonnet or OpenAI GPT-4o. Each step takes 3 to 5 seconds to process vision tokens, making real-time execution significantly slower than traditional scripts.\n\nThere is also an important security consideration. Giving a visual agent unrestricted OS screen capture and input permissions requires strict sandboxing in a virtual machine.\n\nI haven't tested this on a production enterprise workflow yet, but for researchers evaluating Agent-Computer Interfaces (ACI), the open-source codebase offers valuable benchmark insights.\n\nFull open-source repository: github.com/simular-ai/agent-s3\n(Direct link pinned in first comment)",

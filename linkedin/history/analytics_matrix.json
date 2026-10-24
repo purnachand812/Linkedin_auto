@@ -5,6 +5,30 @@
   "data_integrity": "Verified Ground Truth",
   "posts_analytics": [
     {
+      "candidate_id": 10,
+      "topic": "FastMCP (3-Line Typed Model Context Protocol Servers)",
+      "published_at": "2026-10-24T11:50:49Z",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7519727095149645824/",
+      "impressions": 0,
+      "reactions": 0,
+      "comments": 0,
+      "reposts": 0,
+      "status": "ACCUMULATING",
+      "notes": "Fresh drop; awaiting first 24h indexing cycle."
+    },
+    {
+      "candidate_id": 4,
+      "topic": "MarkItDown (Document to LLM Markdown Converter)",
+      "published_at": "2026-10-24T06:52:17Z",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7519651965921026049/",
+      "impressions": 0,
+      "reactions": 0,
+      "comments": 0,
+      "reposts": 0,
+      "status": "ACCUMULATING",
+      "notes": "Fresh drop; awaiting first 24h indexing cycle."
+    },
+    {
       "candidate_id": 3,
       "topic": "Agent S3 (Desktop GUI Computer-Use Agent)",
       "published_at": "2026-10-23T08:59:15Z",
