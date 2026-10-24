@@ -1,12 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "19:50:49",
-      "datetime": "2026-10-24T19:50:49.221591",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Customer Support Werkstudent (m/w/d)' at cleverly.de | Online Nachhilfe und Mentoring f\u00fcr Kids (ID: job-linkedin-4480665584)"
-    },
-    {
       "timestamp": "19:50:56",
       "datetime": "2026-10-24T19:50:56.293164",
       "level": "SUCCESS",
@@ -357,6 +351,12 @@
     {
       "timestamp": "22:07:14",
       "datetime": "2026-10-24T22:07:14.241215",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "23:31:28",
+      "datetime": "2026-10-24T23:31:28.572675",
       "level": "INFO",
       "message": "Daily quota reached (5/5). Standing by until tomorrow."
     }
