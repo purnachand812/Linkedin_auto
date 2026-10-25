@@ -1,6 +1,20 @@
 {
   "pending": [
     {
+      "candidate_id": 12,
+      "topic": "OpenHands (Autonomous Software Engineer inside Docker Sandboxes)",
+      "scenario": "Technical inquiry about production reliability / benchmarks",
+      "suggested_reply": "Good callout. In practice, the primary constraint isn't the framework wrapper, but token latency and context drift over multi-step runs. For production, sandboxing tool execution and enforcing strict schema validation upfront prevents 80% of edge case failures.",
+      "created_at": "2026-10-25T13:33:43.267854"
+    },
+    {
+      "candidate_id": 12,
+      "topic": "OpenHands (Autonomous Software Engineer inside Docker Sandboxes)",
+      "scenario": "Comparison with closed commercial alternatives",
+      "suggested_reply": "The biggest delta is privacy and infrastructure lock-in. Self-hosting this on European bare-metal (like Hetzner or local Ollama) costs $0 in SaaS license overhead and guarantees your internal code doesn't leave your network perimeter.",
+      "created_at": "2026-10-25T13:33:43.267870"
+    },
+    {
       "candidate_id": 11,
       "topic": "Langfuse (Self-Hosted LLM Observability & Tracing in Docker)",
       "scenario": "Technical inquiry about production reliability / benchmarks",
@@ -69,20 +83,6 @@
       "scenario": "Comparison with closed commercial alternatives",
       "suggested_reply": "The biggest delta is privacy and infrastructure lock-in. Self-hosting this on European bare-metal (like Hetzner or local Ollama) costs $0 in SaaS license overhead and guarantees your internal code doesn't leave your network perimeter.",
       "created_at": "2026-10-23T10:30:58.292887"
-    },
-    {
-      "candidate_id": 9,
-      "topic": "Crawl4AI (Self-Hosted LLM Web Scraper vs Firecrawl)",
-      "scenario": "Technical inquiry about production reliability / benchmarks",
-      "suggested_reply": "Good callout. In practice, the primary constraint isn't the framework wrapper, but token latency and context drift over multi-step runs. For production, sandboxing tool execution and enforcing strict schema validation upfront prevents 80% of edge case failures.",
-      "created_at": "2026-10-21T18:18:33.293336"
-    },
-    {
-      "candidate_id": 9,
-      "topic": "Crawl4AI (Self-Hosted LLM Web Scraper vs Firecrawl)",
-      "scenario": "Comparison with closed commercial alternatives",
-      "suggested_reply": "The biggest delta is privacy and infrastructure lock-in. Self-hosting this on European bare-metal (like Hetzner or local Ollama) costs $0 in SaaS license overhead and guarantees your internal code doesn't leave your network perimeter.",
-      "created_at": "2026-10-21T18:18:33.293336"
     }
   ]
 }

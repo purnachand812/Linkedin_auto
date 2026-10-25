@@ -179,13 +179,16 @@
       "topic": "OpenHands (Autonomous Software Engineer inside Docker Sandboxes)",
       "beat": "Free & Open-Source AI Agent / Code Automation",
       "score": 93,
-      "status": "APPROVED",
+      "status": "PUBLISHED",
       "format": "image-attached",
       "replaces": "Devin ($500/mo) / Cognition AI closed betas",
       "cost": "Free MIT code; standard model token cost",
       "test_status": "Approved for Autonomous Publishing",
       "file": "linkedin/queue/candidate_12_openhands.md",
-      "visual": "linkedin/visuals/visual_openhands.png"
+      "visual": "linkedin/visuals/visual_openhands.png",
+      "published_at": "2026-10-25T13:33:43Z",
+      "linkedin_post_id": "urn:li:share:7520115376391757824",
+      "linkedin_post_url": "https://www.linkedin.com/feed/update/urn:li:share:7520115376391757824/"
     }
   ]
 }

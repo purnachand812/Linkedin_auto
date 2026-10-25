@@ -1,9 +1,21 @@
 {
-  "updated_at": "2026-10-25T08:38:24.340324",
-  "total_posts": 6,
+  "updated_at": "2026-10-25T13:33:43.273089",
+  "total_posts": 7,
   "target_region": "European Union (CET/CEST)",
   "data_integrity": "Verified Ground Truth",
   "posts_analytics": [
+    {
+      "candidate_id": 12,
+      "topic": "OpenHands (Autonomous Software Engineer inside Docker Sandboxes)",
+      "published_at": "2026-10-25T13:33:43Z",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7520115376391757824/",
+      "impressions": 0,
+      "reactions": 0,
+      "comments": 0,
+      "reposts": 0,
+      "status": "ACCUMULATING",
+      "notes": "Fresh drop; awaiting first 24h indexing cycle."
+    },
     {
       "candidate_id": 11,
       "topic": "Langfuse (Self-Hosted LLM Observability & Tracing in Docker)",
