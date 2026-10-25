@@ -1,312 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "23:47:05",
-      "datetime": "2026-10-25T23:47:05.379667",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "23:48:05",
-      "datetime": "2026-10-25T23:48:05.465023",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "23:49:05",
-      "datetime": "2026-10-25T23:49:05.588323",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "23:50:05",
-      "datetime": "2026-10-25T23:50:05.743759",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "23:51:05",
-      "datetime": "2026-10-25T23:51:05.882576",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "23:52:06",
-      "datetime": "2026-10-25T23:52:06.046168",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "23:53:06",
-      "datetime": "2026-10-25T23:53:06.134718",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "23:54:06",
-      "datetime": "2026-10-25T23:54:06.207506",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "23:55:06",
-      "datetime": "2026-10-25T23:55:06.349005",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "23:56:06",
-      "datetime": "2026-10-25T23:56:06.419765",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "23:57:06",
-      "datetime": "2026-10-25T23:57:06.511455",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "23:58:06",
-      "datetime": "2026-10-25T23:58:06.636263",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "23:59:06",
-      "datetime": "2026-10-25T23:59:06.774607",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "00:00:07",
-      "datetime": "2026-10-26T00:00:07.118365",
-      "level": "INFO",
-      "message": "Radar scan: 18 active jobs, 12 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "00:00:07",
-      "datetime": "2026-10-26T00:00:07.132362",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Werkstudent (w/m/d) KI-gest\u00fctzte Software- und Plattformentwicklung' at Siemens AG (ID: job-ba-12465_1646595_1_S)"
-    },
-    {
-      "timestamp": "00:00:13",
-      "datetime": "2026-10-26T00:00:13.950569",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-ba-12465_1646595_1_S.pdf"
-    },
-    {
-      "timestamp": "00:00:15",
-      "datetime": "2026-10-26T00:00:15.957637",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-ba-12465_1646595_1_S.pdf"
-    },
-    {
-      "timestamp": "00:00:15",
-      "datetime": "2026-10-26T00:00:15.984428",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "00:00:23",
-      "datetime": "2026-10-26T00:00:23.239172",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for Siemens AG."
-    },
-    {
-      "timestamp": "00:00:25",
-      "datetime": "2026-10-26T00:00:25.245268",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Praktikant / Werkstudent IT Audit & IT Assurance - Data Analytics (m/w/d)' at Deloitte GmbH (ID: job-ba-15794_469209_49013_1_S)"
-    },
-    {
-      "timestamp": "00:00:31",
-      "datetime": "2026-10-26T00:00:31.284253",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-ba-15794_469209_49013_1_S.pdf"
-    },
-    {
-      "timestamp": "00:00:33",
-      "datetime": "2026-10-26T00:00:33.287371",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-ba-15794_469209_49013_1_S.pdf"
-    },
-    {
-      "timestamp": "00:00:33",
-      "datetime": "2026-10-26T00:00:33.295366",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "00:00:40",
-      "datetime": "2026-10-26T00:00:40.170715",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for Deloitte GmbH."
-    },
-    {
-      "timestamp": "00:00:42",
-      "datetime": "2026-10-26T00:00:42.177779",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Werkstudent Data Analytics (m/w/d)' at Bundesdruckerei Gruppe GmbH (ID: job-ba-15933_0067034735_S)"
-    },
-    {
-      "timestamp": "00:00:48",
-      "datetime": "2026-10-26T00:00:48.479465",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-ba-15933_0067034735_S.pdf"
-    },
-    {
-      "timestamp": "00:00:50",
-      "datetime": "2026-10-26T00:00:50.320420",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-ba-15933_0067034735_S.pdf"
-    },
-    {
-      "timestamp": "00:00:50",
-      "datetime": "2026-10-26T00:00:50.327472",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "00:00:56",
-      "datetime": "2026-10-26T00:00:56.927875",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for Bundesdruckerei Gruppe GmbH."
-    },
-    {
-      "timestamp": "00:00:58",
-      "datetime": "2026-10-26T00:00:58.980103",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Werkstudent Web Development \u2013 WordPress & AI (m/w/d)' at zollsoft GmbH (ID: job-ba-13635_c8b416bd_JB5263644_S)"
-    },
-    {
-      "timestamp": "00:01:03",
-      "datetime": "2026-10-26T00:01:03.936910",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-ba-13635_c8b416bd_JB5263644_S.pdf"
-    },
-    {
-      "timestamp": "00:01:06",
-      "datetime": "2026-10-26T00:01:06.035929",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-ba-13635_c8b416bd_JB5263644_S.pdf"
-    },
-    {
-      "timestamp": "00:01:06",
-      "datetime": "2026-10-26T00:01:06.042672",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "00:01:13",
-      "datetime": "2026-10-26T00:01:13.617507",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for zollsoft GmbH."
-    },
-    {
-      "timestamp": "00:01:15",
-      "datetime": "2026-10-26T00:01:15.623906",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Werkstudent IT Beratung (Financial Services) (w/m/d)' at EY Consulting GmbH (ID: job-ba-15548_1435415_1_S)"
-    },
-    {
-      "timestamp": "00:01:21",
-      "datetime": "2026-10-26T00:01:21.667121",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-ba-15548_1435415_1_S.pdf"
-    },
-    {
-      "timestamp": "00:01:23",
-      "datetime": "2026-10-26T00:01:23.593161",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-ba-15548_1435415_1_S.pdf"
-    },
-    {
-      "timestamp": "00:01:23",
-      "datetime": "2026-10-26T00:01:23.599158",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "00:01:28",
-      "datetime": "2026-10-26T00:01:28.976327",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for EY Consulting GmbH."
-    },
-    {
-      "timestamp": "00:02:31",
-      "datetime": "2026-10-26T00:02:31.048551",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "00:03:31",
-      "datetime": "2026-10-26T00:03:31.229494",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "00:04:31",
-      "datetime": "2026-10-26T00:04:31.350058",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "00:05:31",
-      "datetime": "2026-10-26T00:05:31.457820",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "00:06:31",
-      "datetime": "2026-10-26T00:06:31.652805",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "00:07:31",
-      "datetime": "2026-10-26T00:07:31.738526",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "00:08:31",
-      "datetime": "2026-10-26T00:08:31.800910",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "00:09:31",
-      "datetime": "2026-10-26T00:09:31.918008",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "00:10:32",
-      "datetime": "2026-10-26T00:10:32.062720",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "00:11:32",
-      "datetime": "2026-10-26T00:11:32.143174",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "00:12:32",
-      "datetime": "2026-10-26T00:12:32.259890",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "00:13:32",
-      "datetime": "2026-10-26T00:13:32.396265",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
       "timestamp": "00:14:32",
       "datetime": "2026-10-26T00:14:32.544575",
       "level": "INFO",
@@ -509,6 +203,162 @@
       "datetime": "2026-10-25T22:17:35.581718",
       "level": "INFO",
       "message": "Radar scan: 10 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "23:29:31",
+      "datetime": "2026-10-25T23:29:31.010895",
+      "level": "INFO",
+      "message": "Radar scan: 18 active jobs, 7 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "23:29:31",
+      "datetime": "2026-10-25T23:29:31.011199",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Werkstudent (mwd) Software Development, Data & AI,Heidelberg,Berlin,Ulm' at HMS Analytical Software GmbH (ID: job-ba-12811_2311370_S)"
+    },
+    {
+      "timestamp": "23:29:31",
+      "datetime": "2026-10-25T23:29:31.013395",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-ba-12811_2311370_S.pdf"
+    },
+    {
+      "timestamp": "23:29:31",
+      "datetime": "2026-10-25T23:29:31.013910",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-ba-12811_2311370_S.pdf"
+    },
+    {
+      "timestamp": "23:29:31",
+      "datetime": "2026-10-25T23:29:31.014729",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "23:29:31",
+      "datetime": "2026-10-25T23:29:31.018363",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for HMS Analytical Software GmbH."
+    },
+    {
+      "timestamp": "23:29:33",
+      "datetime": "2026-10-25T23:29:33.019162",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Praktikum Campaign Management (x/f/m)' at Doctolib Germany (ID: job-gh-doctolib-8042707003)"
+    },
+    {
+      "timestamp": "23:29:33",
+      "datetime": "2026-10-25T23:29:33.020993",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-gh-doctolib-8042707003.pdf"
+    },
+    {
+      "timestamp": "23:29:33",
+      "datetime": "2026-10-25T23:29:33.021582",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-gh-doctolib-8042707003.pdf"
+    },
+    {
+      "timestamp": "23:29:33",
+      "datetime": "2026-10-25T23:29:33.022124",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "23:29:33",
+      "datetime": "2026-10-25T23:29:33.025821",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Doctolib Germany."
+    },
+    {
+      "timestamp": "23:29:35",
+      "datetime": "2026-10-25T23:29:35.026574",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Praktikum Product Marketing (x/f/m)' at Doctolib Germany (ID: job-gh-doctolib-8037214003)"
+    },
+    {
+      "timestamp": "23:29:35",
+      "datetime": "2026-10-25T23:29:35.028485",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-gh-doctolib-8037214003.pdf"
+    },
+    {
+      "timestamp": "23:29:35",
+      "datetime": "2026-10-25T23:29:35.029027",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-gh-doctolib-8037214003.pdf"
+    },
+    {
+      "timestamp": "23:29:35",
+      "datetime": "2026-10-25T23:29:35.030087",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "23:29:35",
+      "datetime": "2026-10-25T23:29:35.033870",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Doctolib Germany."
+    },
+    {
+      "timestamp": "23:29:37",
+      "datetime": "2026-10-25T23:29:37.034634",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Praktikum Public Affairs & Advocacy (x/f/m)' at Doctolib Germany (ID: job-gh-doctolib-8026774003)"
+    },
+    {
+      "timestamp": "23:29:37",
+      "datetime": "2026-10-25T23:29:37.036578",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-gh-doctolib-8026774003.pdf"
+    },
+    {
+      "timestamp": "23:29:37",
+      "datetime": "2026-10-25T23:29:37.037450",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-gh-doctolib-8026774003.pdf"
+    },
+    {
+      "timestamp": "23:29:37",
+      "datetime": "2026-10-25T23:29:37.038120",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "23:29:37",
+      "datetime": "2026-10-25T23:29:37.041955",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Doctolib Germany."
+    },
+    {
+      "timestamp": "23:29:39",
+      "datetime": "2026-10-25T23:29:39.043032",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Culinary Operations Working Student (all genders)' at HelloFresh (ID: job-gh-hellofresh-8210829)"
+    },
+    {
+      "timestamp": "23:29:39",
+      "datetime": "2026-10-25T23:29:39.044699",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-gh-hellofresh-8210829.pdf"
+    },
+    {
+      "timestamp": "23:29:39",
+      "datetime": "2026-10-25T23:29:39.045262",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-gh-hellofresh-8210829.pdf"
+    },
+    {
+      "timestamp": "23:29:39",
+      "datetime": "2026-10-25T23:29:39.046023",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "23:29:39",
+      "datetime": "2026-10-25T23:29:39.049671",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for HelloFresh."
     }
   ]
 }
