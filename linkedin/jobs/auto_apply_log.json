@@ -1,12 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "19:50:56",
-      "datetime": "2026-10-24T19:50:56.293164",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4480665584.pdf"
-    },
-    {
       "timestamp": "19:50:58",
       "datetime": "2026-10-24T19:50:58.214775",
       "level": "SUCCESS",
@@ -359,6 +353,12 @@
       "datetime": "2026-10-24T23:31:28.572675",
       "level": "INFO",
       "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "02:19:54",
+      "datetime": "2026-10-25T02:19:54.416050",
+      "level": "INFO",
+      "message": "Radar scan: 10 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
   ]
 }
