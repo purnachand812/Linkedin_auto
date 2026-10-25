@@ -1,84 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "19:51:05",
-      "datetime": "2026-10-24T19:51:05.404816",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Working Student - Influencer Marketing Italy/Germany' at Vanatari (ID: job-linkedin-4481050527)"
-    },
-    {
-      "timestamp": "19:51:08",
-      "datetime": "2026-10-24T19:51:08.357786",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4481050527.pdf"
-    },
-    {
-      "timestamp": "19:51:09",
-      "datetime": "2026-10-24T19:51:09.768042",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4481050527.pdf"
-    },
-    {
-      "timestamp": "19:51:09",
-      "datetime": "2026-10-24T19:51:09.772264",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "19:51:15",
-      "datetime": "2026-10-24T19:51:15.688009",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for Vanatari."
-    },
-    {
-      "timestamp": "19:51:17",
-      "datetime": "2026-10-24T19:51:17.692812",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Working Student \u2013 Brand Activation | Marketing (m/f/d)' at FENYX (ID: job-linkedin-4479968504)"
-    },
-    {
-      "timestamp": "19:51:23",
-      "datetime": "2026-10-24T19:51:23.426520",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4479968504.pdf"
-    },
-    {
-      "timestamp": "19:51:25",
-      "datetime": "2026-10-24T19:51:25.705619",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4479968504.pdf"
-    },
-    {
-      "timestamp": "19:51:25",
-      "datetime": "2026-10-24T19:51:25.713502",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "19:51:31",
-      "datetime": "2026-10-24T19:51:31.953570",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for FENYX."
-    },
-    {
-      "timestamp": "19:51:36",
-      "datetime": "2026-10-24T19:51:36.630311",
-      "level": "SUCCESS",
-      "message": "End-of-day summary report dispatched to purnachand0812@gmail.com (SENT_VIA_SMTP)."
-    },
-    {
-      "timestamp": "19:52:36",
-      "datetime": "2026-10-24T19:52:36.694680",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "19:53:36",
-      "datetime": "2026-10-24T19:53:36.787367",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
       "timestamp": "19:54:36",
       "datetime": "2026-10-24T19:54:36.856336",
       "level": "INFO",
@@ -359,6 +281,84 @@
       "datetime": "2026-10-25T13:33:43.269906",
       "level": "INFO",
       "message": "Radar scan: 10 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "17:24:16",
+      "datetime": "2026-10-25T17:24:16.174760",
+      "level": "INFO",
+      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
+    },
+    {
+      "timestamp": "17:24:24",
+      "datetime": "2026-10-25T17:24:24.176196",
+      "level": "SUCCESS",
+      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
+    },
+    {
+      "timestamp": "17:24:24",
+      "datetime": "2026-10-25T17:24:24.177051",
+      "level": "INFO",
+      "message": "Radar scan: 10 active jobs, 2 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "17:24:24",
+      "datetime": "2026-10-25T17:24:24.177621",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Working Student (m/f/d) -Digital Contract & Data Management in Corporate Real Estate' at rem11 (ID: job-linkedin-4481087447)"
+    },
+    {
+      "timestamp": "17:24:33",
+      "datetime": "2026-10-25T17:24:33.477618",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4481087447.pdf"
+    },
+    {
+      "timestamp": "17:24:34",
+      "datetime": "2026-10-25T17:24:34.271284",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4481087447.pdf"
+    },
+    {
+      "timestamp": "17:24:34",
+      "datetime": "2026-10-25T17:24:34.272401",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "17:24:35",
+      "datetime": "2026-10-25T17:24:35.366472",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for rem11."
+    },
+    {
+      "timestamp": "17:24:37",
+      "datetime": "2026-10-25T17:24:37.367517",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Working Student Lab Engineer - Berlin (m/f/d)' at 1KOMMA5\u00b0 (ID: job-linkedin-4481084359)"
+    },
+    {
+      "timestamp": "17:24:38",
+      "datetime": "2026-10-25T17:24:38.486042",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4481084359.pdf"
+    },
+    {
+      "timestamp": "17:24:39",
+      "datetime": "2026-10-25T17:24:39.268099",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4481084359.pdf"
+    },
+    {
+      "timestamp": "17:24:39",
+      "datetime": "2026-10-25T17:24:39.269131",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "17:24:40",
+      "datetime": "2026-10-25T17:24:40.372483",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for 1KOMMA5\u00b0."
     }
   ]
 }
