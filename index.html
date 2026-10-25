@@ -357,6 +357,81 @@
       background: var(--purple);
     }
 
+    .job-card.radar.ats-card::before {
+      background: var(--emerald);
+    }
+
+    .job-card.radar.ba-card::before {
+      background: var(--amber);
+    }
+
+    .portal-chip {
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+      padding: 0.35rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+
+    .portal-chip:hover, .portal-chip.active {
+      background: rgba(6, 182, 212, 0.18);
+      border-color: var(--cyan);
+      color: var(--text-main);
+    }
+
+    .portal-chip.active.ats {
+      background: rgba(16, 185, 129, 0.18);
+      border-color: var(--emerald);
+      color: var(--emerald);
+    }
+
+    .portal-chip.active.ba {
+      background: rgba(245, 158, 11, 0.18);
+      border-color: var(--amber);
+      color: var(--amber);
+    }
+
+    .portal-chip.active.li {
+      background: rgba(14, 165, 233, 0.18);
+      border-color: #0284c7;
+      color: #38bdf8;
+    }
+
+    .portal-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 0.12rem 0.45rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .portal-pill.ats {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      color: var(--emerald);
+    }
+
+    .portal-pill.ba {
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      color: var(--amber);
+    }
+
+    .portal-pill.li {
+      background: rgba(14, 165, 233, 0.15);
+      border: 1px solid rgba(14, 165, 233, 0.35);
+      color: #38bdf8;
+    }
+
     .job-top-row {
       display: flex;
       align-items: flex-start;
@@ -866,8 +941,17 @@
     <div id="pane-radar" class="tab-pane">
       <div class="section-title">
         <span>Scouted Berlin Student Jobs (<span id="count-radar-rendered">0</span>)</span>
-        <span style="font-size: 0.7rem; color: var(--purple);">Easy Apply &bull; Werkstudent / Intern</span>
+        <span style="font-size: 0.7rem; color: var(--purple);">Multi-Portal &bull; Werkstudent / Intern</span>
       </div>
+
+      <!-- Multi-Portal Filter Chips -->
+      <div class="portal-filter-chips" style="display: flex; gap: 0.4rem; overflow-x: auto; margin-bottom: 0.85rem; padding-bottom: 0.2rem;">
+        <button class="portal-chip active" onclick="filterByPortal('ALL', this)" id="chip-all">🌐 All Channels (<span id="chip-all-count">0</span>)</button>
+        <button class="portal-chip ats" onclick="filterByPortal('DIRECT_ATS', this)" id="chip-ats">🏢 Direct ATS (<span id="chip-ats-count">0</span>)</button>
+        <button class="portal-chip ba" onclick="filterByPortal('BUNDESAGENTUR', this)" id="chip-ba">🏛️ Arbeitsagentur (<span id="chip-ba-count">0</span>)</button>
+        <button class="portal-chip li" onclick="filterByPortal('LINKEDIN', this)" id="chip-li">⚡ LinkedIn (<span id="chip-li-count">0</span>)</button>
+      </div>
+
       <div id="radar-jobs-list">
         <!-- Rendered dynamically -->
       </div>
@@ -1015,21 +1099,48 @@
       daemon: {},
       logs: [],
       activeFilter: "",
+      selectedPortal: "ALL",
       currentSuite: "jobs"
     };
 
-    // Generic fetcher with relative local fallback and cache-busting
+    function filterByPortal(portal, btn) {
+      STATE.selectedPortal = portal;
+      document.querySelectorAll('.portal-chip').forEach(c => c.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      renderRadarJobs();
+    }
+
+    // Generic fetcher with local API fast-path, relative local fallback, and GitHub fallback
     async function fetchResource(relPath) {
       const cacheBust = '?_t=' + Date.now();
+      const apiMap = {
+        'linkedin/jobs/jobs_radar.json': '/api/jobs/radar',
+        'linkedin/jobs/applied_history.json': '/api/jobs/applied',
+        'linkedin/queue/queue_summary.json': '/api/queue',
+        'linkedin/history/daemon_status.json': '/api/daemon/status',
+        'linkedin/history/weekly_audit_report.json': '/api/analytics'
+      };
+
+      // 1. Try local REST API first if mapped
+      if (apiMap[relPath]) {
+        try {
+          const apiRes = await fetch(apiMap[relPath] + cacheBust);
+          if (apiRes.ok) {
+            return await apiRes.json();
+          }
+        } catch (e) {}
+      }
+
+      // 2. Try direct relative workspace static path
       try {
         const res = await fetch(relPath + cacheBust);
         if (res.ok) {
           if (relPath.endsWith('.json')) return await res.json();
           return await res.text();
         }
-      } catch (err) {
-        // Fall through to raw github
-      }
+      } catch (err) {}
+
+      // 3. Fallback to raw GitHub
       const rawRes = await fetch(BASE_RAW + relPath + cacheBust);
       if (!rawRes.ok) throw new Error(`HTTP ${rawRes.status} for ${relPath}`);
       if (relPath.endsWith('.json')) return await rawRes.json();
@@ -1292,21 +1403,40 @@
       }).join('');
     }
 
-    // Render Radar Scouted Jobs with PDF and Easy Apply Buttons
+    // Render Radar Scouted Jobs with Multi-Portal Badges and Tailored Assets
     function renderRadarJobs() {
       const listEl = document.getElementById('radar-jobs-list');
       const q = STATE.activeFilter;
+      const selectedPortal = STATE.selectedPortal || 'ALL';
+
+      // Update badge counts across all channels
+      const atsTotal = STATE.radar.filter(j => j.portal_source === 'DIRECT_ATS').length;
+      const baTotal = STATE.radar.filter(j => j.portal_source === 'BUNDESAGENTUR').length;
+      const liTotal = STATE.radar.filter(j => (j.portal_source || 'LINKEDIN') === 'LINKEDIN').length;
+
+      const elAll = document.getElementById('chip-all-count');
+      const elAts = document.getElementById('chip-ats-count');
+      const elBa = document.getElementById('chip-ba-count');
+      const elLi = document.getElementById('chip-li-count');
+      if (elAll) elAll.innerText = STATE.radar.length;
+      if (elAts) elAts.innerText = atsTotal;
+      if (elBa) elBa.innerText = baTotal;
+      if (elLi) elLi.innerText = liTotal;
+
       const filtered = STATE.radar.filter(j => {
+        const portal = j.portal_source || 'LINKEDIN';
+        if (selectedPortal !== 'ALL' && portal !== selectedPortal) return false;
         if (!q) return true;
         return (j.title || '').toLowerCase().includes(q) ||
                (j.company || '').toLowerCase().includes(q) ||
-               (j.location || '').toLowerCase().includes(q);
+               (j.location || '').toLowerCase().includes(q) ||
+               (j.tech_stack || []).some(t => t.toLowerCase().includes(q));
       });
 
       document.getElementById('count-radar-rendered').innerText = filtered.length;
 
       if (!filtered.length) {
-        listEl.innerHTML = `<div class="empty-state"><p>No scouted jobs match "${escapeHtml(q)}".</p></div>`;
+        listEl.innerHTML = `<div class="empty-state"><p>No scouted jobs match "${escapeHtml(q)}" in channel: ${escapeHtml(selectedPortal)}.</p></div>`;
         return;
       }
 
@@ -1319,23 +1449,47 @@
         const cvDownloadName = `Europass_CV_Purna_${companyClean}.pdf`;
         const letterDownloadName = `Cover_Letter_Purna_${companyClean}.pdf`;
 
+        const isATS = job.portal_source === 'DIRECT_ATS';
+        const isBA = job.portal_source === 'BUNDESAGENTUR';
+
+        let portalBadgeHtml = '<span class="portal-pill li">⚡ LinkedIn</span>';
+        let applyButtonHtml = `
+          <a href="${job.job_url || '#'}" target="_blank" class="action-link linkedin" style="font-weight: 700;">
+            ⚡ Easy Apply on LinkedIn &rarr;
+          </a>`;
+
+        if (isATS) {
+          portalBadgeHtml = '<span class="portal-pill ats">🏢 Direct ATS</span>';
+          applyButtonHtml = `
+            <a href="${job.job_url || '#'}" target="_blank" class="action-link" style="font-weight: 700; background: rgba(16, 185, 129, 0.2); border: 1px solid #10B981; color: #10B981;">
+              🚀 Apply on Company ATS &rarr;
+            </a>`;
+        } else if (isBA) {
+          portalBadgeHtml = '<span class="portal-pill ba">🏛️ Bundesagentur</span>';
+          applyButtonHtml = `
+            <a href="${job.job_url || '#'}" target="_blank" class="action-link" style="font-weight: 700; background: rgba(245, 158, 11, 0.2); border: 1px solid #F59E0B; color: #F59E0B;">
+              🏛️ Apply on Arbeitsagentur &rarr;
+            </a>`;
+        }
+
         return `
-          <div class="job-card radar">
+          <div class="job-card radar ${isATS ? 'ats-card' : (isBA ? 'ba-card' : '')}">
             <div class="job-top-row">
-              <span class="job-company" style="color: var(--purple);">${escapeHtml(job.company)}</span>
+              <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                <span class="job-company" style="color: var(--purple);">${escapeHtml(job.company)}</span>
+                ${portalBadgeHtml}
+              </div>
               <span class="match-pill" style="color: var(--purple); border-color: rgba(139, 92, 246, 0.3); background: rgba(139, 92, 246, 0.15);">${job.match_score || 85}% Match</span>
             </div>
             <h2 class="job-title">${escapeHtml(job.title)}</h2>
             <div class="job-meta-row">
               <span class="job-meta-item">📍 ${escapeHtml(job.location || 'Berlin / Remote')}</span>
               <span class="job-meta-item">💼 ${escapeHtml(job.work_type || 'Werkstudent')}</span>
-              <span class="job-meta-item">⚡ Easy Apply</span>
+              <span class="job-meta-item">${isATS ? '🏢 Direct Employer ATS' : (isBA ? '🏛️ Official Gov Index' : '⚡ Easy Apply')}</span>
               <span class="job-meta-item">🕒 ${escapeHtml(job.posted_time || 'Recent')}</span>
             </div>
             <div class="job-actions-row" style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.65rem;">
-              <a href="${job.job_url || '#'}" target="_blank" class="action-link linkedin" style="font-weight: 700;">
-                ⚡ Easy Apply on LinkedIn &rarr;
-              </a>
+              ${applyButtonHtml}
               <a href="${pdfResumePath}" target="_blank" class="action-link primary">
                 📄 View CV (PDF)
               </a>

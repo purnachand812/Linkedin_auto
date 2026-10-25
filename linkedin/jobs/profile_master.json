@@ -8,7 +8,7 @@
   "phone": "+49 15511064761",
   "linkedin_url": "https://linkedin.com/in/purnachanddandu",
   "github_url": "https://github.com/purnachand812",
-  "profile_summary": "Results-driven Software Engineer and current MSc Data Science student at GISMA University Berlin, currently residing in Germany. Gaining German industrial experience working part-time at Formel D on the Tesla Gigafactory project, while independently architecting and deploying AI, CRM, and full-stack systems. Seeking a Werkstudent, Internship, or Part-Time role in Data Science, Machine Learning, or Product Analytics in Berlin.",
+  "profile_summary": "Data Science Master's student at GISMA University Berlin with practical experience in machine learning pipelines, predictive modeling, and SQL database optimization. Background includes software & data engineering internship at Crack-ED (reducing query latency by 60%), data science internship at Innomatics (87% NLP intent classification), and graduate AI research. Resident in Berlin, Germany with full Werkstudent eligibility (up to 20 hrs/week during semester, 40 hrs/week during semester breaks; no visa sponsorship required). Seeking a Werkstudent or Internship role in Data Science, Machine Learning, or Data Engineering in Berlin.",
   "employment_preference": {
     "types": ["Working Student (Werkstudent)", "Internship (Praktikum)", "Part-Time (Teilzeit)"],
     "hours_per_week": "Up to 20 hrs/week (Semester) / 40 hrs/week (Semester breaks)",
@@ -21,58 +21,44 @@
     "Data Science Intern (Praktikant)",
     "Machine Learning Intern",
     "Working Student Product Analytics / BI",
-    "Part-Time Python AI Developer"
+    "Werkstudent Python Data Developer"
   ],
   "work_experience": [
     {
-      "company": "Formel D Group",
-      "locality": "Berlin / Brandenburg, Germany",
-      "position": "Quality Control Inspector (Part-Time · Tesla Project)",
+      "company": "GISMA University of Applied Sciences",
+      "locality": "Berlin, Germany",
+      "position": "Graduate Student Researcher & AI Systems Developer",
       "period": "2025 – Present",
-      "sector": "Automotive Engineering, Quality Assurance & Manufacturing",
+      "sector": "Applied Data Science, Machine Learning & AI Systems",
       "responsibilities": [
-        "Conduct technical quality control, precision verification, and defect inspection on Tesla vehicle components adhering to strict German automotive standards.",
-        "Perform standardized visual and optical quality audits, logging deviations and ensuring zero-defect manufacturing compliance.",
-        "Collaborate in cross-functional German manufacturing and quality operations at Gigafactory Berlin-Brandenburg."
-      ]
-    },
-    {
-      "company": "Self-employed / Independent Developer",
-      "locality": "Berlin / Remote",
-      "position": "Independent Developer · Product Builder",
-      "period": "2024 – Present",
-      "sector": "Software Products, AI Applications & Consulting Platforms",
-      "responsibilities": [
-        "Built Auslandly Consultancy CRM using React, Supabase, and PostgreSQL with real-time synchronization and client lifecycle tracking.",
-        "Developed an AI Germany Navigation App in React Native with LLM integration to help newcomers navigate German bureaucratic procedures.",
-        "Architected and deployed Antigravity Autonomous LinkedIn AI Editorial Engine: a 24/7 research-first LinkedIn automation agent with 100-point AI scout, Canva-quality visual generator, deterministic screener bank, and official REST API v202610 publishing.",
-        "Owned full stack delivery end-to-end, from architecture and database modeling to cloud deployment and monitoring."
+        "Developing predictive data science pipelines, statistical classification models, and autonomous AI agent workflows using Python, FastAPI, and Pydantic as part of M.Sc. Data Science curriculum.",
+        "Architecting data-driven web applications and client management platforms (Auslandly CRM) utilizing PostgreSQL, Supabase, and real-time data synchronization.",
+        "Engineering an AI-assisted Germany administrative navigation assistant integrating LLM APIs and mobile interfaces to streamline public bureaucratic workflows."
       ]
     },
     {
       "company": "Crack-ED",
       "locality": "Gurgaon, India",
-      "position": "Software Engineer",
-      "period": "Sep 2024 – Aug 2025",
-      "sector": "Educational Technology & Software",
+      "position": "Software & Data Engineering Intern",
+      "period": "Sep 2024 – Jun 2025",
+      "sector": "Educational Technology & Data Analytics Platforms",
       "responsibilities": [
-        "Architected and deployed an LMS platform serving 1,000+ concurrent users, reducing system downtime by 35% and supporting 10,000+ student enrollments.",
-        "Optimised 15+ critical SQL queries and implemented Redis caching, cutting average API response time from ~800ms to under 320ms — a 60% backend performance improvement.",
-        "Built 3 real-time analytics dashboards tracking progress of 10,000+ students, enabling instructors to identify at-risk learners 40% faster.",
-        "Implemented JWT + RBAC authentication securing a multi-role platform across students, instructors, and admins with zero reported security incidents.",
-        "Automated end-to-end CI/CD pipelines using GitHub Actions, reducing deployment time from ~50 minutes to under 30 minutes — saving ~8 engineering hours per week."
+        "Optimised 15+ critical SQL queries and implemented Redis caching, cutting average API response time from ~800ms to under 320ms — a 60% backend latency improvement.",
+        "Built 3 real-time analytics dashboards tracking learning metrics across 10,000+ enrolled students, helping instructors identify at-risk learners 40% faster.",
+        "Automated CI/CD deployment workflows using GitHub Actions, cutting build-and-test deployment time from ~50 minutes to under 30 minutes (saving ~8 engineering hours weekly).",
+        "Implemented JWT authentication and role-based access control (RBAC) across student, instructor, and administrator portals with zero security incidents."
       ]
     },
     {
       "company": "Innomatics Research Labs",
       "locality": "Hyderabad, India",
-      "position": "Data Science Intern",
+      "position": "Data Science & ML Intern",
       "period": "Mar 2023 – Jun 2023",
-      "sector": "AI & Data Science Research & Training",
+      "sector": "Artificial Intelligence & Machine Learning Research",
       "responsibilities": [
         "Built an NLP healthcare chatbot handling 500+ query types, achieving 87% intent classification accuracy using Python and NLTK.",
-        "Automated text preprocessing pipeline across 3 datasets totalling 50,000+ records, reducing manual preprocessing time by 20% (saving ~4 hours per sprint).",
-        "Delivered tokenization, stemming, and intent classification pipeline reducing end-to-end chatbot response generation time by 30%."
+        "Automated text preprocessing pipeline across 3 datasets totalling 50,000+ records, reducing manual data preparation time by 20% (saving ~4 hours per sprint).",
+        "Delivered tokenization, stemming, and intent classification pipelines, reducing end-to-end chatbot inference latency by 30%."
       ]
     }
   ],

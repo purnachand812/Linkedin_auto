@@ -321,6 +321,17 @@ class EditorialHandler(SimpleHTTPRequestHandler):
         if path.startswith("/resumes/") or path.startswith("/linkedin/jobs/resumes/"):
             filename = path.replace("/linkedin/jobs/resumes/", "").replace("/resumes/", "")
             file_path = RESUMES_DIR / filename
+
+            # JIT on-demand PDF compilation if HTML exists
+            if not file_path.exists() and filename.endswith(".pdf"):
+                html_path = file_path.with_suffix(".html")
+                if html_path.exists():
+                    try:
+                        from linkedin.jobs import pdf_converter
+                        pdf_converter.convert_html_to_pdf(html_path, file_path)
+                    except Exception as e:
+                        print(f"[PDF JIT Error] Could not compile {filename}: {e}")
+
             if file_path.exists():
                 self.send_response(200)
                 if filename.endswith(".html"):
@@ -334,6 +345,7 @@ class EditorialHandler(SimpleHTTPRequestHandler):
                     self.send_header("Content-Type", "image/png")
                 else:
                     self.send_header("Content-Type", "text/plain; charset=utf-8")
+                self.send_header("Cache-Control", "no-cache, no-store, must-revalidate")
                 self.end_headers()
                 self.wfile.write(file_path.read_bytes())
                 return
@@ -353,6 +365,32 @@ class EditorialHandler(SimpleHTTPRequestHandler):
                 return
             else:
                 self.send_error(404, "Report file not found")
+                return
+
+        # Static Workspace Routing for /linkedin/ (jobs_radar.json, applied_history.json, etc.)
+        if path.startswith("/linkedin/"):
+            rel_p = path.lstrip("/")
+            file_path = WORKSPACE_DIR / rel_p
+            if file_path.exists() and file_path.is_file():
+                self.send_response(200)
+                if rel_p.endswith(".json"):
+                    self.send_header("Content-Type", "application/json; charset=utf-8")
+                elif rel_p.endswith(".html"):
+                    self.send_header("Content-Type", "text/html; charset=utf-8")
+                elif rel_p.endswith(".pdf"):
+                    self.send_header("Content-Type", "application/pdf")
+                elif rel_p.endswith(".jpg") or rel_p.endswith(".jpeg"):
+                    self.send_header("Content-Type", "image/jpeg")
+                elif rel_p.endswith(".png"):
+                    self.send_header("Content-Type", "image/png")
+                else:
+                    self.send_header("Content-Type", "text/plain; charset=utf-8")
+                self.send_header("Cache-Control", "no-cache, no-store, must-revalidate")
+                self.end_headers()
+                self.wfile.write(file_path.read_bytes())
+                return
+            else:
+                self.send_error(404, f"File not found: {path}")
                 return
 
         # OAuth routes

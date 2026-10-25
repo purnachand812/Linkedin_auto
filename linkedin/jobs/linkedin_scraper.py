@@ -268,31 +268,30 @@ def scrape_real_linkedin_jobs(max_results=12, max_days=7):
     return collected_jobs
 
 def refresh_jobs_radar():
-    """Fetches real live jobs and saves them to jobs_radar.json."""
-    print("[SCRAPER] Initiating real-time LinkedIn job radar refresh...")
-    live_jobs = scrape_real_linkedin_jobs(max_results=10, max_days=7)
-    
-    if not live_jobs:
-        print("[SCRAPER WARNING] No jobs returned from scraper; preserving existing radar.")
-        return False
-        
-    radar_data = {
-        "updated_at": datetime.now().isoformat(),
-        "active_search_filters": {
-            "source": "LinkedIn Public Job Index (Live)",
-            "easy_apply_only": True,
-            "max_posted_days": 7,
-            "target_geo": "Berlin, Germany",
-            "roles": SEARCH_QUERIES
-        },
-        "jobs": live_jobs
-    }
-    
-    with open(RADAR_FILE, "w", encoding="utf-8") as f:
-        json.dump(radar_data, f, indent=2)
-        
-    print(f"[SCRAPER SUCCESS] Saved {len(live_jobs)} real-time LinkedIn jobs to jobs_radar.json")
-    return True
+    """Fetches real live jobs across Direct ATS, Bundesagentur für Arbeit, and LinkedIn."""
+    print("[SCRAPER] Initiating 360-degree multi-portal job radar refresh...")
+    try:
+        from linkedin.jobs import multi_source_radar
+        return multi_source_radar.refresh_multi_source_radar()
+    except Exception as e:
+        print(f"[SCRAPER WARNING] multi_source_radar error: {e}. Falling back to LinkedIn standalone...")
+        live_jobs = scrape_real_linkedin_jobs(max_results=10, max_days=7)
+        if not live_jobs:
+            return False
+        radar_data = {
+            "updated_at": datetime.now().isoformat(),
+            "active_search_filters": {
+                "source": "LinkedIn Public Job Index (Live)",
+                "easy_apply_only": True,
+                "max_posted_days": 7,
+                "target_geo": "Berlin, Germany",
+                "roles": SEARCH_QUERIES
+            },
+            "jobs": live_jobs
+        }
+        with open(RADAR_FILE, "w", encoding="utf-8") as f:
+            json.dump(radar_data, f, indent=2)
+        return True
 
 if __name__ == '__main__':
     refresh_jobs_radar()

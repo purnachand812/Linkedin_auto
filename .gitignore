@@ -3,3 +3,4 @@ linkedin/credentials.json
 .env
 __pycache__/
 *.pyc
+scratch/

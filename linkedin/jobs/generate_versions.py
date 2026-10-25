@@ -4,6 +4,7 @@ generate_versions.py - Generates the 3 specialized European Union Europass CV ve
 1. Data Science & Predictive Analytics (Werkstudent / Intern)
 2. Machine Learning & Generative AI Engineering (Werkstudent / Intern)
 3. Product Analytics, Business Intelligence & Project Management (Werkstudent / Part-time)
+Strictly formatted for European Union Europass standards with balanced 2-page layout and student/intern roles.
 """
 
 import shutil
@@ -17,6 +18,14 @@ MASTER_CV = JOBS_DIR / "europass_cv_purna.html"
 shutil.copy(MASTER_CV, RESUMES_DIR / "europass_cv_purna.html")
 
 master_html = MASTER_CV.read_text(encoding="utf-8")
+
+BASE_STATEMENT = (
+    "Data Science Master's student at GISMA University Berlin with practical experience in machine learning pipelines, "
+    "predictive modeling, and SQL database optimization. Background includes software &amp; data engineering internship at Crack-ED "
+    "(reducing query latency by 60%), data science internship at Innomatics (87% NLP intent classification), and graduate AI research. "
+    "Resident in Berlin, Germany with full Werkstudent eligibility (up to 20 hrs/week during semester, 40 hrs/week during semester breaks; "
+    "no visa sponsorship required). Seeking a Werkstudent or Internship role in Data Science, Machine Learning, or Data Engineering in Berlin."
+)
 
 # =========================================================================
 # VERSION 1: DATA SCIENCE & PREDICTIVE ANALYTICS
@@ -36,8 +45,8 @@ v1_html = v1_html.replace(
     "Werkstudent / Intern &bull; Data Science &amp; Predictive Analytics (Berlin, Germany)"
 )
 v1_html = v1_html.replace(
-    "Results-driven Software Engineer and current MSc Data Science student at GISMA University Berlin, currently residing in Germany. Gaining German industrial experience working part-time at Formel D on the Tesla Gigafactory project, while independently architecting and deploying AI, CRM, and full-stack systems. Seeking a Werkstudent, Internship, or Part-Time role in Data Science, Machine Learning, or Product Analytics in Berlin.",
-    "Data Science Master's student at GISMA University Berlin resident in Germany, specializing in Predictive Analytics, Statistical Modeling, and Big Data. Combines German industrial quality assurance experience at Formel D (Tesla project) with 1+ year of production engineering optimizing SQL databases, Redis caching, and training supervised machine learning pipelines (82% accuracy). Actively seeking a Werkstudent or Internship role in Data Science, Statistical Analysis, or Business Data Engineering in Berlin."
+    BASE_STATEMENT,
+    "Data Science Master's student at GISMA University Berlin specializing in Predictive Modeling, Statistical Inference, and Big Data Analytics. Proven student and internship experience implementing supervised ML classification models (82% accuracy), building NLP chatbots (87% intent classification), and optimizing SQL backend queries by 60% at Crack-ED. Resident in Berlin, Germany with full Werkstudent rights (no visa sponsorship required). Seeking a Werkstudent or Internship role in Data Science, Predictive Analytics, or Data Engineering in Berlin."
 )
 
 (RESUMES_DIR / "europass_cv_datascience.html").write_text(v1_html, encoding="utf-8")
@@ -62,8 +71,8 @@ v2_html = v2_html.replace(
     "Werkstudent / Intern &bull; Machine Learning &amp; Generative AI Engineering (Berlin, Germany)"
 )
 v2_html = v2_html.replace(
-    "Results-driven Software Engineer and current MSc Data Science student at GISMA University Berlin, currently residing in Germany. Gaining German industrial experience working part-time at Formel D on the Tesla Gigafactory project, while independently architecting and deploying AI, CRM, and full-stack systems. Seeking a Werkstudent, Internship, or Part-Time role in Data Science, Machine Learning, or Product Analytics in Berlin.",
-    "Applied Machine Learning &amp; Generative AI Engineer and current GISMA Berlin Master's student resident in Germany. Experienced in integrating LLMs into React Native mobile applications, building NLP healthcare chatbots (87% intent accuracy), and architecting 24/7 autonomous agent systems. Gaining German operational experience at Formel D on the Tesla project. Seeking a Werkstudent or Internship role in Machine Learning, GenAI, or Applied AI in Berlin."
+    BASE_STATEMENT,
+    "Applied Machine Learning &amp; AI Master's student at GISMA University Berlin specializing in Generative AI, LLM orchestration, and NLP pipelines. Demonstrated student and internship experience engineering NLP chatbots handling 500+ query types (87% intent accuracy), building AI navigation assistants in React Native with LLMs, and developing autonomous agent architectures. Resident in Berlin with full Werkstudent eligibility (no visa sponsorship required). Seeking a Werkstudent or Internship role in Machine Learning, Generative AI, or Applied AI in Berlin."
 )
 
 (RESUMES_DIR / "europass_cv_ml_ai.html").write_text(v2_html, encoding="utf-8")
@@ -88,8 +97,8 @@ v3_html = v3_html.replace(
     "Werkstudent / Part-Time &bull; Product Analytics, Business Intelligence &amp; Tech Project Management (Berlin, Germany)"
 )
 v3_html = v3_html.replace(
-    "Results-driven Software Engineer and current MSc Data Science student at GISMA University Berlin, currently residing in Germany. Gaining German industrial experience working part-time at Formel D on the Tesla Gigafactory project, while independently architecting and deploying AI, CRM, and full-stack systems. Seeking a Werkstudent, Internship, or Part-Time role in Data Science, Machine Learning, or Product Analytics in Berlin.",
-    "Technical Product Builder and current GISMA Berlin Data Science Master's student resident in Germany. Proven experience in CRM architecture (Auslandly CRM with Supabase sync), German industrial quality inspection at Formel D (Tesla project), and LMS analytics dashboards tracking 10,000+ students. Experienced in CI/CD release management (saving 8 engineering hours weekly) and digital transformation. Seeking a Werkstudent or Part-Time role in Product Analytics, BI, or Tech Project Management in Berlin."
+    BASE_STATEMENT,
+    "Data Science Master's student at GISMA University Berlin combining data analytics engineering with technical product building. Experienced in developing real-time student analytics dashboards tracking 10,000+ learners at Crack-ED, architecting cloud CRM databases (Auslandly CRM with Supabase sync), and managing CI/CD automated release pipelines (saving 8 engineering hours weekly). Resident in Berlin with full Werkstudent eligibility (no visa sponsorship required). Seeking a Werkstudent or Part-Time role in Product Analytics, Business Intelligence, or Tech Project Management in Berlin."
 )
 
 (RESUMES_DIR / "europass_cv_bi_product.html").write_text(v3_html, encoding="utf-8")
