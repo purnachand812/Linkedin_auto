@@ -163,13 +163,16 @@
       "topic": "Langfuse (Self-Hosted LLM Observability & Tracing in Docker)",
       "beat": "Free & Open-Source AI Agent / Infrastructure",
       "score": 94,
-      "status": "APPROVED",
+      "status": "PUBLISHED",
       "format": "image-attached",
       "replaces": "Helicone / LangSmith ($39-$99/mo cloud SaaS)",
       "cost": "Free MIT code; runs in local Docker container with $0 SaaS fees",
       "test_status": "Approved for Autonomous Publishing",
       "file": "linkedin/queue/candidate_11_langfuse.md",
-      "visual": "linkedin/visuals/visual_langfuse.png"
+      "visual": "linkedin/visuals/visual_langfuse.png",
+      "published_at": "2026-10-25T08:38:24Z",
+      "linkedin_post_id": "urn:li:share:7520041057238134784",
+      "linkedin_post_url": "https://www.linkedin.com/feed/update/urn:li:share:7520041057238134784/"
     },
     {
       "id": 12,
