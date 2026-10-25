@@ -45,7 +45,7 @@
   "last_activity": "[11:24:17] \ud83d\udcac Generated 2 contextual community reply templates for Candidate #12",
   "auto_apply_telemetry": {
     "enabled": true,
-    "applied_today": 5,
+    "applied_today": 2,
     "daily_limit": 5,
     "status": "RUNNING"
   },
