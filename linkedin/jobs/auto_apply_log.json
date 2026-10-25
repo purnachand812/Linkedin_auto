@@ -1,12 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "19:54:36",
-      "datetime": "2026-10-24T19:54:36.856336",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
       "timestamp": "11:55:07",
       "datetime": "2026-10-23T11:55:07.246113",
       "level": "INFO",
@@ -359,6 +353,12 @@
       "datetime": "2026-10-25T17:24:40.372483",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for 1KOMMA5\u00b0."
+    },
+    {
+      "timestamp": "19:51:35",
+      "datetime": "2026-10-25T19:51:35.289641",
+      "level": "INFO",
+      "message": "Radar scan: 10 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
   ]
 }
