@@ -1,12 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "19:51:35",
-      "datetime": "2026-10-25T19:51:35.289641",
-      "level": "INFO",
-      "message": "Radar scan: 10 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
       "timestamp": "22:10:19",
       "datetime": "2026-10-25T22:10:19.642035",
       "level": "INFO",
@@ -359,6 +353,12 @@
       "datetime": "2026-10-26T12:15:28.417977",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for P\u0178UR | Tele Columbus."
+    },
+    {
+      "timestamp": "18:48:10",
+      "datetime": "2026-10-26T18:48:10.090853",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
     }
   ]
 }
