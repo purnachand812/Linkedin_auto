@@ -1,12 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "21:03:08",
-      "datetime": "2026-10-24T21:03:08.752622",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
       "timestamp": "22:07:14",
       "datetime": "2026-10-24T22:07:14.241215",
       "level": "INFO",
@@ -359,6 +353,12 @@
       "datetime": "2026-10-26T00:32:51.834591",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for ARC Intelligence."
+    },
+    {
+      "timestamp": "02:19:59",
+      "datetime": "2026-10-26T02:19:59.519775",
+      "level": "INFO",
+      "message": "Radar scan: 18 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
   ]
 }
