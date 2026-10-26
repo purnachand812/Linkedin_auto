@@ -1,72 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "00:14:32",
-      "datetime": "2026-10-26T00:14:32.544575",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "00:15:32",
-      "datetime": "2026-10-26T00:15:32.646240",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "00:16:32",
-      "datetime": "2026-10-26T00:16:32.765486",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "00:17:32",
-      "datetime": "2026-10-26T00:17:32.894265",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "00:18:32",
-      "datetime": "2026-10-26T00:18:32.982108",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "00:19:33",
-      "datetime": "2026-10-26T00:19:33.054794",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "00:20:33",
-      "datetime": "2026-10-26T00:20:33.130443",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "00:21:33",
-      "datetime": "2026-10-26T00:21:33.287613",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "00:22:33",
-      "datetime": "2026-10-26T00:22:33.359060",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "17:55:22",
-      "datetime": "2026-10-24T17:55:22.443521",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "18:17:58",
-      "datetime": "2026-10-24T18:17:58.386913",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
       "timestamp": "21:03:08",
       "datetime": "2026-10-24T21:03:08.752622",
       "level": "INFO",
@@ -359,6 +293,72 @@
       "datetime": "2026-10-25T23:29:39.049671",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for HelloFresh."
+    },
+    {
+      "timestamp": "00:32:49",
+      "datetime": "2026-10-26T00:32:49.811792",
+      "level": "INFO",
+      "message": "Radar scan: 18 active jobs, 2 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "00:32:49",
+      "datetime": "2026-10-26T00:32:49.812366",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Werkstudent Rezeptmanagement (all genders)' at HelloFresh (ID: job-gh-hellofresh-8226101)"
+    },
+    {
+      "timestamp": "00:32:49",
+      "datetime": "2026-10-26T00:32:49.815694",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-gh-hellofresh-8226101.pdf"
+    },
+    {
+      "timestamp": "00:32:49",
+      "datetime": "2026-10-26T00:32:49.816512",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-gh-hellofresh-8226101.pdf"
+    },
+    {
+      "timestamp": "00:32:49",
+      "datetime": "2026-10-26T00:32:49.817421",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "00:32:49",
+      "datetime": "2026-10-26T00:32:49.823355",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for HelloFresh."
+    },
+    {
+      "timestamp": "00:32:51",
+      "datetime": "2026-10-26T00:32:51.824323",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'GTM Engineering Working Student' at ARC Intelligence (ID: job-linkedin-4481087958)"
+    },
+    {
+      "timestamp": "00:32:51",
+      "datetime": "2026-10-26T00:32:51.827286",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4481087958.pdf"
+    },
+    {
+      "timestamp": "00:32:51",
+      "datetime": "2026-10-26T00:32:51.828113",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4481087958.pdf"
+    },
+    {
+      "timestamp": "00:32:51",
+      "datetime": "2026-10-26T00:32:51.829009",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "00:32:51",
+      "datetime": "2026-10-26T00:32:51.834591",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for ARC Intelligence."
     }
   ]
 }
