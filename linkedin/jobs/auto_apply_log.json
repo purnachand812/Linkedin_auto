@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "23:29:39",
-      "datetime": "2026-10-25T23:29:39.045262",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-gh-hellofresh-8210829.pdf"
-    },
-    {
-      "timestamp": "23:29:39",
       "datetime": "2026-10-25T23:29:39.046023",
       "level": "SUCCESS",
       "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
@@ -357,6 +351,12 @@
     {
       "timestamp": "23:21:38",
       "datetime": "2026-10-27T23:21:38.468661",
+      "level": "INFO",
+      "message": "Radar scan: 18 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "23:28:31",
+      "datetime": "2026-10-27T23:28:31.862375",
       "level": "INFO",
       "message": "Radar scan: 18 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
