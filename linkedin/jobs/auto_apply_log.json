@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "23:29:39",
-      "datetime": "2026-10-25T23:29:39.044699",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-gh-hellofresh-8210829.pdf"
-    },
-    {
-      "timestamp": "23:29:39",
       "datetime": "2026-10-25T23:29:39.045262",
       "level": "SUCCESS",
       "message": "Tailored Cover Letter & PDF generated: cover_letter_job-gh-hellofresh-8210829.pdf"
@@ -357,6 +351,12 @@
     {
       "timestamp": "19:49:15",
       "datetime": "2026-10-27T19:49:15.275143",
+      "level": "INFO",
+      "message": "Radar scan: 18 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "23:21:38",
+      "datetime": "2026-10-27T23:21:38.468661",
       "level": "INFO",
       "message": "Radar scan: 18 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
