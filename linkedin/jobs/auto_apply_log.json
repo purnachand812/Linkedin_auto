@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "23:29:39",
-      "datetime": "2026-10-25T23:29:39.043032",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Culinary Operations Working Student (all genders)' at HelloFresh (ID: job-gh-hellofresh-8210829)"
-    },
-    {
-      "timestamp": "23:29:39",
       "datetime": "2026-10-25T23:29:39.044699",
       "level": "SUCCESS",
       "message": "Tailored Europass CV & PDF generated: resume_job-gh-hellofresh-8210829.pdf"
@@ -359,6 +353,12 @@
       "datetime": "2026-10-27T14:48:10.277081",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for MeisterPfad."
+    },
+    {
+      "timestamp": "19:49:15",
+      "datetime": "2026-10-27T19:49:15.275143",
+      "level": "INFO",
+      "message": "Radar scan: 18 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
   ]
 }
