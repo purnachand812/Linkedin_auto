@@ -1,114 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "23:29:31",
-      "datetime": "2026-10-25T23:29:31.013910",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-ba-12811_2311370_S.pdf"
-    },
-    {
-      "timestamp": "23:29:31",
-      "datetime": "2026-10-25T23:29:31.014729",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "23:29:31",
-      "datetime": "2026-10-25T23:29:31.018363",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for HMS Analytical Software GmbH."
-    },
-    {
-      "timestamp": "23:29:33",
-      "datetime": "2026-10-25T23:29:33.019162",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Praktikum Campaign Management (x/f/m)' at Doctolib Germany (ID: job-gh-doctolib-8042707003)"
-    },
-    {
-      "timestamp": "23:29:33",
-      "datetime": "2026-10-25T23:29:33.020993",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-gh-doctolib-8042707003.pdf"
-    },
-    {
-      "timestamp": "23:29:33",
-      "datetime": "2026-10-25T23:29:33.021582",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-gh-doctolib-8042707003.pdf"
-    },
-    {
-      "timestamp": "23:29:33",
-      "datetime": "2026-10-25T23:29:33.022124",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "23:29:33",
-      "datetime": "2026-10-25T23:29:33.025821",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for Doctolib Germany."
-    },
-    {
-      "timestamp": "23:29:35",
-      "datetime": "2026-10-25T23:29:35.026574",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Praktikum Product Marketing (x/f/m)' at Doctolib Germany (ID: job-gh-doctolib-8037214003)"
-    },
-    {
-      "timestamp": "23:29:35",
-      "datetime": "2026-10-25T23:29:35.028485",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-gh-doctolib-8037214003.pdf"
-    },
-    {
-      "timestamp": "23:29:35",
-      "datetime": "2026-10-25T23:29:35.029027",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-gh-doctolib-8037214003.pdf"
-    },
-    {
-      "timestamp": "23:29:35",
-      "datetime": "2026-10-25T23:29:35.030087",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "23:29:35",
-      "datetime": "2026-10-25T23:29:35.033870",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for Doctolib Germany."
-    },
-    {
-      "timestamp": "23:29:37",
-      "datetime": "2026-10-25T23:29:37.034634",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Praktikum Public Affairs & Advocacy (x/f/m)' at Doctolib Germany (ID: job-gh-doctolib-8026774003)"
-    },
-    {
-      "timestamp": "23:29:37",
-      "datetime": "2026-10-25T23:29:37.036578",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-gh-doctolib-8026774003.pdf"
-    },
-    {
-      "timestamp": "23:29:37",
-      "datetime": "2026-10-25T23:29:37.037450",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-gh-doctolib-8026774003.pdf"
-    },
-    {
-      "timestamp": "23:29:37",
-      "datetime": "2026-10-25T23:29:37.038120",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "23:29:37",
-      "datetime": "2026-10-25T23:29:37.041955",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for Doctolib Germany."
-    },
-    {
       "timestamp": "23:29:39",
       "datetime": "2026-10-25T23:29:39.043032",
       "level": "INFO",
@@ -359,6 +251,114 @@
       "datetime": "2026-10-27T08:12:07.265258",
       "level": "INFO",
       "message": "Radar scan: 18 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "14:48:01",
+      "datetime": "2026-10-27T14:48:01.007982",
+      "level": "INFO",
+      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
+    },
+    {
+      "timestamp": "14:48:06",
+      "datetime": "2026-10-27T14:48:06.106041",
+      "level": "SUCCESS",
+      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
+    },
+    {
+      "timestamp": "14:48:06",
+      "datetime": "2026-10-27T14:48:06.107589",
+      "level": "INFO",
+      "message": "Radar scan: 18 active jobs, 3 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "14:48:06",
+      "datetime": "2026-10-27T14:48:06.135701",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Werkstudent*in IT \u2013 Softwareentwicklung, Cloud & AI' at Mercedes-Benz Group AG (ID: job-ba-13151_1643581_1_S)"
+    },
+    {
+      "timestamp": "14:48:06",
+      "datetime": "2026-10-27T14:48:06.138647",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-ba-13151_1643581_1_S.pdf"
+    },
+    {
+      "timestamp": "14:48:06",
+      "datetime": "2026-10-27T14:48:06.143111",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-ba-13151_1643581_1_S.pdf"
+    },
+    {
+      "timestamp": "14:48:06",
+      "datetime": "2026-10-27T14:48:06.144130",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "14:48:06",
+      "datetime": "2026-10-27T14:48:06.163556",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Mercedes-Benz Group AG."
+    },
+    {
+      "timestamp": "14:48:08",
+      "datetime": "2026-10-27T14:48:08.164427",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Praktikant:in (m/w/d) - Nutzerforschung, Innovation & Projektentwicklung' at BIFI | Berlin Institute for Innovation (ID: job-linkedin-4481878782)"
+    },
+    {
+      "timestamp": "14:48:08",
+      "datetime": "2026-10-27T14:48:08.170086",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4481878782.pdf"
+    },
+    {
+      "timestamp": "14:48:08",
+      "datetime": "2026-10-27T14:48:08.183225",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4481878782.pdf"
+    },
+    {
+      "timestamp": "14:48:08",
+      "datetime": "2026-10-27T14:48:08.187358",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "14:48:08",
+      "datetime": "2026-10-27T14:48:08.231009",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for BIFI | Berlin Institute for Innovation."
+    },
+    {
+      "timestamp": "14:48:10",
+      "datetime": "2026-10-27T14:48:10.244488",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Product Engineering Intern, Vertical AI Startup' at MeisterPfad (ID: job-linkedin-4481874686)"
+    },
+    {
+      "timestamp": "14:48:10",
+      "datetime": "2026-10-27T14:48:10.254267",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4481874686.pdf"
+    },
+    {
+      "timestamp": "14:48:10",
+      "datetime": "2026-10-27T14:48:10.259991",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4481874686.pdf"
+    },
+    {
+      "timestamp": "14:48:10",
+      "datetime": "2026-10-27T14:48:10.261295",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "14:48:10",
+      "datetime": "2026-10-27T14:48:10.277081",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for MeisterPfad."
     }
   ]
 }
