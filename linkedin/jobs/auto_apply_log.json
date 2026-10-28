@@ -1,18 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "07:43:17",
-      "datetime": "2026-10-28T07:43:17.334878",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "07:44:17",
-      "datetime": "2026-10-28T07:44:17.379797",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
       "timestamp": "07:45:17",
       "datetime": "2026-10-28T07:45:17.426638",
       "level": "INFO",
@@ -359,6 +347,18 @@
       "datetime": "2026-10-28T16:12:33.881412",
       "level": "INFO",
       "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "21:13:57",
+      "datetime": "2026-10-28T21:13:57.916321",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "21:14:00",
+      "datetime": "2026-10-28T21:14:00.324273",
+      "level": "SUCCESS",
+      "message": "End-of-day summary report dispatched to purnachand0812@gmail.com (SENT_VIA_SMTP)."
     }
   ]
 }

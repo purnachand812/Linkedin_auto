@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-28T16:12:33.891969",
-  "total_posts": 7,
+  "updated_at": "2026-10-28T21:14:00.327646",
+  "total_posts": 6,
   "target_region": "European Union (CET/CEST)",
   "data_integrity": "Verified Ground Truth",
   "posts_analytics": [
@@ -75,18 +75,6 @@
       "reposts": 0,
       "status": "ACCUMULATING",
       "notes": "Fresh drop; awaiting first 24h indexing cycle."
-    },
-    {
-      "candidate_id": 9,
-      "topic": "Crawl4AI (Self-Hosted LLM Web Scraper vs Firecrawl)",
-      "published_at": "2026-10-21T16:18:33Z",
-      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7518707303857090562/",
-      "impressions": 2,
-      "reactions": 0,
-      "comments": 0,
-      "reposts": 0,
-      "status": "ACCUMULATING",
-      "notes": "Published ~25m ago. Initial golden-hour indexing; 2 members reached (100% out-of-network)."
     }
   ]
 }

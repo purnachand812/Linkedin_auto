@@ -33,15 +33,15 @@
     "[09:02:01] \ud83c\udf89 Successfully published Candidate #12! Live URL: https://www.linkedin.com/feed/update/urn:li:share:7521119061716553729/",
     "[09:02:01] \ud83d\udcac Generated 2 contextual community reply templates for Candidate #12"
   ],
-  "current_time_cet": "2026-10-28 17:12:27 CET",
-  "is_eu_prime_time": true,
-  "current_window": "Evening Engineering Wrap",
+  "current_time_cet": "2026-10-28 22:13:57 CET",
+  "is_eu_prime_time": false,
+  "current_window": "Off-Peak / Monitoring",
   "next_scheduled_drop": "Tomorrow Morning Standup (Prime) at 08:00 CET",
   "approved_queue_count": 0,
   "published_today": 1,
   "target_audience": "European Union (Berlin, Munich, Amsterdam, Paris, Zurich)",
   "auto_publish_enabled": true,
-  "last_heartbeat": "2026-10-28T16:12:33.893893",
+  "last_heartbeat": "2026-10-28T21:14:00.329548",
   "last_activity": "[09:02:01] \ud83d\udcac Generated 2 contextual community reply templates for Candidate #12",
   "auto_apply_telemetry": {
     "enabled": true,
@@ -50,10 +50,10 @@
     "status": "RUNNING"
   },
   "weekly_audit_telemetry": {
-    "rolling_7d_impressions": 2,
+    "rolling_7d_impressions": 0,
     "rolling_7d_interactions": 0,
     "rolling_7d_engagement_rate": "0.0%",
-    "top_performing_post": "Crawl4AI (Self-Hosted LLM Web Scraper vs Firecrawl)",
+    "top_performing_post": "OpenHands (Autonomous Software Engineer inside Docker Sandboxes)",
     "winning_formula": "Canva Contrast Infographic + Clean Body + Comment Link + Weekday CET"
   }
 }
