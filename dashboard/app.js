@@ -119,23 +119,17 @@ function switchHubMode(mode) {
 
   const btnPostings = document.getElementById('hub-mode-postings');
   const btnJobs = document.getElementById('hub-mode-jobs');
-  const navPostings = document.getElementById('nav-postings-group');
 
   if (mode === 'jobs') {
     btnPostings?.classList.remove('active');
     btnJobs?.classList.add('active', 'jobs-active');
-    
-    // Seamlessly navigate to the unified Student Jobs Hub
-    const targetUrl = window.location.protocol === 'file:' ? '../index.html' : '/mobile';
-    window.location.href = targetUrl;
-    return;
+    switchTab('jobs');
   } else {
     btnJobs?.classList.remove('active', 'jobs-active');
     btnPostings?.classList.add('active');
-    if (navPostings) navPostings.style.display = '';
 
     // Switch to active postings sub-tab (or queue by default)
-    const activeTab = document.querySelector('#nav-postings-group .nav-tab.active')?.getAttribute('data-tab') || 'queue';
+    const activeTab = document.querySelector('#nav-postings-group .nav-tab.active:not([data-tab="jobs"])')?.getAttribute('data-tab') || 'queue';
     switchTab(activeTab);
   }
 }
@@ -245,6 +239,21 @@ function switchTab(tabId) {
   document.querySelectorAll('.tab-content').forEach(c => {
     c.classList.toggle('active', c.id === `tab-${tabId}`);
   });
+
+  // Keep top switcher synchronized
+  const btnPostings = document.getElementById('hub-mode-postings');
+  const btnJobs = document.getElementById('hub-mode-jobs');
+  if (tabId === 'jobs') {
+    btnPostings?.classList.remove('active');
+    btnJobs?.classList.add('active', 'jobs-active');
+    currentHubMode = 'jobs';
+    try { localStorage.setItem('active_hub_mode', 'jobs'); } catch(e){}
+  } else {
+    btnJobs?.classList.remove('active', 'jobs-active');
+    btnPostings?.classList.add('active');
+    currentHubMode = 'postings';
+    try { localStorage.setItem('active_hub_mode', 'postings'); } catch(e){}
+  }
 }
 
 // --- Filter Handling ---
@@ -1596,12 +1605,17 @@ function openResumeModal(resumeUrl, title) {
   const downloadBtn = document.getElementById('modal-resume-download');
 
   if (modal && iframe) {
-    let viewUrl = resumeUrl;
-    let pdfUrl = resumeUrl;
-    if (resumeUrl.endsWith('.pdf')) {
-      viewUrl = resumeUrl.slice(0, -4) + '.html';
-    } else if (resumeUrl.endsWith('.html')) {
-      pdfUrl = resumeUrl.slice(0, -5) + '.pdf';
+    let cleanPath = (resumeUrl || '').trim();
+    if (!cleanPath.startsWith('/') && !cleanPath.startsWith('http')) {
+      cleanPath = '/resumes/' + cleanPath;
+    }
+    
+    let viewUrl = cleanPath;
+    let pdfUrl = cleanPath;
+    if (cleanPath.endsWith('.pdf')) {
+      viewUrl = cleanPath.slice(0, -4) + '.html';
+    } else if (cleanPath.endsWith('.html')) {
+      pdfUrl = cleanPath.slice(0, -5) + '.pdf';
     }
 
     iframe.src = viewUrl;
