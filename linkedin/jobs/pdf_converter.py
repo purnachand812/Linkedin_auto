@@ -71,7 +71,7 @@ def convert_html_to_pdf(html_path, pdf_path=None):
             # Use Chrome/Edge headless vector printing
             cmd = [
                 browser,
-                "--headless",
+                "--headless=new",
                 "--disable-gpu",
                 "--no-sandbox",
                 "--no-pdf-header-footer",

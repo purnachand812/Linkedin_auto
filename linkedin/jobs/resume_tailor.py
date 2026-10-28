@@ -77,9 +77,7 @@ def generate_tailored_resume(job_info, make_pdf=False):
     linkedin_url = profile.get("linkedin_url", "https://linkedin.com/in/purnachanddandu")
     github_url = profile.get("github_url", "https://github.com/purnachand812")
     profile_summary = profile.get("profile_summary", (
-        "Results-driven Software Engineer and current MSc Data Science student at GISMA University Berlin, "
-        "currently residing in Germany. Gaining German industrial experience working part-time at Formel D on the Tesla Gigafactory project, "
-        "while independently architecting and deploying AI, CRM, and full-stack systems. Seeking a Werkstudent, Internship, or Part-Time role in Berlin."
+        "Data Science Master's student at GISMA University Berlin with practical experience in machine learning pipelines, predictive modeling, and SQL database optimization. Background includes software & data engineering internship at Crack-ED (reducing query latency by 60%), data science internship at Innomatics (87% NLP intent classification), and graduate AI research. Resident in Berlin, Germany with full Werkstudent eligibility (no visa sponsorship required). Seeking a Werkstudent or Internship role in Berlin."
     ))
 
     html = f"""<!DOCTYPE html>

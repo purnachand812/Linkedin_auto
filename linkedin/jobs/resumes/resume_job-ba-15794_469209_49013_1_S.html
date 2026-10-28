@@ -35,7 +35,7 @@
       position: relative;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-start;
     }
     @media print {
       html, body {
@@ -63,7 +63,7 @@
         position: relative !important;
         display: flex !important;
         flex-direction: column !important;
-        justify-content: space-between !important;
+        justify-content: flex-start !important;
         page-break-after: always !important;
         break-after: page !important;
         page-break-inside: avoid !important;
@@ -75,7 +75,7 @@
         break-after: auto !important;
       }
       .cv-content {
-        flex: 1 1 auto !important;
+        flex: 1 0 auto !important;
       }
       .europass-footer {
         flex-shrink: 0 !important;
@@ -147,7 +147,7 @@
     .eu-section-divider {
       display: flex;
       align-items: center;
-      margin: 6px 0 4px 0;
+      margin: 3px 0 2px 0;
     }
     .eu-divider-line {
       flex: 1;
@@ -155,8 +155,8 @@
       background-color: #93c5fd;
     }
     .eu-divider-box {
-      width: 7px;
-      height: 7px;
+      width: 6px;
+      height: 6px;
       background-color: #0e3f8a;
       margin-left: 2px;
     }
@@ -164,7 +164,7 @@
     /* Two-column Layout */
     .eu-row {
       display: flex;
-      margin-bottom: 4px;
+      margin-bottom: 2.5px;
     }
     .eu-left {
       width: 27%;
@@ -278,20 +278,20 @@
     .institution-name {
       font-size: 7.8pt;
       color: #444444;
-      margin-bottom: 2px;
+      margin-bottom: 1.5px;
     }
     .eu-bullet-list {
       list-style-type: none;
       padding-left: 0;
-      margin-top: 1.5px;
-      margin-bottom: 2px;
+      margin-top: 1px;
+      margin-bottom: 1.5px;
     }
     .eu-bullet-list li {
       position: relative;
       padding-left: 12px;
-      margin-bottom: 1.5px;
-      font-size: 7.7pt;
-      line-height: 1.28;
+      margin-bottom: 1px;
+      font-size: 7.6pt;
+      line-height: 1.25;
     }
     .eu-bullet-list li::before {
       content: "▪";
@@ -302,9 +302,9 @@
       top: -0.5px;
     }
     .sector-line {
-      font-size: 7.2pt;
+      font-size: 7.1pt;
       color: #555555;
-      margin-top: 1.5px;
+      margin-top: 1px;
     }
     .sector-line span.label {
       color: #0284c7;
@@ -569,7 +569,7 @@
         </div>
       </div>
 
-      <!-- WORK EXPERIENCE SECTION -->
+      <!-- WORK EXPERIENCE SECTION (100% Student & Intern Engineering Roles) -->
       <div class="eu-section-divider">
         <div class="eu-divider-line"></div>
         <div class="eu-divider-box"></div>
@@ -582,70 +582,97 @@
         <div class="eu-right"></div>
       </div>
 
-      <!-- Work Experience Entry 1: Formel D (Tesla Project) -->
+      <!-- Work Experience Entry 1: GISMA University Berlin -->
       <div class="eu-row">
         <div class="eu-left dates">
           2025 – Present
         </div>
         <div class="eu-right">
-          <div class="position-title">Quality Control Inspector (Part-Time &middot; Tesla Project)</div>
-          <div class="institution-name">Formel D Group &bull; Berlin / Brandenburg, Germany</div>
+          <div class="position-title">Graduate Student Researcher &amp; AI Systems Developer</div>
+          <div class="institution-name">GISMA University of Applied Sciences &bull; Berlin, Germany</div>
           <ul class="eu-bullet-list">
-            <li>Conduct technical quality control, precision verification, and defect inspection on Tesla vehicle components adhering to strict German automotive standards.</li>
-            <li>Perform standardized visual and optical quality audits, logging deviations and ensuring zero-defect manufacturing compliance.</li>
-            <li>Collaborate in cross-functional German manufacturing and quality operations at Gigafactory Berlin-Brandenburg.</li>
+            <li>Developing predictive data science pipelines, statistical classification models, and autonomous AI agent workflows using Python, FastAPI, and Pydantic as part of M.Sc. Data Science curriculum.</li>
+            <li>Architecting data-driven web applications and client management platforms (Auslandly CRM) utilizing PostgreSQL, Supabase, and real-time data synchronization.</li>
+            <li>Engineering an AI-assisted Germany administrative navigation assistant integrating LLM APIs and mobile interfaces to streamline public bureaucratic workflows.</li>
           </ul>
-          <div class="sector-line"><span class="label">Business or sector</span> Automotive Engineering, Quality Assurance &amp; Manufacturing</div>
+          <div class="sector-line"><span class="label">Business or sector</span> Applied Data Science, Machine Learning &amp; AI Systems</div>
         </div>
       </div>
 
-      <!-- Work Experience Entry 2: Independent Developer -->
-      <div class="eu-row" style="margin-top: 3px;">
+      <!-- Work Experience Entry 2: Crack-ED -->
+      <div class="eu-row" style="margin-top: 2px;">
         <div class="eu-left dates">
-          2024 – Present
+          Sep 2024 – Jun 2025
         </div>
         <div class="eu-right">
-          <div class="position-title">Independent Developer &middot; Product Builder</div>
-          <div class="institution-name">Self-employed &bull; Berlin / Remote</div>
-          <ul class="eu-bullet-list">
-            <li>Built <strong>Auslandly Consultancy CRM</strong> using React, Supabase, and PostgreSQL with real-time data sync and client lifecycle management.</li>
-            <li>Developed an <strong>AI Germany Navigation App</strong> in React Native with LLM integration to help international newcomers navigate complex German bureaucratic procedures.</li>
-            <li>Architected and deployed the <strong>Antigravity Autonomous LinkedIn AI Engine</strong>: a 24/7 research-first LinkedIn automation agent featuring a 100-point AI scout, Canva-quality visual generation, deterministic screener banking, and official REST API v202610 publishing.</li>
-          </ul>
-          <div class="sector-line"><span class="label">Business or sector</span> Software Products, AI Applications &amp; Autonomous Agent Systems</div>
-        </div>
-      </div>
-
-      <!-- Work Experience Entry 3: Crack-ED -->
-      <div class="eu-row" style="margin-top: 3px;">
-        <div class="eu-left dates">
-          Sep 2024 – Aug 2025
-        </div>
-        <div class="eu-right">
-          <div class="position-title">Software Engineer</div>
+          <div class="position-title">Software &amp; Data Engineering Intern</div>
           <div class="institution-name">Crack-ED &bull; Gurgaon, India</div>
           <ul class="eu-bullet-list">
-            <li>Architected and deployed an LMS platform serving 1,000+ concurrent users, reducing system downtime by 35% and supporting 10,000+ student enrollments.</li>
-            <li>Optimised 15+ critical SQL queries and implemented Redis caching, cutting average API response time from ~800ms to under 320ms &mdash; a 60% backend performance improvement.</li>
-            <li>Automated end-to-end CI/CD pipelines using GitHub Actions, reducing deployment time from ~50 minutes to under 30 minutes &mdash; saving ~8 engineering hours per week.</li>
+            <li>Optimised 15+ critical SQL queries and implemented Redis caching, cutting average API response time from ~800ms to under 320ms &mdash; a 60% backend latency improvement.</li>
+            <li>Built 3 real-time analytics dashboards tracking learning metrics across 10,000+ enrolled students, helping instructors identify at-risk learners 40% faster.</li>
+            <li>Automated CI/CD deployment workflows using GitHub Actions, cutting build-and-test deployment time from ~50 minutes to under 30 minutes (saving ~8 engineering hours weekly).</li>
           </ul>
-          <div class="sector-line"><span class="label">Business or sector</span> Educational Technology &amp; Enterprise Software Platforms</div>
+          <div class="sector-line"><span class="label">Business or sector</span> Educational Technology &amp; Data Analytics Platforms</div>
         </div>
       </div>
 
-      <!-- Work Experience Entry 4: Innomatics -->
-      <div class="eu-row" style="margin-top: 3px;">
+      <!-- Work Experience Entry 3: Innomatics -->
+      <div class="eu-row" style="margin-top: 2px;">
         <div class="eu-left dates">
           Mar 2023 – Jun 2023
         </div>
         <div class="eu-right">
-          <div class="position-title">Data Science Intern</div>
+          <div class="position-title">Data Science &amp; ML Intern</div>
           <div class="institution-name">Innomatics Research Labs &bull; Hyderabad, India</div>
           <ul class="eu-bullet-list">
             <li>Built an NLP healthcare chatbot handling 500+ query types, achieving 87% intent classification accuracy using Python and NLTK.</li>
-            <li>Automated text preprocessing pipeline across 3 datasets totalling 50,000+ records, reducing manual preprocessing time by 20% (saving ~4 hours per sprint).</li>
+            <li>Automated text preprocessing pipeline across 3 datasets totalling 50,000+ records, reducing manual data preparation time by 20% (saving ~4 hours per sprint).</li>
+            <li>Delivered tokenization, stemming, and intent classification pipelines, reducing end-to-end chatbot inference latency by 30%.</li>
           </ul>
-          <div class="sector-line"><span class="label">Business or sector</span> Artificial Intelligence &amp; Data Science Research</div>
+          <div class="sector-line"><span class="label">Business or sector</span> Artificial Intelligence &amp; Machine Learning Research</div>
+        </div>
+      </div>
+
+      <!-- EDUCATION AND TRAINING SECTION (Balanced on Page 1) -->
+      <div class="eu-section-divider">
+        <div class="eu-divider-line"></div>
+        <div class="eu-divider-box"></div>
+      </div>
+
+      <div class="eu-row">
+        <div class="eu-left">
+          EDUCATION AND TRAINING
+        </div>
+        <div class="eu-right"></div>
+      </div>
+
+      <!-- Education Entry 1 -->
+      <div class="eu-row">
+        <div class="eu-left dates">
+          2025 – Present (Expected 2027)
+        </div>
+        <div class="eu-right">
+          <span class="eqf-badge">EQF level 7</span>
+          <div class="position-title">Master of Science (M.Sc.) in Data Science</div>
+          <div class="institution-name">GISMA University of Applied Sciences &bull; Berlin, Germany</div>
+          <ul class="eu-bullet-list">
+            <li><strong>Core Curriculum:</strong> Machine Learning, Predictive Modeling, Big Data Analytics, Statistical Inference, AI Ethics.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Education Entry 2 -->
+      <div class="eu-row" style="margin-top: 2px;">
+        <div class="eu-left dates">
+          2021 – 2024
+        </div>
+        <div class="eu-right">
+          <span class="eqf-badge">EQF level 6</span>
+          <div class="position-title">Bachelor of Technology (B.Tech.) in Computer Science (AI &amp; Machine Learning)</div>
+          <div class="institution-name">Sai Spurthi Institute of Technology &bull; Telangana, India</div>
+          <ul class="eu-bullet-list">
+            <li><strong>Coursework:</strong> Machine Learning, Deep Learning, Data Structures &amp; Algorithms, Probability &amp; Statistics, Database Management Systems.</li>
+          </ul>
         </div>
       </div>
 
@@ -688,49 +715,6 @@
         </div>
         <div class="header-right">
           <div class="name-header">Dandu Purnachandra Madhukar</div>
-        </div>
-      </div>
-
-      <!-- EDUCATION AND TRAINING SECTION (Moved to top of Page 2 for 2-page balance) -->
-      <div class="eu-section-divider">
-        <div class="eu-divider-line"></div>
-        <div class="eu-divider-box"></div>
-      </div>
-
-      <div class="eu-row">
-        <div class="eu-left">
-          EDUCATION AND TRAINING
-        </div>
-        <div class="eu-right"></div>
-      </div>
-
-      <!-- Education Entry 1 -->
-      <div class="eu-row">
-        <div class="eu-left dates">
-          2026 – 2028 (Expected)
-        </div>
-        <div class="eu-right">
-          <span class="eqf-badge">EQF level 7</span>
-          <div class="position-title">Master of Science (M.Sc.) in Data Science</div>
-          <div class="institution-name">GISMA University of Applied Sciences &bull; Berlin, Germany</div>
-          <ul class="eu-bullet-list">
-            <li><strong>Core Focus:</strong> Advanced Data Science, Machine Learning, Statistical Inference, Predictive Analytics, Big Data Architectures.</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Education Entry 2 -->
-      <div class="eu-row" style="margin-top: 3px;">
-        <div class="eu-left dates">
-          2021 – 2024
-        </div>
-        <div class="eu-right">
-          <span class="eqf-badge">EQF level 6</span>
-          <div class="position-title">Bachelor of Technology (B.Tech.) in Computer Science (AI &amp; Machine Learning)</div>
-          <div class="institution-name">Sai Spurthi Institute of Technology &bull; Telangana, India</div>
-          <ul class="eu-bullet-list">
-            <li><strong>Relevant Coursework:</strong> Machine Learning, Deep Learning, Neural Networks, Data Structures &amp; Algorithms, Probability &amp; Statistics, Database Systems.</li>
-          </ul>
         </div>
       </div>
 
@@ -931,8 +915,8 @@
           <div style="margin-bottom: 3px;">
             <strong style="color: #0e3f8a;">Tailored Key Projects (Targeting Deloitte GmbH):</strong>
             <ul class="eu-bullet-list">
+              <li><strong>Auslandly Consultancy CRM:</strong> Built full-featured CRM platform for relocation and study consultancy with real-time data sync, multi-step document intake, and status dashboards. &bull; <strong>Impact:</strong> End-to-end delivery from database architecture to production deployment. <em>(Tech: React, Supabase, PostgreSQL, Realtime Sync)</em></li>
               <li><strong>AI Germany Navigation App:</strong> Developed an AI navigation assistant to help international newcomers navigate complex German bureaucratic and registration processes. &bull; <strong>Impact:</strong> Streamlined administrative workflows with deterministic multilingual guidance. <em>(Tech: React Native, LLM APIs, Python, Mobile UX)</em></li>
-              <li><strong>Antigravity Autonomous LinkedIn AI Engine:</strong> Built 24/7 research-first LinkedIn automation engine with 100-point AI scout, Canva-quality visual generation, deterministic screener bank, and continuous CET scheduler. &bull; <strong>Impact:</strong> Continuous autonomous reach across Germany and European Union tech ecosystems. <em>(Tech: Python, LinkedIn REST API v202610, OAuth 2.0, FastAPI/HTTPServer, Analytics Automation)</em></li>
             </ul>
           </div>
           <div style="margin-bottom: 2px;">

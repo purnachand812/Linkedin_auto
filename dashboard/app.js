@@ -1593,11 +1593,25 @@ function openResumeModal(resumeUrl, title) {
   const iframe = document.getElementById('resume-iframe');
   const titleElem = document.getElementById('modal-resume-title');
   const newTabBtn = document.getElementById('modal-resume-newtab');
+  const downloadBtn = document.getElementById('modal-resume-download');
 
   if (modal && iframe) {
-    iframe.src = resumeUrl;
-    if (titleElem) titleElem.textContent = `ATS Resume Preview: ${title || 'Purnachandra Madhukar'}`;
-    if (newTabBtn) newTabBtn.href = resumeUrl;
+    let viewUrl = resumeUrl;
+    let pdfUrl = resumeUrl;
+    if (resumeUrl.endsWith('.pdf')) {
+      viewUrl = resumeUrl.slice(0, -4) + '.html';
+    } else if (resumeUrl.endsWith('.html')) {
+      pdfUrl = resumeUrl.slice(0, -5) + '.pdf';
+    }
+
+    iframe.src = viewUrl;
+    if (titleElem) titleElem.textContent = `ATS Preview: ${title || 'Purnachandra Madhukar'}`;
+    if (newTabBtn) newTabBtn.href = viewUrl;
+    if (downloadBtn) {
+      downloadBtn.href = pdfUrl;
+      const cleanName = (title || 'Europass_CV_Purna').replace(/[^a-zA-Z0-9_-]/g, '_') + '.pdf';
+      downloadBtn.setAttribute('download', cleanName);
+    }
     modal.classList.add('active');
   }
 }

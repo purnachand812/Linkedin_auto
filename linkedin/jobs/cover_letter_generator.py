@@ -231,7 +231,7 @@ def generate_tailored_cover_letter(job_info, make_pdf=False):
   </p>
 
   <p>
-    In addition to my technical repertoire, I am currently gaining valuable German operational experience working part-time at <strong>Formel D Group</strong> on the <strong>Tesla Gigafactory project</strong> in Berlin-Brandenburg. Conducting rigorous technical quality control and defect inspection on vehicle components adhering to strict German automotive standards has reinforced my commitment to precision, data integrity, and zero-defect execution.
+    During my tenure as a Software Engineering Intern at <strong>Crack-ED</strong> and NLP Intern at <strong>Innomatics Research Labs</strong>, I collaborated within Agile teams to build data processing pipelines, optimize application backends, and benchmark machine learning models. Combined with my GISMA Berlin Master's coursework and independent software builds (such as the Auslandly CRM and AI German Navigation assistant), I bring a structured engineering mindset focused on reliable code quality and clean documentation.
   </p>
 
   <p>

@@ -1,9 +1,9 @@
 # PUBLISHED POST: FastMCP (3-Line Typed Model Context Protocol Servers)
 - **Candidate ID:** 10
-- **Published Date:** 2026-10-24T11:50:49Z
+- **Published Date:** 2026-10-27T15:30:09Z
 - **Format:** Image-Attached
-- **LinkedIn Post ID:** urn:li:share:7519727095149645824
-- **LinkedIn Post URL:** https://www.linkedin.com/feed/update/urn:li:share:7519727095149645824/
+- **LinkedIn Post ID:** urn:li:share:7520869457657942016
+- **LinkedIn Post URL:** https://www.linkedin.com/feed/update/urn:li:share:7520869457657942016/
 - **Status:** Successful
 
 ---
@@ -27,7 +27,6 @@ Automatic type conversion is convenient, but LLMs frequently hallucinate edge-ca
 Don't give an experimental agent unrestricted system tools. Sandbox it first.
 
 Full open-source repository: github.com/PrefectHQ/fastmcp
-(Documentation and installation guide in the first comment)
 
 #Python #AI #ModelContextProtocol #FastAPI #OpenSource
 

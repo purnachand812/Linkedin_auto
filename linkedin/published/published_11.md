@@ -1,9 +1,9 @@
 # PUBLISHED POST: Langfuse (Self-Hosted LLM Observability & Tracing in Docker)
 - **Candidate ID:** 11
-- **Published Date:** 2026-10-25T10:23:14Z
+- **Published Date:** 2026-10-27T15:31:13Z
 - **Format:** Image-Attached
-- **LinkedIn Post ID:** urn:li:share:7520067441029439488
-- **LinkedIn Post URL:** https://www.linkedin.com/feed/update/urn:li:share:7520067441029439488/
+- **LinkedIn Post ID:** urn:li:share:7520869722565832704
+- **LinkedIn Post URL:** https://www.linkedin.com/feed/update/urn:li:share:7520869722565832704/
 - **Status:** Successful
 
 ---

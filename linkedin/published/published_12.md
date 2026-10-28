@@ -1,9 +1,9 @@
 # PUBLISHED POST: OpenHands (Autonomous Software Engineer inside Docker Sandboxes)
 - **Candidate ID:** 12
-- **Published Date:** 2026-10-25T10:24:16Z
+- **Published Date:** 2026-10-28T08:02:01Z
 - **Format:** Image-Attached
-- **LinkedIn Post ID:** urn:li:share:7520067701629669377
-- **LinkedIn Post URL:** https://www.linkedin.com/feed/update/urn:li:share:7520067701629669377/
+- **LinkedIn Post ID:** urn:li:share:7521119061716553729
+- **LinkedIn Post URL:** https://www.linkedin.com/feed/update/urn:li:share:7521119061716553729/
 - **Status:** Successful
 
 ---

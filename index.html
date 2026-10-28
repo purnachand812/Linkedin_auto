@@ -706,8 +706,8 @@
       border: 1px solid var(--card-border);
       border-radius: 16px;
       width: 100%;
-      max-width: 720px;
-      max-height: 90vh;
+      max-width: 900px;
+      max-height: 92vh;
       display: flex;
       flex-direction: column;
       overflow: hidden;
@@ -740,16 +740,17 @@
     .modal-body {
       flex: 1;
       overflow-y: auto;
-      padding: 1rem;
+      padding: 0;
       -webkit-overflow-scrolling: touch;
+      background: #ffffff;
     }
 
     .resume-iframe {
       width: 100%;
-      height: 70vh;
+      height: 75vh;
       border: none;
-      border-radius: 8px;
       background: #fff;
+      display: block;
     }
 
     /* Sticky Bottom Mobile Navigation Bar */
@@ -908,6 +909,64 @@
       <div class="metric-card">
         <div class="metric-val purple" id="stat-radar-count">8</div>
         <div class="metric-label">Berlin Radar</div>
+      </div>
+    </section>
+
+    <!-- Master Europass CV Tracks Section -->
+    <section class="master-cv-section" style="background: rgba(14, 63, 138, 0.12); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 12px; padding: 1rem; margin: 0.75rem 0 1rem 0;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem; flex-wrap: wrap; gap: 0.5rem;">
+        <div>
+          <h2 style="font-size: 0.95rem; font-weight: 700; color: #F8FAFC; margin: 0; display: flex; align-items: center; gap: 0.4rem;">
+            <span>🇪🇺 Official Europass CV Master &amp; Specialized Tracks</span>
+          </h2>
+          <p style="font-size: 0.75rem; color: var(--text-dim); margin: 0.2rem 0 0;">
+            Standard 2-Page Europass CVs &bull; Student / Intern Engineering Roles &bull; German A2 &bull; GISMA Berlin
+          </p>
+        </div>
+        <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
+          <button class="action-link primary" onclick="openModal('Comprehensive Master Europass CV', 'linkedin/jobs/resumes/europass_cv_purna.html', 'linkedin/jobs/resumes/europass_cv_purna.pdf')">
+            Check Master CV
+          </button>
+          <a href="linkedin/jobs/resumes/europass_cv_purna.pdf" download="Europass_CV_Purna_Comprehensive.pdf" class="action-link download">
+            Download PDF
+          </a>
+        </div>
+      </div>
+      
+      <!-- 3 Track Chips -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0.5rem; margin-top: 0.6rem; border-top: 1px solid rgba(56, 189, 248, 0.15); padding-top: 0.6rem;">
+        <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 8px; padding: 0.6rem; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="font-size: 0.78rem; font-weight: 700; color: #38BDF8;">Track 1: Data Science</div>
+            <div style="font-size: 0.68rem; color: var(--text-dim);">Prediction &bull; SQL Tuning &bull; Supervised ML</div>
+          </div>
+          <div style="display: flex; gap: 0.35rem; margin-top: 0.45rem;">
+            <button class="action-link secondary" style="flex: 1; padding: 0.25rem 0.4rem; font-size: 0.7rem; justify-content: center;" onclick="openModal('Europass CV - Data Science Track', 'linkedin/jobs/resumes/europass_cv_datascience.html', 'linkedin/jobs/resumes/europass_cv_datascience.pdf')">Check</button>
+            <a href="linkedin/jobs/resumes/europass_cv_datascience.pdf" download="Europass_CV_Purna_DataScience.pdf" class="action-link download" style="padding: 0.25rem 0.45rem; font-size: 0.7rem;">Download</a>
+          </div>
+        </div>
+
+        <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: 8px; padding: 0.6rem; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="font-size: 0.78rem; font-weight: 700; color: #10B981;">Track 2: ML &amp; GenAI</div>
+            <div style="font-size: 0.68rem; color: var(--text-dim);">AI Apps &bull; Agentic Workflows &bull; NLP</div>
+          </div>
+          <div style="display: flex; gap: 0.35rem; margin-top: 0.45rem;">
+            <button class="action-link secondary" style="flex: 1; padding: 0.25rem 0.4rem; font-size: 0.7rem; justify-content: center;" onclick="openModal('Europass CV - ML & GenAI Track', 'linkedin/jobs/resumes/europass_cv_ml_ai.html', 'linkedin/jobs/resumes/europass_cv_ml_ai.pdf')">Check</button>
+            <a href="linkedin/jobs/resumes/europass_cv_ml_ai.pdf" download="Europass_CV_Purna_ML_AI.pdf" class="action-link download" style="padding: 0.25rem 0.45rem; font-size: 0.7rem;">Download</a>
+          </div>
+        </div>
+
+        <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(245, 158, 11, 0.2); border-radius: 8px; padding: 0.6rem; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="font-size: 0.78rem; font-weight: 700; color: #F59E0B;">Track 3: Product Analytics &amp; BI</div>
+            <div style="font-size: 0.68rem; color: var(--text-dim);">Auslandly CRM &bull; LMS Analytics &bull; CI/CD</div>
+          </div>
+          <div style="display: flex; gap: 0.35rem; margin-top: 0.45rem;">
+            <button class="action-link secondary" style="flex: 1; padding: 0.25rem 0.4rem; font-size: 0.7rem; justify-content: center;" onclick="openModal('Europass CV - Product & BI Track', 'linkedin/jobs/resumes/europass_cv_bi_product.html', 'linkedin/jobs/resumes/europass_cv_bi_product.pdf')">Check</button>
+            <a href="linkedin/jobs/resumes/europass_cv_bi_product.pdf" download="Europass_CV_Purna_Product_BI.pdf" class="action-link download" style="padding: 0.25rem 0.45rem; font-size: 0.7rem;">Download</a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -1075,7 +1134,16 @@
     <div class="modal-sheet" onclick="event.stopPropagation()">
       <div class="modal-header">
         <div class="modal-title" id="modal-title">Tailored Europass CV</div>
-        <button class="modal-close-btn" onclick="closeModal()">&times;</button>
+        <div style="display: flex; gap: 0.5rem; align-items: center;">
+          <a id="modal-newtab-btn" class="action-link secondary" href="#" target="_blank" style="padding: 0.35rem 0.65rem; font-size: 0.75rem;">
+            New Tab ↗
+          </a>
+          <a id="modal-download-btn" class="action-link download" href="#" download style="padding: 0.35rem 0.75rem; font-size: 0.75rem;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download PDF
+          </a>
+          <button class="modal-close-btn" onclick="closeModal()">&times;</button>
+        </div>
       </div>
       <div class="modal-body">
         <iframe id="modal-iframe" class="resume-iframe"></iframe>
@@ -1147,20 +1215,40 @@
       return await rawRes.text();
     }
 
-    // Helper: Normalize PDF path for GitHub Pages and Localhost
-    function getPdfUrl(rawPath, fallbackJobId) {
-      let p = rawPath || '';
-      if (!p && fallbackJobId) {
-        p = `resume_${fallbackJobId}.pdf`;
-      }
-      if (p.endsWith('.html')) {
-        p = p.slice(0, -5) + '.pdf';
-      }
+    // Helper: Normalize asset path for GitHub Pages and Localhost
+    function normalizeAssetUrl(rawPath, defaultFilename) {
+      let p = rawPath || defaultFilename || '';
       if (p.startsWith('/')) p = p.slice(1);
       if (p.startsWith('resumes/')) {
         p = 'linkedin/jobs/' + p;
+      } else if (!p.startsWith('linkedin/jobs/resumes/') && (p.startsWith('resume_') || p.startsWith('cover_letter_') || p.startsWith('europass_cv_'))) {
+        p = 'linkedin/jobs/resumes/' + p;
       }
       return p;
+    }
+
+    function getPdfUrl(rawPath, fallbackJobId, isCoverLetter = false) {
+      let fallbackName = '';
+      if (fallbackJobId) {
+        fallbackName = isCoverLetter ? `cover_letter_${fallbackJobId}.pdf` : `resume_${fallbackJobId}.pdf`;
+      }
+      let p = rawPath || fallbackName;
+      if (p.endsWith('.html')) {
+        p = p.slice(0, -5) + '.pdf';
+      }
+      return normalizeAssetUrl(p, fallbackName);
+    }
+
+    function getHtmlUrl(rawPath, fallbackJobId, isCoverLetter = false) {
+      let fallbackName = '';
+      if (fallbackJobId) {
+        fallbackName = isCoverLetter ? `cover_letter_${fallbackJobId}.html` : `resume_${fallbackJobId}.html`;
+      }
+      let p = rawPath || fallbackName;
+      if (p.endsWith('.pdf')) {
+        p = p.slice(0, -4) + '.html';
+      }
+      return normalizeAssetUrl(p, fallbackName);
     }
 
     // Master Suite Switcher (Student Jobs Hub vs LinkedIn Growth)
@@ -1248,14 +1336,26 @@
       setTimeout(() => { t.style.display = 'none'; }, 2200);
     }
 
-    // Modal Control (Optional inspection)
-    function openModal(title, url) {
+    // Modal Control for in-app preview
+    function openModal(title, viewUrl, downloadPdfUrl) {
       document.getElementById('modal-title').innerText = title;
-      let fullUrl = url;
-      if (!url.startsWith('http')) {
-        fullUrl = BASE_RAW + (url.startsWith('/') ? url.slice(1) : url);
+      const iframe = document.getElementById('modal-iframe');
+      iframe.src = viewUrl;
+
+      const newTabBtn = document.getElementById('modal-newtab-btn');
+      if (newTabBtn) {
+        newTabBtn.href = viewUrl;
       }
-      document.getElementById('modal-iframe').src = fullUrl;
+
+      const dlBtn = document.getElementById('modal-download-btn');
+      if (dlBtn && downloadPdfUrl) {
+        dlBtn.href = downloadPdfUrl;
+        const cleanName = (title || 'Europass_CV_Purna').replace(/[^a-zA-Z0-9_-]/g, '_') + '.pdf';
+        dlBtn.setAttribute('download', cleanName);
+        dlBtn.style.display = 'inline-flex';
+      } else if (dlBtn) {
+        dlBtn.style.display = 'none';
+      }
       document.getElementById('modal-viewer').classList.add('open');
     }
 
@@ -1341,9 +1441,11 @@
         const jobId = job.job_id || `job-${idx}`;
         const companyClean = (job.company || 'Employer').replace(/[^a-zA-Z0-9]/g, '_');
         
-        // Direct PDF paths
-        const pdfResumePath = getPdfUrl(job.resume_pdf_url || job.resume_url, jobId);
-        const pdfCoverPath = getPdfUrl(job.cover_letter_pdf_url || job.cover_letter_url || `cover_letter_${jobId}.pdf`);
+        // Asset paths (both HTML for preview/check and PDF for direct download)
+        const pdfResumePath = getPdfUrl(job.resume_pdf_url || job.resume_url, jobId, false);
+        const htmlResumePath = getHtmlUrl(job.resume_html_url || job.resume_url, jobId, false);
+        const pdfCoverPath = getPdfUrl(job.cover_letter_pdf_url || job.cover_letter_url, jobId, true);
+        const htmlCoverPath = getHtmlUrl(job.cover_letter_html_url || job.cover_letter_url, jobId, true);
 
         const cvDownloadName = `Europass_CV_Purna_Dandu_${companyClean}.pdf`;
         const letterDownloadName = `Cover_Letter_Purna_Dandu_${companyClean}.pdf`;
@@ -1361,21 +1463,21 @@
               <span class="job-meta-item">🕒 Applied ${appliedDate}</span>
             </div>
             <div class="job-actions-row" style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.65rem;">
-              <!-- 1. View PDF CV -->
-              <a href="${pdfResumePath}" target="_blank" class="action-link primary" title="Open PDF CV in new tab">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-                View CV (PDF)
-              </a>
+              <!-- 1. Check CV (In-App Modal) -->
+              <button class="action-link primary" onclick="openModal('${escapeHtml(job.company)} - Europass CV', '${htmlResumePath}', '${pdfResumePath}')" title="Preview and check tailored Europass CV">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                Check CV
+              </button>
               <!-- 2. Download PDF CV -->
               <a href="${pdfResumePath}" download="${cvDownloadName}" class="action-link download" title="Download CV PDF">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                 Download CV
               </a>
-              <!-- 3. View PDF Cover Letter -->
-              <a href="${pdfCoverPath}" target="_blank" class="action-link secondary" title="Open Cover Letter PDF in new tab">
+              <!-- 3. Check Cover Letter (In-App Modal) -->
+              <button class="action-link secondary" onclick="openModal('${escapeHtml(job.company)} - Cover Letter', '${htmlCoverPath}', '${pdfCoverPath}')" title="Preview and check tailored Cover Letter">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                View Letter (PDF)
-              </a>
+                Check Letter
+              </button>
               <!-- 4. Download PDF Cover Letter -->
               <a href="${pdfCoverPath}" download="${letterDownloadName}" class="action-link download" title="Download Cover Letter PDF">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
@@ -1443,8 +1545,12 @@
       listEl.innerHTML = filtered.map((job, idx) => {
         const jobId = job.id || `radar-${idx}`;
         const companyClean = (job.company || 'Employer').replace(/[^a-zA-Z0-9]/g, '_');
-        const pdfResumePath = getPdfUrl(job.resume_pdf_url || job.resume_url, jobId);
-        const pdfCoverPath = getPdfUrl(job.cover_letter_pdf_url || job.cover_letter_url || `cover_letter_${jobId}.pdf`);
+        
+        // Asset paths (both HTML for preview/check and PDF for direct download)
+        const pdfResumePath = getPdfUrl(job.resume_pdf_url || job.resume_url, jobId, false);
+        const htmlResumePath = getHtmlUrl(job.resume_html_url || job.resume_url, jobId, false);
+        const pdfCoverPath = getPdfUrl(job.cover_letter_pdf_url || job.cover_letter_url, jobId, true);
+        const htmlCoverPath = getHtmlUrl(job.cover_letter_html_url || job.cover_letter_url, jobId, true);
 
         const cvDownloadName = `Europass_CV_Purna_${companyClean}.pdf`;
         const letterDownloadName = `Cover_Letter_Purna_${companyClean}.pdf`;
@@ -1490,16 +1596,20 @@
             </div>
             <div class="job-actions-row" style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.65rem;">
               ${applyButtonHtml}
-              <a href="${pdfResumePath}" target="_blank" class="action-link primary">
-                📄 View CV (PDF)
-              </a>
-              <a href="${pdfResumePath}" download="${cvDownloadName}" class="action-link download">
+              <!-- 1. Check CV -->
+              <button class="action-link primary" onclick="openModal('${escapeHtml(job.company)} - Europass CV', '${htmlResumePath}', '${pdfResumePath}')" title="Preview and check tailored Europass CV">
+                📄 Check CV
+              </button>
+              <!-- 2. Download CV -->
+              <a href="${pdfResumePath}" download="${cvDownloadName}" class="action-link download" title="Download CV PDF">
                 📥 Download CV
               </a>
-              <a href="${pdfCoverPath}" target="_blank" class="action-link secondary">
-                ✉️ View Letter (PDF)
-              </a>
-              <a href="${pdfCoverPath}" download="${letterDownloadName}" class="action-link download">
+              <!-- 3. Check Cover Letter -->
+              <button class="action-link secondary" onclick="openModal('${escapeHtml(job.company)} - Cover Letter', '${htmlCoverPath}', '${pdfCoverPath}')" title="Preview and check tailored Cover Letter">
+                ✉️ Check Letter
+              </button>
+              <!-- 4. Download Cover Letter -->
+              <a href="${pdfCoverPath}" download="${letterDownloadName}" class="action-link download" title="Download Cover Letter PDF">
                 📥 Download Letter
               </a>
             </div>
