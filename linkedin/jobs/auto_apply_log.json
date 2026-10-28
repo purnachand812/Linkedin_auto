@@ -1,24 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "07:40:17",
-      "datetime": "2026-10-28T07:40:17.211378",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "07:41:17",
-      "datetime": "2026-10-28T07:41:17.251471",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "07:42:17",
-      "datetime": "2026-10-28T07:42:17.294201",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
       "timestamp": "07:43:17",
       "datetime": "2026-10-28T07:43:17.334878",
       "level": "INFO",
@@ -357,6 +339,24 @@
     {
       "timestamp": "09:18:17",
       "datetime": "2026-10-28T09:18:17.133006",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "16:12:27",
+      "datetime": "2026-10-28T16:12:27.982923",
+      "level": "INFO",
+      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
+    },
+    {
+      "timestamp": "16:12:33",
+      "datetime": "2026-10-28T16:12:33.831538",
+      "level": "SUCCESS",
+      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
+    },
+    {
+      "timestamp": "16:12:33",
+      "datetime": "2026-10-28T16:12:33.881412",
       "level": "INFO",
       "message": "Daily quota reached (5/5). Standing by until tomorrow."
     }
