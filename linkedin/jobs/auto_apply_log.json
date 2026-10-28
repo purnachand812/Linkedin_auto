@@ -1,12 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "23:29:39",
-      "datetime": "2026-10-25T23:29:39.049671",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for HelloFresh."
-    },
-    {
       "timestamp": "00:32:49",
       "datetime": "2026-10-26T00:32:49.811792",
       "level": "INFO",
@@ -357,6 +351,12 @@
     {
       "timestamp": "02:32:24",
       "datetime": "2026-10-28T02:32:24.881718",
+      "level": "INFO",
+      "message": "Radar scan: 18 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "03:04:33",
+      "datetime": "2026-10-28T03:04:33.006116",
       "level": "INFO",
       "message": "Radar scan: 18 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
