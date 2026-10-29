@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "09:12:01",
-      "datetime": "2026-10-28T09:12:01.763857",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "09:13:01",
-      "datetime": "2026-10-28T09:13:01.801981",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "09:14:01",
-      "datetime": "2026-10-28T09:14:01.837111",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "09:15:01",
-      "datetime": "2026-10-28T09:15:01.872469",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "09:16:01",
-      "datetime": "2026-10-28T09:16:01.910595",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "09:17:01",
-      "datetime": "2026-10-28T09:17:01.954407",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "09:18:02",
-      "datetime": "2026-10-28T09:18:02.061755",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "09:19:02",
-      "datetime": "2026-10-28T09:19:02.129652",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
       "timestamp": "09:20:02",
       "datetime": "2026-10-28T09:20:02.176098",
       "level": "INFO",
@@ -359,6 +311,54 @@
       "datetime": "2026-10-29T07:28:25.456553",
       "level": "INFO",
       "message": "Radar scan: 18 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "14:36:55",
+      "datetime": "2026-10-29T14:36:55.421023",
+      "level": "INFO",
+      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
+    },
+    {
+      "timestamp": "14:37:00",
+      "datetime": "2026-10-29T14:37:00.376572",
+      "level": "SUCCESS",
+      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
+    },
+    {
+      "timestamp": "14:37:00",
+      "datetime": "2026-10-29T14:37:00.378047",
+      "level": "INFO",
+      "message": "Radar scan: 17 active jobs, 3 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "14:37:00",
+      "datetime": "2026-10-29T14:37:00.379656",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Werkstudent:in Business Intelligence ETCS-Diagnose' at Deutsche Bahn AG (ID: job-ba-12456_1648340_1_S)"
+    },
+    {
+      "timestamp": "14:37:00",
+      "datetime": "2026-10-29T14:37:00.382689",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-ba-12456_1648340_1_S.pdf"
+    },
+    {
+      "timestamp": "14:37:00",
+      "datetime": "2026-10-29T14:37:00.383936",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-ba-12456_1648340_1_S.pdf"
+    },
+    {
+      "timestamp": "14:37:00",
+      "datetime": "2026-10-29T14:37:00.385138",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "14:37:00",
+      "datetime": "2026-10-29T14:37:00.390557",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Deutsche Bahn AG."
     }
   ]
 }

@@ -1,5 +1,24 @@
 [
   {
+    "job_id": "job-ba-12456_1648340_1_S",
+    "title": "Werkstudent:in Business Intelligence ETCS-Diagnose",
+    "company": "Deutsche Bahn AG",
+    "location": "Berlin 10789, Germany",
+    "salary_range": "\u20ac16 - \u20ac22 / hr",
+    "match_score": 99,
+    "applied_at": "2026-10-29T14:37:00.387363",
+    "job_url": "https://www.arbeitsagentur.de/jobsuche/jobdetail/12456-1648340-1-S",
+    "resume_url": "/resumes/resume_job-ba-12456_1648340_1_S.pdf",
+    "mode": "AUTONOMOUS_DAEMON",
+    "recruiter_outreach_note": "Hi Hiring Team, I saw Deutsche Bahn AG's opening for Werkstudent:in Business Intelligence ETCS-Diagnose in Berlin 10789, Germany. I am an MSc Data Science student based in Berlin researching hallucination attribution in multi-step LLM agent trajectories. I've also built typed dependency injection middlewares using Pydantic AI and FastAPI. I submitted an application and wanted to share my technical portfolio directly. Happy to connect.",
+    "status": "APPLIED_CONFIRMED",
+    "cover_letter_url": "/resumes/cover_letter_job-ba-12456_1648340_1_S.pdf",
+    "resume_pdf_url": "/resumes/resume_job-ba-12456_1648340_1_S.pdf",
+    "cover_letter_pdf_url": "/resumes/cover_letter_job-ba-12456_1648340_1_S.pdf",
+    "resume_html_url": "/resumes/resume_job-ba-12456_1648340_1_S.html",
+    "cover_letter_html_url": "/resumes/cover_letter_job-ba-12456_1648340_1_S.html"
+  },
+  {
     "job_id": "job-linkedin-4481874686",
     "title": "Product Engineering Intern - Vertical AI Startup",
     "company": "MeisterPfad",
