@@ -1,12 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "09:10:01",
-      "datetime": "2026-10-28T09:10:01.686391",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
       "timestamp": "09:11:01",
       "datetime": "2026-10-28T09:11:01.727250",
       "level": "INFO",
@@ -359,6 +353,12 @@
       "datetime": "2026-10-29T01:08:21.193309",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for MeisterPfad."
+    },
+    {
+      "timestamp": "03:31:18",
+      "datetime": "2026-10-29T03:31:18.312258",
+      "level": "INFO",
+      "message": "Radar scan: 18 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
   ]
 }
