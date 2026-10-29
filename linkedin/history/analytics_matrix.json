@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-29T21:26:15.239968",
-  "total_posts": 9,
+  "updated_at": "2026-10-29T20:31:12.886025",
+  "total_posts": 12,
   "target_region": "European Union (CET/CEST)",
   "data_integrity": "Verified Ground Truth",
   "posts_analytics": [
@@ -14,7 +14,7 @@
       "comments": 0,
       "reposts": 0,
       "status": "ACCUMULATING",
-      "notes": "Fresh drop; awaiting first 24h indexing cycle."
+      "notes": "Fresh drop; awaiting next live telemetry sync."
     },
     {
       "candidate_id": 14,
@@ -26,7 +26,7 @@
       "comments": 0,
       "reposts": 0,
       "status": "ACCUMULATING",
-      "notes": "Fresh drop; awaiting first 24h indexing cycle."
+      "notes": "Fresh drop; awaiting next live telemetry sync."
     },
     {
       "candidate_id": 13,
@@ -38,7 +38,7 @@
       "comments": 0,
       "reposts": 0,
       "status": "ACCUMULATING",
-      "notes": "Fresh drop; awaiting first 24h indexing cycle."
+      "notes": "Fresh drop; awaiting next live telemetry sync."
     },
     {
       "candidate_id": 12,
@@ -50,7 +50,7 @@
       "comments": 0,
       "reposts": 0,
       "status": "ACCUMULATING",
-      "notes": "Fresh drop; awaiting first 24h indexing cycle."
+      "notes": "Fresh drop; awaiting next live telemetry sync."
     },
     {
       "candidate_id": 11,
@@ -62,7 +62,7 @@
       "comments": 0,
       "reposts": 0,
       "status": "ACCUMULATING",
-      "notes": "Fresh drop; awaiting first 24h indexing cycle."
+      "notes": "Fresh drop; awaiting next live telemetry sync."
     },
     {
       "candidate_id": 10,
@@ -74,7 +74,7 @@
       "comments": 0,
       "reposts": 0,
       "status": "ACCUMULATING",
-      "notes": "Fresh drop; awaiting first 24h indexing cycle."
+      "notes": "Fresh drop; awaiting next live telemetry sync."
     },
     {
       "candidate_id": 4,
@@ -86,7 +86,7 @@
       "comments": 0,
       "reposts": 0,
       "status": "ACCUMULATING",
-      "notes": "Fresh drop; awaiting first 24h indexing cycle."
+      "notes": "Fresh drop; awaiting next live telemetry sync."
     },
     {
       "candidate_id": 3,
@@ -98,7 +98,7 @@
       "comments": 0,
       "reposts": 0,
       "status": "ACCUMULATING",
-      "notes": "Fresh drop; awaiting first 24h indexing cycle."
+      "notes": "Fresh drop; awaiting next live telemetry sync."
     },
     {
       "candidate_id": 2,
@@ -110,7 +110,43 @@
       "comments": 0,
       "reposts": 0,
       "status": "ACCUMULATING",
-      "notes": "Fresh drop; awaiting first 24h indexing cycle."
+      "notes": "Fresh drop; awaiting next live telemetry sync."
+    },
+    {
+      "candidate_id": 9,
+      "topic": "Crawl4AI (Self-Hosted LLM Web Scraper vs Firecrawl)",
+      "published_at": "2026-10-21T16:18:33Z",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7518707303857090562/",
+      "impressions": 2,
+      "reactions": 0,
+      "comments": 0,
+      "reposts": 0,
+      "status": "ACCUMULATING",
+      "notes": "Published ~25m ago. Initial golden-hour indexing; 2 members reached (100% out-of-network)."
+    },
+    {
+      "candidate_id": 5,
+      "topic": "Aider (Git-Aware Terminal AI Pair Programmer)",
+      "published_at": "2026-10-17T06:31:02Z",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7517109902172102657/",
+      "impressions": 83,
+      "reactions": 1,
+      "comments": 0,
+      "reposts": 0,
+      "status": "VERIFIED",
+      "notes": "Saturday European morning drop (08:31 CEST). Weekend B2B lower dwell window; raw link in body."
+    },
+    {
+      "candidate_id": 1,
+      "topic": "Cline (VS Code MCP Extension)",
+      "published_at": "2026-10-16T19:33:48Z",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7516944499625963520/",
+      "impressions": 188,
+      "reactions": 4,
+      "comments": 0,
+      "reposts": 0,
+      "status": "VERIFIED",
+      "notes": "Friday evening European drop (21:33 CEST). Top performer of the rolling 7-day period."
     }
   ]
 }

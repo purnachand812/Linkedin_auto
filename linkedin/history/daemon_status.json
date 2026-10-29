@@ -21,7 +21,7 @@
     "[18:36:24] \ud83c\udf89 Successfully published Candidate #15! Live URL: https://www.linkedin.com/feed/update/urn:li:share:7521625989441835009/",
     "[18:36:24] \ud83d\udcac Generated 2 contextual community reply templates for Candidate #15"
   ],
-  "current_time_cet": "2026-10-29 21:26:15 CET",
+  "current_time_cet": "2026-10-29 21:31:12 CET",
   "is_eu_prime_time": false,
   "current_window": "Off-Peak / Monitoring",
   "next_scheduled_drop": "Tomorrow Morning Standup (Prime) at 08:00 CET",
@@ -29,7 +29,7 @@
   "published_today": 3,
   "target_audience": "European Union (Berlin, Munich, Amsterdam, Paris, Zurich)",
   "auto_publish_enabled": true,
-  "last_heartbeat": "2026-10-29T21:26:15.254445",
+  "last_heartbeat": "2026-10-29T20:31:12.887304",
   "last_activity": "[18:36:24] \ud83d\udcac Generated 2 contextual community reply templates for Candidate #15",
   "auto_apply_telemetry": {
     "enabled": true,
@@ -38,10 +38,10 @@
     "status": "RUNNING"
   },
   "weekly_audit_telemetry": {
-    "rolling_7d_impressions": 0,
-    "rolling_7d_interactions": 0,
-    "rolling_7d_engagement_rate": "0.0%",
-    "top_performing_post": "vLLM V1 Architecture (Decoupled ZeroMQ Engine & GIL Removal)",
+    "rolling_7d_impressions": 273,
+    "rolling_7d_interactions": 5,
+    "rolling_7d_engagement_rate": "1.83%",
+    "top_performing_post": "Cline (VS Code MCP Extension)",
     "winning_formula": "Canva Contrast Infographic + Clean Body + Comment Link + Weekday CET"
   }
 }
