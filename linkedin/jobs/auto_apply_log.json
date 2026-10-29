@@ -1,12 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "09:20:02",
-      "datetime": "2026-10-28T09:20:02.176098",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
       "timestamp": "09:21:02",
       "datetime": "2026-10-28T09:21:02.230734",
       "level": "INFO",
@@ -359,6 +353,12 @@
       "datetime": "2026-10-29T14:37:00.390557",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for Deutsche Bahn AG."
+    },
+    {
+      "timestamp": "20:03:47",
+      "datetime": "2026-10-29T20:03:47.792505",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
     }
   ]
 }
