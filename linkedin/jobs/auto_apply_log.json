@@ -1,132 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "07:46:17",
-      "datetime": "2026-10-28T07:46:17.466785",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "07:47:17",
-      "datetime": "2026-10-28T07:47:17.514018",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "07:48:17",
-      "datetime": "2026-10-28T07:48:17.556546",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "07:49:17",
-      "datetime": "2026-10-28T07:49:17.597514",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "07:50:17",
-      "datetime": "2026-10-28T07:50:17.640483",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "07:51:17",
-      "datetime": "2026-10-28T07:51:17.681403",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "07:52:17",
-      "datetime": "2026-10-28T07:52:17.726369",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "07:53:17",
-      "datetime": "2026-10-28T07:53:17.772036",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "07:54:17",
-      "datetime": "2026-10-28T07:54:17.813380",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "07:55:17",
-      "datetime": "2026-10-28T07:55:17.855367",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "07:56:17",
-      "datetime": "2026-10-28T07:56:17.906025",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "07:57:17",
-      "datetime": "2026-10-28T07:57:17.948555",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "07:58:17",
-      "datetime": "2026-10-28T07:58:17.999850",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "09:02:01",
-      "datetime": "2026-10-28T09:02:01.356319",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "09:03:01",
-      "datetime": "2026-10-28T09:03:01.410662",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "09:04:01",
-      "datetime": "2026-10-28T09:04:01.446305",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "09:05:01",
-      "datetime": "2026-10-28T09:05:01.492043",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "09:06:01",
-      "datetime": "2026-10-28T09:06:01.531617",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "09:07:01",
-      "datetime": "2026-10-28T09:07:01.572240",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "09:08:01",
-      "datetime": "2026-10-28T09:08:01.609668",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "09:09:01",
-      "datetime": "2026-10-28T09:09:01.643625",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
       "timestamp": "09:10:01",
       "datetime": "2026-10-28T09:10:01.686391",
       "level": "INFO",
@@ -359,6 +233,132 @@
       "datetime": "2026-10-28T23:44:16.092262",
       "level": "INFO",
       "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "01:08:15",
+      "datetime": "2026-10-29T01:08:15.146296",
+      "level": "INFO",
+      "message": "Radar scan: 18 active jobs, 4 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "01:08:15",
+      "datetime": "2026-10-29T01:08:15.146850",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Praktikum: Praktikant*in KI-Engineering \u2013 Fertigung & Logistik (w/m/div.)' at Robert Bosch GmbH (ID: job-ba-15986_REF295908C_51a1ca9_S)"
+    },
+    {
+      "timestamp": "01:08:15",
+      "datetime": "2026-10-29T01:08:15.150765",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-ba-15986_REF295908C_51a1ca9_S.pdf"
+    },
+    {
+      "timestamp": "01:08:15",
+      "datetime": "2026-10-29T01:08:15.151563",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-ba-15986_REF295908C_51a1ca9_S.pdf"
+    },
+    {
+      "timestamp": "01:08:15",
+      "datetime": "2026-10-29T01:08:15.152438",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "01:08:15",
+      "datetime": "2026-10-29T01:08:15.158657",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Robert Bosch GmbH."
+    },
+    {
+      "timestamp": "01:08:17",
+      "datetime": "2026-10-29T01:08:17.159580",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Werkstudent Rezeptmanagement (all genders)' at HelloFresh (ID: job-gh-hellofresh-8226101)"
+    },
+    {
+      "timestamp": "01:08:17",
+      "datetime": "2026-10-29T01:08:17.162194",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-gh-hellofresh-8226101.pdf"
+    },
+    {
+      "timestamp": "01:08:17",
+      "datetime": "2026-10-29T01:08:17.163147",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-gh-hellofresh-8226101.pdf"
+    },
+    {
+      "timestamp": "01:08:17",
+      "datetime": "2026-10-29T01:08:17.164046",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "01:08:17",
+      "datetime": "2026-10-29T01:08:17.169756",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for HelloFresh."
+    },
+    {
+      "timestamp": "01:08:19",
+      "datetime": "2026-10-29T01:08:19.170683",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Praktikant:in (m/w/d) - Nutzerforschung, Innovation & Projektentwicklung' at BIFI | Berlin Institute for Innovation (ID: job-linkedin-4481878782)"
+    },
+    {
+      "timestamp": "01:08:19",
+      "datetime": "2026-10-29T01:08:19.173441",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4481878782.pdf"
+    },
+    {
+      "timestamp": "01:08:19",
+      "datetime": "2026-10-29T01:08:19.174386",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4481878782.pdf"
+    },
+    {
+      "timestamp": "01:08:19",
+      "datetime": "2026-10-29T01:08:19.175288",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "01:08:19",
+      "datetime": "2026-10-29T01:08:19.181131",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for BIFI | Berlin Institute for Innovation."
+    },
+    {
+      "timestamp": "01:08:21",
+      "datetime": "2026-10-29T01:08:21.182049",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Product Engineering Intern - Vertical AI Startup' at MeisterPfad (ID: job-linkedin-4481874686)"
+    },
+    {
+      "timestamp": "01:08:21",
+      "datetime": "2026-10-29T01:08:21.184560",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4481874686.pdf"
+    },
+    {
+      "timestamp": "01:08:21",
+      "datetime": "2026-10-29T01:08:21.185456",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4481874686.pdf"
+    },
+    {
+      "timestamp": "01:08:21",
+      "datetime": "2026-10-29T01:08:21.186375",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "01:08:21",
+      "datetime": "2026-10-29T01:08:21.193309",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for MeisterPfad."
     }
   ]
 }
