@@ -1,50 +1,12 @@
 [
   {
-    "job_id": "job-ba-12456_1648340_1_S",
-    "title": "Werkstudent:in Business Intelligence ETCS-Diagnose",
-    "company": "Deutsche Bahn AG",
-    "location": "Berlin 10789, Germany",
-    "salary_range": "\u20ac16 - \u20ac22 / hr",
-    "match_score": 99,
-    "applied_at": "2026-10-29T14:37:00.387363",
-    "job_url": "https://www.arbeitsagentur.de/jobsuche/jobdetail/12456-1648340-1-S",
-    "resume_url": "/resumes/resume_job-ba-12456_1648340_1_S.pdf",
-    "mode": "AUTONOMOUS_DAEMON",
-    "recruiter_outreach_note": "Hi Hiring Team, I saw Deutsche Bahn AG's opening for Werkstudent:in Business Intelligence ETCS-Diagnose in Berlin 10789, Germany. I am an MSc Data Science student based in Berlin researching hallucination attribution in multi-step LLM agent trajectories. I've also built typed dependency injection middlewares using Pydantic AI and FastAPI. I submitted an application and wanted to share my technical portfolio directly. Happy to connect.",
-    "status": "APPLIED_CONFIRMED",
-    "cover_letter_url": "/resumes/cover_letter_job-ba-12456_1648340_1_S.pdf",
-    "resume_pdf_url": "/resumes/resume_job-ba-12456_1648340_1_S.pdf",
-    "cover_letter_pdf_url": "/resumes/cover_letter_job-ba-12456_1648340_1_S.pdf",
-    "resume_html_url": "/resumes/resume_job-ba-12456_1648340_1_S.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-ba-12456_1648340_1_S.html"
-  },
-  {
-    "job_id": "job-linkedin-4481874686",
-    "title": "Product Engineering Intern - Vertical AI Startup",
-    "company": "MeisterPfad",
-    "location": "Berlin, Berlin, Germany",
-    "salary_range": "\u20ac1,200 - \u20ac1,800 / mo",
-    "match_score": 92,
-    "applied_at": "2026-10-29T01:08:21.188970",
-    "job_url": "https://www.linkedin.com/jobs/view/4481874686/",
-    "resume_url": "/resumes/resume_job-linkedin-4481874686.pdf",
-    "mode": "AUTONOMOUS_DAEMON",
-    "recruiter_outreach_note": "Hi Hiring Team, I saw MeisterPfad's opening for Product Engineering Intern - Vertical AI Startup in Berlin, Berlin, Germany. I am an MSc Data Science student based in Berlin researching hallucination attribution in multi-step LLM agent trajectories. I've also built typed dependency injection middlewares using Pydantic AI and FastAPI. I submitted an application and wanted to share my technical portfolio directly. Happy to connect.",
-    "status": "APPLIED_CONFIRMED",
-    "cover_letter_url": "/resumes/cover_letter_job-linkedin-4481874686.pdf",
-    "resume_pdf_url": "/resumes/resume_job-linkedin-4481874686.pdf",
-    "cover_letter_pdf_url": "/resumes/cover_letter_job-linkedin-4481874686.pdf",
-    "resume_html_url": "/resumes/resume_job-linkedin-4481874686.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4481874686.html"
-  },
-  {
     "job_id": "job-linkedin-4481878782",
     "title": "Praktikant:in (m/w/d) - Nutzerforschung, Innovation & Projektentwicklung",
     "company": "BIFI | Berlin Institute for Innovation",
     "location": "Berlin, Berlin, Germany",
     "salary_range": "\u20ac1,200 - \u20ac1,800 / mo",
-    "match_score": 92,
-    "applied_at": "2026-10-29T01:08:19.177816",
+    "match_score": 91,
+    "applied_at": "2026-10-29T17:12:55.263848",
     "job_url": "https://www.linkedin.com/jobs/view/4481878782/",
     "resume_url": "/resumes/resume_job-linkedin-4481878782.pdf",
     "mode": "AUTONOMOUS_DAEMON",
@@ -54,26 +16,48 @@
     "resume_pdf_url": "/resumes/resume_job-linkedin-4481878782.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-linkedin-4481878782.pdf",
     "resume_html_url": "/resumes/resume_job-linkedin-4481878782.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4481878782.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4481878782.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-linkedin-4481878782.json"
   },
   {
-    "job_id": "job-gh-hellofresh-8226101",
-    "title": "Werkstudent Rezeptmanagement (all genders)",
-    "company": "HelloFresh",
-    "location": "Berlin, Berlin, Germany",
+    "job_id": "job-linkedin-4484903936",
+    "title": "Werkstudent:in Digitale L\u00f6sungen",
+    "company": "JKM consult GmbH",
+    "location": "Berlin, Germany",
     "salary_range": "\u20ac16 - \u20ac22 / hr",
-    "match_score": 93,
-    "applied_at": "2026-10-29T01:08:17.166624",
-    "job_url": "https://careers.hellofresh.com/global/en/job/8226101?gh_jid=8226101",
-    "resume_url": "/resumes/resume_job-gh-hellofresh-8226101.pdf",
+    "match_score": 92,
+    "applied_at": "2026-10-29T17:12:53.157427",
+    "job_url": "https://www.linkedin.com/jobs/view/4484903936/",
+    "resume_url": "/resumes/resume_job-linkedin-4484903936.pdf",
     "mode": "AUTONOMOUS_DAEMON",
-    "recruiter_outreach_note": "Hi Hiring Team, I saw HelloFresh's opening for Werkstudent Rezeptmanagement (all genders) in Berlin, Berlin, Germany. I am an MSc Data Science student based in Berlin researching hallucination attribution in multi-step LLM agent trajectories. I've also built typed dependency injection middlewares using Pydantic AI and FastAPI. I submitted an application and wanted to share my technical portfolio directly. Happy to connect.",
+    "recruiter_outreach_note": "Hi Hiring Team, I saw JKM consult GmbH's opening for Werkstudent:in Digitale L\u00f6sungen in Berlin, Germany. I am an MSc Data Science student based in Berlin researching hallucination attribution in multi-step LLM agent trajectories. I've also built typed dependency injection middlewares using Pydantic AI and FastAPI. I submitted an application and wanted to share my technical portfolio directly. Happy to connect.",
     "status": "APPLIED_CONFIRMED",
-    "cover_letter_url": "/resumes/cover_letter_job-gh-hellofresh-8226101.pdf",
-    "resume_pdf_url": "/resumes/resume_job-gh-hellofresh-8226101.pdf",
-    "cover_letter_pdf_url": "/resumes/cover_letter_job-gh-hellofresh-8226101.pdf",
-    "resume_html_url": "/resumes/resume_job-gh-hellofresh-8226101.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-gh-hellofresh-8226101.html"
+    "cover_letter_url": "/resumes/cover_letter_job-linkedin-4484903936.pdf",
+    "resume_pdf_url": "/resumes/resume_job-linkedin-4484903936.pdf",
+    "cover_letter_pdf_url": "/resumes/cover_letter_job-linkedin-4484903936.pdf",
+    "resume_html_url": "/resumes/resume_job-linkedin-4484903936.html",
+    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4484903936.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-linkedin-4484903936.json"
+  },
+  {
+    "job_id": "job-gh-doctolib-8008618003",
+    "title": "Intern Talent Acquisition Coordinator (x/f/m)",
+    "company": "Doctolib Germany",
+    "location": "Berlin, Berlin, Germany",
+    "salary_range": "\u20ac1,300 - \u20ac1,900 / mo",
+    "match_score": 93,
+    "applied_at": "2026-10-29T17:12:51.041937",
+    "job_url": "https://job-boards.greenhouse.io/doctolib/jobs/8008618003",
+    "resume_url": "/resumes/resume_job-gh-doctolib-8008618003.pdf",
+    "mode": "AUTONOMOUS_DAEMON",
+    "recruiter_outreach_note": "Hi Hiring Team, I saw Doctolib Germany's opening for Intern Talent Acquisition Coordinator (x/f/m) in Berlin, Berlin, Germany. I am an MSc Data Science student based in Berlin researching hallucination attribution in multi-step LLM agent trajectories. I've also built typed dependency injection middlewares using Pydantic AI and FastAPI. I submitted an application and wanted to share my technical portfolio directly. Happy to connect.",
+    "status": "APPLIED_CONFIRMED",
+    "cover_letter_url": "/resumes/cover_letter_job-gh-doctolib-8008618003.pdf",
+    "resume_pdf_url": "/resumes/resume_job-gh-doctolib-8008618003.pdf",
+    "cover_letter_pdf_url": "/resumes/cover_letter_job-gh-doctolib-8008618003.pdf",
+    "resume_html_url": "/resumes/resume_job-gh-doctolib-8008618003.html",
+    "cover_letter_html_url": "/resumes/cover_letter_job-gh-doctolib-8008618003.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-gh-doctolib-8008618003.json"
   },
   {
     "job_id": "job-ba-15986_REF295908C_51a1ca9_S",
@@ -82,7 +66,7 @@
     "location": "Berlin 12109, Germany",
     "salary_range": "\u20ac1,200 - \u20ac1,800 / mo",
     "match_score": 99,
-    "applied_at": "2026-10-29T01:08:15.155518",
+    "applied_at": "2026-10-29T17:12:48.962786",
     "job_url": "https://www.arbeitsagentur.de/jobsuche/jobdetail/15986-REF295908C-51a1ca9-S",
     "resume_url": "/resumes/resume_job-ba-15986_REF295908C_51a1ca9_S.pdf",
     "mode": "AUTONOMOUS_DAEMON",
@@ -92,7 +76,28 @@
     "resume_pdf_url": "/resumes/resume_job-ba-15986_REF295908C_51a1ca9_S.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-ba-15986_REF295908C_51a1ca9_S.pdf",
     "resume_html_url": "/resumes/resume_job-ba-15986_REF295908C_51a1ca9_S.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-ba-15986_REF295908C_51a1ca9_S.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-ba-15986_REF295908C_51a1ca9_S.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-ba-15986_REF295908C_51a1ca9_S.json"
+  },
+  {
+    "job_id": "job-ba-12456_1648340_1_S",
+    "title": "Werkstudent:in Business Intelligence ETCS-Diagnose",
+    "company": "Deutsche Bahn AG",
+    "location": "Berlin 10789, Germany",
+    "salary_range": "\u20ac16 - \u20ac22 / hr",
+    "match_score": 99,
+    "applied_at": "2026-10-29T17:12:46.792904",
+    "job_url": "https://www.arbeitsagentur.de/jobsuche/jobdetail/12456-1648340-1-S",
+    "resume_url": "/resumes/resume_job-ba-12456_1648340_1_S.pdf",
+    "mode": "AUTONOMOUS_DAEMON",
+    "recruiter_outreach_note": "Hi Hiring Team, I saw Deutsche Bahn AG's opening for Werkstudent:in Business Intelligence ETCS-Diagnose in Berlin 10789, Germany. I am an MSc Data Science student based in Berlin researching hallucination attribution in multi-step LLM agent trajectories. I've also built typed dependency injection middlewares using Pydantic AI and FastAPI. I submitted an application and wanted to share my technical portfolio directly. Happy to connect.",
+    "status": "APPLIED_CONFIRMED",
+    "cover_letter_url": "/resumes/cover_letter_job-ba-12456_1648340_1_S.pdf",
+    "resume_pdf_url": "/resumes/resume_job-ba-12456_1648340_1_S.pdf",
+    "cover_letter_pdf_url": "/resumes/cover_letter_job-ba-12456_1648340_1_S.pdf",
+    "resume_html_url": "/resumes/resume_job-ba-12456_1648340_1_S.html",
+    "cover_letter_html_url": "/resumes/cover_letter_job-ba-12456_1648340_1_S.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-ba-12456_1648340_1_S.json"
   },
   {
     "job_id": "job-gh-hellofresh-8210829",
@@ -111,7 +116,8 @@
     "resume_pdf_url": "/resumes/resume_job-gh-hellofresh-8210829.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-gh-hellofresh-8210829.pdf",
     "resume_html_url": "/resumes/resume_job-gh-hellofresh-8210829.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-gh-hellofresh-8210829.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-gh-hellofresh-8210829.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-gh-hellofresh-8210829.json"
   },
   {
     "job_id": "job-gh-doctolib-8026774003",
@@ -130,7 +136,8 @@
     "resume_pdf_url": "/resumes/resume_job-gh-doctolib-8026774003.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-gh-doctolib-8026774003.pdf",
     "resume_html_url": "/resumes/resume_job-gh-doctolib-8026774003.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-gh-doctolib-8026774003.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-gh-doctolib-8026774003.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-gh-doctolib-8026774003.json"
   },
   {
     "job_id": "job-gh-doctolib-8037214003",
@@ -149,7 +156,8 @@
     "resume_pdf_url": "/resumes/resume_job-gh-doctolib-8037214003.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-gh-doctolib-8037214003.pdf",
     "resume_html_url": "/resumes/resume_job-gh-doctolib-8037214003.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-gh-doctolib-8037214003.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-gh-doctolib-8037214003.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-gh-doctolib-8037214003.json"
   },
   {
     "job_id": "job-gh-doctolib-8042707003",
@@ -168,7 +176,8 @@
     "resume_pdf_url": "/resumes/resume_job-gh-doctolib-8042707003.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-gh-doctolib-8042707003.pdf",
     "resume_html_url": "/resumes/resume_job-gh-doctolib-8042707003.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-gh-doctolib-8042707003.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-gh-doctolib-8042707003.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-gh-doctolib-8042707003.json"
   },
   {
     "job_id": "job-linkedin-4481358400",
@@ -187,7 +196,8 @@
     "resume_pdf_url": "/resumes/resume_job-linkedin-4481358400.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-linkedin-4481358400.pdf",
     "resume_html_url": "/resumes/resume_job-linkedin-4481358400.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4481358400.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4481358400.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-linkedin-4481358400.json"
   },
   {
     "job_id": "job-linkedin-4481087958",
@@ -206,7 +216,8 @@
     "resume_pdf_url": "/resumes/resume_job-linkedin-4481087958.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-linkedin-4481087958.pdf",
     "resume_html_url": "/resumes/resume_job-linkedin-4481087958.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4481087958.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4481087958.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-linkedin-4481087958.json"
   },
   {
     "job_id": "job-ba-12951_d8683082_a3ed_4fc5__S",
@@ -225,7 +236,8 @@
     "resume_pdf_url": "/resumes/resume_job-ba-12951_d8683082_a3ed_4fc5__S.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-ba-12951_d8683082_a3ed_4fc5__S.pdf",
     "resume_html_url": "/resumes/resume_job-ba-12951_d8683082_a3ed_4fc5__S.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-ba-12951_d8683082_a3ed_4fc5__S.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-ba-12951_d8683082_a3ed_4fc5__S.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-ba-12951_d8683082_a3ed_4fc5__S.json"
   },
   {
     "job_id": "job-ba-13151_1643581_1_S",
@@ -244,7 +256,8 @@
     "resume_pdf_url": "/resumes/resume_job-ba-13151_1643581_1_S.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-ba-13151_1643581_1_S.pdf",
     "resume_html_url": "/resumes/resume_job-ba-13151_1643581_1_S.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-ba-13151_1643581_1_S.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-ba-13151_1643581_1_S.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-ba-13151_1643581_1_S.json"
   },
   {
     "job_id": "job-ba-20208_91db4f63f15d40869fc_S",
@@ -263,7 +276,8 @@
     "resume_pdf_url": "/resumes/resume_job-ba-20208_91db4f63f15d40869fc_S.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-ba-20208_91db4f63f15d40869fc_S.pdf",
     "resume_html_url": "/resumes/resume_job-ba-20208_91db4f63f15d40869fc_S.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-ba-20208_91db4f63f15d40869fc_S.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-ba-20208_91db4f63f15d40869fc_S.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-ba-20208_91db4f63f15d40869fc_S.json"
   },
   {
     "job_id": "job-ba-12811_2311370_S",
@@ -282,7 +296,8 @@
     "resume_pdf_url": "/resumes/resume_job-ba-12811_2311370_S.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-ba-12811_2311370_S.pdf",
     "resume_html_url": "/resumes/resume_job-ba-12811_2311370_S.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-ba-12811_2311370_S.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-ba-12811_2311370_S.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-ba-12811_2311370_S.json"
   },
   {
     "job_id": "job-ba-15548_1435415_1_S",
@@ -301,7 +316,8 @@
     "resume_pdf_url": "/resumes/resume_job-ba-15548_1435415_1_S.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-ba-15548_1435415_1_S.pdf",
     "resume_html_url": "/resumes/resume_job-ba-15548_1435415_1_S.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-ba-15548_1435415_1_S.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-ba-15548_1435415_1_S.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-ba-15548_1435415_1_S.json"
   },
   {
     "job_id": "job-ba-13635_c8b416bd_JB5263644_S",
@@ -320,7 +336,8 @@
     "resume_pdf_url": "/resumes/resume_job-ba-13635_c8b416bd_JB5263644_S.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-ba-13635_c8b416bd_JB5263644_S.pdf",
     "resume_html_url": "/resumes/resume_job-ba-13635_c8b416bd_JB5263644_S.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-ba-13635_c8b416bd_JB5263644_S.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-ba-13635_c8b416bd_JB5263644_S.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-ba-13635_c8b416bd_JB5263644_S.json"
   },
   {
     "job_id": "job-ba-15933_0067034735_S",
@@ -339,7 +356,8 @@
     "resume_pdf_url": "/resumes/resume_job-ba-15933_0067034735_S.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-ba-15933_0067034735_S.pdf",
     "resume_html_url": "/resumes/resume_job-ba-15933_0067034735_S.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-ba-15933_0067034735_S.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-ba-15933_0067034735_S.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-ba-15933_0067034735_S.json"
   },
   {
     "job_id": "job-ba-15794_469209_49013_1_S",
@@ -358,7 +376,8 @@
     "resume_pdf_url": "/resumes/resume_job-ba-15794_469209_49013_1_S.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-ba-15794_469209_49013_1_S.pdf",
     "resume_html_url": "/resumes/resume_job-ba-15794_469209_49013_1_S.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-ba-15794_469209_49013_1_S.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-ba-15794_469209_49013_1_S.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-ba-15794_469209_49013_1_S.json"
   },
   {
     "job_id": "job-ba-12465_1646595_1_S",
@@ -377,7 +396,8 @@
     "resume_pdf_url": "/resumes/resume_job-ba-12465_1646595_1_S.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-ba-12465_1646595_1_S.pdf",
     "resume_html_url": "/resumes/resume_job-ba-12465_1646595_1_S.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-ba-12465_1646595_1_S.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-ba-12465_1646595_1_S.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-ba-12465_1646595_1_S.json"
   },
   {
     "job_id": "job-ba-10001_1003819853_S",
@@ -396,7 +416,8 @@
     "resume_pdf_url": "/resumes/resume_job-ba-10001_1003819853_S.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-ba-10001_1003819853_S.pdf",
     "resume_html_url": "/resumes/resume_job-ba-10001_1003819853_S.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-ba-10001_1003819853_S.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-ba-10001_1003819853_S.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-ba-10001_1003819853_S.json"
   },
   {
     "job_id": "job-ba-12465_1646596_1_S",
@@ -415,7 +436,8 @@
     "resume_pdf_url": "/resumes/resume_job-ba-12465_1646596_1_S.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-ba-12465_1646596_1_S.pdf",
     "resume_html_url": "/resumes/resume_job-ba-12465_1646596_1_S.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-ba-12465_1646596_1_S.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-ba-12465_1646596_1_S.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-ba-12465_1646596_1_S.json"
   },
   {
     "job_id": "job-ba-15986_45911_1_S",
@@ -434,7 +456,8 @@
     "resume_pdf_url": "/resumes/resume_job-ba-15986_45911_1_S.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-ba-15986_45911_1_S.pdf",
     "resume_html_url": "/resumes/resume_job-ba-15986_45911_1_S.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-ba-15986_45911_1_S.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-ba-15986_45911_1_S.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-ba-15986_45911_1_S.json"
   },
   {
     "job_id": "job-gh-doctolib-7996918003",
@@ -453,7 +476,8 @@
     "resume_pdf_url": "/resumes/resume_job-gh-doctolib-7996918003.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-gh-doctolib-7996918003.pdf",
     "resume_html_url": "/resumes/resume_job-gh-doctolib-7996918003.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-gh-doctolib-7996918003.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-gh-doctolib-7996918003.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-gh-doctolib-7996918003.json"
   },
   {
     "job_id": "job-linkedin-4481084359",
@@ -472,7 +496,8 @@
     "resume_pdf_url": "/resumes/resume_job-linkedin-4481084359.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-linkedin-4481084359.pdf",
     "resume_html_url": "/resumes/resume_job-linkedin-4481084359.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4481084359.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4481084359.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-linkedin-4481084359.json"
   },
   {
     "job_id": "job-linkedin-4479968504",
@@ -491,7 +516,8 @@
     "resume_pdf_url": "/resumes/resume_job-linkedin-4479968504.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-linkedin-4479968504.pdf",
     "resume_html_url": "/resumes/resume_job-linkedin-4479968504.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4479968504.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4479968504.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-linkedin-4479968504.json"
   },
   {
     "job_id": "job-linkedin-4481050527",
@@ -510,7 +536,8 @@
     "resume_pdf_url": "/resumes/resume_job-linkedin-4481050527.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-linkedin-4481050527.pdf",
     "resume_html_url": "/resumes/resume_job-linkedin-4481050527.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4481050527.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4481050527.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-linkedin-4481050527.json"
   },
   {
     "job_id": "job-linkedin-4480665584",
@@ -529,7 +556,8 @@
     "resume_pdf_url": "/resumes/resume_job-linkedin-4480665584.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-linkedin-4480665584.pdf",
     "resume_html_url": "/resumes/resume_job-linkedin-4480665584.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4480665584.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4480665584.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-linkedin-4480665584.json"
   },
   {
     "job_id": "job-linkedin-4480654879",
@@ -548,7 +576,8 @@
     "resume_pdf_url": "/resumes/resume_job-linkedin-4480654879.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-linkedin-4480654879.pdf",
     "resume_html_url": "/resumes/resume_job-linkedin-4480654879.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4480654879.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4480654879.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-linkedin-4480654879.json"
   },
   {
     "job_id": "job-linkedin-4481050260",
@@ -567,7 +596,8 @@
     "resume_pdf_url": "/resumes/resume_job-linkedin-4481050260.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-linkedin-4481050260.pdf",
     "resume_html_url": "/resumes/resume_job-linkedin-4481050260.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4481050260.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4481050260.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-linkedin-4481050260.json"
   },
   {
     "job_id": "job-linkedin-4470499368",
@@ -586,7 +616,8 @@
     "resume_pdf_url": "/resumes/resume_job-linkedin-4470499368.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-linkedin-4470499368.pdf",
     "resume_html_url": "/resumes/resume_job-linkedin-4470499368.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4470499368.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4470499368.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-linkedin-4470499368.json"
   },
   {
     "job_id": "job-linkedin-4480076098",
@@ -605,7 +636,8 @@
     "resume_pdf_url": "/resumes/resume_job-linkedin-4480076098.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-linkedin-4480076098.pdf",
     "resume_html_url": "/resumes/resume_job-linkedin-4480076098.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4480076098.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4480076098.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-linkedin-4480076098.json"
   },
   {
     "job_id": "job-linkedin-4479423240",
@@ -624,7 +656,8 @@
     "resume_pdf_url": "/resumes/resume_job-linkedin-4479423240.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-linkedin-4479423240.pdf",
     "resume_html_url": "/resumes/resume_job-linkedin-4479423240.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4479423240.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4479423240.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-linkedin-4479423240.json"
   },
   {
     "job_id": "job-linkedin-4482460054",
@@ -643,7 +676,8 @@
     "resume_pdf_url": "/resumes/resume_job-linkedin-4482460054.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-linkedin-4482460054.pdf",
     "resume_html_url": "/resumes/resume_job-linkedin-4482460054.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4482460054.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4482460054.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-linkedin-4482460054.json"
   },
   {
     "job_id": "job-linkedin-4480614842",
@@ -662,7 +696,8 @@
     "resume_pdf_url": "/resumes/resume_job-linkedin-4480614842.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-linkedin-4480614842.pdf",
     "resume_html_url": "/resumes/resume_job-linkedin-4480614842.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4480614842.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4480614842.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-linkedin-4480614842.json"
   },
   {
     "job_id": "job-linkedin-4477350780",
@@ -681,7 +716,8 @@
     "resume_pdf_url": "/resumes/resume_job-linkedin-4477350780.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-linkedin-4477350780.pdf",
     "resume_html_url": "/resumes/resume_job-linkedin-4477350780.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4477350780.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4477350780.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-linkedin-4477350780.json"
   },
   {
     "job_id": "job-linkedin-4480395003",
@@ -700,7 +736,8 @@
     "resume_pdf_url": "/resumes/resume_job-linkedin-4480395003.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-linkedin-4480395003.pdf",
     "resume_html_url": "/resumes/resume_job-linkedin-4480395003.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4480395003.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4480395003.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-linkedin-4480395003.json"
   },
   {
     "job_id": "job-linkedin-4480773802",
@@ -719,7 +756,8 @@
     "resume_pdf_url": "/resumes/resume_job-linkedin-4480773802.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-linkedin-4480773802.pdf",
     "resume_html_url": "/resumes/resume_job-linkedin-4480773802.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4480773802.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4480773802.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-linkedin-4480773802.json"
   },
   {
     "job_id": "job-linkedin-4476662614",
@@ -738,7 +776,8 @@
     "resume_pdf_url": "/resumes/resume_job-linkedin-4476662614.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-linkedin-4476662614.pdf",
     "resume_html_url": "/resumes/resume_job-linkedin-4476662614.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4476662614.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4476662614.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-linkedin-4476662614.json"
   },
   {
     "job_id": "job-linkedin-4477722546",
@@ -757,7 +796,8 @@
     "resume_pdf_url": "/resumes/resume_job-linkedin-4477722546.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-linkedin-4477722546.pdf",
     "resume_html_url": "/resumes/resume_job-linkedin-4477722546.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4477722546.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4477722546.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-linkedin-4477722546.json"
   },
   {
     "job_id": "job-linkedin-4478278368",
@@ -776,7 +816,8 @@
     "resume_pdf_url": "/resumes/resume_job-linkedin-4478278368.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-linkedin-4478278368.pdf",
     "resume_html_url": "/resumes/resume_job-linkedin-4478278368.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4478278368.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4478278368.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-linkedin-4478278368.json"
   },
   {
     "job_id": "job-linkedin-4466063082",
@@ -795,7 +836,8 @@
     "resume_pdf_url": "/resumes/resume_job-linkedin-4466063082.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-linkedin-4466063082.pdf",
     "resume_html_url": "/resumes/resume_job-linkedin-4466063082.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4466063082.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4466063082.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-linkedin-4466063082.json"
   },
   {
     "job_id": "job-linkedin-4452397585",
@@ -814,7 +856,8 @@
     "resume_pdf_url": "/resumes/resume_job-linkedin-4452397585.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-linkedin-4452397585.pdf",
     "resume_html_url": "/resumes/resume_job-linkedin-4452397585.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4452397585.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4452397585.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-linkedin-4452397585.json"
   },
   {
     "job_id": "job-linkedin-4475630927",
@@ -833,7 +876,8 @@
     "resume_pdf_url": "/resumes/resume_job-linkedin-4475630927.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-linkedin-4475630927.pdf",
     "resume_html_url": "/resumes/resume_job-linkedin-4475630927.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4475630927.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4475630927.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-linkedin-4475630927.json"
   },
   {
     "job_id": "job-linkedin-4476034778",
@@ -852,7 +896,8 @@
     "resume_pdf_url": "/resumes/resume_job-linkedin-4476034778.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-linkedin-4476034778.pdf",
     "resume_html_url": "/resumes/resume_job-linkedin-4476034778.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4476034778.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4476034778.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-linkedin-4476034778.json"
   },
   {
     "job_id": "job-linkedin-4476084893",
@@ -871,7 +916,8 @@
     "resume_pdf_url": "/resumes/resume_job-linkedin-4476084893.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-linkedin-4476084893.pdf",
     "resume_html_url": "/resumes/resume_job-linkedin-4476084893.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4476084893.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4476084893.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-linkedin-4476084893.json"
   },
   {
     "job_id": "job-linkedin-4480362243",
@@ -890,6 +936,7 @@
     "resume_pdf_url": "/resumes/resume_job-linkedin-4480362243.pdf",
     "cover_letter_pdf_url": "/resumes/cover_letter_job-linkedin-4480362243.pdf",
     "resume_html_url": "/resumes/resume_job-linkedin-4480362243.html",
-    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4480362243.html"
+    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4480362243.html",
+    "packet_file": "linkedin/jobs/packets/packet_job-linkedin-4480362243.json"
   }
 ]

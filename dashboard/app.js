@@ -280,7 +280,7 @@ async function loadDaemonOnly() {
 // --- Data Fetching ---
 async function loadAllData() {
   try {
-    const [queueRes, trendsRes, historyRes, visualsRes, calendarRes, statusRes, daemonRes, analyticsRes, repliesRes, jobsRadarRes, jobsAppliedRes] = await Promise.all([
+    const [queueRes, trendsRes, historyRes, visualsRes, calendarRes, statusRes, daemonRes, analyticsRes, repliesRes, jobsRadarRes, jobsAppliedRes, benchRes] = await Promise.all([
       fetch('/api/queue').then(r => r.json()).catch(() => null),
       fetch('/api/trends').then(r => r.json()).catch(() => null),
       fetch('/api/history').then(r => r.json()).catch(() => null),
@@ -291,7 +291,8 @@ async function loadAllData() {
       fetch('/api/analytics').then(r => r.json()).catch(() => null),
       fetch('/api/replies').then(r => r.json()).catch(() => null),
       fetch('/api/jobs/radar').then(r => r.json()).catch(() => null),
-      fetch('/api/jobs/applied').then(r => r.json()).catch(() => null)
+      fetch('/api/jobs/applied').then(r => r.json()).catch(() => null),
+      fetch('/api/benchmarks').then(r => r.json()).catch(() => null)
     ]);
 
     if (queueRes) {
@@ -303,6 +304,11 @@ async function loadAllData() {
     if (trendsRes) {
       trendsData = trendsRes;
       renderTrends();
+      const tBadge = document.getElementById('trends-count-badge');
+      if (tBadge) tBadge.textContent = `${trendsData.length} BREAKTHROUGHS`;
+    }
+    if (benchRes && benchRes.runs && benchRes.runs.length > 0) {
+      renderBenchmarksBanner(benchRes.runs[0]);
     }
 
     if (historyRes) {
@@ -407,21 +413,21 @@ function renderCandidates() {
       badgeHtml = `<span class="badge badge-purple">${c.status}</span>`;
     }
 
-    // Visual markup
+    // Visual markup (supports PNG, SVG, and 5-Slide 1080x1350 PDF Carousels)
+    const isPdfCarousel = (c.visual_url || '').endsWith('.pdf');
+    const previewImgSrc = c.visual_thumb_url || c.visual_url || '';
     let visualMarkup = `
       <div class="visual-thumbnail-panel">
-        <span class="meta-label">VISUAL ASSET</span>
+        <span class="meta-label">${isPdfCarousel ? '5-SLIDE PDF CAROUSEL (1080x1350)' : 'VISUAL ASSET'}</span>
         <div class="visual-preview-frame" onclick="openVisualModal('${c.visual_url || ''}', '${escapeHtml(c.topic)}')">
-          ${c.visual_url ? (
-            c.visual_url.endsWith('.svg') 
-              ? `<img src="${c.visual_url}" alt="${escapeHtml(c.topic)}" />` 
-              : `<img src="${c.visual_url}" alt="${escapeHtml(c.topic)}" />`
+          ${previewImgSrc ? (
+            `<img src="${previewImgSrc}" alt="${escapeHtml(c.topic)}" />`
           ) : `
             <div style="color: var(--text-dim); font-size: 0.75rem; text-align: center; padding: 1rem;">
-              No visual generated<br>(Text-Only Format)
+              No visual generated<br>(Text-Only Dwell Format)
             </div>
           `}
-          <div class="visual-expand-overlay">Click to Inspect &amp; Export</div>
+          <div class="visual-expand-overlay">${isPdfCarousel ? 'Click to Open 5-Slide PDF Carousel' : 'Click to Inspect &amp; Export'}</div>
         </div>
         <span class="visual-name">${c.visual || 'text-only (dwell-optimized)'}</span>
       </div>
@@ -455,7 +461,7 @@ function renderCandidates() {
           <!-- 1-Click LinkedIn Publishing Buttons -->
           <button class="btn btn-primary btn-sm btn-publish-live" onclick="publishToLinkedIn(${c.id}, ${c.visual_exists ? 'true' : 'false'})" style="background: linear-gradient(135deg, #0A66C2, #004182); border-color: #0A66C2; font-weight: 700; display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.35rem 0.75rem;">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-            ${c.visual_exists ? 'Publish with Canva Visual' : 'Publish Text-Only'}
+            ${c.visual_exists ? ((c.visual_url || '').endsWith('.pdf') ? 'Publish 5-Slide PDF Carousel' : 'Publish with Canva Visual') : 'Publish Text-Only'}
           </button>
 
           ${c.visual_exists ? `
@@ -707,19 +713,22 @@ function renderVisuals() {
   visualsData.forEach(v => {
     const card = document.createElement('div');
     card.className = 'visual-card';
+    const thumbSrc = v.thumb_url || v.url;
+    const isPdf = v.url.endsWith('.pdf');
     card.innerHTML = `
-      <div class="visual-card-frame" onclick="openVisualModal('${v.url}', '${escapeHtml(v.name)}')">
-        <img src="${v.url}" alt="${escapeHtml(v.name)}" />
+      <div class="visual-card-frame" onclick="openVisualModal('${v.url}', '${escapeHtml(v.name)}')" style="position: relative;">
+        <img src="${thumbSrc}" alt="${escapeHtml(v.name)}" />
+        ${isPdf ? '<span class="badge badge-emerald" style="position: absolute; top: 8px; right: 8px; font-size: 0.65rem;">5-SLIDE PDF DECK</span>' : ''}
       </div>
       <div class="visual-card-meta">
         <div class="visual-card-title" title="${escapeHtml(v.name)}">${escapeHtml(v.name)}</div>
         <div style="display: flex; justify-content: space-between; align-items: center;">
-          <span class="badge badge-cyan">${v.type}</span>
+          <span class="badge ${isPdf ? 'badge-emerald' : 'badge-cyan'}">${v.type}</span>
           <span style="font-size: 0.72rem; color: var(--text-dim);">${Math.round(v.size_bytes / 1024)} KB</span>
         </div>
         <div style="display: flex; gap: 0.5rem; margin-top: 0.25rem;">
           <a href="${v.url}" download="${v.name}" class="btn btn-secondary btn-sm flex-1">Download</a>
-          <button class="btn btn-primary btn-sm" onclick="openVisualModal('${v.url}', '${escapeHtml(v.name)}')">Inspect</button>
+          <button class="btn btn-primary btn-sm" onclick="openVisualModal('${v.url}', '${escapeHtml(v.name)}')">${isPdf ? 'Open Deck' : 'Inspect'}</button>
         </div>
       </div>
     `;
@@ -740,7 +749,11 @@ function openVisualModal(url, title) {
   const copyBtn = document.getElementById('modal-copy-svg-code');
 
   titleEl.textContent = title;
-  previewBox.innerHTML = `<img src="${url}" style="max-height: 520px; max-width: 100%; object-fit: contain;" />`;
+  if (url.endsWith('.pdf')) {
+    previewBox.innerHTML = `<iframe src="${url}" style="width: 100%; height: 560px; border: none; border-radius: 8px; background: #0B0F19;"></iframe>`;
+  } else {
+    previewBox.innerHTML = `<img src="${url}" style="max-height: 520px; max-width: 100%; object-fit: contain;" />`;
+  }
   downloadLink.href = url;
 
   if (url.endsWith('.svg')) {
@@ -1301,15 +1314,18 @@ function renderAnalytics(data) {
       posts.forEach(p => {
         const item = document.createElement('div');
         item.style.cssText = 'padding: 0.75rem; background: #0F172A; border-radius: 6px; display: flex; justify-content: space-between; align-items: center; border: 1px solid #1E293B;';
+        const imp = p.impressions !== undefined ? `${p.impressions} imp` : 'Live';
+        const react = p.reactions !== undefined ? `${p.reactions} likes` : '';
+        const statusBadge = p.status === 'VERIFIED' ? 'badge-emerald' : 'badge-cyan';
         item.innerHTML = `
           <div>
-            <div style="font-weight: 600; font-size: 0.85rem; color: #F8FAFC;">${escapeHtml(p.topic)}</div>
+            <div style="font-weight: 600; font-size: 0.85rem; color: #F8FAFC;">#${p.candidate_id || ''} ${escapeHtml(p.topic)}</div>
             <div style="font-size: 0.72rem; color: var(--text-dim); margin-top: 0.2rem;">
-              Published: ${p.published_at.substring(0, 16).replace('T', ' ')} UTC &bull; ${p.age_hours}h ago
+              Published: ${(p.published_at || '').substring(0, 16).replace('T', ' ')} UTC &bull; <strong style="color: #38BDF8;">${imp}</strong> ${react ? `&bull; <strong style="color: #10B981;">${react}</strong>` : ''}
             </div>
           </div>
           <div style="display: flex; gap: 0.5rem; align-items: center;">
-            <span class="badge badge-emerald" style="font-size: 0.68rem;">LIVE</span>
+            <span class="badge ${statusBadge}" style="font-size: 0.68rem;">${escapeHtml(p.status || 'LIVE')}</span>
             ${p.post_url ? `<a href="${p.post_url}" target="_blank" class="btn btn-secondary btn-sm" style="font-size: 0.72rem; color: #38BDF8; padding: 0.2rem 0.5rem;">Open &nearr;</a>` : ''}
           </div>
         `;
@@ -1325,35 +1341,227 @@ function renderAnalytics(data) {
   }
 }
 
+let cachedRepliesPayload = { pending: [], comments_posted: [], radar_items: [] };
+
 function renderReplies(data) {
   const container = document.getElementById('pending-replies-container');
   if (!container) return;
   container.innerHTML = '';
+  cachedRepliesPayload = data || { pending: [], comments_posted: [], radar_items: [] };
 
-  const replies = (data && data.pending) ? data.pending : [];
-  if (replies.length === 0) {
-    container.innerHTML = '<p style="color: var(--text-muted); font-size: 0.8rem; padding: 0.5rem;">No pending replies generated yet.</p>';
+  const extComments = cachedRepliesPayload.external_comments || [];
+  const liveComments = cachedRepliesPayload.comments_posted || [];
+  const radarItems = cachedRepliesPayload.radar_items || [];
+  const replies = cachedRepliesPayload.pending || [];
+
+  const badgeEl = document.getElementById('live-comment-count-badge');
+  if (badgeEl) {
+    badgeEl.textContent = `${extComments.length} External Stream Comments Live`;
+  }
+
+  // 1. Section: Live Comments on OTHER People's / Teams' Posts in Purna's Stream
+  if (extComments.length > 0) {
+    const extHeader = document.createElement('div');
+    extHeader.style.cssText = 'font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: #10B981; letter-spacing: 0.05em; margin-top: 0.2rem;';
+    extHeader.innerHTML = `🌍 Live Auto-Comments on External Stream Posts (${extComments.length} Other Authors)`;
+    container.appendChild(extHeader);
+
+    extComments.forEach((c) => {
+      const item = document.createElement('div');
+      item.style.cssText = 'padding: 0.75rem; background: rgba(16, 185, 129, 0.07); border-radius: 6px; border: 1px solid rgba(16, 185, 129, 0.35);';
+      item.innerHTML = `
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem; gap: 0.5rem; flex-wrap: wrap;">
+          <span style="font-size: 0.76rem; font-weight: 800; color: #10B981;">👤 ${escapeHtml(c.author || 'External Author')}</span>
+          <a href="${c.post_url || '#'}" target="_blank" style="font-size: 0.7rem; color: #38BDF8; text-decoration: none; font-family: var(--font-mono);">Open External Post (${escapeHtml((c.comment_id || '').slice(-8))}) &nearr;</a>
+        </div>
+        ${c.external_post_snippet ? `<div style="font-size: 0.71rem; color: #94A3B8; background: #080C14; padding: 0.4rem 0.55rem; border-left: 2px solid #38BDF8; border-radius: 4px; margin-bottom: 0.45rem;"><strong>Their Post:</strong> "${escapeHtml(c.external_post_snippet)}"</div>` : ''}
+        <div style="font-size: 0.78rem; color: #F8FAFC; line-height: 1.42; white-space: pre-line;"><strong>Your Live Comment:</strong> ${escapeHtml(c.comment_text)}</div>
+      `;
+      container.appendChild(item);
+    });
+  }
+
+  // 2. Section: 5-Pillar Profile Niche Engagement Radar (External Posts)
+  if (radarItems.length > 0) {
+    const radarHeader = document.createElement('div');
+    radarHeader.style.cssText = 'font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: #A855F7; letter-spacing: 0.05em; margin-top: 0.65rem;';
+    radarHeader.innerHTML = `🎯 Profile-Aligned External Niche Comment Radar (${radarItems.length} Pillars)`;
+    container.appendChild(radarHeader);
+
+    radarItems.forEach((pillar, pIdx) => {
+      const firstComment = (pillar.suggested_comments && pillar.suggested_comments[0]) ? pillar.suggested_comments[0] : { angle: 'Practitioner Take', comment_text: '' };
+      const card = document.createElement('div');
+      card.style.cssText = 'padding: 0.75rem; background: rgba(168, 85, 247, 0.06); border-radius: 6px; border: 1px solid rgba(168, 85, 247, 0.28);';
+      card.innerHTML = `
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem; flex-wrap: wrap; gap: 0.4rem;">
+          <span style="font-size: 0.76rem; font-weight: 700; color: #C084FC;">${escapeHtml(pillar.pillar)}</span>
+          <a href="${pillar.linkedin_search_url || 'https://www.linkedin.com/feed/'}" target="_blank" class="btn btn-secondary btn-sm" style="font-size: 0.68rem; padding: 0.15rem 0.45rem; color: #38BDF8; border-color: rgba(56,189,248,0.35);">
+            🔍 Open Niche Feed on LinkedIn &nearr;
+          </a>
+        </div>
+        <div style="font-size: 0.7rem; color: var(--text-dim); margin-bottom: 0.35rem;">${escapeHtml(pillar.why_it_fits_purna)}</div>
+        <p style="font-size: 0.79rem; color: #E2E8F0; margin-bottom: 0.45rem; line-height: 1.42; background: #090D16; padding: 0.5rem; border-radius: 5px;">"${escapeHtml(firstComment.comment_text)}"</p>
+        <div style="display: flex; justify-content: flex-end; gap: 0.4rem;">
+          <button class="btn btn-secondary btn-sm" onclick="copyRadarComment(${pIdx})" style="font-size: 0.7rem; padding: 0.2rem 0.5rem;">
+            📋 Copy Niche Comment
+          </button>
+        </div>
+      `;
+      container.appendChild(card);
+    });
+  }
+
+  // 3. Section: Post-Specific Technical Replies for Published Posts
+  if (replies.length > 0) {
+    const repHeader = document.createElement('div');
+    repHeader.style.cssText = 'font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: #38BDF8; letter-spacing: 0.05em; margin-top: 0.65rem;';
+    repHeader.innerHTML = `💬 Post-Specific Technical Replies (${replies.length} Scenarios)`;
+    container.appendChild(repHeader);
+
+    replies.forEach((r, idx) => {
+      const card = document.createElement('div');
+      card.style.cssText = 'padding: 0.75rem; background: #0B0F19; border-radius: 6px; border: 1px solid #1E293B;';
+      card.innerHTML = `
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem; flex-wrap: wrap; gap: 0.3rem;">
+          <span style="font-size: 0.75rem; font-weight: 700; color: #38BDF8;">Post #${r.candidate_id}: ${escapeHtml((r.topic || '').slice(0, 42))}</span>
+          <span style="font-size: 0.7rem; color: #F59E0B;">${escapeHtml(r.scenario)}</span>
+        </div>
+        <p style="font-size: 0.8125rem; color: #CBD5E1; margin-bottom: 0.5rem; line-height: 1.45;">"${escapeHtml(r.suggested_reply)}"</p>
+        <div style="display: flex; justify-content: flex-end; gap: 0.5rem;">
+          <button class="btn btn-secondary btn-sm" onclick="copyReplyText(${idx})" style="font-size: 0.7rem; padding: 0.2rem 0.5rem;">
+            📋 Copy Reply
+          </button>
+          ${r.post_urn ? `<button class="btn btn-primary btn-sm" onclick="postReplyLiveToLinkedIn(${idx})" style="font-size: 0.7rem; padding: 0.2rem 0.55rem; background: #10B981; border-color: #10B981;">🚀 Auto-Post Reply to LinkedIn</button>` : ''}
+        </div>
+      `;
+      container.appendChild(card);
+    });
+  }
+}
+
+function copyRadarComment(pIdx) {
+  const radar = (cachedRepliesPayload.radar_items || [])[pIdx];
+  if (radar && radar.suggested_comments && radar.suggested_comments[0]) {
+    navigator.clipboard.writeText(radar.suggested_comments[0].comment_text).then(() => {
+      showToast('Profile-aligned niche comment copied to clipboard!', 'success');
+    });
+  }
+}
+window.copyRadarComment = copyRadarComment;
+
+async function postReplyLiveToLinkedIn(idx) {
+  const r = (cachedRepliesPayload.pending || [])[idx];
+  if (!r || !r.post_urn) return;
+  showToast(`Posting technical reply to Post #${r.candidate_id} on LinkedIn...`, 'info');
+  try {
+    const res = await fetch('/api/comments/post', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        post_urn: r.post_urn,
+        comment_text: r.suggested_reply,
+        topic: r.topic,
+        candidate_id: r.candidate_id,
+        allow_duplicate: false
+      })
+    }).then(resp => resp.json());
+    if (res.success) {
+      showToast(`✅ Comment live on LinkedIn! (ID: ${res.comment_id})`, 'success');
+      loadAllData();
+    } else {
+      showToast(`Comment error: ${res.reason || res.error}`, 'error');
+    }
+  } catch (e) {
+    showToast(`Failed to post comment: ${e.message}`, 'error');
+  }
+}
+window.postReplyLiveToLinkedIn = postReplyLiveToLinkedIn;
+
+async function runAutoCommentBatch() {
+  showToast('Running live auto-commenting batch across all published posts...', 'info');
+  try {
+    const res = await fetch('/api/comments/batch', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({})
+    }).then(r => r.json());
+    if (res.success) {
+      showToast(`✅ Auto-comment sync complete! ${res.total_live_comments} live comments verified on LinkedIn.`, 'success');
+      loadAllData();
+    } else {
+      showToast(res.error || 'Batch failed', 'error');
+    }
+  } catch (e) {
+    showToast(`Batch error: ${e.message}`, 'error');
+  }
+}
+window.runAutoCommentBatch = runAutoCommentBatch;
+
+async function generateCustomPostComments(autoPost = false) {
+  const postUrl = document.getElementById('custom-comment-url')?.value.trim() || '';
+  const authorName = document.getElementById('custom-comment-author')?.value.trim() || '';
+  const postText = document.getElementById('custom-comment-post-text')?.value.trim() || '';
+  const outBox = document.getElementById('custom-generated-comments-box');
+
+  if (!postText && !postUrl) {
+    showToast('Enter a post topic/text or LinkedIn post URL first!', 'error');
     return;
   }
 
-  replies.forEach((r, idx) => {
-    const card = document.createElement('div');
-    card.style.cssText = 'padding: 0.75rem; background: #0B0F19; border-radius: 6px; border: 1px solid #1E293B;';
-    card.innerHTML = `
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
-        <span style="font-size: 0.75rem; font-weight: 700; color: #38BDF8;">Candidate #${r.candidate_id} Scenario:</span>
-        <span style="font-size: 0.7rem; color: var(--text-dim);">${escapeHtml(r.scenario)}</span>
-      </div>
-      <p style="font-size: 0.8125rem; color: #CBD5E1; margin-bottom: 0.5rem; line-height: 1.45;">"${escapeHtml(r.suggested_reply)}"</p>
-      <div style="display: flex; justify-content: flex-end; gap: 0.5rem;">
-        <button class="btn btn-secondary btn-sm" onclick="copyReplyText(${idx})" style="font-size: 0.7rem; padding: 0.2rem 0.5rem;">
-          Copy Technical Reply
-        </button>
-      </div>
-    `;
-    container.appendChild(card);
-  });
+  showToast(autoPost ? 'Generating & auto-posting comment to LinkedIn...' : 'Generating 3 profile-aligned technical comments...', 'info');
+  try {
+    const res = await fetch('/api/comments/generate', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ post_text: postText, post_url: postUrl, author_name: authorName, auto_post: autoPost })
+    }).then(r => r.json());
+
+    if (res.success && outBox) {
+      outBox.style.display = 'flex';
+      outBox.innerHTML = (res.generated_comments || []).map((c, i) => `
+        <div style="padding: 0.65rem; background: #080C14; border: 1px solid #334155; border-radius: 6px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
+            <strong style="font-size: 0.74rem; color: #38BDF8;">${escapeHtml(c.angle)}</strong>
+            <div style="display: flex; gap: 0.35rem;">
+              <button class="btn btn-secondary btn-sm" style="font-size: 0.68rem; padding: 0.15rem 0.45rem;" onclick="navigator.clipboard.writeText(${JSON.stringify(c.text).replace(/"/g, '&quot;')}); showToast('Copied comment!', 'success');">📋 Copy</button>
+              ${res.extracted_urn ? `<button class="btn btn-primary btn-sm" style="font-size: 0.68rem; padding: 0.15rem 0.45rem; background: #10B981;" onclick="postCustomGeneratedComment('${escapeHtml(res.extracted_urn)}', ${i})">🚀 Post via API</button>` : ''}
+            </div>
+          </div>
+          <p id="gen-comment-item-${i}" style="font-size: 0.78rem; color: #E2E8F0; line-height: 1.4;">${escapeHtml(c.text)}</p>
+        </div>
+      `).join('');
+
+      if (res.live_post_result && res.live_post_result.success) {
+        showToast(`🎉 Comment published live to LinkedIn (${res.live_post_result.post_urn})!`, 'success');
+        loadAllData();
+      } else {
+        showToast('Generated 3 post-based comments in Purna\'s voice!', 'success');
+      }
+    }
+  } catch (e) {
+    showToast(`Generation error: ${e.message}`, 'error');
+  }
 }
+window.generateCustomPostComments = generateCustomPostComments;
+
+async function postCustomGeneratedComment(urn, index) {
+  const el = document.getElementById(`gen-comment-item-${index}`);
+  if (!el || !urn) return;
+  const text = el.innerText;
+  showToast(`Publishing comment to ${urn}...`, 'info');
+  const res = await fetch('/api/comments/post', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ post_urn: urn, comment_text: text, allow_duplicate: true })
+  }).then(r => r.json());
+  if (res.success) {
+    showToast(`✅ Comment live on LinkedIn! (ID: ${res.comment_id})`, 'success');
+    loadAllData();
+  } else {
+    showToast(`API Comment Error: ${res.reason || res.error}`, 'error');
+  }
+}
+window.postCustomGeneratedComment = postCustomGeneratedComment;
 
 function copyReplyText(idx) {
   fetch('/api/replies').then(r => r.json()).then(data => {
@@ -1474,8 +1682,11 @@ function renderJobsRadar(jobs, appliedList) {
       </div>
 
       <div class="job-tags-row">
+        <span class="job-tag" style="background: rgba(6, 182, 212, 0.15); color: #38BDF8; border-color: rgba(6, 182, 212, 0.4); font-weight: 700;">
+          ${job.portal_source === 'DIRECT_ATS' ? '🏢 Direct ATS (Greenhouse / Lever / Ashby)' : (job.portal_source === 'BUNDESAGENTUR' ? '🏛️ Bundesagentur für Arbeit' : '⚡ LinkedIn Berlin')}
+        </span>
         ${techTags}
-        ${job.easy_apply ? '<span class="job-tag" style="background: rgba(16, 185, 129, 0.1); color: #10B981; border-color: rgba(16, 185, 129, 0.3);">Easy Apply Supported</span>' : ''}
+        ${job.easy_apply ? '<span class="job-tag" style="background: rgba(16, 185, 129, 0.1); color: #10B981; border-color: rgba(16, 185, 129, 0.3);">1-Click Packet Ready</span>' : ''}
       </div>
 
       <p class="job-desc-snippet">${escapeHtml(job.description)}</p>
@@ -1510,6 +1721,10 @@ function renderJobsRadar(jobs, appliedList) {
         <button class="btn btn-secondary" onclick="openResumeModal('/resumes/cover_letter_${job.id}.html', '${escapeHtml(job.company)} - Tailored Cover Letter')" style="font-size: 0.85rem; padding: 0.5rem 0.85rem; border-color: rgba(16, 185, 129, 0.4);">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           Cover Letter
+        </button>
+
+        <button class="btn btn-secondary" onclick="openAtsPacketModal('${job.id}', '${escapeHtml(job.company)}')" style="font-size: 0.85rem; padding: 0.5rem 0.85rem; border-color: rgba(56, 189, 248, 0.4); color: #38BDF8;" title="Inspect pre-mapped 1-click ATS form packet (JSON)">
+          📦 1-Click ATS Packet
         </button>
 
         <button class="btn btn-secondary" onclick="copyRecruiterNote('${job.id}')" style="font-size: 0.85rem; padding: 0.5rem 0.85rem;" title="Copy non-slop recruiter message to clipboard">
@@ -1556,6 +1771,7 @@ function renderAppliedHistory(historyList) {
         <div style="display: flex; gap: 0.4rem;">
           ${entry.resume_url ? `<button class="btn btn-secondary btn-sm" onclick="openResumeModal('${escapeHtml(entry.resume_url)}', '${escapeHtml(entry.company)} - Resume')" style="font-size: 0.65rem; padding: 0.15rem 0.4rem; color: #38BDF8;">Resume</button>` : ''}
           <button class="btn btn-secondary btn-sm" onclick="openResumeModal('/resumes/cover_letter_${entry.job_id}.html', '${escapeHtml(entry.company)} - Cover Letter')" style="font-size: 0.65rem; padding: 0.15rem 0.4rem; color: #10B981;">Cover Letter</button>
+          <button class="btn btn-secondary btn-sm" onclick="openAtsPacketModal('${entry.job_id}', '${escapeHtml(entry.company)}')" style="font-size: 0.65rem; padding: 0.15rem 0.4rem; color: #A78BFA;">ATS Packet</button>
           <button class="btn btn-secondary btn-sm" onclick="copyRecruiterNote('${entry.job_id}')" style="font-size: 0.65rem; padding: 0.15rem 0.4rem;">Note</button>
         </div>
       </div>

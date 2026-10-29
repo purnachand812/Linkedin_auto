@@ -21,9 +21,11 @@
       "angle": "Local always-on agent privacy vs idle GPU & hardware energy costs",
       "tested_status": false,
       "draft_path": "linkedin/drafts/draft_openclaw.md",
-      "visual_path": "linkedin/visuals/visual_openclaw_architecture.svg",
+      "visual_path": "linkedin/visuals/visual_openclaw.png",
       "score": 92,
-      "published": false,
+      "published": true,
+      "published_at": "2026-10-23T08:30:58Z",
+      "linkedin_post_id": "urn:li:share:7519314405692428289",
       "quality_score": 86.2
     },
     {
@@ -35,7 +37,9 @@
       "angle": "Open MCP tool connectors vs closed-source $20/mo subscription code editors",
       "tested_status": false,
       "score": 94,
-      "published": false
+      "published": true,
+      "published_at": "2026-10-16T19:33:48Z",
+      "linkedin_post_id": "urn:li:share:7516944499625963520"
     },
     {
       "id": "agent-s3-001",
@@ -46,7 +50,9 @@
       "angle": "Raw screen pixel ACI control vs legacy enterprise desktop APIs",
       "tested_status": false,
       "score": 89,
-      "published": false
+      "published": true,
+      "published_at": "2026-10-23T08:59:15Z",
+      "linkedin_post_id": "urn:li:share:7519321529579511808"
     },
     {
       "id": "markitdown-001",
@@ -57,7 +63,9 @@
       "angle": "Why simple 1-line Python document structuring beats complex vector DB indexing for RAG accuracy",
       "tested_status": false,
       "score": 86,
-      "published": false
+      "published": true,
+      "published_at": "2026-10-24T06:52:17Z",
+      "linkedin_post_id": "urn:li:share:7519651965921026049"
     },
     {
       "id": "aider-cli-001",
@@ -68,7 +76,9 @@
       "angle": "Git commit logs as agent memory vs external vector databases",
       "tested_status": false,
       "score": 84,
-      "published": false
+      "published": true,
+      "published_at": "2026-10-17T06:31:02Z",
+      "linkedin_post_id": "urn:li:share:7517109902172102657"
     },
     {
       "id": "smolagents-code-001",
@@ -125,7 +135,9 @@
       "angle": "Self-hosted Docker sandboxing vs $500/month proprietary coding agents",
       "tested_status": false,
       "score": 92,
-      "published": false
+      "published": true,
+      "published_at": "2026-10-28T08:02:01Z",
+      "linkedin_post_id": "urn:li:share:7521119061716553729"
     },
     {
       "id": "crawl4ai-scraper-001",
@@ -136,7 +148,9 @@
       "angle": "Self-hosted Playwright web extraction vs $16-$99/month Firecrawl API billing",
       "tested_status": false,
       "score": 94,
-      "published": false
+      "published": true,
+      "published_at": "2026-10-21T16:18:33Z",
+      "linkedin_post_id": "urn:li:share:7518707303857090562"
     },
     {
       "id": "sglang-radix-001",
@@ -158,7 +172,9 @@
       "angle": "FastAPI-style type validation and dependency injection for agent tools",
       "tested_status": false,
       "score": 95,
-      "published": false
+      "published": true,
+      "published_at": "2026-10-16T19:31:07Z",
+      "linkedin_post_id": "urn:li:share:7516943821306372096"
     },
     {
       "id": "faster-whisper-local-001",
@@ -191,7 +207,9 @@
       "angle": "Self-hosted Docker trace logging vs $39/seat cloud SaaS and raw token data leakage",
       "tested_status": false,
       "score": 95,
-      "published": false
+      "published": true,
+      "published_at": "2026-10-27T15:31:13Z",
+      "linkedin_post_id": "urn:li:share:7520869722565832704"
     },
     {
       "id": "fastmcp-prefect-001",
@@ -202,7 +220,9 @@
       "angle": "Why typed Python decorators beat hand-crafted JSON-RPC boilerplate for LLM tools",
       "tested_status": false,
       "score": 94,
-      "published": false
+      "published": true,
+      "published_at": "2026-10-27T15:30:09Z",
+      "linkedin_post_id": "urn:li:share:7520869457657942016"
     },
     {
       "id": "deepseek-mla-kvcache-001",
@@ -235,6 +255,39 @@
       "angle": "Why synchronous while-loops kill production agents and why distributed event actors fix runaway loops",
       "tested_status": false,
       "score": 91,
+      "published": false
+    },
+    {
+      "id": "hermes-agent-live",
+      "date": "2026-10-29",
+      "title": "NousResearch/hermes-agent (258,436 stars) - The agent that grows with you",
+      "category": "Free & Open-Source AI Agent",
+      "primary_source": "https://github.com/NousResearch/hermes-agent",
+      "angle": "Self-hosted MIT open-source implementation vs commercial cloud SaaS wrappers",
+      "tested_status": false,
+      "score": 89,
+      "published": false
+    },
+    {
+      "id": "langchain-live",
+      "date": "2026-10-29",
+      "title": "langchain-ai/langchain (148,689 stars) - The agent engineering platform.",
+      "category": "Free & Open-Source AI Agent",
+      "primary_source": "https://github.com/langchain-ai/langchain",
+      "angle": "Self-hosted MIT open-source implementation vs commercial cloud SaaS wrappers",
+      "tested_status": false,
+      "score": 89,
+      "published": false
+    },
+    {
+      "id": "graphify-live",
+      "date": "2026-10-29",
+      "title": "Graphify-Labs/graphify (138,462 stars) - Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryab",
+      "category": "Free & Open-Source AI Agent",
+      "primary_source": "https://github.com/Graphify-Labs/graphify",
+      "angle": "Self-hosted Apache-2.0 open-source implementation vs commercial cloud SaaS wrappers",
+      "tested_status": false,
+      "score": 89,
       "published": false
     }
   ]

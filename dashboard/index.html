@@ -198,13 +198,33 @@
     <section id="tab-trends" class="tab-content">
       <div class="content-header">
         <div>
-          <h2>AI Trend Radar &amp; 100-Point Editorial Scout</h2>
+          <h2>AI Trend Radar v2.0 &amp; Empirical Sandbox Scout</h2>
           <p class="section-desc">
-            Scouted developments evaluated across Timeliness (20), Value (25), Practicality (20), Evidence (15), Visuals (10), and Distinctiveness (10).
+            Scouted developments evaluated across Timeliness (20), Value (25), Practicality (20), Evidence (15), Visuals (10), and Distinctiveness (10) with inline <code>detect.py</code> &amp; <code>sandbox_tester.py</code> verification.
           </p>
         </div>
-        <div class="radar-actions">
-          <span class="badge badge-cyan">TODAY'S SHORTLIST</span>
+        <div class="radar-actions" style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+          <button id="btn-live-trend-scout" class="btn btn-primary btn-sm" onclick="runLiveTrendScout()" style="background: linear-gradient(135deg, #06B6D4, #0284C7); border-color: #06B6D4;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            Run Live GitHub &amp; arXiv Scout v2.0
+          </button>
+          <button id="btn-run-sandbox-benchmark" class="btn btn-secondary btn-sm" onclick="runSandboxBenchmark()" style="border-color: #10B981; color: #10B981;">
+            ⚡ Run Empirical AST Benchmark
+          </button>
+          <span class="badge badge-cyan" id="trends-count-badge">9 BREAKTHROUGHS</span>
+        </div>
+      </div>
+
+      <!-- Empirical Sandbox Benchmark Banner -->
+      <div class="card" id="sandbox-benchmarks-card" style="margin-bottom: 1.25rem; background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(16, 185, 129, 0.35); padding: 0.9rem 1.25rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem;">
+          <div>
+            <div style="font-size: 0.72rem; font-weight: 700; color: #10B981; text-transform: uppercase; letter-spacing: 0.05em;">● EMPIRICAL SANDBOX BENCHMARK RUNNER (sandbox_tester.py)</div>
+            <div id="sandbox-benchmark-summary" style="font-size: 0.85rem; color: #F8FAFC; margin-top: 0.2rem;">
+              25 Python modules audited &bull; 9,021 LOC &bull; 131 Functions &bull; AST Parse Latency: <strong>106.19 ms</strong> (Logged to <code>linkedin/tested-tools.md</code>)
+            </div>
+          </div>
+          <span class="badge badge-emerald" id="sandbox-benchmark-time">VERIFIED TELEMETRY</span>
         </div>
       </div>
 
@@ -466,8 +486,8 @@
             <p>
               Unofficial browser automation (Puppeteer, Playwright, Selenium, cookie extraction, session hijacking, or CAPTCHA bypass) is strictly forbidden for publishing to LinkedIn to ensure 100% account safety and API compliance.
             </p>
-            <div class="status-callout">
-              <strong>Current Environment Status:</strong> Official LinkedIn API integration is not configured. Execution safely stops after marking status as <code>APPROVED</code>. Approved posts are ready for 1-click manual copy-paste.
+            <div class="status-callout" style="border-color: rgba(16, 185, 129, 0.4); background: rgba(16, 185, 129, 0.08);">
+              <strong>Current Environment Status:</strong> Official LinkedIn REST API v202610 is <strong>CONNECTED &amp; ACTIVE</strong> (OAuth 2.0 <code>w_member_social</code> + Native Image &amp; 5-Slide PDF Carousel Upload + Official First-Comment API + Duplicate Post Guard).
             </div>
           </div>
         </div>
@@ -522,7 +542,10 @@
           <h2>European Union Reach &amp; 24/7 Autonomous Engine</h2>
           <p class="section-desc">Continuous 24/7 background scheduler, CET/CEST prime-time publishing, algorithmic audience optimization, and technical discussion replies.</p>
         </div>
-        <div style="display: flex; gap: 0.5rem; align-items: center;">
+        <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+          <button class="btn btn-secondary btn-sm" onclick="openResumeModal('/linkedin/history/weekly_audit_report.html', '7-Day Verified Profile & Growth Audit Report')" style="border-color: #38BDF8; color: #38BDF8;">
+            📊 7-Day Verified Growth Audit (273 Imp / 1.83%)
+          </button>
           <button id="btn-daemon-run-now" class="btn btn-primary btn-sm" style="background: linear-gradient(135deg, #10B981, #059669); border-color: #10B981;">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
             Run Immediate Cycle
@@ -633,20 +656,52 @@
         <!-- Right: Smart Community Reply Assistant & 24/7 Hosting Guide -->
         <div style="display: flex; flex-direction: column; gap: 1.5rem;">
           
-          <!-- Smart Community Reply Engine -->
+          <!-- Interactive Post-Based Comment Generator & Auto-Poster -->
+          <div class="card" style="border: 1px solid rgba(16, 185, 129, 0.35); background: linear-gradient(135deg, rgba(16, 185, 129, 0.06), rgba(15, 23, 42, 0.85));">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
+              <h3 style="display: flex; align-items: center; gap: 0.5rem; color: #10B981;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                Auto-Comment &amp; Post-Based Engagement Studio
+              </h3>
+              <button class="btn btn-primary btn-sm" onclick="runAutoCommentBatch()" style="background: linear-gradient(135deg, #10B981, #059669); border-color: #10B981; font-size: 0.72rem;">
+                🚀 Sync Auto-Comments on All Posts
+              </button>
+            </div>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+              Generate tailored technical comments in Purna's voice for any LinkedIn post (or paste a LinkedIn Post URL / URN to auto-comment directly via official API):
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 0.55rem; margin-bottom: 0.85rem;">
+              <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 0.5rem;">
+                <input type="text" id="custom-comment-url" class="text-input" placeholder="LinkedIn Post URL or URN (e.g. urn:li:share:7521625989441835009)" style="font-size: 0.78rem; padding: 0.45rem 0.65rem;">
+                <input type="text" id="custom-comment-author" class="text-input" placeholder="Author Name (optional)" style="font-size: 0.78rem; padding: 0.45rem 0.65rem;">
+              </div>
+              <textarea id="custom-comment-post-text" class="text-area" rows="2" placeholder="Paste the post text or topic here (e.g. 'Scaling vLLM V1 with prefix caching and FastMCP in Berlin...')..." style="font-size: 0.78rem; padding: 0.5rem 0.65rem;"></textarea>
+              <div style="display: flex; gap: 0.5rem; justify-content: flex-end;">
+                <button class="btn btn-secondary btn-sm" onclick="generateCustomPostComments(false)" style="font-size: 0.75rem; border-color: #38BDF8; color: #38BDF8;">
+                  ⚡ Generate 3 Post-Based Comments
+                </button>
+                <button class="btn btn-primary btn-sm" onclick="generateCustomPostComments(true)" style="font-size: 0.75rem;">
+                  🚀 Generate &amp; Auto-Post to LinkedIn
+                </button>
+              </div>
+            </div>
+            <div id="custom-generated-comments-box" style="display: none; flex-direction: column; gap: 0.5rem; margin-bottom: 0.75rem;"></div>
+          </div>
+
+          <!-- Smart Community Reply Engine & Live Comment Log -->
           <div class="card">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
               <h3 style="display: flex; align-items: center; gap: 0.5rem;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                Community Discussion &amp; Reply Assistant
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                Live Auto-Comments, Niche Radar &amp; Post-Specific Replies
               </h3>
-              <span class="badge badge-cyan">Algorithmic Dwell Booster</span>
+              <span class="badge badge-emerald" id="live-comment-count-badge">11 Live API Comments</span>
             </div>
             <p style="font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 1rem;">
-              The LinkedIn algorithm heavily rewards the author replying within 60 minutes. Use these pre-computed, deeply technical responses in Purna's voice:
+              Verified comments auto-posted via <code>/v2/socialActions</code>, 5-Pillar Profile Niche Engagement Radar, and repo-specific technical replies:
             </p>
 
-            <div id="pending-replies-container" style="display: flex; flex-direction: column; gap: 0.75rem;">
+            <div id="pending-replies-container" style="display: flex; flex-direction: column; gap: 0.75rem; max-height: 680px; overflow-y: auto; padding-right: 4px;">
               <!-- Rendered dynamically -->
             </div>
           </div>
@@ -790,8 +845,8 @@
         </div>
         <div class="card stat-card">
           <span class="stat-card-label">HIGHEST MATCH SCORE</span>
-          <div class="stat-card-value" style="color: #10B981;">96/100</div>
-          <span class="stat-card-sub">DeepAgent Labs (Berlin Mitte)</span>
+          <div class="stat-card-value" style="color: #10B981;">99/100</div>
+          <span class="stat-card-sub">Doctolib / Bosch / Deutsche Bahn (Berlin)</span>
         </div>
         <div class="card stat-card">
           <span class="stat-card-label">EUROPASS CV STANDARD</span>
@@ -1001,19 +1056,19 @@
             </h3>
             <div style="display: flex; flex-direction: column; gap: 0.6rem; color: var(--text-muted);">
               <div style="background: #0B0F19; padding: 0.5rem; border-radius: 4px; border: 1px solid #1E293B;">
-                <strong style="color: #F8FAFC;">EU Work Authorization:</strong> Yes (Legal right to work in Germany / Werkstudent status)
+                <strong style="color: #F8FAFC;">EU Work Authorization:</strong> Yes (Legal right to work in Germany / Werkstudent status, 20h/wk term, 40h/wk breaks)
               </div>
               <div style="background: #0B0F19; padding: 0.5rem; border-radius: 4px; border: 1px solid #1E293B;">
-                <strong style="color: #F8FAFC;">Residency:</strong> Living in Berlin, Germany since several months (No relocation needed)
+                <strong style="color: #F8FAFC;">Languages:</strong> German: Elementary (A2, actively advancing in Berlin) &bull; English: Professional Working (B2)
               </div>
               <div style="background: #0B0F19; padding: 0.5rem; border-radius: 4px; border: 1px solid #1E293B;">
-                <strong style="color: #F8FAFC;">Current Status:</strong> Master's Student at GISMA Berlin &bull; Intern at Crack-ED / Innomatics
+                <strong style="color: #F8FAFC;">Salary Expectation:</strong> &euro;16 - &euro;22 / hr (Werkstudent) or &euro;1,200 - &euro;1,800 / mo (Internship)
               </div>
               <div style="background: #0B0F19; padding: 0.5rem; border-radius: 4px; border: 1px solid #1E293B;">
-                <strong style="color: #F8FAFC;">Education:</strong> MSc Data Science (GISMA University Berlin, Current Student) &bull; B.Tech CS
+                <strong style="color: #F8FAFC;">Education &amp; Thesis:</strong> M.Sc. Data Science (GISMA Berlin) &bull; LLM Agent Hallucination Attribution
               </div>
               <div style="background: #0B0F19; padding: 0.5rem; border-radius: 4px; border: 1px solid #1E293B;">
-                <strong style="color: #F8FAFC;">Contact:</strong> +49 15511064761 &bull; purnachand0812@gmail.com
+                <strong style="color: #F8FAFC;">Contact &amp; Packets:</strong> +49 15511064761 &bull; purnachand0812@gmail.com &bull; 47 Pre-Mapped ATS Packets Ready
               </div>
             </div>
           </div>
@@ -1130,6 +1185,6 @@
   </div>
 
   <!-- JavaScript Application Entry -->
-  <script src="app.js?v=11"></script>
+  <script src="app.js?v=12"></script>
 </body>
 </html>

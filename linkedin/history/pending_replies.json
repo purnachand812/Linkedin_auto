@@ -1,88 +1,159 @@
 {
+  "updated_at": "2026-10-29T19:27:28.726582",
+  "total_replies": 17,
   "pending": [
     {
-      "candidate_id": 12,
-      "topic": "OpenHands (Autonomous Software Engineer inside Docker Sandboxes)",
-      "scenario": "Technical inquiry about production reliability / benchmarks",
-      "suggested_reply": "Good callout. In practice, the primary constraint isn't the framework wrapper, but token latency and context drift over multi-step runs. For production, sandboxing tool execution and enforcing strict schema validation upfront prevents 80% of edge case failures.",
-      "created_at": "2026-10-28T09:02:01.353426"
+      "candidate_id": 15,
+      "topic": "vLLM V1 Architecture (Decoupled ZeroMQ Engine & GIL Removal)",
+      "post_urn": "urn:li:share:7521625989441835009",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7521625989441835009/",
+      "scenario": "Question: How does vLLM V1 compare to Ollama or llama.cpp for local agents?",
+      "suggested_reply": "Ollama (built on llama.cpp) is great for single-user desktop inference on a laptop. The wall hits when an agent framework spawns 6-10 parallel subagents or tool calls concurrently. vLLM V1's continuous batching + ZeroMQ process isolation keeps token throughput up to 1.7x higher under concurrent load because the HTTP/tokenizer loop never blocks the CUDA scheduler.",
+      "created_at": "2026-10-29T19:27:28.724579"
+    },
+    {
+      "candidate_id": 15,
+      "topic": "vLLM V1 Architecture (Decoupled ZeroMQ Engine & GIL Removal)",
+      "post_urn": "urn:li:share:7521625989441835009",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7521625989441835009/",
+      "scenario": "Question: Does ZeroMQ IPC add serialization latency for multimodal inputs?",
+      "suggested_reply": "For text tokens, ZeroMQ IPC over shared memory adds sub-millisecond overhead, which is completely outweighed by getting tokenization out of the main Python GIL thread. For high-resolution vision frames, V1 caches preprocessed image embeddings so repeated turns in a multi-step trajectory don't re-serialize pixel tensors.",
+      "created_at": "2026-10-29T19:27:28.724579"
+    },
+    {
+      "candidate_id": 15,
+      "topic": "vLLM V1 Architecture (Decoupled ZeroMQ Engine & GIL Removal)",
+      "post_urn": "urn:li:share:7521625989441835009",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7521625989441835009/",
+      "scenario": "Question: What GPU specs are realistic for self-hosting V1 in Berlin/EU?",
+      "suggested_reply": "For 7B to 14B AWQ/FP8 models (like Qwen-2.5-Coder-14B), a single 24GB GPU (RTX 3090/4090 or L4) handles V1 comfortably as long as you cap `--gpu-memory-utilization` at 0.80. Always isolate the server inside a dedicated Docker container with strict memory limits.",
+      "created_at": "2026-10-29T19:27:28.724579"
+    },
+    {
+      "candidate_id": 14,
+      "topic": "DeepSeek Multi-Head Latent Attention (MLA) & KV Cache Compression",
+      "post_urn": "urn:li:share:7521621879900753920",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7521621879900753920/",
+      "scenario": "Question: Do the smaller DeepSeek-R1 distilled models (7B/14B/32B) use MLA?",
+      "suggested_reply": "That is the biggest catch in practice: the 7B, 14B, 32B, and 70B distilled checkpoints are fine-tuned on top of Qwen-2.5 and Llama-3 backbones, which use standard Grouped-Query Attention (GQA), not native MLA. Only the native DeepSeek-V2/V3/R1-Zero MoE architectures and DeepSeek-Lite use true MLA layers.",
+      "created_at": "2026-10-29T19:27:28.725580"
+    },
+    {
+      "candidate_id": 14,
+      "topic": "DeepSeek Multi-Head Latent Attention (MLA) & KV Cache Compression",
+      "post_urn": "urn:li:share:7521621879900753920",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7521621879900753920/",
+      "scenario": "Question: How does MLA interact with FlashAttention and vLLM/SGLang?",
+      "suggested_reply": "Standard FlashAttention expects K and V to have the same head dimension, whereas MLA absorbs the up-projection so the latent cache is shared across heads. Both SGLang and vLLM wrote custom FlashMLA / Triton kernels specifically to compute attention directly over the compressed latent cache without materializing full KV tensors.",
+      "created_at": "2026-10-29T19:27:28.725580"
+    },
+    {
+      "candidate_id": 14,
+      "topic": "DeepSeek Multi-Head Latent Attention (MLA) & KV Cache Compression",
+      "post_urn": "urn:li:share:7521621879900753920",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7521621879900753920/",
+      "scenario": "Question: Is KV cache quantization (FP8/INT4) better than MLA?",
+      "suggested_reply": "They are orthogonal and stackable. Quantizing standard GQA KV cache from FP16 to FP8 gives you a 2x memory reduction. MLA gives you a 5x-13x structural reduction via low-rank matrix factorization first, and you can still store the compressed latent vectors in FP8.",
+      "created_at": "2026-10-29T19:27:28.725580"
+    },
+    {
+      "candidate_id": 13,
+      "topic": "SGLang RadixAttention (Multi-Turn Agent KV Cache Reuse)",
+      "post_urn": "urn:li:share:7521621624278683649",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7521621624278683649/",
+      "scenario": "Question: How is SGLang RadixAttention different from Anthropic/OpenAI prompt caching?",
+      "suggested_reply": "Commercial API prompt caching uses coarse block prefixes and expires after 5-10 minutes of inactivity. SGLang maintains a live LRU Radix Tree in GPU memory that automatically matches arbitrary branching sub-trees across tree-of-thought, parallel tool calls, and multi-turn retries with zero developer annotations.",
+      "created_at": "2026-10-29T19:27:28.725580"
+    },
+    {
+      "candidate_id": 13,
+      "topic": "SGLang RadixAttention (Multi-Turn Agent KV Cache Reuse)",
+      "post_urn": "urn:li:share:7521621624278683649",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7521621624278683649/",
+      "scenario": "Question: What happens when the Radix Tree fills up GPU VRAM?",
+      "suggested_reply": "SGLang evicts leaf nodes first using a Least-Recently-Used (LRU) policy while keeping shared root prefixes (like your core system prompt and tool schemas) pinned in memory as long as active requests reference them.",
+      "created_at": "2026-10-29T19:27:28.725580"
+    },
+    {
+      "candidate_id": 13,
+      "topic": "SGLang RadixAttention (Multi-Turn Agent KV Cache Reuse)",
+      "post_urn": "urn:li:share:7521621624278683649",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7521621624278683649/",
+      "scenario": "Question: Does constrained JSON decoding hurt reasoning quality?",
+      "suggested_reply": "If you force an LLM into a rigid JSON schema on token 1, reasoning quality drops because the model has no scratchpad tokens. In practice, let the model generate an unconstrained `<thinking>` trace first, and apply SGLang's compressed FSM decoding only to the final tool-call payload.",
+      "created_at": "2026-10-29T19:27:28.725580"
     },
     {
       "candidate_id": 12,
       "topic": "OpenHands (Autonomous Software Engineer inside Docker Sandboxes)",
-      "scenario": "Comparison with closed commercial alternatives",
-      "suggested_reply": "The biggest delta is privacy and infrastructure lock-in. Self-hosting this on European bare-metal (like Hetzner or local Ollama) costs $0 in SaaS license overhead and guarantees your internal code doesn't leave your network perimeter.",
-      "created_at": "2026-10-28T09:02:01.353426"
+      "post_urn": "urn:li:share:7521119061716553729",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7521119061716553729/",
+      "scenario": "Question: Can OpenHands run completely offline with local models?",
+      "suggested_reply": "Yes, you can point it to a local vLLM or Ollama endpoint running Qwen-2.5-Coder-32B. In practice, smaller 7B/8B models struggle with OpenHands' multi-step bash + file-edit action schema, so 32B+ quantized or Claude 3.5 Sonnet is the practical floor for multi-file debugging.",
+      "created_at": "2026-10-29T19:27:28.725580"
     },
     {
       "candidate_id": 11,
       "topic": "Langfuse (Self-Hosted LLM Observability & Tracing in Docker)",
-      "scenario": "Technical inquiry about production reliability / benchmarks",
-      "suggested_reply": "Good callout. In practice, the primary constraint isn't the framework wrapper, but token latency and context drift over multi-step runs. For production, sandboxing tool execution and enforcing strict schema validation upfront prevents 80% of edge case failures.",
-      "created_at": "2026-10-27T16:31:13.407018"
-    },
-    {
-      "candidate_id": 11,
-      "topic": "Langfuse (Self-Hosted LLM Observability & Tracing in Docker)",
-      "scenario": "Comparison with closed commercial alternatives",
-      "suggested_reply": "The biggest delta is privacy and infrastructure lock-in. Self-hosting this on European bare-metal (like Hetzner or local Ollama) costs $0 in SaaS license overhead and guarantees your internal code doesn't leave your network perimeter.",
-      "created_at": "2026-10-27T16:31:13.407018"
+      "post_urn": "urn:li:share:7520869722565832704",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7520869722565832704/",
+      "scenario": "Question: How heavy is Langfuse v3 with ClickHouse in Docker?",
+      "suggested_reply": "On a standard 4-vCPU / 8GB RAM Hetzner VPS, the Docker Compose stack runs smoothly for moderate agent workloads, provided you configure a 14-day or 30-day ClickHouse TTL on raw prompt/completion payloads so disk I/O stays predictable.",
+      "created_at": "2026-10-29T19:27:28.726582"
     },
     {
       "candidate_id": 10,
       "topic": "FastMCP (3-Line Typed Model Context Protocol Servers)",
-      "scenario": "Technical inquiry about production reliability / benchmarks",
-      "suggested_reply": "Good callout. In practice, the primary constraint isn't the framework wrapper, but token latency and context drift over multi-step runs. For production, sandboxing tool execution and enforcing strict schema validation upfront prevents 80% of edge case failures.",
-      "created_at": "2026-10-27T16:30:10.014765"
+      "post_urn": "urn:li:share:7520869457657942016",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7520869457657942016/",
+      "scenario": "Question: stdio vs SSE transport for MCP servers in production?",
+      "suggested_reply": "Use `stdio` for local IDE integrations (VS Code Cline, Cursor, Claude Desktop) because the host process manages lifecycle directly. Use `SSE` or Streamable HTTP inside an isolated Docker container whenever multiple agent workers share the same MCP tool server.",
+      "created_at": "2026-10-29T19:27:28.726582"
     },
     {
-      "candidate_id": 10,
-      "topic": "FastMCP (3-Line Typed Model Context Protocol Servers)",
-      "scenario": "Comparison with closed commercial alternatives",
-      "suggested_reply": "The biggest delta is privacy and infrastructure lock-in. Self-hosting this on European bare-metal (like Hetzner or local Ollama) costs $0 in SaaS license overhead and guarantees your internal code doesn't leave your network perimeter.",
-      "created_at": "2026-10-27T16:30:10.014765"
+      "candidate_id": 9,
+      "topic": "Crawl4AI (Self-Hosted LLM Web Scraper vs Firecrawl)",
+      "post_urn": "urn:li:share:7518707303857090562",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7518707303857090562/",
+      "scenario": "Question: How does Crawl4AI handle anti-bot / Cloudflare pages compared to Firecrawl?",
+      "suggested_reply": "Crawl4AI supports stealth browser flags, custom user agents, and residential proxy rotation out of the box. For internal documentation, public technical docs, and arXiv/GitHub scraping, local headless Chromium handles 95% of targets at $0 API cost.",
+      "created_at": "2026-10-29T19:27:28.726582"
     },
     {
-      "candidate_id": 12,
-      "topic": "OpenHands (Autonomous Software Engineer inside Docker Sandboxes)",
-      "scenario": "Technical inquiry about production reliability / benchmarks",
-      "suggested_reply": "Good callout. In practice, the primary constraint isn't the framework wrapper, but token latency and context drift over multi-step runs. For production, sandboxing tool execution and enforcing strict schema validation upfront prevents 80% of edge case failures.",
-      "created_at": "2026-10-25T11:24:17.004843"
+      "candidate_id": 8,
+      "topic": "Pydantic AI (Typed Dependency Injection vs Prompt Guessing)",
+      "post_urn": "urn:li:share:7516943821306372096",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7516943821306372096/",
+      "scenario": "Question: Why use Pydantic AI over LangChain / LangGraph?",
+      "suggested_reply": "Zero hidden prompt wrappers and standard Python type checking with mypy/pyright. Your agent tools look and test exactly like FastAPI endpoints, making unit testing with mock dependencies trivial.",
+      "created_at": "2026-10-29T19:27:28.726582"
     },
     {
-      "candidate_id": 12,
-      "topic": "OpenHands (Autonomous Software Engineer inside Docker Sandboxes)",
-      "scenario": "Comparison with closed commercial alternatives",
-      "suggested_reply": "The biggest delta is privacy and infrastructure lock-in. Self-hosting this on European bare-metal (like Hetzner or local Ollama) costs $0 in SaaS license overhead and guarantees your internal code doesn't leave your network perimeter.",
-      "created_at": "2026-10-25T11:24:17.004843"
+      "candidate_id": 5,
+      "topic": "Aider (Git-Aware Terminal AI Pair Programmer)",
+      "post_urn": "urn:li:share:7517109902172102657",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7517109902172102657/",
+      "scenario": "Question: Best architect + editor model pairing in Aider?",
+      "suggested_reply": "Pairing DeepSeek-R1 or Claude 3.5 Sonnet as the Architect model with Qwen-2.5-Coder-32B as the fast Editor model cuts token spend by ~50% while maintaining top SWE-bench edit accuracy.",
+      "created_at": "2026-10-29T19:27:28.726582"
     },
     {
-      "candidate_id": 11,
-      "topic": "Langfuse (Self-Hosted LLM Observability & Tracing in Docker)",
-      "scenario": "Technical inquiry about production reliability / benchmarks",
-      "suggested_reply": "Good callout. In practice, the primary constraint isn't the framework wrapper, but token latency and context drift over multi-step runs. For production, sandboxing tool execution and enforcing strict schema validation upfront prevents 80% of edge case failures.",
-      "created_at": "2026-10-25T11:23:14.714416"
+      "candidate_id": 4,
+      "topic": "MarkItDown (Document to LLM Markdown Converter)",
+      "post_urn": "urn:li:share:7519651965921026049",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7519651965921026049/",
+      "scenario": "Question: MarkItDown vs Docling for complex PDFs?",
+      "suggested_reply": "MarkItDown is ultra-lightweight and fast for Office formats (.docx, .pptx, .xlsx) and digital-native PDFs. For complex multi-column scanned scientific PDFs with bounding-box layout analysis, IBM's open-source Docling is stronger.",
+      "created_at": "2026-10-29T19:27:28.726582"
     },
     {
-      "candidate_id": 11,
-      "topic": "Langfuse (Self-Hosted LLM Observability & Tracing in Docker)",
-      "scenario": "Comparison with closed commercial alternatives",
-      "suggested_reply": "The biggest delta is privacy and infrastructure lock-in. Self-hosting this on European bare-metal (like Hetzner or local Ollama) costs $0 in SaaS license overhead and guarantees your internal code doesn't leave your network perimeter.",
-      "created_at": "2026-10-25T11:23:14.714416"
-    },
-    {
-      "candidate_id": 10,
-      "topic": "FastMCP (3-Line Typed Model Context Protocol Servers)",
-      "scenario": "Technical inquiry about production reliability / benchmarks",
-      "suggested_reply": "Good callout. In practice, the primary constraint isn't the framework wrapper, but token latency and context drift over multi-step runs. For production, sandboxing tool execution and enforcing strict schema validation upfront prevents 80% of edge case failures.",
-      "created_at": "2026-10-24T11:50:49.875781"
-    },
-    {
-      "candidate_id": 10,
-      "topic": "FastMCP (3-Line Typed Model Context Protocol Servers)",
-      "scenario": "Comparison with closed commercial alternatives",
-      "suggested_reply": "The biggest delta is privacy and infrastructure lock-in. Self-hosting this on European bare-metal (like Hetzner or local Ollama) costs $0 in SaaS license overhead and guarantees your internal code doesn't leave your network perimeter.",
-      "created_at": "2026-10-24T11:50:49.875787"
+      "candidate_id": 3,
+      "topic": "Agent S3 (Desktop GUI Computer-Use Agent)",
+      "post_urn": "urn:li:share:7519321529579511808",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7519321529579511808/",
+      "scenario": "Question: How do you sandbox a desktop GUI agent safely?",
+      "suggested_reply": "Run the entire Xvfb / VNC desktop session inside an isolated Docker container or QEMU VM with outbound network rules restricted to whitelisted domains.",
+      "created_at": "2026-10-29T19:27:28.726582"
     }
   ]
 }

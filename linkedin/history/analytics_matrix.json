@@ -1,9 +1,45 @@
 {
-  "updated_at": "2026-10-29T20:03:47.795187",
-  "total_posts": 6,
+  "updated_at": "2026-10-29T21:26:15.239968",
+  "total_posts": 9,
   "target_region": "European Union (CET/CEST)",
   "data_integrity": "Verified Ground Truth",
   "posts_analytics": [
+    {
+      "candidate_id": 15,
+      "topic": "vLLM V1 Architecture (Decoupled ZeroMQ Engine & GIL Removal)",
+      "published_at": "2026-10-29T17:36:24Z",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7521625989441835009/",
+      "impressions": 0,
+      "reactions": 0,
+      "comments": 0,
+      "reposts": 0,
+      "status": "ACCUMULATING",
+      "notes": "Fresh drop; awaiting first 24h indexing cycle."
+    },
+    {
+      "candidate_id": 14,
+      "topic": "DeepSeek Multi-Head Latent Attention (MLA) & KV Cache Compression",
+      "published_at": "2026-10-29T17:20:02Z",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7521621879900753920/",
+      "impressions": 0,
+      "reactions": 0,
+      "comments": 0,
+      "reposts": 0,
+      "status": "ACCUMULATING",
+      "notes": "Fresh drop; awaiting first 24h indexing cycle."
+    },
+    {
+      "candidate_id": 13,
+      "topic": "SGLang RadixAttention (Multi-Turn Agent KV Cache Reuse)",
+      "published_at": "2026-10-29T17:19:01Z",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7521621624278683649/",
+      "impressions": 0,
+      "reactions": 0,
+      "comments": 0,
+      "reposts": 0,
+      "status": "ACCUMULATING",
+      "notes": "Fresh drop; awaiting first 24h indexing cycle."
+    },
     {
       "candidate_id": 12,
       "topic": "OpenHands (Autonomous Software Engineer inside Docker Sandboxes)",

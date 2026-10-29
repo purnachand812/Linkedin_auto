@@ -3,7 +3,7 @@
 daemon.py - 24/7 Autonomous Background Service for Purnachandra Madhukar's LinkedIn Agent.
 Runs continuously on local machine or cloud runner.
 Handles:
-1. EU Prime-Time Scheduled Publishing (CET/CEST)
+1. EU Prime-Time Scheduled Publishing (CET/CEST) with strict deduplication
 2. Continuous Analytics & Social Lifecycle Monitoring
 3. Algorithmic Feedback & EU Growth Optimization
 4. Contextual Comment & Community Reply Generation
@@ -15,6 +15,7 @@ import sys
 import json
 import time
 import signal
+import re
 from datetime import datetime, timedelta
 from pathlib import Path
 
@@ -44,19 +45,22 @@ except ImportError:
     autonomous_job_agent = None
 
 # Configuration
-CHECK_INTERVAL_SECONDS = 60 # Check cycle every minute
-HEARTBEAT_INTERVAL_SECONDS = 30 # Telemetry ping
-MAX_POSTS_PER_DAY = 2 # LinkedIn algorithmic limit for optimal organic distribution
+CHECK_INTERVAL_SECONDS = 60  # Check cycle every minute
+HEARTBEAT_INTERVAL_SECONDS = 30  # Telemetry ping
+MAX_POSTS_PER_DAY = 2  # LinkedIn algorithmic limit for optimal organic distribution
 
 RUNNING = True
+
 
 def signal_handler(sig, frame):
     global RUNNING
     print(f"\n[DAEMON] Shutdown signal ({sig}) received. Gracefully stopping daemon...")
     RUNNING = False
 
+
 signal.signal(signal.SIGINT, signal_handler)
 signal.signal(signal.SIGTERM, signal_handler)
+
 
 def load_json_file(file_path, default=None):
     if default is None:
@@ -69,10 +73,12 @@ def load_json_file(file_path, default=None):
             pass
     return default
 
+
 def save_json_file(file_path, data):
     file_path.parent.mkdir(parents=True, exist_ok=True)
     with open(file_path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)
+
 
 def update_daemon_status(state_data):
     """Writes live telemetry to daemon_status.json for dashboard visibility."""
@@ -85,13 +91,13 @@ def update_daemon_status(state_data):
     current["last_heartbeat"] = datetime.now().isoformat()
     save_json_file(STATUS_FILE, current)
 
+
 def append_daemon_log(message):
     """Appends timestamped entry to rolling activity log."""
     current = load_json_file(STATUS_FILE, {"log": []})
     log_list = current.get("log", [])
     entry = f"[{datetime.now().strftime('%H:%M:%S')}] {message}"
     log_list.append(entry)
-    # Keep last 30 log lines
     current["log"] = log_list[-30:]
     current["last_activity"] = entry
     save_json_file(STATUS_FILE, current)
@@ -99,6 +105,7 @@ def append_daemon_log(message):
         print(f"[DAEMON] {message}")
     except Exception:
         pass
+
 
 def count_posts_published_today():
     """Counts how many posts were published today (CET)."""
@@ -111,12 +118,38 @@ def count_posts_published_today():
             count += 1
     return count
 
+
+def sync_published_candidates_in_queue(queue_summary):
+    """
+    Ensures any candidate in queue_summary.json that already exists in publishing_log.json
+    is marked as PUBLISHED so it is never re-published.
+    """
+    candidates = queue_summary.get("candidates", [])
+    modified = False
+    for c in candidates:
+        if c.get("status") != "PUBLISHED" or not c.get("linkedin_post_id"):
+            already_pub, existing_entry = publisher.is_already_published(
+                candidate_id=c.get("id"),
+                topic=c.get("topic")
+            )
+            if already_pub and existing_entry:
+                c["status"] = "PUBLISHED"
+                c["published_at"] = existing_entry.get("published_at")
+                c["linkedin_post_id"] = existing_entry.get("post_id")
+                c["linkedin_post_url"] = existing_entry.get("post_url")
+                modified = True
+    if modified:
+        save_json_file(QUEUE_SUMMARY_FILE, queue_summary)
+    return queue_summary
+
+
 def check_and_publish_next_candidate(force=False):
     """
     Checks if a post is ready for publication during an EU prime-time slot.
     Returns: bool (True if published)
     """
     queue_summary = load_json_file(QUEUE_SUMMARY_FILE, {"candidates": []})
+    queue_summary = sync_published_candidates_in_queue(queue_summary)
     candidates = queue_summary.get("candidates", [])
 
     # 0. Auto-approve candidates with score >= 80 if auto-approval is enabled
@@ -132,7 +165,13 @@ def check_and_publish_next_candidate(force=False):
             save_json_file(QUEUE_SUMMARY_FILE, queue_summary)
 
     # 1. Find first candidate with APPROVED status that has NOT been published yet
-    approved = [c for c in candidates if c.get("status") == "APPROVED" and not c.get("published_at") and not c.get("linkedin_post_id")]
+    approved = [
+        c for c in candidates
+        if c.get("status") == "APPROVED"
+        and not c.get("published_at")
+        and not c.get("linkedin_post_id")
+        and not publisher.is_already_published(candidate_id=c.get("id"), topic=c.get("topic"))[0]
+    ]
     if not approved:
         return False
 
@@ -162,36 +201,51 @@ def check_and_publish_next_candidate(force=False):
     content = c_file.read_text(encoding="utf-8")
 
     # Extract post copy
-    import re
     post_m = re.search(r'###\s*COMPLETE LINKEDIN POST[^\n]*\n(.*?)(?=\n###|\n---|\Z)', content, re.DOTALL)
     post_text = post_m.group(1).strip() if post_m else ""
     if not post_text:
         append_daemon_log(f"❌ Post text is empty for Candidate #{c_id}")
         return False
 
-    # Check visual
+    # Extract Primary Sources for First Comment
+    sources_m = re.search(r'###\s*PRIMARY SOURCES[^\n]*\n(.*?)(?=\n###|\n---|\Z)', content, re.DOTALL)
+    raw_sources = sources_m.group(1).strip() if sources_m else ""
+    clean_sources_lines = [
+        line for line in raw_sources.splitlines()
+        if not line.strip().startswith(">")
+    ]
+    first_comment_text = "\n".join(clean_sources_lines).strip()
+
+    # Check visual (supports .png, .jpg, .jpeg, and .pdf carousels)
     v_rel = target_candidate.get("visual", "")
     image_path = None
-    if v_rel:
+    if v_rel and target_candidate.get("format", "image-attached") != "text-only":
         v_file = BASE_DIR / v_rel
-        if v_file.exists() and v_file.suffix.lower() in (".png", ".jpg", ".jpeg"):
+        if v_file.exists() and v_file.suffix.lower() in (".png", ".jpg", ".jpeg", ".pdf"):
             image_path = str(v_file)
 
-    # Ensure GitHub link at the end for text-only posts
+    # Ensure primary source link at the end for text-only posts
     if not image_path:
-        if "github.com" not in post_text[-250:].lower():
-            m = re.search(r'https?://github\.com/[a-zA-Z0-9_.-]+/[a-zA-Z0-9_.-]+', content)
+        if "github.com" not in post_text[-250:].lower() and "arxiv.org" not in post_text[-250:].lower():
+            m = re.search(r'https?://(?:github\.com|arxiv\.org)/[a-zA-Z0-9_./-]+', content)
             if m:
-                post_text = post_text.rstrip() + f"\n\nRepo: {m.group(0)}"
+                post_text = post_text.rstrip() + f"\n\nRepo / Paper: {m.group(0)}"
 
     try:
-        result = publisher.publish_candidate_post(post_text, image_path=image_path)
+        result = publisher.publish_candidate_post(
+            post_text,
+            image_path=image_path,
+            first_comment_text=first_comment_text if image_path else None,
+            document_title=topic,
+            candidate_id=c_id,
+            topic=topic
+        )
         publisher.record_published_post(
             c_id,
             {
                 "topic": topic,
                 "post_text": post_text,
-                "sources": "GitHub link included in post." if not image_path else "See visual asset for architecture.",
+                "sources": first_comment_text if image_path else "Primary link included directly in post.",
                 "has_image": bool(image_path),
                 "comment_needed": bool(image_path)
             },
@@ -199,7 +253,7 @@ def check_and_publish_next_candidate(force=False):
         )
         post_url = result.get("post_url", "")
         append_daemon_log(f"🎉 Successfully published Candidate #{c_id}! Live URL: {post_url}")
-        
+
         # Generate initial community reply templates
         generate_community_reply_templates(c_id, topic, post_text)
 
@@ -210,33 +264,19 @@ def check_and_publish_next_candidate(force=False):
         append_daemon_log(f"❌ Publishing failed for Candidate #{c_id}: {e}")
         return False
 
+
 def generate_community_reply_templates(candidate_id, topic, post_text):
     """
-    Automatically prepares engineering-grade comment replies for expected reader questions.
-    Ensures Purna can respond within the vital first 60 minutes with technical authority.
+    Automatically prepares post-specific engineering comment replies and niche engagement packs
+    via comment_engine.py so Purna can respond with technical authority.
     """
-    replies = load_json_file(REPLIES_FILE, {"pending": []})
-    
-    reply_templates = [
-        {
-            "candidate_id": candidate_id,
-            "topic": topic,
-            "scenario": "Technical inquiry about production reliability / benchmarks",
-            "suggested_reply": f"Good callout. In practice, the primary constraint isn't the framework wrapper, but token latency and context drift over multi-step runs. For production, sandboxing tool execution and enforcing strict schema validation upfront prevents 80% of edge case failures.",
-            "created_at": datetime.now().isoformat()
-        },
-        {
-            "candidate_id": candidate_id,
-            "topic": topic,
-            "scenario": "Comparison with closed commercial alternatives",
-            "suggested_reply": f"The biggest delta is privacy and infrastructure lock-in. Self-hosting this on European bare-metal (like Hetzner or local Ollama) costs $0 in SaaS license overhead and guarantees your internal code doesn't leave your network perimeter.",
-            "created_at": datetime.now().isoformat()
-        }
-    ]
+    try:
+        from linkedin.tools import comment_engine
+        all_replies = comment_engine.refresh_post_specific_replies_and_radar()
+        append_daemon_log(f"💬 Refreshed {len(all_replies)} post-specific technical reply templates & niche radar for Candidate #{candidate_id}")
+    except Exception as e:
+        append_daemon_log(f"⚠️ Reply template refresh warning: {e}")
 
-    replies["pending"] = reply_templates + replies.get("pending", [])[:10]
-    save_json_file(REPLIES_FILE, replies)
-    append_daemon_log(f"💬 Generated 2 contextual community reply templates for Candidate #{candidate_id}")
 
 def update_analytics_monitoring():
     """
@@ -258,15 +298,13 @@ def update_analytics_monitoring():
     current_matrix["total_posts"] = len(pub_log)
     current_matrix["updated_at"] = datetime.now().isoformat()
 
-    # Track metrics for each published post
     analytics_items = []
     for p in pub_log:
         c_id = p.get("candidate_id")
         topic = p.get("topic")
         pub_at = p.get("published_at")
         post_url = p.get("post_url")
-        
-        # Calculate post age in hours
+
         age_hours = 0.0
         try:
             pub_dt = datetime.fromisoformat(pub_at.replace("Z", "+00:00"))
@@ -288,6 +326,7 @@ def update_analytics_monitoring():
     current_matrix["posts_analytics"] = analytics_items
     save_json_file(ANALYTICS_FILE, current_matrix)
 
+
 def run_single_cycle(force_publish=False):
     """Executes a single end-to-end check cycle."""
     now_dt = eu_growth_engine.get_berlin_now()
@@ -295,7 +334,11 @@ def run_single_cycle(force_publish=False):
     next_slot = eu_growth_engine.get_next_eu_prime_window(now_dt)
 
     queue_summary = load_json_file(QUEUE_SUMMARY_FILE, {"candidates": []})
-    approved_count = sum(1 for c in queue_summary.get("candidates", []) if c.get("status") == "APPROVED" and not c.get("published_at") and not c.get("linkedin_post_id"))
+    queue_summary = sync_published_candidates_in_queue(queue_summary)
+    approved_count = sum(
+        1 for c in queue_summary.get("candidates", [])
+        if c.get("status") == "APPROVED" and not c.get("published_at") and not c.get("linkedin_post_id")
+    )
     published_today = count_posts_published_today()
 
     # 1. Update analytics & telemetry
@@ -308,14 +351,24 @@ def run_single_cycle(force_publish=False):
             new_added = trend_radar.replenish_queue()
             if new_added > 0:
                 queue_summary = load_json_file(QUEUE_SUMMARY_FILE, {"candidates": []})
-                approved_count = sum(1 for c in queue_summary.get("candidates", []) if c.get("status") == "APPROVED" and not c.get("published_at") and not c.get("linkedin_post_id"))
+                approved_count = sum(
+                    1 for c in queue_summary.get("candidates", [])
+                    if c.get("status") == "APPROVED" and not c.get("published_at") and not c.get("linkedin_post_id")
+                )
     except Exception as e:
-        pass
+        append_daemon_log(f"⚠️ Trend radar replenish warning: {e}")
 
     # 2. Check for publishing action
     published = False
     if approved_count > 0:
         published = check_and_publish_next_candidate(force=force_publish)
+        if published:
+            queue_summary = load_json_file(QUEUE_SUMMARY_FILE, {"candidates": []})
+            approved_count = sum(
+                1 for c in queue_summary.get("candidates", [])
+                if c.get("status") == "APPROVED" and not c.get("published_at") and not c.get("linkedin_post_id")
+            )
+            published_today = count_posts_published_today()
 
     # 3. Autonomous Job Application Engine check
     auto_apply_telemetry = {"enabled": False, "applied_today": 0}
@@ -344,7 +397,7 @@ def run_single_cycle(force_publish=False):
             "top_performing_post": audit_res.get("top_performing_post", ""),
             "winning_formula": "Canva Contrast Infographic + Clean Body + Comment Link + Weekday CET"
         }
-    except Exception as e:
+    except Exception:
         pass
 
     # 5. Update heartbeat
@@ -364,29 +417,23 @@ def run_single_cycle(force_publish=False):
 
     return published
 
+
 def start_daemon_loop():
     """Starts the continuous 24/7 background service."""
     print("=" * 65)
     print("  Antigravity 24/7 LinkedIn Autonomous Editorial & Growth Daemon")
-    print(f"  Owner: Purnachandra Madhukar | Base: Berlin, Germany (CET)")
-    print(f"  Target: European Union Reach & Sovereign AI Optimization")
+    print("  Owner: Purnachandra Madhukar | Base: Berlin, Germany (CET)")
+    print("  Target: European Union Reach & Sovereign AI Optimization")
     print("=" * 65)
-    
+
     append_daemon_log("Daemon initialized. 24/7 autonomous monitoring & scheduling active.")
 
-    last_heartbeat = 0
-    last_analytics_check = 0
-
     while RUNNING:
-        current_time = time.time()
-        
         try:
-            # Run scheduled cycle
             run_single_cycle()
         except Exception as e:
             append_daemon_log(f"⚠️ Error during cycle: {e}")
 
-        # Sleep in short increments to allow quick shutdown response
         for _ in range(CHECK_INTERVAL_SECONDS):
             if not RUNNING:
                 break
@@ -394,6 +441,7 @@ def start_daemon_loop():
 
     append_daemon_log("Daemon process stopped gracefully.")
     update_daemon_status({"status": "STOPPED"})
+
 
 if __name__ == "__main__":
     import argparse

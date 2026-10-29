@@ -974,7 +974,7 @@
     <div class="drop-banner" id="banner-drop" style="display: none;">
       <div class="drop-info">
         <span class="drop-badge">NEXT CLOUD DROP &bull; EU PRIME WINDOW</span>
-        <div class="drop-title" id="drop-topic">Candidate #2: OpenClaw (Self-Hosted Personal AI Agent)</div>
+        <div class="drop-title" id="drop-topic">Candidate #16: Microsoft AutoGen v0.4 (Event-Driven Actors)</div>
         <div class="drop-time" id="drop-timing">Thursday Morning Prime at 08:30 CET &bull; Auto-Publish Enabled</div>
       </div>
       <button class="drop-action-btn" onclick="switchTab('posts')">Inspect &rarr;</button>
@@ -1483,8 +1483,12 @@
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                 Download Letter
               </a>
-              <!-- 5. LinkedIn Job Posting Link -->
-              <a href="${job.job_url || '#'}" target="_blank" class="action-link linkedin" title="Open job on LinkedIn">
+              <!-- 5. Pre-Mapped 1-Click ATS Packet -->
+              <button class="action-link secondary" onclick="openModal('${escapeHtml(job.company)} - 1-Click ATS Packet', '/packets/packet_${jobId}.json', '/packets/packet_${jobId}.json')" title="View pre-mapped ATS form packet">
+                📦 ATS Packet
+              </button>
+              <!-- 6. Job Posting Link -->
+              <a href="${job.job_url || '#'}" target="_blank" class="action-link linkedin" title="Open job posting">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                 LinkedIn Job &rarr;
               </a>
@@ -1642,10 +1646,14 @@
             <h3 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.35rem;">${escapeHtml(post.topic)}</h3>
             <p style="font-size: 0.72rem; color: var(--text-muted);">${escapeHtml(post.beat || 'Technical AI Architecture')}</p>
             
-            ${visualUrl ? `
-              <div class="post-visual-wrap" onclick="openModal('Visual Asset: ${escapeHtml(post.topic)}', '${visualUrl}')">
-                <img src="${BASE_RAW + visualUrl}" class="post-visual-img" alt="${escapeHtml(post.topic)}" onerror="this.style.display='none'">
-              </div>` : ''}
+            ${visualUrl ? (() => {
+              const localVisualUrl = visualUrl.replace('linkedin/visuals/', '/visuals/');
+              const thumbUrl = post.visual_thumb_url || (localVisualUrl.endsWith('.pdf') ? localVisualUrl.replace('carousel_', 'visual_').replace('.pdf', '.png') : localVisualUrl);
+              return `
+              <div class="post-visual-wrap" onclick="openModal('Visual Asset: ${escapeHtml(post.topic)}', '${localVisualUrl}', '${localVisualUrl}')">
+                <img src="${thumbUrl}" class="post-visual-img" alt="${escapeHtml(post.topic)}" onerror="this.src='${BASE_RAW + visualUrl}'">
+              </div>`;
+            })() : ''}
 
             <div class="job-actions-row" style="margin-top: 0.5rem;">
               ${post.linkedin_post_url ? `
@@ -1862,6 +1870,10 @@
 
         if (queue.status === 'fulfilled' && queue.value && queue.value.candidates) {
           STATE.queue = queue.value.candidates;
+          const nextApproved = STATE.queue.find(c => c.status === 'APPROVED');
+          if (nextApproved && document.getElementById('drop-topic')) {
+            document.getElementById('drop-topic').innerText = `Candidate #${nextApproved.id}: ${nextApproved.topic}`;
+          }
         }
 
         if (daemon.status === 'fulfilled' && daemon.value) {

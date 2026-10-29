@@ -964,6 +964,186 @@ pre.code-content {{
     print(f"[OK] Canva Code Contrast Visual generated: linkedin/visuals/{save_filename}")
     return VISUALS_DIR / save_filename
 
+
+def generate_carousel_pdf(
+    category_tag="Autonomous Agent Architecture",
+    deck_title="Multi-Turn Agent KV Cache: <span class='gradient-text-cyan'>SGLang RadixAttention</span>",
+    deck_subtitle="Why multi-turn LLM agents waste 70% of compute re-evaluating system prompts and how Radix Trees fix it.",
+    slides=[
+        {
+            "slide_num": "01 / 05",
+            "badge": "The Bottleneck",
+            "title": "Why Multi-Turn Agents Burn Compute",
+            "body": "In a 15-step agent loop, the system prompt, tool schemas, and prior trajectory steps are sent on every single turn. Standard serving engines discard or naively recompute KV cache states across branching tool calls.",
+            "code_or_metric": "70% of prefill FLOPs wasted re-reading static tool definitions"
+        },
+        {
+            "slide_num": "02 / 05",
+            "badge": "Architecture Shift",
+            "title": "KV Cache as a Radix Tree",
+            "body": "Instead of treating prompts as isolated requests, SGLang maintains a Least-Recently-Used (LRU) Radix Tree of token prefixes in GPU VRAM. Shared prefixes across subagents point to the exact same KV memory blocks.",
+            "code_or_metric": "RadixTree: [System Prompt] -> [Tool Schemas] -> [Branch A / Branch B]"
+        },
+        {
+            "slide_num": "03 / 05",
+            "badge": "Benchmark Evidence",
+            "title": "Up to 5x Higher Agent Throughput",
+            "body": "On multi-turn agent trajectories, tree-of-thought searches, and few-shot RAG pipelines, RadixAttention cuts Time-To-First-Token (TTFT) by 60–80% while multiplying concurrent batch throughput.",
+            "code_or_metric": "Throughput: up to 5.0x vs baseline without prefix tree caching"
+        },
+        {
+            "slide_num": "04 / 05",
+            "badge": "The Engineering Catch",
+            "title": "VRAM Eviction & Cache Thrashing",
+            "body": "Radix trees only help if your prompts share deterministic prefixes. If you inject dynamic timestamps or random UUIDs at the top of your system prompt, you invalidate the entire prefix tree on line 1.",
+            "code_or_metric": "Rule: Always put static system prompts & tools first; dynamic state last"
+        },
+        {
+            "slide_num": "05 / 05",
+            "badge": "Takeaway & Sandbox",
+            "title": "Drop-In OpenAI-Compatible Runtime",
+            "body": "SGLang ships under an Apache 2.0 license and exposes a standard OpenAI-compatible HTTP endpoint. Always benchmark on your actual prompt prefix length inside an isolated container before migrating.",
+            "code_or_metric": "Repo: github.com/sgl-project/sglang (Apache 2.0)"
+        }
+    ],
+    footer_repo="github.com/sgl-project/sglang",
+    save_filename="carousel_sglang_radix.pdf"
+):
+    """
+    Template 4: Multi-Slide 1080x1350 (4:5 Portrait) PDF Document Carousel Generator.
+    Generates both the HTML deck and converts it to a pixel-perfect multi-page PDF via pdf_converter.
+    """
+    slides_html = ""
+    total_slides = len(slides)
+    for idx, s in enumerate(slides, 1):
+        slides_html += f"""
+        <div class="carousel-page">
+          <div class="grid-overlay"></div>
+          <div class="content-wrapper">
+            <div class="header-section">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <div class="category-tag"><span class="pulse-dot"></span> {category_tag}</div>
+                <div class="repo-badge">{s.get('slide_num', f'{idx:02d} / {total_slides:02d}')}</div>
+              </div>
+              <h1 class="main-title" style="font-size:44px; margin-top:24px;">{s['title']}</h1>
+              <p class="subtitle" style="font-size:19px;">{deck_subtitle if idx == 1 else s['badge']}</p>
+            </div>
+
+            <div class="slide-body-card">
+              <div class="slide-badge">{s['badge']}</div>
+              <div class="slide-main-text">{s['body']}</div>
+              <div class="slide-metric-box">{s['code_or_metric']}</div>
+            </div>
+
+            <div class="footer">
+              <div class="author-box">
+                <div class="author-avatar">PM</div>
+                <div class="author-details">
+                  <div class="author-name">Purnachandra Madhukar</div>
+                  <div class="author-thesis">MSc Data Science &bull; Autonomous Agent Architecture, Berlin</div>
+                </div>
+              </div>
+              <div class="repo-badge">{footer_repo} &rarr;</div>
+            </div>
+          </div>
+        </div>
+        """
+
+    html = f"""<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+{GLOBAL_STYLES}
+@page {{
+  size: 1080px 1350px;
+  margin: 0;
+}}
+body {{
+  width: 1080px;
+  height: auto;
+  padding: 0;
+  display: block;
+}}
+.carousel-page {{
+  width: 1080px;
+  height: 1350px;
+  padding: 56px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  page-break-after: always;
+  break-after: page;
+  overflow: hidden;
+  background-color: #080C14;
+  background-image:
+    radial-gradient(circle at 85% 12%, rgba(56, 189, 248, 0.12) 0%, transparent 40%),
+    radial-gradient(circle at 15% 85%, rgba(99, 102, 241, 0.10) 0%, transparent 45%);
+}}
+.slide-body-card {{
+  background: linear-gradient(180deg, #0F172A 0%, #0A101D 100%);
+  border: 1.5px solid rgba(56, 189, 248, 0.35);
+  border-radius: 20px;
+  padding: 42px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 28px;
+  flex: 1;
+  margin: 24px 0;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}}
+.slide-badge {{
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #34D399;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  padding: 8px 16px;
+  border-radius: 8px;
+  width: fit-content;
+}}
+.slide-main-text {{
+  font-size: 28px;
+  line-height: 1.55;
+  color: #F1F5F9;
+  font-weight: 500;
+}}
+.slide-metric-box {{
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 19px;
+  color: #38BDF8;
+  background: rgba(8, 12, 20, 0.85);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 12px;
+  padding: 22px 24px;
+  font-weight: 700;
+}}
+</style>
+</head>
+<body>
+{slides_html}
+</body>
+</html>
+"""
+    html_filename = Path(save_filename).with_suffix(".html").name
+    html_path = VISUALS_DIR / html_filename
+    html_path.write_text(html, encoding="utf-8")
+
+    pdf_path = VISUALS_DIR / save_filename
+    try:
+        from linkedin.jobs import pdf_converter
+        pdf_converter.convert_html_to_pdf(html_path, pdf_path)
+    except Exception as e:
+        print(f"[WARN] Carousel PDF conversion warning: {e}")
+
+    print(f"[OK] Canva Multi-Slide Carousel generated: linkedin/visuals/{save_filename}")
+    return pdf_path
+
+
 def build_all_canva_visuals():
     """Generates the full suite of Canva-style visual assets for all active candidates."""
     print("=== Generating High-Quality Canva-Style Technical Visuals ===")

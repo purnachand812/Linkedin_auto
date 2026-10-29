@@ -1,0 +1,37 @@
+{
+  "packet_id": "packet_job-linkedin-4475630927",
+  "generated_at": "2026-10-29T18:38:31.451532",
+  "job_id": "job-linkedin-4475630927",
+  "company": "inca",
+  "title": "Venture Development Intern (m/f/d)",
+  "portal_source": "LINKEDIN",
+  "direct_apply_url": "https://www.linkedin.com/jobs/view/4475630927/",
+  "ats_form_fields": {
+    "first_name": "Purnachandra Madhukar",
+    "last_name": "Dandu",
+    "full_name": "Dandu Purnachandra Madhukar",
+    "email": "purnachand0812@gmail.com",
+    "phone": "+49 15511064761",
+    "city": "Berlin, Germany",
+    "linkedin_url": "https://linkedin.com/in/purnachanddandu",
+    "github_url": "https://github.com/purnachand812",
+    "university": "GISMA University of Applied Sciences, Berlin",
+    "degree": "M.Sc. in Data Science (EQF Level 7)"
+  },
+  "screener_responses": {
+    "Are you legally authorized to work in Germany?": "Yes",
+    "Do you require visa sponsorship?": "No",
+    "Are you currently enrolled as a full-time university student?": "Yes / Experienced",
+    "Are you located in Berlin, Germany?": "Yes",
+    "What is your German language proficiency?": "Elementary (A2 level - actively advancing in Berlin)",
+    "What is your English language proficiency?": "Upper Intermediate / Professional working proficiency (B2)",
+    "What are your salary expectations?": "\u20ac16 - \u20ac22 / hr (Werkstudent) or \u20ac1,200 - \u20ac1,800 / mo (Internship)",
+    "What is your notice period / earliest start date?": "Immediate / 2 weeks",
+    "Do you have a valid driving licence?": "No"
+  },
+  "attachments": {
+    "europass_cv_pdf": "/resumes/resume_job-linkedin-4475630927.pdf",
+    "europass_cover_letter_pdf": "/resumes/cover_letter_job-linkedin-4475630927.pdf"
+  },
+  "recruiter_outreach_note": "Hi Hiring Team, I saw inca's opening for Venture Development Intern (m/f/d) in Berlin, Berlin, Germany. I am an MSc Data Science student based in Berlin (GISMA University) researching hallucination attribution in multi-step LLM agent trajectories. I have hands-on experience building Python ML pipelines, SQL/Redis backends, and typed FastAPI agent services, with full German Werkstudent work authorization. I submitted my application and would be glad to connect."
+}

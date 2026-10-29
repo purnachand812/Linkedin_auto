@@ -36,24 +36,34 @@
       "detail": "Currently living in Berlin, Germany and fully available for on-site or hybrid work."
     },
     "german_proficiency": {
-      "keywords": ["german language", "proficiency in german", "german level"],
-      "answer": "Basic / Working proficiency (B1 learning)",
-      "detail": "Fluent professional English; currently learning German for workplace integration."
+      "keywords": ["german language", "proficiency in german", "german level", "deutsch", "deutschkenntnisse"],
+      "answer": "Elementary (A2 level - actively advancing in Berlin)",
+      "detail": "CEFR A2 German proficiency (actively advancing in Berlin); professional working English (B2)."
     },
     "english_proficiency": {
-      "keywords": ["english language", "proficiency in english", "english level"],
-      "answer": "Fluent / Full professional proficiency",
-      "detail": "C1/C2 Fluent written and spoken English for technical documentation and collaboration."
+      "keywords": ["english language", "proficiency in english", "english level", "englisch"],
+      "answer": "Upper Intermediate / Professional working proficiency (B2)",
+      "detail": "CEFR B2 Upper Intermediate spoken and written English for technical engineering and documentation."
     },
     "notice_period": {
-      "keywords": ["notice period", "how soon can you start", "start date", "availability"],
+      "keywords": ["notice period", "how soon can you start", "start date", "availability", "earliest start"],
       "answer": "Immediate / 2 weeks",
-      "detail": "Available to start immediately or within standard 2-week onboarding."
+      "detail": "Available to start immediately or within standard 2-week onboarding in Berlin."
     },
     "salary_expectation": {
-      "keywords": ["salary expectation", "compensation", "desired salary", "expected salary"],
-      "answer": "€60,000 / year (or €20/hr for working student)",
-      "detail": "Competitive market rate based on Berlin tech scaleup benchmarks."
+      "keywords": ["salary expectation", "compensation", "desired salary", "expected salary", "hourly rate", "gehalt"],
+      "answer": "€16 - €22 / hr (Werkstudent) or €1,200 - €1,800 / mo (Internship)",
+      "detail": "Aligned with Berlin Werkstudent (up to 20 hrs/wk semester) and Internship market benchmarks."
+    },
+    "phone_number": {
+      "keywords": ["phone", "mobile", "telephone", "telefon", "handynummer", "contact number"],
+      "answer": "+49 15511064761",
+      "detail": "Verified German mobile number (+49 15511064761)."
+    },
+    "student_enrollment": {
+      "keywords": ["enrolled student", "immatrikuliert", "university enrollment", "werkstudent status", "master student"],
+      "answer": "Yes (Enrolled M.Sc. Data Science Student at GISMA Berlin)",
+      "detail": "Currently enrolled full-time Master's student in Berlin eligible for Werkstudent employment (20 hrs/wk semester, 40 hrs/wk breaks)."
     },
     "driving_license": {
       "keywords": ["driving license", "valid driver's license", "driving licence", "drivers license", "führerschein", "driver's licence"],

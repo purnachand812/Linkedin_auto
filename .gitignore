@@ -1,5 +1,6 @@
 # Ignore LinkedIn OAuth credentials and secret tokens
 linkedin/credentials.json
+linkedin/jobs/email_config.json
 .env
 __pycache__/
 *.pyc

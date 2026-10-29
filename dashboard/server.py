@@ -3,7 +3,8 @@
 server.py - Lightweight API & Dashboard Server for Purna's LinkedIn Editorial System.
 Built with Python's standard library (zero external dependencies).
 Serves the web dashboard and provides live REST APIs to read/update candidate queue,
-audit quality with detect.py logic, manage editorial history, and view visuals.
+audit quality with detect.py logic, manage editorial history, view visuals & PDF carousels,
+run AI Trend Radar v2.0, run Empirical Sandbox Benchmarks, and manage the 360° Berlin Job Hub.
 """
 
 import os
@@ -27,6 +28,7 @@ VISUALS_DIR = LINKEDIN_DIR / "visuals"
 TOOLS_DIR = LINKEDIN_DIR / "tools"
 JOBS_DIR = LINKEDIN_DIR / "jobs"
 RESUMES_DIR = JOBS_DIR / "resumes"
+PACKETS_DIR = JOBS_DIR / "packets"
 HISTORY_FILE = LINKEDIN_DIR / "editorial-history.json"
 QUEUE_SUMMARY_FILE = QUEUE_DIR / "queue_summary.json"
 SLOP_FILE = TOOLS_DIR / "slop.json"
@@ -36,29 +38,44 @@ PROFILE_MASTER_FILE = JOBS_DIR / "profile_master.json"
 SCREENER_BANK_FILE = JOBS_DIR / "screener_bank.json"
 REPORTS_DIR = JOBS_DIR / "reports"
 EMAIL_CONFIG_FILE = JOBS_DIR / "email_config.json"
+BENCHMARKS_FILE = LINKEDIN_DIR / "history" / "sandbox_benchmarks.json"
+WEEKLY_AUDIT_FILE = LINKEDIN_DIR / "history" / "weekly_audit_report.json"
 
 sys.path.insert(0, str(WORKSPACE_DIR))
 try:
     from linkedin.tools import publisher
     from linkedin.tools import daemon
     from linkedin.tools import eu_growth_engine
+    from linkedin.tools import trend_radar
+    from linkedin.tools import sandbox_tester
+    from linkedin.tools import weekly_growth_analyst
+    from linkedin.tools import comment_engine
 except ImportError:
     publisher = None
     daemon = None
     eu_growth_engine = None
+    trend_radar = None
+    sandbox_tester = None
+    weekly_growth_analyst = None
+    comment_engine = None
 
 try:
     from linkedin.jobs import job_matcher
     from linkedin.jobs import resume_tailor
+    from linkedin.jobs import cover_letter_generator
     from linkedin.jobs import job_dispatcher
     from linkedin.jobs import autonomous_job_agent
     from linkedin.jobs import daily_reporter
+    from linkedin.jobs import multi_source_radar
 except ImportError:
     job_matcher = None
     resume_tailor = None
+    cover_letter_generator = None
     job_dispatcher = None
     autonomous_job_agent = None
     daily_reporter = None
+    multi_source_radar = None
+
 
 def load_slop_config():
     if SLOP_FILE.exists():
@@ -66,7 +83,9 @@ def load_slop_config():
             return json.load(f)
     return {"forbidden_words": [], "forbidden_phrases": [], "forbidden_endings": [], "dry_replacements": {}}
 
+
 SLOP_CONFIG = load_slop_config()
+
 
 # --- Detection Panel Logic (from detect.py) ---
 def calc_burstiness(text):
@@ -80,6 +99,7 @@ def calc_burstiness(text):
     cv = std_dev / mean if mean > 0 else 0
     return round(min(100.0, cv * 120.0), 1)
 
+
 def calc_specificity(text):
     tokens = text.split()
     if not tokens:
@@ -87,8 +107,8 @@ def calc_specificity(text):
     specific_patterns = [
         r'\d+(\.\d+)?k?',
         r'\$\d+|\€\d+',
-        r'\b(v\d+\.\d+|python|docker|gpu|vram|ram|api|mit|apache|llm|ollama|vllm|swe-bench|lmsys|github|claude|gemini|openai|anthropic)\b',
-        r'\b[a-zA-Z0-9_-]+\.(py|json|md|txt|ts|js)\b',
+        r'\b(v\d+\.\d+|python|docker|gpu|vram|ram|api|mit|apache|llm|ollama|vllm|sglang|deepseek|autogen|whisper|swe-bench|lmsys|github|claude|gemini|openai|anthropic)\b',
+        r'\b[a-zA-Z0-9_-]+\.(py|json|md|txt|ts|js|pdf)\b',
         r'https?://',
         r'%',
         r'\b(tested|untested|benchmark|repo|commit|license|heuristic|heuristics|script|scripts|plugin|workflow)\b'
@@ -96,6 +116,7 @@ def calc_specificity(text):
     matches = sum(len(re.findall(pat, text, re.IGNORECASE)) for pat in specific_patterns)
     density = matches / len(tokens)
     return round(min(100.0, density * 650.0), 1)
+
 
 def calc_slop_density(text):
     words = text.split()
@@ -119,34 +140,38 @@ def calc_slop_density(text):
     score = max(0.0, 100.0 - (per_100 * 25.0))
     return round(score, 1), slop_count, detected
 
+
 def calc_fingerprint(text):
-    penalties = 0
+    penalties = 0.0
     issues = []
-    invisibles = ['\u200b', '\u200c', '\u200d', '\u2060', '\ufeff', '\u00ad']
-    for char in invisibles:
-        if char in text:
-            penalties += 25
-            issues.append("Zero-width/invisible unicode character detected")
     if '—' in text:
-        count = text.count('—')
-        penalties += 30 * count
-        issues.append(f"{count} em-dash(es) ('—') detected (Strictly forbidden in Purna's voice)")
-    curly = ['“', '”', '‘', '’']
-    for c in curly:
-        if c in text:
-            penalties += 10 * text.count(c)
-            issues.append("Curly quote detected (use straight quotes)")
-    return round(max(0.0, 100.0 - penalties), 1), issues
+        em_count = text.count('—')
+        penalties += em_count * 30.0
+        issues.append(f"{em_count} em-dash(es) ('—') detected")
+    invisibles = ['\u200b', '\u200c', '\u200d', '\u2060', '\ufeff', '\u00ad']
+    inv_count = sum(text.count(c) for c in invisibles)
+    if inv_count > 0:
+        penalties += inv_count * 25.0
+        issues.append(f"{inv_count} hidden Unicode character(s)")
+    curly_count = sum(text.count(c) for c in ['“', '”', '‘', '’'])
+    if curly_count > 0:
+        penalties += 15.0
+        issues.append(f"{curly_count} curly quote(s) detected")
+    return max(0.0, round(100.0 - penalties, 1)), issues
+
 
 def calc_voice_and_tells(text):
     score = 100.0
     issues = []
-    forbidden_endings = SLOP_CONFIG.get("forbidden_endings", ["thoughts?", "agree?", "what do you think?"])
-    lower_text = text.strip().lower()
-    for ending in forbidden_endings:
-        if lower_text.endswith(ending):
-            score -= 35.0
+    lines = [l.strip() for l in text.split('\n') if l.strip()]
+    if not lines:
+        return 0.0, ["Empty draft"]
+    last_line = lines[-1].lower()
+    for ending in SLOP_CONFIG.get("forbidden_endings", []):
+        if ending in last_line:
+            score -= 25.0
             issues.append(f"Generic engagement bait ending: '{ending}'")
+    lower_text = text.lower()
     agent_keywords = ["agent", "terminal", "code execution", "browser automation", "execute commands", "repo", "scripts"]
     if any(k in lower_text for k in agent_keywords):
         security_terms = ["sandbox", "credentials", "security", "production", "inspect"]
@@ -155,11 +180,12 @@ def calc_voice_and_tells(text):
             issues.append("Agent/execution tool mentioned without required sandboxing warning ('Sandbox it first').")
     tool_keywords = ["repo", "tool", "model", "release", "framework", "python"]
     if any(k in lower_text for k in tool_keywords):
-        test_terms = ["tested", "haven't run", "based on", "documentation", "inspection"]
+        test_terms = ["tested", "haven't run", "haven't benchmarked", "based on", "documentation", "inspection"]
         if not any(t in lower_text for t in test_terms):
             score -= 20.0
             issues.append("Discusses tool/model without explicit tested vs untested status declaration.")
     return max(0.0, round(score, 1)), issues
+
 
 def evaluate_draft(text):
     burstiness = calc_burstiness(text)
@@ -185,81 +211,69 @@ def evaluate_draft(text):
         "verdict": "PASS" if final_score >= 80.0 else "REVIEW NEEDED"
     }
 
+
 def humanize_text(text):
     out = text
-    # Replace em-dashes
     out = out.replace("—", ", ")
     out = out.replace("–", "-")
-    # Replace curly quotes
     out = out.replace("“", '"').replace("”", '"').replace("‘", "'").replace("’", "'")
-    # Strip invisible characters
     for inv in ['\u200b', '\u200c', '\u200d', '\u2060', '\ufeff', '\u00ad']:
         out = out.replace(inv, '')
-    # Replace common slop
     replacements = SLOP_CONFIG.get("dry_replacements", {})
     for word, repl in replacements.items():
         out = re.sub(r'\b' + re.escape(word) + r'\b', repl, out, flags=re.IGNORECASE)
     return out
 
+
 def parse_candidate_markdown(file_path):
     if not file_path.exists():
         return {}
     content = file_path.read_text(encoding="utf-8")
-    
-    # Extract fields with regex
+
     status_match = re.search(r'-\s*Status:\s*([A-Z_]+)', content)
     beat_match = re.search(r'-\s*Beat:\s*(.+)', content)
     score_match = re.search(r'-\s*Editorial Score:\s*(\d+)/100', content)
-    
-    # Extract Why Now
+
     why_now = ""
     wn_m = re.search(r'###\s*WHY NOW\s*\n(.*?)(?=\n###|\n---|\Z)', content, re.DOTALL)
     if wn_m:
         why_now = wn_m.group(1).strip()
-        
-    # Extract Interesting Angle
+
     angle = ""
     ang_m = re.search(r'###\s*INTERESTING ANGLE\s*\n(.*?)(?=\n###|\n---|\Z)', content, re.DOTALL)
     if ang_m:
         angle = ang_m.group(1).strip()
-        
-    # Extract Hooks
+
     hooks = []
     hooks_m = re.search(r'###\s*HOOK OPTIONS\s*\n(.*?)(?=\n###|\n---|\Z)', content, re.DOTALL)
     if hooks_m:
         raw_hooks = hooks_m.group(1).strip()
-        # Parse numbered hooks
         parts = re.split(r'\n(?=\d+\.\s*\[)', raw_hooks)
         for p in parts:
             p = p.strip()
             if p:
                 hooks.append(p)
-                
-    # Extract Complete Post
+
     post_text = ""
     post_m = re.search(r'###\s*COMPLETE LINKEDIN POST[^\n]*\n(.*?)(?=\n###|\n---|\Z)', content, re.DOTALL)
     if post_m:
         post_text = post_m.group(1).strip()
-        
-    # Extract The Catch
+
     catch = ""
     catch_m = re.search(r'###\s*THE CATCH\s*\n(.*?)(?=\n###|\n---|\Z)', content, re.DOTALL)
     if catch_m:
         catch = catch_m.group(1).strip()
 
-    # Extract What it Replaces
     replaces = ""
     rep_m = re.search(r'###\s*WHAT IT REPLACES\s*\n(.*?)(?=\n###|\n---|\Z)', content, re.DOTALL)
     if rep_m:
         replaces = rep_m.group(1).strip()
 
-    # Extract Cost Breakdown
     cost = ""
     cost_m = re.search(r'###\s*COST BREAKDOWN\s*\n(.*?)(?=\n###|\n---|\Z)', content, re.DOTALL)
     if cost_m:
         cost = cost_m.group(1).strip()
 
-    # Extract Sources / First Comment
     sources = ""
     src_m = re.search(r'###\s*(?:PRIMARY SOURCES|SOURCES)[^\n]*\n(.*?)(?=\n###|\n---|\Z)', content, re.DOTALL)
     if src_m:
@@ -280,6 +294,7 @@ def parse_candidate_markdown(file_path):
         "raw_markdown": content
     }
 
+
 class EditorialHandler(SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=str(BASE_DIR), **kwargs)
@@ -291,7 +306,7 @@ class EditorialHandler(SimpleHTTPRequestHandler):
         parsed = urlparse(self.path)
         path = parsed.path
 
-        # Static Visuals routing
+        # Static Visuals routing (supports SVG, PNG, JPG, PDF Carousels, and HTML Carousel decks)
         if path.startswith("/visuals/"):
             filename = path.replace("/visuals/", "")
             file_path = VISUALS_DIR / filename
@@ -303,11 +318,31 @@ class EditorialHandler(SimpleHTTPRequestHandler):
                     self.send_header("Content-Type", "image/jpeg")
                 elif filename.endswith(".png"):
                     self.send_header("Content-Type", "image/png")
+                elif filename.endswith(".pdf"):
+                    self.send_header("Content-Type", "application/pdf")
+                    self.send_header("Content-Disposition", f'inline; filename="{filename}"')
+                elif filename.endswith(".html"):
+                    self.send_header("Content-Type", "text/html; charset=utf-8")
                 self.end_headers()
                 self.wfile.write(file_path.read_bytes())
                 return
             else:
                 self.send_error(404, "Visual asset not found")
+                return
+
+        # Pre-Mapped 1-Click ATS Application Packets routing
+        if path.startswith("/packets/") or path.startswith("/linkedin/jobs/packets/"):
+            filename = path.replace("/linkedin/jobs/packets/", "").replace("/packets/", "")
+            file_path = PACKETS_DIR / filename
+            if file_path.exists():
+                self.send_response(200)
+                self.send_header("Content-Type", "application/json; charset=utf-8")
+                self.send_header("Cache-Control", "no-cache, no-store, must-revalidate")
+                self.end_headers()
+                self.wfile.write(file_path.read_bytes())
+                return
+            else:
+                self.send_error(404, "ATS packet not found")
                 return
 
         # Mobile Portal / Student Jobs Hub routing
@@ -370,7 +405,7 @@ class EditorialHandler(SimpleHTTPRequestHandler):
                 self.send_error(404, "Report file not found")
                 return
 
-        # Static Workspace Routing for /linkedin/ (jobs_radar.json, applied_history.json, etc.)
+        # Static Workspace Routing for /linkedin/
         if path.startswith("/linkedin/"):
             rel_p = path.lstrip("/")
             file_path = WORKSPACE_DIR / rel_p
@@ -448,6 +483,8 @@ class EditorialHandler(SimpleHTTPRequestHandler):
             self.handle_get_history()
         elif path == "/api/trends":
             self.handle_get_trends()
+        elif path == "/api/benchmarks":
+            self.handle_get_benchmarks()
         elif path == "/api/visuals":
             self.handle_get_visuals()
         elif path == "/api/calendar":
@@ -458,7 +495,7 @@ class EditorialHandler(SimpleHTTPRequestHandler):
             self.handle_get_daemon_status()
         elif path == "/api/analytics":
             self.handle_get_analytics()
-        elif path == "/api/replies":
+        elif path in ("/api/replies", "/api/comments"):
             self.handle_get_replies()
         elif path == "/api/jobs/radar":
             self.handle_get_jobs_radar()
@@ -502,8 +539,18 @@ class EditorialHandler(SimpleHTTPRequestHandler):
             self.handle_post_candidate_save(data)
         elif path == "/api/publish":
             self.handle_post_publish(data)
+        elif path == "/api/trends/scout":
+            self.handle_post_trends_scout(data)
+        elif path == "/api/benchmarks/run":
+            self.handle_post_benchmarks_run(data)
         elif path == "/api/daemon/cycle":
             self.handle_post_daemon_cycle(data)
+        elif path == "/api/comments/post":
+            self.handle_post_comment_live(data)
+        elif path == "/api/comments/generate":
+            self.handle_post_comment_generate(data)
+        elif path == "/api/comments/batch":
+            self.handle_post_comment_batch(data)
         elif path == "/api/linkedin/credentials":
             self.handle_post_linkedin_credentials(data)
         elif path == "/api/jobs/score":
@@ -518,7 +565,7 @@ class EditorialHandler(SimpleHTTPRequestHandler):
             self.handle_post_auto_apply_run_now(data)
         elif path == "/api/jobs/auto-apply/config":
             self.handle_post_auto_apply_config(data)
-        elif path == "/api/jobs/reports/send-now":
+        elif path in ("/api/jobs/reports/send-now", "/api/jobs/report/send-now"):
             self.handle_post_report_send_now(data)
         elif path == "/api/jobs/email-config":
             self.handle_post_email_config(data)
@@ -540,23 +587,35 @@ class EditorialHandler(SimpleHTTPRequestHandler):
             with open(QUEUE_SUMMARY_FILE, "r", encoding="utf-8") as f:
                 queue_summary = json.load(f)
 
+        if daemon:
+            queue_summary = daemon.sync_published_candidates_in_queue(queue_summary)
+
         candidates = queue_summary.get("candidates", [])
         enriched = []
         for c in candidates:
             c_file = WORKSPACE_DIR / c.get("file", "")
             parsed_data = parse_candidate_markdown(c_file)
+            orig_status = c.get("status")
             item = dict(c)
             item.update(parsed_data)
-            
-            # Check visual existence
+            if orig_status == "PUBLISHED":
+                item["status"] = "PUBLISHED"
+
             v_path = c.get("visual", "")
             if v_path:
                 v_file = WORKSPACE_DIR / v_path
                 item["visual_exists"] = v_file.exists()
                 item["visual_url"] = f"/visuals/{v_file.name}" if v_file.exists() else None
+                # Provide PNG preview thumbnail when primary asset is a PDF carousel
+                if v_file.suffix.lower() == ".pdf":
+                    png_thumb = VISUALS_DIR / v_file.name.replace("carousel_", "visual_").replace(".pdf", ".png")
+                    item["visual_thumb_url"] = f"/visuals/{png_thumb.name}" if png_thumb.exists() else None
+                else:
+                    item["visual_thumb_url"] = item["visual_url"]
             else:
                 item["visual_exists"] = False
                 item["visual_url"] = None
+                item["visual_thumb_url"] = None
 
             enriched.append(item)
 
@@ -590,7 +649,6 @@ class EditorialHandler(SimpleHTTPRequestHandler):
         with open(QUEUE_SUMMARY_FILE, "w", encoding="utf-8") as f:
             json.dump(queue_summary, f, indent=2)
 
-        # Update candidate markdown file if found
         if target_file and target_file.exists():
             content = target_file.read_text(encoding="utf-8")
             content = re.sub(r'-\s*Status:\s*[A-Z_]+', f'- Status: {new_status}', content)
@@ -621,7 +679,6 @@ class EditorialHandler(SimpleHTTPRequestHandler):
 
         if target_file and target_file.exists():
             content = target_file.read_text(encoding="utf-8")
-            # Replace post content
             pattern = r'(###\s*COMPLETE LINKEDIN POST[^\n]*\n)(.*?)(?=\n###|\n---|\Z)'
             replacement = r'\g<1>\n' + post_text.strip() + '\n\n'
             new_content = re.sub(pattern, replacement, content, flags=re.DOTALL)
@@ -652,98 +709,114 @@ class EditorialHandler(SimpleHTTPRequestHandler):
             self.send_json({"topics": []})
 
     def handle_get_trends(self):
-        # Read from history + current scouted trends
-        trends = [
-            {
-                "id": 1,
-                "title": "Langfuse: Self-Hosted Agent Tracing vs Closed SaaS",
-                "beat": "Free & Open-Source AI Agent / LLM Observability",
-                "score": 95,
-                "hook": "Most teams only discover their autonomous agent entered an infinite retry loop after receiving a $400 API invoice at 3 AM.",
-                "why_now": "Teams deploying multi-step autonomous agents are hitting runaway retry loops and debugging blindness. LangSmith charges $39/seat/mo and locks self-hosting behind enterprise tiers.",
-                "replaces": "LangSmith ($39/seat/month), Arize, Helicone",
-                "repo": "https://github.com/langfuse/langfuse",
-                "license": "MIT Open Source",
-                "stars": "35.8k stars",
-                "evidence": ["https://github.com/langfuse/langfuse", "https://langfuse.com/docs"]
-            },
-            {
-                "id": 2,
-                "title": "FastMCP: 3-Line Typed Model Context Protocol Servers",
-                "beat": "Free & Open-Source AI Agent / Developer Tools",
-                "score": 94,
-                "hook": "Writing raw JSON-RPC boilerplate just so an AI model can query your PostgreSQL database is a waste of engineering time.",
-                "why_now": "Anthropic's Model Context Protocol is now standard across Claude Desktop and Cursor, but hand-crafting JSON schemas is tedious.",
-                "replaces": "Custom tool wrappers and integration middleware",
-                "repo": "https://github.com/PrefectHQ/fastmcp",
-                "license": "Apache 2.0",
-                "stars": "Trending on GitHub",
-                "evidence": ["https://github.com/PrefectHQ/fastmcp"]
-            },
-            {
-                "id": 3,
-                "title": "DeepSeek MLA: Escaping the KV Cache Memory Wall",
-                "beat": "AI Models & Inference Architecture",
-                "score": 93,
-                "hook": "The biggest misconception in local LLM hosting is that parameter count is what kills your GPU memory.",
-                "why_now": "Multi-turn agent loops with 64k+ context windows hit memory bandwidth bottlenecks. MLA compresses KV cache by 5x-10x without losing expressivity.",
-                "replaces": "Sluggish uncompressed inference pipelines and lossy GQA trade-offs",
-                "repo": "https://github.com/deepseek-ai/DeepSeek-V3",
-                "license": "Open Weights",
-                "stars": "Top paper breakthrough",
-                "evidence": ["https://arxiv.org/abs/2412.19437"]
-            },
-            {
-                "id": 4,
-                "title": "vLLM V1 Rewrite: Decoupled ZeroMQ & Native Prefix Caching",
-                "beat": "AI Hardware & Local Inference",
-                "score": 92,
-                "hook": "If your self-hosted LLM server is lagging during multi-turn agent chats, don't blame your GPUs before checking if Python's thread lock is throttling your request queue.",
-                "why_now": "vLLM V1 decoupled the HTTP frontend from the engine scheduler using ZeroMQ sockets, eliminating Python GIL bottlenecks.",
-                "replaces": "Proprietary high-cost inference APIs and legacy V0 server lag",
-                "repo": "https://github.com/vllm-project/vllm",
-                "license": "Apache 2.0",
-                "stars": "Core production engine",
-                "evidence": ["https://github.com/vllm-project/vllm", "https://docs.vllm.ai"]
-            },
-            {
-                "id": 5,
-                "title": "Microsoft AutoGen v0.4: Asynchronous Event-Driven Actors",
-                "beat": "Autonomous AI Agent Architecture",
-                "score": 91,
-                "hook": "Synchronous while-loops worked for toy agent demos, but you cannot run a production system where one stuck tool call freezes your entire agent team.",
-                "why_now": "Microsoft rewrote AutoGen into distributed async event actors with native OpenTelemetry tracing and circuit breakers.",
-                "replaces": "Fragile synchronous while-loop agent scripts",
-                "repo": "https://github.com/microsoft/autogen",
-                "license": "MIT Open Source",
-                "stars": "38k+ stars",
-                "evidence": ["https://github.com/microsoft/autogen"]
-            }
-        ]
+        trends = []
+        if trend_radar and hasattr(trend_radar, "CURATED_BREAKTHROUGHS"):
+            for item in trend_radar.CURATED_BREAKTHROUGHS:
+                trends.append({
+                    "id": item["id"],
+                    "title": item["topic"],
+                    "beat": item["beat"],
+                    "score": item["score"],
+                    "hook": item["hook_selected"],
+                    "why_now": item["why_now"],
+                    "replaces": item["replaces"],
+                    "repo": item["repo"],
+                    "license": item["license"],
+                    "stars": f"Format: {item.get('format', 'image-attached')}",
+                    "evidence": [item["repo"]]
+                })
+
+        # Also append live GitHub discoveries from editorial-history.json
+        if HISTORY_FILE.exists():
+            try:
+                with open(HISTORY_FILE, "r", encoding="utf-8") as f:
+                    ed = json.load(f)
+                for idx, t in enumerate(ed.get("topics", [])):
+                    if t.get("id", "").startswith("live-gh-"):
+                        trends.append({
+                            "id": 100 + idx,
+                            "title": t.get("title", "GitHub AI Breakthrough"),
+                            "beat": t.get("category", "Free & Open-Source AI Agent"),
+                            "score": t.get("score", 88),
+                            "hook": t.get("angle", "Open-source self-hosted alternative"),
+                            "why_now": f"Scouted live from GitHub API on {t.get('date', 'today')}.",
+                            "replaces": "Proprietary SaaS workflow wrappers",
+                            "repo": t.get("primary_source", "https://github.com"),
+                            "license": "Open Source",
+                            "stars": "Live GitHub Scout",
+                            "evidence": [t.get("primary_source", "")]
+                        })
+            except Exception:
+                pass
+
         self.send_json(trends)
+
+    def handle_post_trends_scout(self, data):
+        if not trend_radar:
+            self.send_json({"success": False, "error": "trend_radar module not loaded"}, 500)
+            return
+        try:
+            discovered = trend_radar.fetch_live_github_and_arxiv_trends()
+            added = trend_radar.replenish_queue(render_visuals=False)
+            self.send_json({
+                "success": True,
+                "live_discovered": len(discovered),
+                "candidates_queued": added,
+                "discoveries": discovered
+            })
+        except Exception as e:
+            self.send_json({"success": False, "error": str(e)}, 500)
+
+    def handle_get_benchmarks(self):
+        if BENCHMARKS_FILE.exists():
+            try:
+                with open(BENCHMARKS_FILE, "r", encoding="utf-8") as f:
+                    self.send_json(json.load(f))
+                    return
+            except Exception:
+                pass
+        self.send_json({"runs": []})
+
+    def handle_post_benchmarks_run(self, data):
+        if not sandbox_tester:
+            self.send_json({"success": False, "error": "sandbox_tester module not loaded"}, 500)
+            return
+        try:
+            res = sandbox_tester.analyze_local_repo_footprint(str(LINKEDIN_DIR))
+            sandbox_tester.log_benchmark_result(res, update_markdown=True)
+            self.send_json({"success": True, "result": res})
+        except Exception as e:
+            self.send_json({"success": False, "error": str(e)}, 500)
 
     def handle_get_visuals(self):
         items = []
         if VISUALS_DIR.exists():
             for f in sorted(VISUALS_DIR.iterdir()):
-                if f.suffix.lower() in [".svg", ".jpg", ".jpeg", ".png"]:
+                ext = f.suffix.lower()
+                if ext in [".svg", ".jpg", ".jpeg", ".png", ".pdf"]:
+                    thumb_url = f"/visuals/{f.name}"
+                    if ext == ".pdf":
+                        png_comp = VISUALS_DIR / f.name.replace("carousel_", "visual_").replace(".pdf", ".png")
+                        if png_comp.exists():
+                            thumb_url = f"/visuals/{png_comp.name}"
                     items.append({
                         "name": f.name,
-                        "type": f.suffix.replace(".", "").upper(),
+                        "type": "PDF CAROUSEL" if ext == ".pdf" else ext.replace(".", "").upper(),
                         "url": f"/visuals/{f.name}",
+                        "thumb_url": thumb_url,
                         "size_bytes": f.stat().st_size
                     })
         self.send_json(items)
 
     def handle_get_calendar(self):
         calendar = [
-            {"day": "Monday", "pillar": "Architecture & Thesis", "topic": "Pydantic AI (Typed Dependency Injection)", "candidate_id": 8, "status": "APPROVED", "format": "Text-Only"},
-            {"day": "Tuesday", "pillar": "Open-Source Coding Agent", "topic": "Cline (VS Code MCP Extension)", "candidate_id": 1, "status": "APPROVED", "format": "Visual + Text"},
-            {"day": "Wednesday", "pillar": "Local AI & Personal Agents", "topic": "OpenClaw (Self-Hosted Personal Agent)", "candidate_id": 2, "status": "APPROVED", "format": "Visual + Text"},
-            {"day": "Thursday", "pillar": "Practical Data Automation", "topic": "Crawl4AI (Self-Hosted Scraper vs Firecrawl)", "candidate_id": 9, "status": "APPROVED", "format": "Text-Only"},
-            {"day": "Friday", "pillar": "AI Inference & Hardware", "topic": "vLLM V1 Rewrite / DeepSeek MLA", "candidate_id": None, "status": "SCOUTED", "format": "Diagram + Text"},
-            {"day": "Saturday", "pillar": "Computer-Use & Automation", "topic": "Agent S3 (Desktop GUI Agent)", "candidate_id": 3, "status": "APPROVED", "format": "Visual + Text"},
-            {"day": "Sunday", "pillar": "Agent Observability & Tracing", "topic": "Langfuse (Self-Hosted Tracing vs LangSmith)", "candidate_id": None, "status": "SCOUTED", "format": "Architecture + Text"}
+            {"day": "Monday", "pillar": "Agent KV Cache & Serving", "topic": "SGLang RadixAttention (Multi-Turn Agent KV Cache Reuse)", "candidate_id": 13, "status": "PUBLISHED", "format": "5-Slide PDF Carousel"},
+            {"day": "Tuesday", "pillar": "AI Models & Inference Architecture", "topic": "DeepSeek Multi-Head Latent Attention (MLA) & KV Cache Compression", "candidate_id": 14, "status": "PUBLISHED", "format": "Canva Comparison + Text"},
+            {"day": "Wednesday", "pillar": "AI Hardware & Local Inference", "topic": "vLLM V1 Architecture (Decoupled ZeroMQ Engine & GIL Removal)", "candidate_id": 15, "status": "PUBLISHED", "format": "Canva Comparison + Text"},
+            {"day": "Thursday", "pillar": "Autonomous Agent Architecture", "topic": "Microsoft AutoGen v0.4 (Event-Driven Actor Architecture)", "candidate_id": 16, "status": "APPROVED", "format": "Canva Comparison + Text"},
+            {"day": "Friday", "pillar": "Research & Thesis Discovery", "topic": "Internal Hidden-State Probing for Agent Trajectory Hallucinations", "candidate_id": 17, "status": "APPROVED", "format": "Text-Only (Dwell-Optimized)"},
+            {"day": "Saturday", "pillar": "Everyday AI Automation", "topic": "faster-whisper (Local CTranslate2 GPU Audio Transcription vs Cloud SaaS)", "candidate_id": 18, "status": "APPROVED", "format": "Canva Comparison + Text"},
+            {"day": "Sunday", "pillar": "7-Day Telemetry & Queue Replenishment", "topic": "Weekly Growth Audit & Live GitHub Trend Scout v2.0", "candidate_id": None, "status": "AUTOMATED", "format": "System Telemetry"}
         ]
         self.send_json(calendar)
 
@@ -752,6 +825,8 @@ class EditorialHandler(SimpleHTTPRequestHandler):
         if QUEUE_SUMMARY_FILE.exists():
             with open(QUEUE_SUMMARY_FILE, "r", encoding="utf-8") as f:
                 queue_summary = json.load(f)
+        if daemon:
+            queue_summary = daemon.sync_published_candidates_in_queue(queue_summary)
         candidates = queue_summary.get("candidates", [])
         counts = {
             "total": len(candidates),
@@ -798,7 +873,6 @@ class EditorialHandler(SimpleHTTPRequestHandler):
             self.send_json({"error": "Publisher module not available"}, 500)
             return
 
-        # 1. Check connection status
         conn_status = publisher.get_connection_status()
         if not conn_status.get("connected"):
             self.send_json({
@@ -809,7 +883,6 @@ class EditorialHandler(SimpleHTTPRequestHandler):
             }, 400)
             return
 
-        # 2. Check candidate and enforce APPROVAL state
         queue_summary = {}
         if QUEUE_SUMMARY_FILE.exists():
             with open(QUEUE_SUMMARY_FILE, "r", encoding="utf-8") as f:
@@ -827,9 +900,8 @@ class EditorialHandler(SimpleHTTPRequestHandler):
 
         c_file = WORKSPACE_DIR / candidate_entry.get("file", "")
         parsed_data = parse_candidate_markdown(c_file)
+        topic = candidate_entry.get("topic", "")
 
-        # Enforce Approval Gate
-        # Auto-promote to APPROVED if user explicitly triggered publishing
         current_status = candidate_entry.get("status")
         if current_status not in ("APPROVED", "PUBLISHED"):
             candidate_entry["status"] = "APPROVED"
@@ -839,46 +911,53 @@ class EditorialHandler(SimpleHTTPRequestHandler):
             self.send_json({"error": "Post text is empty."}, 400)
             return
 
-        # 3. Check for visual image asset & format preference
+        raw_sources = parsed_data.get("sources", "")
+        clean_sources = "\n".join(
+            line for line in raw_sources.splitlines()
+            if not line.strip().startswith(">")
+        ).strip()
+
         with_image = data.get("with_image", True)
         image_path = None
 
-        if with_image:
+        if with_image and candidate_entry.get("format") != "text-only":
             v_rel = candidate_entry.get("visual", "")
             if v_rel:
                 v_file = WORKSPACE_DIR / v_rel
                 if v_file.exists():
-                    if v_file.suffix.lower() in (".png", ".jpg", ".jpeg"):
+                    if v_file.suffix.lower() in (".png", ".jpg", ".jpeg", ".pdf"):
                         image_path = str(v_file)
                     elif v_file.suffix.lower() == ".svg":
                         png_cand = v_file.with_suffix(".png")
                         if png_cand.exists():
                             image_path = str(png_cand)
 
-        # Rule: When posting WITHOUT an image, include GitHub link in the post text at the end itself (no separate comment)
         if not image_path:
-            # Check if post_text ends with a github link
             tail = post_text[-250:].lower()
-            if "github.com" not in tail:
-                # Extract repo URL from sources or raw markdown
+            if "github.com" not in tail and "arxiv.org" not in tail:
                 sources_str = parsed_data.get("sources", "") + " " + parsed_data.get("raw_markdown", "")
-                m = re.search(r'https?://github\.com/[a-zA-Z0-9_.-]+/[a-zA-Z0-9_.-]+', sources_str)
+                m = re.search(r'https?://(?:github\.com|arxiv\.org)/[a-zA-Z0-9_./-]+', sources_str)
                 if m:
                     post_text = post_text.rstrip() + f"\n\nRepo: {m.group(0)}"
             else:
-                # Ensure the link has https:// protocol
                 post_text = re.sub(r'Repo:\s*github\.com/([a-zA-Z0-9_.-]+/[a-zA-Z0-9_.-]+)', r'Repo: https://github.com/\1', post_text)
 
-        # 4. Publish via official API
         try:
-            result = publisher.publish_candidate_post(post_text, image_path=image_path)
-            # Record publication in queue_summary, history, and published archive
+            result = publisher.publish_candidate_post(
+                post_text,
+                image_path=image_path,
+                first_comment_text=clean_sources if image_path else None,
+                document_title=topic,
+                candidate_id=c_id,
+                topic=topic,
+                allow_repost=bool(data.get("allow_repost", False))
+            )
             publisher.record_published_post(
                 c_id,
                 {
-                    "topic": candidate_entry.get("topic", ""),
+                    "topic": topic,
                     "post_text": post_text,
-                    "sources": parsed_data.get("sources", "") if image_path else "GitHub link included in post text. No first comment needed.",
+                    "sources": clean_sources if image_path else "GitHub link included in post text. No first comment needed.",
                     "has_image": bool(image_path),
                     "comment_needed": bool(image_path)
                 },
@@ -889,6 +968,7 @@ class EditorialHandler(SimpleHTTPRequestHandler):
                 "status": "PUBLISHED",
                 "has_image": bool(image_path),
                 "comment_needed": bool(image_path),
+                "first_comment_posted": result.get("first_comment_posted", False),
                 "post_id": result.get("post_id"),
                 "post_url": result.get("post_url"),
                 "published_at": result.get("published_at"),
@@ -933,6 +1013,13 @@ class EditorialHandler(SimpleHTTPRequestHandler):
         analytics_file = LINKEDIN_DIR / "history" / "analytics_matrix.json"
         learnings_file = LINKEDIN_DIR / "history" / "eu_reach_learnings.json"
         data = {}
+        if WEEKLY_AUDIT_FILE.exists():
+            try:
+                with open(WEEKLY_AUDIT_FILE, "r", encoding="utf-8") as f:
+                    audit_data = json.load(f)
+                    data.update(audit_data)
+            except Exception:
+                pass
         if analytics_file.exists():
             try:
                 with open(analytics_file, "r", encoding="utf-8") as f:
@@ -949,14 +1036,95 @@ class EditorialHandler(SimpleHTTPRequestHandler):
 
     def handle_get_replies(self):
         replies_file = LINKEDIN_DIR / "history" / "pending_replies.json"
+        comment_log_file = LINKEDIN_DIR / "history" / "comment_engagement_log.json"
+        ext_comments_file = LINKEDIN_DIR / "history" / "external_comments_log.json"
+        radar_file = LINKEDIN_DIR / "history" / "external_engagement_radar.json"
+        payload = {"pending": [], "comments_posted": [], "external_comments": [], "external_stream_posts": [], "radar_items": []}
         if replies_file.exists():
             try:
                 with open(replies_file, "r", encoding="utf-8") as f:
-                    self.send_json(json.load(f))
-                    return
+                    payload.update(json.load(f))
             except Exception:
                 pass
-        self.send_json({"pending": []})
+        if comment_log_file.exists():
+            try:
+                with open(comment_log_file, "r", encoding="utf-8") as f:
+                    c_data = json.load(f)
+                    payload["comments_posted"] = c_data.get("comments_posted", [])
+                    payload["total_live_comments"] = c_data.get("total_live_comments", len(payload["comments_posted"]))
+            except Exception:
+                pass
+        if ext_comments_file.exists():
+            try:
+                with open(ext_comments_file, "r", encoding="utf-8") as f:
+                    e_data = json.load(f)
+                    payload["external_comments"] = e_data.get("external_comments", [])
+                    payload["total_external_comments"] = e_data.get("total_external_comments", len(payload["external_comments"]))
+            except Exception:
+                pass
+        if radar_file.exists():
+            try:
+                with open(radar_file, "r", encoding="utf-8") as f:
+                    r_data = json.load(f)
+                    payload["radar_items"] = r_data.get("radar_items", [])
+                    payload["external_stream_posts"] = r_data.get("external_stream_posts", [])
+            except Exception:
+                pass
+        self.send_json(payload)
+
+    def handle_post_comment_live(self, data):
+        if not comment_engine:
+            self.send_json({"success": False, "error": "comment_engine module not loaded"}, 500)
+            return
+        target_urn = data.get("post_urn") or data.get("post_url") or ""
+        comment_text = data.get("comment_text", "")
+        topic = data.get("topic", "")
+        candidate_id = data.get("candidate_id")
+        allow_dup = bool(data.get("allow_duplicate", False))
+        try:
+            res = comment_engine.post_live_comment_to_linkedin(
+                target_urn_or_url=target_urn,
+                comment_text=comment_text,
+                topic=topic,
+                candidate_id=candidate_id,
+                allow_duplicate=allow_dup
+            )
+            self.send_json(res, 200 if res.get("success") else 400)
+        except Exception as e:
+            self.send_json({"success": False, "error": str(e)}, 500)
+
+    def handle_post_comment_generate(self, data):
+        if not comment_engine:
+            self.send_json({"success": False, "error": "comment_engine module not loaded"}, 500)
+            return
+        post_text = data.get("post_text", "")
+        post_url = data.get("post_url", "")
+        author_name = data.get("author_name", "")
+        auto_post = bool(data.get("auto_post", False))
+        try:
+            gen = comment_engine.generate_post_based_comments(post_text, post_url=post_url, author_name=author_name)
+            if auto_post and gen.get("extracted_urn") and gen.get("generated_comments"):
+                first_comment = gen["generated_comments"][0]["text"]
+                live_res = comment_engine.post_live_comment_to_linkedin(
+                    target_urn_or_url=gen["extracted_urn"],
+                    comment_text=first_comment,
+                    topic=gen.get("topic_summary", "External LinkedIn Post"),
+                    allow_duplicate=True
+                )
+                gen["live_post_result"] = live_res
+            self.send_json({"success": True, **gen})
+        except Exception as e:
+            self.send_json({"success": False, "error": str(e)}, 500)
+
+    def handle_post_comment_batch(self, data):
+        if not comment_engine:
+            self.send_json({"success": False, "error": "comment_engine module not loaded"}, 500)
+            return
+        try:
+            res = comment_engine.run_live_auto_comment_batch()
+            self.send_json({"success": True, **res})
+        except Exception as e:
+            self.send_json({"success": False, "error": str(e)}, 500)
 
     def handle_post_daemon_cycle(self, data):
         force = data.get("force_publish", False)
@@ -982,20 +1150,30 @@ class EditorialHandler(SimpleHTTPRequestHandler):
 
     def handle_refresh_jobs_radar(self):
         try:
-            from linkedin.jobs import linkedin_scraper, resume_tailor, cover_letter_generator
-            success = linkedin_scraper.refresh_jobs_radar()
+            if multi_source_radar:
+                radar_data = multi_source_radar.refresh_360_berlin_radar()
+            else:
+                from linkedin.jobs import linkedin_scraper
+                linkedin_scraper.refresh_jobs_radar()
+                with open(JOBS_RADAR_FILE, "r", encoding="utf-8") as f:
+                    radar_data = json.load(f)
+
             if JOBS_RADAR_FILE.exists():
                 with open(JOBS_RADAR_FILE, "r", encoding="utf-8") as f:
                     data = json.load(f)
                 for job in data.get("jobs", []):
                     try:
-                        resume_tailor.generate_tailored_resume(job)
-                        cover_letter_generator.generate_tailored_cover_letter(job)
+                        if resume_tailor:
+                            resume_tailor.generate_tailored_resume(job)
+                        if cover_letter_generator:
+                            cover_letter_generator.generate_tailored_cover_letter(job)
                     except Exception:
                         pass
+                if job_dispatcher and hasattr(job_dispatcher, "backfill_applied_packets"):
+                    job_dispatcher.backfill_applied_packets()
                 self.send_json({"success": True, "count": len(data.get("jobs", [])), "radar": data})
                 return
-            self.send_json({"success": success, "count": 0})
+            self.send_json({"success": True, "count": 0})
         except Exception as e:
             self.send_json({"success": False, "error": str(e)}, 500)
 
@@ -1041,7 +1219,7 @@ class EditorialHandler(SimpleHTTPRequestHandler):
         if not jd_text:
             self.send_json({"error": "Job description text is required"}, 400)
             return
-        
+
         try:
             score_result = job_matcher.evaluate_job_match({
                 "title": role_title,
@@ -1133,7 +1311,6 @@ class EditorialHandler(SimpleHTTPRequestHandler):
             self.send_json({"error": "Daily reporter not loaded"}, 500)
             return
         cfg = daily_reporter.get_email_config()
-        # redact password in GET
         safe_cfg = dict(cfg)
         safe_cfg["has_password"] = bool(safe_cfg.get("smtp_password"))
         safe_cfg["smtp_password"] = "••••••••" if safe_cfg.get("smtp_password") else ""
@@ -1166,6 +1343,7 @@ class EditorialHandler(SimpleHTTPRequestHandler):
         safe_cfg["smtp_password"] = "••••••••" if safe_cfg.get("smtp_password") else ""
         self.send_json({"success": True, "config": safe_cfg})
 
+
 def run():
     server_address = ('', PORT)
     httpd = ThreadingHTTPServer(server_address, EditorialHandler)
@@ -1175,6 +1353,7 @@ def run():
     except KeyboardInterrupt:
         print("\nStopping server...")
         httpd.server_close()
+
 
 if __name__ == '__main__':
     run()
