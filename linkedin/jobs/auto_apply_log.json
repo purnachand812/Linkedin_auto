@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "01:08:17",
-      "datetime": "2026-10-29T01:08:17.159580",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Werkstudent Rezeptmanagement (all genders)' at HelloFresh (ID: job-gh-hellofresh-8226101)"
-    },
-    {
-      "timestamp": "01:08:17",
       "datetime": "2026-10-29T01:08:17.162194",
       "level": "SUCCESS",
       "message": "Tailored Europass CV & PDF generated: resume_job-gh-hellofresh-8226101.pdf"
@@ -357,6 +351,12 @@
     {
       "timestamp": "22:46:55",
       "datetime": "2026-10-30T22:46:55.491367",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "23:22:09",
+      "datetime": "2026-10-30T23:22:09.324792",
       "level": "INFO",
       "message": "Daily quota reached (5/5). Standing by until tomorrow."
     }
