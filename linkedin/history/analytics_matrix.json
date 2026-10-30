@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-30T06:12:02.760463",
-  "total_posts": 12,
+  "updated_at": "2026-10-30T18:43:50.970685",
+  "total_posts": 10,
   "target_region": "European Union (CET/CEST)",
   "data_integrity": "Verified Ground Truth",
   "posts_analytics": [
@@ -81,30 +81,6 @@
       "topic": "MarkItDown (Document to LLM Markdown Converter)",
       "published_at": "2026-10-24T06:52:17Z",
       "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7519651965921026049/",
-      "impressions": 0,
-      "reactions": 0,
-      "comments": 0,
-      "reposts": 0,
-      "status": "ACCUMULATING",
-      "notes": "Fresh drop; awaiting next live telemetry sync."
-    },
-    {
-      "candidate_id": 3,
-      "topic": "Agent S3 (Desktop GUI Computer-Use Agent)",
-      "published_at": "2026-10-23T08:59:15Z",
-      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7519321529579511808/",
-      "impressions": 0,
-      "reactions": 0,
-      "comments": 0,
-      "reposts": 0,
-      "status": "ACCUMULATING",
-      "notes": "Fresh drop; awaiting next live telemetry sync."
-    },
-    {
-      "candidate_id": 2,
-      "topic": "OpenClaw (Self-Hosted Personal AI Agent)",
-      "published_at": "2026-10-23T08:30:58Z",
-      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7519314405692428289/",
       "impressions": 0,
       "reactions": 0,
       "comments": 0,

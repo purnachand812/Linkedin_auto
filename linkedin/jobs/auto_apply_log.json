@@ -1,144 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "21:17:14",
-      "datetime": "2026-10-29T21:17:14.861316",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "21:18:14",
-      "datetime": "2026-10-29T21:18:14.896860",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "21:19:14",
-      "datetime": "2026-10-29T21:19:14.934527",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "21:20:14",
-      "datetime": "2026-10-29T21:20:14.968928",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "21:21:15",
-      "datetime": "2026-10-29T21:21:15.006313",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "21:22:15",
-      "datetime": "2026-10-29T21:22:15.054580",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "21:23:15",
-      "datetime": "2026-10-29T21:23:15.123596",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "21:24:15",
-      "datetime": "2026-10-29T21:24:15.165709",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "21:25:15",
-      "datetime": "2026-10-29T21:25:15.202411",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "21:26:15",
-      "datetime": "2026-10-29T21:26:15.237637",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "09:11:11",
-      "datetime": "2026-10-28T09:11:11.480461",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "09:18:17",
-      "datetime": "2026-10-28T09:18:17.133006",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "16:12:27",
-      "datetime": "2026-10-28T16:12:27.982923",
-      "level": "INFO",
-      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
-    },
-    {
-      "timestamp": "16:12:33",
-      "datetime": "2026-10-28T16:12:33.831538",
-      "level": "SUCCESS",
-      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
-    },
-    {
-      "timestamp": "16:12:33",
-      "datetime": "2026-10-28T16:12:33.881412",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "21:13:57",
-      "datetime": "2026-10-28T21:13:57.916321",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "21:14:00",
-      "datetime": "2026-10-28T21:14:00.324273",
-      "level": "SUCCESS",
-      "message": "End-of-day summary report dispatched to purnachand0812@gmail.com (SENT_VIA_SMTP)."
-    },
-    {
-      "timestamp": "23:44:16",
-      "datetime": "2026-10-28T23:44:16.092262",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "01:08:15",
-      "datetime": "2026-10-29T01:08:15.146296",
-      "level": "INFO",
-      "message": "Radar scan: 18 active jobs, 4 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "01:08:15",
-      "datetime": "2026-10-29T01:08:15.146850",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Praktikum: Praktikant*in KI-Engineering \u2013 Fertigung & Logistik (w/m/div.)' at Robert Bosch GmbH (ID: job-ba-15986_REF295908C_51a1ca9_S)"
-    },
-    {
-      "timestamp": "01:08:15",
-      "datetime": "2026-10-29T01:08:15.150765",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-ba-15986_REF295908C_51a1ca9_S.pdf"
-    },
-    {
-      "timestamp": "01:08:15",
-      "datetime": "2026-10-29T01:08:15.151563",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-ba-15986_REF295908C_51a1ca9_S.pdf"
-    },
-    {
-      "timestamp": "01:08:15",
-      "datetime": "2026-10-29T01:08:15.152438",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
       "timestamp": "01:08:15",
       "datetime": "2026-10-29T01:08:15.158657",
       "level": "SUCCESS",
@@ -359,6 +221,144 @@
       "datetime": "2026-10-30T06:12:02.757152",
       "level": "INFO",
       "message": "Radar scan: 17 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "18:43:37",
+      "datetime": "2026-10-30T18:43:37.798235",
+      "level": "INFO",
+      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
+    },
+    {
+      "timestamp": "18:43:42",
+      "datetime": "2026-10-30T18:43:42.823653",
+      "level": "SUCCESS",
+      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
+    },
+    {
+      "timestamp": "18:43:42",
+      "datetime": "2026-10-30T18:43:42.824663",
+      "level": "INFO",
+      "message": "Radar scan: 18 active jobs, 5 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "18:43:42",
+      "datetime": "2026-10-30T18:43:42.838770",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Werkstudent (w/m/d) im Bereich Pricing Schwerpunkt Data Analytics und Automatisierung' at Siemens AG (ID: job-ba-12465_1646969_1_S)"
+    },
+    {
+      "timestamp": "18:43:42",
+      "datetime": "2026-10-30T18:43:42.848768",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-ba-12465_1646969_1_S.pdf"
+    },
+    {
+      "timestamp": "18:43:42",
+      "datetime": "2026-10-30T18:43:42.871298",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-ba-12465_1646969_1_S.pdf"
+    },
+    {
+      "timestamp": "18:43:42",
+      "datetime": "2026-10-30T18:43:42.872077",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "18:43:42",
+      "datetime": "2026-10-30T18:43:42.881864",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Siemens AG."
+    },
+    {
+      "timestamp": "18:43:44",
+      "datetime": "2026-10-30T18:43:44.882679",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Partner Management Working Student' at Solaris SE (ID: job-gh-solarisbank-8656165002)"
+    },
+    {
+      "timestamp": "18:43:44",
+      "datetime": "2026-10-30T18:43:44.893962",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-gh-solarisbank-8656165002.pdf"
+    },
+    {
+      "timestamp": "18:43:44",
+      "datetime": "2026-10-30T18:43:44.896233",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-gh-solarisbank-8656165002.pdf"
+    },
+    {
+      "timestamp": "18:43:44",
+      "datetime": "2026-10-30T18:43:44.897474",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "18:43:44",
+      "datetime": "2026-10-30T18:43:44.945005",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Solaris SE."
+    },
+    {
+      "timestamp": "18:43:46",
+      "datetime": "2026-10-30T18:43:46.946455",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Support Associate / Kundenservice (m/w/d) in Teilzeit (Englisch C1 und Deutsch C1)' at Wolt BerlinTech (ID: job-gh-wolt-6694018)"
+    },
+    {
+      "timestamp": "18:43:46",
+      "datetime": "2026-10-30T18:43:46.948173",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-gh-wolt-6694018.pdf"
+    },
+    {
+      "timestamp": "18:43:46",
+      "datetime": "2026-10-30T18:43:46.953929",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-gh-wolt-6694018.pdf"
+    },
+    {
+      "timestamp": "18:43:46",
+      "datetime": "2026-10-30T18:43:46.954538",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "18:43:46",
+      "datetime": "2026-10-30T18:43:46.959318",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Wolt BerlinTech."
+    },
+    {
+      "timestamp": "18:43:48",
+      "datetime": "2026-10-30T18:43:48.960117",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Werkstudent*in (m/w/d) Digitale Infrastrukturen' at inno2grid GmbH (ID: job-linkedin-4483050544)"
+    },
+    {
+      "timestamp": "18:43:48",
+      "datetime": "2026-10-30T18:43:48.961841",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4483050544.pdf"
+    },
+    {
+      "timestamp": "18:43:48",
+      "datetime": "2026-10-30T18:43:48.962395",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4483050544.pdf"
+    },
+    {
+      "timestamp": "18:43:48",
+      "datetime": "2026-10-30T18:43:48.962987",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "18:43:48",
+      "datetime": "2026-10-30T18:43:48.967568",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for inno2grid GmbH."
     }
   ]
 }
