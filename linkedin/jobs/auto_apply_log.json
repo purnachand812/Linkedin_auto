@@ -1,42 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "21:09:14",
-      "datetime": "2026-10-29T21:09:14.511813",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "21:10:14",
-      "datetime": "2026-10-29T21:10:14.551717",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "21:11:14",
-      "datetime": "2026-10-29T21:11:14.590977",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "21:12:14",
-      "datetime": "2026-10-29T21:12:14.630182",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "21:13:14",
-      "datetime": "2026-10-29T21:13:14.669675",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "21:14:14",
-      "datetime": "2026-10-29T21:14:14.716515",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
       "timestamp": "21:15:14",
       "datetime": "2026-10-29T21:15:14.755260",
       "level": "INFO",
@@ -359,6 +323,42 @@
       "datetime": "2026-10-29T23:42:26.568207",
       "level": "INFO",
       "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "00:05:23",
+      "datetime": "2026-10-30T00:05:23.440275",
+      "level": "INFO",
+      "message": "Radar scan: 17 active jobs, 1 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "00:05:23",
+      "datetime": "2026-10-30T00:05:23.440686",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Product Engineering Intern - Vertical AI Startup' at MeisterPfad (ID: job-linkedin-4481874686)"
+    },
+    {
+      "timestamp": "00:05:23",
+      "datetime": "2026-10-30T00:05:23.443553",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4481874686.pdf"
+    },
+    {
+      "timestamp": "00:05:23",
+      "datetime": "2026-10-30T00:05:23.444122",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4481874686.pdf"
+    },
+    {
+      "timestamp": "00:05:23",
+      "datetime": "2026-10-30T00:05:23.444740",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "00:05:23",
+      "datetime": "2026-10-30T00:05:23.466141",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for MeisterPfad."
     }
   ]
 }

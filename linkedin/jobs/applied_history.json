@@ -1,5 +1,25 @@
 [
   {
+    "job_id": "job-linkedin-4481874686",
+    "title": "Product Engineering Intern - Vertical AI Startup",
+    "company": "MeisterPfad",
+    "location": "Berlin, Berlin, Germany",
+    "salary_range": "\u20ac1,200 - \u20ac1,800 / mo",
+    "match_score": 91,
+    "applied_at": "2026-10-30T00:05:23.447479",
+    "job_url": "https://www.linkedin.com/jobs/view/4481874686/",
+    "resume_url": "/resumes/resume_job-linkedin-4481874686.pdf",
+    "cover_letter_url": "/resumes/cover_letter_job-linkedin-4481874686.pdf",
+    "packet_file": "linkedin/jobs/packets/packet_job-linkedin-4481874686.json",
+    "mode": "AUTONOMOUS_DAEMON",
+    "recruiter_outreach_note": "Hi Hiring Team, I saw MeisterPfad's opening for Product Engineering Intern - Vertical AI Startup in Berlin, Berlin, Germany. I am an MSc Data Science student based in Berlin (GISMA University) researching hallucination attribution in multi-step LLM agent trajectories. I have hands-on experience building Python ML pipelines, SQL/Redis backends, and typed FastAPI agent services, with full German Werkstudent work authorization. I submitted my application and would be glad to connect.",
+    "status": "APPLIED_CONFIRMED",
+    "resume_pdf_url": "/resumes/resume_job-linkedin-4481874686.pdf",
+    "cover_letter_pdf_url": "/resumes/cover_letter_job-linkedin-4481874686.pdf",
+    "resume_html_url": "/resumes/resume_job-linkedin-4481874686.html",
+    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4481874686.html"
+  },
+  {
     "job_id": "job-linkedin-4481878782",
     "title": "Praktikant:in (m/w/d) - Nutzerforschung, Innovation & Projektentwicklung",
     "company": "BIFI | Berlin Institute for Innovation",

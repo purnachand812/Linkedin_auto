@@ -453,7 +453,7 @@
       ],
       "description": "Product Engineering Intern - Vertical AI Startup MeisterPfad Berlin, Berlin, Germany 2 days ago 57 applicants <a hr",
       "full_description": "Product Engineering Intern - Vertical AI Startup MeisterPfad Berlin, Berlin, Germany 2 days ago 57 applicants <a hr",
-      "status": "OPEN",
+      "status": "APPLIED",
       "tailored_cover_letter": "I saw MeisterPfad's opening for Product Engineering Intern - Vertical AI Startup in Berlin, Berlin, Germany. As an MSc Data Science student at GISMA University Berlin with verified A2 German and production Python/ML experience, I have valid German student work authorization and am excited to contribute.",
       "resume_url": "/resumes/resume_job-linkedin-4481874686.pdf",
       "cover_letter_url": "/resumes/cover_letter_job-linkedin-4481874686.pdf",
@@ -461,7 +461,9 @@
       "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4481874686.html",
       "portal_source": "LINKEDIN",
       "portal_name": "LinkedIn Easy Apply",
-      "source_badge": "LinkedIn"
+      "source_badge": "LinkedIn",
+      "applied_at": "2026-10-30T00:05:23.447479",
+      "packet_file": "linkedin/jobs/packets/packet_job-linkedin-4481874686.json"
     },
     {
       "id": "job-linkedin-4481087958",
