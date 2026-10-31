@@ -21,15 +21,15 @@
     "[18:36:24] \ud83c\udf89 Successfully published Candidate #15! Live URL: https://www.linkedin.com/feed/update/urn:li:share:7521625989441835009/",
     "[18:36:24] \ud83d\udcac Generated 2 contextual community reply templates for Candidate #15"
   ],
-  "current_time_cet": "2026-10-31 03:00:07 CET",
+  "current_time_cet": "2026-10-31 15:39:50 CET",
   "is_eu_prime_time": false,
   "current_window": "Off-Peak / Monitoring",
-  "next_scheduled_drop": "Morning Standup (Prime) at 08:00 CET (~299m from now)",
+  "next_scheduled_drop": "Evening Engineering Wrap at 16:30 CET (~50m from now)",
   "approved_queue_count": 3,
   "published_today": 0,
   "target_audience": "European Union (Berlin, Munich, Amsterdam, Paris, Zurich)",
   "auto_publish_enabled": true,
-  "last_heartbeat": "2026-10-31T02:00:09.462028",
+  "last_heartbeat": "2026-10-31T14:39:50.317814",
   "last_activity": "[18:36:24] \ud83d\udcac Generated 2 contextual community reply templates for Candidate #15",
   "auto_apply_telemetry": {
     "enabled": true,

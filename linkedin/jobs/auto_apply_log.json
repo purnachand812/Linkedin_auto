@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "01:08:19",
-      "datetime": "2026-10-29T01:08:19.175288",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "01:08:19",
       "datetime": "2026-10-29T01:08:19.181131",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for BIFI | Berlin Institute for Innovation."
@@ -357,6 +351,12 @@
     {
       "timestamp": "03:17:56",
       "datetime": "2026-10-31T03:17:56.383474",
+      "level": "INFO",
+      "message": "Radar scan: 18 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "14:39:50",
+      "datetime": "2026-10-31T14:39:50.312608",
       "level": "INFO",
       "message": "Radar scan: 18 active jobs, 0 meeting freshness (<=7d) & criteria."
     }

@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-31T02:00:09.460752",
-  "total_posts": 10,
+  "updated_at": "2026-10-31T14:39:50.315854",
+  "total_posts": 9,
   "target_region": "European Union (CET/CEST)",
   "data_integrity": "Verified Ground Truth",
   "posts_analytics": [
@@ -69,18 +69,6 @@
       "topic": "FastMCP (3-Line Typed Model Context Protocol Servers)",
       "published_at": "2026-10-27T15:30:09Z",
       "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7520869457657942016/",
-      "impressions": 0,
-      "reactions": 0,
-      "comments": 0,
-      "reposts": 0,
-      "status": "ACCUMULATING",
-      "notes": "Fresh drop; awaiting next live telemetry sync."
-    },
-    {
-      "candidate_id": 4,
-      "topic": "MarkItDown (Document to LLM Markdown Converter)",
-      "published_at": "2026-10-24T06:52:17Z",
-      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7519651965921026049/",
       "impressions": 0,
       "reactions": 0,
       "comments": 0,
