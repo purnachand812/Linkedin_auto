@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "01:08:19",
-      "datetime": "2026-10-29T01:08:19.181131",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for BIFI | Berlin Institute for Innovation."
-    },
-    {
-      "timestamp": "01:08:21",
-      "datetime": "2026-10-29T01:08:21.182049",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Product Engineering Intern - Vertical AI Startup' at MeisterPfad (ID: job-linkedin-4481874686)"
-    },
-    {
-      "timestamp": "01:08:21",
-      "datetime": "2026-10-29T01:08:21.184560",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4481874686.pdf"
-    },
-    {
-      "timestamp": "01:08:21",
-      "datetime": "2026-10-29T01:08:21.185456",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4481874686.pdf"
-    },
-    {
-      "timestamp": "01:08:21",
-      "datetime": "2026-10-29T01:08:21.186375",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "01:08:21",
-      "datetime": "2026-10-29T01:08:21.193309",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for MeisterPfad."
-    },
-    {
-      "timestamp": "03:31:18",
-      "datetime": "2026-10-29T03:31:18.312258",
-      "level": "INFO",
-      "message": "Radar scan: 18 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "07:28:25",
-      "datetime": "2026-10-29T07:28:25.456553",
-      "level": "INFO",
-      "message": "Radar scan: 18 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
       "timestamp": "14:36:55",
       "datetime": "2026-10-29T14:36:55.421023",
       "level": "INFO",
@@ -359,6 +311,54 @@
       "datetime": "2026-10-31T14:39:50.312608",
       "level": "INFO",
       "message": "Radar scan: 18 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "19:05:54",
+      "datetime": "2026-10-31T19:05:54.657520",
+      "level": "INFO",
+      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
+    },
+    {
+      "timestamp": "19:05:59",
+      "datetime": "2026-10-31T19:05:59.676918",
+      "level": "SUCCESS",
+      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
+    },
+    {
+      "timestamp": "19:05:59",
+      "datetime": "2026-10-31T19:05:59.679162",
+      "level": "INFO",
+      "message": "Radar scan: 18 active jobs, 1 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "19:05:59",
+      "datetime": "2026-10-31T19:05:59.682443",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Intern Financial Planning & Analytics (f/m/x)' at AUTO1 Group (ID: job-linkedin-4476816192)"
+    },
+    {
+      "timestamp": "19:05:59",
+      "datetime": "2026-10-31T19:05:59.686456",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4476816192.pdf"
+    },
+    {
+      "timestamp": "19:05:59",
+      "datetime": "2026-10-31T19:05:59.687691",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4476816192.pdf"
+    },
+    {
+      "timestamp": "19:05:59",
+      "datetime": "2026-10-31T19:05:59.689417",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "19:05:59",
+      "datetime": "2026-10-31T19:05:59.696959",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for AUTO1 Group."
     }
   ]
 }
