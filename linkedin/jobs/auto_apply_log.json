@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "01:08:19",
-      "datetime": "2026-10-29T01:08:19.174386",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4481878782.pdf"
-    },
-    {
-      "timestamp": "01:08:19",
       "datetime": "2026-10-29T01:08:19.175288",
       "level": "SUCCESS",
       "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
@@ -359,6 +353,12 @@
       "datetime": "2026-10-31T02:00:07.458194",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for IMTF - Excellence in RegTech Solutions."
+    },
+    {
+      "timestamp": "03:17:56",
+      "datetime": "2026-10-31T03:17:56.383474",
+      "level": "INFO",
+      "message": "Radar scan: 18 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
   ]
 }
