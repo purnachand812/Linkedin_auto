@@ -519,7 +519,7 @@
       ],
       "description": "Working Student (m/w/d) - Cyber Security Engineering IMTF - Excellence in RegTech Solutions Berlin, Berlin, Germany 1 day ago 26 applicants",
       "full_description": "Working Student (m/w/d) - Cyber Security Engineering IMTF - Excellence in RegTech Solutions Berlin, Berlin, Germany 1 day ago 26 applicants",
-      "status": "OPEN",
+      "status": "APPLIED",
       "tailored_cover_letter": "I saw IMTF - Excellence in RegTech Solutions's opening for Working Student (m/w/d) - Cyber Security Engineering in Berlin, Berlin, Germany. As an MSc Data Science student at GISMA University Berlin with verified A2 German and production Python/ML experience, I have valid German student work authorization and am excited to contribute.",
       "resume_url": "/resumes/resume_job-linkedin-4483010849.pdf",
       "cover_letter_url": "/resumes/cover_letter_job-linkedin-4483010849.pdf",
@@ -527,7 +527,9 @@
       "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4483010849.html",
       "portal_source": "LINKEDIN",
       "portal_name": "LinkedIn Easy Apply",
-      "source_badge": "LinkedIn"
+      "source_badge": "LinkedIn",
+      "applied_at": "2026-10-31T02:00:07.456190",
+      "packet_file": "linkedin/jobs/packets/packet_job-linkedin-4483010849.json"
     },
     {
       "id": "job-linkedin-4481878782",

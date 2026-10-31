@@ -1,5 +1,25 @@
 [
   {
+    "job_id": "job-linkedin-4483010849",
+    "title": "Working Student (m/w/d) - Cyber Security Engineering",
+    "company": "IMTF - Excellence in RegTech Solutions",
+    "location": "Berlin, Berlin, Germany",
+    "salary_range": "\u20ac16 - \u20ac22 / hr",
+    "match_score": 92,
+    "applied_at": "2026-10-31T02:00:07.456190",
+    "job_url": "https://www.linkedin.com/jobs/view/4483010849/",
+    "resume_url": "/resumes/resume_job-linkedin-4483010849.pdf",
+    "cover_letter_url": "/resumes/cover_letter_job-linkedin-4483010849.pdf",
+    "packet_file": "linkedin/jobs/packets/packet_job-linkedin-4483010849.json",
+    "mode": "AUTONOMOUS_DAEMON",
+    "recruiter_outreach_note": "Hi Hiring Team, I saw IMTF - Excellence in RegTech Solutions's opening for Working Student (m/w/d) - Cyber Security Engineering in Berlin, Berlin, Germany. I am an MSc Data Science student based in Berlin (GISMA University) researching hallucination attribution in multi-step LLM agent trajectories. I have hands-on experience building Python ML pipelines, SQL/Redis backends, and typed FastAPI agent services, with full German Werkstudent work authorization. I submitted my application and would be glad to connect.",
+    "status": "APPLIED_CONFIRMED",
+    "resume_pdf_url": "/resumes/resume_job-linkedin-4483010849.pdf",
+    "cover_letter_pdf_url": "/resumes/cover_letter_job-linkedin-4483010849.pdf",
+    "resume_html_url": "/resumes/resume_job-linkedin-4483010849.html",
+    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4483010849.html"
+  },
+  {
     "job_id": "job-linkedin-4483050544",
     "title": "Werkstudent*in (m/w/d) Digitale Infrastrukturen",
     "company": "inno2grid GmbH",
