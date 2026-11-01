@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "14:37:00",
-      "datetime": "2026-10-29T14:37:00.382689",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-ba-12456_1648340_1_S.pdf"
-    },
-    {
-      "timestamp": "14:37:00",
-      "datetime": "2026-10-29T14:37:00.383936",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-ba-12456_1648340_1_S.pdf"
-    },
-    {
-      "timestamp": "14:37:00",
-      "datetime": "2026-10-29T14:37:00.385138",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "14:37:00",
-      "datetime": "2026-10-29T14:37:00.390557",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for Deutsche Bahn AG."
-    },
-    {
-      "timestamp": "20:03:47",
-      "datetime": "2026-10-29T20:03:47.792505",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "20:31:12",
-      "datetime": "2026-10-29T20:31:12.884072",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "23:42:26",
-      "datetime": "2026-10-29T23:42:26.568207",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "00:05:23",
-      "datetime": "2026-10-30T00:05:23.440275",
-      "level": "INFO",
-      "message": "Radar scan: 17 active jobs, 1 meeting freshness (<=7d) & criteria."
-    },
-    {
       "timestamp": "00:05:23",
       "datetime": "2026-10-30T00:05:23.440686",
       "level": "INFO",
@@ -359,6 +311,54 @@
       "datetime": "2026-11-01T03:16:59.413277",
       "level": "INFO",
       "message": "Radar scan: 18 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "20:09:15",
+      "datetime": "2026-11-01T20:09:15.224851",
+      "level": "INFO",
+      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
+    },
+    {
+      "timestamp": "20:09:20",
+      "datetime": "2026-11-01T20:09:20.126349",
+      "level": "SUCCESS",
+      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
+    },
+    {
+      "timestamp": "20:09:20",
+      "datetime": "2026-11-01T20:09:20.127695",
+      "level": "INFO",
+      "message": "Radar scan: 18 active jobs, 1 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "20:09:20",
+      "datetime": "2026-11-01T20:09:20.157396",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Werkstudent:in Growth & Business Development (m/w/d)' at acemate.ai (ID: job-linkedin-4482223278)"
+    },
+    {
+      "timestamp": "20:09:20",
+      "datetime": "2026-11-01T20:09:20.159291",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4482223278.pdf"
+    },
+    {
+      "timestamp": "20:09:20",
+      "datetime": "2026-11-01T20:09:20.159962",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4482223278.pdf"
+    },
+    {
+      "timestamp": "20:09:20",
+      "datetime": "2026-11-01T20:09:20.160752",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "20:09:20",
+      "datetime": "2026-11-01T20:09:20.168131",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for acemate.ai."
     }
   ]
 }

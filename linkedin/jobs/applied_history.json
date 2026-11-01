@@ -1,5 +1,25 @@
 [
   {
+    "job_id": "job-linkedin-4482223278",
+    "title": "Werkstudent:in Growth & Business Development (m/w/d)",
+    "company": "acemate.ai",
+    "location": "Berlin, Berlin, Germany",
+    "salary_range": "\u20ac16 - \u20ac22 / hr",
+    "match_score": 89,
+    "applied_at": "2026-11-01T20:09:20.163612",
+    "job_url": "https://www.linkedin.com/jobs/view/4482223278/",
+    "resume_url": "/resumes/resume_job-linkedin-4482223278.pdf",
+    "cover_letter_url": "/resumes/cover_letter_job-linkedin-4482223278.pdf",
+    "packet_file": "linkedin/jobs/packets/packet_job-linkedin-4482223278.json",
+    "mode": "AUTONOMOUS_DAEMON",
+    "recruiter_outreach_note": "Hi Hiring Team, I saw acemate.ai's opening for Werkstudent:in Growth & Business Development (m/w/d) in Berlin, Berlin, Germany. I am an MSc Data Science student based in Berlin (GISMA University) researching hallucination attribution in multi-step LLM agent trajectories. I have hands-on experience building Python ML pipelines, SQL/Redis backends, and typed FastAPI agent services, with full German Werkstudent work authorization. I submitted my application and would be glad to connect.",
+    "status": "APPLIED_CONFIRMED",
+    "resume_pdf_url": "/resumes/resume_job-linkedin-4482223278.pdf",
+    "cover_letter_pdf_url": "/resumes/cover_letter_job-linkedin-4482223278.pdf",
+    "resume_html_url": "/resumes/resume_job-linkedin-4482223278.html",
+    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4482223278.html"
+  },
+  {
     "job_id": "job-linkedin-4476816192",
     "title": "Intern Financial Planning & Analytics (f/m/x)",
     "company": "AUTO1 Group",
