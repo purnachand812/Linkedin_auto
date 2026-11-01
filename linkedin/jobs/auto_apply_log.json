@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "14:37:00",
-      "datetime": "2026-10-29T14:37:00.378047",
-      "level": "INFO",
-      "message": "Radar scan: 17 active jobs, 3 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "14:37:00",
       "datetime": "2026-10-29T14:37:00.379656",
       "level": "INFO",
       "message": "Initiating autonomous application: 'Werkstudent:in Business Intelligence ETCS-Diagnose' at Deutsche Bahn AG (ID: job-ba-12456_1648340_1_S)"
@@ -357,6 +351,12 @@
     {
       "timestamp": "22:56:02",
       "datetime": "2026-10-31T22:56:02.886889",
+      "level": "INFO",
+      "message": "Radar scan: 18 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "01:50:28",
+      "datetime": "2026-11-01T01:50:28.003799",
       "level": "INFO",
       "message": "Radar scan: 18 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
