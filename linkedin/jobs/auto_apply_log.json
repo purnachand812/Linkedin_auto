@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "00:05:23",
-      "datetime": "2026-10-30T00:05:23.440686",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Product Engineering Intern - Vertical AI Startup' at MeisterPfad (ID: job-linkedin-4481874686)"
-    },
-    {
-      "timestamp": "00:05:23",
       "datetime": "2026-10-30T00:05:23.443553",
       "level": "SUCCESS",
       "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4481874686.pdf"
@@ -359,6 +353,12 @@
       "datetime": "2026-11-01T20:09:20.168131",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for acemate.ai."
+    },
+    {
+      "timestamp": "23:13:52",
+      "datetime": "2026-11-01T23:13:52.801134",
+      "level": "INFO",
+      "message": "Radar scan: 18 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
   ]
 }
