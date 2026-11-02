@@ -1,84 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "00:05:23",
-      "datetime": "2026-10-30T00:05:23.466141",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for MeisterPfad."
-    },
-    {
-      "timestamp": "03:33:52",
-      "datetime": "2026-10-30T03:33:52.921738",
-      "level": "INFO",
-      "message": "Radar scan: 17 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "06:12:02",
-      "datetime": "2026-10-30T06:12:02.757152",
-      "level": "INFO",
-      "message": "Radar scan: 17 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "18:43:37",
-      "datetime": "2026-10-30T18:43:37.798235",
-      "level": "INFO",
-      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
-    },
-    {
-      "timestamp": "18:43:42",
-      "datetime": "2026-10-30T18:43:42.823653",
-      "level": "SUCCESS",
-      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
-    },
-    {
-      "timestamp": "18:43:42",
-      "datetime": "2026-10-30T18:43:42.824663",
-      "level": "INFO",
-      "message": "Radar scan: 18 active jobs, 5 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "18:43:42",
-      "datetime": "2026-10-30T18:43:42.838770",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Werkstudent (w/m/d) im Bereich Pricing Schwerpunkt Data Analytics und Automatisierung' at Siemens AG (ID: job-ba-12465_1646969_1_S)"
-    },
-    {
-      "timestamp": "18:43:42",
-      "datetime": "2026-10-30T18:43:42.848768",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-ba-12465_1646969_1_S.pdf"
-    },
-    {
-      "timestamp": "18:43:42",
-      "datetime": "2026-10-30T18:43:42.871298",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-ba-12465_1646969_1_S.pdf"
-    },
-    {
-      "timestamp": "18:43:42",
-      "datetime": "2026-10-30T18:43:42.872077",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "18:43:42",
-      "datetime": "2026-10-30T18:43:42.881864",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for Siemens AG."
-    },
-    {
-      "timestamp": "18:43:44",
-      "datetime": "2026-10-30T18:43:44.882679",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Partner Management Working Student' at Solaris SE (ID: job-gh-solarisbank-8656165002)"
-    },
-    {
-      "timestamp": "18:43:44",
-      "datetime": "2026-10-30T18:43:44.893962",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-gh-solarisbank-8656165002.pdf"
-    },
-    {
       "timestamp": "18:43:44",
       "datetime": "2026-10-30T18:43:44.896233",
       "level": "SUCCESS",
@@ -359,6 +281,84 @@
       "datetime": "2026-11-02T04:25:17.436352",
       "level": "INFO",
       "message": "Radar scan: 18 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "22:08:21",
+      "datetime": "2026-11-02T22:08:21.784127",
+      "level": "INFO",
+      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
+    },
+    {
+      "timestamp": "22:08:27",
+      "datetime": "2026-11-02T22:08:27.151636",
+      "level": "SUCCESS",
+      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
+    },
+    {
+      "timestamp": "22:08:27",
+      "datetime": "2026-11-02T22:08:27.153259",
+      "level": "INFO",
+      "message": "Radar scan: 15 active jobs, 2 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "22:08:27",
+      "datetime": "2026-11-02T22:08:27.154050",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Praktikant Projektmanagement bei BMW Motorrad (w/m/x)' at BMW AG (ID: job-ba-12462_1649681_1_S)"
+    },
+    {
+      "timestamp": "22:08:27",
+      "datetime": "2026-11-02T22:08:27.156465",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-ba-12462_1649681_1_S.pdf"
+    },
+    {
+      "timestamp": "22:08:27",
+      "datetime": "2026-11-02T22:08:27.157248",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-ba-12462_1649681_1_S.pdf"
+    },
+    {
+      "timestamp": "22:08:27",
+      "datetime": "2026-11-02T22:08:27.158218",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "22:08:27",
+      "datetime": "2026-11-02T22:08:27.167145",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for BMW AG."
+    },
+    {
+      "timestamp": "22:08:29",
+      "datetime": "2026-11-02T22:08:29.168179",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Only for Erasmus/Turing Internship: AI/IT, Graphic Designer and/or Computer Science&Technologies on MA-Level' at Art & Science Node (ID: job-linkedin-4484342933)"
+    },
+    {
+      "timestamp": "22:08:29",
+      "datetime": "2026-11-02T22:08:29.177399",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4484342933.pdf"
+    },
+    {
+      "timestamp": "22:08:29",
+      "datetime": "2026-11-02T22:08:29.180175",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4484342933.pdf"
+    },
+    {
+      "timestamp": "22:08:29",
+      "datetime": "2026-11-02T22:08:29.188323",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "22:08:29",
+      "datetime": "2026-11-02T22:08:29.220628",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Art & Science Node."
     }
   ]
 }
