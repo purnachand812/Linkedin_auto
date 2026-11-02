@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "00:05:23",
-      "datetime": "2026-10-30T00:05:23.444740",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "00:05:23",
       "datetime": "2026-10-30T00:05:23.466141",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for MeisterPfad."
@@ -357,6 +351,12 @@
     {
       "timestamp": "03:26:43",
       "datetime": "2026-11-02T03:26:43.594000",
+      "level": "INFO",
+      "message": "Radar scan: 18 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "04:25:17",
+      "datetime": "2026-11-02T04:25:17.436352",
       "level": "INFO",
       "message": "Radar scan: 18 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
