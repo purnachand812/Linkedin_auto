@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-03T03:35:26.357217",
-  "total_posts": 9,
+  "updated_at": "2026-11-03T19:02:32.779861",
+  "total_posts": 7,
   "target_region": "European Union (CET/CEST)",
   "data_integrity": "Verified Ground Truth",
   "posts_analytics": [
@@ -45,30 +45,6 @@
       "topic": "OpenHands (Autonomous Software Engineer inside Docker Sandboxes)",
       "published_at": "2026-10-28T08:02:01Z",
       "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7521119061716553729/",
-      "impressions": 0,
-      "reactions": 0,
-      "comments": 0,
-      "reposts": 0,
-      "status": "ACCUMULATING",
-      "notes": "Fresh drop; awaiting next live telemetry sync."
-    },
-    {
-      "candidate_id": 11,
-      "topic": "Langfuse (Self-Hosted LLM Observability & Tracing in Docker)",
-      "published_at": "2026-10-27T15:31:13Z",
-      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7520869722565832704/",
-      "impressions": 0,
-      "reactions": 0,
-      "comments": 0,
-      "reposts": 0,
-      "status": "ACCUMULATING",
-      "notes": "Fresh drop; awaiting next live telemetry sync."
-    },
-    {
-      "candidate_id": 10,
-      "topic": "FastMCP (3-Line Typed Model Context Protocol Servers)",
-      "published_at": "2026-10-27T15:30:09Z",
-      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7520869457657942016/",
       "impressions": 0,
       "reactions": 0,
       "comments": 0,
