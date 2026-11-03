@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "18:43:44",
-      "datetime": "2026-10-30T18:43:44.897474",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "18:43:44",
       "datetime": "2026-10-30T18:43:44.945005",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for Solaris SE."
@@ -357,6 +351,12 @@
     {
       "timestamp": "01:55:37",
       "datetime": "2026-11-03T01:55:37.260016",
+      "level": "INFO",
+      "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "03:35:26",
+      "datetime": "2026-11-03T03:35:26.355288",
       "level": "INFO",
       "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
