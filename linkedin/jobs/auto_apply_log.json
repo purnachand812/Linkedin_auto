@@ -1,12 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "19:05:59",
-      "datetime": "2026-10-31T19:05:59.696959",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for AUTO1 Group."
-    },
-    {
       "timestamp": "22:40:48",
       "datetime": "2026-10-31T22:40:48.708519",
       "level": "INFO",
@@ -359,6 +353,12 @@
       "datetime": "2026-11-03T19:02:30.758281",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for Pflegia."
+    },
+    {
+      "timestamp": "00:04:26",
+      "datetime": "2026-11-04T00:04:26.203601",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
   ]
 }
