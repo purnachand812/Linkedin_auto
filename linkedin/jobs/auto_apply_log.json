@@ -1,84 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "20:09:15",
-      "datetime": "2026-11-01T20:09:15.224851",
-      "level": "INFO",
-      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
-    },
-    {
-      "timestamp": "20:09:20",
-      "datetime": "2026-11-01T20:09:20.126349",
-      "level": "SUCCESS",
-      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
-    },
-    {
-      "timestamp": "20:09:20",
-      "datetime": "2026-11-01T20:09:20.127695",
-      "level": "INFO",
-      "message": "Radar scan: 18 active jobs, 1 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "20:09:20",
-      "datetime": "2026-11-01T20:09:20.157396",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Werkstudent:in Growth & Business Development (m/w/d)' at acemate.ai (ID: job-linkedin-4482223278)"
-    },
-    {
-      "timestamp": "20:09:20",
-      "datetime": "2026-11-01T20:09:20.159291",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4482223278.pdf"
-    },
-    {
-      "timestamp": "20:09:20",
-      "datetime": "2026-11-01T20:09:20.159962",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4482223278.pdf"
-    },
-    {
-      "timestamp": "20:09:20",
-      "datetime": "2026-11-01T20:09:20.160752",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "20:09:20",
-      "datetime": "2026-11-01T20:09:20.168131",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for acemate.ai."
-    },
-    {
-      "timestamp": "23:13:52",
-      "datetime": "2026-11-01T23:13:52.801134",
-      "level": "INFO",
-      "message": "Radar scan: 18 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "23:44:56",
-      "datetime": "2026-11-01T23:44:56.569667",
-      "level": "INFO",
-      "message": "Radar scan: 18 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "03:26:43",
-      "datetime": "2026-11-02T03:26:43.594000",
-      "level": "INFO",
-      "message": "Radar scan: 18 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "04:25:17",
-      "datetime": "2026-11-02T04:25:17.436352",
-      "level": "INFO",
-      "message": "Radar scan: 18 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "22:08:21",
-      "datetime": "2026-11-02T22:08:21.784127",
-      "level": "INFO",
-      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
-    },
-    {
       "timestamp": "22:08:27",
       "datetime": "2026-11-02T22:08:27.151636",
       "level": "SUCCESS",
@@ -359,6 +281,84 @@
       "datetime": "2026-11-04T10:44:28.320359",
       "level": "INFO",
       "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "15:04:53",
+      "datetime": "2026-11-04T15:04:53.339161",
+      "level": "INFO",
+      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
+    },
+    {
+      "timestamp": "15:04:58",
+      "datetime": "2026-11-04T15:04:58.644426",
+      "level": "SUCCESS",
+      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
+    },
+    {
+      "timestamp": "15:04:58",
+      "datetime": "2026-11-04T15:04:58.645882",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 2 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "15:04:58",
+      "datetime": "2026-11-04T15:04:58.683432",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Working Student \u2013 Quantitative Research (m/f/d)' at YUKKA (ID: job-linkedin-4485068971)"
+    },
+    {
+      "timestamp": "15:04:58",
+      "datetime": "2026-11-04T15:04:58.686395",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4485068971.pdf"
+    },
+    {
+      "timestamp": "15:04:58",
+      "datetime": "2026-11-04T15:04:58.687255",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4485068971.pdf"
+    },
+    {
+      "timestamp": "15:04:58",
+      "datetime": "2026-11-04T15:04:58.702412",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "15:04:58",
+      "datetime": "2026-11-04T15:04:58.717754",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for YUKKA."
+    },
+    {
+      "timestamp": "15:05:00",
+      "datetime": "2026-11-04T15:05:00.718668",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Intern, Data Engineer - People & Culture' at Delivery Hero (ID: job-linkedin-4486350173)"
+    },
+    {
+      "timestamp": "15:05:00",
+      "datetime": "2026-11-04T15:05:00.724753",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4486350173.pdf"
+    },
+    {
+      "timestamp": "15:05:00",
+      "datetime": "2026-11-04T15:05:00.725565",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4486350173.pdf"
+    },
+    {
+      "timestamp": "15:05:00",
+      "datetime": "2026-11-04T15:05:00.726367",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "15:05:00",
+      "datetime": "2026-11-04T15:05:00.733949",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Delivery Hero."
     }
   ]
 }

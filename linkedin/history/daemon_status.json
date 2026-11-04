@@ -33,19 +33,19 @@
     "[11:15:29] \ud83c\udf89 Successfully published Candidate #20! Live URL: https://www.linkedin.com/feed/update/urn:li:ugcPost:7523689353437409280/",
     "[11:15:38] \ud83d\udcac Refreshed 26 post-specific technical reply templates & niche radar for Candidate #20"
   ],
-  "current_time_cet": "2026-11-04 11:44:28 CET",
+  "current_time_cet": "2026-11-04 16:04:53 CET",
   "is_eu_prime_time": false,
   "current_window": "Off-Peak / Monitoring",
-  "next_scheduled_drop": "Midday Tech Catchup at 12:00 CET (~15m from now)",
+  "next_scheduled_drop": "Evening Engineering Wrap at 16:30 CET (~25m from now)",
   "approved_queue_count": 4,
   "published_today": 2,
   "target_audience": "European Union (Berlin, Munich, Amsterdam, Paris, Zurich)",
   "auto_publish_enabled": true,
-  "last_heartbeat": "2026-11-04T10:44:28.325875",
+  "last_heartbeat": "2026-11-04T15:05:02.739973",
   "last_activity": "[11:15:38] \ud83d\udcac Refreshed 26 post-specific technical reply templates & niche radar for Candidate #20",
   "auto_apply_telemetry": {
     "enabled": true,
-    "applied_today": 0,
+    "applied_today": 2,
     "daily_limit": 5,
     "status": "RUNNING"
   },
