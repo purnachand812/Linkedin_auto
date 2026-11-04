@@ -1,12 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "03:16:59",
-      "datetime": "2026-11-01T03:16:59.413277",
-      "level": "INFO",
-      "message": "Radar scan: 18 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
       "timestamp": "20:09:15",
       "datetime": "2026-11-01T20:09:15.224851",
       "level": "INFO",
@@ -357,6 +351,12 @@
     {
       "timestamp": "11:43:40",
       "datetime": "2026-11-04T11:43:40.162120",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "10:44:28",
+      "datetime": "2026-11-04T10:44:28.320359",
       "level": "INFO",
       "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
