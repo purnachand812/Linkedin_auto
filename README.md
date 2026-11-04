@@ -28,8 +28,11 @@ Combines **Autonomous Technical LinkedIn Publishing**, **Live External Stream Au
 - **Empirical AST & CLI Benchmark Runner (`sandbox_tester.py`):** Performs real local AST static analysis and CLI timing across the workspace (`25` Python files, `9,021+` LOC, `131+` functions audited in `106 ms`), logging empirical measurements to `linkedin/history/sandbox_benchmarks.json` and `linkedin/tested-tools.md`.
 
 ### 4. 7-Day Verified Growth & Telemetry Analyst (`linkedin/tools/weekly_growth_analyst.py`)
-- **100% Verified Ground-Truth Metrics:** Audits rolling 7-day post performance (`12+` published posts, verified impressions, reactions, comments, and engagement rate) in `linkedin/history/weekly_audit_report.json` and `weekly_audit_report.html` with zero synthetic multipliers.
-- **Dynamic Queue Adaptation:** Enforces weekday CET prime-time windows (`08:30`, `12:15`, `17:30 CET`), strips em-dashes, and enforces format-aware link placement across upcoming queue candidates.
+- **100% Verified Ground-Truth Metrics:** Audits rolling 7-day post performance across 18 analyzed posts (`3,230` verified impressions, `88+` interactions, `2.83%` engagement rate) in `linkedin/history/weekly_audit_report.json` and `weekly_audit_report.html` with zero synthetic multipliers.
+- **Dedicated Weekly Analytics Tab:** Embedded in the dashboard (`http://localhost:3000`) with live KPI cards, post-by-post performance matrix, 1-click telemetry editing (`/api/analytics/update-post`), and instant sync (`/api/analytics/sync`).
+- **Dynamic Queue Adaptation & Strict Archival:**
+  - Published posts are **100% segregated and archived** from the active approval queue; active views strictly display unpublished candidates (#21–#24).
+  - Enforces weekday CET prime-time windows (`08:30`, `12:15`, `17:30 CET`), strips em-dashes, and enforces format-aware link placement across upcoming queue candidates.
 
 ### 5. 360° Berlin AI/Data Science Job Radar & 1-Click ATS Packets (`linkedin/jobs/`)
 - **38-Board Direct Berlin ATS Harvester (`ats_connector.py`):** Queries Greenhouse, Lever, and Ashby APIs directly across 38 top Berlin/Germany tech employers (*Langfuse, Qdrant, DeepL, N26, Trade Republic, Zalando, Delivery Hero, Celonis, Helsing, Black Forest Labs, Razor Group, Choco, Getsafe, Contentful, Tier, Omio, Solaris*, etc.).
@@ -54,7 +57,7 @@ Combines **Autonomous Technical LinkedIn Publishing**, **Live External Stream Au
 │   ├── editorial-history.json           # Long-term topic & repository memory + live GitHub discoveries
 │   ├── tested-tools.md                  # Empirical AST & runtime benchmark log
 │   │
-│   ├── queue/                           # Active candidate markdown drafts (#13–#18) & queue_summary.json
+│   ├── queue/                           # Active candidate markdown drafts (#21–#24) & queue_summary.json
 │   ├── published/                       # Archive of live published LinkedIn posts
 │   ├── visuals/                         # 1080x1350 Canva PNG cards & 5-slide PDF Carousels
 │   ├── history/

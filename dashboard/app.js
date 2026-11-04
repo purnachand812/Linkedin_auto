@@ -9,7 +9,7 @@ let queueData = { candidates: [] };
 let trendsData = [];
 let visualsData = [];
 let historyData = [];
-let currentFilter = 'ALL';
+let currentFilter = 'ACTIVE';
 let currentEditingCandidateId = null;
 
 // Slop & Detection Lexicon (mirrors slop.json)
@@ -357,19 +357,38 @@ async function loadAllData() {
 
 function updateQueueStats() {
   const candidates = queueData.candidates || [];
+  const active = candidates.filter(c => c.status !== 'PUBLISHED').length;
   const approved = candidates.filter(c => c.status === 'APPROVED').length;
   const waiting = candidates.filter(c => c.status === 'WAITING_FOR_APPROVAL').length;
   const published = candidates.filter(c => c.status === 'PUBLISHED').length;
 
-  document.getElementById('count-all').textContent = candidates.length;
-  document.getElementById('count-approved').textContent = approved;
-  document.getElementById('count-waiting').textContent = waiting;
-  document.getElementById('count-published').textContent = published;
-  document.getElementById('tab-queue-count').textContent = candidates.length;
+  const countActiveEl = document.getElementById('count-active');
+  if (countActiveEl) countActiveEl.textContent = active;
+  const countAllEl = document.getElementById('count-all');
+  if (countAllEl) countAllEl.textContent = active;
 
-  document.getElementById('stat-approved').textContent = approved;
-  document.getElementById('stat-waiting').textContent = waiting;
-  document.getElementById('stat-published').textContent = published;
+  const countAppEl = document.getElementById('count-approved');
+  if (countAppEl) countAppEl.textContent = approved;
+  const countWaitEl = document.getElementById('count-waiting');
+  if (countWaitEl) countWaitEl.textContent = waiting;
+  const countPubEl = document.getElementById('count-published');
+  if (countPubEl) countPubEl.textContent = published;
+
+  // Tab counter displays ACTIVE queue items strictly!
+  const tabQueueCountEl = document.getElementById('tab-queue-count');
+  if (tabQueueCountEl) tabQueueCountEl.textContent = active;
+
+  const statAppEl = document.getElementById('stat-approved');
+  if (statAppEl) statAppEl.textContent = approved;
+  const statWaitEl = document.getElementById('stat-waiting');
+  if (statWaitEl) statWaitEl.textContent = waiting;
+  const statPubEl = document.getElementById('stat-published');
+  if (statPubEl) statPubEl.textContent = published;
+
+  const badgePostings = document.getElementById('badge-postings-text');
+  if (badgePostings) {
+    badgePostings.textContent = `${active} Active in Queue • ${published} Published`;
+  }
 }
 
 // --- Render Candidates Queue ---
@@ -379,7 +398,9 @@ function renderCandidates() {
 
   const candidates = queueData.candidates || [];
   const filtered = candidates.filter(c => {
-    if (currentFilter === 'ALL') return true;
+    if (currentFilter === 'ACTIVE' || currentFilter === 'ALL') {
+      return c.status !== 'PUBLISHED';
+    }
     return c.status === currentFilter;
   });
 
@@ -408,7 +429,7 @@ function renderCandidates() {
     } else if (c.status === 'WAITING_FOR_APPROVAL') {
       badgeHtml = `<span class="badge badge-amber">WAITING APPROVAL</span>`;
     } else if (c.status === 'PUBLISHED') {
-      badgeHtml = `<span class="badge badge-cyan">PUBLISHED</span>`;
+      badgeHtml = `<span class="badge badge-cyan" style="background: rgba(6, 182, 212, 0.2); border: 1px solid #06B6D4; color: #38BDF8; font-weight: 700;">✓ 100% PUBLISHED &amp; ARCHIVED</span>`;
     } else {
       badgeHtml = `<span class="badge badge-purple">${c.status}</span>`;
     }
@@ -457,35 +478,52 @@ function renderCandidates() {
           ${badgeHtml}
           <h3 class="candidate-title">${escapeHtml(c.topic)}</h3>
         </div>
-        <div class="candidate-state-controls" style="display: flex; gap: 0.35rem; align-items: center; flex-wrap: wrap;">
-          <!-- 1-Click LinkedIn Publishing Buttons -->
-          <button class="btn btn-primary btn-sm btn-publish-live" onclick="publishToLinkedIn(${c.id}, ${c.visual_exists ? 'true' : 'false'})" style="background: linear-gradient(135deg, #0A66C2, #004182); border-color: #0A66C2; font-weight: 700; display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.35rem 0.75rem;">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-            ${c.visual_exists ? ((c.visual_url || '').endsWith('.pdf') ? 'Publish 5-Slide PDF Carousel' : 'Publish with Canva Visual') : 'Publish Text-Only'}
-          </button>
-
-          ${c.visual_exists ? `
-            <button class="btn btn-secondary btn-sm" onclick="publishToLinkedIn(${c.id}, false)" title="Post text-only with GitHub link at the end (no comment needed)" style="font-size: 0.72rem; padding: 0.35rem 0.6rem;">
-              Text-Only (Link in Post)
+        ${c.status === 'PUBLISHED' ? `
+          <div class="candidate-state-controls" style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+            <span style="font-size: 0.76rem; color: #10B981; font-weight: 700; background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.35); padding: 0.25rem 0.6rem; border-radius: 6px;">
+              ✓ 100% POSTED &amp; ARCHIVED (${c.published_at ? c.published_at.substring(0, 10) : ''})
+            </span>
+            ${c.linkedin_post_url ? `
+              <a href="${c.linkedin_post_url}" target="_blank" class="btn btn-primary btn-sm" style="background: linear-gradient(135deg, #0A66C2, #004182); border-color: #0A66C2; font-weight: 600; display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.35rem 0.75rem; text-decoration: none;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                View Live Post &nearr;
+              </a>
+            ` : ''}
+            <button class="btn btn-secondary btn-sm" onclick="openTelemetryModal(${c.id}, '${escapeHtml(c.topic)}')" style="font-size: 0.75rem; padding: 0.35rem 0.65rem;">
+              📊 Edit Metrics
             </button>
-          ` : ''}
-
-          ${c.linkedin_post_url ? `
-            <a href="${c.linkedin_post_url}" target="_blank" class="btn btn-secondary btn-sm" style="color: #38BDF8; display: inline-flex; align-items: center; gap: 0.25rem;">
-              View Live &nearr;
-            </a>
-          ` : ''}
-
-          ${c.status !== 'APPROVED' ? `
-            <button class="btn btn-secondary btn-sm" onclick="setCandidateStatus(${c.id}, 'APPROVED')" style="font-size: 0.72rem;">
-              Mark Approved
+          </div>
+        ` : `
+          <div class="candidate-state-controls" style="display: flex; gap: 0.35rem; align-items: center; flex-wrap: wrap;">
+            <!-- 1-Click LinkedIn Publishing Buttons -->
+            <button class="btn btn-primary btn-sm btn-publish-live" onclick="publishToLinkedIn(${c.id}, ${c.visual_exists ? 'true' : 'false'})" style="background: linear-gradient(135deg, #0A66C2, #004182); border-color: #0A66C2; font-weight: 700; display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.35rem 0.75rem;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              ${c.visual_exists ? ((c.visual_url || '').endsWith('.pdf') ? 'Publish 5-Slide PDF Carousel' : 'Publish with Canva Visual') : 'Publish Text-Only'}
             </button>
-          ` : `
-            <button class="btn btn-secondary btn-sm" onclick="setCandidateStatus(${c.id}, 'WAITING_FOR_APPROVAL')" style="font-size: 0.72rem;">
-              Pause
-            </button>
-          `}
-        </div>
+
+            ${c.visual_exists ? `
+              <button class="btn btn-secondary btn-sm" onclick="publishToLinkedIn(${c.id}, false)" title="Post text-only with GitHub link at the end (no comment needed)" style="font-size: 0.72rem; padding: 0.35rem 0.6rem;">
+                Text-Only (Link in Post)
+              </button>
+            ` : ''}
+
+            ${c.linkedin_post_url ? `
+              <a href="${c.linkedin_post_url}" target="_blank" class="btn btn-secondary btn-sm" style="color: #38BDF8; display: inline-flex; align-items: center; gap: 0.25rem;">
+                View Live &nearr;
+              </a>
+            ` : ''}
+
+            ${c.status !== 'APPROVED' ? `
+              <button class="btn btn-secondary btn-sm" onclick="setCandidateStatus(${c.id}, 'APPROVED')" style="font-size: 0.72rem;">
+                Mark Approved
+              </button>
+            ` : `
+              <button class="btn btn-secondary btn-sm" onclick="setCandidateStatus(${c.id}, 'WAITING_FOR_APPROVAL')" style="font-size: 0.72rem;">
+                Pause
+              </button>
+            `}
+          </div>
+        `}
       </div>
 
       <div class="candidate-meta-grid">
@@ -1304,37 +1342,100 @@ function renderDaemonStatus(data) {
 
 function renderAnalytics(data) {
   if (!data) return;
-  const postsContainer = document.getElementById('monitored-posts-container');
-  if (postsContainer && data.analytics && data.analytics.posts_analytics) {
-    postsContainer.innerHTML = '';
-    const posts = data.analytics.posts_analytics;
+
+  // 1. Update KPI numbers if present
+  const totalImp = data.total_impressions || (data.analytics && data.analytics.posts_analytics ? data.analytics.posts_analytics.reduce((acc, p) => acc + (p.impressions || 0), 0) : 0);
+  const totalInteract = data.total_interactions || 0;
+  const engRate = data.overall_engagement_rate || '0.0%';
+  const topPost = data.top_performing_post || 'N/A';
+  const totalPosts = data.total_posts_analyzed || (data.analytics && data.analytics.posts_analytics ? data.analytics.posts_analytics.length : 0);
+
+  const kpiImpEl = document.getElementById('analytics-total-impressions');
+  if (kpiImpEl) kpiImpEl.textContent = Number(totalImp).toLocaleString();
+  const kpiInteractEl = document.getElementById('analytics-total-interactions');
+  if (kpiInteractEl) kpiInteractEl.textContent = Number(totalInteract).toLocaleString();
+  const kpiRateEl = document.getElementById('analytics-engagement-rate');
+  if (kpiRateEl) kpiRateEl.textContent = engRate;
+  const kpiTopEl = document.getElementById('analytics-top-post');
+  if (kpiTopEl) kpiTopEl.textContent = topPost;
+  const kpiPostsEl = document.getElementById('analytics-total-posts');
+  if (kpiPostsEl) kpiPostsEl.textContent = totalPosts;
+
+  const btnAudit = document.getElementById('growth-audit-stats-btn');
+  if (btnAudit) btnAudit.innerHTML = `${Number(totalImp).toLocaleString()} Imp &bull; ${engRate}`;
+
+  const tabBadge = document.getElementById('tab-analytics-badge');
+  if (tabBadge) tabBadge.textContent = `${(totalImp / 1000).toFixed(1)}k Imp`;
+
+  // 2. Render posts list in Analytics tab table
+  const tableBody = document.getElementById('analytics-posts-table-body');
+  const posts = data.posts || (data.analytics && data.analytics.posts_analytics) || [];
+  if (tableBody) {
     if (posts.length === 0) {
-      postsContainer.innerHTML = '<p style="color: var(--text-muted); font-size: 0.8rem; padding: 0.5rem;">No posts published yet.</p>';
+      tableBody.innerHTML = '<tr><td colspan="7" style="text-align: center; color: var(--text-muted); padding: 2rem;">No posts published yet.</td></tr>';
     } else {
-      posts.forEach(p => {
-        const item = document.createElement('div');
-        item.style.cssText = 'padding: 0.75rem; background: #0F172A; border-radius: 6px; display: flex; justify-content: space-between; align-items: center; border: 1px solid #1E293B;';
-        const imp = p.impressions !== undefined ? `${p.impressions} imp` : 'Live';
-        const react = p.reactions !== undefined ? `${p.reactions} likes` : '';
-        const statusBadge = p.status === 'VERIFIED' ? 'badge-emerald' : 'badge-cyan';
-        item.innerHTML = `
-          <div>
-            <div style="font-weight: 600; font-size: 0.85rem; color: #F8FAFC;">#${p.candidate_id || ''} ${escapeHtml(p.topic)}</div>
-            <div style="font-size: 0.72rem; color: var(--text-dim); margin-top: 0.2rem;">
-              Published: ${(p.published_at || '').substring(0, 16).replace('T', ' ')} UTC &bull; <strong style="color: #38BDF8;">${imp}</strong> ${react ? `&bull; <strong style="color: #10B981;">${react}</strong>` : ''}
-            </div>
-          </div>
-          <div style="display: flex; gap: 0.5rem; align-items: center;">
-            <span class="badge ${statusBadge}" style="font-size: 0.68rem;">${escapeHtml(p.status || 'LIVE')}</span>
-            ${p.post_url ? `<a href="${p.post_url}" target="_blank" class="btn btn-secondary btn-sm" style="font-size: 0.72rem; color: #38BDF8; padding: 0.2rem 0.5rem;">Open &nearr;</a>` : ''}
-          </div>
+      tableBody.innerHTML = posts.map(p => {
+        const metrics = p.metrics || p;
+        const imp = metrics.impressions || 0;
+        const react = metrics.reactions || 0;
+        const comm = metrics.comments || 0;
+        const rep = metrics.reposts || 0;
+        const rate = metrics.engagement_rate !== undefined ? `${metrics.engagement_rate}%` : `${(((react + comm + rep) / Math.max(1, imp)) * 100).toFixed(1)}%`;
+        const dateStr = (p.published_at || '').substring(0, 10);
+        return `
+          <tr>
+            <td style="padding: 10px 12px; border-bottom: 1px solid #1E293B;">
+              <strong>#${p.candidate_id || ''} ${escapeHtml(p.topic)}</strong>
+              ${p.notes ? `<br><span style="font-size: 0.72rem; color: #F59E0B;">${escapeHtml(p.notes)}</span>` : ''}
+            </td>
+            <td style="padding: 10px 12px; border-bottom: 1px solid #1E293B; font-size: 0.8rem; color: #94A3B8;">${dateStr}</td>
+            <td style="padding: 10px 12px; border-bottom: 1px solid #1E293B; text-align: right; font-family: monospace; font-weight: 700; color: #38BDF8;">${Number(imp).toLocaleString()}</td>
+            <td style="padding: 10px 12px; border-bottom: 1px solid #1E293B; text-align: right; font-family: monospace; color: #10B981;">${react}</td>
+            <td style="padding: 10px 12px; border-bottom: 1px solid #1E293B; text-align: right; font-family: monospace; color: #A855F7;">${comm}</td>
+            <td style="padding: 10px 12px; border-bottom: 1px solid #1E293B; text-align: right; font-family: monospace; font-weight: 700; color: #FBBF24;">${rate}</td>
+            <td style="padding: 10px 12px; border-bottom: 1px solid #1E293B; text-align: center;">
+              <button class="btn btn-secondary btn-sm" onclick="openTelemetryModal(${p.candidate_id}, '${escapeHtml(p.topic)}', ${imp}, ${react}, ${comm}, ${rep}, '${escapeHtml(p.notes || '')}')" style="font-size: 0.72rem; padding: 0.2rem 0.5rem;">
+                Edit
+              </button>
+              ${p.post_url ? `<a href="${p.post_url}" target="_blank" class="btn btn-secondary btn-sm" style="font-size: 0.72rem; padding: 0.2rem 0.5rem; color: #38BDF8; margin-left: 0.3rem;">&nearr;</a>` : ''}
+            </td>
+          </tr>
         `;
-        postsContainer.appendChild(item);
-      });
+      }).join('');
     }
   }
 
-  // Render learnings if available
+  // 3. Update the monitored posts container in Tab 8 (Automation)
+  const postsContainer = document.getElementById('monitored-posts-container');
+  if (postsContainer) {
+    postsContainer.innerHTML = '';
+    posts.forEach(p => {
+      const metrics = p.metrics || p;
+      const imp = metrics.impressions || 0;
+      const react = metrics.reactions || 0;
+      const comm = metrics.comments || 0;
+      const rep = metrics.reposts || 0;
+      const item = document.createElement('div');
+      item.style.cssText = 'padding: 0.75rem; background: #0F172A; border-radius: 6px; display: flex; justify-content: space-between; align-items: center; border: 1px solid #1E293B;';
+      item.innerHTML = `
+        <div>
+          <div style="font-weight: 600; font-size: 0.85rem; color: #F8FAFC;">#${p.candidate_id || ''} ${escapeHtml(p.topic)}</div>
+          <div style="font-size: 0.72rem; color: var(--text-dim); margin-top: 0.2rem;">
+            Published: ${(p.published_at || '').substring(0, 10)} &bull; <strong style="color: #38BDF8;">${Number(imp).toLocaleString()} imp</strong> &bull; <strong style="color: #10B981;">${react} likes</strong>
+          </div>
+        </div>
+        <div style="display: flex; gap: 0.35rem; align-items: center;">
+          <button class="btn btn-secondary btn-sm" onclick="openTelemetryModal(${p.candidate_id}, '${escapeHtml(p.topic)}', ${imp}, ${react}, ${comm}, ${rep}, '${escapeHtml(p.notes || '')}')" style="font-size: 0.7rem; padding: 0.2rem 0.45rem;">
+            Edit
+          </button>
+          ${p.post_url ? `<a href="${p.post_url}" target="_blank" class="btn btn-secondary btn-sm" style="font-size: 0.7rem; color: #38BDF8; padding: 0.2rem 0.45rem;">Open &nearr;</a>` : ''}
+        </div>
+      `;
+      postsContainer.appendChild(item);
+    });
+  }
+
+  // 4. Render continuous rules
   const learningsList = document.getElementById('eu-learnings-list');
   if (learningsList && data.learnings && data.learnings.continuous_rules) {
     learningsList.innerHTML = data.learnings.continuous_rules.map(r => `<li>${escapeHtml(r)}</li>`).join('');
@@ -1989,3 +2090,81 @@ window.switchHubMode = switchHubMode;
 window.toggleAutoApply = toggleAutoApply;
 window.runAutoApplyNow = runAutoApplyNow;
 window.fetchAutoApplyStatus = fetchAutoApplyStatus;
+
+
+// --- Telemetry & Growth Analytics Handlers ---
+window.openTelemetryModal = function(candidateId, topic, impressions, reactions, comments, reposts, notes) {
+  const modal = document.getElementById('telemetry-modal');
+  if (!modal) return;
+  document.getElementById('telemetry-candidate-id').value = candidateId;
+  document.getElementById('telemetry-post-title').textContent = '#' + candidateId + ' ' + topic;
+  document.getElementById('telemetry-impressions').value = impressions || '';
+  document.getElementById('telemetry-reactions').value = reactions || '';
+  document.getElementById('telemetry-comments').value = comments || '';
+  document.getElementById('telemetry-reposts').value = reposts || '';
+  document.getElementById('telemetry-notes').value = notes || '';
+  modal.classList.add('active');
+};
+
+window.closeTelemetryModal = function() {
+  const modal = document.getElementById('telemetry-modal');
+  if (modal) {
+    modal.classList.remove('active');
+  }
+};
+
+window.savePostTelemetry = async function() {
+  const cid = document.getElementById('telemetry-candidate-id').value;
+  const imp = document.getElementById('telemetry-impressions').value;
+  const react = document.getElementById('telemetry-reactions').value;
+  const comm = document.getElementById('telemetry-comments').value;
+  const rep = document.getElementById('telemetry-reposts').value;
+  const notes = document.getElementById('telemetry-notes').value;
+
+  if (!cid) return;
+  showToast('Updating telemetry and recalculating analytics...', 'info');
+
+  try {
+    const res = await fetch('/api/analytics/update-post', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        candidate_id: parseInt(cid, 10),
+        impressions: parseInt(imp || 0, 10),
+        reactions: parseInt(react || 0, 10),
+        comments: parseInt(comm || 0, 10),
+        reposts: parseInt(rep || 0, 10),
+        notes: notes
+      })
+    }).then(r => r.json());
+
+    if (res.success) {
+      showToast('Telemetry saved and 7-day analytics updated!', 'success');
+      closeTelemetryModal();
+      loadAllData();
+    } else {
+      showToast(res.error || 'Failed to update telemetry', 'error');
+    }
+  } catch (err) {
+    showToast('Error: ' + err.message, 'error');
+  }
+};
+
+window.syncTelemetryLive = async function() {
+  showToast('Running 7-day profile and analytics synchronization...', 'info');
+  try {
+    const res = await fetch('/api/analytics/sync', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: '{}'
+    }).then(r => r.json());
+    if (res.success) {
+      showToast('7-Day Growth Audit synchronized successfully!', 'success');
+      loadAllData();
+    } else {
+      showToast(res.error || 'Failed to sync analytics', 'error');
+    }
+  } catch (err) {
+    showToast('Error syncing analytics: ' + err.message, 'error');
+  }
+};

@@ -90,7 +90,9 @@
       "tested_status": true,
       "test_notes": "Live A/B test: Text-only format (higher reach & impressions)",
       "score": 95,
-      "published": true
+      "published": true,
+      "published_at": "2026-11-04T10:14:16Z",
+      "linkedin_post_id": "urn:li:share:7523689043860090882"
     },
     {
       "id": "docling-rag-001",
@@ -255,7 +257,9 @@
       "angle": "Why synchronous while-loops kill production agents and why distributed event actors fix runaway loops",
       "tested_status": false,
       "score": 91,
-      "published": false
+      "published": true,
+      "published_at": "2026-10-31T16:19:59Z",
+      "linkedin_post_id": "urn:li:share:7522331530103533569"
     },
     {
       "id": "hermes-agent-live",

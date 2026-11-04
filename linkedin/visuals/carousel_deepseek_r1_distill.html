@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 1080px;
+  height: 1350px;
+  background-color: #080C14;
+  background-image: 
+    radial-gradient(circle at 85% 12%, rgba(56, 189, 248, 0.12) 0%, transparent 40%),
+    radial-gradient(circle at 15% 85%, rgba(99, 102, 241, 0.10) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 0.6) 0%, transparent 100%);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #F8FAFC;
+  padding: 56px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle Grid Background Pattern */
+.grid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+}
+
+/* Header Section */
+.header-section {
+  margin-bottom: 24px;
+}
+
+.category-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(56, 189, 248, 0.10);
+  border: 1px solid rgba(56, 189, 248, 0.28);
+  color: #38BDF8;
+  padding: 7px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.category-tag .pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #38BDF8;
+  box-shadow: 0 0 10px #38BDF8;
+}
+
+h1.main-title {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-top: 18px;
+  letter-spacing: -0.025em;
+  color: #FFFFFF;
+}
+
+.gradient-text-cyan {
+  background: linear-gradient(135deg, #38BDF8 0%, #818CF8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-emerald {
+  background: linear-gradient(135deg, #34D399 0%, #38BDF8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  font-size: 20px;
+  line-height: 1.5;
+  color: #94A3B8;
+  margin-top: 12px;
+  max-width: 920px;
+}
+
+/* Footer Section */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+  margin-top: 24px;
+  z-index: 2;
+}
+
+.author-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.author-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0284C7 0%, #4F46E5 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 18px;
+  color: #FFFFFF;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+}
+
+.author-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.author-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #F8FAFC;
+}
+
+.author-thesis {
+  font-size: 14px;
+  color: #94A3B8;
+  font-weight: 500;
+}
+
+.repo-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  color: #38BDF8;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.28);
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Callout Box / The Catch */
+.catch-banner {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  border-radius: 14px;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.catch-badge {
+  font-size: 12px;
+  font-weight: 800;
+  color: #F59E0B;
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  padding: 6px 12px;
+  border-radius: 6px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.catch-text {
+  font-size: 15px;
+  line-height: 1.45;
+  color: #E2E8F0;
+  font-weight: 500;
+}
+
+/* Spec Chips Row */
+.spec-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.spec-chip {
+  background: #0E1626;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.spec-chip-label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #64748B;
+  letter-spacing: 0.05em;
+}
+
+.spec-chip-val {
+  font-size: 15px;
+  font-weight: 700;
+  color: #F8FAFC;
+}
+
+@page {
+  size: 1080px 1350px;
+  margin: 0;
+}
+body {
+  width: 1080px;
+  height: auto;
+  padding: 0;
+  display: block;
+}
+.carousel-page {
+  width: 1080px;
+  height: 1350px;
+  padding: 56px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  page-break-after: always;
+  break-after: page;
+  overflow: hidden;
+  background-color: #080C14;
+  background-image:
+    radial-gradient(circle at 85% 12%, rgba(56, 189, 248, 0.12) 0%, transparent 40%),
+    radial-gradient(circle at 15% 85%, rgba(99, 102, 241, 0.10) 0%, transparent 45%);
+}
+.slide-body-card {
+  background: linear-gradient(180deg, #0F172A 0%, #0A101D 100%);
+  border: 1.5px solid rgba(56, 189, 248, 0.35);
+  border-radius: 20px;
+  padding: 42px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 28px;
+  flex: 1;
+  margin: 24px 0;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+.slide-badge {
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #34D399;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  padding: 8px 16px;
+  border-radius: 8px;
+  width: fit-content;
+}
+.slide-main-text {
+  font-size: 28px;
+  line-height: 1.55;
+  color: #F1F5F9;
+  font-weight: 500;
+}
+.slide-metric-box {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 19px;
+  color: #38BDF8;
+  background: rgba(8, 12, 20, 0.85);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 12px;
+  padding: 22px 24px;
+  font-weight: 700;
+}
+</style>
+</head>
+<body>
+
+        <div class="carousel-page">
+          <div class="grid-overlay"></div>
+          <div class="content-wrapper">
+            <div class="header-section">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <div class="category-tag"><span class="pulse-dot"></span> AI Models & Local Inference</div>
+                <div class="repo-badge">01 / 05</div>
+              </div>
+              <h1 class="main-title" style="font-size:44px; margin-top:24px;">Why Proprietary Reasoning Models Lock You In</h1>
+              <p class="subtitle" style="font-size:19px;">How open-weight test-time compute brings verifiable mathematical reasoning to consumer GPUs.</p>
+            </div>
+
+            <div class="slide-body-card">
+              <div class="slide-badge">The Reasoning Paywall</div>
+              <div class="slide-main-text">Closed frontier reasoning models deliver impressive benchmarks on math and code, but they lock your infrastructure into high per-token pricing and hide internal reasoning traces inside black boxes.</div>
+              <div class="slide-metric-box">Closed APIs hide internal thinking steps, preventing error audit</div>
+            </div>
+
+            <div class="footer">
+              <div class="author-box">
+                <div class="author-avatar">PM</div>
+                <div class="author-details">
+                  <div class="author-name">Purnachandra Madhukar</div>
+                  <div class="author-thesis">MSc Data Science &bull; Autonomous Agent Architecture, Berlin</div>
+                </div>
+              </div>
+              <div class="repo-badge">github.com/deepseek-ai/DeepSeek-R1 &rarr;</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="carousel-page">
+          <div class="grid-overlay"></div>
+          <div class="content-wrapper">
+            <div class="header-section">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <div class="category-tag"><span class="pulse-dot"></span> AI Models & Local Inference</div>
+                <div class="repo-badge">02 / 05</div>
+              </div>
+              <h1 class="main-title" style="font-size:44px; margin-top:24px;">Distilling Test-Time Compute into Qwen</h1>
+              <p class="subtitle" style="font-size:19px;">Architectural Shift</p>
+            </div>
+
+            <div class="slide-body-card">
+              <div class="slide-badge">Architectural Shift</div>
+              <div class="slide-main-text">DeepSeek distilled 800k verifiable reasoning trajectories from the 671B frontier model directly into standard Qwen 2.5 architectures (1.5B, 7B, 14B, 32B), transferring long-chain logic patterns.</div>
+              <div class="slide-metric-box">Distilled Checkpoints: 1.5B, 7B, 14B, 32B under MIT License</div>
+            </div>
+
+            <div class="footer">
+              <div class="author-box">
+                <div class="author-avatar">PM</div>
+                <div class="author-details">
+                  <div class="author-name">Purnachandra Madhukar</div>
+                  <div class="author-thesis">MSc Data Science &bull; Autonomous Agent Architecture, Berlin</div>
+                </div>
+              </div>
+              <div class="repo-badge">github.com/deepseek-ai/DeepSeek-R1 &rarr;</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="carousel-page">
+          <div class="grid-overlay"></div>
+          <div class="content-wrapper">
+            <div class="header-section">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <div class="category-tag"><span class="pulse-dot"></span> AI Models & Local Inference</div>
+                <div class="repo-badge">03 / 05</div>
+              </div>
+              <h1 class="main-title" style="font-size:44px; margin-top:24px;">Runs on 8GB to 16GB Consumer GPUs</h1>
+              <p class="subtitle" style="font-size:19px;">Consumer Hardware</p>
+            </div>
+
+            <div class="slide-body-card">
+              <div class="slide-badge">Consumer Hardware</div>
+              <div class="slide-main-text">The 7B and 14B checkpoints run smoothly in 4-bit and 8-bit quantization using Ollama, LM Studio, or vLLM on a single RTX 3060/4070 or Apple Silicon Mac, costing $0 in cloud API fees.</div>
+              <div class="slide-metric-box">Memory footprint: ~5GB VRAM for 7B INT4 &bull; $0 Cloud Fees</div>
+            </div>
+
+            <div class="footer">
+              <div class="author-box">
+                <div class="author-avatar">PM</div>
+                <div class="author-details">
+                  <div class="author-name">Purnachandra Madhukar</div>
+                  <div class="author-thesis">MSc Data Science &bull; Autonomous Agent Architecture, Berlin</div>
+                </div>
+              </div>
+              <div class="repo-badge">github.com/deepseek-ai/DeepSeek-R1 &rarr;</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="carousel-page">
+          <div class="grid-overlay"></div>
+          <div class="content-wrapper">
+            <div class="header-section">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <div class="category-tag"><span class="pulse-dot"></span> AI Models & Local Inference</div>
+                <div class="repo-badge">04 / 05</div>
+              </div>
+              <h1 class="main-title" style="font-size:44px; margin-top:24px;">Thinking Tokens Multiply Total Latency</h1>
+              <p class="subtitle" style="font-size:19px;">The Latency Catch</p>
+            </div>
+
+            <div class="slide-body-card">
+              <div class="slide-badge">The Latency Catch</div>
+              <div class="slide-main-text">R1-Distill models can output 2,000 to 6,000 thinking tokens inside <think> tags before producing an answer. While accuracy is outstanding, total generation time is 3x to 5x longer than standard instruction models.</div>
+              <div class="slide-metric-box">Trade-off: High reasoning depth vs real-time chat latency</div>
+            </div>
+
+            <div class="footer">
+              <div class="author-box">
+                <div class="author-avatar">PM</div>
+                <div class="author-details">
+                  <div class="author-name">Purnachandra Madhukar</div>
+                  <div class="author-thesis">MSc Data Science &bull; Autonomous Agent Architecture, Berlin</div>
+                </div>
+              </div>
+              <div class="repo-badge">github.com/deepseek-ai/DeepSeek-R1 &rarr;</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="carousel-page">
+          <div class="grid-overlay"></div>
+          <div class="content-wrapper">
+            <div class="header-section">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <div class="category-tag"><span class="pulse-dot"></span> AI Models & Local Inference</div>
+                <div class="repo-badge">05 / 05</div>
+              </div>
+              <h1 class="main-title" style="font-size:44px; margin-top:24px;">Auditable White-Box Agent Stacks</h1>
+              <p class="subtitle" style="font-size:19px;">Implementation & Sandbox</p>
+            </div>
+
+            <div class="slide-body-card">
+              <div class="slide-badge">Implementation & Sandbox</div>
+              <div class="slide-main-text">Having raw access to the reasoning stream allows systems to audit intermediate logic steps and trigger circuit breakers before dangerous tool actions execute inside a Docker sandbox.</div>
+              <div class="slide-metric-box">Repo: github.com/deepseek-ai/DeepSeek-R1 (MIT License)</div>
+            </div>
+
+            <div class="footer">
+              <div class="author-box">
+                <div class="author-avatar">PM</div>
+                <div class="author-details">
+                  <div class="author-name">Purnachandra Madhukar</div>
+                  <div class="author-thesis">MSc Data Science &bull; Autonomous Agent Architecture, Berlin</div>
+                </div>
+              </div>
+              <div class="repo-badge">github.com/deepseek-ai/DeepSeek-R1 &rarr;</div>
+            </div>
+          </div>
+        </div>
+        
+</body>
+</html>

@@ -17,7 +17,7 @@ VISUALS_DIR = LINKEDIN_DIR / "visuals"
 VISUALS_DIR.mkdir(parents=True, exist_ok=True)
 
 # Initialize html2image renderer at 1080x1350 portrait canvas (LinkedIn 4:5 ratio)
-hti = Html2Image(output_path=str(VISUALS_DIR), size=(1080, 1350))
+hti = Html2Image(output_path=str(VISUALS_DIR), size=(1080, 1350), custom_flags=['--no-sandbox', '--disable-gpu'])
 
 GLOBAL_STYLES = """
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap');

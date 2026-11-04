@@ -569,6 +569,10 @@ class EditorialHandler(SimpleHTTPRequestHandler):
             self.handle_post_report_send_now(data)
         elif path == "/api/jobs/email-config":
             self.handle_post_email_config(data)
+        elif path == "/api/analytics/sync":
+            self.handle_post_analytics_sync(data)
+        elif path == "/api/analytics/update-post":
+            self.handle_post_analytics_update_post(data)
         else:
             self.send_error(404, "Unknown API route")
 
@@ -595,11 +599,38 @@ class EditorialHandler(SimpleHTTPRequestHandler):
         for c in candidates:
             c_file = WORKSPACE_DIR / c.get("file", "")
             parsed_data = parse_candidate_markdown(c_file)
-            orig_status = c.get("status")
+            
+            # Robust publishing determination: check candidate object, status, and publisher log
+            is_published = False
+            pub_info = None
+            if c.get("status") == "PUBLISHED" or c.get("published_at") or c.get("linkedin_post_id"):
+                is_published = True
+            
+            if publisher:
+                already_pub, existing_entry = publisher.is_already_published(
+                    candidate_id=c.get("id"),
+                    topic=c.get("topic")
+                )
+                if already_pub:
+                    is_published = True
+                    pub_info = existing_entry
+
             item = dict(c)
             item.update(parsed_data)
-            if orig_status == "PUBLISHED":
+
+            if is_published:
                 item["status"] = "PUBLISHED"
+                item["is_archived"] = True
+                item["is_published"] = True
+                if pub_info:
+                    item["published_at"] = pub_info.get("published_at", item.get("published_at"))
+                    item["linkedin_post_id"] = pub_info.get("post_id", item.get("linkedin_post_id"))
+                    item["linkedin_post_url"] = pub_info.get("post_url", item.get("linkedin_post_url"))
+            else:
+                item["is_archived"] = False
+                item["is_published"] = False
+                if item.get("status") not in ("APPROVED", "WAITING_FOR_APPROVAL", "DRAFT"):
+                    item["status"] = "APPROVED"
 
             v_path = c.get("visual", "")
             if v_path:
@@ -619,10 +650,27 @@ class EditorialHandler(SimpleHTTPRequestHandler):
 
             enriched.append(item)
 
+        active_candidates = []
+        archived_candidates = []
+        for c in enriched:
+            if c.get("status") == "PUBLISHED":
+                c["is_archived"] = True
+                c["is_published"] = True
+                archived_candidates.append(c)
+            else:
+                c["is_archived"] = False
+                c["is_published"] = False
+                active_candidates.append(c)
+
         self.send_json({
             "queue_id": queue_summary.get("queue_id", "queue-active"),
             "updated_at": queue_summary.get("updated_at", ""),
-            "candidates": enriched
+            "candidates": enriched,
+            "active_candidates": active_candidates,
+            "archived_candidates": archived_candidates,
+            "active_count": len(active_candidates),
+            "archived_count": len(archived_candidates),
+            "total_count": len(enriched)
         })
 
     def handle_post_candidate_status(self, data):
@@ -830,6 +878,7 @@ class EditorialHandler(SimpleHTTPRequestHandler):
         candidates = queue_summary.get("candidates", [])
         counts = {
             "total": len(candidates),
+            "active": sum(1 for c in candidates if c.get("status") in ("APPROVED", "WAITING_FOR_APPROVAL", "DRAFT")),
             "approved": sum(1 for c in candidates if c.get("status") == "APPROVED"),
             "waiting": sum(1 for c in candidates if c.get("status") == "WAITING_FOR_APPROVAL"),
             "published": sum(1 for c in candidates if c.get("status") == "PUBLISHED"),
@@ -1008,6 +1057,72 @@ class EditorialHandler(SimpleHTTPRequestHandler):
             })
         else:
             self.send_json({"status": "IDLE"})
+
+
+    def handle_post_analytics_sync(self, data):
+        try:
+            from linkedin.tools import weekly_growth_analyst
+            report = weekly_growth_analyst.run_7day_profile_analysis()
+            self.send_json({"success": True, "report": report})
+        except Exception as e:
+            self.send_json({"success": False, "error": str(e)}, 500)
+
+    def handle_post_analytics_update_post(self, data):
+        cid = data.get("candidate_id")
+        if cid is None:
+            self.send_json({"error": "candidate_id is required"}, 400)
+            return
+        cid = int(cid)
+        metrics_file = LINKEDIN_DIR / "history" / "verified_social_metrics.json"
+        if not metrics_file.exists():
+            self.send_json({"error": "verified_social_metrics.json not found"}, 404)
+            return
+        try:
+            with open(metrics_file, "r", encoding="utf-8") as f:
+                v_data = json.load(f)
+            found = False
+            for p in v_data.get("verified_posts", []):
+                if p.get("candidate_id") == cid:
+                    found = True
+                    if "impressions" in data:
+                        p["impressions"] = int(data["impressions"])
+                    if "reactions" in data:
+                        p["reactions"] = int(data["reactions"])
+                    if "comments" in data:
+                        p["comments"] = int(data["comments"])
+                    if "reposts" in data:
+                        p["reposts"] = int(data["reposts"])
+                    if "notes" in data:
+                        p["notes"] = str(data["notes"])
+                    p["status"] = "VERIFIED"
+                    p["verified_at"] = datetime.now().isoformat()
+                    break
+            if not found:
+                new_entry = {
+                    "candidate_id": cid,
+                    "topic": data.get("topic", f"Candidate #{cid}"),
+                    "urn": data.get("urn", ""),
+                    "post_url": data.get("post_url", ""),
+                    "published_at": data.get("published_at", datetime.now().isoformat()),
+                    "verified_at": datetime.now().isoformat(),
+                    "impressions": int(data.get("impressions", 0)),
+                    "reactions": int(data.get("reactions", 0)),
+                    "comments": int(data.get("comments", 0)),
+                    "reposts": int(data.get("reposts", 0)),
+                    "status": "VERIFIED",
+                    "notes": str(data.get("notes", "User updated telemetry"))
+                }
+                v_data.setdefault("verified_posts", []).append(new_entry)
+
+            v_data["last_audit_timestamp"] = datetime.now().isoformat()
+            with open(metrics_file, "w", encoding="utf-8") as f:
+                json.dump(v_data, f, indent=2)
+
+            from linkedin.tools import weekly_growth_analyst
+            report = weekly_growth_analyst.run_7day_profile_analysis()
+            self.send_json({"success": True, "report": report})
+        except Exception as e:
+            self.send_json({"success": False, "error": str(e)}, 500)
 
     def handle_get_analytics(self):
         analytics_file = LINKEDIN_DIR / "history" / "analytics_matrix.json"
