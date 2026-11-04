@@ -1,6 +1,6 @@
 {
   "audit_period": "2026-10-28 to 2026-11-04 (+ Verified Baseline)",
-  "generated_at": "2026-11-04 11:42:40 CET",
+  "generated_at": "2026-11-04 11:43:40 CET",
   "data_integrity": "100% Verified Telemetry - Zero Synthetic Estimates",
   "profile_snapshot": {
     "name": "Purnachandra Madhukar Dandu",
@@ -293,7 +293,7 @@
       "candidate_id": 4,
       "topic": "MarkItDown (Document to LLM Markdown Converter)",
       "published_at": "2026-10-24T06:52:17Z",
-      "age_hours": 268.8,
+      "age_hours": 268.9,
       "day_of_week": "Saturday",
       "is_weekend": true,
       "has_image": true,
@@ -393,7 +393,7 @@
       "candidate_id": 1,
       "topic": "Cline (VS Code MCP Extension)",
       "published_at": "2026-10-16T19:33:48Z",
-      "age_hours": 448.1,
+      "age_hours": 448.2,
       "day_of_week": "Friday",
       "is_weekend": false,
       "has_image": true,
