@@ -202,13 +202,16 @@
       "beat": "Data Engineering & Production RAG",
       "score": 94,
       "human_quality_score": 87.9,
-      "status": "APPROVED",
+      "status": "PUBLISHED",
       "format": "image-attached",
       "replaces": "Expensive cloud vector database RAM bills ($100s/mo on Pinecone/Weaviate)",
       "cost": "Free Apache 2.0 code; runs inside single Docker container with 90% less RAM",
       "test_status": "Tested on 100k vectors in local Docker; not tested on multi-node distributed clusters yet",
       "file": "linkedin/queue/candidate_21_qdrant_bq.md",
-      "visual": "linkedin/visuals/visual_qdrant_bq.png"
+      "visual": "linkedin/visuals/visual_qdrant_bq.png",
+      "published_at": "2026-11-05T08:57:03Z",
+      "linkedin_post_id": "urn:li:share:7524032012316499968",
+      "linkedin_post_url": "https://www.linkedin.com/feed/update/urn:li:share:7524032012316499968/"
     },
     {
       "id": 22,
