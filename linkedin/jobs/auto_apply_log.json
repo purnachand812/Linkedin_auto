@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "22:08:27",
-      "datetime": "2026-11-02T22:08:27.153259",
-      "level": "INFO",
-      "message": "Radar scan: 15 active jobs, 2 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "22:08:27",
       "datetime": "2026-11-02T22:08:27.154050",
       "level": "INFO",
       "message": "Initiating autonomous application: 'Praktikant Projektmanagement bei BMW Motorrad (w/m/x)' at BMW AG (ID: job-ba-12462_1649681_1_S)"
@@ -357,6 +351,12 @@
     {
       "timestamp": "21:23:44",
       "datetime": "2026-11-04T21:23:44.920610",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "00:39:10",
+      "datetime": "2026-11-05T00:39:10.231155",
       "level": "INFO",
       "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
