@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "22:08:27",
-      "datetime": "2026-11-02T22:08:27.157248",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-ba-12462_1649681_1_S.pdf"
-    },
-    {
-      "timestamp": "22:08:27",
-      "datetime": "2026-11-02T22:08:27.158218",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "22:08:27",
-      "datetime": "2026-11-02T22:08:27.167145",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for BMW AG."
-    },
-    {
-      "timestamp": "22:08:29",
-      "datetime": "2026-11-02T22:08:29.168179",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Only for Erasmus/Turing Internship: AI/IT, Graphic Designer and/or Computer Science&Technologies on MA-Level' at Art & Science Node (ID: job-linkedin-4484342933)"
-    },
-    {
-      "timestamp": "22:08:29",
-      "datetime": "2026-11-02T22:08:29.177399",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4484342933.pdf"
-    },
-    {
-      "timestamp": "22:08:29",
-      "datetime": "2026-11-02T22:08:29.180175",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4484342933.pdf"
-    },
-    {
-      "timestamp": "22:08:29",
-      "datetime": "2026-11-02T22:08:29.188323",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "22:08:29",
-      "datetime": "2026-11-02T22:08:29.220628",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for Art & Science Node."
-    },
-    {
       "timestamp": "01:55:37",
       "datetime": "2026-11-03T01:55:37.260016",
       "level": "INFO",
@@ -359,6 +311,54 @@
       "datetime": "2026-11-05T08:57:03.845805",
       "level": "INFO",
       "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "17:11:42",
+      "datetime": "2026-11-05T17:11:42.342512",
+      "level": "INFO",
+      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
+    },
+    {
+      "timestamp": "17:11:47",
+      "datetime": "2026-11-05T17:11:47.601115",
+      "level": "SUCCESS",
+      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
+    },
+    {
+      "timestamp": "17:11:47",
+      "datetime": "2026-11-05T17:11:47.603131",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 1 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "17:11:47",
+      "datetime": "2026-11-05T17:11:47.604325",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Intern Venture Building (m/w/d)' at suhm ventures GmbH (ID: job-linkedin-4487278318)"
+    },
+    {
+      "timestamp": "17:11:47",
+      "datetime": "2026-11-05T17:11:47.613401",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4487278318.pdf"
+    },
+    {
+      "timestamp": "17:11:47",
+      "datetime": "2026-11-05T17:11:47.615368",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4487278318.pdf"
+    },
+    {
+      "timestamp": "17:11:47",
+      "datetime": "2026-11-05T17:11:47.617718",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "17:11:47",
+      "datetime": "2026-11-05T17:11:47.631826",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for suhm ventures GmbH."
     }
   ]
 }

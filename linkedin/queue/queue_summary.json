@@ -220,13 +220,16 @@
       "beat": "Everyday AI Automation",
       "score": 93,
       "human_quality_score": 81.8,
-      "status": "APPROVED",
+      "status": "PUBLISHED",
       "format": "text-only",
       "replaces": "Proprietary cloud document extraction APIs (AWS Textract, LlamaParse, Unstructured.io)",
       "cost": "Free MIT code; runs 100% on CPU/GPU without per-page API invoices",
       "test_status": "Tested on technical PDFs and financial reports in local Docker; not tested on 500-page scanned handwritten manuscripts yet",
       "file": "linkedin/queue/candidate_22_docling.md",
-      "visual": ""
+      "visual": "",
+      "published_at": "2026-11-05T17:11:42Z",
+      "linkedin_post_id": "urn:li:share:7524156498525138944",
+      "linkedin_post_url": "https://www.linkedin.com/feed/update/urn:li:share:7524156498525138944/"
     },
     {
       "id": 23,
@@ -259,6 +262,6 @@
       "visual": "linkedin/visuals/visual_litserve.png"
     }
   ],
-  "updated_at": "2026-11-04T11:30:32.829963",
+  "updated_at": "2026-11-05T17:11:41.136506",
   "auto_approve_enabled": true
 }

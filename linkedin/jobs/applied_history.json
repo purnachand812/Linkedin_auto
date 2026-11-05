@@ -1,5 +1,25 @@
 [
   {
+    "job_id": "job-linkedin-4487278318",
+    "title": "Intern Venture Building (m/w/d)",
+    "company": "suhm ventures GmbH",
+    "location": "Berlin, Berlin, Germany",
+    "salary_range": "\u20ac1,200 - \u20ac1,800 / mo",
+    "match_score": 92,
+    "applied_at": "2026-11-05T17:11:47.624011",
+    "job_url": "https://www.linkedin.com/jobs/view/4487278318/",
+    "resume_url": "/resumes/resume_job-linkedin-4487278318.pdf",
+    "cover_letter_url": "/resumes/cover_letter_job-linkedin-4487278318.pdf",
+    "packet_file": "linkedin/jobs/packets/packet_job-linkedin-4487278318.json",
+    "mode": "AUTONOMOUS_DAEMON",
+    "recruiter_outreach_note": "Hi Hiring Team, I saw suhm ventures GmbH's opening for Intern Venture Building (m/w/d) in Berlin, Berlin, Germany. I am an MSc Data Science student based in Berlin (GISMA University) researching hallucination attribution in multi-step LLM agent trajectories. I have hands-on experience building Python ML pipelines, SQL/Redis backends, and typed FastAPI agent services, with full German Werkstudent work authorization. I submitted my application and would be glad to connect.",
+    "status": "APPLIED_CONFIRMED",
+    "resume_pdf_url": "/resumes/resume_job-linkedin-4487278318.pdf",
+    "cover_letter_pdf_url": "/resumes/cover_letter_job-linkedin-4487278318.pdf",
+    "resume_html_url": "/resumes/resume_job-linkedin-4487278318.html",
+    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4487278318.html"
+  },
+  {
     "job_id": "job-linkedin-4486350173",
     "title": "Intern, Data Engineer - People & Culture",
     "company": "Delivery Hero",
