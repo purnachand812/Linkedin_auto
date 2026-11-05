@@ -1,12 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "01:55:37",
-      "datetime": "2026-11-03T01:55:37.260016",
-      "level": "INFO",
-      "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
       "timestamp": "03:35:26",
       "datetime": "2026-11-03T03:35:26.355288",
       "level": "INFO",
@@ -359,6 +353,12 @@
       "datetime": "2026-11-05T17:11:47.631826",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for suhm ventures GmbH."
+    },
+    {
+      "timestamp": "22:45:41",
+      "datetime": "2026-11-05T22:45:41.960445",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
   ]
 }
