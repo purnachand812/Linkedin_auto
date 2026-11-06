@@ -256,15 +256,18 @@
       "beat": "AI Hardware & Local Inference",
       "score": 94,
       "human_quality_score": 85.7,
-      "status": "APPROVED",
+      "status": "PUBLISHED",
       "format": "image-attached",
       "replaces": "Naive unbatched FastAPI endpoints & heavyweight enterprise Triton clusters",
       "cost": "Free Apache 2.0 code; cuts GPU hosting costs by up to 75% via dynamic batching",
       "test_status": "Tested on local 16GB VRAM GPU with PyTorch and vLLM; not tested across multi-node Kubernetes clusters yet",
       "file": "linkedin/queue/candidate_24_litserve.md",
-      "visual": "linkedin/visuals/visual_litserve.png"
+      "visual": "linkedin/visuals/visual_litserve.png",
+      "published_at": "2026-11-06T18:13:20Z",
+      "linkedin_post_id": "urn:li:share:7524534393856745474",
+      "linkedin_post_url": "https://www.linkedin.com/feed/update/urn:li:share:7524534393856745474/"
     }
   ],
-  "updated_at": "2026-11-06T11:18:41.162204",
+  "updated_at": "2026-11-06T18:13:17.250066",
   "auto_approve_enabled": true
 }

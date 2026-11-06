@@ -1,5 +1,25 @@
 [
   {
+    "job_id": "job-ba-12465_1651857_1_S",
+    "title": "Werkstudent (w/m/d) Project Management Excellence",
+    "company": "Siemens AG",
+    "location": "Berlin 10115, Germany",
+    "salary_range": "\u20ac16 - \u20ac22 / hr",
+    "match_score": 99,
+    "applied_at": "2026-11-06T18:13:26.622429",
+    "job_url": "https://www.arbeitsagentur.de/jobsuche/jobdetail/12465-1651857-1-S",
+    "resume_url": "/resumes/resume_job-ba-12465_1651857_1_S.pdf",
+    "cover_letter_url": "/resumes/cover_letter_job-ba-12465_1651857_1_S.pdf",
+    "packet_file": "linkedin/jobs/packets/packet_job-ba-12465_1651857_1_S.json",
+    "mode": "AUTONOMOUS_DAEMON",
+    "recruiter_outreach_note": "Hi Hiring Team, I saw Siemens AG's opening for Werkstudent (w/m/d) Project Management Excellence in Berlin 10115, Germany. I am an MSc Data Science student based in Berlin (GISMA University) researching hallucination attribution in multi-step LLM agent trajectories. I have hands-on experience building Python ML pipelines, SQL/Redis backends, and typed FastAPI agent services, with full German Werkstudent work authorization. I submitted my application and would be glad to connect.",
+    "status": "APPLIED_CONFIRMED",
+    "resume_pdf_url": "/resumes/resume_job-ba-12465_1651857_1_S.pdf",
+    "cover_letter_pdf_url": "/resumes/cover_letter_job-ba-12465_1651857_1_S.pdf",
+    "resume_html_url": "/resumes/resume_job-ba-12465_1651857_1_S.html",
+    "cover_letter_html_url": "/resumes/cover_letter_job-ba-12465_1651857_1_S.html"
+  },
+  {
     "job_id": "job-linkedin-4487278318",
     "title": "Intern Venture Building (m/w/d)",
     "company": "suhm ventures GmbH",

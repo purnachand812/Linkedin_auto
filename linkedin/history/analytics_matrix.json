@@ -1,9 +1,21 @@
 {
-  "updated_at": "2026-11-06T11:18:44.519232",
-  "total_posts": 21,
+  "updated_at": "2026-11-06T18:13:28.629502",
+  "total_posts": 22,
   "target_region": "European Union (CET/CEST)",
   "data_integrity": "Verified Ground Truth",
   "posts_analytics": [
+    {
+      "candidate_id": 24,
+      "topic": "LitServe (Multi-Worker Dynamic Batching Engine vs Naive FastAPI)",
+      "published_at": "2026-11-06T18:13:20Z",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7524534393856745474/",
+      "impressions": 0,
+      "reactions": 0,
+      "comments": 0,
+      "reposts": 0,
+      "status": "ACCUMULATING",
+      "notes": "Fresh drop; awaiting next live telemetry sync."
+    },
     {
       "candidate_id": 23,
       "topic": "Hugging Face FastRTC (Real-Time Bidirectional Voice & WebRTC Agents)",

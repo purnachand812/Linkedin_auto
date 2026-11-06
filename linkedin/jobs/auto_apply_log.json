@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "19:02:22",
-      "datetime": "2026-11-03T19:02:22.662060",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 5 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "19:02:22",
-      "datetime": "2026-11-03T19:02:22.663952",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Werkstudent (w/m/d) Digitalisierung, Data & AI im Bereich Supply Chain Management' at Siemens AG (ID: job-ba-12465_1649395_1_S)"
-    },
-    {
-      "timestamp": "19:02:22",
-      "datetime": "2026-11-03T19:02:22.667043",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-ba-12465_1649395_1_S.pdf"
-    },
-    {
-      "timestamp": "19:02:22",
-      "datetime": "2026-11-03T19:02:22.668646",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-ba-12465_1649395_1_S.pdf"
-    },
-    {
-      "timestamp": "19:02:22",
-      "datetime": "2026-11-03T19:02:22.669908",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "19:02:22",
-      "datetime": "2026-11-03T19:02:22.678936",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for Siemens AG."
-    },
-    {
-      "timestamp": "19:02:24",
-      "datetime": "2026-11-03T19:02:24.680049",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Intern, Corporate Governance (6 Months)' at N26 Bank (ID: job-gh-n26-8330667)"
-    },
-    {
-      "timestamp": "19:02:24",
-      "datetime": "2026-11-03T19:02:24.682983",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-gh-n26-8330667.pdf"
-    },
-    {
       "timestamp": "19:02:24",
       "datetime": "2026-11-03T19:02:24.683754",
       "level": "SUCCESS",
@@ -359,6 +311,54 @@
       "datetime": "2026-11-06T11:18:44.516999",
       "level": "INFO",
       "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "18:13:20",
+      "datetime": "2026-11-06T18:13:20.985687",
+      "level": "INFO",
+      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
+    },
+    {
+      "timestamp": "18:13:26",
+      "datetime": "2026-11-06T18:13:26.593138",
+      "level": "SUCCESS",
+      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
+    },
+    {
+      "timestamp": "18:13:26",
+      "datetime": "2026-11-06T18:13:26.594344",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 1 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "18:13:26",
+      "datetime": "2026-11-06T18:13:26.606421",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Werkstudent (w/m/d) Project Management Excellence' at Siemens AG (ID: job-ba-12465_1651857_1_S)"
+    },
+    {
+      "timestamp": "18:13:26",
+      "datetime": "2026-11-06T18:13:26.616156",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-ba-12465_1651857_1_S.pdf"
+    },
+    {
+      "timestamp": "18:13:26",
+      "datetime": "2026-11-06T18:13:26.617417",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-ba-12465_1651857_1_S.pdf"
+    },
+    {
+      "timestamp": "18:13:26",
+      "datetime": "2026-11-06T18:13:26.619384",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "18:13:26",
+      "datetime": "2026-11-06T18:13:26.625833",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Siemens AG."
     }
   ]
 }
