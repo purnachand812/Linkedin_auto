@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "19:02:24",
-      "datetime": "2026-11-03T19:02:24.683754",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-gh-n26-8330667.pdf"
-    },
-    {
-      "timestamp": "19:02:24",
       "datetime": "2026-11-03T19:02:24.684666",
       "level": "SUCCESS",
       "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
@@ -359,6 +353,12 @@
       "datetime": "2026-11-06T18:13:26.625833",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for Siemens AG."
+    },
+    {
+      "timestamp": "23:23:37",
+      "datetime": "2026-11-06T23:23:37.023717",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
   ]
 }
