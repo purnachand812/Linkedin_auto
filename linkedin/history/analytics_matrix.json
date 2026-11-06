@@ -1,9 +1,21 @@
 {
-  "updated_at": "2026-11-06T03:09:16.303855",
-  "total_posts": 20,
+  "updated_at": "2026-11-06T11:18:44.519232",
+  "total_posts": 21,
   "target_region": "European Union (CET/CEST)",
   "data_integrity": "Verified Ground Truth",
   "posts_analytics": [
+    {
+      "candidate_id": 23,
+      "topic": "Hugging Face FastRTC (Real-Time Bidirectional Voice & WebRTC Agents)",
+      "published_at": "2026-11-06T11:18:44Z",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7524430055381364737/",
+      "impressions": 0,
+      "reactions": 0,
+      "comments": 0,
+      "reposts": 0,
+      "status": "ACCUMULATING",
+      "notes": "Fresh drop; awaiting next live telemetry sync."
+    },
     {
       "candidate_id": 22,
       "topic": "IBM Docling (Local Layout-Aware PDF & Table Parser for RAG)",

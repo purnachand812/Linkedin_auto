@@ -238,13 +238,16 @@
       "beat": "Everyday AI Automation",
       "score": 95,
       "human_quality_score": 85.9,
-      "status": "APPROVED",
+      "status": "PUBLISHED",
       "format": "image-attached",
       "replaces": "Proprietary cloud WebRTC platforms (LiveKit $50/mo, Twilio Voice gateways)",
       "cost": "Free Apache 2.0 code; runs on self-hosted Docker and FastAPI",
       "test_status": "Tested in local Docker with Python 3.11 and Whisper on 16GB GPU; not benchmarked across 500 concurrent WebRTC streams yet",
       "file": "linkedin/queue/candidate_23_fastrtc.md",
-      "visual": "linkedin/visuals/visual_fastrtc.png"
+      "visual": "linkedin/visuals/visual_fastrtc.png",
+      "published_at": "2026-11-06T11:18:44Z",
+      "linkedin_post_id": "urn:li:share:7524430055381364737",
+      "linkedin_post_url": "https://www.linkedin.com/feed/update/urn:li:share:7524430055381364737/"
     },
     {
       "id": 24,
@@ -262,6 +265,6 @@
       "visual": "linkedin/visuals/visual_litserve.png"
     }
   ],
-  "updated_at": "2026-11-06T03:09:16.299352",
+  "updated_at": "2026-11-06T11:18:41.162204",
   "auto_approve_enabled": true
 }
