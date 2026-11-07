@@ -1460,14 +1460,28 @@ class EditorialHandler(SimpleHTTPRequestHandler):
 
 
 def run():
+    ThreadingHTTPServer.allow_reuse_address = True
     server_address = ('', PORT)
-    httpd = ThreadingHTTPServer(server_address, EditorialHandler)
-    print(f"[OK] Antigravity LinkedIn Hub running at http://localhost:{PORT}")
-    try:
-        httpd.serve_forever()
-    except KeyboardInterrupt:
-        print("\nStopping server...")
-        httpd.server_close()
+    while True:
+        try:
+            httpd = ThreadingHTTPServer(server_address, EditorialHandler)
+            print(f"[OK] Antigravity LinkedIn Hub running at http://localhost:{PORT}", flush=True)
+            httpd.serve_forever()
+        except KeyboardInterrupt:
+            print("\nStopping server...", flush=True)
+            try:
+                httpd.server_close()
+            except Exception:
+                pass
+            break
+        except Exception as e:
+            print(f"[RETRY] Server network reset: {e}. Restarting in 2s...", flush=True)
+            try:
+                httpd.server_close()
+            except Exception:
+                pass
+            import time
+            time.sleep(2)
 
 
 if __name__ == '__main__':

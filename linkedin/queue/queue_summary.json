@@ -202,13 +202,16 @@
       "beat": "Data Engineering & Production RAG",
       "score": 94,
       "human_quality_score": 87.9,
-      "status": "APPROVED",
+      "status": "PUBLISHED",
       "format": "image-attached",
       "replaces": "Expensive cloud vector database RAM bills ($100s/mo on Pinecone/Weaviate)",
       "cost": "Free Apache 2.0 code; runs inside single Docker container with 90% less RAM",
       "test_status": "Tested on 100k vectors in local Docker; not tested on multi-node distributed clusters yet",
       "file": "linkedin/queue/candidate_21_qdrant_bq.md",
-      "visual": "linkedin/visuals/visual_qdrant_bq.png"
+      "visual": "linkedin/visuals/visual_qdrant_bq.png",
+      "published_at": "2026-11-06T15:30:12Z",
+      "linkedin_post_id": "urn:li:share:7524493337459011584",
+      "linkedin_post_url": "https://www.linkedin.com/feed/update/urn:li:share:7524493337459011584/"
     },
     {
       "id": 22,
@@ -217,13 +220,16 @@
       "beat": "Everyday AI Automation",
       "score": 93,
       "human_quality_score": 81.8,
-      "status": "APPROVED",
+      "status": "PUBLISHED",
       "format": "text-only",
       "replaces": "Proprietary cloud document extraction APIs (AWS Textract, LlamaParse, Unstructured.io)",
       "cost": "Free MIT code; runs 100% on CPU/GPU without per-page API invoices",
       "test_status": "Tested on technical PDFs and financial reports in local Docker; not tested on 500-page scanned handwritten manuscripts yet",
       "file": "linkedin/queue/candidate_22_docling.md",
-      "visual": ""
+      "visual": "",
+      "published_at": "2026-11-06T15:31:24Z",
+      "linkedin_post_id": "urn:li:share:7524493645022916608",
+      "linkedin_post_url": "https://www.linkedin.com/feed/update/urn:li:share:7524493645022916608/"
     },
     {
       "id": 23,
@@ -256,6 +262,6 @@
       "visual": "linkedin/visuals/visual_litserve.png"
     }
   ],
-  "updated_at": "2026-11-04T11:30:32.829963",
+  "updated_at": "2026-11-06T16:53:34.692372",
   "auto_approve_enabled": true
 }
