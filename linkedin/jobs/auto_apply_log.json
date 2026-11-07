@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "19:02:26",
-      "datetime": "2026-11-03T19:02:26.693010",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Werkstudent/in Vertrieb & AI' at Ankercloud (ID: job-linkedin-4484679058)"
-    },
-    {
-      "timestamp": "19:02:26",
       "datetime": "2026-11-03T19:02:26.695315",
       "level": "SUCCESS",
       "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4484679058.pdf"
@@ -357,6 +351,12 @@
     {
       "timestamp": "03:00:09",
       "datetime": "2026-11-07T03:00:09.349175",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "03:45:21",
+      "datetime": "2026-11-07T03:45:21.013565",
       "level": "INFO",
       "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
