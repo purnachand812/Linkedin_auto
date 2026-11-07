@@ -1,12 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "19:02:24",
-      "datetime": "2026-11-03T19:02:24.691976",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for N26 Bank."
-    },
-    {
       "timestamp": "19:02:26",
       "datetime": "2026-11-03T19:02:26.693010",
       "level": "INFO",
@@ -357,6 +351,12 @@
     {
       "timestamp": "23:53:04",
       "datetime": "2026-11-06T23:53:04.985793",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "03:00:09",
+      "datetime": "2026-11-07T03:00:09.349175",
       "level": "INFO",
       "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
