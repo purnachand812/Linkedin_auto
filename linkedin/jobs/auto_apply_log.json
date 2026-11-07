@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "19:02:30",
-      "datetime": "2026-11-03T19:02:30.722406",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Praktikum im Business Development - Datenanalyse & Plattformmanagement (m/w/d)' at Pflegia (ID: job-linkedin-4485797793)"
-    },
-    {
-      "timestamp": "19:02:30",
       "datetime": "2026-11-03T19:02:30.733792",
       "level": "SUCCESS",
       "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4485797793.pdf"
@@ -359,6 +353,12 @@
       "datetime": "2026-11-07T16:06:08.646522",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for dsb."
+    },
+    {
+      "timestamp": "17:35:02",
+      "datetime": "2026-11-07T17:35:02.641985",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
   ]
 }
