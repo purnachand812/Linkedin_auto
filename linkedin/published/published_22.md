@@ -1,9 +1,9 @@
 # PUBLISHED POST: IBM Docling (Local Layout-Aware PDF & Table Parser for RAG)
 - **Candidate ID:** 22
-- **Published Date:** 2026-11-06T15:31:24Z
+- **Published Date:** 2026-11-05T17:11:42Z
 - **Format:** text-only
-- **LinkedIn Post ID:** urn:li:share:7524493645022916608
-- **LinkedIn Post URL:** https://www.linkedin.com/feed/update/urn:li:share:7524493645022916608/
+- **LinkedIn Post ID:** urn:li:share:7524156498525138944
+- **LinkedIn Post URL:** https://www.linkedin.com/feed/update/urn:li:share:7524156498525138944/
 - **First Comment Auto-Posted:** False
 - **Status:** Successful
 

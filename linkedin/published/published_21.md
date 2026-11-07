@@ -1,10 +1,10 @@
 # PUBLISHED POST: Qdrant Binary Quantization (16x Vector Memory Compression for Local RAG)
 - **Candidate ID:** 21
-- **Published Date:** 2026-11-06T15:30:12Z
+- **Published Date:** 2026-11-05T08:57:03Z
 - **Format:** image-attached
-- **LinkedIn Post ID:** urn:li:share:7524493337459011584
-- **LinkedIn Post URL:** https://www.linkedin.com/feed/update/urn:li:share:7524493337459011584/
-- **First Comment Auto-Posted:** False
+- **LinkedIn Post ID:** urn:li:share:7524032012316499968
+- **LinkedIn Post URL:** https://www.linkedin.com/feed/update/urn:li:share:7524032012316499968/
+- **First Comment Auto-Posted:** True
 - **Status:** Successful
 
 ---

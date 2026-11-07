@@ -1,364 +1,364 @@
 {
   "entries": [
     {
-      "timestamp": "16:04:03",
-      "datetime": "2026-11-06T16:04:03.736872",
+      "timestamp": "19:02:30",
+      "datetime": "2026-11-03T19:02:30.722406",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Praktikum im Business Development - Datenanalyse & Plattformmanagement (m/w/d)' at Pflegia (ID: job-linkedin-4485797793)"
+    },
+    {
+      "timestamp": "19:02:30",
+      "datetime": "2026-11-03T19:02:30.733792",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4485797793.pdf"
+    },
+    {
+      "timestamp": "19:02:30",
+      "datetime": "2026-11-03T19:02:30.735363",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4485797793.pdf"
+    },
+    {
+      "timestamp": "19:02:30",
+      "datetime": "2026-11-03T19:02:30.737559",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "19:02:30",
+      "datetime": "2026-11-03T19:02:30.758281",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Pflegia."
+    },
+    {
+      "timestamp": "00:04:26",
+      "datetime": "2026-11-04T00:04:26.203601",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "00:16:49",
+      "datetime": "2026-11-04T00:16:49.328373",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "06:50:26",
+      "datetime": "2026-11-04T06:50:26.493539",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "11:43:40",
+      "datetime": "2026-11-04T11:43:40.162120",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "10:44:28",
+      "datetime": "2026-11-04T10:44:28.320359",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "15:04:53",
+      "datetime": "2026-11-04T15:04:53.339161",
+      "level": "INFO",
+      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
+    },
+    {
+      "timestamp": "15:04:58",
+      "datetime": "2026-11-04T15:04:58.644426",
+      "level": "SUCCESS",
+      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
+    },
+    {
+      "timestamp": "15:04:58",
+      "datetime": "2026-11-04T15:04:58.645882",
       "level": "INFO",
       "message": "Radar scan: 16 active jobs, 2 meeting freshness (<=7d) & criteria."
     },
     {
-      "timestamp": "16:04:03",
-      "datetime": "2026-11-06T16:04:03.746975",
+      "timestamp": "15:04:58",
+      "datetime": "2026-11-04T15:04:58.683432",
       "level": "INFO",
-      "message": "Initiating autonomous application: 'Werkstudent (m/w/d) Sales \u2013 Healthcare Software' at samedi GmbH (ID: job-linkedin-4488133414)"
+      "message": "Initiating autonomous application: 'Working Student \u2013 Quantitative Research (m/f/d)' at YUKKA (ID: job-linkedin-4485068971)"
     },
     {
-      "timestamp": "16:04:03",
-      "datetime": "2026-11-06T16:04:03.772964",
+      "timestamp": "15:04:58",
+      "datetime": "2026-11-04T15:04:58.686395",
       "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4488133414.pdf"
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4485068971.pdf"
     },
     {
-      "timestamp": "16:04:03",
-      "datetime": "2026-11-06T16:04:03.784596",
+      "timestamp": "15:04:58",
+      "datetime": "2026-11-04T15:04:58.687255",
       "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4488133414.pdf"
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4485068971.pdf"
     },
     {
-      "timestamp": "16:04:03",
-      "datetime": "2026-11-06T16:04:03.814583",
+      "timestamp": "15:04:58",
+      "datetime": "2026-11-04T15:04:58.702412",
       "level": "SUCCESS",
       "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
     },
     {
-      "timestamp": "16:04:03",
-      "datetime": "2026-11-06T16:04:03.879948",
+      "timestamp": "15:04:58",
+      "datetime": "2026-11-04T15:04:58.717754",
       "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for samedi GmbH."
+      "message": "Application confirmed & tracked with downloadable PDFs for YUKKA."
     },
     {
-      "timestamp": "16:04:03",
-      "datetime": "2026-11-06T16:04:03.785504",
+      "timestamp": "15:05:00",
+      "datetime": "2026-11-04T15:05:00.718668",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Intern, Data Engineer - People & Culture' at Delivery Hero (ID: job-linkedin-4486350173)"
+    },
+    {
+      "timestamp": "15:05:00",
+      "datetime": "2026-11-04T15:05:00.724753",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4486350173.pdf"
+    },
+    {
+      "timestamp": "15:05:00",
+      "datetime": "2026-11-04T15:05:00.725565",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4486350173.pdf"
+    },
+    {
+      "timestamp": "15:05:00",
+      "datetime": "2026-11-04T15:05:00.726367",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "15:05:00",
+      "datetime": "2026-11-04T15:05:00.733949",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Delivery Hero."
+    },
+    {
+      "timestamp": "21:23:44",
+      "datetime": "2026-11-04T21:23:44.920610",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "00:39:10",
+      "datetime": "2026-11-05T00:39:10.231155",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "01:37:54",
+      "datetime": "2026-11-05T01:37:54.664616",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "08:57:03",
+      "datetime": "2026-11-05T08:57:03.845805",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "17:11:42",
+      "datetime": "2026-11-05T17:11:42.342512",
+      "level": "INFO",
+      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
+    },
+    {
+      "timestamp": "17:11:47",
+      "datetime": "2026-11-05T17:11:47.601115",
+      "level": "SUCCESS",
+      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
+    },
+    {
+      "timestamp": "17:11:47",
+      "datetime": "2026-11-05T17:11:47.603131",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 1 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "17:11:47",
+      "datetime": "2026-11-05T17:11:47.604325",
       "level": "INFO",
       "message": "Initiating autonomous application: 'Intern Venture Building (m/w/d)' at suhm ventures GmbH (ID: job-linkedin-4487278318)"
     },
     {
-      "timestamp": "16:04:03",
-      "datetime": "2026-11-06T16:04:03.792970",
+      "timestamp": "17:11:47",
+      "datetime": "2026-11-05T17:11:47.613401",
       "level": "SUCCESS",
       "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4487278318.pdf"
     },
     {
-      "timestamp": "16:04:03",
-      "datetime": "2026-11-06T16:04:03.798445",
+      "timestamp": "17:11:47",
+      "datetime": "2026-11-05T17:11:47.615368",
       "level": "SUCCESS",
       "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4487278318.pdf"
     },
     {
-      "timestamp": "16:04:03",
-      "datetime": "2026-11-06T16:04:03.821645",
+      "timestamp": "17:11:47",
+      "datetime": "2026-11-05T17:11:47.617718",
       "level": "SUCCESS",
       "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
     },
     {
-      "timestamp": "16:04:03",
-      "datetime": "2026-11-06T16:04:03.856698",
+      "timestamp": "17:11:47",
+      "datetime": "2026-11-05T17:11:47.631826",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for suhm ventures GmbH."
     },
     {
-      "timestamp": "16:05:05",
-      "datetime": "2026-11-06T16:05:05.994975",
+      "timestamp": "22:45:41",
+      "datetime": "2026-11-05T22:45:41.960445",
       "level": "INFO",
       "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
     },
     {
-      "timestamp": "16:06:06",
-      "datetime": "2026-11-06T16:06:06.066157",
+      "timestamp": "00:37:29",
+      "datetime": "2026-11-06T00:37:29.718861",
       "level": "INFO",
       "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
     },
     {
-      "timestamp": "16:07:06",
-      "datetime": "2026-11-06T16:07:06.117733",
+      "timestamp": "03:09:16",
+      "datetime": "2026-11-06T03:09:16.300904",
       "level": "INFO",
       "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
     },
     {
-      "timestamp": "16:08:06",
-      "datetime": "2026-11-06T16:08:06.158909",
+      "timestamp": "11:18:44",
+      "datetime": "2026-11-06T11:18:44.516999",
       "level": "INFO",
       "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
     },
     {
-      "timestamp": "16:09:06",
-      "datetime": "2026-11-06T16:09:06.199414",
+      "timestamp": "18:13:20",
+      "datetime": "2026-11-06T18:13:20.985687",
+      "level": "INFO",
+      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
+    },
+    {
+      "timestamp": "18:13:26",
+      "datetime": "2026-11-06T18:13:26.593138",
+      "level": "SUCCESS",
+      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
+    },
+    {
+      "timestamp": "18:13:26",
+      "datetime": "2026-11-06T18:13:26.594344",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 1 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "18:13:26",
+      "datetime": "2026-11-06T18:13:26.606421",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Werkstudent (w/m/d) Project Management Excellence' at Siemens AG (ID: job-ba-12465_1651857_1_S)"
+    },
+    {
+      "timestamp": "18:13:26",
+      "datetime": "2026-11-06T18:13:26.616156",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-ba-12465_1651857_1_S.pdf"
+    },
+    {
+      "timestamp": "18:13:26",
+      "datetime": "2026-11-06T18:13:26.617417",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-ba-12465_1651857_1_S.pdf"
+    },
+    {
+      "timestamp": "18:13:26",
+      "datetime": "2026-11-06T18:13:26.619384",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "18:13:26",
+      "datetime": "2026-11-06T18:13:26.625833",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Siemens AG."
+    },
+    {
+      "timestamp": "23:23:37",
+      "datetime": "2026-11-06T23:23:37.023717",
       "level": "INFO",
       "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
     },
     {
-      "timestamp": "16:10:06",
-      "datetime": "2026-11-06T16:10:06.238669",
+      "timestamp": "23:53:04",
+      "datetime": "2026-11-06T23:53:04.985793",
       "level": "INFO",
       "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
     },
     {
-      "timestamp": "16:11:06",
-      "datetime": "2026-11-06T16:11:06.281654",
+      "timestamp": "03:00:09",
+      "datetime": "2026-11-07T03:00:09.349175",
       "level": "INFO",
       "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
     },
     {
-      "timestamp": "16:12:06",
-      "datetime": "2026-11-06T16:12:06.322428",
+      "timestamp": "03:45:21",
+      "datetime": "2026-11-07T03:45:21.013565",
       "level": "INFO",
       "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
     },
     {
-      "timestamp": "16:13:06",
-      "datetime": "2026-11-06T16:13:06.392113",
+      "timestamp": "09:55:02",
+      "datetime": "2026-11-07T09:55:02.081206",
       "level": "INFO",
       "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
     },
     {
-      "timestamp": "16:14:06",
-      "datetime": "2026-11-06T16:14:06.602038",
+      "timestamp": "16:06:03",
+      "datetime": "2026-11-07T16:06:03.391781",
       "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
     },
     {
-      "timestamp": "16:15:06",
-      "datetime": "2026-11-06T16:15:06.755915",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+      "timestamp": "16:06:08",
+      "datetime": "2026-11-07T16:06:08.567221",
+      "level": "SUCCESS",
+      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
     },
     {
-      "timestamp": "16:16:06",
-      "datetime": "2026-11-06T16:16:06.921402",
+      "timestamp": "16:06:08",
+      "datetime": "2026-11-07T16:06:08.568835",
       "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+      "message": "Radar scan: 16 active jobs, 1 meeting freshness (<=7d) & criteria."
     },
     {
-      "timestamp": "16:17:06",
-      "datetime": "2026-11-06T16:17:06.973779",
+      "timestamp": "16:06:08",
+      "datetime": "2026-11-07T16:06:08.625538",
       "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+      "message": "Initiating autonomous application: 'Growth Intern (m/w/d)' at dsb (ID: job-linkedin-4486645435)"
     },
     {
-      "timestamp": "16:18:07",
-      "datetime": "2026-11-06T16:18:07.027907",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+      "timestamp": "16:06:08",
+      "datetime": "2026-11-07T16:06:08.628526",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4486645435.pdf"
     },
     {
-      "timestamp": "16:19:07",
-      "datetime": "2026-11-06T16:19:07.075099",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+      "timestamp": "16:06:08",
+      "datetime": "2026-11-07T16:06:08.638973",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4486645435.pdf"
     },
     {
-      "timestamp": "16:20:07",
-      "datetime": "2026-11-06T16:20:07.115138",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+      "timestamp": "16:06:08",
+      "datetime": "2026-11-07T16:06:08.639760",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
     },
     {
-      "timestamp": "16:21:07",
-      "datetime": "2026-11-06T16:21:07.156045",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "16:22:07",
-      "datetime": "2026-11-06T16:22:07.218936",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "16:23:07",
-      "datetime": "2026-11-06T16:23:07.266943",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "16:24:07",
-      "datetime": "2026-11-06T16:24:07.313233",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "16:25:07",
-      "datetime": "2026-11-06T16:25:07.354546",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "16:26:07",
-      "datetime": "2026-11-06T16:26:07.404267",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "16:27:07",
-      "datetime": "2026-11-06T16:27:07.454070",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "16:28:07",
-      "datetime": "2026-11-06T16:28:07.548707",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "16:29:07",
-      "datetime": "2026-11-06T16:29:07.594144",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "16:30:23",
-      "datetime": "2026-11-06T16:30:23.004371",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "16:31:32",
-      "datetime": "2026-11-06T16:31:32.946800",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "16:32:33",
-      "datetime": "2026-11-06T16:32:33.003699",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "16:33:33",
-      "datetime": "2026-11-06T16:33:33.061145",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "16:34:33",
-      "datetime": "2026-11-06T16:34:33.110252",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "16:35:33",
-      "datetime": "2026-11-06T16:35:33.159042",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "16:36:33",
-      "datetime": "2026-11-06T16:36:33.221080",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "16:37:33",
-      "datetime": "2026-11-06T16:37:33.275442",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "16:38:33",
-      "datetime": "2026-11-06T16:38:33.323130",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "16:39:33",
-      "datetime": "2026-11-06T16:39:33.374018",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "16:40:33",
-      "datetime": "2026-11-06T16:40:33.436656",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "16:41:33",
-      "datetime": "2026-11-06T16:41:33.485967",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "16:42:33",
-      "datetime": "2026-11-06T16:42:33.535182",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "16:43:34",
-      "datetime": "2026-11-06T16:43:34.075425",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "16:44:34",
-      "datetime": "2026-11-06T16:44:34.149729",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "16:45:34",
-      "datetime": "2026-11-06T16:45:34.196924",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "16:46:34",
-      "datetime": "2026-11-06T16:46:34.252307",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "16:47:34",
-      "datetime": "2026-11-06T16:47:34.301891",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "16:48:34",
-      "datetime": "2026-11-06T16:48:34.350302",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "16:49:34",
-      "datetime": "2026-11-06T16:49:34.426978",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "16:50:34",
-      "datetime": "2026-11-06T16:50:34.511251",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "16:51:34",
-      "datetime": "2026-11-06T16:51:34.581500",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "16:52:34",
-      "datetime": "2026-11-06T16:52:34.645534",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "16:53:34",
-      "datetime": "2026-11-06T16:53:34.710126",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+      "timestamp": "16:06:08",
+      "datetime": "2026-11-07T16:06:08.646522",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for dsb."
     }
   ]
 }

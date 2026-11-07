@@ -209,9 +209,9 @@
       "test_status": "Tested on 100k vectors in local Docker; not tested on multi-node distributed clusters yet",
       "file": "linkedin/queue/candidate_21_qdrant_bq.md",
       "visual": "linkedin/visuals/visual_qdrant_bq.png",
-      "published_at": "2026-11-06T15:30:12Z",
-      "linkedin_post_id": "urn:li:share:7524493337459011584",
-      "linkedin_post_url": "https://www.linkedin.com/feed/update/urn:li:share:7524493337459011584/"
+      "published_at": "2026-11-05T08:57:03Z",
+      "linkedin_post_id": "urn:li:share:7524032012316499968",
+      "linkedin_post_url": "https://www.linkedin.com/feed/update/urn:li:share:7524032012316499968/"
     },
     {
       "id": 22,
@@ -227,9 +227,9 @@
       "test_status": "Tested on technical PDFs and financial reports in local Docker; not tested on 500-page scanned handwritten manuscripts yet",
       "file": "linkedin/queue/candidate_22_docling.md",
       "visual": "",
-      "published_at": "2026-11-06T15:31:24Z",
-      "linkedin_post_id": "urn:li:share:7524493645022916608",
-      "linkedin_post_url": "https://www.linkedin.com/feed/update/urn:li:share:7524493645022916608/"
+      "published_at": "2026-11-05T17:11:42Z",
+      "linkedin_post_id": "urn:li:share:7524156498525138944",
+      "linkedin_post_url": "https://www.linkedin.com/feed/update/urn:li:share:7524156498525138944/"
     },
     {
       "id": 23,
@@ -238,13 +238,16 @@
       "beat": "Everyday AI Automation",
       "score": 95,
       "human_quality_score": 85.9,
-      "status": "APPROVED",
+      "status": "PUBLISHED",
       "format": "image-attached",
       "replaces": "Proprietary cloud WebRTC platforms (LiveKit $50/mo, Twilio Voice gateways)",
       "cost": "Free Apache 2.0 code; runs on self-hosted Docker and FastAPI",
       "test_status": "Tested in local Docker with Python 3.11 and Whisper on 16GB GPU; not benchmarked across 500 concurrent WebRTC streams yet",
       "file": "linkedin/queue/candidate_23_fastrtc.md",
-      "visual": "linkedin/visuals/visual_fastrtc.png"
+      "visual": "linkedin/visuals/visual_fastrtc.png",
+      "published_at": "2026-11-06T11:18:44Z",
+      "linkedin_post_id": "urn:li:share:7524430055381364737",
+      "linkedin_post_url": "https://www.linkedin.com/feed/update/urn:li:share:7524430055381364737/"
     },
     {
       "id": 24,
@@ -253,15 +256,18 @@
       "beat": "AI Hardware & Local Inference",
       "score": 94,
       "human_quality_score": 85.7,
-      "status": "APPROVED",
+      "status": "PUBLISHED",
       "format": "image-attached",
       "replaces": "Naive unbatched FastAPI endpoints & heavyweight enterprise Triton clusters",
       "cost": "Free Apache 2.0 code; cuts GPU hosting costs by up to 75% via dynamic batching",
       "test_status": "Tested on local 16GB VRAM GPU with PyTorch and vLLM; not tested across multi-node Kubernetes clusters yet",
       "file": "linkedin/queue/candidate_24_litserve.md",
-      "visual": "linkedin/visuals/visual_litserve.png"
+      "visual": "linkedin/visuals/visual_litserve.png",
+      "published_at": "2026-11-06T18:13:20Z",
+      "linkedin_post_id": "urn:li:share:7524534393856745474",
+      "linkedin_post_url": "https://www.linkedin.com/feed/update/urn:li:share:7524534393856745474/"
     }
   ],
-  "updated_at": "2026-11-06T16:53:34.692372",
+  "updated_at": "2026-11-07T16:06:03.391421",
   "auto_approve_enabled": true
 }

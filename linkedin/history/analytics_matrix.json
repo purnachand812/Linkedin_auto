@@ -1,14 +1,38 @@
 {
-  "updated_at": "2026-11-06T16:53:34.712593",
-  "total_posts": 20,
+  "updated_at": "2026-11-07T16:06:10.650106",
+  "total_posts": 22,
   "target_region": "European Union (CET/CEST)",
   "data_integrity": "Verified Ground Truth",
   "posts_analytics": [
     {
+      "candidate_id": 24,
+      "topic": "LitServe (Multi-Worker Dynamic Batching Engine vs Naive FastAPI)",
+      "published_at": "2026-11-06T18:13:20Z",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7524534393856745474/",
+      "impressions": 0,
+      "reactions": 0,
+      "comments": 0,
+      "reposts": 0,
+      "status": "ACCUMULATING",
+      "notes": "Fresh drop; awaiting next live telemetry sync."
+    },
+    {
+      "candidate_id": 23,
+      "topic": "Hugging Face FastRTC (Real-Time Bidirectional Voice & WebRTC Agents)",
+      "published_at": "2026-11-06T11:18:44Z",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7524430055381364737/",
+      "impressions": 0,
+      "reactions": 0,
+      "comments": 0,
+      "reposts": 0,
+      "status": "ACCUMULATING",
+      "notes": "Fresh drop; awaiting next live telemetry sync."
+    },
+    {
       "candidate_id": 22,
       "topic": "IBM Docling (Local Layout-Aware PDF & Table Parser for RAG)",
-      "published_at": "2026-11-06T15:31:24Z",
-      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7524493645022916608/",
+      "published_at": "2026-11-05T17:11:42Z",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7524156498525138944/",
       "impressions": 0,
       "reactions": 0,
       "comments": 0,
@@ -19,8 +43,8 @@
     {
       "candidate_id": 21,
       "topic": "Qdrant Binary Quantization (16x Vector Memory Compression for Local RAG)",
-      "published_at": "2026-11-06T15:30:12Z",
-      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7524493337459011584/",
+      "published_at": "2026-11-05T08:57:03Z",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7524032012316499968/",
       "impressions": 0,
       "reactions": 0,
       "comments": 0,
