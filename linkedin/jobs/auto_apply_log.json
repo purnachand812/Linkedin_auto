@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "19:02:30",
-      "datetime": "2026-11-03T19:02:30.735363",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4485797793.pdf"
-    },
-    {
-      "timestamp": "19:02:30",
       "datetime": "2026-11-03T19:02:30.737559",
       "level": "SUCCESS",
       "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
@@ -357,6 +351,12 @@
     {
       "timestamp": "20:24:45",
       "datetime": "2026-11-07T20:24:45.017647",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "23:15:24",
+      "datetime": "2026-11-07T23:15:24.694948",
       "level": "INFO",
       "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
