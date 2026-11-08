@@ -1,12 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "15:04:53",
-      "datetime": "2026-11-04T15:04:53.339161",
-      "level": "INFO",
-      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
-    },
-    {
       "timestamp": "15:04:58",
       "datetime": "2026-11-04T15:04:58.644426",
       "level": "SUCCESS",
@@ -357,6 +351,12 @@
     {
       "timestamp": "17:12:29",
       "datetime": "2026-11-08T17:12:29.683667",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "21:18:25",
+      "datetime": "2026-11-08T21:18:25.503323",
       "level": "INFO",
       "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
