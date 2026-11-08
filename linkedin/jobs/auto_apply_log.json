@@ -1,12 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "19:02:30",
-      "datetime": "2026-11-03T19:02:30.758281",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for Pflegia."
-    },
-    {
       "timestamp": "00:04:26",
       "datetime": "2026-11-04T00:04:26.203601",
       "level": "INFO",
@@ -357,6 +351,12 @@
     {
       "timestamp": "23:47:43",
       "datetime": "2026-11-07T23:47:43.928505",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "03:24:38",
+      "datetime": "2026-11-08T03:24:38.247503",
       "level": "INFO",
       "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
