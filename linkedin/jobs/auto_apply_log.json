@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "15:04:58",
-      "datetime": "2026-11-04T15:04:58.644426",
-      "level": "SUCCESS",
-      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
-    },
-    {
-      "timestamp": "15:04:58",
       "datetime": "2026-11-04T15:04:58.645882",
       "level": "INFO",
       "message": "Radar scan: 16 active jobs, 2 meeting freshness (<=7d) & criteria."
@@ -357,6 +351,12 @@
     {
       "timestamp": "21:18:25",
       "datetime": "2026-11-08T21:18:25.503323",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "23:18:08",
+      "datetime": "2026-11-08T23:18:08.957669",
       "level": "INFO",
       "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
