@@ -33,19 +33,19 @@
     "[18:13:20] \ud83c\udf89 Successfully published Candidate #24! Live URL: https://www.linkedin.com/feed/update/urn:li:share:7524534393856745474/",
     "[18:13:20] \u26a0\ufe0f Reply template refresh warning: No module named 'bs4'"
   ],
-  "current_time_cet": "2026-11-08 00:47:43 CET",
+  "current_time_cet": "2026-11-08 05:27:11 CET",
   "is_eu_prime_time": false,
   "current_window": "Off-Peak / Monitoring",
-  "next_scheduled_drop": "Morning Standup (Prime) at 08:00 CET (~432m from now)",
+  "next_scheduled_drop": "Morning Standup (Prime) at 08:00 CET (~152m from now)",
   "approved_queue_count": 0,
   "published_today": 0,
   "target_audience": "European Union (Berlin, Munich, Amsterdam, Paris, Zurich)",
   "auto_publish_enabled": true,
-  "last_heartbeat": "2026-11-07T23:47:43.932046",
+  "last_heartbeat": "2026-11-08T04:27:11.278786",
   "last_activity": "[18:13:20] \u26a0\ufe0f Reply template refresh warning: No module named 'bs4'",
   "auto_apply_telemetry": {
     "enabled": true,
-    "applied_today": 1,
+    "applied_today": 0,
     "daily_limit": 5,
     "status": "RUNNING"
   },
