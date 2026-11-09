@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "15:04:58",
-      "datetime": "2026-11-04T15:04:58.645882",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 2 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "15:04:58",
       "datetime": "2026-11-04T15:04:58.683432",
       "level": "INFO",
       "message": "Initiating autonomous application: 'Working Student \u2013 Quantitative Research (m/f/d)' at YUKKA (ID: job-linkedin-4485068971)"
@@ -357,6 +351,12 @@
     {
       "timestamp": "23:18:08",
       "datetime": "2026-11-08T23:18:08.957669",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "01:06:57",
+      "datetime": "2026-11-09T01:06:57.868742",
       "level": "INFO",
       "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
