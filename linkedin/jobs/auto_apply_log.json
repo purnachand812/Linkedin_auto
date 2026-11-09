@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "15:04:58",
-      "datetime": "2026-11-04T15:04:58.687255",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4485068971.pdf"
-    },
-    {
-      "timestamp": "15:04:58",
-      "datetime": "2026-11-04T15:04:58.702412",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "15:04:58",
-      "datetime": "2026-11-04T15:04:58.717754",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for YUKKA."
-    },
-    {
-      "timestamp": "15:05:00",
-      "datetime": "2026-11-04T15:05:00.718668",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Intern, Data Engineer - People & Culture' at Delivery Hero (ID: job-linkedin-4486350173)"
-    },
-    {
-      "timestamp": "15:05:00",
-      "datetime": "2026-11-04T15:05:00.724753",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4486350173.pdf"
-    },
-    {
-      "timestamp": "15:05:00",
-      "datetime": "2026-11-04T15:05:00.725565",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4486350173.pdf"
-    },
-    {
-      "timestamp": "15:05:00",
-      "datetime": "2026-11-04T15:05:00.726367",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "15:05:00",
-      "datetime": "2026-11-04T15:05:00.733949",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for Delivery Hero."
-    },
-    {
       "timestamp": "21:23:44",
       "datetime": "2026-11-04T21:23:44.920610",
       "level": "INFO",
@@ -359,6 +311,54 @@
       "datetime": "2026-11-09T08:25:19.317346",
       "level": "INFO",
       "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "19:00:17",
+      "datetime": "2026-11-09T19:00:17.328943",
+      "level": "INFO",
+      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
+    },
+    {
+      "timestamp": "19:00:22",
+      "datetime": "2026-11-09T19:00:22.329913",
+      "level": "SUCCESS",
+      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
+    },
+    {
+      "timestamp": "19:00:22",
+      "datetime": "2026-11-09T19:00:22.332133",
+      "level": "INFO",
+      "message": "Radar scan: 15 active jobs, 1 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "19:00:22",
+      "datetime": "2026-11-09T19:00:22.333209",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Build Your Own Internship (m/w/d)' at inca (ID: job-linkedin-4487170044)"
+    },
+    {
+      "timestamp": "19:00:22",
+      "datetime": "2026-11-09T19:00:22.336957",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4487170044.pdf"
+    },
+    {
+      "timestamp": "19:00:22",
+      "datetime": "2026-11-09T19:00:22.339024",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4487170044.pdf"
+    },
+    {
+      "timestamp": "19:00:22",
+      "datetime": "2026-11-09T19:00:22.341138",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "19:00:22",
+      "datetime": "2026-11-09T19:00:22.353345",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for inca."
     }
   ]
 }

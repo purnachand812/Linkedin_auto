@@ -1,5 +1,25 @@
 [
   {
+    "job_id": "job-linkedin-4487170044",
+    "title": "Build Your Own Internship (m/w/d)",
+    "company": "inca",
+    "location": "Berlin, Berlin, Germany",
+    "salary_range": "\u20ac1,200 - \u20ac1,800 / mo",
+    "match_score": 92,
+    "applied_at": "2026-11-09T19:00:22.347163",
+    "job_url": "https://www.linkedin.com/jobs/view/4487170044/",
+    "resume_url": "/resumes/resume_job-linkedin-4487170044.pdf",
+    "cover_letter_url": "/resumes/cover_letter_job-linkedin-4487170044.pdf",
+    "packet_file": "linkedin/jobs/packets/packet_job-linkedin-4487170044.json",
+    "mode": "AUTONOMOUS_DAEMON",
+    "recruiter_outreach_note": "Hi Hiring Team, I saw inca's opening for Build Your Own Internship (m/w/d) in Berlin, Berlin, Germany. I am an MSc Data Science student based in Berlin (GISMA University) researching hallucination attribution in multi-step LLM agent trajectories. I have hands-on experience building Python ML pipelines, SQL/Redis backends, and typed FastAPI agent services, with full German Werkstudent work authorization. I submitted my application and would be glad to connect.",
+    "status": "APPLIED_CONFIRMED",
+    "resume_pdf_url": "/resumes/resume_job-linkedin-4487170044.pdf",
+    "cover_letter_pdf_url": "/resumes/cover_letter_job-linkedin-4487170044.pdf",
+    "resume_html_url": "/resumes/resume_job-linkedin-4487170044.html",
+    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4487170044.html"
+  },
+  {
     "job_id": "job-linkedin-4486645435",
     "title": "Growth Intern (m/w/d)",
     "company": "dsb",
