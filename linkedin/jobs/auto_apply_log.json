@@ -1,174 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "08:57:03",
-      "datetime": "2026-11-05T08:57:03.845805",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "17:11:42",
-      "datetime": "2026-11-05T17:11:42.342512",
-      "level": "INFO",
-      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
-    },
-    {
-      "timestamp": "17:11:47",
-      "datetime": "2026-11-05T17:11:47.601115",
-      "level": "SUCCESS",
-      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
-    },
-    {
-      "timestamp": "17:11:47",
-      "datetime": "2026-11-05T17:11:47.603131",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 1 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "17:11:47",
-      "datetime": "2026-11-05T17:11:47.604325",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Intern Venture Building (m/w/d)' at suhm ventures GmbH (ID: job-linkedin-4487278318)"
-    },
-    {
-      "timestamp": "17:11:47",
-      "datetime": "2026-11-05T17:11:47.613401",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4487278318.pdf"
-    },
-    {
-      "timestamp": "17:11:47",
-      "datetime": "2026-11-05T17:11:47.615368",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4487278318.pdf"
-    },
-    {
-      "timestamp": "17:11:47",
-      "datetime": "2026-11-05T17:11:47.617718",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "17:11:47",
-      "datetime": "2026-11-05T17:11:47.631826",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for suhm ventures GmbH."
-    },
-    {
-      "timestamp": "22:45:41",
-      "datetime": "2026-11-05T22:45:41.960445",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "00:37:29",
-      "datetime": "2026-11-06T00:37:29.718861",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "03:09:16",
-      "datetime": "2026-11-06T03:09:16.300904",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "11:18:44",
-      "datetime": "2026-11-06T11:18:44.516999",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "18:13:20",
-      "datetime": "2026-11-06T18:13:20.985687",
-      "level": "INFO",
-      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
-    },
-    {
-      "timestamp": "18:13:26",
-      "datetime": "2026-11-06T18:13:26.593138",
-      "level": "SUCCESS",
-      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
-    },
-    {
-      "timestamp": "18:13:26",
-      "datetime": "2026-11-06T18:13:26.594344",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 1 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "18:13:26",
-      "datetime": "2026-11-06T18:13:26.606421",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Werkstudent (w/m/d) Project Management Excellence' at Siemens AG (ID: job-ba-12465_1651857_1_S)"
-    },
-    {
-      "timestamp": "18:13:26",
-      "datetime": "2026-11-06T18:13:26.616156",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-ba-12465_1651857_1_S.pdf"
-    },
-    {
-      "timestamp": "18:13:26",
-      "datetime": "2026-11-06T18:13:26.617417",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-ba-12465_1651857_1_S.pdf"
-    },
-    {
-      "timestamp": "18:13:26",
-      "datetime": "2026-11-06T18:13:26.619384",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "18:13:26",
-      "datetime": "2026-11-06T18:13:26.625833",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for Siemens AG."
-    },
-    {
-      "timestamp": "23:23:37",
-      "datetime": "2026-11-06T23:23:37.023717",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "23:53:04",
-      "datetime": "2026-11-06T23:53:04.985793",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "03:00:09",
-      "datetime": "2026-11-07T03:00:09.349175",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "03:45:21",
-      "datetime": "2026-11-07T03:45:21.013565",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "09:55:02",
-      "datetime": "2026-11-07T09:55:02.081206",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "16:06:03",
-      "datetime": "2026-11-07T16:06:03.391781",
-      "level": "INFO",
-      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
-    },
-    {
-      "timestamp": "16:06:08",
-      "datetime": "2026-11-07T16:06:08.567221",
-      "level": "SUCCESS",
-      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
-    },
-    {
       "timestamp": "16:06:08",
       "datetime": "2026-11-07T16:06:08.568835",
       "level": "INFO",
@@ -359,6 +191,174 @@
       "datetime": "2026-11-10T10:12:55.205457",
       "level": "INFO",
       "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "18:03:55",
+      "datetime": "2026-11-10T18:03:55.505533",
+      "level": "INFO",
+      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
+    },
+    {
+      "timestamp": "18:04:01",
+      "datetime": "2026-11-10T18:04:01.247396",
+      "level": "SUCCESS",
+      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
+    },
+    {
+      "timestamp": "18:04:01",
+      "datetime": "2026-11-10T18:04:01.248715",
+      "level": "INFO",
+      "message": "Radar scan: 13 active jobs, 5 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "18:04:01",
+      "datetime": "2026-11-10T18:04:01.250228",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Werkstudent (w/m/d) KI-gest\u00fctzte Software- und Plattformentwicklung' at Siemens AG (ID: job-ba-12465_1646595_2_S)"
+    },
+    {
+      "timestamp": "18:04:01",
+      "datetime": "2026-11-10T18:04:01.261153",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-ba-12465_1646595_2_S.pdf"
+    },
+    {
+      "timestamp": "18:04:01",
+      "datetime": "2026-11-10T18:04:01.262049",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-ba-12465_1646595_2_S.pdf"
+    },
+    {
+      "timestamp": "18:04:01",
+      "datetime": "2026-11-10T18:04:01.262887",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "18:04:01",
+      "datetime": "2026-11-10T18:04:01.269618",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Siemens AG."
+    },
+    {
+      "timestamp": "18:04:03",
+      "datetime": "2026-11-10T18:04:03.270590",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'AI Builder Intern (m/f/d)' at inca (ID: job-linkedin-4489199360)"
+    },
+    {
+      "timestamp": "18:04:03",
+      "datetime": "2026-11-10T18:04:03.272977",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4489199360.pdf"
+    },
+    {
+      "timestamp": "18:04:03",
+      "datetime": "2026-11-10T18:04:03.273716",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4489199360.pdf"
+    },
+    {
+      "timestamp": "18:04:03",
+      "datetime": "2026-11-10T18:04:03.274455",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "18:04:03",
+      "datetime": "2026-11-10T18:04:03.280663",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for inca."
+    },
+    {
+      "timestamp": "18:04:05",
+      "datetime": "2026-11-10T18:04:05.281527",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Werkstudent (m/w/d) Sales \u2013 Healthcare Software' at samedi GmbH (ID: job-linkedin-4488133414)"
+    },
+    {
+      "timestamp": "18:04:05",
+      "datetime": "2026-11-10T18:04:05.286852",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4488133414.pdf"
+    },
+    {
+      "timestamp": "18:04:05",
+      "datetime": "2026-11-10T18:04:05.288058",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4488133414.pdf"
+    },
+    {
+      "timestamp": "18:04:05",
+      "datetime": "2026-11-10T18:04:05.289337",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "18:04:05",
+      "datetime": "2026-11-10T18:04:05.299992",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for samedi GmbH."
+    },
+    {
+      "timestamp": "18:04:07",
+      "datetime": "2026-11-10T18:04:07.301460",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Founder\u2019s Associate Werkstudent:in' at Northbound (ID: job-linkedin-4485060955)"
+    },
+    {
+      "timestamp": "18:04:07",
+      "datetime": "2026-11-10T18:04:07.307351",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4485060955.pdf"
+    },
+    {
+      "timestamp": "18:04:07",
+      "datetime": "2026-11-10T18:04:07.308720",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4485060955.pdf"
+    },
+    {
+      "timestamp": "18:04:07",
+      "datetime": "2026-11-10T18:04:07.311149",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "18:04:07",
+      "datetime": "2026-11-10T18:04:07.322652",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Northbound."
+    },
+    {
+      "timestamp": "18:04:09",
+      "datetime": "2026-11-10T18:04:09.324796",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Werkstudent Softwareentwicklung (m/w/d)' at Nhas Food 1993 GmbH (ID: job-linkedin-4485091766)"
+    },
+    {
+      "timestamp": "18:04:09",
+      "datetime": "2026-11-10T18:04:09.332104",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4485091766.pdf"
+    },
+    {
+      "timestamp": "18:04:09",
+      "datetime": "2026-11-10T18:04:09.335957",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4485091766.pdf"
+    },
+    {
+      "timestamp": "18:04:09",
+      "datetime": "2026-11-10T18:04:09.337197",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "18:04:09",
+      "datetime": "2026-11-10T18:04:09.364516",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Nhas Food 1993 GmbH."
     }
   ]
 }

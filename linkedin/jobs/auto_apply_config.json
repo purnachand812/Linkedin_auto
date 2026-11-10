@@ -16,9 +16,9 @@
     "Hybrid Berlin"
   ],
   "today_date": "2026-11-10",
-  "applied_today": 0,
-  "last_run": "2026-11-09T19:00:22.354174",
+  "applied_today": 5,
+  "last_run": "2026-11-10T18:04:09.367656",
   "status": "RUNNING",
   "anti_ban_delay_seconds": 2,
-  "last_refresh_timestamp": "2026-11-09T19:00:17.328927"
+  "last_refresh_timestamp": "2026-11-10T18:03:55.505522"
 }
