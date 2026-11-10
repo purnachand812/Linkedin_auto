@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "16:06:08",
-      "datetime": "2026-11-07T16:06:08.568835",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 1 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "16:06:08",
       "datetime": "2026-11-07T16:06:08.625538",
       "level": "INFO",
       "message": "Initiating autonomous application: 'Growth Intern (m/w/d)' at dsb (ID: job-linkedin-4486645435)"
@@ -359,6 +353,12 @@
       "datetime": "2026-11-10T18:04:09.364516",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for Nhas Food 1993 GmbH."
+    },
+    {
+      "timestamp": "23:37:44",
+      "datetime": "2026-11-10T23:37:44.857028",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
     }
   ]
 }
