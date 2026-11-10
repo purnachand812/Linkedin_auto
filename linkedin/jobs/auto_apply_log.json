@@ -1,12 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "21:23:44",
-      "datetime": "2026-11-04T21:23:44.920610",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
       "timestamp": "00:39:10",
       "datetime": "2026-11-05T00:39:10.231155",
       "level": "INFO",
@@ -359,6 +353,12 @@
       "datetime": "2026-11-09T19:00:22.353345",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for inca."
+    },
+    {
+      "timestamp": "02:20:05",
+      "datetime": "2026-11-10T02:20:05.572930",
+      "level": "INFO",
+      "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
   ]
 }
