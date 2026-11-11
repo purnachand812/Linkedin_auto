@@ -1,240 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "19:02:30",
-      "datetime": "2026-11-03T19:02:30.722406",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Praktikum im Business Development - Datenanalyse & Plattformmanagement (m/w/d)' at Pflegia (ID: job-linkedin-4485797793)"
-    },
-    {
-      "timestamp": "19:02:30",
-      "datetime": "2026-11-03T19:02:30.733792",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4485797793.pdf"
-    },
-    {
-      "timestamp": "19:02:30",
-      "datetime": "2026-11-03T19:02:30.735363",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4485797793.pdf"
-    },
-    {
-      "timestamp": "19:02:30",
-      "datetime": "2026-11-03T19:02:30.737559",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "19:02:30",
-      "datetime": "2026-11-03T19:02:30.758281",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for Pflegia."
-    },
-    {
-      "timestamp": "00:04:26",
-      "datetime": "2026-11-04T00:04:26.203601",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "00:16:49",
-      "datetime": "2026-11-04T00:16:49.328373",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "06:50:26",
-      "datetime": "2026-11-04T06:50:26.493539",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "11:43:40",
-      "datetime": "2026-11-04T11:43:40.162120",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "10:44:28",
-      "datetime": "2026-11-04T10:44:28.320359",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "15:04:53",
-      "datetime": "2026-11-04T15:04:53.339161",
-      "level": "INFO",
-      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
-    },
-    {
-      "timestamp": "15:04:58",
-      "datetime": "2026-11-04T15:04:58.644426",
-      "level": "SUCCESS",
-      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
-    },
-    {
-      "timestamp": "15:04:58",
-      "datetime": "2026-11-04T15:04:58.645882",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 2 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "15:04:58",
-      "datetime": "2026-11-04T15:04:58.683432",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Working Student \u2013 Quantitative Research (m/f/d)' at YUKKA (ID: job-linkedin-4485068971)"
-    },
-    {
-      "timestamp": "15:04:58",
-      "datetime": "2026-11-04T15:04:58.686395",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4485068971.pdf"
-    },
-    {
-      "timestamp": "15:04:58",
-      "datetime": "2026-11-04T15:04:58.687255",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4485068971.pdf"
-    },
-    {
-      "timestamp": "15:04:58",
-      "datetime": "2026-11-04T15:04:58.702412",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "15:04:58",
-      "datetime": "2026-11-04T15:04:58.717754",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for YUKKA."
-    },
-    {
-      "timestamp": "15:05:00",
-      "datetime": "2026-11-04T15:05:00.718668",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Intern, Data Engineer - People & Culture' at Delivery Hero (ID: job-linkedin-4486350173)"
-    },
-    {
-      "timestamp": "15:05:00",
-      "datetime": "2026-11-04T15:05:00.724753",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4486350173.pdf"
-    },
-    {
-      "timestamp": "15:05:00",
-      "datetime": "2026-11-04T15:05:00.725565",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4486350173.pdf"
-    },
-    {
-      "timestamp": "15:05:00",
-      "datetime": "2026-11-04T15:05:00.726367",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "15:05:00",
-      "datetime": "2026-11-04T15:05:00.733949",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for Delivery Hero."
-    },
-    {
-      "timestamp": "21:23:44",
-      "datetime": "2026-11-04T21:23:44.920610",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "00:39:10",
-      "datetime": "2026-11-05T00:39:10.231155",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "01:37:54",
-      "datetime": "2026-11-05T01:37:54.664616",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "08:57:03",
-      "datetime": "2026-11-05T08:57:03.845805",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "17:11:42",
-      "datetime": "2026-11-05T17:11:42.342512",
-      "level": "INFO",
-      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
-    },
-    {
-      "timestamp": "17:11:47",
-      "datetime": "2026-11-05T17:11:47.601115",
-      "level": "SUCCESS",
-      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
-    },
-    {
-      "timestamp": "17:11:47",
-      "datetime": "2026-11-05T17:11:47.603131",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 1 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "17:11:47",
-      "datetime": "2026-11-05T17:11:47.604325",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Intern Venture Building (m/w/d)' at suhm ventures GmbH (ID: job-linkedin-4487278318)"
-    },
-    {
-      "timestamp": "17:11:47",
-      "datetime": "2026-11-05T17:11:47.613401",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4487278318.pdf"
-    },
-    {
-      "timestamp": "17:11:47",
-      "datetime": "2026-11-05T17:11:47.615368",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4487278318.pdf"
-    },
-    {
-      "timestamp": "17:11:47",
-      "datetime": "2026-11-05T17:11:47.617718",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "17:11:47",
-      "datetime": "2026-11-05T17:11:47.631826",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for suhm ventures GmbH."
-    },
-    {
-      "timestamp": "22:45:41",
-      "datetime": "2026-11-05T22:45:41.960445",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "00:37:29",
-      "datetime": "2026-11-06T00:37:29.718861",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "03:09:16",
-      "datetime": "2026-11-06T03:09:16.300904",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "11:18:44",
-      "datetime": "2026-11-06T11:18:44.516999",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
       "timestamp": "18:13:20",
       "datetime": "2026-11-06T18:13:20.985687",
       "level": "INFO",
@@ -359,6 +125,240 @@
       "datetime": "2026-11-07T16:06:08.646522",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for dsb."
+    },
+    {
+      "timestamp": "09:12:33",
+      "datetime": "2026-11-11T09:12:33.553343",
+      "level": "INFO",
+      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
+    },
+    {
+      "timestamp": "09:12:41",
+      "datetime": "2026-11-11T09:12:41.232741",
+      "level": "SUCCESS",
+      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
+    },
+    {
+      "timestamp": "09:12:41",
+      "datetime": "2026-11-11T09:12:41.248157",
+      "level": "INFO",
+      "message": "Radar scan: 13 active jobs, 5 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "09:12:41",
+      "datetime": "2026-11-11T09:12:41.255049",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Werkstudent AI Community & Exploration (m/w/d)' at Deutsche Telekom MMS GmbH (ID: job-ba-20478_2371320_S)"
+    },
+    {
+      "timestamp": "09:12:41",
+      "datetime": "2026-11-11T09:12:41.291599",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-ba-20478_2371320_S.pdf"
+    },
+    {
+      "timestamp": "09:12:41",
+      "datetime": "2026-11-11T09:12:41.295698",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-ba-20478_2371320_S.pdf"
+    },
+    {
+      "timestamp": "09:12:41",
+      "datetime": "2026-11-11T09:12:41.315030",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "09:12:41",
+      "datetime": "2026-11-11T09:12:41.350623",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Deutsche Telekom MMS GmbH."
+    },
+    {
+      "timestamp": "09:12:43",
+      "datetime": "2026-11-11T09:12:43.354932",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Werkstudent (w/m/d) KI-gest\u00fctzte Software- und Plattformentwicklung' at Siemens AG (ID: job-ba-12465_1646595_2_S)"
+    },
+    {
+      "timestamp": "09:12:43",
+      "datetime": "2026-11-11T09:12:43.369671",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-ba-12465_1646595_2_S.pdf"
+    },
+    {
+      "timestamp": "09:12:43",
+      "datetime": "2026-11-11T09:12:43.422050",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-ba-12465_1646595_2_S.pdf"
+    },
+    {
+      "timestamp": "09:12:43",
+      "datetime": "2026-11-11T09:12:43.427363",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "09:12:43",
+      "datetime": "2026-11-11T09:12:43.547231",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Siemens AG."
+    },
+    {
+      "timestamp": "09:12:45",
+      "datetime": "2026-11-11T09:12:45.553006",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Build Your Own Internship (m/w/d)' at inca (ID: job-linkedin-4487170044)"
+    },
+    {
+      "timestamp": "09:12:45",
+      "datetime": "2026-11-11T09:12:45.562387",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4487170044.pdf"
+    },
+    {
+      "timestamp": "09:12:45",
+      "datetime": "2026-11-11T09:12:45.568932",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4487170044.pdf"
+    },
+    {
+      "timestamp": "09:12:45",
+      "datetime": "2026-11-11T09:12:45.583022",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "09:12:45",
+      "datetime": "2026-11-11T09:12:45.629600",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for inca."
+    },
+    {
+      "timestamp": "09:12:47",
+      "datetime": "2026-11-11T09:12:47.633041",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'AI Builder Intern (m/f/d)' at inca (ID: job-linkedin-4489199360)"
+    },
+    {
+      "timestamp": "09:12:47",
+      "datetime": "2026-11-11T09:12:47.640047",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4489199360.pdf"
+    },
+    {
+      "timestamp": "09:12:47",
+      "datetime": "2026-11-11T09:12:47.649177",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4489199360.pdf"
+    },
+    {
+      "timestamp": "09:12:47",
+      "datetime": "2026-11-11T09:12:47.661989",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "09:12:47",
+      "datetime": "2026-11-11T09:12:47.705520",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for inca."
+    },
+    {
+      "timestamp": "09:12:49",
+      "datetime": "2026-11-11T09:12:49.709998",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Founder's Associate - Intern (f/m/x) (4-6 months)' at claim.me (ID: job-linkedin-4487158877)"
+    },
+    {
+      "timestamp": "09:12:49",
+      "datetime": "2026-11-11T09:12:49.718784",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4487158877.pdf"
+    },
+    {
+      "timestamp": "09:12:49",
+      "datetime": "2026-11-11T09:12:49.730246",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4487158877.pdf"
+    },
+    {
+      "timestamp": "09:12:49",
+      "datetime": "2026-11-11T09:12:49.744724",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "09:12:49",
+      "datetime": "2026-11-11T09:12:49.800180",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for claim.me."
+    },
+    {
+      "timestamp": "09:13:51",
+      "datetime": "2026-11-11T09:13:51.874880",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "09:14:51",
+      "datetime": "2026-11-11T09:14:51.920145",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "09:15:51",
+      "datetime": "2026-11-11T09:15:51.962115",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "09:16:52",
+      "datetime": "2026-11-11T09:16:52.003560",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "09:17:52",
+      "datetime": "2026-11-11T09:17:52.044045",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "09:18:52",
+      "datetime": "2026-11-11T09:18:52.086830",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "09:19:52",
+      "datetime": "2026-11-11T09:19:52.132670",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "09:21:01",
+      "datetime": "2026-11-11T09:21:01.829375",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "09:21:04",
+      "datetime": "2026-11-11T09:21:04.836907",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "09:22:17",
+      "datetime": "2026-11-11T09:22:17.739602",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "09:23:17",
+      "datetime": "2026-11-11T09:23:17.799696",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
     }
   ]
 }

@@ -1,9 +1,33 @@
 {
-  "updated_at": "2026-11-07T16:06:10.650106",
-  "total_posts": 22,
+  "updated_at": "2026-11-11T09:23:17.804161",
+  "total_posts": 24,
   "target_region": "European Union (CET/CEST)",
   "data_integrity": "Verified Ground Truth",
   "posts_analytics": [
+    {
+      "candidate_id": 26,
+      "topic": "Unsloth (Fast Open-Weight LLM Fine-Tuning & Custom Triton Kernels)",
+      "published_at": "2026-11-11T08:22:09Z",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7526197554255011840/",
+      "impressions": 0,
+      "reactions": 0,
+      "comments": 0,
+      "reposts": 0,
+      "status": "ACCUMULATING",
+      "notes": "Fresh drop; awaiting next live telemetry sync."
+    },
+    {
+      "candidate_id": 25,
+      "topic": "browser-use (Headless Vision-Web Agents & DOM Token Compression)",
+      "published_at": "2026-11-11T08:20:56Z",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7526197249521958912/",
+      "impressions": 0,
+      "reactions": 0,
+      "comments": 0,
+      "reposts": 0,
+      "status": "ACCUMULATING",
+      "notes": "Fresh drop; awaiting next live telemetry sync."
+    },
     {
       "candidate_id": 24,
       "topic": "LitServe (Multi-Worker Dynamic Batching Engine vs Naive FastAPI)",

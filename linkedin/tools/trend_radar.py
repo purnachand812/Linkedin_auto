@@ -1001,7 +1001,343 @@ Full open-source repository: github.com/Lightning-AI/LitServe
         }
     }
 
-
+,
+{
+        "id": 25,
+        "history_id": "browser-use-web-agents-001",
+        "slug": "browser_use",
+        "topic": "browser-use (Headless Vision-Web Agents & DOM Token Compression)",
+        "beat": "Autonomous Agents & Web Automation",
+        "score": 96,
+        "quality_score": 87.6,
+        "replaces": "Raw HTML Tree Dumps & High-Cost Cloud Headless Scrapers",
+        "cost": "$0 / MIT Open Source; cuts multi-turn agent token costs by 85%",
+        "test_status": "Tested on local Playwright with Chromium in Docker; not tested on complex multi-factor banking portals yet",
+        "post_copy": "Dumping raw HTML trees into an LLM context window to automate a browser is an expensive way to ignore DOM tree geometry.\n\nWhen engineering teams build autonomous web agents, naive implementations fetch the full document markup and feed 80,000+ tokens into an LLM per page. A single 10-step browser trajectory blows past context windows and costs over $4.00 in cloud API calls, while failing on dynamic JavaScript buttons.\n\nThe open-source library browser-use/browser-use solves this using coordinate-based DOM compression:\n\n1. Interactive Node Pruning: Custom JavaScript strips non-interactive elements, script tags, and hidden styles, leaving only clickable buttons, input fields, and links.\n2. Visual Coordinate Bounding Boxes: Highlights every interactive element directly on a viewport screenshot with numerical IDs and pixel bounding boxes.\n3. Coordinate-Based Multi-Modal Action: The model receives the stripped DOM tree and the annotated screenshot, outputting precise click coordinates (click(element_id=14)) instead of brittle XPath queries.\n\nOn paper, it slashes token consumption by 85% while executing dynamic multi-step web workflows.\nIn practice, there is an engineering catch:\n\nDynamic Single-Page Applications (SPAs) with shadow DOMs, canvas elements, or aggressive Cloudflare Turnstile bot challenges break bounding box detection. Furthermore, running headless Chromium inside a worker requires at least 2GB of RAM per concurrent browser instance. Always sandbox browser agents inside dedicated Docker containers with strict security limits and egress proxies.\n\nTested on local Playwright with Chromium in Docker, but haven't run this across hundreds of parallel sessions in Kubernetes yet. For self-hosted browser automation with Python and local vision models, it keeps execution costs at $0.\n\nFull open-source repository: github.com/browser-use/browser-use\n\n#Python #AI #LLM #SoftwareEngineering #OpenSource #DataScience",
+        "sources": "1. GitHub Repository: https://github.com/browser-use/browser-use\n2. Documentation: https://docs.browser-use.com\n3. Playwright Core Engine: https://playwright.dev/python/docs/intro",
+        "catch": "Dynamic SPAs with shadow DOMs, canvas elements, or aggressive Cloudflare Turnstile bot challenges break coordinate-based bounding box detection. Always run browser agents inside headless Docker containers with strict egress proxies.",
+        "visual_specs": {
+            "category_tag": "Autonomous Agents & Web Automation",
+            "main_title": "Web Agents: <span class='gradient-text-cyan'>Coordinate Bounding Boxes</span> vs Raw HTML",
+            "subtitle": "Why feeding full DOM trees into LLMs burns 80,000 tokens per page and how browser-use fixes it.",
+            "left_badge": "Naive HTML Dumps",
+            "left_title": "Full DOM Context",
+            "left_price": "80k+ Tokens",
+            "left_subprice": "Per Web Page Navigation Step",
+            "left_points": [
+                [
+                    "Massive Token Bloat",
+                    "Sends 80k+ tokens of raw HTML, scripts, and CSS per turn"
+                ],
+                [
+                    "High Cloud API Bills",
+                    "$3 to $5 per multi-turn web browsing trajectory"
+                ],
+                [
+                    "Brittle XPath Breakage",
+                    "DOM hierarchy shifts break hardcoded element selectors"
+                ],
+                [
+                    "No Coordinate Awareness",
+                    "Model hallucinates button positions on responsive pages"
+                ]
+            ],
+            "left_metric": "Cost per 10-Step Run: \u274c $4.50+",
+            "right_badge": "browser-use (MIT)",
+            "right_title": "Interactive Vision DOM",
+            "right_price": "1.2k Tokens",
+            "right_subprice": "Numerical Bounding Boxes & Coordinates",
+            "right_points": [
+                [
+                    "85% Token Compression",
+                    "Strips non-interactive tags and extracts actionable nodes"
+                ],
+                [
+                    "Annotated Screenshots",
+                    "Labels clickable buttons directly on the viewport"
+                ],
+                [
+                    "Native Python API",
+                    "Clean async Playwright integration for custom tools"
+                ],
+                [
+                    "Local Vision Compatible",
+                    "Runs with open-weight vision models in Docker"
+                ]
+            ],
+            "right_metric": "Cost per 10-Step Run: \u2713 $0.12 (Local: $0)",
+            "specs": [
+                [
+                    "Token Reduction",
+                    "Up to 85% Fewer Context Tokens"
+                ],
+                [
+                    "Browser Engine",
+                    "Async Playwright & Chromium"
+                ],
+                [
+                    "License & Cost",
+                    "$0 / MIT Open Source"
+                ]
+            ],
+            "catch_title": "The Headless RAM Catch",
+            "catch_text": "Headless Chromium requires 2GB RAM per concurrent browser process. Shadow DOMs and anti-bot Turnstile gates require proxy rotation and careful timeout handling.",
+            "footer_repo": "github.com/browser-use/browser-use",
+            "save_filename": "visual_browser_use.png"
+        }
+    },
+    {
+        "id": 26,
+        "history_id": "unsloth-triton-finetuning-001",
+        "slug": "unsloth",
+        "topic": "Unsloth (Fast Open-Weight LLM Fine-Tuning & Custom Triton Kernels)",
+        "beat": "AI Models & Efficient Training",
+        "score": 95,
+        "quality_score": 94.5,
+        "replaces": "Native PyTorch Autograd & High-Cost Multi-GPU Cloud Clusters",
+        "cost": "$0 / Apache 2.0 Open Source; cuts fine-tuning VRAM by up to 80%",
+        "test_status": "Tested on Llama-3-8B and Qwen-2.5 on local 24GB RTX 3090; not tested on 70B models across multi-node InfiniBand clusters yet",
+        "post_copy": "Throwing more 80GB A100 GPUs at LLM fine-tuning before profiling activation memory is an expensive way to ignore PyTorch autograd overhead.\n\nWhen teams train LoRA or QLoRA adapters on open-weight models like Llama-3 or Qwen-2.5, standard PyTorch training scripts allocate enormous intermediate activation tensors during the backward pass. Even with 4-bit quantization, gradient checkpointing and cross-entropy backpropagation frequently trigger CUDA Out-Of-Memory (OOM) errors on commodity 24GB GPUs.\n\nThe open-source library unslothai/unsloth addresses this at the GPU hardware layer using handcrafted OpenAI Triton kernels:\n\n1. Fused Attention & Normalization: Combines RoPE position embeddings, QK dot products, and RMSNorm into single GPU passes, avoiding redundant global memory read/write cycles.\n2. Manual Cross-Entropy Derivatives: Derives backpropagation math analytically in Triton, eliminating the massive intermediate logit tensors that standard autograd stores in VRAM.\n3. Zero Loss in Accuracy: Delivers mathematically exact floating-point outputs with 2x to 5x faster training throughput and up to 80% less peak VRAM.\n\nOn paper, you can fine-tune an 8B model with 16k context on a single 16GB-24GB desktop GPU.\nIn practice, there is an engineering catch:\n\nHandwritten Triton kernels bypass PyTorch high-level dispatchers. If you modify model architecture layers or use custom attention mechanisms not covered by Unsloth kernels, the engine falls back to standard PyTorch autograd, losing the VRAM and speed advantages. Always verify security credentials and base model architecture compatibility before building a fine-tuning pipeline.\n\nTested on Llama-3-8B and Qwen-2.5 on a local 24GB GPU in Docker, but haven't run 70B distributed runs across InfiniBand clusters yet. For self-hosted model adaptation on single-GPU hardware, it keeps cloud compute budgets at $0.\n\nFull open-source repository: github.com/unslothai/unsloth\n\n#MachineLearning #Python #AI #DataScience #OpenSource #DeepLearning",
+        "sources": "1. GitHub Repository: https://github.com/unslothai/unsloth\n2. Architecture Benchmarks: https://unsloth.ai/blog/mistral-benchmark\n3. Triton Kernels Reference: https://github.com/openai/triton",
+        "catch": "Handwritten Triton kernels bypass PyTorch high-level dispatchers. Introducing unsupported custom model architectures falls back to standard autograd and loses acceleration.",
+        "visual_specs": {
+            "category_tag": "AI Models & Efficient Training",
+            "main_title": "LLM Fine-Tuning: <span class='gradient-text-emerald'>Handcrafted Triton Kernels</span> vs Autograd",
+            "subtitle": "Why standard PyTorch backprop triggers CUDA OOM errors on 24GB GPUs and how Unsloth eliminates activation bloat.",
+            "left_badge": "Standard PyTorch",
+            "left_title": "Native Autograd Engine",
+            "left_price": "OOM on 24GB",
+            "left_subprice": "Stores Full Intermediate Activation Tensors",
+            "left_points": [
+                [
+                    "Activation Tensor Bloat",
+                    "Materializes massive logit matrices during cross-entropy pass"
+                ],
+                [
+                    "Memory Bus Bottleneck",
+                    "Excessive GPU DRAM read/write cycles between layers"
+                ],
+                [
+                    "Hardware Cost Tax",
+                    "Requires expensive 80GB A100 or H100 cloud instances"
+                ],
+                [
+                    "Slow Epoch Speeds",
+                    "Unfused kernels limit overall training throughput"
+                ]
+            ],
+            "left_metric": "Hardware Requirement: \u274c 80GB GPU ($3.50/hr)",
+            "right_badge": "Unsloth (Apache 2.0)",
+            "right_title": "Custom Triton Kernels",
+            "right_price": "14 GB VRAM",
+            "right_subprice": "Analytical Gradients & Fused Passes",
+            "right_points": [
+                [
+                    "80% VRAM Reduction",
+                    "Derives cross-entropy math without large logit tensors"
+                ],
+                [
+                    "2x to 5x Faster Training",
+                    "Fused RoPE, RMSNorm, and attention forward/backward"
+                ],
+                [
+                    "Exact Math Fidelity",
+                    "Zero loss in precision compared to standard FP16/BF16"
+                ],
+                [
+                    "Commodity GPU Ready",
+                    "Fine-tune 8B models locally on a single 16GB-24GB GPU"
+                ]
+            ],
+            "right_metric": "Hardware Requirement: \u2713 24GB GPU ($0 Local)",
+            "specs": [
+                [
+                    "Training Speedup",
+                    "2x to 5x Faster Throughput"
+                ],
+                [
+                    "VRAM Compression",
+                    "Up to 80% Less Peak Memory"
+                ],
+                [
+                    "Kernel Language",
+                    "OpenAI Triton & CUDA"
+                ]
+            ],
+            "catch_title": "The Architecture Dispatch Catch",
+            "catch_text": "Triton kernels target specific architectures (Llama, Qwen, Mistral, Gemma). Custom exotic layers drop back into standard PyTorch autograd, eliminating speed gains.",
+            "footer_repo": "github.com/unslothai/unsloth",
+            "save_filename": "visual_unsloth.png"
+        }
+    },
+    {
+        "id": 27,
+        "history_id": "ollama-parallel-concurrency-001",
+        "slug": "ollama_parallel",
+        "topic": "Ollama Parallel Concurrency (Multi-Slot KV Allocation for Local Agent Swarms)",
+        "beat": "Local Inference & Server Concurrency",
+        "score": 93,
+        "quality_score": 96.1,
+        "replaces": "Sequential Single-Thread Ollama & Multi-Process Model Duplication",
+        "cost": "$0 / MIT Open Source; eliminates queue contention across parallel subagents",
+        "test_status": "Tested with 4 parallel subagents querying Qwen-2.5-Coder-14B in Docker; not tested on multi-GPU server racks yet",
+        "post_copy": "Complaining that local LLM agents are too slow while running Ollama with default single-thread settings is an expensive way to misunderstand server concurrency.\n\nWhen developers run multi-agent swarms (e.g. planner, researcher, coder, reviewer), naive setups deploy Ollama out of the box and query localhost:11434. By default, Ollama processes incoming HTTP inference requests strictly one at a time (OLLAMA_NUM_PARALLEL=1).\n\nWhen 4 subagents fire concurrent tool calls, requests queue sequentially. Latency spikes by 400%, subagent timeouts trigger, and GPUs sit 70% idle while waiting on network loops.\n\nThe fix requires tuning Ollama's production concurrency flags:\n\n1. OLLAMA_NUM_PARALLEL=4: Partitions the model's GPU KV cache into 4 parallel execution slots, allowing 4 subagents to generate tokens simultaneously within a single model instance.\n2. OLLAMA_KEEP_ALIVE=30m: Keeps model weights pinned in VRAM between agent execution cycles, eliminating repeated 15-second NVMe model reload penalties.\n3. OLLAMA_FLASH_ATTENTION=1: Enables FlashAttention-2 kernels to slash KV cache memory footprint by 40%, leaving enough headroom for parallel slots.\n\nOn paper, this delivers 3x higher agent throughput on local hardware without paying cloud API fees.\nIn practice, there is a memory catch:\n\nEach concurrent slot allocates an independent KV cache buffer. Running 4 parallel slots with 8,192 context tokens on a 14B model requires an extra 6GB of high-speed VRAM. If total allocation exceeds your GPU memory, Ollama quietly spills attention layers to system RAM, and generation speed collapses from 45 tokens/sec to 4 tokens/sec. Always sandbox inference workers inside Docker with strict memory caps.\n\nTested with 4 subagents on Qwen-2.5-Coder-14B in local Docker, but haven't run benchmarks on multi-GPU server clusters yet. For local AI agent teams, dialing in concurrency settings beats buying more hardware.\n\nFull open-source repository: github.com/ollama/ollama\n\n#AI #Python #SoftwareEngineering #OpenSource #DevOps #Docker",
+        "sources": "1. GitHub Repository: https://github.com/ollama/ollama\n2. Server FAQ & Environment Variables: https://github.com/ollama/ollama/blob/main/docs/faq.md\n3. Concurrency Architecture Docs: https://ollama.com/blog/concurrency",
+        "catch": "Each parallel slot allocates an independent KV cache slice. 4 parallel slots on an 8k context window require 4x KV memory in VRAM. If VRAM overflows, Ollama offloads attention to CPU RAM, dropping generation speed by 10x.",
+        "visual_specs": {
+            "category_tag": "Local Inference & Server Concurrency",
+            "main_title": "Local Agent Inference: <span class='gradient-text-cyan'>OLLAMA_NUM_PARALLEL</span> vs Sequential Queue",
+            "subtitle": "Why multi-agent swarms trigger timeout errors on default Ollama setups and how parallel slots solve queue contention.",
+            "left_badge": "Default Ollama",
+            "left_title": "Sequential Queue",
+            "left_price": "1 Request",
+            "left_subprice": "Strictly Sequential HTTP FIFO Queue",
+            "left_points": [
+                [
+                    "Single-Slot Bottleneck",
+                    "OLLAMA_NUM_PARALLEL defaults to 1, queuing subagents"
+                ],
+                [
+                    "Severe Latency Spikes",
+                    "4 concurrent subagents see response time jump 400%"
+                ],
+                [
+                    "Idle GPU Compute",
+                    "GPU compute sits idle between sequential roundtrips"
+                ],
+                [
+                    "Subagent Timeouts",
+                    "Blocked agent loops hit connection timeouts"
+                ]
+            ],
+            "left_metric": "Agent Throughput: \u274c 1 Concurrent Task",
+            "right_badge": "Tuned Ollama (Production)",
+            "right_title": "Multi-Slot Parallel Engine",
+            "right_price": "4x Parallel",
+            "right_subprice": "Dedicated In-VRAM KV Cache Slots",
+            "right_points": [
+                [
+                    "Parallel Slot Partitioning",
+                    "Executes 4 agent inference streams simultaneously"
+                ],
+                [
+                    "VRAM Weight Sharing",
+                    "Single model instance in memory serves all workers"
+                ],
+                [
+                    "Persistent Memory Pinning",
+                    "OLLAMA_KEEP_ALIVE=30m avoids repeated disk reloading"
+                ],
+                [
+                    "FlashAttention Enabled",
+                    "Slashes KV cache size to fit parallel contexts"
+                ]
+            ],
+            "right_metric": "Agent Throughput: \u2713 3x-4x Higher QPS",
+            "specs": [
+                [
+                    "Concurrency Flag",
+                    "OLLAMA_NUM_PARALLEL=4"
+                ],
+                [
+                    "Memory Persistence",
+                    "OLLAMA_KEEP_ALIVE=30m"
+                ],
+                [
+                    "Attention Engine",
+                    "FlashAttention-2 Kernel"
+                ]
+            ],
+            "catch_title": "The VRAM Spillover Catch",
+            "catch_text": "Every parallel slot duplicates KV cache memory. 4 slots on an 8k context add ~6GB VRAM. If memory overflows into system RAM, generation speed drops by 90%.",
+            "footer_repo": "github.com/ollama/ollama",
+            "save_filename": "visual_ollama_parallel.png"
+        }
+    },
+    {
+        "id": 28,
+        "history_id": "hamilton-dag-dataflow-001",
+        "slug": "hamilton_dag",
+        "topic": "Hamilton (Micro-Framework for Python Data & Feature Pipelines)",
+        "beat": "Data Engineering & Pipeline Architecture",
+        "score": 94,
+        "quality_score": 89.2,
+        "replaces": "Heavyweight Cloud Orchestrators (Airflow/Kubeflow) for Modular Feature Pipelines",
+        "cost": "$0 / BSD 3-Clause; zero infrastructure database or worker daemon overhead",
+        "test_status": "Tested on feature engineering and RAG chunking pipelines in Docker; not tested on Petabyte-scale distributed data lakes yet",
+        "post_copy": "Spinning up a distributed Kubernetes cluster and an Airflow database just to run feature transformations for an ML pipeline is an expensive way to avoid writing clean functional Python.\n\nWhen data engineering teams build feature pipelines for machine learning or Retrieval-Augmented Generation (RAG), workflows frequently degrade into tangled procedural scripts or heavyweight orchestration monsters. Maintaining Celery brokers, Redis queues, and Postgres databases just to manage data transformation dependencies introduces unnecessary operational debt.\n\nThe open-source framework DAGWorks-Inc/hamilton (originally developed at Stitch Fix) solves this with a functional dataflow model:\n\n1. Function Signatures as Graph Edges: Every Python function represents a node. The function name is the artifact created, and the function arguments specify its exact upstream dependencies in pipeline.py.\n2. Clean Modular Unit Testing: Because functions are pure Python transformations without framework decorators or global state, you can unit-test every feature step with standard pytest fixtures.\n3. Zero Infrastructure Dependency: Compiles into an in-memory Directed Acyclic Graph (DAG) that executes locally in 50ms, inside Docker, or scales onto PySpark and Ray without rewriting pipeline logic.\n\nOn paper, it cuts orchestration code by 80% and replaces hundreds of lines of fragile spaghetti scripts with transparent, self-documenting data lineage.\nIn practice, there is an architectural catch:\n\nHamilton enforces functional immutability. If your pipeline relies on dynamic imperative branching, where the next transformation depends dynamically on runtime LLM outputs, you must compile conditional subgraph structures upfront rather than using standard imperative if/else loops. Always inspect data schema security before execution in production.\n\nTested on tabular feature engineering with 100k rows and RAG document chunking in local Docker, but haven't run this across petabyte-scale distributed lakes yet. For clean ML engineering pipelines in Python with Apache 2.0 and BSD licenses, it keeps system RAM usage disciplined at $0.\n\nFull open-source repository: github.com/DAGWorks-Inc/hamilton\n\n#Python #DataEngineering #MachineLearning #DataScience #SoftwareEngineering #OpenSource",
+        "sources": "1. GitHub Repository: https://github.com/DAGWorks-Inc/hamilton\n2. Documentation: https://hamilton.dagworks.io\n3. Stitch Fix Engineering Post: https://multithreaded.stitchfix.com/blog/2021/10/14/functions-form-dataflow/",
+        "catch": "Hamilton represents transformations as functional dependency graphs. Dynamic imperative branching based on runtime LLM output requires upfront conditional node compilation rather than inline procedural logic.",
+        "visual_specs": {
+            "category_tag": "Data Engineering & Pipeline Architecture",
+            "main_title": "Pipeline Architecture: <span class='gradient-text-emerald'>Pure Functional DAGs</span> vs Heavyweight Orchestrators",
+            "subtitle": "Why spinning up Airflow databases for feature engineering adds operational debt and how Hamilton fixes it.",
+            "left_badge": "Heavy Cloud Orchestrators",
+            "left_title": "Airflow / Celery DAGs",
+            "left_price": "High Overhead",
+            "left_subprice": "Requires Postgres, Redis, and Worker Pods",
+            "left_points": [
+                [
+                    "Heavy Infrastructure Tax",
+                    "Requires running background databases and scheduler daemons"
+                ],
+                [
+                    "Difficult Local Testing",
+                    "Unit-testing a single feature requires mocking framework state"
+                ],
+                [
+                    "Fragile Spaghetti Logic",
+                    "Procedural scripts obscure data dependencies"
+                ],
+                [
+                    "High Cloud Hosting Cost",
+                    "$200+/month in managed orchestration cluster fees"
+                ]
+            ],
+            "left_metric": "Maintenance Overhead: \u274c 3+ Infrastructure Services",
+            "right_badge": "Hamilton (BSD-3)",
+            "right_title": "Functional In-Memory DAG",
+            "right_price": "$0 / Local",
+            "right_subprice": "Zero Database or Daemon Dependency",
+            "right_points": [
+                [
+                    "Function Signatures as Edges",
+                    "Function names define outputs, arguments define inputs"
+                ],
+                [
+                    "100% Pure Unit Testing",
+                    "Test every transformation with simple pytest fixtures"
+                ],
+                [
+                    "Scale Up Without Rewrites",
+                    "Runs locally on CPU, then scales to PySpark or Ray"
+                ],
+                [
+                    "Automatic Lineage Graph",
+                    "Generates visual data dependency graphs automatically"
+                ]
+            ],
+            "right_metric": "Maintenance Overhead: \u2713 0 Database Dependencies",
+            "specs": [
+                [
+                    "Architecture",
+                    "Pure Python Functional DAG"
+                ],
+                [
+                    "Execution Target",
+                    "Local, Docker, PySpark, Ray"
+                ],
+                [
+                    "License & Cost",
+                    "$0 / BSD 3-Clause Open Source"
+                ]
+            ],
+            "catch_title": "The Dynamic Branching Catch",
+            "catch_text": "Hamilton requires static dependency compilation. Runtime imperative branching based on dynamic LLM outputs requires upfront conditional subgraphs.",
+            "footer_repo": "github.com/DAGWorks-Inc/hamilton",
+            "save_filename": "visual_hamilton_dag.png"
+        }
+    }
 ]
 
 

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-06T16:31:32.939735",
+  "updated_at": "2026-11-11T09:22:17.723636",
   "owner": "Purnachandra Madhukar Dandu",
   "total_external_posts": 26,
   "external_stream_posts": [
@@ -94,22 +94,31 @@
       "comment_text": "For regulated German public-sector and industrial deployments, sovereign AI has to mean full control over the entire inference and orchestration stack, not just an EU cloud region toggle. Running containerized Haystack pipelines over local open-weight models on dedicated GPU nodes is the blueprint more European enterprises need."
     },
     {
-      "post_urn": "urn:li:activity:7524343243933941760",
-      "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7524343243933941760/",
+      "post_urn": "urn:li:activity:7526065929680687104",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7526065929680687104/",
       "author": "Pydantic / Pydantic AI",
       "author_type": "External Stream Post",
       "stream_pillar": "Typed Python AI Agents & Validation",
-      "external_post_snippet": "Pydantic AI is honestly one of my favorite Python frameworks for building agentic systems. Join us for a special webinar on Nov 19th for a practical walkthrough of building durable AI agents with Pydantic AI and Temporal Technologies \ud83d\udd25\n\nRegister using the link below to save the date and join us live. Aditya Vardhan wil",
+      "external_post_snippet": "checkout-api logs at debug, puts a card token on one of its spans, and traffic just tripled. The ingest bill went up with it.\n\nYou want less of all three now, not after a deploy. Bill Easton 's hands-on post connects a FastAPI service to Fleet Management in Pydantic Logfire with one argument, fleet=True, then makes thr",
       "comment_text": "From our work on multi-step agent trajectories here in Berlin, final-output evals rarely tell you why a run failed. Inspecting intermediate tool-call spans and token latency spikes is the only reliable way to catch silent context drift before it compounds across 10+ turns."
     },
     {
-      "post_urn": "urn:li:activity:7524100469661687808",
-      "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7524100469661687808/",
+      "post_urn": "urn:li:activity:7526043517652164608",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7526043517652164608/",
       "author": "Pydantic / Pydantic AI",
       "author_type": "External Stream Post",
       "stream_pillar": "Typed Python AI Agents & Validation",
-      "external_post_snippet": "Elumynt runs more than 100 daily agentic routines across client ad accounts. Using Monty, they have reduced LLM costs by over 80%. Every step used to be reasoned through by an LLM, every day, for every account. That was most of their LLM bill, and Tuesday's check could disagree with Monday's.\n\nNow their Pydantic AI age",
+      "external_post_snippet": "\"Code mode\" and \"sandbox\" keep getting used as if they meant the same thing. They don't.\n\nCode mode changes how the model calls your tools. Instead of one JSON tool call per step, it writes one Python program that calls your tools as functions. In the example in the post, three model requests become two, and only the f",
       "comment_text": "Collapsing sequential tool calls into a typed Python batch loop saves massive KV-cache prefill overhead across long trajectories. Pairing strict Pydantic schema validation with an isolated Docker execution sandbox gives you that speed without expanding the blast radius."
+    },
+    {
+      "post_urn": "urn:li:activity:7525603211517378560",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7525603211517378560/",
+      "author": "Langfuse (Berlin)",
+      "author_type": "External Stream Post",
+      "stream_pillar": "Open-Source LLM Observability & Agent Tracing",
+      "external_post_snippet": "We are launching the Langfuse AI Gateway in public beta! \n\nOur users have been asking for a gateway and we delivered. AI usage has sprawled in organizations, from coding agent use to custom agents. Keeping track of AI usage in an organization across providers is hard, and in many cases there\u2019s a jungle of issued API ke",
+      "comment_text": "From our work on multi-step agent trajectories here in Berlin, final-output evals rarely tell you why a run failed. Inspecting intermediate tool-call spans and token latency spikes is the only reliable way to catch silent context drift before it compounds across 10+ turns."
     },
     {
       "post_urn": "urn:li:activity:7524210564689145858",
@@ -121,49 +130,40 @@
       "comment_text": "Great breakdown, Langfuse (Berlin). In practice, the bottleneck with RAG chunking & hybrid retrieval rarely shows up in a single-turn demo. It surfaces when concurrent workers hit the pipeline and latency compounds across steps. Combining strict schema validation and Docker sandboxing with deterministic prefix caching cuts token waste and keeps tail latency predictable on standard GPU hardware."
     },
     {
-      "post_urn": "urn:li:activity:7524063347445530624",
-      "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7524063347445530624/",
-      "author": "Langfuse (Berlin)",
+      "post_urn": "urn:li:activity:7525846473377349632",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7525846473377349632/",
+      "author": "Qdrant (Berlin)",
       "author_type": "External Stream Post",
-      "stream_pillar": "Open-Source LLM Observability & Agent Tracing",
-      "external_post_snippet": "Regulated industries like financial services and healthcare have strict quality bars for getting AI agents into production.\n\nTeams usually need to meet three requirements for their projects:\n\u2192 Evidence for quality and performance of the system before go-live\n\u2192 Clear structures for oversight of the system in production\n",
+      "stream_pillar": "Vector Search, Reranking & RAG Infrastructure",
+      "external_post_snippet": "Qdrant engine v1.20 introduced per-element indexing for nested fields. Each array element gets its own index entry, so the whole filter resolves through index lookups rather than reading payloads.\n\nOn 1M arXiv papers with 16 concurrent clients, the per-element index serves up to 4x the queries per second of regular nes",
+      "comment_text": "In practice, most retrieval misses blamed on vector search actually come from noisy document chunking upstream. Preserving table and heading boundaries in Markdown and combining sparse-dense hybrid retrieval fixes recall@k without adding 200ms of cross-encoder reranking latency on every turn."
+    },
+    {
+      "post_urn": "urn:li:activity:7525595724621815809",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7525595724621815809/",
+      "author": "Qdrant (Berlin)",
+      "author_type": "External Stream Post",
+      "stream_pillar": "Vector Search, Reranking & RAG Infrastructure",
+      "external_post_snippet": "Qdrant is at CIKM Rome: Evgeniya Sukhodolskaya talked about vector index-native relevance feedback in production systems at Industry Track and, if you're curious about that or want to know how Qdrant can help your vector search in production, you can find her and get answers to any of your questions!\n\nRead the paper we",
+      "comment_text": "In practice, most retrieval misses blamed on vector search actually come from noisy document chunking upstream. Preserving table and heading boundaries in Markdown and combining sparse-dense hybrid retrieval fixes recall@k without adding 200ms of cross-encoder reranking latency on every turn."
+    },
+    {
+      "post_urn": "urn:li:activity:7526195394440044544",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7526195394440044544/",
+      "author": "deepset / Haystack (Berlin)",
+      "author_type": "External Stream Post",
+      "stream_pillar": "Production Agent Pipelines & Sovereign AI",
+      "external_post_snippet": "The economic dimension of AI sovereignty: Cost of your AI system, and why it is important to stay flexible and in control of your AI cost. \n\nPrices change, models get deprecated, rate limits shift, so your lock-in has a price tag. \n\nThe solution:\n- Model agnostic architectures\n- Cost as a design choice, from indexing p",
       "comment_text": "From our work on multi-step agent trajectories here in Berlin, final-output evals rarely tell you why a run failed. Inspecting intermediate tool-call spans and token latency spikes is the only reliable way to catch silent context drift before it compounds across 10+ turns."
     },
     {
-      "post_urn": "urn:li:activity:7524138464557043712",
-      "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7524138464557043712/",
-      "author": "Qdrant (Berlin)",
-      "author_type": "External Stream Post",
-      "stream_pillar": "Vector Search, Reranking & RAG Infrastructure",
-      "external_post_snippet": "BM25 or vectors? Bring your team and settle it.\n\nOn Tuesday, November 24, we're hosting the Search Week After Party: Pub Quiz with ClickHouse as part of London Search Week. Bring a team of up to six, or come solo and we'll match you with other search enthusiasts.\n\nExpect three rounds:\n- BM25 or Vectors? Pick a side and",
-      "comment_text": "In practice, most retrieval misses blamed on vector search actually come from noisy document chunking upstream. Preserving table and heading boundaries in Markdown and combining sparse-dense hybrid retrieval fixes recall@k without adding 200ms of cross-encoder reranking latency on every turn."
-    },
-    {
-      "post_urn": "urn:li:activity:7524116145931456513",
-      "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7524116145931456513/",
-      "author": "Qdrant (Berlin)",
-      "author_type": "External Stream Post",
-      "stream_pillar": "Vector Search, Reranking & RAG Infrastructure",
-      "external_post_snippet": "Some marketing. Well, I have to... \ud83e\udd37\u2642\ufe0f \nAs you probably already know, Chroma Cloud is closing its service soon. We created a guide for a smooth migration to Qdrant Cloud: qdrant.to/off-chroma . We provide former Chroma customers with credits for the migration period. \nAlso, if you want free access to our upcoming Qdran",
-      "comment_text": "In practice, most retrieval misses blamed on vector search actually come from noisy document chunking upstream. Preserving table and heading boundaries in Markdown and combining sparse-dense hybrid retrieval fixes recall@k without adding 200ms of cross-encoder reranking latency on every turn."
-    },
-    {
-      "post_urn": "urn:li:activity:7524451771650416641",
-      "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7524451771650416641/",
+      "post_urn": "urn:li:activity:7525945398641778688",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7525945398641778688/",
       "author": "deepset / Haystack (Berlin)",
       "author_type": "External Stream Post",
       "stream_pillar": "Production Agent Pipelines & Sovereign AI",
-      "external_post_snippet": "\u201cAI needs context.\u201d This tagline is more true than ever, especially now that the trend is moving toward smaller, more specialized AI models and on-prem hosting. \n\nThat\u2019s why I\u2019m glad we\u2019re partnering with Celonis on topics that come with high requirements but also high relevance: internal and external state security.\n\n",
+      "external_post_snippet": "\ud83c\udde8\ud83c\udde6 deepset and Mozilla are hosting an unconference in Toronto on Nov 17.\n\nAs more organizations move AI agents into production, a key question keeps coming up: how do you build AI systems while keeping control of your data, models, and infrastructure?\n\nThat\u2019s the focus of \ud835\ude1c\ud835\ude2f\ud835\ude24\ud835\ude30\ud835\ude2f\ud835\ude27\ud835\ude26\ud835\ude33\ud835\ude26\ud835\ude2f\ud835\ude24\ud835\ude26: \ud835\ude16\ud835\ude38\ud835\ude2f \ud835\ude20\ud835\ude30\ud835\ude36\ud835\ude33 \ud835\ude08\ud835\ude10 \ud835\ude1a\ud835\ude35\ud835\ude22\ud835\ude24\ud835\ude2c, an evening at ",
       "comment_text": "Breaking down token spend at the pipeline-node level always reveals the same culprit: repeated system-prompt prefills and unthrottled retry loops. Once you have per-step cost visibility, routing classification and extraction nodes to smaller quantized checkpoints cuts 60%+ of wasted spend."
-    },
-    {
-      "post_urn": "urn:li:activity:7523356362479759360",
-      "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7523356362479759360/",
-      "author": "deepset / Haystack (Berlin)",
-      "author_type": "External Stream Post",
-      "stream_pillar": "Production Agent Pipelines & Sovereign AI",
-      "external_post_snippet": "Germany is deciding its AI future, and the numbers show where it stands. \n\n57% of German companies with 20+ employees now use AI. But only 3% of those users say they make substantial use of it. (Bitkom)\n\nAt yesterday's Digital-Gipfel, our CEO Milos Rusic joined State Secretary Rolf-Dieter Jungk, Dr. (BMFTR), Bernd (Ber",
-      "comment_text": "Great breakdown, deepset / Haystack (Berlin). In practice, the bottleneck with multi-step LLM systems and production data pipelines rarely shows up in a single-turn demo. It surfaces when concurrent workers hit the pipeline and latency compounds across steps. Combining strict schema validation and Docker sandboxing with deterministic prefix caching cuts token waste and keeps tail latency predictable on standard GPU hardware."
     },
     {
       "post_urn": "urn:li:activity:7524372046043099136",
@@ -184,22 +184,22 @@
       "comment_text": "From our work on multi-step agent trajectories here in Berlin, final-output evals rarely tell you why a run failed. Inspecting intermediate tool-call spans and token latency spikes is the only reliable way to catch silent context drift before it compounds across 10+ turns."
     },
     {
-      "post_urn": "urn:li:activity:7524479855480983552",
-      "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7524479855480983552/",
+      "post_urn": "urn:li:activity:7525997023188185088",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7525997023188185088/",
       "author": "Hugging Face",
       "author_type": "External Stream Post",
       "stream_pillar": "Open-Weight LLMs, llama.cpp & Agent Sandboxing",
-      "external_post_snippet": "We just launched the training of harness adapters? What is it exactly?\n\nThe goal: build openly and safely efficient + more accurate LoRA adapters for three coding harnesses: hermes, pi and opencode using RL and open environments!\n\nWe detail how the RL envs have been created, directly from opensource agentic trajectorie",
-      "comment_text": "Great breakdown, Hugging Face. In practice, the bottleneck with multi-step agent trajectories rarely shows up in a single-turn demo. It surfaces when concurrent workers hit the pipeline and latency compounds across steps. Combining strict schema validation and Docker sandboxing with deterministic prefix caching cuts token waste and keeps tail latency predictable on standard GPU hardware."
+      "external_post_snippet": "One of the coolest recent features in Pi is Virtual Models\n\nI am using it to route to Qwen 3.8 27B (running locally in llama.cpp ) or to Kimi K3 or GLM 5.3 (hosted remotely), depending on my query complexity and my machine(s)' current load \ud83d\udd25\n\nNo more manual model switching!!\n\nSimple question? Stay local. Tricky archite",
+      "comment_text": "Great breakdown, Hugging Face. In practice, the bottleneck with multi-step LLM systems and production data pipelines rarely shows up in a single-turn demo. It surfaces when concurrent workers hit the pipeline and latency compounds across steps. Combining strict schema validation and Docker sandboxing with deterministic prefix caching cuts token waste and keeps tail latency predictable on standard GPU hardware."
     },
     {
-      "post_urn": "urn:li:activity:7524426516693200896",
-      "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7524426516693200896/",
+      "post_urn": "urn:li:activity:7525971076351180801",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7525971076351180801/",
       "author": "Hugging Face",
       "author_type": "External Stream Post",
       "stream_pillar": "Open-Weight LLMs, llama.cpp & Agent Sandboxing",
-      "external_post_snippet": "\ud83d\udd34 Livestream: Quantization, explained by the people who ship it\n\nModels keep getting bigger, but our GPUs don't. Quantization is the main reason you can run a strong open model on a single GPU, or even on your laptop. In this livestream, people who do this every day will take you from \"what is quantization?\" to running",
-      "comment_text": "Great breakdown, Hugging Face. In practice, the bottleneck with vLLM V1 / continuous batching rarely shows up in a single-turn demo. It surfaces when concurrent workers hit the pipeline and latency compounds across steps. Combining industrial quality control telemetry with deterministic prefix caching cuts token waste and keeps tail latency predictable on standard GPU hardware."
+      "external_post_snippet": "One of the coolest recent features in Pi is Virtual Models\n\nI am using it to route to Qwen 3.8 27B (running locally in llama.cpp ) or to Kimi K3 or GLM 5.3 (hosted remotely), depending on my query complexity and my machine(s)' current load \ud83d\udd25\n\nNo more manual model switching!!\n\nSimple question? Stay local. Tricky archite",
+      "comment_text": "Great breakdown, Hugging Face. In practice, the bottleneck with multi-step LLM systems and production data pipelines rarely shows up in a single-turn demo. It surfaces when concurrent workers hit the pipeline and latency compounds across steps. Combining strict schema validation and Docker sandboxing with deterministic prefix caching cuts token waste and keeps tail latency predictable on standard GPU hardware."
     },
     {
       "post_urn": "urn:li:activity:7524394069582893057",
@@ -220,21 +220,21 @@
       "comment_text": "Great breakdown, Explosion AI / spaCy (Berlin). In practice, the bottleneck with multi-step agent trajectories rarely shows up in a single-turn demo. It surfaces when concurrent workers hit the pipeline and latency compounds across steps. Combining industrial quality control telemetry with deterministic prefix caching cuts token waste and keeps tail latency predictable on standard GPU hardware."
     },
     {
-      "post_urn": "urn:li:activity:7524492338572877826",
-      "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7524492338572877826/",
+      "post_urn": "urn:li:activity:7526195791603011586",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7526195791603011586/",
       "author": "DeepL (Germany)",
       "author_type": "External Stream Post",
       "stream_pillar": "Enterprise AI Infrastructure & Low-Latency Voice",
-      "external_post_snippet": "Language AI, live in Frankfurt.\n\nKeynotes, customer stories, hands-on sessions, and plenty of great conversations at last week's DeepL Language AI Forum.\n\nSessions explored how to build a Language AI pilot, measure ROI, and shape the future of localization workflows.\n\nThank you to everyone who joined us, and to our par",
+      "external_post_snippet": "Today we're introducing Aure, our most natural Voice AI translation model yet.\n\nWith Aure, DeepL Voice brings a new level of expression to real-time voice translation, continuously adapting to changes in tone, emotion, emphasis, and pace as you speak. Pause for effect, speak with urgency, or burst into excitement, and ",
       "comment_text": "Great breakdown, DeepL (Germany). In practice, the bottleneck with multi-step LLM systems and production data pipelines rarely shows up in a single-turn demo. It surfaces when concurrent workers hit the pipeline and latency compounds across steps. Combining strict schema validation and Docker sandboxing with deterministic prefix caching cuts token waste and keeps tail latency predictable on standard GPU hardware."
     },
     {
-      "post_urn": "urn:li:activity:7524148363978579968",
-      "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7524148363978579968/",
+      "post_urn": "urn:li:activity:7525968590009823232",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7525968590009823232/",
       "author": "DeepL (Germany)",
       "author_type": "External Stream Post",
       "stream_pillar": "Enterprise AI Infrastructure & Low-Latency Voice",
-      "external_post_snippet": "One of the most meaningful applications of AI is arguably in healthcare. When people need help or find themselves in vulnerable situations, being, quite literally, understood can make a real difference. Which is why I believe Language AI has such an important role to play in making services more accessible.\n\nI recently",
+      "external_post_snippet": "Tokyo, it's time to Unmute.\n\nOn November 26, we're bringing together leaders across business and technology to explore what's possible when language is no longer a barrier.\n\nJoin us for keynotes, panels, and live demos showcasing the future of Language AI, including a first look at the latest advancements in DeepL Voic",
       "comment_text": "Great breakdown, DeepL (Germany). In practice, the bottleneck with multi-step LLM systems and production data pipelines rarely shows up in a single-turn demo. It surfaces when concurrent workers hit the pipeline and latency compounds across steps. Combining strict schema validation and Docker sandboxing with deterministic prefix caching cuts token waste and keeps tail latency predictable on standard GPU hardware."
     }
   ]
