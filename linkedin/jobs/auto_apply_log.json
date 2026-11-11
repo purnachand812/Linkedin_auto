@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "16:06:08",
-      "datetime": "2026-11-07T16:06:08.639760",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "16:06:08",
       "datetime": "2026-11-07T16:06:08.646522",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for dsb."
@@ -357,6 +351,12 @@
     {
       "timestamp": "08:51:09",
       "datetime": "2026-11-11T08:51:09.516150",
+      "level": "INFO",
+      "message": "Radar scan: 13 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "12:25:49",
+      "datetime": "2026-11-11T12:25:49.086058",
       "level": "INFO",
       "message": "Radar scan: 13 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
