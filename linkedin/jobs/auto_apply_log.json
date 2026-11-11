@@ -1,138 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "18:13:20",
-      "datetime": "2026-11-06T18:13:20.985687",
-      "level": "INFO",
-      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
-    },
-    {
-      "timestamp": "18:13:26",
-      "datetime": "2026-11-06T18:13:26.593138",
-      "level": "SUCCESS",
-      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
-    },
-    {
-      "timestamp": "18:13:26",
-      "datetime": "2026-11-06T18:13:26.594344",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 1 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "18:13:26",
-      "datetime": "2026-11-06T18:13:26.606421",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Werkstudent (w/m/d) Project Management Excellence' at Siemens AG (ID: job-ba-12465_1651857_1_S)"
-    },
-    {
-      "timestamp": "18:13:26",
-      "datetime": "2026-11-06T18:13:26.616156",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-ba-12465_1651857_1_S.pdf"
-    },
-    {
-      "timestamp": "18:13:26",
-      "datetime": "2026-11-06T18:13:26.617417",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-ba-12465_1651857_1_S.pdf"
-    },
-    {
-      "timestamp": "18:13:26",
-      "datetime": "2026-11-06T18:13:26.619384",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "18:13:26",
-      "datetime": "2026-11-06T18:13:26.625833",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for Siemens AG."
-    },
-    {
-      "timestamp": "23:23:37",
-      "datetime": "2026-11-06T23:23:37.023717",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "23:53:04",
-      "datetime": "2026-11-06T23:53:04.985793",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "03:00:09",
-      "datetime": "2026-11-07T03:00:09.349175",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "03:45:21",
-      "datetime": "2026-11-07T03:45:21.013565",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "09:55:02",
-      "datetime": "2026-11-07T09:55:02.081206",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "16:06:03",
-      "datetime": "2026-11-07T16:06:03.391781",
-      "level": "INFO",
-      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
-    },
-    {
-      "timestamp": "16:06:08",
-      "datetime": "2026-11-07T16:06:08.567221",
-      "level": "SUCCESS",
-      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
-    },
-    {
-      "timestamp": "16:06:08",
-      "datetime": "2026-11-07T16:06:08.568835",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 1 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "16:06:08",
-      "datetime": "2026-11-07T16:06:08.625538",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Growth Intern (m/w/d)' at dsb (ID: job-linkedin-4486645435)"
-    },
-    {
-      "timestamp": "16:06:08",
-      "datetime": "2026-11-07T16:06:08.628526",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4486645435.pdf"
-    },
-    {
-      "timestamp": "16:06:08",
-      "datetime": "2026-11-07T16:06:08.638973",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4486645435.pdf"
-    },
-    {
-      "timestamp": "16:06:08",
-      "datetime": "2026-11-07T16:06:08.639760",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "16:06:08",
-      "datetime": "2026-11-07T16:06:08.646522",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for dsb."
-    },
-    {
-      "timestamp": "09:12:33",
-      "datetime": "2026-11-11T09:12:33.553343",
-      "level": "INFO",
-      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
-    },
-    {
       "timestamp": "09:12:41",
       "datetime": "2026-11-11T09:12:41.232741",
       "level": "SUCCESS",
@@ -357,6 +225,138 @@
     {
       "timestamp": "09:23:17",
       "datetime": "2026-11-11T09:23:17.799696",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "09:24:17",
+      "datetime": "2026-11-11T09:24:17.844643",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "09:25:17",
+      "datetime": "2026-11-11T09:25:17.927286",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "09:26:18",
+      "datetime": "2026-11-11T09:26:18.067912",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "09:27:18",
+      "datetime": "2026-11-11T09:27:18.208079",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "09:28:18",
+      "datetime": "2026-11-11T09:28:18.283853",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "09:29:18",
+      "datetime": "2026-11-11T09:29:18.336056",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "09:30:18",
+      "datetime": "2026-11-11T09:30:18.383202",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "09:31:18",
+      "datetime": "2026-11-11T09:31:18.426054",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "09:32:18",
+      "datetime": "2026-11-11T09:32:18.465626",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "09:33:18",
+      "datetime": "2026-11-11T09:33:18.521944",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "09:34:18",
+      "datetime": "2026-11-11T09:34:18.565545",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "09:35:18",
+      "datetime": "2026-11-11T09:35:18.611536",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "09:36:18",
+      "datetime": "2026-11-11T09:36:18.652924",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "09:37:18",
+      "datetime": "2026-11-11T09:37:18.699386",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "09:38:18",
+      "datetime": "2026-11-11T09:38:18.749794",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "09:39:18",
+      "datetime": "2026-11-11T09:39:18.799111",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "09:40:18",
+      "datetime": "2026-11-11T09:40:18.835079",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "09:41:18",
+      "datetime": "2026-11-11T09:41:18.884607",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "09:42:18",
+      "datetime": "2026-11-11T09:42:18.925933",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "09:43:18",
+      "datetime": "2026-11-11T09:43:18.979030",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "09:44:19",
+      "datetime": "2026-11-11T09:44:19.056820",
+      "level": "INFO",
+      "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "09:45:19",
+      "datetime": "2026-11-11T09:45:19.098163",
       "level": "INFO",
       "message": "Daily quota reached (5/5). Standing by until tomorrow."
     }
