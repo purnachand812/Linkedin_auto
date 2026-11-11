@@ -1,144 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "16:06:08",
-      "datetime": "2026-11-07T16:06:08.646522",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for dsb."
-    },
-    {
-      "timestamp": "17:35:02",
-      "datetime": "2026-11-07T17:35:02.641985",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "20:24:45",
-      "datetime": "2026-11-07T20:24:45.017647",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "23:15:24",
-      "datetime": "2026-11-07T23:15:24.694948",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "23:47:43",
-      "datetime": "2026-11-07T23:47:43.928505",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "03:24:38",
-      "datetime": "2026-11-08T03:24:38.247503",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "04:27:11",
-      "datetime": "2026-11-08T04:27:11.272725",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "11:27:33",
-      "datetime": "2026-11-08T11:27:33.342406",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "17:12:24",
-      "datetime": "2026-11-08T17:12:24.770206",
-      "level": "INFO",
-      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
-    },
-    {
-      "timestamp": "17:12:29",
-      "datetime": "2026-11-08T17:12:29.682245",
-      "level": "SUCCESS",
-      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
-    },
-    {
-      "timestamp": "17:12:29",
-      "datetime": "2026-11-08T17:12:29.683667",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "21:18:25",
-      "datetime": "2026-11-08T21:18:25.503323",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "23:18:08",
-      "datetime": "2026-11-08T23:18:08.957669",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "01:06:57",
-      "datetime": "2026-11-09T01:06:57.868742",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "03:42:13",
-      "datetime": "2026-11-09T03:42:13.785440",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "08:25:19",
-      "datetime": "2026-11-09T08:25:19.317346",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "19:00:17",
-      "datetime": "2026-11-09T19:00:17.328943",
-      "level": "INFO",
-      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
-    },
-    {
-      "timestamp": "19:00:22",
-      "datetime": "2026-11-09T19:00:22.329913",
-      "level": "SUCCESS",
-      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
-    },
-    {
-      "timestamp": "19:00:22",
-      "datetime": "2026-11-09T19:00:22.332133",
-      "level": "INFO",
-      "message": "Radar scan: 15 active jobs, 1 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "19:00:22",
-      "datetime": "2026-11-09T19:00:22.333209",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Build Your Own Internship (m/w/d)' at inca (ID: job-linkedin-4487170044)"
-    },
-    {
-      "timestamp": "19:00:22",
-      "datetime": "2026-11-09T19:00:22.336957",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4487170044.pdf"
-    },
-    {
-      "timestamp": "19:00:22",
-      "datetime": "2026-11-09T19:00:22.339024",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4487170044.pdf"
-    },
-    {
-      "timestamp": "19:00:22",
-      "datetime": "2026-11-09T19:00:22.341138",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
       "timestamp": "19:00:22",
       "datetime": "2026-11-09T19:00:22.353345",
       "level": "SUCCESS",
@@ -359,6 +221,144 @@
       "datetime": "2026-11-11T12:25:49.086058",
       "level": "INFO",
       "message": "Radar scan: 13 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "19:48:10",
+      "datetime": "2026-11-11T19:48:10.119229",
+      "level": "INFO",
+      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
+    },
+    {
+      "timestamp": "19:48:15",
+      "datetime": "2026-11-11T19:48:15.395721",
+      "level": "SUCCESS",
+      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
+    },
+    {
+      "timestamp": "19:48:15",
+      "datetime": "2026-11-11T19:48:15.396978",
+      "level": "INFO",
+      "message": "Radar scan: 14 active jobs, 4 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "19:48:15",
+      "datetime": "2026-11-11T19:48:15.418174",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Card Operations Working Student' at Solaris SE (ID: job-gh-solarisbank-8899705002)"
+    },
+    {
+      "timestamp": "19:48:15",
+      "datetime": "2026-11-11T19:48:15.428592",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-gh-solarisbank-8899705002.pdf"
+    },
+    {
+      "timestamp": "19:48:15",
+      "datetime": "2026-11-11T19:48:15.429155",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-gh-solarisbank-8899705002.pdf"
+    },
+    {
+      "timestamp": "19:48:15",
+      "datetime": "2026-11-11T19:48:15.429778",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "19:48:15",
+      "datetime": "2026-11-11T19:48:15.475032",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Solaris SE."
+    },
+    {
+      "timestamp": "19:48:17",
+      "datetime": "2026-11-11T19:48:17.475859",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Founder's Associate Intern - claim.me (f/m/x) (4-6 months)' at Seven Senders (ID: job-linkedin-4487484826)"
+    },
+    {
+      "timestamp": "19:48:17",
+      "datetime": "2026-11-11T19:48:17.478326",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4487484826.pdf"
+    },
+    {
+      "timestamp": "19:48:17",
+      "datetime": "2026-11-11T19:48:17.479072",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4487484826.pdf"
+    },
+    {
+      "timestamp": "19:48:17",
+      "datetime": "2026-11-11T19:48:17.479913",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "19:48:17",
+      "datetime": "2026-11-11T19:48:17.487928",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Seven Senders."
+    },
+    {
+      "timestamp": "19:48:19",
+      "datetime": "2026-11-11T19:48:19.488914",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Founder's Associate - Intern (f/m/x) (4-6 months)' at claim.me (ID: job-linkedin-4487158877)"
+    },
+    {
+      "timestamp": "19:48:19",
+      "datetime": "2026-11-11T19:48:19.491085",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4487158877.pdf"
+    },
+    {
+      "timestamp": "19:48:19",
+      "datetime": "2026-11-11T19:48:19.491797",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4487158877.pdf"
+    },
+    {
+      "timestamp": "19:48:19",
+      "datetime": "2026-11-11T19:48:19.492374",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "19:48:19",
+      "datetime": "2026-11-11T19:48:19.497678",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for claim.me."
+    },
+    {
+      "timestamp": "19:48:21",
+      "datetime": "2026-11-11T19:48:21.498442",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Werkstudent:in Business Development & Standortaufbau Berlin/Potsdam (m/w/d)' at BLACKFIELD AI (ID: job-linkedin-4488743449)"
+    },
+    {
+      "timestamp": "19:48:21",
+      "datetime": "2026-11-11T19:48:21.500359",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4488743449.pdf"
+    },
+    {
+      "timestamp": "19:48:21",
+      "datetime": "2026-11-11T19:48:21.500962",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4488743449.pdf"
+    },
+    {
+      "timestamp": "19:48:21",
+      "datetime": "2026-11-11T19:48:21.501582",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "19:48:21",
+      "datetime": "2026-11-11T19:48:21.506938",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for BLACKFIELD AI."
     }
   ]
 }
