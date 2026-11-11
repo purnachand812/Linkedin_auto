@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "16:06:08",
-      "datetime": "2026-11-07T16:06:08.625538",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Growth Intern (m/w/d)' at dsb (ID: job-linkedin-4486645435)"
-    },
-    {
-      "timestamp": "16:06:08",
       "datetime": "2026-11-07T16:06:08.628526",
       "level": "SUCCESS",
       "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4486645435.pdf"
@@ -359,6 +353,12 @@
       "datetime": "2026-11-10T23:37:44.857028",
       "level": "INFO",
       "message": "Daily quota reached (5/5). Standing by until tomorrow."
+    },
+    {
+      "timestamp": "00:19:28",
+      "datetime": "2026-11-11T00:19:28.564741",
+      "level": "INFO",
+      "message": "Radar scan: 13 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
   ]
 }
