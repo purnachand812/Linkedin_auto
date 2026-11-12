@@ -1,9 +1,21 @@
 {
-  "updated_at": "2026-11-12T01:47:47.147350",
+  "updated_at": "2026-11-12T09:17:22.326521",
   "total_posts": 24,
   "target_region": "European Union (CET/CEST)",
   "data_integrity": "Verified Ground Truth",
   "posts_analytics": [
+    {
+      "candidate_id": 27,
+      "topic": "Ollama Parallel Concurrency (Multi-Slot KV Allocation for Local Agent Swarms)",
+      "published_at": "2026-11-12T09:17:22Z",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7526573837862469632/",
+      "impressions": 0,
+      "reactions": 0,
+      "comments": 0,
+      "reposts": 0,
+      "status": "ACCUMULATING",
+      "notes": "Fresh drop; awaiting next live telemetry sync."
+    },
     {
       "candidate_id": 26,
       "topic": "Unsloth (Fast Open-Weight LLM Fine-Tuning & Custom Triton Kernels)",
@@ -57,18 +69,6 @@
       "topic": "IBM Docling (Local Layout-Aware PDF & Table Parser for RAG)",
       "published_at": "2026-11-05T17:11:42Z",
       "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7524156498525138944/",
-      "impressions": 0,
-      "reactions": 0,
-      "comments": 0,
-      "reposts": 0,
-      "status": "ACCUMULATING",
-      "notes": "Fresh drop; awaiting next live telemetry sync."
-    },
-    {
-      "candidate_id": 21,
-      "topic": "Qdrant Binary Quantization (16x Vector Memory Compression for Local RAG)",
-      "published_at": "2026-11-05T08:57:03Z",
-      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7524032012316499968/",
       "impressions": 0,
       "reactions": 0,
       "comments": 0,

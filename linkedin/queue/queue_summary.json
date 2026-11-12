@@ -310,13 +310,16 @@
       "beat": "Local Inference & Server Concurrency",
       "score": 93,
       "human_quality_score": 96.1,
-      "status": "APPROVED",
+      "status": "PUBLISHED",
       "format": "image-attached",
       "replaces": "Sequential Single-Thread Ollama & Multi-Process Model Duplication",
       "cost": "$0 / MIT Open Source; eliminates queue contention across parallel subagents",
       "test_status": "Tested with 4 parallel subagents querying Qwen-2.5-Coder-14B in Docker; not tested on multi-GPU server racks yet",
       "file": "linkedin/queue/candidate_27_ollama_parallel.md",
-      "visual": "linkedin/visuals/visual_ollama_parallel.png"
+      "visual": "linkedin/visuals/visual_ollama_parallel.png",
+      "published_at": "2026-11-12T09:17:22Z",
+      "linkedin_post_id": "urn:li:share:7526573837862469632",
+      "linkedin_post_url": "https://www.linkedin.com/feed/update/urn:li:share:7526573837862469632/"
     },
     {
       "id": 28,
