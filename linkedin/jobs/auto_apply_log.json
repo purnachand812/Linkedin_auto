@@ -1,12 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "18:04:05",
-      "datetime": "2026-11-10T18:04:05.299992",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for samedi GmbH."
-    },
-    {
       "timestamp": "18:04:07",
       "datetime": "2026-11-10T18:04:07.301460",
       "level": "INFO",
@@ -359,6 +353,12 @@
       "datetime": "2026-11-12T17:41:37.135976",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for Arvana."
+    },
+    {
+      "timestamp": "23:13:20",
+      "datetime": "2026-11-12T23:13:20.903423",
+      "level": "INFO",
+      "message": "Radar scan: 14 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
   ]
 }
