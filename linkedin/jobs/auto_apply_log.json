@@ -1,12 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "19:00:22",
-      "datetime": "2026-11-09T19:00:22.353345",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for inca."
-    },
-    {
       "timestamp": "02:20:05",
       "datetime": "2026-11-10T02:20:05.572930",
       "level": "INFO",
@@ -359,6 +353,12 @@
       "datetime": "2026-11-11T19:48:21.506938",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for BLACKFIELD AI."
+    },
+    {
+      "timestamp": "01:44:36",
+      "datetime": "2026-11-12T01:44:36.125493",
+      "level": "INFO",
+      "message": "Radar scan: 14 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
   ]
 }
