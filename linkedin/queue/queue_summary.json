@@ -328,13 +328,16 @@
       "beat": "Data Engineering & Pipeline Architecture",
       "score": 94,
       "human_quality_score": 89.2,
-      "status": "APPROVED",
+      "status": "PUBLISHED",
       "format": "image-attached",
       "replaces": "Heavyweight Cloud Orchestrators (Airflow/Kubeflow) for Modular Feature Pipelines",
       "cost": "$0 / BSD 3-Clause; zero infrastructure database or worker daemon overhead",
       "test_status": "Tested on feature engineering and RAG chunking pipelines in Docker; not tested on Petabyte-scale distributed data lakes yet",
       "file": "linkedin/queue/candidate_28_hamilton_dag.md",
-      "visual": "linkedin/visuals/visual_hamilton_dag.png"
+      "visual": "linkedin/visuals/visual_hamilton_dag.png",
+      "published_at": "2026-11-12T17:41:27Z",
+      "linkedin_post_id": "urn:li:share:7526700697921265665",
+      "linkedin_post_url": "https://www.linkedin.com/feed/update/urn:li:share:7526700697921265665/"
     },
     {
       "id": 29,
@@ -367,6 +370,6 @@
       "visual": "linkedin/visuals/visual_llamacpp_speculative.png"
     }
   ],
-  "updated_at": "2026-11-11T09:25:00.000000",
+  "updated_at": "2026-11-12T17:41:24.252704",
   "auto_approve_enabled": true
 }

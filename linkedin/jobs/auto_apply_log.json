@@ -1,114 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "10:12:55",
-      "datetime": "2026-11-10T10:12:55.205457",
-      "level": "INFO",
-      "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "18:03:55",
-      "datetime": "2026-11-10T18:03:55.505533",
-      "level": "INFO",
-      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
-    },
-    {
-      "timestamp": "18:04:01",
-      "datetime": "2026-11-10T18:04:01.247396",
-      "level": "SUCCESS",
-      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
-    },
-    {
-      "timestamp": "18:04:01",
-      "datetime": "2026-11-10T18:04:01.248715",
-      "level": "INFO",
-      "message": "Radar scan: 13 active jobs, 5 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "18:04:01",
-      "datetime": "2026-11-10T18:04:01.250228",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Werkstudent (w/m/d) KI-gest\u00fctzte Software- und Plattformentwicklung' at Siemens AG (ID: job-ba-12465_1646595_2_S)"
-    },
-    {
-      "timestamp": "18:04:01",
-      "datetime": "2026-11-10T18:04:01.261153",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-ba-12465_1646595_2_S.pdf"
-    },
-    {
-      "timestamp": "18:04:01",
-      "datetime": "2026-11-10T18:04:01.262049",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-ba-12465_1646595_2_S.pdf"
-    },
-    {
-      "timestamp": "18:04:01",
-      "datetime": "2026-11-10T18:04:01.262887",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "18:04:01",
-      "datetime": "2026-11-10T18:04:01.269618",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for Siemens AG."
-    },
-    {
-      "timestamp": "18:04:03",
-      "datetime": "2026-11-10T18:04:03.270590",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'AI Builder Intern (m/f/d)' at inca (ID: job-linkedin-4489199360)"
-    },
-    {
-      "timestamp": "18:04:03",
-      "datetime": "2026-11-10T18:04:03.272977",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4489199360.pdf"
-    },
-    {
-      "timestamp": "18:04:03",
-      "datetime": "2026-11-10T18:04:03.273716",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4489199360.pdf"
-    },
-    {
-      "timestamp": "18:04:03",
-      "datetime": "2026-11-10T18:04:03.274455",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "18:04:03",
-      "datetime": "2026-11-10T18:04:03.280663",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for inca."
-    },
-    {
-      "timestamp": "18:04:05",
-      "datetime": "2026-11-10T18:04:05.281527",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Werkstudent (m/w/d) Sales \u2013 Healthcare Software' at samedi GmbH (ID: job-linkedin-4488133414)"
-    },
-    {
-      "timestamp": "18:04:05",
-      "datetime": "2026-11-10T18:04:05.286852",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4488133414.pdf"
-    },
-    {
-      "timestamp": "18:04:05",
-      "datetime": "2026-11-10T18:04:05.288058",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4488133414.pdf"
-    },
-    {
-      "timestamp": "18:04:05",
-      "datetime": "2026-11-10T18:04:05.289337",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
       "timestamp": "18:04:05",
       "datetime": "2026-11-10T18:04:05.299992",
       "level": "SUCCESS",
@@ -359,6 +251,114 @@
       "datetime": "2026-11-12T09:17:22.324029",
       "level": "INFO",
       "message": "Radar scan: 14 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "17:41:27",
+      "datetime": "2026-11-12T17:41:27.855581",
+      "level": "INFO",
+      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
+    },
+    {
+      "timestamp": "17:41:33",
+      "datetime": "2026-11-12T17:41:33.081931",
+      "level": "SUCCESS",
+      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
+    },
+    {
+      "timestamp": "17:41:33",
+      "datetime": "2026-11-12T17:41:33.083495",
+      "level": "INFO",
+      "message": "Radar scan: 14 active jobs, 3 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "17:41:33",
+      "datetime": "2026-11-12T17:41:33.085269",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Praktikant / Werkstudent Audit - Center of Competence Data Analytics (m/w/d)' at Deloitte GmbH (ID: job-ba-15794_471450_50394_1_S)"
+    },
+    {
+      "timestamp": "17:41:33",
+      "datetime": "2026-11-12T17:41:33.088581",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-ba-15794_471450_50394_1_S.pdf"
+    },
+    {
+      "timestamp": "17:41:33",
+      "datetime": "2026-11-12T17:41:33.090509",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-ba-15794_471450_50394_1_S.pdf"
+    },
+    {
+      "timestamp": "17:41:33",
+      "datetime": "2026-11-12T17:41:33.091877",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "17:41:33",
+      "datetime": "2026-11-12T17:41:33.104912",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Deloitte GmbH."
+    },
+    {
+      "timestamp": "17:41:35",
+      "datetime": "2026-11-12T17:41:35.106087",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'GTM Operator (internship)' at Consultport (ID: job-linkedin-4488551032)"
+    },
+    {
+      "timestamp": "17:41:35",
+      "datetime": "2026-11-12T17:41:35.109041",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4488551032.pdf"
+    },
+    {
+      "timestamp": "17:41:35",
+      "datetime": "2026-11-12T17:41:35.110945",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4488551032.pdf"
+    },
+    {
+      "timestamp": "17:41:35",
+      "datetime": "2026-11-12T17:41:35.112067",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "17:41:35",
+      "datetime": "2026-11-12T17:41:35.120828",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Consultport."
+    },
+    {
+      "timestamp": "17:41:37",
+      "datetime": "2026-11-12T17:41:37.122100",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Werkstudent GTM (m/w/d)' at Arvana (ID: job-linkedin-4488502339)"
+    },
+    {
+      "timestamp": "17:41:37",
+      "datetime": "2026-11-12T17:41:37.124891",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4488502339.pdf"
+    },
+    {
+      "timestamp": "17:41:37",
+      "datetime": "2026-11-12T17:41:37.126312",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4488502339.pdf"
+    },
+    {
+      "timestamp": "17:41:37",
+      "datetime": "2026-11-12T17:41:37.127439",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "17:41:37",
+      "datetime": "2026-11-12T17:41:37.135976",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Arvana."
     }
   ]
 }
