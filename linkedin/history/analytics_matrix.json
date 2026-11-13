@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-13T11:51:28.183262",
-  "total_posts": 24,
+  "updated_at": "2026-11-13T19:12:43.935389",
+  "total_posts": 23,
   "target_region": "European Union (CET/CEST)",
   "data_integrity": "Verified Ground Truth",
   "posts_analytics": [
@@ -57,18 +57,6 @@
       "topic": "browser-use (Headless Vision-Web Agents & DOM Token Compression)",
       "published_at": "2026-11-11T08:20:56Z",
       "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7526197249521958912/",
-      "impressions": 0,
-      "reactions": 0,
-      "comments": 0,
-      "reposts": 0,
-      "status": "ACCUMULATING",
-      "notes": "Fresh drop; awaiting next live telemetry sync."
-    },
-    {
-      "candidate_id": 24,
-      "topic": "LitServe (Multi-Worker Dynamic Batching Engine vs Naive FastAPI)",
-      "published_at": "2026-11-06T18:13:20Z",
-      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7524534393856745474/",
       "impressions": 0,
       "reactions": 0,
       "comments": 0,

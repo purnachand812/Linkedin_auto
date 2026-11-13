@@ -1,114 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "18:04:07",
-      "datetime": "2026-11-10T18:04:07.311149",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "18:04:07",
-      "datetime": "2026-11-10T18:04:07.322652",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for Northbound."
-    },
-    {
-      "timestamp": "18:04:09",
-      "datetime": "2026-11-10T18:04:09.324796",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Werkstudent Softwareentwicklung (m/w/d)' at Nhas Food 1993 GmbH (ID: job-linkedin-4485091766)"
-    },
-    {
-      "timestamp": "18:04:09",
-      "datetime": "2026-11-10T18:04:09.332104",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4485091766.pdf"
-    },
-    {
-      "timestamp": "18:04:09",
-      "datetime": "2026-11-10T18:04:09.335957",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4485091766.pdf"
-    },
-    {
-      "timestamp": "18:04:09",
-      "datetime": "2026-11-10T18:04:09.337197",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "18:04:09",
-      "datetime": "2026-11-10T18:04:09.364516",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for Nhas Food 1993 GmbH."
-    },
-    {
-      "timestamp": "23:37:44",
-      "datetime": "2026-11-10T23:37:44.857028",
-      "level": "INFO",
-      "message": "Daily quota reached (5/5). Standing by until tomorrow."
-    },
-    {
-      "timestamp": "00:19:28",
-      "datetime": "2026-11-11T00:19:28.564741",
-      "level": "INFO",
-      "message": "Radar scan: 13 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "04:42:08",
-      "datetime": "2026-11-11T04:42:08.803104",
-      "level": "INFO",
-      "message": "Radar scan: 13 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "08:51:09",
-      "datetime": "2026-11-11T08:51:09.516150",
-      "level": "INFO",
-      "message": "Radar scan: 13 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "12:25:49",
-      "datetime": "2026-11-11T12:25:49.086058",
-      "level": "INFO",
-      "message": "Radar scan: 13 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "19:48:10",
-      "datetime": "2026-11-11T19:48:10.119229",
-      "level": "INFO",
-      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
-    },
-    {
-      "timestamp": "19:48:15",
-      "datetime": "2026-11-11T19:48:15.395721",
-      "level": "SUCCESS",
-      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
-    },
-    {
-      "timestamp": "19:48:15",
-      "datetime": "2026-11-11T19:48:15.396978",
-      "level": "INFO",
-      "message": "Radar scan: 14 active jobs, 4 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "19:48:15",
-      "datetime": "2026-11-11T19:48:15.418174",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Card Operations Working Student' at Solaris SE (ID: job-gh-solarisbank-8899705002)"
-    },
-    {
-      "timestamp": "19:48:15",
-      "datetime": "2026-11-11T19:48:15.428592",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-gh-solarisbank-8899705002.pdf"
-    },
-    {
-      "timestamp": "19:48:15",
-      "datetime": "2026-11-11T19:48:15.429155",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-gh-solarisbank-8899705002.pdf"
-    },
-    {
       "timestamp": "19:48:15",
       "datetime": "2026-11-11T19:48:15.429778",
       "level": "SUCCESS",
@@ -359,6 +251,114 @@
       "datetime": "2026-11-13T11:51:28.180881",
       "level": "INFO",
       "message": "Radar scan: 14 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "19:12:32",
+      "datetime": "2026-11-13T19:12:32.945893",
+      "level": "INFO",
+      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
+    },
+    {
+      "timestamp": "19:12:37",
+      "datetime": "2026-11-13T19:12:37.890235",
+      "level": "SUCCESS",
+      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
+    },
+    {
+      "timestamp": "19:12:37",
+      "datetime": "2026-11-13T19:12:37.891565",
+      "level": "INFO",
+      "message": "Radar scan: 15 active jobs, 3 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "19:12:37",
+      "datetime": "2026-11-13T19:12:37.892347",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Werkstudent (m/w/d) Data, Controlling & KPI-Reporting' at Pflegia (ID: job-linkedin-4489586342)"
+    },
+    {
+      "timestamp": "19:12:37",
+      "datetime": "2026-11-13T19:12:37.894657",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4489586342.pdf"
+    },
+    {
+      "timestamp": "19:12:37",
+      "datetime": "2026-11-13T19:12:37.895363",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4489586342.pdf"
+    },
+    {
+      "timestamp": "19:12:37",
+      "datetime": "2026-11-13T19:12:37.896288",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "19:12:37",
+      "datetime": "2026-11-13T19:12:37.904839",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Pflegia."
+    },
+    {
+      "timestamp": "19:12:39",
+      "datetime": "2026-11-13T19:12:39.905894",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Werkstudent (m/w/d) - AI Enablement & Adoption' at XCNT (ID: job-linkedin-4488923231)"
+    },
+    {
+      "timestamp": "19:12:39",
+      "datetime": "2026-11-13T19:12:39.908311",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4488923231.pdf"
+    },
+    {
+      "timestamp": "19:12:39",
+      "datetime": "2026-11-13T19:12:39.909060",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4488923231.pdf"
+    },
+    {
+      "timestamp": "19:12:39",
+      "datetime": "2026-11-13T19:12:39.909983",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "19:12:39",
+      "datetime": "2026-11-13T19:12:39.918125",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for XCNT."
+    },
+    {
+      "timestamp": "19:12:41",
+      "datetime": "2026-11-13T19:12:41.919155",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Praktikum im Business Development - Datenanalyse & Plattformmanagement (m/w/d)' at Pflegia (ID: job-linkedin-4489588146)"
+    },
+    {
+      "timestamp": "19:12:41",
+      "datetime": "2026-11-13T19:12:41.921581",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4489588146.pdf"
+    },
+    {
+      "timestamp": "19:12:41",
+      "datetime": "2026-11-13T19:12:41.922336",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4489588146.pdf"
+    },
+    {
+      "timestamp": "19:12:41",
+      "datetime": "2026-11-13T19:12:41.923245",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "19:12:41",
+      "datetime": "2026-11-13T19:12:41.931085",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Pflegia."
     }
   ]
 }
