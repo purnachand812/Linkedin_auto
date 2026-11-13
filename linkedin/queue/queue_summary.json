@@ -346,13 +346,16 @@
       "beat": "Autonomous Agents & Tool Protocols",
       "score": 95,
       "human_quality_score": 87.2,
-      "status": "APPROVED",
+      "status": "PUBLISHED",
       "format": "image-attached",
       "replaces": "Boilerplate JSON-RPC Protocol Handlers & Proprietary Plugin Frameworks",
       "cost": "$0 / MIT Open Source; eliminates 200+ lines of low-level MCP wire protocol code",
       "test_status": "Tested with Claude Desktop and local Python agent clients in Docker; not tested over enterprise reverse proxies with mTLS yet",
       "file": "linkedin/queue/candidate_29_fastmcp.md",
-      "visual": "linkedin/visuals/visual_fastmcp_sdk.png"
+      "visual": "linkedin/visuals/visual_fastmcp_sdk.png",
+      "published_at": "2026-11-13T11:51:28Z",
+      "linkedin_post_id": "urn:li:share:7526975005289791488",
+      "linkedin_post_url": "https://www.linkedin.com/feed/update/urn:li:share:7526975005289791488/"
     },
     {
       "id": 30,
@@ -370,6 +373,6 @@
       "visual": "linkedin/visuals/visual_llamacpp_speculative.png"
     }
   ],
-  "updated_at": "2026-11-13T03:30:28.524368",
+  "updated_at": "2026-11-13T11:51:24.799733",
   "auto_approve_enabled": true
 }

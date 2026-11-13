@@ -1,9 +1,21 @@
 {
-  "updated_at": "2026-11-13T03:30:28.528317",
+  "updated_at": "2026-11-13T11:51:28.183262",
   "total_posts": 24,
   "target_region": "European Union (CET/CEST)",
   "data_integrity": "Verified Ground Truth",
   "posts_analytics": [
+    {
+      "candidate_id": 29,
+      "topic": "FastMCP (High-Level Python Framework for Model Context Protocol Servers)",
+      "published_at": "2026-11-13T11:51:28Z",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7526975005289791488/",
+      "impressions": 0,
+      "reactions": 0,
+      "comments": 0,
+      "reposts": 0,
+      "status": "ACCUMULATING",
+      "notes": "Fresh drop; awaiting next live telemetry sync."
+    },
     {
       "candidate_id": 28,
       "topic": "Hamilton (Micro-Framework for Python Data & Feature Pipelines)",
@@ -57,18 +69,6 @@
       "topic": "LitServe (Multi-Worker Dynamic Batching Engine vs Naive FastAPI)",
       "published_at": "2026-11-06T18:13:20Z",
       "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7524534393856745474/",
-      "impressions": 0,
-      "reactions": 0,
-      "comments": 0,
-      "reposts": 0,
-      "status": "ACCUMULATING",
-      "notes": "Fresh drop; awaiting next live telemetry sync."
-    },
-    {
-      "candidate_id": 23,
-      "topic": "Hugging Face FastRTC (Real-Time Bidirectional Voice & WebRTC Agents)",
-      "published_at": "2026-11-06T11:18:44Z",
-      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7524430055381364737/",
       "impressions": 0,
       "reactions": 0,
       "comments": 0,
