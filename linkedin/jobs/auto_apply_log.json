@@ -1,12 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "19:48:15",
-      "datetime": "2026-11-11T19:48:15.475032",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for Solaris SE."
-    },
-    {
       "timestamp": "19:48:17",
       "datetime": "2026-11-11T19:48:17.475859",
       "level": "INFO",
@@ -357,6 +351,12 @@
     {
       "timestamp": "00:24:50",
       "datetime": "2026-11-14T00:24:50.030889",
+      "level": "INFO",
+      "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "00:33:23",
+      "datetime": "2026-11-14T00:33:23.848727",
       "level": "INFO",
       "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
