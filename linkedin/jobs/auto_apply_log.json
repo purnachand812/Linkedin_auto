@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "19:48:19",
-      "datetime": "2026-11-11T19:48:19.488914",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Founder's Associate - Intern (f/m/x) (4-6 months)' at claim.me (ID: job-linkedin-4487158877)"
-    },
-    {
-      "timestamp": "19:48:19",
       "datetime": "2026-11-11T19:48:19.491085",
       "level": "SUCCESS",
       "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4487158877.pdf"
@@ -357,6 +351,12 @@
     {
       "timestamp": "18:57:55",
       "datetime": "2026-11-14T18:57:55.500422",
+      "level": "INFO",
+      "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "22:54:31",
+      "datetime": "2026-11-14T22:54:31.998753",
       "level": "INFO",
       "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
