@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "19:48:17",
-      "datetime": "2026-11-11T19:48:17.475859",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Founder's Associate Intern - claim.me (f/m/x) (4-6 months)' at Seven Senders (ID: job-linkedin-4487484826)"
-    },
-    {
-      "timestamp": "19:48:17",
       "datetime": "2026-11-11T19:48:17.478326",
       "level": "SUCCESS",
       "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4487484826.pdf"
@@ -357,6 +351,12 @@
     {
       "timestamp": "00:33:23",
       "datetime": "2026-11-14T00:33:23.848727",
+      "level": "INFO",
+      "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "06:52:05",
+      "datetime": "2026-11-14T06:52:05.036457",
       "level": "INFO",
       "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
