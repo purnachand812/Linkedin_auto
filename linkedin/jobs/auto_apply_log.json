@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "19:48:17",
-      "datetime": "2026-11-11T19:48:17.478326",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4487484826.pdf"
-    },
-    {
-      "timestamp": "19:48:17",
       "datetime": "2026-11-11T19:48:17.479072",
       "level": "SUCCESS",
       "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4487484826.pdf"
@@ -357,6 +351,12 @@
     {
       "timestamp": "06:52:05",
       "datetime": "2026-11-14T06:52:05.036457",
+      "level": "INFO",
+      "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "13:56:38",
+      "datetime": "2026-11-14T13:56:38.995445",
       "level": "INFO",
       "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
     }

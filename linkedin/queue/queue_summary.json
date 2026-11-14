@@ -364,15 +364,18 @@
       "beat": "Local Inference & Hardware Optimization",
       "score": 94,
       "human_quality_score": 93.5,
-      "status": "APPROVED",
+      "status": "PUBLISHED",
       "format": "image-attached",
       "replaces": "Sequential Autoregressive Decoding & High-Power GPU Inference Racks",
       "cost": "$0 / MIT Open Source; delivers 2x-2.5x token generation speed on CPU/Mac/Edge",
       "test_status": "Tested on Llama-3-8B with a 0.5B draft model on local Apple Silicon; not tested on heterogeneous distributed compute clusters yet",
       "file": "linkedin/queue/candidate_30_llamacpp_speculative.md",
-      "visual": "linkedin/visuals/visual_llamacpp_speculative.png"
+      "visual": "linkedin/visuals/visual_llamacpp_speculative.png",
+      "published_at": "2026-11-14T13:56:38Z",
+      "linkedin_post_id": "urn:li:share:7527368897205800961",
+      "linkedin_post_url": "https://www.linkedin.com/feed/update/urn:li:share:7527368897205800961/"
     }
   ],
-  "updated_at": "2026-11-14T06:52:05.034744",
+  "updated_at": "2026-11-14T13:56:35.793583",
   "auto_approve_enabled": true
 }
