@@ -1,24 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "19:48:17",
-      "datetime": "2026-11-11T19:48:17.479072",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4487484826.pdf"
-    },
-    {
-      "timestamp": "19:48:17",
-      "datetime": "2026-11-11T19:48:17.479913",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "19:48:17",
-      "datetime": "2026-11-11T19:48:17.487928",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for Seven Senders."
-    },
-    {
       "timestamp": "19:48:19",
       "datetime": "2026-11-11T19:48:19.488914",
       "level": "INFO",
@@ -357,6 +339,24 @@
     {
       "timestamp": "13:56:38",
       "datetime": "2026-11-14T13:56:38.995445",
+      "level": "INFO",
+      "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "18:57:50",
+      "datetime": "2026-11-14T18:57:50.532033",
+      "level": "INFO",
+      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
+    },
+    {
+      "timestamp": "18:57:55",
+      "datetime": "2026-11-14T18:57:55.499153",
+      "level": "SUCCESS",
+      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
+    },
+    {
+      "timestamp": "18:57:55",
+      "datetime": "2026-11-14T18:57:55.500422",
       "level": "INFO",
       "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
