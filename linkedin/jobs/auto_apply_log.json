@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "19:48:15",
-      "datetime": "2026-11-11T19:48:15.429778",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "19:48:15",
       "datetime": "2026-11-11T19:48:15.475032",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for Solaris SE."
@@ -359,6 +353,12 @@
       "datetime": "2026-11-13T19:12:41.931085",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for Pflegia."
+    },
+    {
+      "timestamp": "00:24:50",
+      "datetime": "2026-11-14T00:24:50.030889",
+      "level": "INFO",
+      "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
   ]
 }
