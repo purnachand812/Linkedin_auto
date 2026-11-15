@@ -1,12 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "19:48:19",
-      "datetime": "2026-11-11T19:48:19.497678",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for claim.me."
-    },
-    {
       "timestamp": "19:48:21",
       "datetime": "2026-11-11T19:48:21.498442",
       "level": "INFO",
@@ -357,6 +351,12 @@
     {
       "timestamp": "03:50:34",
       "datetime": "2026-11-15T03:50:34.622188",
+      "level": "INFO",
+      "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "09:44:49",
+      "datetime": "2026-11-15T09:44:49.952381",
       "level": "INFO",
       "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
