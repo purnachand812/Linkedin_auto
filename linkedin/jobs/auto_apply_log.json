@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "19:48:21",
-      "datetime": "2026-11-11T19:48:21.501582",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "19:48:21",
       "datetime": "2026-11-11T19:48:21.506938",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for BLACKFIELD AI."
@@ -357,6 +351,12 @@
     {
       "timestamp": "16:48:36",
       "datetime": "2026-11-15T16:48:36.965246",
+      "level": "INFO",
+      "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "21:28:21",
+      "datetime": "2026-11-15T21:28:21.591022",
       "level": "INFO",
       "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
