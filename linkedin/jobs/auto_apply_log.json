@@ -1,12 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "19:48:21",
-      "datetime": "2026-11-11T19:48:21.506938",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for BLACKFIELD AI."
-    },
-    {
       "timestamp": "01:44:36",
       "datetime": "2026-11-12T01:44:36.125493",
       "level": "INFO",
@@ -357,6 +351,12 @@
     {
       "timestamp": "21:28:21",
       "datetime": "2026-11-15T21:28:21.591022",
+      "level": "INFO",
+      "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "23:38:59",
+      "datetime": "2026-11-15T23:38:59.527405",
       "level": "INFO",
       "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
