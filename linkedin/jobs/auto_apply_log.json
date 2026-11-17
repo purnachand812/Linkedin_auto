@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "17:41:35",
-      "datetime": "2026-11-12T17:41:35.106087",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'GTM Operator (internship)' at Consultport (ID: job-linkedin-4488551032)"
-    },
-    {
-      "timestamp": "17:41:35",
       "datetime": "2026-11-12T17:41:35.109041",
       "level": "SUCCESS",
       "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4488551032.pdf"
@@ -359,6 +353,12 @@
       "datetime": "2026-11-16T18:46:53.121588",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for Consultport."
+    },
+    {
+      "timestamp": "02:18:17",
+      "datetime": "2026-11-17T02:18:17.192717",
+      "level": "INFO",
+      "message": "Radar scan: 14 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
   ]
 }
