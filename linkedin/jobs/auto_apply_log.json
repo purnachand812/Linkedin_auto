@@ -1,84 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "17:41:35",
-      "datetime": "2026-11-12T17:41:35.112067",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "17:41:35",
-      "datetime": "2026-11-12T17:41:35.120828",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for Consultport."
-    },
-    {
-      "timestamp": "17:41:37",
-      "datetime": "2026-11-12T17:41:37.122100",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Werkstudent GTM (m/w/d)' at Arvana (ID: job-linkedin-4488502339)"
-    },
-    {
-      "timestamp": "17:41:37",
-      "datetime": "2026-11-12T17:41:37.124891",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4488502339.pdf"
-    },
-    {
-      "timestamp": "17:41:37",
-      "datetime": "2026-11-12T17:41:37.126312",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4488502339.pdf"
-    },
-    {
-      "timestamp": "17:41:37",
-      "datetime": "2026-11-12T17:41:37.127439",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "17:41:37",
-      "datetime": "2026-11-12T17:41:37.135976",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for Arvana."
-    },
-    {
-      "timestamp": "23:13:20",
-      "datetime": "2026-11-12T23:13:20.903423",
-      "level": "INFO",
-      "message": "Radar scan: 14 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "00:48:22",
-      "datetime": "2026-11-13T00:48:22.908563",
-      "level": "INFO",
-      "message": "Radar scan: 14 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "03:30:28",
-      "datetime": "2026-11-13T03:30:28.525868",
-      "level": "INFO",
-      "message": "Radar scan: 14 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "11:51:28",
-      "datetime": "2026-11-13T11:51:28.180881",
-      "level": "INFO",
-      "message": "Radar scan: 14 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "19:12:32",
-      "datetime": "2026-11-13T19:12:32.945893",
-      "level": "INFO",
-      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
-    },
-    {
-      "timestamp": "19:12:37",
-      "datetime": "2026-11-13T19:12:37.890235",
-      "level": "SUCCESS",
-      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
-    },
-    {
       "timestamp": "19:12:37",
       "datetime": "2026-11-13T19:12:37.891565",
       "level": "INFO",
@@ -359,6 +281,84 @@
       "datetime": "2026-11-17T10:57:38.521140",
       "level": "INFO",
       "message": "Radar scan: 14 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "19:41:03",
+      "datetime": "2026-11-17T19:41:03.974157",
+      "level": "INFO",
+      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
+    },
+    {
+      "timestamp": "19:41:09",
+      "datetime": "2026-11-17T19:41:09.076563",
+      "level": "SUCCESS",
+      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
+    },
+    {
+      "timestamp": "19:41:09",
+      "datetime": "2026-11-17T19:41:09.078266",
+      "level": "INFO",
+      "message": "Radar scan: 14 active jobs, 2 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "19:41:09",
+      "datetime": "2026-11-17T19:41:09.097669",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Werkstudent IT Beratung (Financial Services) (w/m/d)' at EY Consulting GmbH (ID: job-ba-15548_1654642_1_S)"
+    },
+    {
+      "timestamp": "19:41:09",
+      "datetime": "2026-11-17T19:41:09.102572",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-ba-15548_1654642_1_S.pdf"
+    },
+    {
+      "timestamp": "19:41:09",
+      "datetime": "2026-11-17T19:41:09.103244",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-ba-15548_1654642_1_S.pdf"
+    },
+    {
+      "timestamp": "19:41:09",
+      "datetime": "2026-11-17T19:41:09.105472",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "19:41:09",
+      "datetime": "2026-11-17T19:41:09.112747",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for EY Consulting GmbH."
+    },
+    {
+      "timestamp": "19:41:11",
+      "datetime": "2026-11-17T19:41:11.113862",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Werkstudent:in im Team Energy Projects' at greenventory (ID: job-linkedin-4490452743)"
+    },
+    {
+      "timestamp": "19:41:11",
+      "datetime": "2026-11-17T19:41:11.118441",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4490452743.pdf"
+    },
+    {
+      "timestamp": "19:41:11",
+      "datetime": "2026-11-17T19:41:11.119443",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4490452743.pdf"
+    },
+    {
+      "timestamp": "19:41:11",
+      "datetime": "2026-11-17T19:41:11.120218",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "19:41:11",
+      "datetime": "2026-11-17T19:41:11.128905",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for greenventory."
     }
   ]
 }
