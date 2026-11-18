@@ -1,144 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "19:12:37",
-      "datetime": "2026-11-13T19:12:37.895363",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4489586342.pdf"
-    },
-    {
-      "timestamp": "19:12:37",
-      "datetime": "2026-11-13T19:12:37.896288",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "19:12:37",
-      "datetime": "2026-11-13T19:12:37.904839",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for Pflegia."
-    },
-    {
-      "timestamp": "19:12:39",
-      "datetime": "2026-11-13T19:12:39.905894",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Werkstudent (m/w/d) - AI Enablement & Adoption' at XCNT (ID: job-linkedin-4488923231)"
-    },
-    {
-      "timestamp": "19:12:39",
-      "datetime": "2026-11-13T19:12:39.908311",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4488923231.pdf"
-    },
-    {
-      "timestamp": "19:12:39",
-      "datetime": "2026-11-13T19:12:39.909060",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4488923231.pdf"
-    },
-    {
-      "timestamp": "19:12:39",
-      "datetime": "2026-11-13T19:12:39.909983",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "19:12:39",
-      "datetime": "2026-11-13T19:12:39.918125",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for XCNT."
-    },
-    {
-      "timestamp": "19:12:41",
-      "datetime": "2026-11-13T19:12:41.919155",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Praktikum im Business Development - Datenanalyse & Plattformmanagement (m/w/d)' at Pflegia (ID: job-linkedin-4489588146)"
-    },
-    {
-      "timestamp": "19:12:41",
-      "datetime": "2026-11-13T19:12:41.921581",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4489588146.pdf"
-    },
-    {
-      "timestamp": "19:12:41",
-      "datetime": "2026-11-13T19:12:41.922336",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4489588146.pdf"
-    },
-    {
-      "timestamp": "19:12:41",
-      "datetime": "2026-11-13T19:12:41.923245",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "19:12:41",
-      "datetime": "2026-11-13T19:12:41.931085",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for Pflegia."
-    },
-    {
-      "timestamp": "00:24:50",
-      "datetime": "2026-11-14T00:24:50.030889",
-      "level": "INFO",
-      "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "00:33:23",
-      "datetime": "2026-11-14T00:33:23.848727",
-      "level": "INFO",
-      "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "06:52:05",
-      "datetime": "2026-11-14T06:52:05.036457",
-      "level": "INFO",
-      "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "13:56:38",
-      "datetime": "2026-11-14T13:56:38.995445",
-      "level": "INFO",
-      "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "18:57:50",
-      "datetime": "2026-11-14T18:57:50.532033",
-      "level": "INFO",
-      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
-    },
-    {
-      "timestamp": "18:57:55",
-      "datetime": "2026-11-14T18:57:55.499153",
-      "level": "SUCCESS",
-      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
-    },
-    {
-      "timestamp": "18:57:55",
-      "datetime": "2026-11-14T18:57:55.500422",
-      "level": "INFO",
-      "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "22:54:31",
-      "datetime": "2026-11-14T22:54:31.998753",
-      "level": "INFO",
-      "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "23:30:26",
-      "datetime": "2026-11-14T23:30:26.643599",
-      "level": "INFO",
-      "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "02:23:03",
-      "datetime": "2026-11-15T02:23:03.588279",
-      "level": "INFO",
-      "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
       "timestamp": "03:50:34",
       "datetime": "2026-11-15T03:50:34.622188",
       "level": "INFO",
@@ -359,6 +221,144 @@
       "datetime": "2026-11-18T10:29:33.272747",
       "level": "INFO",
       "message": "Radar scan: 14 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "18:59:39",
+      "datetime": "2026-11-18T18:59:39.262292",
+      "level": "INFO",
+      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
+    },
+    {
+      "timestamp": "18:59:44",
+      "datetime": "2026-11-18T18:59:44.483309",
+      "level": "SUCCESS",
+      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
+    },
+    {
+      "timestamp": "18:59:44",
+      "datetime": "2026-11-18T18:59:44.485025",
+      "level": "INFO",
+      "message": "Radar scan: 15 active jobs, 4 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "18:59:44",
+      "datetime": "2026-11-18T18:59:44.486007",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Praktikum Forensic - Data Analytics (w/m/d)' at PricewaterhouseCoopers GmbH WPG (ID: job-ba-18989_984548682_S)"
+    },
+    {
+      "timestamp": "18:59:44",
+      "datetime": "2026-11-18T18:59:44.488354",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-ba-18989_984548682_S.pdf"
+    },
+    {
+      "timestamp": "18:59:44",
+      "datetime": "2026-11-18T18:59:44.489313",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-ba-18989_984548682_S.pdf"
+    },
+    {
+      "timestamp": "18:59:44",
+      "datetime": "2026-11-18T18:59:44.490216",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "18:59:44",
+      "datetime": "2026-11-18T18:59:44.498426",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for PricewaterhouseCoopers GmbH WPG."
+    },
+    {
+      "timestamp": "18:59:46",
+      "datetime": "2026-11-18T18:59:46.499326",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Praktikum / Werkstudent IT-Beratung Public Sector (w/m/d)' at PricewaterhouseCoopers GmbH WPG (ID: job-ba-18989_984518572_S)"
+    },
+    {
+      "timestamp": "18:59:46",
+      "datetime": "2026-11-18T18:59:46.502354",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-ba-18989_984518572_S.pdf"
+    },
+    {
+      "timestamp": "18:59:46",
+      "datetime": "2026-11-18T18:59:46.503477",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-ba-18989_984518572_S.pdf"
+    },
+    {
+      "timestamp": "18:59:46",
+      "datetime": "2026-11-18T18:59:46.504785",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "18:59:46",
+      "datetime": "2026-11-18T18:59:46.519087",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for PricewaterhouseCoopers GmbH WPG."
+    },
+    {
+      "timestamp": "18:59:48",
+      "datetime": "2026-11-18T18:59:48.528442",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Werkstudent Commercial Enablement - AI & Automation (f/m/d)' at Zenjob SE (ID: job-ba-12951_9ae6af22_7ccc_45fb__S)"
+    },
+    {
+      "timestamp": "18:59:48",
+      "datetime": "2026-11-18T18:59:48.535055",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-ba-12951_9ae6af22_7ccc_45fb__S.pdf"
+    },
+    {
+      "timestamp": "18:59:48",
+      "datetime": "2026-11-18T18:59:48.536218",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-ba-12951_9ae6af22_7ccc_45fb__S.pdf"
+    },
+    {
+      "timestamp": "18:59:48",
+      "datetime": "2026-11-18T18:59:48.538843",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "18:59:48",
+      "datetime": "2026-11-18T18:59:48.563817",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Zenjob SE."
+    },
+    {
+      "timestamp": "18:59:50",
+      "datetime": "2026-11-18T18:59:50.567043",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'People Associate - Working Student' at Wolt BerlinTech (ID: job-gh-wolt-8395841)"
+    },
+    {
+      "timestamp": "18:59:50",
+      "datetime": "2026-11-18T18:59:50.570151",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-gh-wolt-8395841.pdf"
+    },
+    {
+      "timestamp": "18:59:50",
+      "datetime": "2026-11-18T18:59:50.570969",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-gh-wolt-8395841.pdf"
+    },
+    {
+      "timestamp": "18:59:50",
+      "datetime": "2026-11-18T18:59:50.571922",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "18:59:50",
+      "datetime": "2026-11-18T18:59:50.582209",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Wolt BerlinTech."
     }
   ]
 }
