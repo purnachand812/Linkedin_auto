@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "19:12:37",
-      "datetime": "2026-11-13T19:12:37.891565",
-      "level": "INFO",
-      "message": "Radar scan: 15 active jobs, 3 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "19:12:37",
       "datetime": "2026-11-13T19:12:37.892347",
       "level": "INFO",
       "message": "Initiating autonomous application: 'Werkstudent (m/w/d) Data, Controlling & KPI-Reporting' at Pflegia (ID: job-linkedin-4489586342)"
@@ -359,6 +353,12 @@
       "datetime": "2026-11-17T19:41:11.128905",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for greenventory."
+    },
+    {
+      "timestamp": "01:57:27",
+      "datetime": "2026-11-18T01:57:27.044116",
+      "level": "INFO",
+      "message": "Radar scan: 14 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
   ]
 }
