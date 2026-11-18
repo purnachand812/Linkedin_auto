@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "19:12:37",
-      "datetime": "2026-11-13T19:12:37.892347",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Werkstudent (m/w/d) Data, Controlling & KPI-Reporting' at Pflegia (ID: job-linkedin-4489586342)"
-    },
-    {
-      "timestamp": "19:12:37",
       "datetime": "2026-11-13T19:12:37.894657",
       "level": "SUCCESS",
       "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4489586342.pdf"
@@ -357,6 +351,12 @@
     {
       "timestamp": "01:57:27",
       "datetime": "2026-11-18T01:57:27.044116",
+      "level": "INFO",
+      "message": "Radar scan: 14 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "02:06:20",
+      "datetime": "2026-11-18T02:06:20.842591",
       "level": "INFO",
       "message": "Radar scan: 14 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
