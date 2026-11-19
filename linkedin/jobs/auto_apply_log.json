@@ -1,12 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "03:50:34",
-      "datetime": "2026-11-15T03:50:34.622188",
-      "level": "INFO",
-      "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
       "timestamp": "09:44:49",
       "datetime": "2026-11-15T09:44:49.952381",
       "level": "INFO",
@@ -359,6 +353,12 @@
       "datetime": "2026-11-18T18:59:50.582209",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for Wolt BerlinTech."
+    },
+    {
+      "timestamp": "01:03:57",
+      "datetime": "2026-11-19T01:03:57.667802",
+      "level": "INFO",
+      "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
   ]
 }
