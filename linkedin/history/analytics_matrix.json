@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-19T09:07:56.204108",
-  "total_posts": 22,
+  "updated_at": "2026-11-19T18:29:22.813373",
+  "total_posts": 20,
   "target_region": "European Union (CET/CEST)",
   "data_integrity": "Verified Ground Truth",
   "posts_analytics": [
@@ -21,30 +21,6 @@
       "topic": "FastMCP (High-Level Python Framework for Model Context Protocol Servers)",
       "published_at": "2026-11-13T11:51:28Z",
       "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7526975005289791488/",
-      "impressions": 0,
-      "reactions": 0,
-      "comments": 0,
-      "reposts": 0,
-      "status": "ACCUMULATING",
-      "notes": "Fresh drop; awaiting next live telemetry sync."
-    },
-    {
-      "candidate_id": 28,
-      "topic": "Hamilton (Micro-Framework for Python Data & Feature Pipelines)",
-      "published_at": "2026-11-12T17:41:27Z",
-      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7526700697921265665/",
-      "impressions": 0,
-      "reactions": 0,
-      "comments": 0,
-      "reposts": 0,
-      "status": "ACCUMULATING",
-      "notes": "Fresh drop; awaiting next live telemetry sync."
-    },
-    {
-      "candidate_id": 27,
-      "topic": "Ollama Parallel Concurrency (Multi-Slot KV Allocation for Local Agent Swarms)",
-      "published_at": "2026-11-12T09:17:22Z",
-      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7526573837862469632/",
       "impressions": 0,
       "reactions": 0,
       "comments": 0,

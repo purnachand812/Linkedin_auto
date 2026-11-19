@@ -1,84 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "16:48:36",
-      "datetime": "2026-11-15T16:48:36.962866",
-      "level": "SUCCESS",
-      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
-    },
-    {
-      "timestamp": "16:48:36",
-      "datetime": "2026-11-15T16:48:36.965246",
-      "level": "INFO",
-      "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "21:28:21",
-      "datetime": "2026-11-15T21:28:21.591022",
-      "level": "INFO",
-      "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "23:38:59",
-      "datetime": "2026-11-15T23:38:59.527405",
-      "level": "INFO",
-      "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "01:19:56",
-      "datetime": "2026-11-16T01:19:56.945418",
-      "level": "INFO",
-      "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "03:51:00",
-      "datetime": "2026-11-16T03:51:00.139418",
-      "level": "INFO",
-      "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "08:18:11",
-      "datetime": "2026-11-16T08:18:11.869919",
-      "level": "INFO",
-      "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "18:46:47",
-      "datetime": "2026-11-16T18:46:47.560186",
-      "level": "INFO",
-      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
-    },
-    {
-      "timestamp": "18:46:53",
-      "datetime": "2026-11-16T18:46:53.109373",
-      "level": "SUCCESS",
-      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
-    },
-    {
-      "timestamp": "18:46:53",
-      "datetime": "2026-11-16T18:46:53.110704",
-      "level": "INFO",
-      "message": "Radar scan: 14 active jobs, 1 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "18:46:53",
-      "datetime": "2026-11-16T18:46:53.111350",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'GTM Operator (internship)' at Consultport (ID: job-linkedin-4489726524)"
-    },
-    {
-      "timestamp": "18:46:53",
-      "datetime": "2026-11-16T18:46:53.113301",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4489726524.pdf"
-    },
-    {
-      "timestamp": "18:46:53",
-      "datetime": "2026-11-16T18:46:53.113942",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4489726524.pdf"
-    },
-    {
       "timestamp": "18:46:53",
       "datetime": "2026-11-16T18:46:53.114670",
       "level": "SUCCESS",
@@ -359,6 +281,84 @@
       "datetime": "2026-11-19T09:07:56.201696",
       "level": "INFO",
       "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "18:29:14",
+      "datetime": "2026-11-19T18:29:14.266217",
+      "level": "INFO",
+      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
+    },
+    {
+      "timestamp": "18:29:18",
+      "datetime": "2026-11-19T18:29:18.763306",
+      "level": "SUCCESS",
+      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
+    },
+    {
+      "timestamp": "18:29:18",
+      "datetime": "2026-11-19T18:29:18.764366",
+      "level": "INFO",
+      "message": "Radar scan: 15 active jobs, 2 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "18:29:18",
+      "datetime": "2026-11-19T18:29:18.765386",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Praktikum - Digital Forensic und eDiscovery (w/m/d)' at PricewaterhouseCoopers GmbH WPG (ID: job-ba-18989_984548703_S)"
+    },
+    {
+      "timestamp": "18:29:18",
+      "datetime": "2026-11-19T18:29:18.767668",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-ba-18989_984548703_S.pdf"
+    },
+    {
+      "timestamp": "18:29:18",
+      "datetime": "2026-11-19T18:29:18.768518",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-ba-18989_984548703_S.pdf"
+    },
+    {
+      "timestamp": "18:29:18",
+      "datetime": "2026-11-19T18:29:18.783344",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "18:29:18",
+      "datetime": "2026-11-19T18:29:18.797372",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for PricewaterhouseCoopers GmbH WPG."
+    },
+    {
+      "timestamp": "18:29:20",
+      "datetime": "2026-11-19T18:29:20.798296",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Working Student \u2013 Research for Content (m/f/d)' at Hypofriend (ID: job-linkedin-4491623665)"
+    },
+    {
+      "timestamp": "18:29:20",
+      "datetime": "2026-11-19T18:29:20.800802",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4491623665.pdf"
+    },
+    {
+      "timestamp": "18:29:20",
+      "datetime": "2026-11-19T18:29:20.801588",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4491623665.pdf"
+    },
+    {
+      "timestamp": "18:29:20",
+      "datetime": "2026-11-19T18:29:20.802400",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "18:29:20",
+      "datetime": "2026-11-19T18:29:20.809788",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Hypofriend."
     }
   ]
 }
