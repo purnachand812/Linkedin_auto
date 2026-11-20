@@ -1,12 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "18:46:53",
-      "datetime": "2026-11-16T18:46:53.121588",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for Consultport."
-    },
-    {
       "timestamp": "02:18:17",
       "datetime": "2026-11-17T02:18:17.192717",
       "level": "INFO",
@@ -357,6 +351,12 @@
     {
       "timestamp": "00:51:20",
       "datetime": "2026-11-20T00:51:20.450269",
+      "level": "INFO",
+      "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "01:32:16",
+      "datetime": "2026-11-20T01:32:16.740414",
       "level": "INFO",
       "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
