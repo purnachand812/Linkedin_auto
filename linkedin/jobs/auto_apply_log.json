@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "18:59:44",
-      "datetime": "2026-11-18T18:59:44.489313",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-ba-18989_984548682_S.pdf"
-    },
-    {
-      "timestamp": "18:59:44",
       "datetime": "2026-11-18T18:59:44.490216",
       "level": "SUCCESS",
       "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
@@ -359,6 +353,12 @@
       "datetime": "2026-11-20T17:06:52.936118",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for Manta."
+    },
+    {
+      "timestamp": "23:15:19",
+      "datetime": "2026-11-20T23:15:19.330771",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
   ]
 }
