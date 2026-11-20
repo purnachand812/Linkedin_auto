@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "18:46:53",
-      "datetime": "2026-11-16T18:46:53.114670",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "18:46:53",
       "datetime": "2026-11-16T18:46:53.121588",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for Consultport."
@@ -359,6 +353,12 @@
       "datetime": "2026-11-19T18:29:20.809788",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for Hypofriend."
+    },
+    {
+      "timestamp": "00:51:20",
+      "datetime": "2026-11-20T00:51:20.450269",
+      "level": "INFO",
+      "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
   ]
 }
