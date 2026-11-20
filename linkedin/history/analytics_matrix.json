@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-20T08:04:13.694147",
-  "total_posts": 20,
+  "updated_at": "2026-11-20T17:06:54.939888",
+  "total_posts": 19,
   "target_region": "European Union (CET/CEST)",
   "data_integrity": "Verified Ground Truth",
   "posts_analytics": [
@@ -9,18 +9,6 @@
       "topic": "llama.cpp Speculative Decoding (2x Faster Local Edge LLM Inference)",
       "published_at": "2026-11-14T13:56:38Z",
       "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7527368897205800961/",
-      "impressions": 0,
-      "reactions": 0,
-      "comments": 0,
-      "reposts": 0,
-      "status": "ACCUMULATING",
-      "notes": "Fresh drop; awaiting next live telemetry sync."
-    },
-    {
-      "candidate_id": 29,
-      "topic": "FastMCP (High-Level Python Framework for Model Context Protocol Servers)",
-      "published_at": "2026-11-13T11:51:28Z",
-      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7526975005289791488/",
       "impressions": 0,
       "reactions": 0,
       "comments": 0,

@@ -1,144 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "02:41:56",
-      "datetime": "2026-11-17T02:41:56.049015",
-      "level": "INFO",
-      "message": "Radar scan: 14 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "10:57:38",
-      "datetime": "2026-11-17T10:57:38.521140",
-      "level": "INFO",
-      "message": "Radar scan: 14 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "19:41:03",
-      "datetime": "2026-11-17T19:41:03.974157",
-      "level": "INFO",
-      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
-    },
-    {
-      "timestamp": "19:41:09",
-      "datetime": "2026-11-17T19:41:09.076563",
-      "level": "SUCCESS",
-      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
-    },
-    {
-      "timestamp": "19:41:09",
-      "datetime": "2026-11-17T19:41:09.078266",
-      "level": "INFO",
-      "message": "Radar scan: 14 active jobs, 2 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "19:41:09",
-      "datetime": "2026-11-17T19:41:09.097669",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Werkstudent IT Beratung (Financial Services) (w/m/d)' at EY Consulting GmbH (ID: job-ba-15548_1654642_1_S)"
-    },
-    {
-      "timestamp": "19:41:09",
-      "datetime": "2026-11-17T19:41:09.102572",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-ba-15548_1654642_1_S.pdf"
-    },
-    {
-      "timestamp": "19:41:09",
-      "datetime": "2026-11-17T19:41:09.103244",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-ba-15548_1654642_1_S.pdf"
-    },
-    {
-      "timestamp": "19:41:09",
-      "datetime": "2026-11-17T19:41:09.105472",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "19:41:09",
-      "datetime": "2026-11-17T19:41:09.112747",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for EY Consulting GmbH."
-    },
-    {
-      "timestamp": "19:41:11",
-      "datetime": "2026-11-17T19:41:11.113862",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Werkstudent:in im Team Energy Projects' at greenventory (ID: job-linkedin-4490452743)"
-    },
-    {
-      "timestamp": "19:41:11",
-      "datetime": "2026-11-17T19:41:11.118441",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4490452743.pdf"
-    },
-    {
-      "timestamp": "19:41:11",
-      "datetime": "2026-11-17T19:41:11.119443",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4490452743.pdf"
-    },
-    {
-      "timestamp": "19:41:11",
-      "datetime": "2026-11-17T19:41:11.120218",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "19:41:11",
-      "datetime": "2026-11-17T19:41:11.128905",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for greenventory."
-    },
-    {
-      "timestamp": "01:57:27",
-      "datetime": "2026-11-18T01:57:27.044116",
-      "level": "INFO",
-      "message": "Radar scan: 14 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "02:06:20",
-      "datetime": "2026-11-18T02:06:20.842591",
-      "level": "INFO",
-      "message": "Radar scan: 14 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "10:29:33",
-      "datetime": "2026-11-18T10:29:33.272747",
-      "level": "INFO",
-      "message": "Radar scan: 14 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "18:59:39",
-      "datetime": "2026-11-18T18:59:39.262292",
-      "level": "INFO",
-      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
-    },
-    {
-      "timestamp": "18:59:44",
-      "datetime": "2026-11-18T18:59:44.483309",
-      "level": "SUCCESS",
-      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
-    },
-    {
-      "timestamp": "18:59:44",
-      "datetime": "2026-11-18T18:59:44.485025",
-      "level": "INFO",
-      "message": "Radar scan: 15 active jobs, 4 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "18:59:44",
-      "datetime": "2026-11-18T18:59:44.486007",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Praktikum Forensic - Data Analytics (w/m/d)' at PricewaterhouseCoopers GmbH WPG (ID: job-ba-18989_984548682_S)"
-    },
-    {
-      "timestamp": "18:59:44",
-      "datetime": "2026-11-18T18:59:44.488354",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-ba-18989_984548682_S.pdf"
-    },
-    {
       "timestamp": "18:59:44",
       "datetime": "2026-11-18T18:59:44.489313",
       "level": "SUCCESS",
@@ -359,6 +221,144 @@
       "datetime": "2026-11-20T08:04:13.692139",
       "level": "INFO",
       "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "17:06:41",
+      "datetime": "2026-11-20T17:06:41.902135",
+      "level": "INFO",
+      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
+    },
+    {
+      "timestamp": "17:06:46",
+      "datetime": "2026-11-20T17:06:46.872823",
+      "level": "SUCCESS",
+      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
+    },
+    {
+      "timestamp": "17:06:46",
+      "datetime": "2026-11-20T17:06:46.874694",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 4 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "17:06:46",
+      "datetime": "2026-11-20T17:06:46.875708",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Intern Merchant Account Management ENT' at Wolt BerlinTech (ID: job-gh-wolt-8405424)"
+    },
+    {
+      "timestamp": "17:06:46",
+      "datetime": "2026-11-20T17:06:46.879227",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-gh-wolt-8405424.pdf"
+    },
+    {
+      "timestamp": "17:06:46",
+      "datetime": "2026-11-20T17:06:46.884211",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-gh-wolt-8405424.pdf"
+    },
+    {
+      "timestamp": "17:06:46",
+      "datetime": "2026-11-20T17:06:46.886042",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "17:06:46",
+      "datetime": "2026-11-20T17:06:46.900640",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Wolt BerlinTech."
+    },
+    {
+      "timestamp": "17:06:48",
+      "datetime": "2026-11-20T17:06:48.901650",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Werkstudent Digitalisierung & KI (m/w/d)' at MANSKE Rechtsanw\u00e4lte Steuerberater (ID: job-linkedin-4491626393)"
+    },
+    {
+      "timestamp": "17:06:48",
+      "datetime": "2026-11-20T17:06:48.903764",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4491626393.pdf"
+    },
+    {
+      "timestamp": "17:06:48",
+      "datetime": "2026-11-20T17:06:48.904535",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4491626393.pdf"
+    },
+    {
+      "timestamp": "17:06:48",
+      "datetime": "2026-11-20T17:06:48.905310",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "17:06:48",
+      "datetime": "2026-11-20T17:06:48.912591",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for MANSKE Rechtsanw\u00e4lte Steuerberater."
+    },
+    {
+      "timestamp": "17:06:50",
+      "datetime": "2026-11-20T17:06:50.913573",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Werkstudent Sales (w/m/d)' at Smarketer GmbH (ID: job-linkedin-4491365970)"
+    },
+    {
+      "timestamp": "17:06:50",
+      "datetime": "2026-11-20T17:06:50.915769",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4491365970.pdf"
+    },
+    {
+      "timestamp": "17:06:50",
+      "datetime": "2026-11-20T17:06:50.916465",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4491365970.pdf"
+    },
+    {
+      "timestamp": "17:06:50",
+      "datetime": "2026-11-20T17:06:50.917255",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "17:06:50",
+      "datetime": "2026-11-20T17:06:50.924490",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Smarketer GmbH."
+    },
+    {
+      "timestamp": "17:06:52",
+      "datetime": "2026-11-20T17:06:52.925452",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Founders Associate Intern' at Manta (ID: job-linkedin-4489701097)"
+    },
+    {
+      "timestamp": "17:06:52",
+      "datetime": "2026-11-20T17:06:52.927510",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4489701097.pdf"
+    },
+    {
+      "timestamp": "17:06:52",
+      "datetime": "2026-11-20T17:06:52.928191",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4489701097.pdf"
+    },
+    {
+      "timestamp": "17:06:52",
+      "datetime": "2026-11-20T17:06:52.928992",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "17:06:52",
+      "datetime": "2026-11-20T17:06:52.936118",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Manta."
     }
   ]
 }
