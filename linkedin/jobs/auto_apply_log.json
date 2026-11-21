@@ -1,12 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "18:59:46",
-      "datetime": "2026-11-18T18:59:46.519087",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for PricewaterhouseCoopers GmbH WPG."
-    },
-    {
       "timestamp": "18:59:48",
       "datetime": "2026-11-18T18:59:48.528442",
       "level": "INFO",
@@ -357,6 +351,12 @@
     {
       "timestamp": "19:56:04",
       "datetime": "2026-11-21T19:56:04.847911",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "23:59:30",
+      "datetime": "2026-11-21T23:59:30.285161",
       "level": "INFO",
       "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
