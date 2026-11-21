@@ -1,21 +1,9 @@
 {
-  "updated_at": "2026-11-21T12:54:06.717561",
-  "total_posts": 19,
+  "updated_at": "2026-11-21T19:56:04.851272",
+  "total_posts": 18,
   "target_region": "European Union (CET/CEST)",
   "data_integrity": "Verified Ground Truth",
   "posts_analytics": [
-    {
-      "candidate_id": 30,
-      "topic": "llama.cpp Speculative Decoding (2x Faster Local Edge LLM Inference)",
-      "published_at": "2026-11-14T13:56:38Z",
-      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7527368897205800961/",
-      "impressions": 0,
-      "reactions": 0,
-      "comments": 0,
-      "reposts": 0,
-      "status": "ACCUMULATING",
-      "notes": "Fresh drop; awaiting next live telemetry sync."
-    },
     {
       "candidate_id": 20,
       "topic": "DeepSeek-R1-Distill-Qwen (Open-Weight Mathematical Reasoning on Consumer GPUs)",

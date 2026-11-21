@@ -2,24 +2,6 @@
   "entries": [
     {
       "timestamp": "18:59:46",
-      "datetime": "2026-11-18T18:59:46.502354",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-ba-18989_984518572_S.pdf"
-    },
-    {
-      "timestamp": "18:59:46",
-      "datetime": "2026-11-18T18:59:46.503477",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-ba-18989_984518572_S.pdf"
-    },
-    {
-      "timestamp": "18:59:46",
-      "datetime": "2026-11-18T18:59:46.504785",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "18:59:46",
       "datetime": "2026-11-18T18:59:46.519087",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for PricewaterhouseCoopers GmbH WPG."
@@ -357,6 +339,24 @@
     {
       "timestamp": "12:54:06",
       "datetime": "2026-11-21T12:54:06.714979",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "19:55:59",
+      "datetime": "2026-11-21T19:55:59.974012",
+      "level": "INFO",
+      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
+    },
+    {
+      "timestamp": "19:56:04",
+      "datetime": "2026-11-21T19:56:04.845940",
+      "level": "SUCCESS",
+      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
+    },
+    {
+      "timestamp": "19:56:04",
+      "datetime": "2026-11-21T19:56:04.847911",
       "level": "INFO",
       "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
