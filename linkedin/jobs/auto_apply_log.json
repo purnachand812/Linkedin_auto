@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "18:59:44",
-      "datetime": "2026-11-18T18:59:44.490216",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "18:59:44",
       "datetime": "2026-11-18T18:59:44.498426",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for PricewaterhouseCoopers GmbH WPG."
@@ -357,6 +351,12 @@
     {
       "timestamp": "23:15:19",
       "datetime": "2026-11-20T23:15:19.330771",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "00:59:27",
+      "datetime": "2026-11-21T00:59:27.276413",
       "level": "INFO",
       "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
