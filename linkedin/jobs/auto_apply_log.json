@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "18:59:46",
-      "datetime": "2026-11-18T18:59:46.499326",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Praktikum / Werkstudent IT-Beratung Public Sector (w/m/d)' at PricewaterhouseCoopers GmbH WPG (ID: job-ba-18989_984518572_S)"
-    },
-    {
-      "timestamp": "18:59:46",
       "datetime": "2026-11-18T18:59:46.502354",
       "level": "SUCCESS",
       "message": "Tailored Europass CV & PDF generated: resume_job-ba-18989_984518572_S.pdf"
@@ -357,6 +351,12 @@
     {
       "timestamp": "04:08:45",
       "datetime": "2026-11-21T04:08:45.823619",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "12:54:06",
+      "datetime": "2026-11-21T12:54:06.714979",
       "level": "INFO",
       "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
