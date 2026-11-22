@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "18:59:48",
-      "datetime": "2026-11-18T18:59:48.538843",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "18:59:48",
       "datetime": "2026-11-18T18:59:48.563817",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for Zenjob SE."
@@ -357,6 +351,12 @@
     {
       "timestamp": "07:15:27",
       "datetime": "2026-11-22T07:15:27.066581",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "15:32:09",
+      "datetime": "2026-11-22T15:32:09.471356",
       "level": "INFO",
       "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
