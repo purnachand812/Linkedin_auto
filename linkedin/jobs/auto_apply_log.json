@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "18:59:48",
-      "datetime": "2026-11-18T18:59:48.563817",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for Zenjob SE."
-    },
-    {
-      "timestamp": "18:59:50",
-      "datetime": "2026-11-18T18:59:50.567043",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'People Associate - Working Student' at Wolt BerlinTech (ID: job-gh-wolt-8395841)"
-    },
-    {
-      "timestamp": "18:59:50",
-      "datetime": "2026-11-18T18:59:50.570151",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-gh-wolt-8395841.pdf"
-    },
-    {
-      "timestamp": "18:59:50",
-      "datetime": "2026-11-18T18:59:50.570969",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-gh-wolt-8395841.pdf"
-    },
-    {
-      "timestamp": "18:59:50",
-      "datetime": "2026-11-18T18:59:50.571922",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "18:59:50",
-      "datetime": "2026-11-18T18:59:50.582209",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for Wolt BerlinTech."
-    },
-    {
-      "timestamp": "01:03:57",
-      "datetime": "2026-11-19T01:03:57.667802",
-      "level": "INFO",
-      "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "01:34:19",
-      "datetime": "2026-11-19T01:34:19.881034",
-      "level": "INFO",
-      "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
       "timestamp": "09:07:56",
       "datetime": "2026-11-19T09:07:56.201696",
       "level": "INFO",
@@ -359,6 +311,54 @@
       "datetime": "2026-11-22T15:32:09.471356",
       "level": "INFO",
       "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "21:31:49",
+      "datetime": "2026-11-22T21:31:49.193421",
+      "level": "INFO",
+      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
+    },
+    {
+      "timestamp": "21:31:54",
+      "datetime": "2026-11-22T21:31:54.293837",
+      "level": "SUCCESS",
+      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
+    },
+    {
+      "timestamp": "21:31:54",
+      "datetime": "2026-11-22T21:31:54.295171",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 1 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "21:31:54",
+      "datetime": "2026-11-22T21:31:54.296076",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Werkstudent*in (m/w/d) im Bereich Consulting f\u00fcr Geografische Informationssysteme' at inno2grid GmbH (ID: job-linkedin-4492335894)"
+    },
+    {
+      "timestamp": "21:31:54",
+      "datetime": "2026-11-22T21:31:54.303517",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4492335894.pdf"
+    },
+    {
+      "timestamp": "21:31:54",
+      "datetime": "2026-11-22T21:31:54.304351",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4492335894.pdf"
+    },
+    {
+      "timestamp": "21:31:54",
+      "datetime": "2026-11-22T21:31:54.305377",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "21:31:54",
+      "datetime": "2026-11-22T21:31:54.487757",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for inno2grid GmbH."
     }
   ]
 }
