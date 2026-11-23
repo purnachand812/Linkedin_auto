@@ -1,12 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "09:07:56",
-      "datetime": "2026-11-19T09:07:56.201696",
-      "level": "INFO",
-      "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
       "timestamp": "18:29:14",
       "datetime": "2026-11-19T18:29:14.266217",
       "level": "INFO",
@@ -359,6 +353,12 @@
       "datetime": "2026-11-22T21:31:54.487757",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for inno2grid GmbH."
+    },
+    {
+      "timestamp": "00:32:02",
+      "datetime": "2026-11-23T00:32:02.314617",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
   ]
 }
