@@ -1,5 +1,25 @@
 [
   {
+    "job_id": "job-linkedin-4492612233",
+    "title": "Werkstudent:in Founders Associate",
+    "company": "ecopals",
+    "location": "Berlin, Berlin, Germany",
+    "salary_range": "\u20ac16 - \u20ac22 / hr",
+    "match_score": 98,
+    "applied_at": "2026-11-23T22:49:21.554689",
+    "job_url": "https://www.linkedin.com/jobs/view/4492612233/",
+    "resume_url": "/resumes/resume_job-linkedin-4492612233.pdf",
+    "cover_letter_url": "/resumes/cover_letter_job-linkedin-4492612233.pdf",
+    "packet_file": "linkedin/jobs/packets/packet_job-linkedin-4492612233.json",
+    "mode": "AUTONOMOUS_DAEMON",
+    "recruiter_outreach_note": "Hi Hiring Team, I saw ecopals's opening for Werkstudent:in Founders Associate in Berlin, Berlin, Germany. I am an MSc Data Science student based in Berlin (GISMA University) researching hallucination attribution in multi-step LLM agent trajectories. I have hands-on experience building Python ML pipelines, SQL/Redis backends, and typed FastAPI agent services, with full German Werkstudent work authorization. I submitted my application and would be glad to connect.",
+    "status": "APPLIED_CONFIRMED",
+    "resume_pdf_url": "/resumes/resume_job-linkedin-4492612233.pdf",
+    "cover_letter_pdf_url": "/resumes/cover_letter_job-linkedin-4492612233.pdf",
+    "resume_html_url": "/resumes/resume_job-linkedin-4492612233.html",
+    "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4492612233.html"
+  },
+  {
     "job_id": "job-linkedin-4492335894",
     "title": "Werkstudent*in (m/w/d) im Bereich Consulting f\u00fcr Geografische Informationssysteme",
     "company": "inno2grid GmbH",
