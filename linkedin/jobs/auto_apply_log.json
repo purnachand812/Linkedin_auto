@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "18:29:20",
-      "datetime": "2026-11-19T18:29:20.801588",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4491623665.pdf"
-    },
-    {
-      "timestamp": "18:29:20",
       "datetime": "2026-11-19T18:29:20.802400",
       "level": "SUCCESS",
       "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
@@ -359,6 +353,12 @@
       "datetime": "2026-11-23T22:49:21.558720",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for ecopals."
+    },
+    {
+      "timestamp": "04:31:23",
+      "datetime": "2026-11-24T04:31:23.537859",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
   ]
 }
