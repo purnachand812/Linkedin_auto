@@ -1,12 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "17:06:52",
-      "datetime": "2026-11-20T17:06:52.936118",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for Manta."
-    },
-    {
       "timestamp": "23:15:19",
       "datetime": "2026-11-20T23:15:19.330771",
       "level": "INFO",
@@ -357,6 +351,12 @@
     {
       "timestamp": "12:08:49",
       "datetime": "2026-11-25T12:08:49.692089",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "21:54:40",
+      "datetime": "2026-11-25T21:54:40.456318",
       "level": "INFO",
       "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
