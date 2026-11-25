@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "17:06:52",
-      "datetime": "2026-11-20T17:06:52.928191",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4489701097.pdf"
-    },
-    {
-      "timestamp": "17:06:52",
       "datetime": "2026-11-20T17:06:52.928992",
       "level": "SUCCESS",
       "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
@@ -359,6 +353,12 @@
       "datetime": "2026-11-25T02:55:46.882650",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for Epic Brands."
+    },
+    {
+      "timestamp": "03:15:33",
+      "datetime": "2026-11-25T03:15:33.952557",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
   ]
 }
