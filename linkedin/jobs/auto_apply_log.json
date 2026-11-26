@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "21:31:54",
-      "datetime": "2026-11-22T21:31:54.295171",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 1 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "21:31:54",
       "datetime": "2026-11-22T21:31:54.296076",
       "level": "INFO",
       "message": "Initiating autonomous application: 'Werkstudent*in (m/w/d) im Bereich Consulting f\u00fcr Geografische Informationssysteme' at inno2grid GmbH (ID: job-linkedin-4492335894)"
@@ -357,6 +351,12 @@
     {
       "timestamp": "03:56:24",
       "datetime": "2026-11-26T03:56:24.702057",
+      "level": "INFO",
+      "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "13:36:12",
+      "datetime": "2026-11-26T13:36:12.790885",
       "level": "INFO",
       "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
