@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "21:31:54",
-      "datetime": "2026-11-22T21:31:54.293837",
-      "level": "SUCCESS",
-      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
-    },
-    {
-      "timestamp": "21:31:54",
       "datetime": "2026-11-22T21:31:54.295171",
       "level": "INFO",
       "message": "Radar scan: 16 active jobs, 1 meeting freshness (<=7d) & criteria."
@@ -359,6 +353,12 @@
       "datetime": "2026-11-26T02:33:18.491072",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for Vimerox Real Estate Management GmbH."
+    },
+    {
+      "timestamp": "03:56:24",
+      "datetime": "2026-11-26T03:56:24.702057",
+      "level": "INFO",
+      "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
   ]
 }
