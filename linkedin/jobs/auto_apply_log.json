@@ -1,84 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "23:15:19",
-      "datetime": "2026-11-20T23:15:19.330771",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "00:59:27",
-      "datetime": "2026-11-21T00:59:27.276413",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "04:08:45",
-      "datetime": "2026-11-21T04:08:45.823619",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "12:54:06",
-      "datetime": "2026-11-21T12:54:06.714979",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "19:55:59",
-      "datetime": "2026-11-21T19:55:59.974012",
-      "level": "INFO",
-      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
-    },
-    {
-      "timestamp": "19:56:04",
-      "datetime": "2026-11-21T19:56:04.845940",
-      "level": "SUCCESS",
-      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
-    },
-    {
-      "timestamp": "19:56:04",
-      "datetime": "2026-11-21T19:56:04.847911",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "23:59:30",
-      "datetime": "2026-11-21T23:59:30.285161",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "00:06:24",
-      "datetime": "2026-11-22T00:06:24.463068",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "05:39:00",
-      "datetime": "2026-11-22T05:39:00.552607",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "07:15:27",
-      "datetime": "2026-11-22T07:15:27.066581",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "15:32:09",
-      "datetime": "2026-11-22T15:32:09.471356",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "21:31:49",
-      "datetime": "2026-11-22T21:31:49.193421",
-      "level": "INFO",
-      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
-    },
-    {
       "timestamp": "21:31:54",
       "datetime": "2026-11-22T21:31:54.293837",
       "level": "SUCCESS",
@@ -359,6 +281,84 @@
       "datetime": "2026-11-25T21:54:40.456318",
       "level": "INFO",
       "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "02:33:12",
+      "datetime": "2026-11-26T02:33:12.114377",
+      "level": "INFO",
+      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
+    },
+    {
+      "timestamp": "02:33:16",
+      "datetime": "2026-11-26T02:33:16.449654",
+      "level": "SUCCESS",
+      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
+    },
+    {
+      "timestamp": "02:33:16",
+      "datetime": "2026-11-26T02:33:16.451153",
+      "level": "INFO",
+      "message": "Radar scan: 15 active jobs, 2 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "02:33:16",
+      "datetime": "2026-11-26T02:33:16.452680",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Praktikant / Werkstudent Cloud Transformation (w/m/d)' at PricewaterhouseCoopers GmbH WPG (ID: job-ba-18989_986500086_S)"
+    },
+    {
+      "timestamp": "02:33:16",
+      "datetime": "2026-11-26T02:33:16.455824",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-ba-18989_986500086_S.pdf"
+    },
+    {
+      "timestamp": "02:33:16",
+      "datetime": "2026-11-26T02:33:16.456962",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-ba-18989_986500086_S.pdf"
+    },
+    {
+      "timestamp": "02:33:16",
+      "datetime": "2026-11-26T02:33:16.459069",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "02:33:16",
+      "datetime": "2026-11-26T02:33:16.469760",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for PricewaterhouseCoopers GmbH WPG."
+    },
+    {
+      "timestamp": "02:33:18",
+      "datetime": "2026-11-26T02:33:18.470918",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Werkstudent Automatisierung und Daten (m/w/d)' at Vimerox Real Estate Management GmbH (ID: job-linkedin-4491627085)"
+    },
+    {
+      "timestamp": "02:33:18",
+      "datetime": "2026-11-26T02:33:18.474054",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4491627085.pdf"
+    },
+    {
+      "timestamp": "02:33:18",
+      "datetime": "2026-11-26T02:33:18.475198",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4491627085.pdf"
+    },
+    {
+      "timestamp": "02:33:18",
+      "datetime": "2026-11-26T02:33:18.476712",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "02:33:18",
+      "datetime": "2026-11-26T02:33:18.491072",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Vimerox Real Estate Management GmbH."
     }
   ]
 }
