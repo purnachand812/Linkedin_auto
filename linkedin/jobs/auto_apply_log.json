@@ -1,114 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "21:31:54",
-      "datetime": "2026-11-22T21:31:54.296076",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Werkstudent*in (m/w/d) im Bereich Consulting f\u00fcr Geografische Informationssysteme' at inno2grid GmbH (ID: job-linkedin-4492335894)"
-    },
-    {
-      "timestamp": "21:31:54",
-      "datetime": "2026-11-22T21:31:54.303517",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4492335894.pdf"
-    },
-    {
-      "timestamp": "21:31:54",
-      "datetime": "2026-11-22T21:31:54.304351",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4492335894.pdf"
-    },
-    {
-      "timestamp": "21:31:54",
-      "datetime": "2026-11-22T21:31:54.305377",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "21:31:54",
-      "datetime": "2026-11-22T21:31:54.487757",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for inno2grid GmbH."
-    },
-    {
-      "timestamp": "00:32:02",
-      "datetime": "2026-11-23T00:32:02.314617",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "02:14:06",
-      "datetime": "2026-11-23T02:14:06.348795",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "11:00:22",
-      "datetime": "2026-11-23T11:00:22.656228",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "22:49:16",
-      "datetime": "2026-11-23T22:49:16.072019",
-      "level": "INFO",
-      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
-    },
-    {
-      "timestamp": "22:49:21",
-      "datetime": "2026-11-23T22:49:21.519908",
-      "level": "SUCCESS",
-      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
-    },
-    {
-      "timestamp": "22:49:21",
-      "datetime": "2026-11-23T22:49:21.521124",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 1 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "22:49:21",
-      "datetime": "2026-11-23T22:49:21.537389",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Werkstudent:in Founders Associate' at ecopals (ID: job-linkedin-4492612233)"
-    },
-    {
-      "timestamp": "22:49:21",
-      "datetime": "2026-11-23T22:49:21.541451",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4492612233.pdf"
-    },
-    {
-      "timestamp": "22:49:21",
-      "datetime": "2026-11-23T22:49:21.541956",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4492612233.pdf"
-    },
-    {
-      "timestamp": "22:49:21",
-      "datetime": "2026-11-23T22:49:21.547196",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "22:49:21",
-      "datetime": "2026-11-23T22:49:21.558720",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for ecopals."
-    },
-    {
-      "timestamp": "04:31:23",
-      "datetime": "2026-11-24T04:31:23.537859",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "06:44:33",
-      "datetime": "2026-11-24T06:44:33.744525",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
       "timestamp": "18:38:32",
       "datetime": "2026-11-24T18:38:32.614278",
       "level": "INFO",
@@ -359,6 +251,114 @@
       "datetime": "2026-11-26T13:36:12.790885",
       "level": "INFO",
       "message": "Radar scan: 15 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "22:47:30",
+      "datetime": "2026-11-26T22:47:30.306503",
+      "level": "INFO",
+      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
+    },
+    {
+      "timestamp": "22:47:34",
+      "datetime": "2026-11-26T22:47:34.807371",
+      "level": "SUCCESS",
+      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
+    },
+    {
+      "timestamp": "22:47:34",
+      "datetime": "2026-11-26T22:47:34.808291",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 5 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "22:47:34",
+      "datetime": "2026-11-26T22:47:34.809616",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Working Student (f/m/d) R&D Digitalization & AI Infrastructure' at Siemens AG (ID: job-ba-12465_1656071_1_S)"
+    },
+    {
+      "timestamp": "22:47:34",
+      "datetime": "2026-11-26T22:47:34.815245",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-ba-12465_1656071_1_S.pdf"
+    },
+    {
+      "timestamp": "22:47:34",
+      "datetime": "2026-11-26T22:47:34.818429",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-ba-12465_1656071_1_S.pdf"
+    },
+    {
+      "timestamp": "22:47:34",
+      "datetime": "2026-11-26T22:47:34.819382",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "22:47:34",
+      "datetime": "2026-11-26T22:47:34.826329",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for Siemens AG."
+    },
+    {
+      "timestamp": "22:47:36",
+      "datetime": "2026-11-26T22:47:36.827190",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Werkstudent:in Netzpl\u00e4ne (m/w/d)' at aconium GmbH Hauptsitz Berlin (ID: job-ba-10001_1004076323_S)"
+    },
+    {
+      "timestamp": "22:47:36",
+      "datetime": "2026-11-26T22:47:36.830017",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-ba-10001_1004076323_S.pdf"
+    },
+    {
+      "timestamp": "22:47:36",
+      "datetime": "2026-11-26T22:47:36.830818",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-ba-10001_1004076323_S.pdf"
+    },
+    {
+      "timestamp": "22:47:36",
+      "datetime": "2026-11-26T22:47:36.832622",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "22:47:36",
+      "datetime": "2026-11-26T22:47:36.842394",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for aconium GmbH Hauptsitz Berlin."
+    },
+    {
+      "timestamp": "22:47:38",
+      "datetime": "2026-11-26T22:47:38.843699",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Praktikant Inventory & Strategic Operations (m/w/d)' at CarOnSale (ID: job-linkedin-4495029319)"
+    },
+    {
+      "timestamp": "22:47:38",
+      "datetime": "2026-11-26T22:47:38.856178",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4495029319.pdf"
+    },
+    {
+      "timestamp": "22:47:38",
+      "datetime": "2026-11-26T22:47:38.858933",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4495029319.pdf"
+    },
+    {
+      "timestamp": "22:47:38",
+      "datetime": "2026-11-26T22:47:38.862134",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "22:47:38",
+      "datetime": "2026-11-26T22:47:38.886355",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for CarOnSale."
     }
   ]
 }
