@@ -310,13 +310,16 @@
       "beat": "Local Inference & Server Concurrency",
       "score": 93,
       "human_quality_score": 96.1,
-      "status": "APPROVED",
+      "status": "PUBLISHED",
       "format": "image-attached",
       "replaces": "Sequential Single-Thread Ollama & Multi-Process Model Duplication",
       "cost": "$0 / MIT Open Source; eliminates queue contention across parallel subagents",
       "test_status": "Tested with 4 parallel subagents querying Qwen-2.5-Coder-14B in Docker; not tested on multi-GPU server racks yet",
       "file": "linkedin/queue/candidate_27_ollama_parallel.md",
-      "visual": "linkedin/visuals/visual_ollama_parallel.png"
+      "visual": "linkedin/visuals/visual_ollama_parallel.png",
+      "published_at": "2026-11-12T09:17:22Z",
+      "linkedin_post_id": "urn:li:share:7526573837862469632",
+      "linkedin_post_url": "https://www.linkedin.com/feed/update/urn:li:share:7526573837862469632/"
     },
     {
       "id": 28,
@@ -325,13 +328,16 @@
       "beat": "Data Engineering & Pipeline Architecture",
       "score": 94,
       "human_quality_score": 89.2,
-      "status": "APPROVED",
+      "status": "PUBLISHED",
       "format": "image-attached",
       "replaces": "Heavyweight Cloud Orchestrators (Airflow/Kubeflow) for Modular Feature Pipelines",
       "cost": "$0 / BSD 3-Clause; zero infrastructure database or worker daemon overhead",
       "test_status": "Tested on feature engineering and RAG chunking pipelines in Docker; not tested on Petabyte-scale distributed data lakes yet",
       "file": "linkedin/queue/candidate_28_hamilton_dag.md",
-      "visual": "linkedin/visuals/visual_hamilton_dag.png"
+      "visual": "linkedin/visuals/visual_hamilton_dag.png",
+      "published_at": "2026-11-12T17:41:27Z",
+      "linkedin_post_id": "urn:li:share:7526700697921265665",
+      "linkedin_post_url": "https://www.linkedin.com/feed/update/urn:li:share:7526700697921265665/"
     },
     {
       "id": 29,
@@ -340,13 +346,16 @@
       "beat": "Autonomous Agents & Tool Protocols",
       "score": 95,
       "human_quality_score": 87.2,
-      "status": "APPROVED",
+      "status": "PUBLISHED",
       "format": "image-attached",
       "replaces": "Boilerplate JSON-RPC Protocol Handlers & Proprietary Plugin Frameworks",
       "cost": "$0 / MIT Open Source; eliminates 200+ lines of low-level MCP wire protocol code",
       "test_status": "Tested with Claude Desktop and local Python agent clients in Docker; not tested over enterprise reverse proxies with mTLS yet",
       "file": "linkedin/queue/candidate_29_fastmcp.md",
-      "visual": "linkedin/visuals/visual_fastmcp_sdk.png"
+      "visual": "linkedin/visuals/visual_fastmcp_sdk.png",
+      "published_at": "2026-11-13T11:51:28Z",
+      "linkedin_post_id": "urn:li:share:7526975005289791488",
+      "linkedin_post_url": "https://www.linkedin.com/feed/update/urn:li:share:7526975005289791488/"
     },
     {
       "id": 30,
@@ -355,15 +364,18 @@
       "beat": "Local Inference & Hardware Optimization",
       "score": 94,
       "human_quality_score": 93.5,
-      "status": "APPROVED",
+      "status": "PUBLISHED",
       "format": "image-attached",
       "replaces": "Sequential Autoregressive Decoding & High-Power GPU Inference Racks",
       "cost": "$0 / MIT Open Source; delivers 2x-2.5x token generation speed on CPU/Mac/Edge",
       "test_status": "Tested on Llama-3-8B with a 0.5B draft model on local Apple Silicon; not tested on heterogeneous distributed compute clusters yet",
       "file": "linkedin/queue/candidate_30_llamacpp_speculative.md",
-      "visual": "linkedin/visuals/visual_llamacpp_speculative.png"
+      "visual": "linkedin/visuals/visual_llamacpp_speculative.png",
+      "published_at": "2026-11-14T13:56:38Z",
+      "linkedin_post_id": "urn:li:share:7527368897205800961",
+      "linkedin_post_url": "https://www.linkedin.com/feed/update/urn:li:share:7527368897205800961/"
     }
   ],
-  "updated_at": "2026-11-11T09:25:00.000000",
+  "updated_at": "2026-11-27T14:41:30.305000",
   "auto_approve_enabled": true
 }

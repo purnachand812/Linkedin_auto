@@ -1,81 +1,9 @@
 {
-  "updated_at": "2026-11-11T09:45:19.100257",
-  "total_posts": 24,
+  "updated_at": "2026-11-27T14:41:30.307337",
+  "total_posts": 18,
   "target_region": "European Union (CET/CEST)",
   "data_integrity": "Verified Ground Truth",
   "posts_analytics": [
-    {
-      "candidate_id": 26,
-      "topic": "Unsloth (Fast Open-Weight LLM Fine-Tuning & Custom Triton Kernels)",
-      "published_at": "2026-11-11T08:22:09Z",
-      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7526197554255011840/",
-      "impressions": 0,
-      "reactions": 0,
-      "comments": 0,
-      "reposts": 0,
-      "status": "ACCUMULATING",
-      "notes": "Fresh drop; awaiting next live telemetry sync."
-    },
-    {
-      "candidate_id": 25,
-      "topic": "browser-use (Headless Vision-Web Agents & DOM Token Compression)",
-      "published_at": "2026-11-11T08:20:56Z",
-      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7526197249521958912/",
-      "impressions": 0,
-      "reactions": 0,
-      "comments": 0,
-      "reposts": 0,
-      "status": "ACCUMULATING",
-      "notes": "Fresh drop; awaiting next live telemetry sync."
-    },
-    {
-      "candidate_id": 24,
-      "topic": "LitServe (Multi-Worker Dynamic Batching Engine vs Naive FastAPI)",
-      "published_at": "2026-11-06T18:13:20Z",
-      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7524534393856745474/",
-      "impressions": 0,
-      "reactions": 0,
-      "comments": 0,
-      "reposts": 0,
-      "status": "ACCUMULATING",
-      "notes": "Fresh drop; awaiting next live telemetry sync."
-    },
-    {
-      "candidate_id": 23,
-      "topic": "Hugging Face FastRTC (Real-Time Bidirectional Voice & WebRTC Agents)",
-      "published_at": "2026-11-06T11:18:44Z",
-      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7524430055381364737/",
-      "impressions": 0,
-      "reactions": 0,
-      "comments": 0,
-      "reposts": 0,
-      "status": "ACCUMULATING",
-      "notes": "Fresh drop; awaiting next live telemetry sync."
-    },
-    {
-      "candidate_id": 22,
-      "topic": "IBM Docling (Local Layout-Aware PDF & Table Parser for RAG)",
-      "published_at": "2026-11-05T17:11:42Z",
-      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7524156498525138944/",
-      "impressions": 0,
-      "reactions": 0,
-      "comments": 0,
-      "reposts": 0,
-      "status": "ACCUMULATING",
-      "notes": "Fresh drop; awaiting next live telemetry sync."
-    },
-    {
-      "candidate_id": 21,
-      "topic": "Qdrant Binary Quantization (16x Vector Memory Compression for Local RAG)",
-      "published_at": "2026-11-05T08:57:03Z",
-      "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7524032012316499968/",
-      "impressions": 0,
-      "reactions": 0,
-      "comments": 0,
-      "reposts": 0,
-      "status": "ACCUMULATING",
-      "notes": "Fresh drop; awaiting next live telemetry sync."
-    },
     {
       "candidate_id": 20,
       "topic": "DeepSeek-R1-Distill-Qwen (Open-Weight Mathematical Reasoning on Consumer GPUs)",
