@@ -1,60 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "02:55:42",
-      "datetime": "2026-11-25T02:55:42.622234",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for Mello HQ."
-    },
-    {
-      "timestamp": "02:55:44",
-      "datetime": "2026-11-25T02:55:44.623364",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'GTM Engineering Working Student' at ARC Intelligence (ID: job-linkedin-4493038701)"
-    },
-    {
-      "timestamp": "02:55:44",
-      "datetime": "2026-11-25T02:55:44.635122",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4493038701.pdf"
-    },
-    {
-      "timestamp": "02:55:44",
-      "datetime": "2026-11-25T02:55:44.643448",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4493038701.pdf"
-    },
-    {
-      "timestamp": "02:55:44",
-      "datetime": "2026-11-25T02:55:44.651292",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "02:55:44",
-      "datetime": "2026-11-25T02:55:44.659841",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for ARC Intelligence."
-    },
-    {
-      "timestamp": "02:55:46",
-      "datetime": "2026-11-25T02:55:46.661075",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Praktikum AI Software Engineer im eCommerce (m/w/d)' at Epic Brands (ID: job-linkedin-4493010827)"
-    },
-    {
-      "timestamp": "02:55:46",
-      "datetime": "2026-11-25T02:55:46.682178",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4493010827.pdf"
-    },
-    {
-      "timestamp": "02:55:46",
-      "datetime": "2026-11-25T02:55:46.722630",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4493010827.pdf"
-    },
-    {
       "timestamp": "02:55:46",
       "datetime": "2026-11-25T02:55:46.752575",
       "level": "SUCCESS",
@@ -359,6 +305,60 @@
       "datetime": "2026-11-27T14:41:30.305553",
       "level": "INFO",
       "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "22:27:46",
+      "datetime": "2026-11-27T22:27:46.142956",
+      "level": "INFO",
+      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
+    },
+    {
+      "timestamp": "22:27:50",
+      "datetime": "2026-11-27T22:27:50.425935",
+      "level": "SUCCESS",
+      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
+    },
+    {
+      "timestamp": "22:27:50",
+      "datetime": "2026-11-27T22:27:50.427454",
+      "level": "INFO",
+      "message": "Radar scan: 15 active jobs, 1 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "22:27:50",
+      "datetime": "2026-11-27T22:27:50.428963",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Working Student - Robot Learning' at RoboService (ID: job-linkedin-4493891399)"
+    },
+    {
+      "timestamp": "22:27:50",
+      "datetime": "2026-11-27T22:27:50.432404",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4493891399.pdf"
+    },
+    {
+      "timestamp": "22:27:50",
+      "datetime": "2026-11-27T22:27:50.433554",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4493891399.pdf"
+    },
+    {
+      "timestamp": "22:27:50",
+      "datetime": "2026-11-27T22:27:50.436552",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "22:27:50",
+      "datetime": "2026-11-27T22:27:50.451466",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for RoboService."
+    },
+    {
+      "timestamp": "22:27:52",
+      "datetime": "2026-11-27T22:27:52.453889",
+      "level": "SUCCESS",
+      "message": "End-of-day summary report dispatched to purnachand0812@gmail.com (AWAITING_SMTP_CONFIG)."
     }
   ]
 }
