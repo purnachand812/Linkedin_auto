@@ -1,72 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "18:38:32",
-      "datetime": "2026-11-24T18:38:32.614278",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "02:55:35",
-      "datetime": "2026-11-25T02:55:35.877076",
-      "level": "INFO",
-      "message": "20-Hour Refresh Cadence triggered: scraping live LinkedIn opportunities in Berlin (<= 4 to 7 days)."
-    },
-    {
-      "timestamp": "02:55:40",
-      "datetime": "2026-11-25T02:55:40.577337",
-      "level": "SUCCESS",
-      "message": "Real-time LinkedIn job radar refreshed with live Berlin postings."
-    },
-    {
-      "timestamp": "02:55:40",
-      "datetime": "2026-11-25T02:55:40.579205",
-      "level": "INFO",
-      "message": "Radar scan: 16 active jobs, 4 meeting freshness (<=7d) & criteria."
-    },
-    {
-      "timestamp": "02:55:40",
-      "datetime": "2026-11-25T02:55:40.586782",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Werkstudent Business Development/Sales (m/f/x)' at PlanD (ID: job-linkedin-4494371909)"
-    },
-    {
-      "timestamp": "02:55:40",
-      "datetime": "2026-11-25T02:55:40.590501",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4494371909.pdf"
-    },
-    {
-      "timestamp": "02:55:40",
-      "datetime": "2026-11-25T02:55:40.591646",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4494371909.pdf"
-    },
-    {
-      "timestamp": "02:55:40",
-      "datetime": "2026-11-25T02:55:40.594050",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "02:55:40",
-      "datetime": "2026-11-25T02:55:40.607064",
-      "level": "SUCCESS",
-      "message": "Application confirmed & tracked with downloadable PDFs for PlanD."
-    },
-    {
-      "timestamp": "02:55:42",
-      "datetime": "2026-11-25T02:55:42.609050",
-      "level": "INFO",
-      "message": "Initiating autonomous application: 'Founder's Office Ops (Working Student)' at Mello HQ (ID: job-linkedin-4492604410)"
-    },
-    {
-      "timestamp": "02:55:42",
-      "datetime": "2026-11-25T02:55:42.611698",
-      "level": "SUCCESS",
-      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4492604410.pdf"
-    },
-    {
       "timestamp": "02:55:42",
       "datetime": "2026-11-25T02:55:42.612600",
       "level": "SUCCESS",
@@ -359,6 +293,72 @@
       "datetime": "2026-11-26T22:47:38.886355",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for CarOnSale."
+    },
+    {
+      "timestamp": "02:33:24",
+      "datetime": "2026-11-27T02:33:24.763440",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 2 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "02:33:24",
+      "datetime": "2026-11-27T02:33:24.763841",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Werkstudent:in Growth & Business Development (m/w/d)' at acemate.ai (ID: job-linkedin-4493851048)"
+    },
+    {
+      "timestamp": "02:33:24",
+      "datetime": "2026-11-27T02:33:24.765988",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4493851048.pdf"
+    },
+    {
+      "timestamp": "02:33:24",
+      "datetime": "2026-11-27T02:33:24.766726",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4493851048.pdf"
+    },
+    {
+      "timestamp": "02:33:24",
+      "datetime": "2026-11-27T02:33:24.767618",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "02:33:24",
+      "datetime": "2026-11-27T02:33:24.774771",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for acemate.ai."
+    },
+    {
+      "timestamp": "02:33:26",
+      "datetime": "2026-11-27T02:33:26.775635",
+      "level": "INFO",
+      "message": "Initiating autonomous application: 'Product Engineering Intern, Vertical AI Startup' at MeisterPfad (ID: job-linkedin-4493821330)"
+    },
+    {
+      "timestamp": "02:33:26",
+      "datetime": "2026-11-27T02:33:26.778783",
+      "level": "SUCCESS",
+      "message": "Tailored Europass CV & PDF generated: resume_job-linkedin-4493821330.pdf"
+    },
+    {
+      "timestamp": "02:33:26",
+      "datetime": "2026-11-27T02:33:26.779497",
+      "level": "SUCCESS",
+      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4493821330.pdf"
+    },
+    {
+      "timestamp": "02:33:26",
+      "datetime": "2026-11-27T02:33:26.780197",
+      "level": "SUCCESS",
+      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
+    },
+    {
+      "timestamp": "02:33:26",
+      "datetime": "2026-11-27T02:33:26.787595",
+      "level": "SUCCESS",
+      "message": "Application confirmed & tracked with downloadable PDFs for MeisterPfad."
     }
   ]
 }

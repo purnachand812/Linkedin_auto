@@ -402,7 +402,7 @@
       ],
       "description": "Werkstudent:in Growth & Business Development (m/w/d) acemate.ai Berlin, Berlin, Germany 4 hours ago <span class=\"num-applicants__icon num-applicants__icon--clock lazy-lo",
       "full_description": "Werkstudent:in Growth & Business Development (m/w/d) acemate.ai Berlin, Berlin, Germany 4 hours ago <span class=\"num-applicants__icon num-applicants__icon--clock lazy-lo",
-      "status": "OPEN",
+      "status": "APPLIED",
       "tailored_cover_letter": "I saw acemate.ai's opening for Werkstudent:in Growth & Business Development (m/w/d) in Berlin, Berlin, Germany. As an MSc Data Science student at GISMA University Berlin with verified A2 German and production Python/ML experience, I have valid German student work authorization and am excited to contribute.",
       "resume_url": "/resumes/resume_job-linkedin-4493851048.pdf",
       "cover_letter_url": "/resumes/cover_letter_job-linkedin-4493851048.pdf",
@@ -410,7 +410,9 @@
       "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4493851048.html",
       "portal_source": "LINKEDIN",
       "portal_name": "LinkedIn Easy Apply",
-      "source_badge": "LinkedIn"
+      "source_badge": "LinkedIn",
+      "applied_at": "2026-11-27T02:33:24.770582",
+      "packet_file": "linkedin/jobs/packets/packet_job-linkedin-4493851048.json"
     },
     {
       "id": "job-linkedin-4493821330",
@@ -433,7 +435,7 @@
       ],
       "description": "Product Engineering Intern, Vertical AI Startup MeisterPfad Berlin, Berlin, Germany 11 hours ago 36 applicants",
       "full_description": "Product Engineering Intern, Vertical AI Startup MeisterPfad Berlin, Berlin, Germany 11 hours ago 36 applicants",
-      "status": "OPEN",
+      "status": "APPLIED",
       "tailored_cover_letter": "I saw MeisterPfad's opening for Product Engineering Intern, Vertical AI Startup in Berlin, Berlin, Germany. As an MSc Data Science student at GISMA University Berlin with verified A2 German and production Python/ML experience, I have valid German student work authorization and am excited to contribute.",
       "resume_url": "/resumes/resume_job-linkedin-4493821330.pdf",
       "cover_letter_url": "/resumes/cover_letter_job-linkedin-4493821330.pdf",
@@ -441,7 +443,9 @@
       "cover_letter_html_url": "/resumes/cover_letter_job-linkedin-4493821330.html",
       "portal_source": "LINKEDIN",
       "portal_name": "LinkedIn Easy Apply",
-      "source_badge": "LinkedIn"
+      "source_badge": "LinkedIn",
+      "applied_at": "2026-11-27T02:33:26.783159",
+      "packet_file": "linkedin/jobs/packets/packet_job-linkedin-4493821330.json"
     },
     {
       "id": "job-linkedin-4493038701",
