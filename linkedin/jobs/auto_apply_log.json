@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "02:55:42",
-      "datetime": "2026-11-25T02:55:42.613528",
-      "level": "SUCCESS",
-      "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
-    },
-    {
-      "timestamp": "02:55:42",
       "datetime": "2026-11-25T02:55:42.622234",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for Mello HQ."
@@ -357,6 +351,12 @@
     {
       "timestamp": "04:46:40",
       "datetime": "2026-11-27T04:46:40.979865",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
+    },
+    {
+      "timestamp": "14:41:30",
+      "datetime": "2026-11-27T14:41:30.305553",
       "level": "INFO",
       "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
