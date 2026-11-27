@@ -2,12 +2,6 @@
   "entries": [
     {
       "timestamp": "02:55:42",
-      "datetime": "2026-11-25T02:55:42.612600",
-      "level": "SUCCESS",
-      "message": "Tailored Cover Letter & PDF generated: cover_letter_job-linkedin-4492604410.pdf"
-    },
-    {
-      "timestamp": "02:55:42",
       "datetime": "2026-11-25T02:55:42.613528",
       "level": "SUCCESS",
       "message": "Resolved 5 screener questions (German phone +49 15511064761, Berlin resident, no driving licence)."
@@ -359,6 +353,12 @@
       "datetime": "2026-11-27T02:33:26.787595",
       "level": "SUCCESS",
       "message": "Application confirmed & tracked with downloadable PDFs for MeisterPfad."
+    },
+    {
+      "timestamp": "04:46:40",
+      "datetime": "2026-11-27T04:46:40.979865",
+      "level": "INFO",
+      "message": "Radar scan: 16 active jobs, 0 meeting freshness (<=7d) & criteria."
     }
   ]
 }
